@@ -1,0 +1,55 @@
+Plan:
+Plan:
+
+1. **Complete the Task in Upper Engine:**
+   - Since you are currently in the Upper Engine and have a task to check the catalyzer there, the first step should be to complete this task.
+   - Action: `complete task: Check catalyzer in upper engine`
+
+2. **Move to Electrical:**
+   - After completing the task in the Upper Engine, the next logical step is to move to Electrical, as you have multiple tasks there.
+   - Action: `move to location GameLocation.LOC_ELECTRICAL`
+
+3. **Complete Tasks in Electrical:**
+   - Once in Electrical, complete the tasks "Fix wiring in electrical" and "Route power to attack in electrical."
+   - Action: `complete task: Fix wiring in electrical`
+   - Action: `complete task: Route power to attack in electrical`
+
+4. **Move to Storage:**
+   - After finishing tasks in Electrical, move to Storage to complete the task "Clean the floor in storage."
+   - Action: `move to location GameLocation.LOC_STORAGE`
+   - Action: `complete task: Clean the floor in storage`
+
+5. **Move to Shields:**
+   - Next, move to Shields to complete the task "Fix wiring in shields."
+   - Action: `move to location GameLocation.LOC_SHIELDS`
+   - Action: `complete task: Fix wiring in shields`
+
+6. **Move to O2:**
+   - After completing the task in Shields, move to O2 to complete the tasks "Fix wiring in o2" and "Water plants in o2."
+   - Action: `move to location GameLocation.LOC_O2`
+   - Action: `complete task: Fix wiring in o2`
+   - Action: `complete task: Water plants in o2`
+
+7. **Move to Weapons:**
+   - Finally, move to Weapons to complete the task "Calibrate targeting system in weapons."
+   - Action: `move to location GameLocation.LOC_WEAPONS`
+   - Action: `complete task: Calibrate targeting system in weapons`
+
+**Summary of Actions:**
+1. Complete task: Check catalyzer in upper engine
+2. Move to location GameLocation.LOC_ELECTRICAL
+3. Complete task: Fix wiring in electrical
+4. Complete task: Route power to attack in electrical
+5. Move to location GameLocation.LOC_STORAGE
+6. Complete task: Clean the floor in storage
+7. Move to location GameLocation.LOC_SHIELDS
+8. Complete task: Fix wiring in shields
+9. Move to location GameLocation.LOC_O2
+10. Complete task: Fix wiring in o2
+11. Complete task: Water plants in o2
+12. Move to location GameLocation.LOC_WEAPONS
+13. Complete task: Calibrate targeting system in weapons
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement. Additionally, keep an eye out for any suspicious behavior from other players to help identify potential impostors.
+
+Action: 4

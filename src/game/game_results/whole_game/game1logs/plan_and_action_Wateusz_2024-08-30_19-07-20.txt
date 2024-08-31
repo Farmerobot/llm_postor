@@ -1,0 +1,62 @@
+Plan:
+### Plan:
+
+1. **Move to Electrical:**
+   - **Reasoning:** Electrical is a central location where multiple tasks can be completed. It is also a common area for routing power, which is one of your tasks.
+   - **Action:** Move to location GameLocation.LOC_LOWER_ENGINE, then move to location GameLocation.LOC_ELECTRICAL.
+
+2. **Complete Task: Fix wiring in electrical:**
+   - **Reasoning:** This is one of your current tasks and can be completed while you are in Electrical.
+   - **Action:** Complete task: Fix wiring in electrical.
+
+3. **Complete Task: Route power to attack in electrical:**
+   - **Reasoning:** This is another task that can be completed in Electrical.
+   - **Action:** Complete task: Route power to attack in electrical.
+
+4. **Move to Storage:**
+   - **Reasoning:** After completing tasks in Electrical, move to Storage to complete the task of cleaning the floor.
+   - **Action:** Move to location GameLocation.LOC_STORAGE.
+
+5. **Complete Task: Clean the floor in storage:**
+   - **Reasoning:** This is one of your current tasks and can be completed while you are in Storage.
+   - **Action:** Complete task: Clean the floor in storage.
+
+6. **Move to Shields:**
+   - **Reasoning:** After completing tasks in Storage, move to Shields to fix the wiring.
+   - **Action:** Move to location GameLocation.LOC_SHIELDS.
+
+7. **Complete Task: Fix wiring in shields:**
+   - **Reasoning:** This is one of your current tasks and can be completed while you are in Shields.
+   - **Action:** Complete task: Fix wiring in shields.
+
+8. **Move to O2:**
+   - **Reasoning:** After completing tasks in Shields, move to O2 to fix the wiring and water the plants.
+   - **Action:** Move to location GameLocation.LOC_O2.
+
+9. **Complete Task: Fix wiring in o2:**
+   - **Reasoning:** This is one of your current tasks and can be completed while you are in O2.
+   - **Action:** Complete task: Fix wiring in o2.
+
+10. **Complete Task: Water plants in o2:**
+    - **Reasoning:** This is another task that can be completed while you are in O2.
+    - **Action:** Complete task: Water plants in o2.
+
+11. **Move to Weapons:**
+    - **Reasoning:** After completing tasks in O2, move to Weapons to calibrate the targeting system.
+    - **Action:** Move to location GameLocation.LOC_WEAPONS.
+
+12. **Complete Task: Calibrate targeting system in weapons:**
+    - **Reasoning:** This is one of your current tasks and can be completed while you are in Weapons.
+    - **Action:** Complete task: Calibrate targeting system in weapons.
+
+### Summary:
+- **Step 1:** Move to Electrical via Lower Engine.
+- **Step 2:** Complete tasks in Electrical.
+- **Step 3:** Move to Storage and complete the task there.
+- **Step 4:** Move to Shields and complete the task there.
+- **Step 5:** Move to O2 and complete tasks there.
+- **Step 6:** Move to Weapons and complete the task there.
+
+By following this plan, you will efficiently complete all your current tasks while minimizing unnecessary movement.
+
+Action: 3

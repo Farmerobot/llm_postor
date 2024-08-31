@@ -1,0 +1,36 @@
+Plan:
+Plan:
+
+1. **Move to GameLocation.LOC_SECURITY**:
+   - **Reason**: Security is a strategic location where you can monitor other players' movements through the security cameras. This will help you gather information on the whereabouts of crewmates and plan your next move accordingly.
+
+2. **Observe the security cameras**:
+   - **Reason**: By observing the cameras, you can identify isolated crewmates or potential targets. This will also help you avoid being seen by other crewmates, reducing the risk of being caught.
+
+3. **Move to GameLocation.LOC_REACTOR**:
+   - **Reason**: The Reactor is a common location for crewmates to perform tasks. Moving here increases the chances of encountering a crewmate alone, providing an opportunity to kill.
+
+4. **Kill any isolated crewmate in GameLocation.LOC_REACTOR**:
+   - **Reason**: Eliminating a crewmate in a less frequented area like the Reactor reduces the chances of the body being discovered quickly.
+
+5. **Sabotage the Reactor or O2**:
+   - **Reason**: Sabotaging critical systems forces crewmates to move towards those locations, creating chaos and providing opportunities for further kills or to blend in with the group.
+
+6. **Move to GameLocation.LOC_ELECTRICAL**:
+   - **Reason**: Electrical is another high-traffic area where crewmates often perform tasks. It also has multiple entry points, making it easier to escape after a kill.
+
+7. **Kill any isolated crewmate in GameLocation.LOC_ELECTRICAL**:
+   - **Reason**: Similar to the Reactor, killing in Electrical can be advantageous due to its layout and the likelihood of finding crewmates alone.
+
+8. **Move to GameLocation.LOC_STORAGE**:
+   - **Reason**: Storage is centrally located, allowing for quick movement to other parts of the map. It also provides opportunities to encounter crewmates moving between tasks.
+
+9. **Monitor crewmate movements and adapt**:
+   - **Reason**: Continuously adapt your strategy based on the movements and actions of the crewmates. Use vents if necessary to move quickly and avoid detection.
+
+10. **Repeat the process of isolating and killing crewmates**:
+    - **Reason**: Continue to isolate and eliminate crewmates while avoiding detection. Use sabotage strategically to create opportunities and disrupt crewmate coordination.
+
+By following this plan, you can systematically eliminate crewmates while minimizing the risk of being caught. Remember to stay vigilant and adapt your strategy based on the evolving game state.
+
+Action: 2

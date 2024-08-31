@@ -1,0 +1,58 @@
+Plan:
+Based on the current tasks and the observations so far, here is a step-by-step plan to accomplish the tasks efficiently:
+
+### Plan:
+
+1. **Move to Lower Engine:**
+   - **Reason:** You have a task to "Check catalyzer in lower engine," and it is the closest task location from your current position in the Reactor.
+
+2. **Complete Task: Check catalyzer in lower engine.**
+
+3. **Move to Shields:**
+   - **Reason:** You have a task to "Fix wiring in shields," and it is the next closest task location from Lower Engine.
+
+4. **Complete Task: Fix wiring in shields.**
+
+5. **Move to Weapons:**
+   - **Reason:** You have two tasks in Weapons: "Fix wiring in weapons" and "Calibrate targeting system in weapons." This will allow you to complete two tasks in one location.
+
+6. **Complete Task: Fix wiring in weapons.**
+
+7. **Complete Task: Calibrate targeting system in weapons.**
+
+8. **Move to Navigation:**
+   - **Reason:** You have two tasks in Navigation: "Adjust course in navigation" and "Fix wiring in navigation." This will allow you to complete two tasks in one location.
+
+9. **Complete Task: Adjust course in navigation.**
+
+10. **Complete Task: Fix wiring in navigation.**
+
+11. **Move to Communications:**
+    - **Reason:** You have a task to "Process data in communications," and it is the next closest task location from Navigation.
+
+12. **Complete Task: Process data in communications.**
+
+13. **Move to Shields:**
+    - **Reason:** You have a task to "Prime shields," and it is the next closest task location from Communications.
+
+14. **Complete Task: Prime shields.**
+
+### Summary of Steps:
+1. Move to Lower Engine.
+2. Complete "Check catalyzer in lower engine."
+3. Move to Shields.
+4. Complete "Fix wiring in shields."
+5. Move to Weapons.
+6. Complete "Fix wiring in weapons."
+7. Complete "Calibrate targeting system in weapons."
+8. Move to Navigation.
+9. Complete "Adjust course in navigation."
+10. Complete "Fix wiring in navigation."
+11. Move to Communications.
+12. Complete "Process data in communications."
+13. Move to Shields.
+14. Complete "Prime shields."
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement across the map.
+
+Action: 3

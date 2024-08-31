@@ -1,0 +1,26 @@
+[Agent]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+[Agent]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+[Agent]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 2 turns left to finish
+[Agent]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 1 turns left to finish
+[Agent]: GameActionType.MOVE | GameLocation.LOC_O2
+[Agent]: GameActionType.DO_ACTION | [TODO] | Fix wiring in o2
+[Agent]: GameActionType.DO_ACTION | [TODO] | Clean oxygenator filter in o2
+[Agent]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Agent]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Agent]: GameActionType.DO_ACTION | [TODO] | Empty the storage trash chute
+[Agent]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Agent]: GameActionType.DO_ACTION | [TODO] | Reset breakers in electrical
+[Agent]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Agent]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in lower engine
+[Agent]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in lower engine
+[Agent]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Agent]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Agent]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Agent]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Agent]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Agent]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Agent]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in upper engine
+[Agent]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Agent]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+[Agent]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+Turns passed: 26

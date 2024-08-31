@@ -1,0 +1,56 @@
+Plan:
+Based on the current tasks and the map, here's a step-by-step plan to accomplish the tasks efficiently:
+
+### Plan:
+
+1. **Move to Electrical:**
+   - **Reason:** You have two tasks in Electrical: "Fix wiring in electrical" and "Route power to attack in electrical." Completing these tasks first will reduce the number of tasks remaining and Electrical is close to your current location (Storage).
+
+2. **Move to O2:**
+   - **Reason:** You have three tasks in O2: "Fix wiring in o2," "Clean oxygenator filter in o2," and "Water plants in o2." Completing these tasks will significantly reduce your task list. O2 is also relatively close to Electrical.
+
+3. **Move to Navigation:**
+   - **Reason:** You have two tasks in Navigation: "Check headings in navigation" and "Fix wiring in navigation." Navigation is adjacent to O2, making it a logical next step.
+
+4. **Move to Weapons:**
+   - **Reason:** You have one task in Weapons: "Clear asteroids in weapons." Weapons is close to Navigation, so it makes sense to complete this task next.
+
+5. **Move to Upper Engine:**
+   - **Reason:** You have one task in Upper Engine: "Check catalyzer in upper engine." Upper Engine is on the opposite side of the map, but it is the last task location, so it makes sense to head there last.
+
+### Detailed Steps:
+
+1. **Current Location: Storage**
+   - Action: Move to Electrical
+
+2. **Location: Electrical**
+   - Action: Complete task: "Fix wiring in electrical"
+   - Action: Complete task: "Route power to attack in electrical"
+   - Action: Move to O2
+
+3. **Location: O2**
+   - Action: Complete task: "Fix wiring in o2"
+   - Action: Complete task: "Clean oxygenator filter in o2"
+   - Action: Complete task: "Water plants in o2"
+   - Action: Move to Navigation
+
+4. **Location: Navigation**
+   - Action: Complete task: "Check headings in navigation"
+   - Action: Complete task: "Fix wiring in navigation"
+   - Action: Move to Weapons
+
+5. **Location: Weapons**
+   - Action: Complete task: "Clear asteroids in weapons"
+   - Action: Move to Upper Engine
+
+6. **Location: Upper Engine**
+   - Action: Complete task: "Check catalyzer in upper engine"
+
+### Additional Considerations:
+- **Safety:** Be cautious of any suspicious behavior from other players. If you see someone acting suspiciously or if a body is found, report it immediately.
+- **Efficiency:** Try to move quickly between tasks to minimize the time spent traveling.
+- **Communication:** If you encounter other crewmates, communicate your task progress and any suspicious observations.
+
+By following this plan, you should be able to complete all your tasks efficiently while staying vigilant for any impostor activity.
+
+Action: 1

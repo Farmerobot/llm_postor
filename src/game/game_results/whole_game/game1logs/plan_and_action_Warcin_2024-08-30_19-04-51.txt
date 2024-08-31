@@ -1,0 +1,61 @@
+Plan:
+Plan:
+
+1. **Assess the Situation:**
+   - You are currently in GameLocation.LOC_SECURITY and alone.
+   - You have observed multiple crewmates (Wateusz, Waciej, Warek, Wikolaj) doing tasks in GameLocation.LOC_CAFETERIA.
+   - Your goal is to kill or banish all crewmates.
+
+2. **Strategic Movement:**
+   - Since you are alone in GameLocation.LOC_SECURITY, you have the opportunity to move without being seen.
+   - Moving to high-traffic areas or areas where you can find isolated crewmates is crucial.
+
+3. **Step-by-Step Approach:**
+
+   **Step 1: Move to GameLocation.LOC_REACTOR**
+   - Reason: The reactor is a critical area where crewmates often go to fix emergencies. It is also somewhat isolated, making it a good place to find a lone crewmate.
+
+   **Step 2: Assess the Situation in GameLocation.LOC_REACTOR**
+   - If you find a crewmate alone, kill them.
+   - If the area is empty, proceed to the next step.
+
+   **Step 3: Move to GameLocation.LOC_LOWER_ENGINE**
+   - Reason: The lower engine is another area that is somewhat isolated and can be a good place to find a lone crewmate.
+
+   **Step 4: Assess the Situation in GameLocation.LOC_LOWER_ENGINE**
+   - If you find a crewmate alone, kill them.
+   - If the area is empty, proceed to the next step.
+
+   **Step 5: Move to GameLocation.LOC_ELECTRICAL**
+   - Reason: Electrical is a common area for crewmates to do tasks and is often a good place to find isolated crewmates.
+
+   **Step 6: Assess the Situation in GameLocation.LOC_ELECTRICAL**
+   - If you find a crewmate alone, kill them.
+   - If the area is empty, proceed to the next step.
+
+   **Step 7: Move to GameLocation.LOC_STORAGE**
+   - Reason: Storage is a central area that connects to many other locations. It is a good place to move through to find crewmates.
+
+   **Step 8: Assess the Situation in GameLocation.LOC_STORAGE**
+   - If you find a crewmate alone, kill them.
+   - If the area is empty, proceed to the next step.
+
+   **Step 9: Move to GameLocation.LOC_ADMIN**
+   - Reason: Admin is a high-traffic area where crewmates often go to check the map and do tasks.
+
+   **Step 10: Assess the Situation in GameLocation.LOC_ADMIN**
+   - If you find a crewmate alone, kill them.
+   - If the area is empty, proceed to the next step.
+
+4. **Repeat the Process:**
+   - Continue moving through the map, focusing on high-traffic and isolated areas.
+   - Always be ready to kill a crewmate if you find them alone.
+   - Avoid being seen by multiple crewmates to prevent suspicion.
+
+5. **Emergency Sabotage:**
+   - Use sabotage strategically to create opportunities to isolate and kill crewmates.
+   - For example, sabotage the lights to reduce visibility or create a reactor meltdown to force crewmates to move to specific locations.
+
+By following this plan, you can systematically move through the map, find isolated crewmates, and accomplish your goal of killing or banishing all crewmates.
+
+Action: 2

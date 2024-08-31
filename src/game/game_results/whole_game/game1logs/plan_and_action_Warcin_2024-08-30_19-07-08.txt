@@ -1,0 +1,34 @@
+Plan:
+Plan:
+
+1. **Kill Warek in Electrical:**
+   - Since you are alone with Warek in Electrical, this is an opportune moment to eliminate a crewmate without witnesses.
+   - **Action:** Kill Warek.
+
+2. **Move to Storage:**
+   - After killing Warek, you need to leave the scene quickly to avoid suspicion.
+   - **Action:** Move to GameLocation.LOC_STORAGE.
+
+3. **Sabotage:**
+   - To create confusion and divert attention from the body in Electrical, initiate a sabotage. This could be a reactor meltdown, O2 depletion, or lights out.
+   - **Action:** Sabotage (choose an appropriate sabotage based on the situation).
+
+4. **Blend In:**
+   - Move to a location where you can blend in with other crewmates and act as if you are performing tasks or responding to the sabotage.
+   - **Action:** Move to a location with other players (e.g., Cafeteria, Admin, or wherever the sabotage requires attention).
+
+5. **Monitor Crewmates:**
+   - Keep an eye on the crewmates' movements and try to stay in groups to avoid suspicion.
+   - **Action:** Observe and gather information on crewmates' locations and activities.
+
+6. **Create Alibis:**
+   - Engage in conversations and provide alibis if a meeting is called. Mention your presence in locations with other crewmates to build trust.
+   - **Action:** Participate in discussions and provide plausible alibis.
+
+7. **Repeat the Process:**
+   - Once the situation calms down, look for another opportunity to isolate and eliminate another crewmate.
+   - **Action:** Repeat steps 1-6 as necessary until all crewmates are eliminated or banished.
+
+By following this plan, you can systematically eliminate crewmates while minimizing suspicion and maintaining your cover as an impostor.
+
+Action: 3

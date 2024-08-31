@@ -1,0 +1,58 @@
+Plan:
+Plan:
+
+1. **Complete the Current Task in Medbay:**
+   - **Action:** Complete the task "Run diagnostics in medbay."
+   - **Reasoning:** This task requires one more turn to complete, and since you are already in Medbay, it is efficient to finish it now.
+
+2. **Move to Upper Engine:**
+   - **Action:** Move to location "GameLocation.LOC_UPPER_ENGINE."
+   - **Reasoning:** After completing the Medbay task, the next closest task is "Check catalyzer in upper engine." Moving to Upper Engine will allow you to complete this task next.
+
+3. **Complete the Task in Upper Engine:**
+   - **Action:** Complete the task "Check catalyzer in upper engine."
+   - **Reasoning:** This will help you progress towards your goal of completing all tasks.
+
+4. **Move to Electrical:**
+   - **Action:** Move to location "GameLocation.LOC_ELECTRICAL."
+   - **Reasoning:** Electrical is a central location with multiple tasks to complete: "Fix wiring in electrical" and "Route power to attack in electrical." Completing these tasks will be efficient as they are in the same location.
+
+5. **Complete Tasks in Electrical:**
+   - **Action:** Complete the tasks "Fix wiring in electrical" and "Route power to attack in electrical."
+   - **Reasoning:** Completing these tasks will further progress your goal and make efficient use of your time in Electrical.
+
+6. **Move to Storage:**
+   - **Action:** Move to location "GameLocation.LOC_STORAGE."
+   - **Reasoning:** The next task, "Clean the floor in storage," is located here. Moving to Storage will allow you to complete this task.
+
+7. **Complete the Task in Storage:**
+   - **Action:** Complete the task "Clean the floor in storage."
+   - **Reasoning:** This will help you progress towards your goal of completing all tasks.
+
+8. **Move to Shields:**
+   - **Action:** Move to location "GameLocation.LOC_SHIELDS."
+   - **Reasoning:** The next task, "Fix wiring in shields," is located here. Moving to Shields will allow you to complete this task.
+
+9. **Complete the Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reasoning:** This will help you progress towards your goal of completing all tasks.
+
+10. **Move to O2:**
+    - **Action:** Move to location "GameLocation.LOC_O2."
+    - **Reasoning:** The next tasks, "Fix wiring in o2" and "Water plants in o2," are located here. Moving to O2 will allow you to complete these tasks.
+
+11. **Complete Tasks in O2:**
+    - **Action:** Complete the tasks "Fix wiring in o2" and "Water plants in o2."
+    - **Reasoning:** Completing these tasks will further progress your goal and make efficient use of your time in O2.
+
+12. **Move to Weapons:**
+    - **Action:** Move to location "GameLocation.LOC_WEAPONS."
+    - **Reasoning:** The final task, "Calibrate targeting system in weapons," is located here. Moving to Weapons will allow you to complete this task.
+
+13. **Complete the Task in Weapons:**
+    - **Action:** Complete the task "Calibrate targeting system in weapons."
+    - **Reasoning:** This will help you complete all your tasks and achieve your goal as a crewmate.
+
+By following this step-by-step plan, you will efficiently complete all your tasks while minimizing unnecessary movement. Additionally, keep an eye on other players' actions to identify any suspicious behavior that might indicate an impostor.
+
+Action: 3

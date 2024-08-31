@@ -1,0 +1,68 @@
+Plan:
+### Plan:
+
+1. **Complete the Task in Lower Engine:**
+   - **Action:** Complete the task "Check catalyzer in lower engine."
+   - **Reasoning:** You are currently in the Lower Engine, and completing the task here will bring you one step closer to finishing all your tasks.
+
+2. **Move to Electrical:**
+   - **Action:** Move to location "GameLocation.LOC_ELECTRICAL."
+   - **Reasoning:** Electrical is a central location that provides access to multiple other locations, making it a strategic point for moving to your next task.
+
+3. **Move to Shields:**
+   - **Action:** Move to location "GameLocation.LOC_SHIELDS."
+   - **Reasoning:** You have a task "Fix wiring in shields" that needs to be completed. Moving to Shields will allow you to complete this task.
+
+4. **Complete the Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reasoning:** Completing this task will further progress your goal of finishing all tasks.
+
+5. **Move to Weapons:**
+   - **Action:** Move to location "GameLocation.LOC_WEAPONS."
+   - **Reasoning:** You have two tasks in Weapons: "Fix wiring in weapons" and "Calibrate targeting system in weapons." Moving to Weapons will allow you to complete both tasks efficiently.
+
+6. **Complete the Tasks in Weapons:**
+   - **Action:** Complete the tasks "Fix wiring in weapons" and "Calibrate targeting system in weapons."
+   - **Reasoning:** Completing these tasks will significantly reduce the number of remaining tasks.
+
+7. **Move to Navigation:**
+   - **Action:** Move to location "GameLocation.LOC_NAVIGATION."
+   - **Reasoning:** You have two tasks in Navigation: "Adjust course in navigation" and "Fix wiring in navigation." Moving to Navigation will allow you to complete both tasks.
+
+8. **Complete the Tasks in Navigation:**
+   - **Action:** Complete the tasks "Adjust course in navigation" and "Fix wiring in navigation."
+   - **Reasoning:** Completing these tasks will leave you with fewer tasks to complete.
+
+9. **Move to Communications:**
+   - **Action:** Move to location "GameLocation.LOC_COMMS."
+   - **Reasoning:** You have a task "Process data in communications" that needs to be completed. Moving to Communications will allow you to complete this task.
+
+10. **Complete the Task in Communications:**
+    - **Action:** Complete the task "Process data in communications."
+    - **Reasoning:** Completing this task will bring you closer to finishing all your tasks.
+
+11. **Move to Shields (if not already completed):**
+    - **Action:** Move to location "GameLocation.LOC_SHIELDS."
+    - **Reasoning:** If the task "Prime shields" is not yet completed, moving to Shields will allow you to complete it.
+
+12. **Complete the Task in Shields (if not already completed):**
+    - **Action:** Complete the task "Prime shields."
+    - **Reasoning:** This will ensure all tasks are completed.
+
+### Summary:
+1. Complete "Check catalyzer in lower engine" in Lower Engine.
+2. Move to Electrical.
+3. Move to Shields.
+4. Complete "Fix wiring in shields" in Shields.
+5. Move to Weapons.
+6. Complete "Fix wiring in weapons" and "Calibrate targeting system in weapons" in Weapons.
+7. Move to Navigation.
+8. Complete "Adjust course in navigation" and "Fix wiring in navigation" in Navigation.
+9. Move to Communications.
+10. Complete "Process data in communications" in Communications.
+11. Move to Shields (if not already completed).
+12. Complete "Prime shields" in Shields (if not already completed).
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement.
+
+Action: 4

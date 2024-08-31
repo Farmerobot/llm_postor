@@ -1,0 +1,56 @@
+Plan:
+Plan:
+
+1. **Move to Upper Engine**:
+   - **Reason**: One of your tasks is to check the catalyzer in the upper engine. This is the closest task to your current location (Medbay).
+
+2. **Complete Task: Check Catalyzer in Upper Engine**:
+   - **Reason**: This will complete one of your tasks and bring you closer to finishing all tasks.
+
+3. **Move to Cafeteria**:
+   - **Reason**: The cafeteria is a central location that provides multiple pathways to other task locations. It also allows you to observe other players' movements and actions.
+
+4. **Move to Storage**:
+   - **Reason**: You have a task to clean the floor in storage. This is a relatively quick task and will further progress your goal.
+
+5. **Complete Task: Clean the Floor in Storage**:
+   - **Reason**: This will complete another task on your list.
+
+6. **Move to Electrical**:
+   - **Reason**: You have two tasks in electrical: fix wiring and route power to attack. Completing these tasks will significantly reduce your task list.
+
+7. **Complete Task: Fix Wiring in Electrical**:
+   - **Reason**: This is one of the tasks in electrical and should be completed first.
+
+8. **Complete Task: Route Power to Attack in Electrical**:
+   - **Reason**: This is the second task in electrical and should be completed after fixing the wiring.
+
+9. **Move to Shields**:
+   - **Reason**: You have a task to fix wiring in shields. This is the next closest task location.
+
+10. **Complete Task: Fix Wiring in Shields**:
+    - **Reason**: This will complete another task on your list.
+
+11. **Move to O2**:
+    - **Reason**: You have two tasks in O2: fix wiring and water plants. Completing these tasks will further progress your goal.
+
+12. **Complete Task: Fix Wiring in O2**:
+    - **Reason**: This is one of the tasks in O2 and should be completed first.
+
+13. **Complete Task: Water Plants in O2**:
+    - **Reason**: This is the second task in O2 and should be completed after fixing the wiring.
+
+14. **Move to Weapons**:
+    - **Reason**: You have a task to calibrate the targeting system in weapons. This is the final task on your list.
+
+15. **Complete Task: Calibrate Targeting System in Weapons**:
+    - **Reason**: This will complete the last task on your list.
+
+**Additional Considerations**:
+- **Stay Alert**: Keep an eye on other players' movements and actions. Report any suspicious behavior or dead bodies.
+- **Safety in Numbers**: Whenever possible, try to stay with other crewmates to reduce the risk of being targeted by an impostor.
+- **Emergency Meetings**: If you gather enough evidence or witness suspicious behavior, call an emergency meeting to discuss and potentially vote out an impostor.
+
+By following this plan, you will efficiently complete your tasks while staying vigilant for any impostor activity.
+
+Action: 1

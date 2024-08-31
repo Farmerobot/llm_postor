@@ -1,0 +1,52 @@
+Plan:
+### Plan:
+
+1. **Move to GameLocation.LOC_UPPER_ENGINE:**
+   - **Reason:** One of the current tasks is to check the catalyzer in the upper engine. This is the closest task to your current location (GameLocation.LOC_MEDBAY).
+
+2. **Complete Task: Check Catalyzer in Upper Engine:**
+   - **Reason:** This will complete one of the tasks on your list.
+
+3. **Move to GameLocation.LOC_CAFETERIA:**
+   - **Reason:** The cafeteria is a central location that provides multiple pathways to other task locations.
+
+4. **Move to GameLocation.LOC_O2:**
+   - **Reason:** Two tasks are located in O2: cleaning the oxygenator filter and watering the plants. Completing these tasks will be efficient as they are in the same location.
+
+5. **Complete Task: Clean Oxygenator Filter in O2:**
+   - **Reason:** This is one of the tasks on your list.
+
+6. **Complete Task: Water Plants in O2:**
+   - **Reason:** This is another task on your list, and it is in the same location as the previous task.
+
+7. **Move to GameLocation.LOC_ELECTRICAL:**
+   - **Reason:** Two tasks are located in electrical: resetting the breakers and routing power to attack. Completing these tasks will be efficient as they are in the same location.
+
+8. **Complete Task: Reset Breakers in Electrical:**
+   - **Reason:** This is one of the tasks on your list.
+
+9. **Complete Task: Route Power to Attack in Electrical:**
+   - **Reason:** This is another task on your list, and it is in the same location as the previous task.
+
+10. **Move to GameLocation.LOC_SHIELDS:**
+    - **Reason:** The final task is to fix the wiring in shields.
+
+11. **Complete Task: Fix Wiring in Shields:**
+    - **Reason:** This is the last task on your list.
+
+### Summary:
+- **Step 1:** Move to GameLocation.LOC_UPPER_ENGINE
+- **Step 2:** Complete Task: Check Catalyzer in Upper Engine
+- **Step 3:** Move to GameLocation.LOC_CAFETERIA
+- **Step 4:** Move to GameLocation.LOC_O2
+- **Step 5:** Complete Task: Clean Oxygenator Filter in O2
+- **Step 6:** Complete Task: Water Plants in O2
+- **Step 7:** Move to GameLocation.LOC_ELECTRICAL
+- **Step 8:** Complete Task: Reset Breakers in Electrical
+- **Step 9:** Complete Task: Route Power to Attack in Electrical
+- **Step 10:** Move to GameLocation.LOC_SHIELDS
+- **Step 11:** Complete Task: Fix Wiring in Shields
+
+By following this plan, you will efficiently complete all your current tasks while minimizing unnecessary movement.
+
+Action: 1

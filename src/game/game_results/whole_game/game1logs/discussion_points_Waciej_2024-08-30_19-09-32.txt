@@ -1,0 +1,13 @@
+As an impostor, my goal is to create confusion and misdirect the crewmates. Here are my discussion points:
+
+1. **Suspicion on Warcin**: "I noticed Warcin moving around a lot without completing any tasks. He went from the Cafeteria to Medbay, then to Upper Engine, Lower Engine, Reactor, and finally Electrical. It seems like he's just wandering around without a clear purpose. This could be suspicious behavior."
+
+2. **Vouch for Wateusz**: "I saw Wateusz doing tasks in both the Cafeteria and Medbay. He completed the 'Start the coffee maker' task in the Cafeteria and 'Fix wiring' in Medbay. I think he's clear."
+
+3. **Question Warek and Wikolaj**: "I saw Warek and Wikolaj move to Admin from the Cafeteria, but I didn't see them complete any tasks there. Can you both explain what tasks you were doing in Admin?"
+
+4. **Self-Defense**: "I was in Medbay and saw Wateusz doing tasks. Then I moved to Upper Engine, Reactor, Lower Engine, and finally Electrical. I completed the 'Check catalyzer' task in Lower Engine. I didn't see anyone else in these locations, so I can't vouch for anyone else."
+
+5. **General Observation**: "It seems like most of us were in the Cafeteria at the start, but then we spread out. We need to be careful and keep an eye on each other to make sure tasks are being completed."
+
+By focusing suspicion on Warcin and questioning Warek and Wikolaj, I can divert attention away from myself and create doubt among the crewmates. Additionally, vouching for Wateusz can help build trust with him, making it less likely that he will suspect me.

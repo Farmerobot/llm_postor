@@ -1,0 +1,55 @@
+Plan:
+### Plan:
+
+1. **Complete Task in Medbay:**
+   - **Action:** Complete the task "Run diagnostics in medbay."
+   - **Reasoning:** You are currently in Medbay, and completing this task will bring you one step closer to finishing all your tasks.
+
+2. **Move to Upper Engine:**
+   - **Action:** Move to location "GameLocation.LOC_UPPER_ENGINE."
+   - **Reasoning:** After completing the task in Medbay, the next closest task is "Check catalyzer in upper engine." This will minimize travel time and increase efficiency.
+
+3. **Complete Task in Upper Engine:**
+   - **Action:** Complete the task "Check catalyzer in upper engine."
+   - **Reasoning:** You will be in the Upper Engine, so it makes sense to complete the task there.
+
+4. **Move to Electrical:**
+   - **Action:** Move to location "GameLocation.LOC_ELECTRICAL."
+   - **Reasoning:** Electrical is the next logical location as it contains two tasks: "Reset breakers in electrical" and "Route power to attack in electrical."
+
+5. **Complete Tasks in Electrical:**
+   - **Action:** Complete the tasks "Reset breakers in electrical" and "Route power to attack in electrical."
+   - **Reasoning:** Completing both tasks in one location will save time and reduce the need for additional travel.
+
+6. **Move to Shields:**
+   - **Action:** Move to location "GameLocation.LOC_SHIELDS."
+   - **Reasoning:** The next task, "Fix wiring in shields," is located in Shields, which is relatively close to Electrical.
+
+7. **Complete Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reasoning:** You will be in Shields, so it makes sense to complete the task there.
+
+8. **Move to O2:**
+   - **Action:** Move to location "GameLocation.LOC_O2."
+   - **Reasoning:** The final two tasks, "Clean oxygenator filter in o2" and "Water plants in o2," are both located in O2.
+
+9. **Complete Tasks in O2:**
+   - **Action:** Complete the tasks "Clean oxygenator filter in o2" and "Water plants in o2."
+   - **Reasoning:** Completing both tasks in one location will save time and reduce the need for additional travel.
+
+### Summary of Actions:
+1. Complete task: Run diagnostics in medbay
+2. Move to location: GameLocation.LOC_UPPER_ENGINE
+3. Complete task: Check catalyzer in upper engine
+4. Move to location: GameLocation.LOC_ELECTRICAL
+5. Complete task: Reset breakers in electrical
+6. Complete task: Route power to attack in electrical
+7. Move to location: GameLocation.LOC_SHIELDS
+8. Complete task: Fix wiring in shields
+9. Move to location: GameLocation.LOC_O2
+10. Complete task: Clean oxygenator filter in o2
+11. Complete task: Water plants in o2
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement.
+
+Action: 3

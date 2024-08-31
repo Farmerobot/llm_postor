@@ -1,0 +1,74 @@
+Plan:
+Plan:
+
+1. **Complete the Immediate Task:**
+   - **Action:** Complete the task "Empty the cafeteria trash."
+   - **Reasoning:** This task is available in the current location (GameLocation.LOC_CAFETERIA) and can be completed immediately, reducing the number of tasks and making progress towards the crewmate goal.
+
+2. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_WEAPONS.
+   - **Reasoning:** The next closest task is "Calibrate targeting system in weapons," which is located in the Weapons room. This room is directly accessible from the Cafeteria.
+
+3. **Complete the Task in Weapons:**
+   - **Action:** Complete the task "Calibrate targeting system in weapons."
+   - **Reasoning:** This task is in the Weapons room, which is the next location after the Cafeteria.
+
+4. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_O2.
+   - **Reasoning:** The next task, "Water plants in o2," is located in the O2 room, which is adjacent to Weapons.
+
+5. **Complete the Task in O2:**
+   - **Action:** Complete the task "Water plants in o2."
+   - **Reasoning:** This task is in the O2 room, which is the next location after Weapons.
+
+6. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_NAVIGATION.
+   - **Reasoning:** The next task, "Fix wiring in o2," is located in the Navigation room, which is adjacent to O2.
+
+7. **Complete the Task in Navigation:**
+   - **Action:** Complete the task "Fix wiring in o2."
+   - **Reasoning:** This task is in the Navigation room, which is the next location after O2.
+
+8. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_SHIELDS.
+   - **Reasoning:** The next task, "Fix wiring in shields," is located in the Shields room, which is adjacent to Navigation.
+
+9. **Complete the Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reasoning:** This task is in the Shields room, which is the next location after Navigation.
+
+10. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_STORAGE.
+    - **Reasoning:** The next task, "Clean the floor in storage," is located in the Storage room, which is adjacent to Shields.
+
+11. **Complete the Task in Storage:**
+    - **Action:** Complete the task "Clean the floor in storage."
+    - **Reasoning:** This task is in the Storage room, which is the next location after Shields.
+
+12. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_ELECTRICAL.
+    - **Reasoning:** The next tasks, "Fix wiring in electrical" and "Route power to attack in electrical," are located in the Electrical room, which is adjacent to Storage.
+
+13. **Complete the Tasks in Electrical:**
+    - **Action:** Complete the tasks "Fix wiring in electrical" and "Route power to attack in electrical."
+    - **Reasoning:** These tasks are in the Electrical room, which is the next location after Storage.
+
+14. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_MEDBAY.
+    - **Reasoning:** The next task, "Run diagnostics in medbay," is located in the Medbay, which is adjacent to Electrical.
+
+15. **Complete the Task in Medbay:**
+    - **Action:** Complete the task "Run diagnostics in medbay."
+    - **Reasoning:** This task is in the Medbay, which is the next location after Electrical.
+
+16. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_UPPER_ENGINE.
+    - **Reasoning:** The next task, "Check catalyzer in upper engine," is located in the Upper Engine, which is adjacent to Medbay.
+
+17. **Complete the Task in Upper Engine:**
+    - **Action:** Complete the task "Check catalyzer in upper engine."
+    - **Reasoning:** This task is in the Upper Engine, which is the next location after Medbay.
+
+By following this step-by-step plan, you will efficiently complete all the tasks while minimizing unnecessary movement and maximizing task completion.
+
+Action: 4

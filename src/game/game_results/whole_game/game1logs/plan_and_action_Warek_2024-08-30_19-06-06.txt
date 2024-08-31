@@ -1,0 +1,50 @@
+Plan:
+Plan:
+
+1. **Complete Task in Electrical:**
+   - Since you are currently in GameLocation.LOC_ELECTRICAL and have a task to "Route power to attack in electrical," it is efficient to complete this task first.
+   - **Action:** Complete task: Route power to attack in electrical.
+
+2. **Move to O2:**
+   - After completing the task in Electrical, the next logical step is to move to GameLocation.LOC_O2, where you have multiple tasks: "Fix wiring in o2," "Clean oxygenator filter in o2," and "Water plants in o2."
+   - **Action:** Move to location GameLocation.LOC_STORAGE.
+   - **Action:** Move to location GameLocation.LOC_ADMIN.
+   - **Action:** Move to location GameLocation.LOC_CAFETERIA.
+   - **Action:** Move to location GameLocation.LOC_O2.
+
+3. **Complete Tasks in O2:**
+   - Once in O2, complete the tasks in the following order:
+     - **Action:** Complete task: Fix wiring in o2.
+     - **Action:** Complete task: Clean oxygenator filter in o2.
+     - **Action:** Complete task: Water plants in o2.
+
+4. **Move to Navigation:**
+   - After completing the tasks in O2, move to GameLocation.LOC_NAVIGATION to complete the tasks: "Check headings in navigation" and "Fix wiring in navigation."
+   - **Action:** Move to location GameLocation.LOC_NAVIGATION.
+
+5. **Complete Tasks in Navigation:**
+   - Once in Navigation, complete the tasks in the following order:
+     - **Action:** Complete task: Check headings in navigation.
+     - **Action:** Complete task: Fix wiring in navigation.
+
+6. **Move to Upper Engine:**
+   - After completing the tasks in Navigation, move to GameLocation.LOC_UPPER_ENGINE to complete the task: "Check catalyzer in upper engine."
+   - **Action:** Move to location GameLocation.LOC_CAFETERIA.
+   - **Action:** Move to location GameLocation.LOC_UPPER_ENGINE.
+
+7. **Complete Task in Upper Engine:**
+   - Once in Upper Engine, complete the task:
+     - **Action:** Complete task: Check catalyzer in upper engine.
+
+8. **Move to Weapons:**
+   - After completing the task in Upper Engine, move to GameLocation.LOC_WEAPONS to complete the task: "Clear asteroids in weapons."
+   - **Action:** Move to location GameLocation.LOC_CAFETERIA.
+   - **Action:** Move to location GameLocation.LOC_WEAPONS.
+
+9. **Complete Task in Weapons:**
+   - Once in Weapons, complete the task:
+     - **Action:** Complete task: Clear asteroids in weapons.
+
+By following this plan, you will efficiently complete all your current tasks while minimizing unnecessary movement and maximizing task completion.
+
+Action: 3

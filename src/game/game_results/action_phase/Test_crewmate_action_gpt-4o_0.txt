@@ -1,0 +1,49 @@
+[Robot]: GameActionType.DO_ACTION | [TODO] | Empty the cafeteria trash
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in upper engine
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 2 turns left to finish
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 1 turns left to finish
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SECURITY
+Player Robot is in GameLocation.LOC_SECURITY with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+Player Robot is in GameLocation.LOC_LOWER_ENGINE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Reset breakers in electrical
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in electrical
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in storage
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+Player Robot is in GameLocation.LOC_ADMIN with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+Player Robot is in GameLocation.LOC_ADMIN with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+Player Robot is in GameLocation.LOC_WEAPONS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in o2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Clean oxygenator filter in o2
+Player Robot is in GameLocation.LOC_O2 with []
+Turns passed: 25

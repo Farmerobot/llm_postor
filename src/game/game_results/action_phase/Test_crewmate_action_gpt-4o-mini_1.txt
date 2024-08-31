@@ -1,0 +1,49 @@
+[Robot]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 2 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 1 turns left to finish
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+Player Robot is in GameLocation.LOC_ADMIN with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+Player Robot is in GameLocation.LOC_ADMIN with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in storage
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Reset breakers in electrical
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.WAIT | None
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_COMMUNICATIONS
+Player Robot is in GameLocation.LOC_COMMUNICATIONS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Adjust course in navigation
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in o2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+Player Robot is in GameLocation.LOC_WEAPONS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in weapons
+Player Robot is in GameLocation.LOC_WEAPONS with []
+Turns passed: 25

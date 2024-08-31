@@ -1,0 +1,20 @@
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in cafeteria
+[Robot]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+[Robot]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in weapons
+[Robot]: GameActionType.DO_ACTION | [TODO] | Calibrate targeting system in weapons
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+[Robot]: GameActionType.DO_ACTION | [TODO] | Water plants in o2
+[Robot]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+[Robot]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 2 turns left to finish
+[Robot]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 1 turns left to finish
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Robot]: GameActionType.DO_ACTION | [TODO] | Empty the storage trash chute
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in electrical
+[Robot]: GameActionType.DO_ACTION | [TODO] | Route power to attack in electrical | 2 turns left to finish
+[Robot]: GameActionType.DO_ACTION | [TODO] | Route power to attack in electrical | 1 turns left to finish
+[Robot]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Robot]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in lower engine
+Turns passed: 20

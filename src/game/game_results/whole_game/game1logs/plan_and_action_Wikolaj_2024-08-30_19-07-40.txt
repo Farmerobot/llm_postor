@@ -1,0 +1,53 @@
+Plan:
+### Plan:
+
+1. **Complete the Current Task in Medbay:**
+   - **Action:** Complete the task "Run diagnostics in medbay."
+   - **Reasoning:** You are already in Medbay, and this task requires only one more turn to complete. Finishing it now will maximize efficiency.
+
+2. **Move to Upper Engine:**
+   - **Action:** Move to location "GameLocation.LOC_UPPER_ENGINE."
+   - **Reasoning:** After completing the task in Medbay, the next closest task is "Check catalyzer in upper engine." Moving there next will allow you to continue completing tasks efficiently.
+
+3. **Complete Task in Upper Engine:**
+   - **Action:** Complete the task "Check catalyzer in upper engine."
+   - **Reasoning:** This task is in the Upper Engine, which is the next logical location to visit after Medbay.
+
+4. **Move to Electrical:**
+   - **Action:** Move to location "GameLocation.LOC_ELECTRICAL."
+   - **Reasoning:** Electrical is the next location with multiple tasks: "Reset breakers in electrical" and "Route power to attack in electrical." Completing these tasks will further progress your goal.
+
+5. **Complete Tasks in Electrical:**
+   - **Action:** Complete the tasks "Reset breakers in electrical" and "Route power to attack in electrical."
+   - **Reasoning:** These tasks are both in Electrical, and completing them will be efficient since you are already there.
+
+6. **Move to Shields:**
+   - **Action:** Move to location "GameLocation.LOC_SHIELDS."
+   - **Reasoning:** The next task, "Fix wiring in shields," is located in Shields. Moving there next will allow you to continue completing tasks efficiently.
+
+7. **Complete Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reasoning:** This task is in Shields, and completing it will further progress your goal.
+
+8. **Move to O2:**
+   - **Action:** Move to location "GameLocation.LOC_O2."
+   - **Reasoning:** The final tasks, "Clean oxygenator filter in o2" and "Water plants in o2," are located in O2. Moving there next will allow you to complete the remaining tasks.
+
+9. **Complete Tasks in O2:**
+   - **Action:** Complete the tasks "Clean oxygenator filter in o2" and "Water plants in o2."
+   - **Reasoning:** These are the final tasks on your list, and completing them will fulfill your goal as a crewmate.
+
+### Summary:
+1. Complete "Run diagnostics in medbay."
+2. Move to Upper Engine.
+3. Complete "Check catalyzer in upper engine."
+4. Move to Electrical.
+5. Complete "Reset breakers in electrical" and "Route power to attack in electrical."
+6. Move to Shields.
+7. Complete "Fix wiring in shields."
+8. Move to O2.
+9. Complete "Clean oxygenator filter in o2" and "Water plants in o2."
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement.
+
+Action: 3

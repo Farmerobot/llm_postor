@@ -1,0 +1,72 @@
+Plan:
+Plan:
+
+1. **Complete the Immediate Task:**
+   - **Action:** Complete the task "Start the coffee maker in the cafeteria."
+   - **Reason:** This task is in your current location (Cafeteria) and can be completed immediately, reducing the number of tasks and making progress towards the crewmate goal.
+
+2. **Move to the Next Nearest Task Location:**
+   - **Action:** Move to GameLocation.LOC_WEAPONS.
+   - **Reason:** The Weapons location is adjacent to the Cafeteria and contains two tasks: "Fix wiring in weapons" and "Calibrate targeting system in weapons." This allows for efficient task completion.
+
+3. **Complete Tasks in Weapons:**
+   - **Action:** Complete the task "Fix wiring in weapons."
+   - **Action:** Complete the task "Calibrate targeting system in weapons."
+   - **Reason:** Completing both tasks in the Weapons location will further reduce the number of tasks and make significant progress.
+
+4. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_NAVIGATION.
+   - **Reason:** Navigation is close to Weapons and contains two tasks: "Adjust course in navigation" and "Fix wiring in navigation."
+
+5. **Complete Tasks in Navigation:**
+   - **Action:** Complete the task "Adjust course in navigation."
+   - **Action:** Complete the task "Fix wiring in navigation."
+   - **Reason:** Completing both tasks in Navigation will continue to reduce the number of tasks efficiently.
+
+6. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_SHIELDS.
+   - **Reason:** Shields is adjacent to Navigation and contains the task "Fix wiring in shields."
+
+7. **Complete Task in Shields:**
+   - **Action:** Complete the task "Fix wiring in shields."
+   - **Reason:** This will further reduce the number of tasks.
+
+8. **Move to the Next Task Location:**
+   - **Action:** Move to GameLocation.LOC_COMMS.
+   - **Reason:** Comms is adjacent to Shields and contains the task "Process data in communications."
+
+9. **Complete Task in Comms:**
+   - **Action:** Complete the task "Process data in communications."
+   - **Reason:** This will continue to reduce the number of tasks.
+
+10. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_ADMIN.
+    - **Reason:** Admin is close to Comms and contains no tasks, but it is a central location to move to other task locations.
+
+11. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_MEDBAY.
+    - **Reason:** Medbay is adjacent to Admin and contains the task "Fix wiring in medbay."
+
+12. **Complete Task in Medbay:**
+    - **Action:** Complete the task "Fix wiring in medbay."
+    - **Reason:** This will further reduce the number of tasks.
+
+13. **Move to the Next Task Location:**
+    - **Action:** Move to GameLocation.LOC_LOWER_ENGINE.
+    - **Reason:** Lower Engine is close to Medbay and contains the task "Check catalyzer in lower engine."
+
+14. **Complete Task in Lower Engine:**
+    - **Action:** Complete the task "Check catalyzer in lower engine."
+    - **Reason:** This will continue to reduce the number of tasks.
+
+15. **Move to the Final Task Location:**
+    - **Action:** Move to GameLocation.LOC_SHIELDS.
+    - **Reason:** Shields is the final location and contains the task "Prime shields."
+
+16. **Complete Task in Shields:**
+    - **Action:** Complete the task "Prime shields."
+    - **Reason:** This will complete all tasks and achieve the crewmate goal.
+
+By following this plan, you will efficiently complete all tasks while minimizing unnecessary movement.
+
+Action: 4

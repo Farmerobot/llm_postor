@@ -1,0 +1,58 @@
+Plan:
+### Plan:
+
+1. **Complete Task in Medbay:**
+   - **Action:** Complete the task "Fix wiring in medbay."
+   - **Reasoning:** You are currently in the Medbay, and one of your tasks is to fix the wiring here. Completing this task immediately will be efficient and reduce the number of tasks remaining.
+
+2. **Move to Weapons:**
+   - **Action:** Move to GameLocation.LOC_WEAPONS.
+   - **Reasoning:** After completing the task in Medbay, the next closest location with tasks is Weapons. You have two tasks there: "Fix wiring in weapons" and "Calibrate targeting system in weapons."
+
+3. **Complete Tasks in Weapons:**
+   - **Action:** Complete the tasks "Fix wiring in weapons" and "Calibrate targeting system in weapons."
+   - **Reasoning:** Completing both tasks in Weapons will further reduce the number of tasks and make efficient use of your time in that location.
+
+4. **Move to Navigation:**
+   - **Action:** Move to GameLocation.LOC_NAVIGATION.
+   - **Reasoning:** After finishing tasks in Weapons, the next closest location with tasks is Navigation. You have two tasks there: "Adjust course in navigation" and "Fix wiring in navigation."
+
+5. **Complete Tasks in Navigation:**
+   - **Action:** Complete the tasks "Adjust course in navigation" and "Fix wiring in navigation."
+   - **Reasoning:** Completing both tasks in Navigation will continue to reduce the number of tasks and make efficient use of your time in that location.
+
+6. **Move to Shields:**
+   - **Action:** Move to GameLocation.LOC_SHIELDS.
+   - **Reasoning:** After finishing tasks in Navigation, the next closest location with tasks is Shields. You have two tasks there: "Fix wiring in shields" and "Prime shields."
+
+7. **Complete Tasks in Shields:**
+   - **Action:** Complete the tasks "Fix wiring in shields" and "Prime shields."
+   - **Reasoning:** Completing both tasks in Shields will further reduce the number of tasks and make efficient use of your time in that location.
+
+8. **Move to Lower Engine:**
+   - **Action:** Move to GameLocation.LOC_LOWER_ENGINE.
+   - **Reasoning:** After finishing tasks in Shields, the next closest location with a task is Lower Engine. You have one task there: "Check catalyzer in lower engine."
+
+9. **Complete Task in Lower Engine:**
+   - **Action:** Complete the task "Check catalyzer in lower engine."
+   - **Reasoning:** Completing this task will further reduce the number of tasks and make efficient use of your time in that location.
+
+10. **Move to Communications:**
+    - **Action:** Move to GameLocation.LOC_COMMS.
+    - **Reasoning:** After finishing tasks in Lower Engine, the next closest location with a task is Communications. You have one task there: "Process data in communications."
+
+11. **Complete Task in Communications:**
+    - **Action:** Complete the task "Process data in communications."
+    - **Reasoning:** Completing this task will further reduce the number of tasks and make efficient use of your time in that location.
+
+### Summary:
+1. Complete "Fix wiring in medbay" in Medbay.
+2. Move to Weapons and complete "Fix wiring in weapons" and "Calibrate targeting system in weapons."
+3. Move to Navigation and complete "Adjust course in navigation" and "Fix wiring in navigation."
+4. Move to Shields and complete "Fix wiring in shields" and "Prime shields."
+5. Move to Lower Engine and complete "Check catalyzer in lower engine."
+6. Move to Communications and complete "Process data in communications."
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement.
+
+Action: 3

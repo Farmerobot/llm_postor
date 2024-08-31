@@ -1,0 +1,70 @@
+Plan:
+### Plan:
+
+1. **Complete Immediate Task:**
+   - **Action:** Complete the task "Start the coffee maker in the cafeteria."
+   - **Reason:** This task is in your current location (Cafeteria) and can be completed immediately.
+
+2. **Move to Next Task Location:**
+   - **Action:** Move to location GameLocation.LOC_MEDBAY.
+   - **Reason:** The Medbay is the closest location with tasks to complete ("Fix wiring in medbay" and "Run diagnostics in medbay").
+
+3. **Complete Tasks in Medbay:**
+   - **Action:** Complete the task "Fix wiring in medbay."
+   - **Action:** Complete the task "Run diagnostics in medbay."
+   - **Reason:** These tasks are in the Medbay, and completing them will reduce the number of tasks left.
+
+4. **Move to Next Task Location:**
+   - **Action:** Move to location GameLocation.LOC_ADMIN.
+   - **Reason:** The Admin Office is the next closest location with a task to complete ("Clean the floor in admin").
+
+5. **Complete Task in Admin:**
+   - **Action:** Complete the task "Clean the floor in admin."
+   - **Reason:** This task is in the Admin Office, and completing it will reduce the number of tasks left.
+
+6. **Move to Next Task Location:**
+   - **Action:** Move to location GameLocation.LOC_O2.
+   - **Reason:** The O2 room has two tasks to complete ("Clean oxygenator filter in o2" and "Water plants in o2").
+
+7. **Complete Tasks in O2:**
+   - **Action:** Complete the task "Clean oxygenator filter in o2."
+   - **Action:** Complete the task "Water plants in o2."
+   - **Reason:** These tasks are in the O2 room, and completing them will reduce the number of tasks left.
+
+8. **Move to Next Task Location:**
+   - **Action:** Move to location GameLocation.LOC_ELECTRICAL.
+   - **Reason:** The Electrical room has two tasks to complete ("Reset breakers in electrical" and "Route power to attack in electrical").
+
+9. **Complete Tasks in Electrical:**
+   - **Action:** Complete the task "Reset breakers in electrical."
+   - **Action:** Complete the task "Route power to attack in electrical."
+   - **Reason:** These tasks are in the Electrical room, and completing them will reduce the number of tasks left.
+
+10. **Move to Next Task Location:**
+    - **Action:** Move to location GameLocation.LOC_UPPER_ENGINE.
+    - **Reason:** The Upper Engine has a task to complete ("Check catalyzer in upper engine").
+
+11. **Complete Task in Upper Engine:**
+    - **Action:** Complete the task "Check catalyzer in upper engine."
+    - **Reason:** This task is in the Upper Engine, and completing it will reduce the number of tasks left.
+
+12. **Move to Next Task Location:**
+    - **Action:** Move to location GameLocation.LOC_SHIELDS.
+    - **Reason:** The Shields room has a task to complete ("Fix wiring in shields").
+
+13. **Complete Task in Shields:**
+    - **Action:** Complete the task "Fix wiring in shields."
+    - **Reason:** This task is in the Shields room, and completing it will reduce the number of tasks left.
+
+### Summary:
+1. Complete the task in the Cafeteria.
+2. Move to Medbay and complete tasks there.
+3. Move to Admin and complete the task there.
+4. Move to O2 and complete tasks there.
+5. Move to Electrical and complete tasks there.
+6. Move to Upper Engine and complete the task there.
+7. Move to Shields and complete the task there.
+
+By following this plan, you will efficiently complete all your tasks while minimizing unnecessary movement.
+
+Action: 4

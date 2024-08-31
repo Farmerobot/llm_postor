@@ -1,0 +1,39 @@
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in cafeteria
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+Player Robot is in GameLocation.LOC_CAFETERIA with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+Player Robot is in GameLocation.LOC_WEAPONS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in weapons
+Player Robot is in GameLocation.LOC_WEAPONS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Calibrate targeting system in weapons
+Player Robot is in GameLocation.LOC_WEAPONS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Water plants in o2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 2 turns left to finish
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 1 turns left to finish
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Empty the storage trash chute
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in electrical
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Route power to attack in electrical | 2 turns left to finish
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Route power to attack in electrical | 1 turns left to finish
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+Player Robot is in GameLocation.LOC_LOWER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in lower engine
+Player Robot is in GameLocation.LOC_LOWER_ENGINE with []
+Turns passed: 20

@@ -1,0 +1,58 @@
+Plan:
+Plan:
+
+1. **Complete the Immediate Task:**
+   - **Action:** Complete the task "Fix wiring in cafeteria."
+   - **Reasoning:** This task is available in the current location (GameLocation.LOC_CAFETERIA) and can be completed immediately, contributing to the overall goal of completing all tasks.
+
+2. **Move to the Next Closest Task Location:**
+   - **Action:** Move to GameLocation.LOC_WEAPONS.
+   - **Reasoning:** The next closest task is "Clear asteroids in weapons," and moving to the Weapons location will allow you to complete another task quickly.
+
+3. **Complete the Task in Weapons:**
+   - **Action:** Complete the task "Clear asteroids in weapons."
+   - **Reasoning:** This task is in the Weapons location, which is the next location you will move to.
+
+4. **Move to O2 for Multiple Tasks:**
+   - **Action:** Move to GameLocation.LOC_O2.
+   - **Reasoning:** There are multiple tasks in O2 ("Fix wiring in o2," "Clean oxygenator filter in o2," and "Water plants in o2"), making it efficient to move there next.
+
+5. **Complete Tasks in O2:**
+   - **Action:** Complete the tasks "Fix wiring in o2," "Clean oxygenator filter in o2," and "Water plants in o2."
+   - **Reasoning:** Completing multiple tasks in one location maximizes efficiency.
+
+6. **Move to Navigation:**
+   - **Action:** Move to GameLocation.LOC_NAVIGATION.
+   - **Reasoning:** The task "Check headings in navigation" is located here, and it is adjacent to O2.
+
+7. **Complete the Task in Navigation:**
+   - **Action:** Complete the task "Check headings in navigation."
+   - **Reasoning:** This task is in the Navigation location, which is the next location you will move to.
+
+8. **Move to Electrical:**
+   - **Action:** Move to GameLocation.LOC_ELECTRICAL.
+   - **Reasoning:** There are two tasks in Electrical ("Fix wiring in electrical" and "Route power to attack in electrical"), making it efficient to move there next.
+
+9. **Complete Tasks in Electrical:**
+   - **Action:** Complete the tasks "Fix wiring in electrical" and "Route power to attack in electrical."
+   - **Reasoning:** Completing multiple tasks in one location maximizes efficiency.
+
+10. **Move to Upper Engine:**
+    - **Action:** Move to GameLocation.LOC_UPPER_ENGINE.
+    - **Reasoning:** The task "Check catalyzer in upper engine" is located here.
+
+11. **Complete the Task in Upper Engine:**
+    - **Action:** Complete the task "Check catalyzer in upper engine."
+    - **Reasoning:** This task is in the Upper Engine location, which is the next location you will move to.
+
+12. **Move to Navigation for the Final Wiring Task:**
+    - **Action:** Move to GameLocation.LOC_NAVIGATION.
+    - **Reasoning:** The final task "Fix wiring in navigation" is located here.
+
+13. **Complete the Final Task in Navigation:**
+    - **Action:** Complete the task "Fix wiring in navigation."
+    - **Reasoning:** This is the last task on the list, and completing it will fulfill the goal of completing all tasks.
+
+By following this plan, you will efficiently complete all tasks while minimizing unnecessary movement across the map.
+
+Action: 4

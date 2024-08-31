@@ -1,0 +1,53 @@
+[Robot]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+Player Robot is in GameLocation.LOC_MEDBAY with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+Player Robot is in GameLocation.LOC_UPPER_ENGINE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Robot is in GameLocation.LOC_REACTOR with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+Player Robot is in GameLocation.LOC_LOWER_ENGINE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in lower engine
+Player Robot is in GameLocation.LOC_LOWER_ENGINE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Robot is in GameLocation.LOC_ELECTRICAL with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Clean the floor in storage
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in storage
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Fix wiring in shields
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Prime shields | 2 turns left to finish
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Prime shields | 1 turns left to finish
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Clean oxygenator filter in o2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Check headings in navigation
+Player Robot is in GameLocation.LOC_NAVIGATION with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Robot is in GameLocation.LOC_O2 with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Robot is in GameLocation.LOC_SHIELDS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_COMMUNICATIONS
+Player Robot is in GameLocation.LOC_COMMUNICATIONS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Process data in communications | 2 turns left to finish
+Player Robot is in GameLocation.LOC_COMMUNICATIONS with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Process data in communications | 1 turns left to finish
+Player Robot is in GameLocation.LOC_COMMUNICATIONS with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Robot is in GameLocation.LOC_STORAGE with []
+[Robot]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+Player Robot is in GameLocation.LOC_ADMIN with []
+[Robot]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+Player Robot is in GameLocation.LOC_ADMIN with []
+Turns passed: 27
