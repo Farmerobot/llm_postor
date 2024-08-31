@@ -1,0 +1,2 @@
+# Ignore contents of all llm_generated folders
+**/llm_generated/*
