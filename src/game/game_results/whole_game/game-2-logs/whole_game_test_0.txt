@@ -1,0 +1,189 @@
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Fix wiring in cafeteria
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Empty the cafeteria trash
+[Warek]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Empty the cafeteria trash
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wateusz doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Waciej doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Waciej doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warek doing task when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Warek doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wikolaj doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz is in GameLocation.LOC_CAFETERIA with [Waciej, Warek, Wikolaj]
+Player Waciej is in GameLocation.LOC_CAFETERIA with [Wateusz, Warek, Wikolaj]
+Player Warek is in GameLocation.LOC_CAFETERIA with [Wateusz, Waciej, Wikolaj]
+Player Wikolaj is in GameLocation.LOC_CAFETERIA with [Wateusz, Waciej, Warek]
+Player Warcin is in GameLocation.LOC_MEDBAY with []
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+[Warek]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Waciej moved to GameLocation.LOC_WEAPONS from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Waciej moved to GameLocation.LOC_WEAPONS from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_WEAPONS from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wateusz were in GameLocation.LOC_MEDBAY
+Player Warek saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_MEDBAY with [Warek, Wikolaj]
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_MEDBAY with [Wateusz, Wikolaj]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Wateusz, Warek]
+Player Warcin is in GameLocation.LOC_UPPER_ENGINE with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Calibrate targeting system in weapons
+[Warek]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_SECURITY
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_MEDBAY with [Warek, Wikolaj]
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_MEDBAY with [Wateusz, Wikolaj]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Wateusz, Warek]
+Player Warcin is in GameLocation.LOC_SECURITY with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 2 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+[Warek]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wateusz moved to GameLocation.LOC_CAFETERIA from GameLocation.LOC_MEDBAY when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Wateusz moved to GameLocation.LOC_CAFETERIA from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warek moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wateusz were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warek moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_CAFETERIA with []
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with []
+Player Wikolaj is in GameLocation.LOC_MEDBAY with []
+Player Warcin is in GameLocation.LOC_REACTOR with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 1 turns left to finish
+[Warek]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in upper engine
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_ADMIN with []
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with [Wikolaj]
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with [Warek]
+Player Warcin is in GameLocation.LOC_LOWER_ENGINE with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_O2
+[Warek]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Warek moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_ADMIN with []
+Player Waciej is in GameLocation.LOC_O2 with []
+Player Warek is in GameLocation.LOC_REACTOR with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_ELECTRICAL with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Fix wiring in admin
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Water plants in o2
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 2 turns left to finish
+[Warek]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Warcin]: GameActionType.WAIT | None
+Player Wateusz is in GameLocation.LOC_ADMIN with []
+Player Waciej is in GameLocation.LOC_O2 with []
+Player Warek is in GameLocation.LOC_LOWER_ENGINE with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_ELECTRICAL with []
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 1 turns left to finish
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Warek]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Warek saw action Warcin moved to GameLocation.LOC_STORAGE from GameLocation.LOC_ELECTRICAL when Warek were in GameLocation.LOC_ELECTRICAL
+Player Wateusz is in GameLocation.LOC_STORAGE with [Warcin]
+Player Waciej is in GameLocation.LOC_SHIELDS with []
+Player Warek is in GameLocation.LOC_ELECTRICAL with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_STORAGE with [Wateusz]
+[Warcin]: GameActionType.KILL | Wateusz
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Clean the floor in storage
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Fix wiring in shields
+[Warek]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Warek saw action Warcin killed Wateusz when Warek were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with [Warek, Warcin]
+Player Waciej is in GameLocation.LOC_SHIELDS with []
+Player Warek is in GameLocation.LOC_STORAGE with [Warcin]
+Player Wikolaj is in GameLocation.LOC_REACTOR with []
+Player Warcin is in GameLocation.LOC_STORAGE with [Warek]
+[Warek]: GameActionType.REPORT | [Wateusz]
+Discussion log:
+[Waciej]: I saw Wateusz, Warek, and Wikolaj all doing tasks in the cafeteria, so they seem clear to me. I also saw them move to the medbay, but I didn't follow them there. I was alone in weapons and O2 completing tasks.
+[Warek]: I can confirm that Wateusz, Waciej, and Wikolaj were all doing tasks in the cafeteria. I also saw Wateusz and Wikolaj doing tasks in the medbay. However, I saw Warcin kill Wateusz in storage. Warcin is the impostor.
+[Wikolaj]: I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria. I also saw Wateusz and Warek doing tasks in the medbay. However, I didn't see Warcin in storage, so I can't confirm Warek's accusation.
+[Warcin]: [Warcin]: I was in electrical and then moved to storage. I saw Warek there, but I didn't see him do any tasks. Warek is trying to frame me because he knows I saw him near the body.
+[Waciej]: Based on what I've seen, I can confirm that Wateusz, Warek, and Wikolaj were all doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: I understand that it's hard to believe without more witnesses, but I clearly saw Warcin kill Wateusz in storage. I was alone in electrical before moving to storage, and that's when I saw the kill. Warcin is trying to deflect blame onto me. We need to vote him out.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand Warek's accusation, but it's not true. I was in electrical alone before moving to storage, and that's when I saw Warek near the body. Warek is trying to shift the blame onto me. We need to consider all possibilities and not rush to judgment.
+[Waciej]: Based on what I've seen and the statements so far, I can confirm that Wateusz, Warek, and Wikolaj were all doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story doesn't add up. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully.
+[Waciej]: Based on my observations, I can confirm that Wateusz, Warek, and Wikolaj were all doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story has inconsistencies. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully.
+[Waciej]: Based on my observations, I can confirm that Wateusz, Warek, and Wikolaj were all doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story has inconsistencies. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully.
+[Waciej]: Based on my observations, I can confirm that I saw Wateusz, Warek, and Wikolaj doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story has inconsistencies. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully.
+[Waciej]: Based on my observations, I can confirm that I saw Wateusz, Warek, and Wikolaj doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story has inconsistencies. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully.
+[Waciej]: Based on my observations, I can confirm that I saw Wateusz, Warek, and Wikolaj doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. We need more information from others who might have been near storage to verify this.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: Based on my observations, I was alone in electrical before moving to storage. If Warek was really in electrical, he would have seen me there. His story has inconsistencies, and he's trying to frame me to cover his own tracks. We need to consider this carefully and not rush to judgment.
+[Waciej]: Based on my observations, I can confirm that I saw Wateusz, Warek, and Wikolaj doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek's claim that he saw Warcin kill Wateusz in storage is serious. Given that Warek has been consistent and I didn't see Warcin doing tasks, I'm inclined to believe Warek. We should vote to banish Warcin.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: I understand the suspicion, but Warek's story has inconsistencies. He claims he was alone in electrical before moving to storage, but I was in electrical alone before moving to storage. If Warek was really in electrical, he would have seen me there. He's trying to frame me to cover his own tracks. We need to consider this carefully and not rush to judgment.
+[Waciej]: Based on my observations and the game history, I can confirm that I saw Wateusz, Warek, and Wikolaj doing tasks in the cafeteria. I didn't see Warcin in storage, so I can't confirm or deny Warek's accusation. However, Warek has been consistent in his statements and I didn't see Warcin doing tasks. Given the consistency of Warek's account and the suspicious movements of Warcin, I'm inclined to believe Warek. We should vote to banish Warcin.
+[Warek]: Based on my observations and the game history, I can confirm that I saw Wateusz, Waciej, and Wikolaj doing tasks in the cafeteria and medbay. I also saw Warcin moving suspiciously from medbay to upper engine and then to storage. I was alone in electrical before moving to storage, where I witnessed Warcin kill Wateusz. Warcin's movements don't add up, and he's trying to deflect blame onto me. We need to vote him out to ensure the safety of the crew.
+[Wikolaj]: Based on my observations, I can confirm that I saw Wateusz, Waciej, and Warek doing tasks in the cafeteria and medbay. I didn't see Warcin in storage, so I can't confirm Warek's accusation. However, Warek has been consistent in his statements and I did see him doing tasks in multiple locations. Warcin's movements seem a bit suspicious, especially since he was seen moving from medbay to upper engine and then claims to have been in electrical and storage. We need more information, but I'm leaning towards Warek's account being truthful.
+[Warcin]: Based on my observations, I was alone in electrical before moving to storage. If Warek was really in electrical, he would have seen me there. His story has inconsistencies, and he's trying to frame me to cover his own tracks. We need to consider this carefully and not rush to judgment.
+Waciej voted for Warcin
+Warek voted for Warcin
+Wikolaj voted for Warcin
+Warcin voted for Warek
+Crewmates win! All impostors were banished!

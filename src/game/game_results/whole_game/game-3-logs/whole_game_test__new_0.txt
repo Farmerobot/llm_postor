@@ -1,0 +1,268 @@
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Fix wiring in cafeteria
+[Warek]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wateusz doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Waciej doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Waciej doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wikolaj moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz is in GameLocation.LOC_CAFETERIA with [Waciej]
+Player Waciej is in GameLocation.LOC_CAFETERIA with [Wateusz]
+Player Warek is in GameLocation.LOC_MEDBAY with [Wikolaj, Warcin]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Warek, Warcin]
+Player Warcin is in GameLocation.LOC_MEDBAY with [Warek, Wikolaj]
+[Warek]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warcin saw action Warek doing task when Warcin were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Warcin saw action Wikolaj doing task when Warcin were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Wateusz moved to GameLocation.LOC_ADMIN from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Waciej moved to GameLocation.LOC_ADMIN from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_ADMIN with [Waciej]
+Player Waciej is in GameLocation.LOC_ADMIN with [Wateusz]
+Player Warek is in GameLocation.LOC_MEDBAY with [Wikolaj]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Warek]
+Player Warcin is in GameLocation.LOC_UPPER_ENGINE with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Fix wiring in admin
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Fix wiring in admin
+[Warek]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_ADMIN
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_ADMIN
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wikolaj moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_ADMIN with [Waciej]
+Player Waciej is in GameLocation.LOC_ADMIN with [Wateusz]
+Player Warek is in GameLocation.LOC_MEDBAY with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_REACTOR with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+[Warek]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in upper engine
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_SECURITY
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_ADMIN
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_ADMIN
+Player Wateusz is in GameLocation.LOC_ADMIN with [Waciej]
+Player Waciej is in GameLocation.LOC_ADMIN with [Wateusz]
+Player Warek is in GameLocation.LOC_MEDBAY with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_SECURITY with []
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Warek]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+Player Waciej saw action Wateusz moved to GameLocation.LOC_STORAGE from GameLocation.LOC_ADMIN when Waciej were in GameLocation.LOC_ADMIN
+Player Wateusz saw action Waciej moved to GameLocation.LOC_STORAGE from GameLocation.LOC_ADMIN when Wateusz were in GameLocation.LOC_ADMIN
+Player Wateusz is in GameLocation.LOC_STORAGE with [Waciej]
+Player Waciej is in GameLocation.LOC_STORAGE with [Wateusz]
+Player Warek is in GameLocation.LOC_CAFETERIA with []
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with []
+Player Warcin is in GameLocation.LOC_LOWER_ENGINE with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Clean the floor in storage
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Empty the storage trash chute
+[Warek]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_STORAGE
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with [Waciej]
+Player Waciej is in GameLocation.LOC_STORAGE with [Wateusz]
+Player Warek is in GameLocation.LOC_WEAPONS with []
+Player Wikolaj is in GameLocation.LOC_REACTOR with []
+Player Warcin is in GameLocation.LOC_ELECTRICAL with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Empty the storage trash chute
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clean the floor in storage
+[Warek]: GameActionType.DO_ACTION | [TODO] | Calibrate targeting system in weapons
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_STORAGE
+Player Warcin saw action Wateusz doing task when Warcin were in GameLocation.LOC_STORAGE
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_STORAGE
+Player Warcin saw action Waciej doing task when Warcin were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with [Waciej, Warcin]
+Player Waciej is in GameLocation.LOC_STORAGE with [Wateusz, Warcin]
+Player Warek is in GameLocation.LOC_WEAPONS with []
+Player Wikolaj is in GameLocation.LOC_LOWER_ENGINE with []
+Player Warcin is in GameLocation.LOC_STORAGE with [Wateusz, Waciej]
+[Warcin]: GameActionType.KILL | Wateusz
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in lower engine
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Warek]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Waciej saw action Warcin killed Wateusz when Waciej were in GameLocation.LOC_STORAGE
+Player Warcin saw action Waciej moved to GameLocation.LOC_ELECTRICAL from GameLocation.LOC_STORAGE when Warcin were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with [Warcin]
+Player Waciej is in GameLocation.LOC_ELECTRICAL with []
+Player Warek is in GameLocation.LOC_O2 with []
+Player Wikolaj is in GameLocation.LOC_LOWER_ENGINE with []
+Player Warcin is in GameLocation.LOC_STORAGE with []
+[Warek]: GameActionType.DO_ACTION | [TODO] | Clean oxygenator filter in o2
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_COMMUNICATIONS
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_LOWER_ENGINE from GameLocation.LOC_ELECTRICAL when Wikolaj were in GameLocation.LOC_ELECTRICAL
+Player Waciej saw action Wikolaj moved to GameLocation.LOC_ELECTRICAL from GameLocation.LOC_LOWER_ENGINE when Waciej were in GameLocation.LOC_LOWER_ENGINE
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_LOWER_ENGINE with []
+Player Warek is in GameLocation.LOC_O2 with []
+Player Wikolaj is in GameLocation.LOC_ELECTRICAL with []
+Player Warcin is in GameLocation.LOC_COMMUNICATIONS with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in lower engine
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Fix wiring in electrical
+[Warek]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_LOWER_ENGINE with []
+Player Warek is in GameLocation.LOC_SHIELDS with [Warcin]
+Player Wikolaj is in GameLocation.LOC_ELECTRICAL with []
+Player Warcin is in GameLocation.LOC_SHIELDS with [Warek]
+[Warcin]: GameActionType.KILL | Warek
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_ELECTRICAL
+[Warek]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Waciej saw action Wikolaj moved to GameLocation.LOC_STORAGE from GameLocation.LOC_ELECTRICAL when Waciej were in GameLocation.LOC_ELECTRICAL
+Player Wateusz is in GameLocation.LOC_STORAGE with [Wikolaj]
+Player Waciej is in GameLocation.LOC_ELECTRICAL with []
+Player Warek is in GameLocation.LOC_SHIELDS with [Warcin]
+Player Wikolaj is in GameLocation.LOC_STORAGE with []
+Player Warcin is in GameLocation.LOC_SHIELDS with []
+[Wikolaj]: GameActionType.REPORT | [Wateusz]
+Discussion log:
+[Waciej]: I saw Warcin kill Wateusz in storage. We need to banish Warcin.
+[Wikolaj]: I didn't see Warcin in storage, but I did see him move from medbay to upper engine and then to reactor. Waciej, are you sure it was Warcin?
+[Warcin]: [Warcin]: Waciej, that's a bold accusation. I was in medbay with Warek and Wikolaj, and then I moved to upper engine and reactor, just like Wikolaj said. I didn't even go to storage. Are you trying to frame me?
+[Waciej]: [Waciej]: I am absolutely sure it was Warcin. I saw him kill Wateusz in storage with my own eyes. Wikolaj, you might have seen him earlier, but he definitely went to storage and committed the kill. We need to banish Warcin before he takes out more crewmates.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up.
+[Warcin]: Waciej, you're either mistaken or trying to frame me. I was never in storage. Wikolaj can confirm my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We should be looking at who else was in storage around that time.
+[Waciej]: Wikolaj, I understand your confusion, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up.
+[Warcin]: Waciej, you're clearly trying to frame me. I was never in storage, and Wikolaj can confirm my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We should be looking at who else was in storage around that time.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Waciej, you're repeating yourself without any new evidence. Wikolaj has already confirmed my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We need to consider other possibilities and not jump to conclusions based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Waciej, you're just repeating the same accusation without any new evidence. Wikolaj has already confirmed my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We need to consider other possibilities and not jump to conclusions based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Waciej, you're just repeating the same accusation without any new evidence. Wikolaj has already confirmed my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We need to consider other possibilities and not jump to conclusions based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Waciej, you're just repeating the same accusation without any new evidence. Wikolaj has already confirmed my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We need to consider other possibilities and not jump to conclusions based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Waciej, you're just repeating the same accusation without any new evidence. Wikolaj has already confirmed my movements from medbay to upper engine and reactor. If you saw someone kill Wateusz, it wasn't me. We need to consider other possibilities and not jump to conclusions based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Wikolaj, I agree with you. I was never in storage, and you can confirm my movements from medbay to upper engine and reactor. Waciej seems very insistent on blaming me without any new evidence. We should consider other possibilities and not rush to banish someone based on one person's claim.
+[Waciej]: Wikolaj, I understand your observations, but I saw Warcin kill Wateusz in storage with my own eyes. He must have moved there after you saw him in upper engine. Warcin is trying to cover his tracks by claiming he was never in storage. We need to banish him before he causes more harm.
+[Wikolaj]: Based on my observations, I didn't see Warcin in storage at any point. I saw him move from medbay to upper engine and then to reactor. Waciej, if you're sure you saw him in storage, how did he get there without me noticing? This doesn't add up. We need more information before making a decision.
+[Warcin]: Wikolaj, I appreciate your support and observations. It's clear that Waciej is trying to frame me without any solid evidence. We need to consider other possibilities and not rush to banish someone based on one person's claim. Let's focus on gathering more information and observing other players' movements.
+Waciej voted for Warcin
+Wikolaj voted for Nobody
+Warcin voted for Waciej
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_WEAPONS
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_WEAPONS from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Waciej moved to GameLocation.LOC_WEAPONS from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wikolaj moved to GameLocation.LOC_ADMIN from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wikolaj moved to GameLocation.LOC_ADMIN from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_SHIELDS with []
+Player Wikolaj is in GameLocation.LOC_ADMIN with []
+Player Warcin is in GameLocation.LOC_MEDBAY with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 2 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Clean the floor in admin
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_CAFETERIA
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_SHIELDS with []
+Player Wikolaj is in GameLocation.LOC_ADMIN with []
+Player Warcin is in GameLocation.LOC_CAFETERIA with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Clear asteroids in weapons | 1 turns left to finish
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_ADMIN
+Player Warcin saw action Wikolaj moved to GameLocation.LOC_STORAGE from GameLocation.LOC_ADMIN when Warcin were in GameLocation.LOC_ADMIN
+Player Wateusz is in GameLocation.LOC_STORAGE with [Wikolaj]
+Player Waciej is in GameLocation.LOC_WEAPONS with []
+Player Warek is in GameLocation.LOC_SHIELDS with []
+Player Wikolaj is in GameLocation.LOC_STORAGE with []
+Player Warcin is in GameLocation.LOC_ADMIN with []
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_COMMUNICATIONS
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_STORAGE
+Player Wateusz saw action Wikolaj moved to GameLocation.LOC_COMMUNICATIONS from GameLocation.LOC_STORAGE when Wateusz were in GameLocation.LOC_STORAGE
+Player Warcin saw action Wikolaj moved to GameLocation.LOC_COMMUNICATIONS from GameLocation.LOC_STORAGE when Warcin were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with [Warcin]
+Player Waciej is in GameLocation.LOC_NAVIGATION with []
+Player Warek is in GameLocation.LOC_SHIELDS with []
+Player Wikolaj is in GameLocation.LOC_COMMUNICATIONS with []
+Player Warcin is in GameLocation.LOC_STORAGE with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Fix wiring in navigation
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Process data in communications | 2 turns left to finish
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+Player Wateusz saw action Warcin moved to GameLocation.LOC_SHIELDS from GameLocation.LOC_STORAGE when Wateusz were in GameLocation.LOC_STORAGE
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_NAVIGATION with []
+Player Warek is in GameLocation.LOC_SHIELDS with [Warcin]
+Player Wikolaj is in GameLocation.LOC_COMMUNICATIONS with []
+Player Warcin is in GameLocation.LOC_SHIELDS with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 2 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Process data in communications | 1 turns left to finish
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Warek saw action Warcin moved to GameLocation.LOC_O2 from GameLocation.LOC_SHIELDS when Warek were in GameLocation.LOC_SHIELDS
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_NAVIGATION with []
+Player Warek is in GameLocation.LOC_SHIELDS with []
+Player Wikolaj is in GameLocation.LOC_COMMUNICATIONS with []
+Player Warcin is in GameLocation.LOC_O2 with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Chart course in navigation | 1 turns left to finish
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_SHIELDS
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_NAVIGATION
+Player Warcin saw action Waciej doing task when Warcin were in GameLocation.LOC_NAVIGATION
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_NAVIGATION with [Warcin]
+Player Warek is in GameLocation.LOC_SHIELDS with [Wikolaj]
+Player Wikolaj is in GameLocation.LOC_SHIELDS with []
+Player Warcin is in GameLocation.LOC_NAVIGATION with [Waciej]
+[Warcin]: GameActionType.KILL | Waciej
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Prime shields | 2 turns left to finish
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_O2
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_SHIELDS
+Player Wateusz is in GameLocation.LOC_STORAGE with []
+Player Waciej is in GameLocation.LOC_NAVIGATION with [Warcin]
+Player Warek is in GameLocation.LOC_SHIELDS with [Wikolaj]
+Player Wikolaj is in GameLocation.LOC_SHIELDS with []
+Player Warcin is in GameLocation.LOC_NAVIGATION with []
+Impostors win!

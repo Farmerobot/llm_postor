@@ -1,0 +1,409 @@
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Start the coffee maker in the cafeteria
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Warek]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wikolaj doing task when Warcin were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Wateusz moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Waciej moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Waciej moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Waciej moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Warcin saw action Warek moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warcin were in GameLocation.LOC_CAFETERIA
+Player Wateusz saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wateusz were in GameLocation.LOC_CAFETERIA
+Player Waciej saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Waciej were in GameLocation.LOC_CAFETERIA
+Player Warek saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Warek were in GameLocation.LOC_CAFETERIA
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_MEDBAY from GameLocation.LOC_CAFETERIA when Wikolaj were in GameLocation.LOC_CAFETERIA
+Player Wateusz is in GameLocation.LOC_MEDBAY with [Waciej, Warek, Warcin]
+Player Waciej is in GameLocation.LOC_MEDBAY with [Wateusz, Warek, Warcin]
+Player Warek is in GameLocation.LOC_MEDBAY with [Wateusz, Waciej, Warcin]
+Player Wikolaj is in GameLocation.LOC_CAFETERIA with []
+Player Warcin is in GameLocation.LOC_MEDBAY with [Wateusz, Waciej, Warek]
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 2 turns left to finish
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Warek]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_MEDBAY
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warcin saw action Wateusz doing task when Warcin were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Warek saw action Waciej doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warcin saw action Waciej doing task when Warcin were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Warek doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warcin saw action Warek doing task when Warcin were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wateusz were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Waciej were in GameLocation.LOC_MEDBAY
+Player Warek saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warcin moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_MEDBAY with [Waciej, Warek, Wikolaj]
+Player Waciej is in GameLocation.LOC_MEDBAY with [Wateusz, Warek, Wikolaj]
+Player Warek is in GameLocation.LOC_MEDBAY with [Wateusz, Waciej, Wikolaj]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Wateusz, Waciej, Warek]
+Player Warcin is in GameLocation.LOC_UPPER_ENGINE with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Submit scan in medbay | 1 turns left to finish
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 2 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Fix wiring in medbay
+[Warek]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_SECURITY
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Warek saw action Waciej doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warek moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wateusz were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Warek moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Waciej were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Warek moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Warek saw action Warcin moved to GameLocation.LOC_SECURITY from GameLocation.LOC_UPPER_ENGINE when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_MEDBAY with [Waciej, Wikolaj]
+Player Waciej is in GameLocation.LOC_MEDBAY with [Wateusz, Wikolaj]
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with []
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Wateusz, Waciej]
+Player Warcin is in GameLocation.LOC_SECURITY with []
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 1 turns left to finish
+[Warek]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 2 turns left to finish
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.WAIT | None
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Waciej saw action Wateusz moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Waciej were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Wateusz moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_UPPER_ENGINE with [Warek]
+Player Waciej is in GameLocation.LOC_MEDBAY with [Wikolaj]
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with [Wateusz]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with [Waciej]
+Player Warcin is in GameLocation.LOC_SECURITY with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Replace compression coil in upper engine
+[Warek]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 2 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Run diagnostics in medbay | 1 turns left to finish
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.WAIT | None
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Warek doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_MEDBAY
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_UPPER_ENGINE from GameLocation.LOC_MEDBAY when Wikolaj were in GameLocation.LOC_MEDBAY
+Player Wateusz is in GameLocation.LOC_UPPER_ENGINE with [Waciej, Warek]
+Player Waciej is in GameLocation.LOC_UPPER_ENGINE with [Wateusz, Warek]
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with [Wateusz, Waciej]
+Player Wikolaj is in GameLocation.LOC_MEDBAY with []
+Player Warcin is in GameLocation.LOC_SECURITY with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 2 turns left to finish
+[Waciej]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+[Warek]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 1 turns left to finish
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_UPPER_ENGINE
+[Warcin]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Waciej doing task when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Waciej doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Waciej doing task when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Warek doing task when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Warek doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Warek doing task when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_UPPER_ENGINE with [Waciej, Warek, Wikolaj]
+Player Waciej is in GameLocation.LOC_UPPER_ENGINE with [Wateusz, Warek, Wikolaj]
+Player Warek is in GameLocation.LOC_UPPER_ENGINE with [Wateusz, Waciej, Wikolaj]
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with [Wateusz, Waciej, Warek]
+Player Warcin is in GameLocation.LOC_REACTOR with []
+[Wateusz]: GameActionType.DO_ACTION | [TODO] | Align engine output in upper engine | 1 turns left to finish
+[Wikolaj]: GameActionType.DO_ACTION | [TODO] | Check catalyzer in upper engine
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Warek]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Warcin]: GameActionType.WAIT | None
+Player Waciej saw action Wateusz doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Wateusz doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Wateusz doing task when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Wikolaj doing task when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Wikolaj doing task when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Wikolaj doing task when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Waciej moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Warek saw action Waciej moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Warek were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Waciej moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Warek moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Warek moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Waciej were in GameLocation.LOC_UPPER_ENGINE
+Player Wikolaj saw action Warek moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Waciej saw action Warcin waited when Waciej were in GameLocation.LOC_REACTOR
+Player Warek saw action Warcin waited when Warek were in GameLocation.LOC_REACTOR
+Player Wateusz is in GameLocation.LOC_UPPER_ENGINE with [Wikolaj]
+Player Waciej is in GameLocation.LOC_REACTOR with [Warek, Warcin]
+Player Warek is in GameLocation.LOC_REACTOR with [Waciej, Warcin]
+Player Wikolaj is in GameLocation.LOC_UPPER_ENGINE with [Wateusz]
+Player Warcin is in GameLocation.LOC_REACTOR with [Waciej, Warek]
+[Warcin]: GameActionType.KILL | Waciej
+[Wateusz]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+[Waciej]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Warek]: GameActionType.MOVE | GameLocation.LOC_LOWER_ENGINE
+[Wikolaj]: GameActionType.MOVE | GameLocation.LOC_REACTOR
+Player Wateusz saw action Warcin killed Waciej when Wateusz were in GameLocation.LOC_REACTOR
+Player Warek saw action Warcin killed Waciej when Warek were in GameLocation.LOC_REACTOR
+Player Wikolaj saw action Warcin killed Waciej when Wikolaj were in GameLocation.LOC_REACTOR
+Player Wikolaj saw action Wateusz moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wikolaj were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz saw action Warek moved to GameLocation.LOC_LOWER_ENGINE from GameLocation.LOC_REACTOR when Wateusz were in GameLocation.LOC_REACTOR
+Player Wikolaj saw action Warek moved to GameLocation.LOC_LOWER_ENGINE from GameLocation.LOC_REACTOR when Wikolaj were in GameLocation.LOC_REACTOR
+Player Warcin saw action Warek moved to GameLocation.LOC_LOWER_ENGINE from GameLocation.LOC_REACTOR when Warcin were in GameLocation.LOC_REACTOR
+Player Wateusz saw action Wikolaj moved to GameLocation.LOC_REACTOR from GameLocation.LOC_UPPER_ENGINE when Wateusz were in GameLocation.LOC_UPPER_ENGINE
+Player Wateusz is in GameLocation.LOC_REACTOR with [Wikolaj, Warcin]
+Player Waciej is in GameLocation.LOC_REACTOR with [Wateusz, Wikolaj, Warcin]
+Player Warek is in GameLocation.LOC_LOWER_ENGINE with []
+Player Wikolaj is in GameLocation.LOC_REACTOR with [Wateusz, Warcin]
+Player Warcin is in GameLocation.LOC_REACTOR with [Wateusz, Wikolaj]
+[Wateusz]: GameActionType.REPORT | [Waciej]
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Discussion log:
+[Wateusz]: I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Warek]: I can confirm what Wateusz said. I saw Warcin kill Waciej in the reactor. We need to banish Warcin.
+[Wikolaj]: I also saw Warcin kill Waciej in the reactor. We should definitely banish Warcin.
+[Warcin]: This is a coordinated attack against me. I was in Security and then moved to Reactor, but I didn't kill anyone. Wateusz, Warek, and Wikolaj are trying to frame me. Why would all three of them be in Reactor at the same time? It doesn't add up.
+[Wateusz]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Warek and Wikolaj also saw it. The evidence is clear. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in the reactor with my own eyes. Wateusz and Wikolaj are also confirming this. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is clear. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The evidence is overwhelming. Trying to claim it's a coordinated attack is just a desperate attempt to deflect blame. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is clear. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your story doesn't add up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your story doesn't hold up. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your story doesn't add up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't hold up. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+[Wateusz]: Warcin, your defense doesn't hold up. I saw you kill Waciej in Reactor, and both Warek and Wikolaj also witnessed it. The fact that you're trying to claim it's a coordinated attack just makes you look more suspicious. We need to banish Warcin.
+[Warek]: Warcin, your defense doesn't make sense. I saw you kill Waciej in Reactor with my own eyes. Both Wateusz and Wikolaj also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Wikolaj]: Warcin, your defense doesn't make sense. I was in Reactor and saw you kill Waciej. Both Wateusz and Warek also witnessed it. The evidence is overwhelming. We need to banish Warcin.
+[Warcin]: This is clearly a coordinated effort to frame me. I was in Security for a while and then moved to Reactor. If all three of you were in Reactor, why didn't anyone report the body immediately? It doesn't make sense that all three of you would be there and not report it right away. This sounds like a setup.
+Wateusz voted for Warcin
+Warek voted for Warcin
+Wikolaj voted for Warcin
+Warcin voted for Wateusz
+Crewmates win! All impostors were banished!
