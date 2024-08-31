@@ -11,10 +11,9 @@ from game.agents.DiscussionAgent import DiscussionAgent
 from game.agents.VotingAgent import VotingAgent
 
 class Player():
-    def __init__(self, name: str, agent: str = "human", model_name: str = "", role: PlayerRole = PlayerRole.UNKNOWN):
+    def __init__(self, name: str, agent: str = "human", model_name: str = "", role: PlayerRole = PlayerRole.CREWMATE):
         self.name: str = name
         self.player_stage: GamePhase = GamePhase.MAIN_MENU
-        self.player_role: PlayerRole = role
         self.player_state: PlayerState = PlayerState.ALIVE
         self.player_location: GameLocation = GameLocation.LOC_CAFETERIA
         self.player_tasks: list[Task] = []
@@ -30,23 +29,26 @@ class Player():
         self.agent = agent
         if agent == "ai":
             if model_name.startswith("gpt"):
-                llm = ChatOpenAI(
+                self.llm = ChatOpenAI(
                     model=model_name,
-                    temperature=0,
+                    temperature=0.1,
                 )
-            role_str = "crewmate" if role == PlayerRole.CREWMATE else "impostor"
-            self.adventure_agent = AdventureGameAgent(llm=llm, player_name=self.name)
-            self.discussion_agent = DiscussionAgent(llm=llm, player_name=self.name, role=role_str)
-            self.voting_agent = VotingAgent(llm=llm, player_name=self.name, role=role_str)
-
+        self.set_role(role)
 
     def set_role(self, role: PlayerRole) -> None:
         self.player_role = role
         if role == PlayerRole.IMPOSTOR:
             self.is_impostor = True
             self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
+
         else:
             self.is_impostor = False
+
+        if self.agent == "ai":
+            role_str = "crewmate" if role == PlayerRole.CREWMATE else "impostor"
+            self.adventure_agent = AdventureGameAgent(llm=self.llm, player_name=self.name)
+            self.discussion_agent = DiscussionAgent(llm=self.llm, player_name=self.name, role=role_str)
+            self.voting_agent = VotingAgent(llm=self.llm, player_name=self.name, role=role_str)
 
     def set_state(self, state: PlayerState) -> None:
         self.player_state = state
@@ -72,14 +74,13 @@ class Player():
         return [task for task in self.player_tasks if not task.completed]
     
     def prompt_action(self, prompt: str, actions: list[str]) -> int:
-        # self.history[-1]["prompt"] = prompt
         task_str = "\n".join([str(task) for task in self.player_tasks])
-        # self.history[-1]["tasks"] = f"Here are your tasks: \n{task_str}"
         self.history[-1]["story"] = f"Your turn {self.name}: {prompt}"
         action_prompt = "\n".join([f"{i}: {action}" for i, action in enumerate(actions)])
         self.history[-1]["actions"] = action_prompt
         if self.agent == "human":
             print("========================================")
+            self.history[-1]["tasks"] = f"Here are your tasks: \n{task_str}"
             print(self.get_history_str())
             try:
                 choosen_action = int(input("Choose action: "))
