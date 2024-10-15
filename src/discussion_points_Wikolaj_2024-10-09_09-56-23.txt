@@ -1,0 +1,15 @@
+1. **Observation of Tasks**: I noticed that both Wateusz and Warek were actively doing tasks in the cafeteria when I was there. This suggests they were engaged in crewmate activities. However, I did see Warcin just waiting around, which raises some suspicion.
+
+2. **The Incident**: I witnessed Warcin kill Wateusz right in front of me. This is a critical piece of evidence. I believe we should focus our attention on Warcin, as I have no doubt about what I saw.
+
+3. **Warek's Movement**: After the task completion, I saw Warek move to GameLocation.LOC_ADMIN. While this doesn't necessarily indicate guilt, it does show he was not present during the incident. We should consider his alibi and whether anyone can confirm his actions after leaving the cafeteria.
+
+4. **Waciej's Movement**: I also saw Waciej move to GameLocation.LOC_MEDBAY from the cafeteria. I haven't seen him since, but it might be worth checking if anyone has seen him or if he has any tasks to confirm his whereabouts.
+
+5. **Warcin's Defense**: I think it’s important to hear Warcin's side of the story. If he has a reasonable explanation for his actions or can provide an alibi, we should consider it. However, my observation of him committing the act is quite damning.
+
+6. **Next Steps**: I propose we focus our discussion on Warcin and see if anyone else has additional information or observations. If no one can provide a solid alibi for him, I believe we should vote to banish him.
+
+7. **Caution with Accusations**: While I am confident in my observation, I urge everyone to remain cautious and not jump to conclusions without considering all evidence. However, in this case, I feel strongly that Warcin is the imposter. 
+
+Let’s discuss and gather more information before we vote!
