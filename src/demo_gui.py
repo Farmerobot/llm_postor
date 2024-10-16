@@ -1,7 +1,7 @@
 from game.game_engine import GameEngine
 from game.models.player import Player
 from game.models.game_models import GamePhase, PlayerRole
-from gui.debug_gui import DebugGUI
+from game.gui.debug_gui import DebugGUI
 
 game = GameEngine()
 
