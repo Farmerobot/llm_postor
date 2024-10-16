@@ -3,6 +3,7 @@ from tkinter import ttk
 from game.game_engine import GameEngine
 import threading
 
+
 class DebugGUI:
     def __init__(self, game_engine: GameEngine):
         self.game_engine = game_engine
@@ -40,7 +41,9 @@ class DebugGUI:
         player_state_label.pack()
 
         # Player Location
-        player_location_label = tk.Label(frame, text=f"Location: {player.player_location}")
+        player_location_label = tk.Label(
+            frame, text=f"Location: {player.player_location}"
+        )
         player_location_label.pack()
 
         # Task List
@@ -81,11 +84,15 @@ class DebugGUI:
             player_role_label.config(text=f"Role: {player.player_role}")
 
             # Update player state
-            player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[2]
+            player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[
+                2
+            ]
             player_state_label.config(text=f"State: {player.player_state}")
 
             # Update player location
-            player_location_label = self.player_tabs.winfo_children()[i].winfo_children()[3]
+            player_location_label = self.player_tabs.winfo_children()[
+                i
+            ].winfo_children()[3]
             player_location_label.config(text=f"Location: {player.player_location}")
 
             # Update task list
@@ -95,7 +102,9 @@ class DebugGUI:
                 task_listbox.insert(tk.END, str(task))
 
             # Update action history
-            action_history_text = self.player_tabs.winfo_children()[i].winfo_children()[7]
+            action_history_text = self.player_tabs.winfo_children()[i].winfo_children()[
+                7
+            ]
             action_history_text.delete("1.0", tk.END)
             for action in player.history:
                 action_history_text.insert(tk.END, f"{action}\n")
@@ -107,7 +116,9 @@ class DebugGUI:
                 chat_history_text.insert(tk.END, f"{message}\n")
 
             # Update AI agent responses
-            agent_responses_text = self.player_tabs.winfo_children()[i].winfo_children()[11]
+            agent_responses_text = self.player_tabs.winfo_children()[
+                i
+            ].winfo_children()[11]
             agent_responses_text.delete("1.0", tk.END)
             for response in player.history:
                 agent_responses_text.insert(tk.END, f"{response}\n")
@@ -122,6 +133,7 @@ class DebugGUI:
 
     def run(self):
         self.window.mainloop()
+
 
 # # Example usage
 # game = GameEngine()

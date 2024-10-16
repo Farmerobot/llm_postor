@@ -1,18 +1,21 @@
 from random import randint, sample
-import game.consts as consts
-from game.models.player import Player
-from game.models.game_models import GameLocation, ShortTask, LongTask
+from src.game import consts
+from src.game.models.player import Player
+from src.game.models.game_models import GameLocation, ShortTask, LongTask
+
 
 def get_random_tasks(player: Player) -> list:
     short_tasks = get_short_tasks()
     long_tasks = get_long_tasks()
     return short_tasks + long_tasks
-    
+
 
 def get_short_tasks() -> list:
     tasks = [
         ShortTask("Empty the cafeteria trash", GameLocation.LOC_CAFETERIA),
-        ShortTask("Start the coffee maker in the cafeteria", GameLocation.LOC_CAFETERIA),
+        ShortTask(
+            "Start the coffee maker in the cafeteria", GameLocation.LOC_CAFETERIA
+        ),
         ShortTask("Fix wiring in cafeteria", GameLocation.LOC_CAFETERIA),
         ShortTask("Empty the storage trash chute", GameLocation.LOC_STORAGE),
         ShortTask("Fix wiring in storage", GameLocation.LOC_STORAGE),
@@ -33,10 +36,15 @@ def get_short_tasks() -> list:
         ShortTask("Fix wiring in medbay", GameLocation.LOC_MEDBAY),
         ShortTask("Check catalyzer in upper engine", GameLocation.LOC_UPPER_ENGINE),
         ShortTask("Check catalyzer in lower engine", GameLocation.LOC_LOWER_ENGINE),
-        ShortTask("Replace compression coil in upper engine", GameLocation.LOC_UPPER_ENGINE),
-        ShortTask("Replace compression coil in lower engine", GameLocation.LOC_LOWER_ENGINE)
+        ShortTask(
+            "Replace compression coil in upper engine", GameLocation.LOC_UPPER_ENGINE
+        ),
+        ShortTask(
+            "Replace compression coil in lower engine", GameLocation.LOC_LOWER_ENGINE
+        ),
     ]
     return sample(tasks, k=consts.NUM_SHORT_TASKS)
+
 
 def get_long_tasks() -> list:
     tasks = [
@@ -51,4 +59,3 @@ def get_long_tasks() -> list:
         LongTask("Submit scan in medbay", GameLocation.LOC_MEDBAY),
     ]
     return sample(tasks, k=consts.NUM_LONG_TASKS)
-    

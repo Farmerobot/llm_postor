@@ -1,10 +1,14 @@
+import pydantic
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 from typing import Any, List
 import re
 import datetime
+
+
 class GameState(BaseModel):
     history: list[str] = Field(default_factory=list)
+
 
 class VotingAgent(BaseModel):
     llm: Any
@@ -12,8 +16,7 @@ class VotingAgent(BaseModel):
     player_name: str = ""
     role: str = ""
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = pydantic.ConfigDict(arbitrary_types_allowed=True)
 
     def update_state(self, observation: str):
         self.state.history.append(observation)
@@ -45,7 +48,9 @@ class VotingAgent(BaseModel):
             player_role=self.role,
             discussion=discussion_log,
             history="\n".join(self.state.history),
-            actions="\n".join(f"{i+1}. {action}" for i, action in enumerate(available_actions))
+            actions="\n".join(
+                f"{i+1}. {action}" for i, action in enumerate(available_actions)
+            ),
         )
 
         chosen_action = self.llm.predict(action_prompt)
@@ -53,7 +58,9 @@ class VotingAgent(BaseModel):
 
         # Ensure the chosen action is one of the available actions
         normalized_chosen_action = self.normalize_action(chosen_action)
-        normalized_available_actions = [self.normalize_action(action) for action in available_actions]
+        normalized_available_actions = [
+            self.normalize_action(action) for action in available_actions
+        ]
 
         if normalized_chosen_action not in normalized_available_actions:
             return 0  # Default to first action if invalid
@@ -65,8 +72,9 @@ class VotingAgent(BaseModel):
 
     def normalize_action(self, action: str) -> str:
         # Remove any leading numbers or punctuation
-        action = re.sub(r'^\d+[\s:.)-]*', '', action).strip()
+        action = re.sub(r"^\d+[\s:.)-]*", "", action).strip()
         return action.lower()
+
 
 # Example usage:
 # llm = ChatOpenAI(temperature=0.7)

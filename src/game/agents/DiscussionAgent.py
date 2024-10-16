@@ -1,12 +1,15 @@
+import pydantic
 from langchain_openai import ChatOpenAI
 from langchain.prompts import StringPromptTemplate
-from langchain import LLMChain
+from langchain.chains import LLMChain
 from typing import Any, List
 from pydantic import BaseModel, Field
 import datetime
 
+
 class GameState(BaseModel):
     history: list[str] = Field(default_factory=list)
+
 
 class DiscussionAgent(BaseModel):
     llm: Any
@@ -14,8 +17,7 @@ class DiscussionAgent(BaseModel):
     player_name: str = ""
     role: str = ""
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = pydantic.ConfigDict(arbitrary_types_allowed=True)
 
     def update_state(self, observation: str):
         self.state.history.append(observation)
@@ -34,13 +36,13 @@ class DiscussionAgent(BaseModel):
         
         Your discussion points:
         """
-        
+
         discussion_prompt = discussion_template.format(
             player_name=self.player_name,
             player_role=self.role,
-            history="\n".join(self.state.history)
+            history="\n".join(self.state.history),
         )
-        
+
         discussion_points = self.llm.predict(discussion_prompt)
         save_path = f"src/game/game_results/discussion/discussion_points_{self.player_name}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         with open(save_path, "w") as f:
@@ -69,19 +71,20 @@ class DiscussionAgent(BaseModel):
 
         Your response:
         """
-        
+
         response_prompt = response_template.format(
             player_name=self.player_name,
             player_role=self.role,
             history="\n".join(self.state.history),
-            statements=statements
+            statements=statements,
         )
-        
+
         response = self.llm.predict(response_prompt)
         # save_path = f"statements_{self.player_name}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         # with open(save_path, "w") as f:
         #     f.write(response.strip())
         return response.strip()
+
 
 # Example usage:
 # llm = ChatOpenAI(temperature=0.7)

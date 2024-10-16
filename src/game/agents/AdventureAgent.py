@@ -1,26 +1,28 @@
+import pydantic
 from langchain_openai import ChatOpenAI
 from langchain.prompts import StringPromptTemplate
-from langchain import LLMChain
+from langchain.chains import LLMChain
 from typing import Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 import re
 import datetime
 
 # You need to set your OpenAI API key as an environment variable
 # or pass it directly to the OpenAI constructor
 
+
 class GameState(BaseModel):
     history: list[str] = Field(default_factory=list)
     current_tasks: list[str] = [""]
     available_actions: list[str] = Field(default_factory=list)
+
 
 class AdventureGameAgent(BaseModel):
     llm: Any
     state: GameState = Field(default_factory=GameState)
     player_name: str = ""
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     def update_state(self, observation: str, tasks: list[str], actions: list[str]):
         self.state.history.append(observation)
@@ -64,13 +66,13 @@ class AdventureGameAgent(BaseModel):
         
         Plan:
         """
-        
+
         plan_prompt = plan_template.format(
             history="\n".join(self.state.history),
             tasks=self.state.current_tasks,
-            actions=", ".join(self.state.available_actions)
+            actions=", ".join(self.state.available_actions),
         )
-        
+
         plan = self.llm.predict(plan_prompt)
         return plan.strip()
 
@@ -93,24 +95,26 @@ class AdventureGameAgent(BaseModel):
         
         Chosen action:
         """
-        
+
         action_prompt = action_template.format(
             history="\n".join(self.state.history),
             task=self.state.current_tasks,
             actions=", ".join(self.state.available_actions),
-            plan=plan
+            plan=plan,
         )
-        
+
         chosen_action = self.llm.predict(action_prompt)
         chosen_action = chosen_action.strip()
-        
+
         # Ensure the chosen action is one of the available actions
         normalized_chosen_action = normalize_action(chosen_action)
-        normalized_available_actions = [normalize_action(action) for action in self.state.available_actions]
-    
+        normalized_available_actions = [
+            normalize_action(action) for action in self.state.available_actions
+        ]
+
         if normalized_chosen_action not in normalized_available_actions:
             return 0  # Default to first action if invalid
-        
+
         return normalized_available_actions.index(normalized_chosen_action)
 
     def act(self) -> int:
@@ -122,7 +126,8 @@ class AdventureGameAgent(BaseModel):
         #     f.write(f"Plan:\n{plan}\n\nAction: {action}")
         return action
 
+
 def normalize_action(action: str) -> str:
     # Remove any leading numbers or punctuation
-    action = re.sub(r'^\d+[\s:.)-]*', '', action).strip()
+    action = re.sub(r"^\d+[\s:.)-]*", "", action).strip()
     return action.lower()
