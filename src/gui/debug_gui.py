@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from game.game_engine import GameEngine
+import threading
 
 class DebugGUI:
     def __init__(self, game_engine: GameEngine):
@@ -20,7 +21,11 @@ class DebugGUI:
         self.agent_response_window = tk.Toplevel(self.window)
         self.agent_response_window.title("AI Agent Responses")
         self.agent_response_text = tk.Text(self.agent_response_window)
-        self.agent_response_text.pack()
+        self.agent_response_text.pack()       
+                                                                                                                
+        # Start the game loop in a separate thread                                                                                                                      
+        game_thread = threading.Thread(target=self.game_engine.main_game_loop)                                                                                                      
+        game_thread.start()
 
         # Update GUI with game state changes
         self.update_gui()
@@ -122,8 +127,8 @@ class DebugGUI:
     def run(self):
         self.window.mainloop()
 
-# Example usage
-game = GameEngine()
-# ... (Load players and initialize the game)
-gui = DebugGUI(game)
-gui.run()
+# # Example usage
+# game = GameEngine()
+# # ... (Load players and initialize the game)
+# gui = DebugGUI(game)
+# gui.run()

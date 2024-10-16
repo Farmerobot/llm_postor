@@ -50,7 +50,9 @@ class GameEngine():
             check_game_over = self.check_game_over
         
 
+        print("Game started!")
         while not check_game_over():
+            print(f"Game stage: {self.game_stage}")
             choosen_actions: list[GameAction] = []
             for player in self.players:
                 if player.player_state == PlayerState.ALIVE:
