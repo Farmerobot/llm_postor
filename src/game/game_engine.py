@@ -66,6 +66,7 @@ class GameEngine():
             if someone_reported and freeze_stage is None:
                 self.go_to_discussion()
                 self.go_to_voting()
+            self.gui.update_gui()
         # END OF GAME
         if freeze_stage is None:
             print("Game Over!")

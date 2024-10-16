@@ -42,7 +42,7 @@ class DiscussionAgent(BaseModel):
         )
         
         discussion_points = self.llm.predict(discussion_prompt)
-        save_path = f"game/game_results/discussion/discussion_points_{self.player_name}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+        save_path = f"src/game/game_results/discussion/discussion_points_{self.player_name}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         with open(save_path, "w") as f:
             f.write(discussion_points.strip())
         return discussion_points.strip()

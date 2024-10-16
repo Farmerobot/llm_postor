@@ -21,11 +21,7 @@ class DebugGUI:
         self.agent_response_window = tk.Toplevel(self.window)
         self.agent_response_window.title("AI Agent Responses")
         self.agent_response_text = tk.Text(self.agent_response_window)
-        self.agent_response_text.pack()       
-                                                                                                                
-        # Start the game loop in a separate thread                                                                                                                      
-        game_thread = threading.Thread(target=self.game_engine.main_game_loop)                                                                                                      
-        game_thread.start()
+        self.agent_response_text.pack()
 
         # Update GUI with game state changes
         self.update_gui()
@@ -36,7 +32,7 @@ class DebugGUI:
         player_name_label.pack()
 
         # Player Role
-        player_role_label = tk.Label(frame, text=f"Role: {player.role}")
+        player_role_label = tk.Label(frame, text=f"Role: {player.player_role}")
         player_role_label.pack()
 
         # Player State
@@ -82,7 +78,7 @@ class DebugGUI:
 
             # Update player role
             player_role_label = self.player_tabs.winfo_children()[i].winfo_children()[1]
-            player_role_label.config(text=f"Role: {player.role}")
+            player_role_label.config(text=f"Role: {player.player_role}")
 
             # Update player state
             player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[2]
@@ -122,7 +118,7 @@ class DebugGUI:
             for response in player.history:
                 self.agent_response_text.insert(tk.END, f"{player.name}: {response}\n")
 
-        self.window.after(100, self.update_gui)
+        self.window.update()
 
     def run(self):
         self.window.mainloop()

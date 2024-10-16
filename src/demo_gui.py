@@ -16,7 +16,9 @@ players = [Player("Wateusz", agent="ai", model_name="gpt-4o-mini"),
 game.load_players(players, choose_impostor=False)
 game.init_game()
 
+game.DEBUG = True
 gui = DebugGUI(game)
+game.gui = gui
+game.main_game_loop()
 gui.run()
 
-# game.main_game_loop()
