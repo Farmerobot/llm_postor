@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from game.game_engine import GameEngine
 
 class DebugGUI:
@@ -8,7 +9,7 @@ class DebugGUI:
         self.window.title("Among Us Debugger")
 
         # Create player dashboard tabs
-        self.player_tabs = tk.Notebook(self.window)
+        self.player_tabs = ttk.Notebook(self.window)
         for player in self.game_engine.players:
             player_frame = tk.Frame(self.player_tabs)
             self.create_player_panel(player_frame, player)
