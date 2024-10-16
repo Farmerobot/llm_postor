@@ -1,4 +1,4 @@
-from src.game.models.game_models import (
+from game.models.game_models import (
     GamePhase,
     PlayerRole,
     PlayerState,
@@ -9,13 +9,13 @@ from typing import Union
 from enum import Enum
 from typing import Optional, Any
 from random import choice
-from src.game import consts
+from game import consts
 from collections import OrderedDict
 from langchain_openai import ChatOpenAI
-from src.game.agents.AdventureAgent import AdventureGameAgent
-from src.game.agents.DiscussionAgent import DiscussionAgent
-from src.game.agents.VotingAgent import VotingAgent
-import src.game.consts as game_consts
+from game.agents.AdventureAgent import AdventureGameAgent
+from game.agents.DiscussionAgent import DiscussionAgent
+from game.agents.VotingAgent import VotingAgent
+import game.consts as game_consts
 
 
 class Player:

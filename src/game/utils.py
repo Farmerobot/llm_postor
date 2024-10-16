@@ -1,7 +1,7 @@
 from random import randint, sample
-from src.game import consts
-from src.game.models.player import Player
-from src.game.models.game_models import GameLocation, ShortTask, LongTask
+from game import consts
+from game.models.player import Player
+from game.models.game_models import GameLocation, ShortTask, LongTask
 
 
 def get_random_tasks(player: Player) -> list:

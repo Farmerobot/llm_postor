@@ -1,10 +1,11 @@
-from src.game.models.game_models import *
-from src.game.models.player import Player, GameAction, GameActionType
-from src.game.utils import get_random_tasks
+from game.models.game_models import *
+from game.models.player import Player, GameAction, GameActionType
+from game.utils import get_random_tasks
 from typing import Optional, Any
 import random
-import src.game.consts as game_consts
+from game import consts as game_consts
 from collections import OrderedDict, Counter
+
 
 
 class GameEngine:

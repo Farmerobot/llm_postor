@@ -1,6 +1,6 @@
 from enum import Enum
 from typing import Optional, Any
-from src.game.consts import ASCII_MAP
+from game.consts import ASCII_MAP
 
 
 class GamePhase(Enum):
