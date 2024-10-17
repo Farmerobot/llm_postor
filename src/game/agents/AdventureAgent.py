@@ -2,6 +2,7 @@ import pydantic
 from langchain_openai import ChatOpenAI
 from langchain.prompts import StringPromptTemplate
 from langchain.chains import LLMChain
+from langchain.schema import HumanMessage
 from typing import Any
 from pydantic import BaseModel, Field, ConfigDict
 import re
@@ -20,6 +21,7 @@ class GameState(BaseModel):
 class AdventureGameAgent(BaseModel):
     llm: Any
     state: GameState = Field(default_factory=GameState)
+    responses: list[str] = Field(default_factory=list)
     player_name: str = ""
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
@@ -66,16 +68,13 @@ class AdventureGameAgent(BaseModel):
         
         Plan:
         """
-
         plan_prompt = plan_template.format(
             history="\n".join(self.state.history),
             tasks=self.state.current_tasks,
             actions=", ".join(self.state.available_actions),
         )
-
-        plan = self.llm.predict(plan_prompt)
-        return plan.strip()
-
+        plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
+        return plan.content.strip()
     def choose_action(self, plan: str) -> int:
         action_template = """
         You are a game agent with the following state:
@@ -95,38 +94,32 @@ class AdventureGameAgent(BaseModel):
         
         Chosen action:
         """
-
         action_prompt = action_template.format(
             history="\n".join(self.state.history),
             task=self.state.current_tasks,
             actions=", ".join(self.state.available_actions),
             plan=plan,
         )
-
-        chosen_action = self.llm.predict(action_prompt)
-        chosen_action = chosen_action.strip()
-
+        chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        chosen_action = chosen_action.content.strip()
+        self.responses.append(chosen_action)
         # Ensure the chosen action is one of the available actions
         normalized_chosen_action = normalize_action(chosen_action)
         normalized_available_actions = [
             normalize_action(action) for action in self.state.available_actions
         ]
-
         if normalized_chosen_action not in normalized_available_actions:
             return 0  # Default to first action if invalid
-
         return normalized_available_actions.index(normalized_chosen_action)
-
     def act(self) -> int:
         plan = self.create_plan()
         action = self.choose_action(plan)
         # save the plan and action to file
+        self.responses.append(plan)
         # save_path = f"plan_and_action_{self.player_name}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
         # with open(save_path, "w") as f:
         #     f.write(f"Plan:\n{plan}\n\nAction: {action}")
         return action
-
-
 def normalize_action(action: str) -> str:
     # Remove any leading numbers or punctuation
     action = re.sub(r"^\d+[\s:.)-]*", "", action).strip()

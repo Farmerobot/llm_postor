@@ -7,6 +7,7 @@ game = GameEngine()
 
 impostor = Player("Warcin", agent="human")
 impostor.set_role(PlayerRole.IMPOSTOR)
+impostor.responses = []
 
 players = [
     Player("Wateusz", agent="ai", model_name="gpt-4o-mini"),
@@ -23,3 +24,4 @@ gui = DebugGUI(game)
 game.gui = gui
 game.main_game_loop()
 gui.run()
+

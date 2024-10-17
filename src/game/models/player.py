@@ -12,6 +12,7 @@ from random import choice
 from game import consts
 from collections import OrderedDict
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from game.agents.AdventureAgent import AdventureGameAgent
 from game.agents.DiscussionAgent import DiscussionAgent
 from game.agents.VotingAgent import VotingAgent
@@ -35,6 +36,7 @@ class Player:
         self.is_impostor: bool = False
         self.kill_cooldown: int = 0
         self.history: list[OrderedDict] = []  # observation and action history
+        self.responses: list[str] = []
         self.chat_history: list = []
         self.prev_location: Optional[GameLocation] = None
         self.discussion_prompt: str = ""
@@ -44,6 +46,11 @@ class Player:
         if agent == "ai":
             if model_name.startswith("gpt"):
                 self.llm = ChatOpenAI(
+                    model=model_name,
+                    temperature=0.1,
+                )
+            elif model_name.startswith("gemini"):
+                self.llm = ChatGoogleGenerativeAI(
                     model=model_name,
                     temperature=0.1,
                 )
@@ -68,6 +75,10 @@ class Player:
             self.voting_agent = VotingAgent(
                 llm=self.llm, player_name=self.name, role=role_str
             )
+        elif self.agent == "human":
+            self.adventure_agent = None
+            self.discussion_agent = None
+            self.voting_agent = None
 
     def set_state(self, state: PlayerState) -> None:
         self.player_state = state
