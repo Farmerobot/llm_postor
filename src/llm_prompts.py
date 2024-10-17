@@ -1,88 +1,132 @@
-# LLM Prompts for various agents and actions
+# LLM Prompts for various agents and actions. Absolutely no persusaion or manipulation involved.
 
-ADVENTURE_PLAN_TEMPLATE = """
-You are a game agent with the following state:
+GAME_CONTEXT = """
+This is a text-based social deduction game where players explore a virtual house while trying to complete objectives. The game has two phases:
+1. Action Phase: Players can move between rooms and perform actions
+2. Discussion Phase: Players share information and vote on who to remove from the game
 
-History of observations:
+Key Game Elements:
+- Players can move between rooms
+- Tasks need to be completed to win. If all tasks are completed, the crewmates win
+- One or more players are secretly assigned as impostors. Your role is either a crewmate or an impostor
+- Impostors can eliminate crewmates, and crewmates can report dead bodies
+- Crewmates and impostors can call emergency meetings to discuss and vote on who to eject from the game
+- After each elimination, players must discuss and vote on who to eject from the game
+- The game continues until tasks are completed or impostors eliminate enough crewmates to win
+
+Role of Crewmates:
+- Complete tasks to win the game
+- Report dead bodies and discuss to identify impostors
+- Vote to eject impostors from the game
+
+Role of Impostors:
+- Eliminate crewmates to win the game
+- Blend in with crewmates to avoid being identified
+- Vote to eject crewmates from the game
+
+"""
+
+ADVENTURE_PLAN_TEMPLATE = GAME_CONTEXT + """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+Your current game state is:
+
+Game Context:
 {history}
 
-Current tasks: 
+Your Current Objectives:
 {tasks}
-ASCII map of the game:
+
+Current Map Layout:
 {ASCII_MAP}
 
-Available actions: {actions}
+Actions You Can Take:
+{actions}
 
-Based on this information, create a plan to accomplish the current task.
-Your plan should be a step-by-step approach, considering your past observations.
+You are currently located in: {current_location}
 
-Plan:
+Based on this information, what is your next objective? 
+Provide a straightforward sequence of steps to achieve your current task. 
+Focus on completing the objective.
+The plan should not exceed 3-4 steps as it is a short plan for current situation.
+
+Next steps:
 """
 
-ADVENTURE_ACTION_TEMPLATE = """
-You are a game agent with the following state:
+ADVENTURE_ACTION_TEMPLATE = GAME_CONTEXT + """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+Your current game state is:
 
-History of observations:
-{history}
-
-Current task: {task}
-
-Available actions: {actions}
-
-You have created the following plan:
+Your Planned Steps:
 {plan}
 
-Based on your plan and the available actions, choose the best action to take next.
-Your response should be exactly one of the available actions.
+Actions You Can Take:
+{actions}
 
-Chosen action:
+Select one action from the available options that best aligns with your next planned step.
+Respond with exactly one action from the provided list. Avoid numbering or adding extra punctuation or information.
+
+For example, if one of the available actions is:
+<action>report dead body of [Wateusz, Warek]</action>
+You should respond with:
+report dead body of [Wateusz, Warek]
+
+Notice that the response should match the available actions exactly.
+
+Selected action:
 """
 
-DISCUSSION_TEMPLATE = """
-You are {player_name}, a player in an Among Us-like game. You are participating in the discussion phase.
-You are {player_role}.
-Game history and your observations:
+DISCUSSION_TEMPLATE = GAME_CONTEXT + """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Your Observations:
 {history}
 
-Based on the game history and your observations, create discussion points to share with other players.
-Be strategic about what information you reveal. If you're an impostor, you might want to lie or misdirect.
-If you're a crewmate, share your observations but be aware that others might be lying.
-
-Your discussion points:
-"""
-
-DISCUSSION_RESPONSE_TEMPLATE = """
-You are {player_name}, a player in an Among Us-like game. You are participating in the discussion phase.
-This is turn-based game where players take turns making actions and responding to each other.
-There are no actions like venting or sabotaging in this game.
-You are {player_role}.
-
-Game history and your observations:
-{history}
-
-Recent statements from other players:
+Recent Player Messages:
 {statements}
 
-Respond to these statements based on the game history, your observations, and what you know about the game.
-Be strategic in your response. If you're an impostor, you might want to support or cast doubt on certain statements.
-If you're a crewmate, you might want to corroborate or question statements based on your observations.
-Respond should be short and to the point. You don't need to respond to every statement.
-You don't need write your name in brackets, it's already included in the prompt.
-Your response:
+If there are no messages share what you have observed during the game by creating simple and short bullet points. 
+If there are messages, create informative and short discussion points to plan a discussion.
+Your name is {player_name}. You are a {player_role}.
+
+Your {player_role} observations to be shared with others:
 """
 
-VOTING_TEMPLATE = """
-You are {player_name}, a player in an Among Us-like game. It's time to vote on who to eject from the game.
-You are {player_role}.
-Game history and your observations:
+DISCUSSION_RESPONSE_TEMPLATE = GAME_CONTEXT + """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Recent Player Messages:
+{statements}
+
+Your discussion points:
+{points}
+
+Your name is {player_name}. You are a {player_role}.
+Respond to the recent messages. Your mesasage should not exceed one sentence and should be informative and short.
+Very short and concise responses are expected because time is important in fast discussions.
+
+
+Your one sentence response as {player_role}:
+"""
+
+VOTING_TEMPLATE = GAME_CONTEXT + """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Game History:
 {history}
-Discusssion messages:
+
+Discussion Record:
 {discussion}
-Available voting actions:
+
+Available Voting Options:
 {actions}
-Based on the game history and your observations, choose the best action to take.
-If you're an impostor, try to avoid suspicion and protect your team.
-If you're a crewmate, try to identify the most suspicious player based on the available information.
-Your response should be exactly one of the available actions.
-Chosen action:
+
+Based solely on the information presented in the discussion and your direct observations, select one voting option from the available choices.
+Respond with exactly one option from the provided list.
+
+Your vote:
 """

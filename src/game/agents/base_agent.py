@@ -6,6 +6,8 @@ class GameState(BaseModel):
     history: List[str] = Field(default_factory=list)
     current_tasks: List[str] = Field(default_factory=list)
     available_actions: List[str] = Field(default_factory=list)
+    messages: List[str] = Field(default_factory=list)
+    current_location: str = Field(default_factory=str)
 
 class Agent(ABC, BaseModel):
     llm: Any

@@ -7,23 +7,29 @@ from llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 import re
 
 class AdventureGameAgent(Agent):
-    def update_state(self, observation: str, tasks: List[str], actions: List[str]):
+    def update_state(self, observation: str, tasks: List[str], actions: List[str], current_location: str):
         self.state.history.append(observation)
         self.state.current_tasks = tasks
         self.state.available_actions = actions
+        self.state.current_location = current_location
 
     def create_plan(self) -> str:
         plan_prompt = ADVENTURE_PLAN_TEMPLATE.format(
+            player_name=self.player_name,
+            player_role=self.role,
             ASCII_MAP=ASCII_MAP,
             history="\n".join(self.state.history),
             tasks=self.state.current_tasks,
-            actions=", ".join(self.state.available_actions),
+            actions="<action>"+"</action><action>".join(self.state.available_actions)+"</action>",
+            current_location=self.state.current_location,
         )
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
         return plan.content.strip()
 
     def choose_action(self, plan: str) -> int:
         action_prompt = ADVENTURE_ACTION_TEMPLATE.format(
+            player_name=self.player_name,
+            player_role=self.role,
             history="\n".join(self.state.history),
             task=self.state.current_tasks,
             actions=", ".join(self.state.available_actions),
@@ -31,6 +37,7 @@ class AdventureGameAgent(Agent):
         )
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
         chosen_action = chosen_action.content.strip()
+        self.responses.append(f"From these actions: {self.state.available_actions}")
         self.responses.append(f"Chosen action: {chosen_action}")
         normalized_chosen_action = self.normalize_action(chosen_action)
         normalized_available_actions = [

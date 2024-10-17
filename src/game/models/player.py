@@ -10,6 +10,7 @@ from game.agents.adventure_agent import AdventureGameAgent
 from game.agents.discussion_agent import DiscussionAgent
 from game.agents.voting_agent import VotingAgent
 from game.models.game_models import (
+    HUMAN_READABLE_LOCATIONS,
     GamePhase,
     PlayerRole,
     PlayerState,
@@ -209,7 +210,8 @@ class AIPlayer(Player):
         self.adventure_agent.update_state(
             observation=self.get_history_str(),
             tasks=self.get_task_to_complete(),
-            actions=actions
+            actions=actions,
+            current_location=HUMAN_READABLE_LOCATIONS[self.get_location()],
         )
         return self.adventure_agent.act()
 
@@ -217,8 +219,10 @@ class AIPlayer(Player):
         self.history[-1]["observations"] = self.get_obervation_history()
         self.history[-1].move_to_end("observations", last=False)
         history = self.get_history_str()
-        self.discussion_agent.update_state(observation=history)
-        return self.discussion_agent.act()
+        statements = self.get_message_str()
+        self.discussion_agent.update_state(observation=history, messages=statements)
+        points = self.discussion_agent.create_discussion_points(statements=statements)
+        return self.discussion_agent.act(points)
 
     def prompt_vote(self, voting_actions: List[str]) -> int:
         self.voting_agent.update_state(observation=self.get_obervation_history())

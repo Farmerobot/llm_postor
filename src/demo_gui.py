@@ -5,12 +5,13 @@ from game.gui.debug_gui import DebugGUI
 
 game = GameEngine()
 
-impostor = HumanPlayer("Warcin")
-impostor.set_role(PlayerRole.IMPOSTOR)
-impostor.responses = []
-
 model_name = "gpt-4o-mini"
 # model_name = "gemini-1.5-flash"
+
+# impostor = HumanPlayer("Warcin")
+impostor = AIPlayer("Warcin", model_name=model_name)
+impostor.set_role(PlayerRole.IMPOSTOR)
+impostor.responses = []
 
 players = [
     AIPlayer("Wateusz", model_name=model_name),
@@ -23,6 +24,7 @@ game.load_players(players, choose_impostor=False)
 game.init_game()
 
 game.DEBUG = True
+game.save_playthrough = f"whole_game_test__new_1.txt"
 gui = DebugGUI(game)
 game.gui = gui
 game.main_game_loop()
