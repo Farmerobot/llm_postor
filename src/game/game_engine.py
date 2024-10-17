@@ -1,85 +1,114 @@
-from game.models.game_models import *
-from game.models.player import Player, GameAction, GameActionType
+from game.game_state import GameState
+from game.models.game_models import (
+    HUMAN_READABLE_LOCATIONS,
+    GamePhase,
+    PlayerState,
+    GameLocation,
+    PlayerRole,
+    ShortTask,
+    DOORS,
+)
+from game.models.player import Player, HumanPlayer
+from game.models.game_models import GameAction, GameActionType
 from game.utils import get_random_tasks
-from typing import Optional, Any
+from typing import List, Callable, Optional
 import random
 from game import consts as game_consts
 from collections import OrderedDict, Counter
 
 
-
 class GameEngine:
     def __init__(self):
-        self.players: list[Player] = []
-        self.game_stage = GamePhase.MAIN_MENU
+        self.state = GameState()
+        self.nobody = HumanPlayer("Nobody")
         self.save_playthrough = ""
-        self.nobody = Player("Nobody")
-        self.playthrough = []
         self.DEBUG = False
 
-    def load_players(self, players: list[Player], choose_impostor: bool = True) -> None:
-        self.players = players
-        if choose_impostor:
-            if not any([player.is_impostor for player in self.players]):
-                impostor = random.choice(self.players)
-                impostor.set_role(PlayerRole.IMPOSTOR)
+    def load_players(self, players: List[Player], choose_impostor: bool = True) -> None:
+        for player in players:
+            self.state.add_player(player)
+        if choose_impostor and not any(
+            player.is_impostor for player in self.state.get_alive_players()
+        ):
+            impostor = random.choice(self.state.get_alive_players())
+            impostor.set_role(PlayerRole.IMPOSTOR)
 
     def init_game(self) -> None:
-        self.game_stage = GamePhase.ACTION_PHASE
-        self.playthrough = []
-        for player in self.players:
-            player.set_state(PlayerState.ALIVE)
-            player.set_location(GameLocation.LOC_CAFETERIA)
-            player.set_stage(GamePhase.ACTION_PHASE)
-            player.history.append(OrderedDict())
-            if player.is_impostor:
-                player.set_tasks(
-                    [ShortTask("Kill all crewmates", GameLocation.LOC_UNKNOWN)]
-                )
-                player.history[-1][
-                    "role"
-                ] = f"Welcome {player.name}\nYou are an impostor. Your goal is to kill or banish all crewmates"
-            else:  # if player is a crewmate
-                player.history[-1][
-                    "role"
-                ] = f"Welcome {player.name}\nYou are an crewmate. Your goal is to complete all tasks or banish impostors"
-                player.set_tasks(get_random_tasks(player))
+        self.state.set_stage(GamePhase.ACTION_PHASE)
+        for player in self.state.players:
+            self._init_player(player)
 
-            player.can_vote = False
-            player.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
+    def _init_player(self, player: Player) -> None:
+        player.set_state(PlayerState.ALIVE)
+        player.set_location(GameLocation.LOC_CAFETERIA)
+        player.set_stage(GamePhase.ACTION_PHASE)
+        player.history.append(OrderedDict())
+        player.can_vote = False
+        player.kill_cooldown = (
+            game_consts.IMPOSTOR_COOLDOWN if player.is_impostor else 0
+        )
+        self._set_player_tasks(player)
+
+    def _set_player_tasks(self, player: Player) -> None:
+        if player.is_impostor:
+            player.set_tasks(
+                [ShortTask("Kill all crewmates", GameLocation.LOC_UNKNOWN)]
+            )
+            player.history[-1][
+                "role"
+            ] = f"Welcome {player.name}\nYou are an impostor. Your goal is to kill or banish all crewmates"
+        else:
+            player.history[-1][
+                "role"
+            ] = f"Welcome {player.name}\nYou are a crewmate. Your goal is to complete all tasks or banish impostors"
+            player.set_tasks(get_random_tasks(player))
 
     def main_game_loop(self, freeze_stage: Optional[GamePhase] = None) -> None:
-        if freeze_stage:
-            self.game_stage = freeze_stage
-            check_game_over = self.check_game_over_action_crewmate
-        else:
-            check_game_over = self.check_game_over
+        """
+        Main game loop that controls the flow of the game.
+
+        :param freeze_stage: If set, the game will stay in this stage (used for testing).
+        """
+        check_game_over = self.set_game_stage(freeze_stage)
 
         print("Game started!")
         while not check_game_over():
-            print(f"Game stage: {self.game_stage}")
-            choosen_actions: list[GameAction] = []
-            for player in self.players:
-                if player.player_state == PlayerState.ALIVE:
-                    possible_actions = self.get_actions(player)
-                    possible_actions_str = [
-                        action.get_input_story() for action in possible_actions
-                    ]
-                    action_int = player.prompt_action(
-                        "Choose an action", possible_actions_str
-                    )
-                    choosen_actions.append(possible_actions[action_int])
+            print(f"Game stage: {self.state.game_stage}")
 
-            someone_reported = self.update_game_state(choosen_actions)
+            chosen_actions = self.get_player_actions()
+            someone_reported = self.update_game_state(chosen_actions)
 
             if someone_reported and freeze_stage is None:
                 self.go_to_discussion()
                 self.go_to_voting()
             self.gui.update_gui()
+
         # END OF GAME
         if freeze_stage is None:
             print("Game Over!")
             self.end_game()
+
+    def set_game_stage(self, freeze_stage: Optional[GamePhase]) -> Callable[[], bool]:
+        """Set the game stage and return the appropriate game over check function."""
+        if freeze_stage:
+            self.game_stage = freeze_stage
+            return self.check_game_over_action_crewmate
+        return self.check_game_over
+
+    def get_player_actions(self) -> list[GameAction]:
+        """Get actions from all alive players."""
+        choosen_actions: list[GameAction] = []
+        for player in self.state.players:
+            if player.player_state == PlayerState.ALIVE:
+                possible_actions = self.get_actions(player)
+                possible_actions_str = [
+                    action.get_input_story() for action in possible_actions
+                ]
+                action_int = player.prompt_action(
+                    "Choose an action", possible_actions_str
+                )
+                choosen_actions.append(possible_actions[action_int])
+        return choosen_actions
 
     def update_game_state(self, actions: list[GameAction]) -> bool:
         """
@@ -91,7 +120,7 @@ class GameEngine:
         actions.sort(key=lambda x: x.action_type, reverse=True)
 
         for action in actions:
-            self.playthrough.append(f"[{action.source}]: {action}")
+            self.state.playthrough.append(f"[{action.source}]: {action}")
             if self.DEBUG:
                 print(f"[{action.source}]: {action}")  # DEBUG
             action.source.history.append(OrderedDict())  # create new history entry
@@ -104,7 +133,7 @@ class GameEngine:
                     )
                     self.broadcast_history(
                         "dead_players",
-                        f"Dead players found: {', '.join([str(player) for player in self.players if player.player_state == PlayerState.DEAD])}",
+                        f"Dead players found: {', '.join([str(player) for player in self.state.players if player.player_state == PlayerState.DEAD])}",
                     )
                     return True  # in case of report; go to discussion
                 if action.action_type == GameActionType.MOVE:
@@ -124,7 +153,9 @@ class GameEngine:
             if action.source.player_state != PlayerState.DEAD:
                 for (
                     player
-                ) in self.players:  # update stories of seen actions and players in room
+                ) in (
+                    self.state.players
+                ):  # update stories of seen actions and players in room
                     if (
                         player.player_state != PlayerState.DEAD
                         and player != action.source
@@ -133,40 +164,40 @@ class GameEngine:
                             action.location == player.player_location
                             or action.location == player.prev_location
                         ):
-                            self.playthrough.append(
-                                f"Player {player} saw action {action.get_spectator_story()} when {player} were in {action.location}"
+                            self.state.playthrough.append(
+                                f"Player {player} saw action {action.get_spectator_story()} when {player} were in {HUMAN_READABLE_LOCATIONS[action.location]}"
                             )
                             if self.DEBUG:
                                 print(
-                                    f"Player {player} saw action {action.get_spectator_story()} when {player} were in {action.location}"
+                                    f"Player {player} saw action {action.get_spectator_story()} when {player} were in {HUMAN_READABLE_LOCATIONS[action.location]}"
                                 )  # DEBUG
                             seen_actions: list[str] = player.history[-1].get(
                                 "seen_action", []
                             )
                             seen_actions.append(
-                                f"you saw {action.get_spectator_story()} when you were in {action.location}"
+                                f"you saw {action.get_spectator_story()} when you were in {HUMAN_READABLE_LOCATIONS[action.location]}"
                             )
                             player.history[-1]["seen_action"] = seen_actions
 
         # update players in room
-        for player in self.players:
+        for player in self.state.players:
             players_in_room = [
                 other_player
-                for other_player in self.players
+                for other_player in self.state.players
                 if player.get_location() == other_player.get_location()
                 and player != other_player
                 and other_player.player_state == PlayerState.ALIVE
             ]
             player.history[-1][
                 "Current_location"
-            ] = f"You are in {player.get_location()}"
+            ] = f"You are in {HUMAN_READABLE_LOCATIONS[player.get_location()]}"
 
-            self.playthrough.append(
-                f"Player {player} is in {player.get_location()} with {players_in_room}"
+            self.state.playthrough.append(
+                f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.get_location()]} with {players_in_room}"
             )
             if self.DEBUG:
                 print(
-                    f"Player {player} is in {player.get_location()} with {players_in_room}"
+                    f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.get_location()]} with {players_in_room}"
                 )
             if players_in_room:
                 player.history[-1][
@@ -183,9 +214,8 @@ class GameEngine:
         # action for reporting
         dead_players_in_room = [
             dead_player
-            for dead_player in self.players
-            if dead_player.player_state == PlayerState.DEAD
-            and dead_player.player_location == player.player_location
+            for dead_player in self.state.get_dead_players()
+            if dead_player.player_location == player.player_location
         ]
         if dead_players_in_room:
             actions.append(
@@ -202,7 +232,7 @@ class GameEngine:
         if player.is_impostor and player.kill_cooldown == 0:
             targets = [
                 other_player
-                for other_player in self.players
+                for other_player in self.state.players
                 if other_player.player_state == PlayerState.ALIVE
                 and other_player != player
                 and other_player.player_location == player.player_location
@@ -214,7 +244,7 @@ class GameEngine:
 
     def go_to_discussion(self) -> None:
         self.game_stage = GamePhase.DISCUSS
-        for player in self.players:
+        for player in self.state.players:
             player.set_stage(GamePhase.DISCUSS)
             player.history.append(OrderedDict())
             player.chat_history.append([])
@@ -224,7 +254,7 @@ class GameEngine:
 
         discussion_log: list[str] = []
         for round in range(game_consts.NUM_CHATS):
-            for player in self.players:
+            for player in self.state.players:
                 if player.player_state == PlayerState.ALIVE:
                     player.history[-1][
                         "turns left"
@@ -234,8 +264,8 @@ class GameEngine:
                     discussion_log.append(answer_str)
                     self.broadcast_message(answer_str)
                     player.discussion_prompt = ""  # clear prompt for next round
-            self.playthrough.append(f"Discussion log:")
-            self.playthrough.append("\n".join(discussion_log))
+            self.state.playthrough.append(f"Discussion log:")
+            self.state.playthrough.append("\n".join(discussion_log))
             if self.DEBUG:
                 print("Discussion log:")
                 print("\n".join(discussion_log))
@@ -243,11 +273,11 @@ class GameEngine:
     def go_to_voting(self) -> None:
         dead_players = [
             player
-            for player in self.players
+            for player in self.state.players
             if player.player_state == PlayerState.DEAD_REPORTED
         ]
         votes = {}
-        for player in self.players:
+        for player in self.state.players:
             possible_actions = self.get_vote_actions(player)
             possible_voting_actions_str = [
                 action.get_input_story() for action in possible_actions
@@ -266,7 +296,7 @@ class GameEngine:
                     "vote"
                 ] = f"You voted for {possible_actions[action].target}"
                 player.player_location = GameLocation.LOC_CAFETERIA
-                self.playthrough.append(
+                self.state.playthrough.append(
                     f"{player} voted for {possible_actions[action].target}"
                 )
                 if self.DEBUG:
@@ -303,7 +333,7 @@ class GameEngine:
     def get_vote_actions(self, player: Player) -> list[GameAction]:
         actions = []
         actions.append(GameAction(GameActionType.VOTE, player, self.nobody))
-        for other_player in self.players:
+        for other_player in self.state.players:
             if (
                 other_player != player
                 and other_player.player_state == PlayerState.ALIVE
@@ -311,122 +341,91 @@ class GameEngine:
                 actions.append(GameAction(GameActionType.VOTE, player, other_player))
         return actions
 
-    def broadcast_history(self, key, message: str) -> None:
-        for player in self.players:
-            if player.player_state == PlayerState.ALIVE:
+    def broadcast(self, key: str, message: str) -> None:
+        for player in self.state.get_alive_players():
+            if key == "chat":
+                player.chat_history[-1].append(message)
+            else:
                 player.history[-1][key] = message
 
+    def broadcast_history(self, key: str, message: str) -> None:
+        self.broadcast(key, message)
+
     def broadcast_message(self, message: str) -> None:
-        for player in self.players:
-            if player.player_state == PlayerState.ALIVE:
-                player.chat_history[-1].append(message)
+        self.broadcast("chat", message)
 
     def remove_dead_players(self) -> None:
-        for player in self.players:
+        for player in self.state.players:
             if player.player_state == PlayerState.DEAD:
                 player.set_state(PlayerState.DEAD_REPORTED)
 
     def check_impostors_win(self) -> bool:
         crewmates_alive = [
-            player
-            for player in self.players
-            if not player.is_impostor and player.player_state == PlayerState.ALIVE
+            p for p in self.state.get_alive_players() if not p.is_impostor
         ]
-        impostors_alive = [
-            player
-            for player in self.players
-            if player.is_impostor and player.player_state == PlayerState.ALIVE
-        ]
-        if len(impostors_alive) >= len(crewmates_alive):
-            return True
-        return False
+        impostors_alive = [p for p in self.state.get_alive_players() if p.is_impostor]
+        return len(impostors_alive) >= len(crewmates_alive)
 
     def check_crewmates_win(self) -> bool:
-        if self.check_win_by_tasks():
-            return True
-        if self.check_crewmate_win_by_voting():
-            return True
-        return False
+        return self.check_win_by_tasks() or self.check_crewmate_win_by_voting()
 
     def check_win_by_tasks(self) -> bool:
         crewmates_alive = [
-            player
-            for player in self.players
-            if not player.is_impostor and player.player_state == PlayerState.ALIVE
+            p for p in self.state.get_alive_players() if not p.is_impostor
         ]
-        if all(
-            [
-                task.completed
-                for player in crewmates_alive
-                for task in player.player_tasks
-            ]
-        ):
-            return True
-        return False
+        return all(
+            task.completed for player in crewmates_alive for task in player.player_tasks
+        )
 
     def check_crewmate_win_by_voting(self) -> bool:
-        impostors_alive = [
-            player
-            for player in self.players
-            if player.is_impostor and player.player_state == PlayerState.ALIVE
-        ]
-        if len(impostors_alive) == 0:
-            return True
-        return False
+        impostors_alive = [p for p in self.state.get_alive_players() if p.is_impostor]
+        return len(impostors_alive) == 0
 
     def check_game_over(self) -> bool:
-        if self.check_impostors_win():
-            return True
-        if self.check_crewmates_win():
-            return True
-        return False
+        return self.check_impostors_win() or self.check_crewmates_win()
 
     def check_game_over_action_crewmate(self) -> bool:
         crewmates_alive = [
-            player
-            for player in self.players
-            if not player.is_impostor and player.player_state == PlayerState.ALIVE
+            p for p in self.state.get_alive_players() if not p.is_impostor
         ]
-        turns_passed = max([player.turns_passed() for player in crewmates_alive])
+        turns_passed = max(player.turns_passed() for player in crewmates_alive)
         completed_tasks = [
             task.completed for player in crewmates_alive for task in player.player_tasks
         ]
+
         if turns_passed >= 100:
-            self.playthrough.append(f"Turns passed: {turns_passed}")
-            self.playthrough.append(
+            self.state.log_action(f"Turns passed: {turns_passed}")
+            self.state.log_action(
                 f"Crewmates lose! Too many turns passed! Completed tasks: {completed_tasks}"
             )
-            if self.save_playthrough:
-                with open(self.save_playthrough, "w") as f:
-                    f.write("\n".join(self.playthrough))
+            self._save_playthrough()
             return True
+
         if all(completed_tasks):
-            self.playthrough.append(f"Turns passed: {turns_passed}")
-            if self.save_playthrough:
-                with open(self.save_playthrough, "w") as f:
-                    f.write("\n".join(self.playthrough))
+            self.state.log_action(f"Turns passed: {turns_passed}")
+            self._save_playthrough()
             return True
+
         return False
+
+    def _save_playthrough(self) -> None:
+        if self.save_playthrough:
+            with open(self.save_playthrough, "w") as f:
+                f.write("\n".join(self.state.playthrough))
 
     def end_game(self) -> None:
         if self.check_crewmate_win_by_voting():
             print("Crewmates win! All impostors were banished!")
-            self.playthrough.append("Crewmates win! All impostors were banished!")
-            # print([player for player in self.players if player.is_impostor and player.player_state == PlayerState.ALIVE])
+            self.state.log_action("Crewmates win! All impostors were banished!")
         elif self.check_win_by_tasks():
             print("Crewmates win! All tasks were completed!")
-            self.playthrough.append("Crewmates win! All tasks were completed!")
-            # crewmates_alive = [player for player in self.players if not player.is_impostor and player.player_state == PlayerState.ALIVE]
-            # print([task.completed for player in crewmates_alive for task in player.player_tasks])
+            self.state.log_action("Crewmates win! All tasks were completed!")
         elif self.check_impostors_win():
             print("Impostors win!")
-            self.playthrough.append("Impostors win!")
-        self.players = []
-        self.game_stage = GamePhase.MAIN_MENU
-        if self.save_playthrough:
-            with open(self.save_playthrough, "w") as f:
-                f.write("\n".join(self.playthrough))
-        self.playthrough = []
+            self.state.log_action("Impostors win!")
+
+        self.state = GameState()  # Reset the game state
+        self._save_playthrough()
 
     def __repr__(self):
-        return f"GameEngine | Players: {self.players} | Stage: {self.game_stage}"
+        return f"GameEngine | Players: {self.state.players} | Stage: {self.state.game_stage}"

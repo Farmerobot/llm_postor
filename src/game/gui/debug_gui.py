@@ -13,7 +13,7 @@ class DebugGUI:
         self.window.title("Among Us Debugger")
         # Create player dashboard tabs
         self.player_tabs = ttk.Notebook(self.window)
-        for player in self.game_engine.players:
+        for player in self.game_engine.state.players:
             player_frame = tk.Frame(self.player_tabs)
             self.create_player_panel(player_frame, player)
             self.player_tabs.add(player_frame, text=player.name)
@@ -30,7 +30,7 @@ class DebugGUI:
         player_name_label = tk.Label(frame, text=f"Player: {player.name}")
         player_name_label.pack()
         # Player Role
-        player_role_label = tk.Label(frame, text=f"Role: {player.player_role}")
+        player_role_label = tk.Label(frame, text=f"Role: {player.role}")
         player_role_label.pack()
         # Player State
         player_state_label = tk.Label(frame, text=f"State: {player.player_state}")
@@ -43,34 +43,34 @@ class DebugGUI:
         # Task List
         task_list_label = tk.Label(frame, text="Tasks:")
         task_list_label.pack()
-        self.task_listbox = tk.Listbox(frame)
+        task_listbox = tk.Listbox(frame)
         for task in player.player_tasks:
-            self.task_listbox.insert(tk.END, str(task))
-        self.task_listbox.pack()
+            task_listbox.insert(tk.END, str(task))
+        task_listbox.pack()
         # Action History
         action_history_label = tk.Label(frame, text="Action History:")
         action_history_label.pack()
-        self.action_history_text = tk.Text(frame)
-        self.action_history_text.pack()
+        action_history_text = tk.Text(frame)
+        action_history_text.pack()
         # AI Agent Responses
         agent_response_label = tk.Label(frame, text="AI Agent Response:")
         agent_response_label.pack()
-        self.agent_response_text = tk.Text(frame)
-        self.agent_response_text.pack()
+        agent_response_text = tk.Text(frame)
+        agent_response_text.pack()
         # Chat History
         chat_history_label = tk.Label(frame, text="Chat History:")
         chat_history_label.pack()
-        self.chat_history_text = tk.Text(frame)
-        self.chat_history_text.pack()
+        chat_history_text = tk.Text(frame)
+        chat_history_text.pack()
     def update_gui(self):
         # Update player information in the dashboard
-        for i, player in enumerate(self.game_engine.players):
+        for i, player in enumerate(self.game_engine.state.players):
             # Update player name
             player_name_label = self.player_tabs.winfo_children()[i].winfo_children()[0]
             player_name_label.config(text=f"Player: {player.name}")
             # Update player role
             player_role_label = self.player_tabs.winfo_children()[i].winfo_children()[1]
-            player_role_label.config(text=f"Role: {player.player_role}")
+            player_role_label.config(text=f"Role: {player.role}")
             # Update player state
             player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[
                 2
@@ -94,34 +94,43 @@ class DebugGUI:
             history_str = ""
             for entry in player.history:
                 for key, value in entry.items():
-                    history_str += f"{key}: {value}\n"
+                    if isinstance(value, list):
+                        joined_value = "\n".join(value)
+                        history_str += f"{key}: {joined_value}\n"
+                    else:
+                        history_str += f"{key}: {value}\n"
                 history_str += "\n"
             action_history_text.insert(tk.END, history_str)
             # Update chat history
-            chat_history_text = self.player_tabs.winfo_children()[i].winfo_children()[9]
+            chat_history_text = self.player_tabs.winfo_children()[i].winfo_children()[11]
             chat_history_text.delete("1.0", tk.END)
+            chat_history_str = ""
             for message in player.chat_history:
-                chat_history_text.insert(tk.END, f"{message}\n")
+                chat_history_str += f"{message}\n"
+            chat_history_text.insert(tk.END, chat_history_str)
             # Update AI agent responses
-            self.agent_response_text = self.player_tabs.winfo_children()[i].winfo_children()[11]
-            self.agent_response_text.delete("1.0", tk.END)
-            self.agent_response_text.insert(tk.END, "Adventure Agent Responses:\n")
+            agent_response_text = self.player_tabs.winfo_children()[i].winfo_children()[9]
+            agent_response_text.delete("1.0", tk.END)
+            agent_response_text.insert(tk.END, "Adventure Agent Responses:\n")
             if player.adventure_agent and player.adventure_agent.responses:
-                self.agent_responses_text.insert(tk.END, f"{player.adventure_agent.responses}")
                 for response in player.adventure_agent.responses:
-                    self.agent_response_text.insert(tk.END, f"{response}\n\n")
+                    agent_response_text.insert(tk.END, f"{response}\n\n")
             if player.discussion_agent and player.discussion_agent.responses:
                 for response in player.discussion_agent.responses:
-                    self.agent_response_text.insert(tk.END, f"{response}\n\n")
+                    agent_response_text.insert(tk.END, f"Responses: {response}\n\n")
             if player.voting_agent and player.voting_agent.responses:
                 for response in player.voting_agent.responses:
-                    self.agent_response_text.insert(tk.END, f"{response}\n\n")
+                    agent_response_text.insert(tk.END, f"Responses: {response}\n\n")
         # Update AI agent responses in the separate window
         self.agent_responses_text.delete("1.0", tk.END)
-        for player in self.game_engine.players:
+        for player in self.game_engine.state.players:
             for response in player.history:
                 for key, value in response.items():
-                    self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {value}\n")
+                    if isinstance(value, list):
+                        joined_value = "\n".join(value)
+                        self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {joined_value}\n")
+                    else:
+                        self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {value}\n")
 
         self.window.update()
     def run(self):

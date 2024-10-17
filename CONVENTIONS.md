@@ -24,9 +24,54 @@
 **Code Organization:**
 
 * **Modules:** Organize code into logical modules to improve maintainability.
-* **Classes:** Use classes to encapsulate data and behavior.
+* **Classes:** Use classes to encapsulate datĆĆĆa and behavior.
 * **Functions:** Keep functions small and focused on a single task.
 * **Error Handling:** Implement robust error handling to prevent unexpected crashes.
 
+In addition to the SOLID principles, Python code should generally adhere to the following universally recognized guidelines and rules to ensure clarity, maintainability, and efficiency:
+
+### 1. **PEP 8 (Python Enhancement Proposal 8)** – **Style Guide for Python Code**
+   - This is the official style guide for Python and outlines the conventions to follow for formatting Python code.
+   - **Key Rules:**
+     - **Indentation**: Use 4 spaces per indentation level.
+     - **Line Length**: Limit lines to 79 characters.
+     - **Naming Conventions**: 
+       - Variables: snake_case
+       - Classes: CamelCase
+       - Constants: UPPERCASE_WITH_UNDERSCORES
+     - **Docstrings and Comments**: Use docstrings for functions and modules. Keep comments up-to-date and relevant.
+
+### 2. **DRY (Don’t Repeat Yourself)**
+   - **Avoid Code Duplication**: Reuse code by creating functions or classes to handle repeated tasks. It makes the code easier to maintain and reduces bugs.
+   
+### 3. **KISS (Keep It Simple, Stupid)**
+   - **Simplicity**: Write code that is simple and straightforward. Complex solutions should be avoided unless absolutely necessary.
+
+### 4. **YAGNI (You Aren't Gonna Need It)**
+   - **Avoid Premature Optimization**: Only implement features or optimizations when they are absolutely necessary. Don’t add features "just in case" they’ll be needed in the future.
+
+### 5. **Separation of Concerns**
+   - **Modularization**: Organize code into separate, distinct sections (functions, classes, or modules), each handling a specific task. This improves maintainability and scalability.
+
+### 6. **Single Responsibility Principle (SRP)**
+   - Similar to SOLID's SRP, this principle suggests that every module or function should have one and only one reason to change, which is its responsibility.
+
+### 7. **Liskov Substitution Principle**
+   - Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
+### 8. **Avoid Side Effects**
+   - Functions should be as pure as possible, avoiding changes to variables outside of their scope unless necessary.
+
+### 9. **Error Handling**
+   - Use **try/except** blocks wisely to handle exceptions. Ensure your code fails gracefully with meaningful error messages and avoids swallowing exceptions.
+
+### 10. **Use Built-in Functions and Libraries**
+   - Python has a rich standard library. Instead of reinventing the wheel, prefer Python’s built-in functions and modules, which are often optimized and well-tested.
+
+### 11. **Testing and Documentation**
+   - Write **unit tests** for your code to ensure its functionality.
+   - Keep your code **well-documented** for future developers or your future self.
+
+These rules help Python developers write clean, maintainable, and efficient code that follows widely accepted conventions.
 
 Remember, the goal of conventions is to make this code more readable, maintainable, and collaborative.
