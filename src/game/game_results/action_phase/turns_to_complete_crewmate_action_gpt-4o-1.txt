@@ -1,4 +1,0 @@
-[25, 22, 20, 24, 26]
-Average turns to complete: 23.4
-Max turns to complete: 26
-Min turns to complete: 20
