@@ -19,7 +19,7 @@ players = [
     AIPlayer("Wikolaj", model_name=model_name),
     impostor,
 ]
-game.load_players(players, choose_impostor=False)
+game.load_players(players, impostor_count=1)
 game.init_game()
 
 game.DEBUG = True

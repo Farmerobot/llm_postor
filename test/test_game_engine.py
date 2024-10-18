@@ -36,21 +36,20 @@ def test_load_ai_players():
 def test_load_human_players_with_impostor():
     game_engine = GameEngine()
     player1 = HumanPlayer("Player 1")
-    player2 = HumanPlayer("Player 2", role=PlayerRole.IMPOSTOR) #Adding an impostor before calling load_players
+    player2 = HumanPlayer("Player 2")
     player3 = HumanPlayer("Player 3")
-    game_engine.load_players([player1, player2, player3], choose_impostor=False) #Corrected to choose_impostor=False
+    game_engine.load_players([player1, player2, player3])
     assert len(game_engine.state.players) == 3
     assert sum(1 for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR) == 1
 
 
-def test_load_human_players_no_impostor_raises_error():
+def test_load_human_players_no_impostor():
     game_engine = GameEngine()
     player1 = HumanPlayer("Player 1")
     player2 = HumanPlayer("Player 2")
     player3 = HumanPlayer("Player 3")
     with pytest.raises(ValueError):
-        game_engine.load_players([player1, player2, player3], choose_impostor=False)
-
+        game_engine.load_players([player1, player2, player3], impostor_count=0)
 
 def test_load_few_players_raises_error():
     game_engine = GameEngine()
@@ -61,26 +60,25 @@ def test_load_few_players_raises_error():
 
 def test_load_imbalanced_team_raises_error():
     game_engine = GameEngine()
-    player1 = HumanPlayer("Player 1", role=PlayerRole.IMPOSTOR)
-    player2 = HumanPlayer("Player 2", role=PlayerRole.IMPOSTOR)
-    player3 = HumanPlayer("Player 3")
-    with pytest.raises(ValueError):
-        game_engine.load_players([player1, player2, player3], choose_impostor=False)
-
-
-def test_impostor_assignment_randomness():
-    game_engine = GameEngine()
-    player1 = HumanPlayer("Player 1", role=PlayerRole.IMPOSTOR) #Added an impostor here
+    player1 = HumanPlayer("Player 1")
     player2 = HumanPlayer("Player 2")
     player3 = HumanPlayer("Player 3")
-    impostor_counts = {True: 0, False: 0}
-    for _ in range(100):  # Run multiple times to check randomness
-        game_engine.load_players([player1, player2, player3], choose_impostor=False) #Corrected to choose_impostor=False
-        impostor_counts[game_engine.state.players[0].role == PlayerRole.IMPOSTOR] += 1
-        impostor_counts[game_engine.state.players[1].role == PlayerRole.IMPOSTOR] += 1
-        impostor_counts[game_engine.state.players[2].role == PlayerRole.IMPOSTOR] += 1
+    player4 = HumanPlayer("Player 4")
+    with pytest.raises(ValueError):
+        game_engine.load_players([player1, player2, player3, player4], impostor_count=2)
 
-    # Assert that both players have a reasonable chance of being the impostor
-    assert impostor_counts[True] > 0
-    assert impostor_counts[False] > 0
+def test_load_ten_players_four_impostors():
+    game_engine = GameEngine()
+    players = [HumanPlayer(f"Player {i}") for i in range(1, 11)]
+    game_engine.load_players(players, impostor_count=4)
+    assert len(game_engine.state.players) == 10
+    assert sum(1 for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR) == 4
 
+def test_one_impostor_when_impostor_count_is_one():
+    game_engine = GameEngine()
+    player1 = HumanPlayer("Player 1")
+    player2 = HumanPlayer("Player 2")
+    player3 = HumanPlayer("Player 3")
+    player4 = HumanPlayer("Player 4", role=PlayerRole.IMPOSTOR)
+    game_engine.load_players([player1, player2, player3, player4], impostor_count=1)
+    assert sum(1 for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR) == 1

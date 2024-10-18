@@ -11,7 +11,7 @@ for model_name in ["gpt-4o-mini", "gpt-4o"]:
 
         game = GameEngine()
         players = [Player("Robot", agent="ai", model_name=model_name)]
-        game.load_players(players, choose_impostor=False)
+        game.load_players(players, force_crewmate_to_impostor=False)
         game.init_game()
         game.DEBUG = True
         game.save_playthrough = f"Test_crewmate_action_{model_name}_{i}.txt"

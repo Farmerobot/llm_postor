@@ -15,7 +15,7 @@ for i in range(1):
         Player("Wikolaj", agent="ai", model_name="gpt-4o"),
         Player("Warcin", agent="ai", model_name="gpt-4o", role=PlayerRole.IMPOSTOR),
     ]
-    game.load_players(players, choose_impostor=False)
+    game.load_players(players, force_crewmate_to_impostor=False)
     game.init_game()
     game.DEBUG = True
     game.save_playthrough = f"whole_game_test__new_{i}.txt"

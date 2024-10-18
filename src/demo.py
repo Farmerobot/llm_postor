@@ -14,7 +14,7 @@ players = [
     Player("Wikolaj", agent="ai", model_name="gpt-4o-mini"),
     impostor,
 ]
-game.load_players(players, choose_impostor=False)
+game.load_players(players, force_crewmate_to_impostor=False)
 game.init_game()
 
 game.main_game_loop()

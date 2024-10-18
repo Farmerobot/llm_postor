@@ -24,33 +24,34 @@ class GameEngine:
         self.save_playthrough = ""
         self.DEBUG = False
 
-    def load_players(self, players: List[Player], choose_impostor: bool = True) -> None:
+    def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
         if len(players) < 3:
             raise ValueError("Minimum number of players is 3.")
+
+        if impostor_count >= len(players) or impostor_count <= 0:
+            raise ValueError("Invalid number of impostors")
+
         for player in players:
             self.state.add_player(player)
 
-        if choose_impostor:
-            impostors = [p for p in self.state.get_alive_players() if p.role == PlayerRole.IMPOSTOR]
-            if len(impostors) == 0:
-                # Add one impostor if none exist
-                impostor = random.choice(self.state.get_alive_players())
-                impostor.set_role(PlayerRole.IMPOSTOR)
-            else:
-                # Add a second impostor if only one exists
-                other_players = [p for p in self.state.get_alive_players() if p.role != PlayerRole.IMPOSTOR]
-                if other_players:
-                    second_impostor = random.choice(other_players)
-                    second_impostor.set_role(PlayerRole.IMPOSTOR)
+        # Count existing impostors
+        existing_impostors = sum(1 for player in self.state.players if player.role == PlayerRole.IMPOSTOR)
 
-        # Check for imbalanced team sizes after role assignment
-        impostors_count = sum(1 for player in self.state.players if player.role == PlayerRole.IMPOSTOR)
-        crewmates_count = len(self.state.players) - impostors_count
-        if impostors_count >= crewmates_count:
+        # Assign impostors randomly, only if needed
+        impostors_to_assign = impostor_count - existing_impostors
+        while impostors_to_assign > 0:
+            available_players = [p for p in self.state.players if p.role != PlayerRole.IMPOSTOR]
+            if not available_players:
+                break  # No more players to assign as impostors
+            chosen_player = random.choice(available_players)
+            chosen_player.set_role(PlayerRole.IMPOSTOR)
+            impostors_to_assign -= 1
+
+        # Check for imbalanced team sizes AFTER role assignment
+        crewmates_count = len(self.state.players) - impostor_count
+        if impostor_count >= crewmates_count:
             raise ValueError("Number of impostors cannot be greater than or equal to the number of crewmates.")
 
-        elif not any(player.role == PlayerRole.IMPOSTOR for player in self.state.get_alive_players()):
-            raise ValueError("No impostors found and choose_impostor is False")
 
     def init_game(self) -> None:
         self.state.set_stage(GamePhase.ACTION_PHASE)
