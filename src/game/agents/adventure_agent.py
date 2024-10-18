@@ -6,7 +6,7 @@ from langchain.schema import HumanMessage
 from llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 import re
 
-class AdventureGameAgent(Agent):
+class AdventureAgent(Agent):
     def update_state(self, observation: str, tasks: List[str], actions: List[str], current_location: str):
         self.state.history.append(observation)
         self.state.current_tasks = tasks

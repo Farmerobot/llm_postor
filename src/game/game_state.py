@@ -20,7 +20,7 @@ class GameState:
         self.playthrough.append(action)
 
     def get_alive_players(self) -> List[Player]:
-        return [p for p in self.players if p.player_state == PlayerState.ALIVE]
+        return [p for p in self.players if p.state == PlayerState.ALIVE]
 
     def get_dead_players(self) -> List[Player]:
-        return [p for p in self.players if p.player_state == PlayerState.DEAD]
+        return [p for p in self.players if p.state == PlayerState.DEAD]

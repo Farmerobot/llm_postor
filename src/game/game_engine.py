@@ -8,7 +8,8 @@ from game.models.game_models import (
     ShortTask,
     DOORS,
 )
-from game.models.player import Player, HumanPlayer
+from game.models.player import Player
+from game.models.player_human import HumanPlayer
 from game.models.game_models import GameAction, GameActionType
 from game.utils import get_random_tasks
 from typing import List, Callable, Optional
@@ -16,11 +17,13 @@ import random
 from game import consts as game_consts
 from collections import OrderedDict, Counter
 
+from game.models.player_history import RoundData
+
 
 class GameEngine:
     def __init__(self):
         self.state = GameState()
-        self.nobody = HumanPlayer("Nobody")
+        self.nobody = HumanPlayer(name="Nobody")
         self.save_playthrough = ""
         self.DEBUG = False
 
@@ -74,7 +77,6 @@ class GameEngine:
             if someone_reported and freeze_stage is None:
                 self.go_to_discussion()
                 self.go_to_voting()
-            self.gui.update_gui()
 
         # END OF GAME
         if freeze_stage is None:
@@ -92,15 +94,18 @@ class GameEngine:
         """Get actions from all alive players."""
         choosen_actions: list[GameAction] = []
         for player in self.state.players:
-            if player.player_state == PlayerState.ALIVE:
+            if player.state == PlayerState.ALIVE:
                 possible_actions = self.get_actions(player)
                 possible_actions_str = [
                     action.get_input_story() for action in possible_actions
                 ]
+                print(f"Player {player} actions: {possible_actions_str}")
                 action_int = player.prompt_action(
                     "Choose an action", possible_actions_str
                 )
                 choosen_actions.append(possible_actions[action_int])
+                print(f"Player {player} choosen action: {choosen_actions[-1]}")
+                self.gui.update_gui()
         return choosen_actions
 
     def update_game_state(self, actions: list[GameAction]) -> bool:
@@ -116,9 +121,9 @@ class GameEngine:
             self.state.playthrough.append(f"[{action.source}]: {action}")
             if self.DEBUG:
                 print(f"[{action.source}]: {action}")  # DEBUG
-            action.source.history.append(OrderedDict())  # create new history entry
             action.source.prev_location = None
-            if action.source.player_state != PlayerState.DEAD:
+            action.source.history.add_round(round_data=RoundData(location=action.source.location, observations={}, llm_responses=[], actions=[]))
+            if action.source.state != PlayerState.DEAD:
                 action.source.kill_cooldown = max(0, action.source.kill_cooldown - 1)
                 if action.action_type == GameActionType.REPORT:
                     self.broadcast_history(
@@ -130,31 +135,31 @@ class GameEngine:
                     )
                     return True  # in case of report; go to discussion
                 if action.action_type == GameActionType.MOVE:
-                    action.source.prev_location = action.source.get_location()
+                    action.source.prev_location = action.source.location
                 if action.action_type == GameActionType.KILL and isinstance(
                     action.target, Player
                 ):
-                    action.target.history[-1][
-                        "killed"
-                    ] = f"You were killed by {action.source}"
+                    action.target.history.rounds[-1].observations[
+                        "eliminated"
+                    ] = f"You were eliminated by {action.source}"
 
-                action.source.history[-1][
+                action.source.history.rounds[-1].observations[
                     "action_result"
                 ] = action.do_action()  # do action and save result in history
 
         for action in actions:
-            if action.source.player_state != PlayerState.DEAD:
+            if action.source.state != PlayerState.DEAD:
                 for (
                     player
                 ) in (
                     self.state.players
                 ):  # update stories of seen actions and players in room
                     if (
-                        player.player_state != PlayerState.DEAD
+                        player.state != PlayerState.DEAD
                         and player != action.source
                     ):
                         if (
-                            action.location == player.player_location
+                            action.location == player.location
                             or action.location == player.prev_location
                         ):
                             self.state.playthrough.append(
@@ -164,40 +169,40 @@ class GameEngine:
                                 print(
                                     f"Player {player} saw action {action.get_spectator_story()} when {player} were in {HUMAN_READABLE_LOCATIONS[action.location]}"
                                 )  # DEBUG
-                            seen_actions: list[str] = player.history[-1].get(
+                            seen_actions: list[str] = player.history.rounds[-1].observations.get(
                                 "seen_action", []
                             )
                             seen_actions.append(
                                 f"you saw {action.get_spectator_story()} when you were in {HUMAN_READABLE_LOCATIONS[action.location]}"
                             )
-                            player.history[-1]["seen_action"] = seen_actions
+                            player.history.rounds[-1].observations["seen_action"] = seen_actions
 
         # update players in room
         for player in self.state.players:
             players_in_room = [
                 other_player
                 for other_player in self.state.players
-                if player.get_location() == other_player.get_location()
+                if player.location == other_player.location
                 and player != other_player
-                and other_player.player_state == PlayerState.ALIVE
+                and other_player.state == PlayerState.ALIVE
             ]
-            player.history[-1][
+            player.history.rounds[-1].observations[
                 "Current_location"
-            ] = f"You are in {HUMAN_READABLE_LOCATIONS[player.get_location()]}"
+            ] = f"You are in {HUMAN_READABLE_LOCATIONS[player.location]}"
 
             self.state.playthrough.append(
-                f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.get_location()]} with {players_in_room}"
+                f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.location]} with {players_in_room}"
             )
             if self.DEBUG:
                 print(
-                    f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.get_location()]} with {players_in_room}"
+                    f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.location]} with {players_in_room}"
                 )
             if players_in_room:
-                player.history[-1][
+                player.history.rounds[-1].observations[
                     "player_in_room"
                 ] = f"Players in room with you: {', '.join([str(player) for player in players_in_room])}"
             else:
-                player.history[-1]["player_in_room"] = "You are alone in the room"
+                player.history.rounds[-1].observations["player_in_room"] = "You are alone in the room"
         return False
 
     def get_actions(self, player: Player) -> list[GameAction]:
@@ -208,27 +213,27 @@ class GameEngine:
         dead_players_in_room = [
             dead_player
             for dead_player in self.state.get_dead_players()
-            if dead_player.player_location == player.player_location
+            if dead_player.location == player.location
         ]
         if dead_players_in_room:
             actions.append(
                 GameAction(GameActionType.REPORT, player, dead_players_in_room)
             )
         # actions for moves
-        for location in DOORS[player.player_location]:
+        for location in DOORS[player.location]:
             actions.append(GameAction(GameActionType.MOVE, player, location))
         # actions for tasks
-        for task in player.player_tasks:
-            if task.location == player.player_location and not task.completed:
+        for task in player.tasks:
+            if task.location == player.location and not task.completed:
                 actions.append(GameAction(GameActionType.DO_ACTION, player, task))
         # actions for impostors
         if player.is_impostor and player.kill_cooldown == 0:
             targets = [
                 other_player
                 for other_player in self.state.players
-                if other_player.player_state == PlayerState.ALIVE
+                if other_player.state == PlayerState.ALIVE
                 and other_player != player
-                and other_player.player_location == player.player_location
+                and other_player.location == player.location
             ]
             for target in targets:
                 actions.append(GameAction(GameActionType.KILL, player, target))
@@ -239,17 +244,17 @@ class GameEngine:
         self.game_stage = GamePhase.DISCUSS
         for player in self.state.players:
             player.set_stage(GamePhase.DISCUSS)
-            player.history.append(OrderedDict())
+            player.history.add_round(RoundData(location=player.location, observations={}, llm_responses=[], actions=[]))
             player.chat_history.append([])
-            player.history[-1][
+            player.history.rounds[-1].observations[
                 "discussion"
             ] = "Discussion phase has started. You can discuss and vote who to banish"
 
         discussion_log: list[str] = []
         for round in range(game_consts.NUM_CHATS):
             for player in self.state.players:
-                if player.player_state == PlayerState.ALIVE:
-                    player.history[-1][
+                if player.state == PlayerState.ALIVE:
+                    player.history.rounds[-1].observations[
                         "turns left"
                     ] = f"You have {game_consts.NUM_CHATS - round} rounds left to discuss, then you will vote"
                     answer: str = player.prompt_discussion()
@@ -267,7 +272,7 @@ class GameEngine:
         dead_players = [
             player
             for player in self.state.players
-            if player.player_state == PlayerState.DEAD_REPORTED
+            if player.state == PlayerState.DEAD_REPORTED
         ]
         votes = {}
         for player in self.state.players:
@@ -275,20 +280,20 @@ class GameEngine:
             possible_voting_actions_str = [
                 action.get_input_story() for action in possible_actions
             ]
-            player.history[-1][
+            player.history.rounds[-1].observations[
                 "found_dead"
             ] = f"Dead players found: {', '.join([str(player) for player in dead_players])}"
-            player.history[-1][
+            player.history.rounds[-1].observations[
                 "voting"
             ] = "Voting phase has started. You can vote who to banish\n"
 
-            if player.player_state == PlayerState.ALIVE:
+            if player.state == PlayerState.ALIVE:
                 action = player.prompt_vote(possible_voting_actions_str)
                 votes[player] = possible_actions[action].target
-                player.history[-1][
+                player.history.rounds[-1].observations[
                     "vote"
                 ] = f"You voted for {possible_actions[action].target}"
-                player.player_location = GameLocation.LOC_CAFETERIA
+                player.location = GameLocation.LOC_CAFETERIA
                 self.state.playthrough.append(
                     f"{player} voted for {possible_actions[action].target}"
                 )
@@ -316,7 +321,7 @@ class GameEngine:
                 self.broadcast_history(
                     "vote", f"{player_to_banish} was banished! They were a crewmate"
                 )
-            player_to_banish.set_state(PlayerState.DEAD)
+            player_to_banish.state = PlayerState.DEAD
         for player, target in votes.items():
             self.broadcast_history(f"vote {player}", f"{player} voted for {target}")
 
@@ -329,7 +334,7 @@ class GameEngine:
         for other_player in self.state.players:
             if (
                 other_player != player
-                and other_player.player_state == PlayerState.ALIVE
+                and other_player.state == PlayerState.ALIVE
             ):
                 actions.append(GameAction(GameActionType.VOTE, player, other_player))
         return actions
@@ -337,9 +342,9 @@ class GameEngine:
     def broadcast(self, key: str, message: str) -> None:
         for player in self.state.get_alive_players():
             if key == "chat":
-                player.chat_history[-1].append(message)
+                player.chat_history.rounds[-1].observations.append(message)
             else:
-                player.history[-1][key] = message
+                player.history.rounds[-1].observations[key] = message
 
     def broadcast_history(self, key: str, message: str) -> None:
         self.broadcast(key, message)
@@ -349,8 +354,8 @@ class GameEngine:
 
     def remove_dead_players(self) -> None:
         for player in self.state.players:
-            if player.player_state == PlayerState.DEAD:
-                player.set_state(PlayerState.DEAD_REPORTED)
+            if player.state == PlayerState.DEAD:
+                player.state = PlayerState.DEAD_REPORTED
 
     def check_impostors_win(self) -> bool:
         crewmates_alive = [
@@ -367,7 +372,7 @@ class GameEngine:
             p for p in self.state.get_alive_players() if not p.is_impostor
         ]
         return all(
-            task.completed for player in crewmates_alive for task in player.player_tasks
+            task.completed for player in crewmates_alive for task in player.tasks
         )
 
     def check_crewmate_win_by_voting(self) -> bool:
@@ -383,7 +388,7 @@ class GameEngine:
         ]
         turns_passed = max(player.turns_passed() for player in crewmates_alive)
         completed_tasks = [
-            task.completed for player in crewmates_alive for task in player.player_tasks
+            task.completed for player in crewmates_alive for task in player.tasks
         ]
 
         if turns_passed >= 100:

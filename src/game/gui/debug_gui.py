@@ -33,18 +33,18 @@ class DebugGUI:
         player_role_label = tk.Label(frame, text=f"Role: {player.role}")
         player_role_label.pack()
         # Player State
-        player_state_label = tk.Label(frame, text=f"State: {player.player_state}")
+        player_state_label = tk.Label(frame, text=f"State: {player.state}")
         player_state_label.pack()
         # Player Location
         player_location_label = tk.Label(
-            frame, text=f"Location: {player.player_location}"
+            frame, text=f"Location: {player.location}"
         )
         player_location_label.pack()
         # Task List
         task_list_label = tk.Label(frame, text="Tasks:")
         task_list_label.pack()
         task_listbox = tk.Listbox(frame)
-        for task in player.player_tasks:
+        for task in player.tasks:
             task_listbox.insert(tk.END, str(task))
         task_listbox.pack()
         # Action History
@@ -75,16 +75,16 @@ class DebugGUI:
             player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[
                 2
             ]
-            player_state_label.config(text=f"State: {player.player_state}")
+            player_state_label.config(text=f"State: {player.state}")
             # Update player location
             player_location_label = self.player_tabs.winfo_children()[
                 i
             ].winfo_children()[3]
-            player_location_label.config(text=f"Location: {player.player_location}")
+            player_location_label.config(text=f"Location: {player.location}")
             # Update task list
             task_listbox = self.player_tabs.winfo_children()[i].winfo_children()[5]
             task_listbox.delete(0, tk.END)
-            for task in player.player_tasks:
+            for task in player.tasks:
                 task_listbox.insert(tk.END, str(task))
             # Update action history
             action_history_text = self.player_tabs.winfo_children()[i].winfo_children()[
@@ -92,8 +92,8 @@ class DebugGUI:
             ]
             action_history_text.delete("1.0", tk.END)
             history_str = ""
-            for entry in player.history:
-                for key, value in entry.items():
+            for entry in player.history.get_history():
+                for key, value in entry.observations.items():
                     if isinstance(value, list):
                         joined_value = "\n".join(value)
                         history_str += f"{key}: {joined_value}\n"
@@ -124,8 +124,8 @@ class DebugGUI:
         # Update AI agent responses in the separate window
         self.agent_responses_text.delete("1.0", tk.END)
         for player in self.game_engine.state.players:
-            for response in player.history:
-                for key, value in response.items():
+            for response in player.history.get_history():
+                for key, value in response.observations.items():
                     if isinstance(value, list):
                         joined_value = "\n".join(value)
                         self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {joined_value}\n")

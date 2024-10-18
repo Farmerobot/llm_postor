@@ -1,6 +1,7 @@
 from game.game_engine import GameEngine
-from game.models.player import HumanPlayer, AIPlayer
-from game.models.game_models import GamePhase, PlayerRole
+from game.models.player_human import HumanPlayer
+from game.models.player_ai import AIPlayer
+from game.models.game_models import PlayerRole
 from game.gui.debug_gui import DebugGUI
 
 game = GameEngine()
@@ -8,15 +9,15 @@ game = GameEngine()
 model_name = "gpt-4o-mini"
 # model_name = "gemini-1.5-flash"
 
-# impostor = HumanPlayer("Warcin")
-impostor = AIPlayer("Warcin", model_name=model_name)
+# impostor = HumanPlayer(name="Warcin")
+impostor = AIPlayer(name="Warcin", llm_model_name=model_name)
 impostor.set_role(PlayerRole.IMPOSTOR)
 
 players = [
-    # AIPlayer("Wateusz", model_name=model_name),
-    # AIPlayer("Waciej", model_name=model_name),
-    AIPlayer("Warek", model_name=model_name),
-    AIPlayer("Wikolaj", model_name=model_name),
+    AIPlayer(name="Wateusz", llm_model_name=model_name),
+    AIPlayer(name="Waciej", llm_model_name=model_name),
+    AIPlayer(name="Warek", llm_model_name=model_name),
+    AIPlayer(name="Wikolaj", llm_model_name=model_name),
     impostor,
 ]
 game.load_players(players, impostor_count=1)
