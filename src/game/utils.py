@@ -1,10 +1,9 @@
 from random import randint, sample
 from game import consts
-from game.models.player import Player
 from game.models.game_models import GameLocation, ShortTask, LongTask
 
 
-def get_random_tasks(player: Player) -> list:
+def get_random_tasks(player) -> list:
     short_tasks = get_short_tasks()
     long_tasks = get_long_tasks()
     return short_tasks + long_tasks

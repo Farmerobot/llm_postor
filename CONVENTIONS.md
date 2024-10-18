@@ -24,22 +24,11 @@
 **Code Organization:**
 
 * **Modules:** Organize code into logical modules to improve maintainability.
-* **Classes:** Use classes to encapsulate datĆĆĆa and behavior.
+* **Classes:** Use classes to encapsulate data and behavior.
 * **Functions:** Keep functions small and focused on a single task.
 * **Error Handling:** Implement robust error handling to prevent unexpected crashes.
 
 In addition to the SOLID principles, Python code should generally adhere to the following universally recognized guidelines and rules to ensure clarity, maintainability, and efficiency:
-
-### 1. **PEP 8 (Python Enhancement Proposal 8)** – **Style Guide for Python Code**
-   - This is the official style guide for Python and outlines the conventions to follow for formatting Python code.
-   - **Key Rules:**
-     - **Indentation**: Use 4 spaces per indentation level.
-     - **Line Length**: Limit lines to 79 characters.
-     - **Naming Conventions**: 
-       - Variables: snake_case
-       - Classes: CamelCase
-       - Constants: UPPERCASE_WITH_UNDERSCORES
-     - **Docstrings and Comments**: Use docstrings for functions and modules. Keep comments up-to-date and relevant.
 
 ### 2. **DRY (Don’t Repeat Yourself)**
    - **Avoid Code Duplication**: Reuse code by creating functions or classes to handle repeated tasks. It makes the code easier to maintain and reduces bugs.

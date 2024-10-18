@@ -25,43 +25,35 @@ class GameEngine:
         self.DEBUG = False
 
     def load_players(self, players: List[Player], choose_impostor: bool = True) -> None:
+        if len(players) < 3:
+            raise ValueError("Minimum number of players is 3.")
         for player in players:
             self.state.add_player(player)
-        if choose_impostor and not any(
-            player.is_impostor for player in self.state.get_alive_players()
-        ):
-            impostor = random.choice(self.state.get_alive_players())
-            impostor.set_role(PlayerRole.IMPOSTOR)
+
+        if choose_impostor:
+            impostors = [p for p in self.state.get_alive_players() if p.role == PlayerRole.IMPOSTOR]
+            if len(impostors) == 0:
+                # Add one impostor if none exist
+                impostor = random.choice(self.state.get_alive_players())
+                impostor.set_role(PlayerRole.IMPOSTOR)
+            else:
+                # Add a second impostor if only one exists
+                other_players = [p for p in self.state.get_alive_players() if p.role != PlayerRole.IMPOSTOR]
+                if other_players:
+                    second_impostor = random.choice(other_players)
+                    second_impostor.set_role(PlayerRole.IMPOSTOR)
+
+        # Check for imbalanced team sizes after role assignment
+        impostors_count = sum(1 for player in self.state.players if player.role == PlayerRole.IMPOSTOR)
+        crewmates_count = len(self.state.players) - impostors_count
+        if impostors_count >= crewmates_count:
+            raise ValueError("Number of impostors cannot be greater than or equal to the number of crewmates.")
+
+        elif not any(player.role == PlayerRole.IMPOSTOR for player in self.state.get_alive_players()):
+            raise ValueError("No impostors found and choose_impostor is False")
 
     def init_game(self) -> None:
         self.state.set_stage(GamePhase.ACTION_PHASE)
-        for player in self.state.players:
-            self._init_player(player)
-
-    def _init_player(self, player: Player) -> None:
-        player.set_state(PlayerState.ALIVE)
-        player.set_location(GameLocation.LOC_CAFETERIA)
-        player.set_stage(GamePhase.ACTION_PHASE)
-        player.history.append(OrderedDict())
-        player.can_vote = False
-        player.kill_cooldown = (
-            game_consts.IMPOSTOR_COOLDOWN if player.is_impostor else 0
-        )
-        self._set_player_tasks(player)
-
-    def _set_player_tasks(self, player: Player) -> None:
-        if player.is_impostor:
-            player.set_tasks(
-                [ShortTask("Kill all crewmates", GameLocation.LOC_UNKNOWN)]
-            )
-            player.history[-1][
-                "role"
-            ] = f"Welcome {player.name}\nYou are an impostor. Your goal is to kill or banish all crewmates"
-        else:
-            player.history[-1][
-                "role"
-            ] = f"Welcome {player.name}\nYou are a crewmate. Your goal is to complete all tasks or banish impostors"
-            player.set_tasks(get_random_tasks(player))
 
     def main_game_loop(self, freeze_stage: Optional[GamePhase] = None) -> None:
         """

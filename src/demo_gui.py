@@ -11,11 +11,10 @@ model_name = "gpt-4o-mini"
 # impostor = HumanPlayer("Warcin")
 impostor = AIPlayer("Warcin", model_name=model_name)
 impostor.set_role(PlayerRole.IMPOSTOR)
-impostor.responses = []
 
 players = [
-    AIPlayer("Wateusz", model_name=model_name),
-    AIPlayer("Waciej", model_name=model_name),
+    # AIPlayer("Wateusz", model_name=model_name),
+    # AIPlayer("Waciej", model_name=model_name),
     AIPlayer("Warek", model_name=model_name),
     AIPlayer("Wikolaj", model_name=model_name),
     impostor,

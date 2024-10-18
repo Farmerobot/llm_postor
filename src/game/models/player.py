@@ -16,6 +16,7 @@ from game.models.game_models import (
     PlayerState,
     GameLocation,
     Task,
+    ShortTask,
 )
 import game.consts as game_consts
 
@@ -24,22 +25,41 @@ class Player(ABC):
         self,
         name: str,
         role: PlayerRole = PlayerRole.CREWMATE,
+        player_stage: GamePhase = GamePhase.MAIN_MENU,
+        player_state: PlayerState = PlayerState.ALIVE,
+        player_location: GameLocation = GameLocation.LOC_CAFETERIA,
+        player_tasks: List[Task] = None,
+        can_vote: bool = False,
+        kill_cooldown: int = 0,
+        history: List[OrderedDict] = None,
+        responses: List[str] = None,
+        chat_history: List[Any] = None,
+        prev_location: Optional[GameLocation] = None,
+        discussion_prompt: str = "",
     ):
         self.name = name
-        self.role = role
-        self.player_stage = GamePhase.MAIN_MENU
-        self.player_state = PlayerState.ALIVE
-        self.player_location = GameLocation.LOC_CAFETERIA
-        self.player_tasks: List[Task] = []
-        self.can_vote = False
-        self.is_impostor = False
-        self.kill_cooldown = 0
-        self.history: List[OrderedDict] = []  # observation and action history
-        self.responses: List[str] = []
-        self.chat_history: List = []
-        self.prev_location: Optional[GameLocation] = None
-        self.discussion_prompt: str = ""
-        self.set_role(role)
+        self.player_stage = player_stage
+        self.player_state = player_state
+        self.player_location = player_location
+        self.player_tasks = player_tasks or []
+        self.can_vote = can_vote
+        self.kill_cooldown = kill_cooldown
+        self.history = history or [OrderedDict()]  # observation and action history
+        self.responses = responses or []
+        self.chat_history = chat_history or []
+        self.prev_location = prev_location
+        self.discussion_prompt = discussion_prompt
+        self.role = role  # Initialize role directly
+        self.is_impostor = role == PlayerRole.IMPOSTOR # Initialize is_impostor directly
+
+        from game.utils import get_random_tasks # Import here to avoid circular dependency
+
+        if self.is_impostor:
+            self.player_tasks = [ShortTask("Kill all crewmates", GameLocation.LOC_UNKNOWN)]
+            self.history[-1]["start"] = f"Welcome {self.name}\nYou are an impostor. Your goal is to kill or banish all crewmates"
+        else:
+            self.history[-1]["start"] = f"Welcome {self.name}\nYou are a crewmate. Your goal is to complete all tasks or banish impostors"
+            self.player_tasks = get_random_tasks(self)
 
     def set_role(self, role: PlayerRole) -> None:
         self.role = role
@@ -48,7 +68,7 @@ class Player(ABC):
             self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
         else:
             self.is_impostor = False
-
+            
     def set_state(self, state: PlayerState) -> None:
         self.player_state = state
 
@@ -65,6 +85,7 @@ class Player(ABC):
         if stage == GamePhase.ACTION_PHASE:
             self.can_vote = False
             self.player_location = GameLocation.LOC_CAFETERIA
+
 
     def set_tasks(self, tasks: List[Task]) -> None:
         self.player_tasks = tasks

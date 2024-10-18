@@ -13,6 +13,8 @@ class GameState:
 
     def set_stage(self, stage: GamePhase):
         self.game_stage = stage
+        for player in self.players:
+            player.set_stage(stage)
 
     def log_action(self, action: str):
         self.playthrough.append(action)
