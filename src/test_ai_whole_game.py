@@ -2,9 +2,9 @@ from game.game_engine import GameEngine
 from game.models.player import Player
 from game.models.game_models import GamePhase, PlayerRole
 
-
-for i in range(1):
-    print(f"Test {i}")
+n = 1
+for i in range(n):
+    print(f"Test {i} of {n}")
 
     game = GameEngine()
 
