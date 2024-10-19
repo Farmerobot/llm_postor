@@ -1,5 +1,7 @@
 # Analysis of Persuasive Capabilities of Large Language Models in Computer Games
 
+[![Tests](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml/badge.svg)](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml)
+
 Source code for a project in Artificial Intelligence at the Faculty of Computing and Telecommunications at Poznan University of Technology.
 
 ## Project Description
