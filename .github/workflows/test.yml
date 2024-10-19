@@ -1,6 +1,6 @@
 name: Run Tests on src Changes
 
-# Trigger the workflow on push or pull request in any branch but only when files in `src/` are changed.
+# Trigger the workflow on push, pull request, or manually via workflow_dispatch
 on:
   push:
     paths:
@@ -8,6 +8,7 @@ on:
   pull_request:
     paths:
       - 'src/**'     # Trigger on changes in the src directory
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   test:
