@@ -1,5 +1,5 @@
 import pytest
-import random
+from unittest.mock import MagicMock
 from src.game.game_engine import GameEngine
 from src.game.models.player import Player, PlayerRole, HumanPlayer, AIPlayer
 
@@ -18,12 +18,25 @@ def test_load_human_players():
     assert game_engine.state.players[2].name == "Player 3"
     assert isinstance(game_engine.state.players[2], HumanPlayer)
 
-def test_load_ai_players():
+# Mocking ChatOpenAI and ChatGoogleGenerativeAI using pytest-mock
+def test_load_ai_players(mocker):
+    # Mock the AI model agents
+    mock_chat_openai = mocker.patch("src.game.models.player.ChatOpenAI")
+    mock_chat_google_ai = mocker.patch("src.game.models.player.ChatGoogleGenerativeAI")
+
+    # Set the return value for the mocked API call
+    mock_chat_openai.return_value = MagicMock()
+    mock_chat_google_ai.return_value = MagicMock()
+
     game_engine = GameEngine()
     player1 = AIPlayer("Player 1", "gpt-4o-mini")
     player2 = AIPlayer("Player 2", "gpt-4o-mini")
     player3 = AIPlayer("Player 3", "gpt-4o-mini")
+
+    # Loading the AI players
     game_engine.load_players([player1, player2, player3])
+
+    # Assertions
     assert len(game_engine.state.players) == 3
     assert game_engine.state.players[0].name == "Player 1"
     assert isinstance(game_engine.state.players[0], AIPlayer)
