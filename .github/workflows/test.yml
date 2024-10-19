@@ -5,9 +5,14 @@ on:
   push:
     paths:
       - 'src/**'     # Trigger on changes in the src directory
+      - 'test/**'   # Trigger on changes in the tests directory
+      - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
   pull_request:
     paths:
-      - 'src/**'     # Trigger on changes in the src directory
+      - 'src/**'     # Trigger on changes in the src directory'
+      - 'test/**'   # Trigger on changes in the tests directory
+      - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
+    
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
