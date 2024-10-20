@@ -3,7 +3,7 @@ from typing import List, Any
 from game.consts import ASCII_MAP
 from .base_agent import Agent
 from langchain.schema import HumanMessage
-from llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
+from game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 import re
 
 

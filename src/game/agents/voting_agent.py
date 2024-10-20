@@ -1,7 +1,7 @@
 from typing import List, Any
 from .base_agent import Agent
 from langchain.schema import HumanMessage
-from llm_prompts import VOTING_TEMPLATE
+from game.llm_prompts import VOTING_TEMPLATE
 import re
 
 
