@@ -1,9 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from game.game_engine import GameEngine
-from game.models.game_models import GamePhase
-from game.models.game_models import GamePhase
-import threading
+
+from game.models.player import Player
 
 
 class DebugGUI:
@@ -25,7 +24,7 @@ class DebugGUI:
         self.agent_responses_text.pack()
         # Update GUI with game state changes
         self.update_gui()
-    def create_player_panel(self, frame, player):
+    def create_player_panel(self, frame, player: Player):
         # Player Name
         player_name_label = tk.Label(frame, text=f"Player: {player.name}")
         player_name_label.pack()
@@ -33,18 +32,18 @@ class DebugGUI:
         player_role_label = tk.Label(frame, text=f"Role: {player.role}")
         player_role_label.pack()
         # Player State
-        player_state_label = tk.Label(frame, text=f"State: {player.state}")
+        player_state_label = tk.Label(frame, text=f"State: {player.state.life}")
         player_state_label.pack()
         # Player Location
         player_location_label = tk.Label(
-            frame, text=f"Location: {player.location}"
+            frame, text=f"Location: {player.state.location}"
         )
         player_location_label.pack()
         # Task List
         task_list_label = tk.Label(frame, text="Tasks:")
         task_list_label.pack()
         task_listbox = tk.Listbox(frame)
-        for task in player.tasks:
+        for task in player.state.tasks:
             task_listbox.insert(tk.END, str(task))
         task_listbox.pack()
         # Action History
@@ -80,11 +79,11 @@ class DebugGUI:
             player_location_label = self.player_tabs.winfo_children()[
                 i
             ].winfo_children()[3]
-            player_location_label.config(text=f"Location: {player.location}")
+            player_location_label.config(text=f"Location: {player.state.location}")
             # Update task list
             task_listbox = self.player_tabs.winfo_children()[i].winfo_children()[5]
             task_listbox.delete(0, tk.END)
-            for task in player.tasks:
+            for task in player.state.tasks:
                 task_listbox.insert(tk.END, str(task))
             # Update action history
             action_history_text = self.player_tabs.winfo_children()[i].winfo_children()[
@@ -105,7 +104,7 @@ class DebugGUI:
             chat_history_text = self.player_tabs.winfo_children()[i].winfo_children()[11]
             chat_history_text.delete("1.0", tk.END)
             chat_history_str = ""
-            for message in player.chat_history:
+            for message in player.state.observations:
                 chat_history_str += f"{message}\n"
             chat_history_text.insert(tk.END, chat_history_str)
             # Update AI agent responses

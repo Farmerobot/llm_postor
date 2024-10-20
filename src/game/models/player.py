@@ -1,10 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import List, Optional, Any
-from pydantic import BaseModel, Field, ConfigDict
+from typing import Dict, List, Optional, Any
+from pydantic import BaseModel, Field, ConfigDict, model_validator
 from game.models.game_models import (
     GamePhase,
     PlayerRole,
-    PlayerState,
     GameLocation,
     Task,
     ShortTask,
@@ -18,51 +17,50 @@ from game.agents.voting_agent import VotingAgent
 
 
 class Player(BaseModel, ABC):
-    model_config = ConfigDict(arbitrary_types_allowed=True)
     name: str
     role: PlayerRole = PlayerRole.CREWMATE
-    stage: GamePhase = GamePhase.MAIN_MENU
-    state: PlayerState = PlayerState.ALIVE
-    location: GameLocation = GameLocation.LOC_CAFETERIA
-    tasks: List[Task] = [ShortTask("Eliminate all crewmates", GameLocation.LOC_UNKNOWN)] if role == PlayerRole.IMPOSTOR else get_random_tasks()
-    can_vote: bool = False
-    kill_cooldown: int = 0
-    history: PlayerHistory = Field(default_factory=PlayerHistory)
-    responses: List[str] = Field(default_factory=list)
-    chat_history: List[Any] = Field(default_factory=list)
-    prev_location: Optional[GameLocation] = None
-    discussion_prompt: str = ""
     is_impostor: bool = False
+    kill_cooldown: int = 0
+    state: RoundData = Field(default_factory=RoundData)
+    history: PlayerHistory = Field(default_factory=PlayerHistory)
     adventure_agent: Optional[AdventureAgent] = None
     discussion_agent: Optional[DiscussionAgent] = None
     voting_agent: Optional[VotingAgent] = None
-
-    def set_role(self, role: PlayerRole) -> None:
-        self.role = role
-        if role == PlayerRole.IMPOSTOR:
+    
+    @model_validator(mode='after')
+    def post_update(self) -> 'Player':
+        if self.role == PlayerRole.IMPOSTOR:
             self.is_impostor = True
             self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
-            self.tasks = [ShortTask("Eliminate all crewmates", GameLocation.LOC_UNKNOWN)]
+            self.state.tasks = [ShortTask(name="Eliminate all crewmates", location=GameLocation.LOC_UNKNOWN)]
         else:
             self.is_impostor = False
+            self.kill_cooldown = 0
+            self.state.tasks = get_random_tasks()
+        return self
 
     def set_stage(self, stage: GamePhase) -> None:
-        self.stage = stage
-        if stage == GamePhase.DISCUSS:
-            self.can_vote = True
+        self.state.stage = stage
         if stage == GamePhase.ACTION_PHASE:
-            self.can_vote = False
-            self.location = GameLocation.LOC_CAFETERIA
+            self.state.location = GameLocation.LOC_CAFETERIA
 
     def get_task_to_complete(self) -> List[Task]:
-        return [task for task in self.tasks if not task.completed]
+        return [task for task in self.state.tasks if not task.completed]
 
-    def log_round(self, observations: List[str], llm_responses: List[str], actions: List[str]):
-        round_data = RoundData(location=self.location.value, observations=observations, llm_responses=llm_responses, actions=actions)
-        self.history.add_round(round_data)
+    def log_state_new_round(self) -> None:
+        self.history.add_round(self.state)
+        self.state.tasks = [task for task in self.state.tasks if not task.completed]
+        self.state.llm_responses = []
+        self.state.prompt = ""
+        self.state.actions = []
+        self.state.response = ""
+        self.state.action_result = ""
+        self.state.seen_actions = []
+        self.state.player_in_room = ""
+        self.state.observations = []
 
     @abstractmethod
-    def prompt_action(self, prompt: str, actions: List[str]) -> int:
+    def prompt_action(self, actions: List[str]) -> int:
         pass
 
     @abstractmethod
@@ -74,7 +72,7 @@ class Player(BaseModel, ABC):
         pass
 
     def get_message_str(self) -> str:
-        return "\n".join(self.chat_history[-1])
+        return "\n".join(self.state.chat_history[-1])
 
     def __str__(self):
         return self.name

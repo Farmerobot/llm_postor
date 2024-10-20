@@ -1,12 +1,13 @@
 from game.models.game_models import GamePhase, PlayerState
 from game.models.player import Player
 from typing import List
+from pydantic import BaseModel, Field
 
-class GameState:
-    def __init__(self):
-        self.players: List[Player] = []
-        self.game_stage: GamePhase = GamePhase.MAIN_MENU
-        self.playthrough: List[str] = []
+
+class GameState(BaseModel):
+    players: List[Player] = Field(default_factory=list)
+    game_stage: GamePhase = GamePhase.MAIN_MENU
+    playthrough: List[str] = Field(default_factory=list)
 
     def add_player(self, player: Player):
         self.players.append(player)
@@ -20,7 +21,23 @@ class GameState:
         self.playthrough.append(action)
 
     def get_alive_players(self) -> List[Player]:
-        return [p for p in self.players if p.state == PlayerState.ALIVE]
+        return [p for p in self.players if p.state.life == PlayerState.ALIVE]
 
     def get_dead_players(self) -> List[Player]:
-        return [p for p in self.players if p.state == PlayerState.DEAD]
+        return [p for p in self.players if p.state.life == PlayerState.DEAD]
+
+    def get_dead_players_in_location(self, location: int) -> List[Player]:
+        return [
+            p
+            for p in self.players
+            if p.state == PlayerState.DEAD and p.location == location
+        ]
+
+    def get_player_targets(self, player: Player) -> List[Player]:
+        return [
+            other_player
+            for other_player in self.players
+            if other_player != player
+            and other_player.state == PlayerState.ALIVE
+            and other_player.location == player.location
+        ]

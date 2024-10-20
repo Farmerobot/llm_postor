@@ -1,6 +1,11 @@
+from abc import ABC, abstractmethod
 from enum import Enum
-from typing import Optional, Any, Union
+from typing import Optional, Union, ForwardRef
+
+from pydantic import BaseModel, model_validator, Field
 from game.consts import ASCII_MAP, IMPOSTOR_COOLDOWN
+
+Player = ForwardRef("Player")
 
 
 class GamePhase(Enum):
@@ -22,7 +27,7 @@ class PlayerState(Enum):
     DEAD_REPORTED = 2
 
 
-class GameLocation(Enum):
+class GameLocation(Enum): # TODO: Replace with string enum with human readable names
     LOC_CAFETERIA = 0
     LOC_REACTOR = 1
     LOC_UPPER_ENGINE = 2
@@ -40,7 +45,7 @@ class GameLocation(Enum):
     LOC_UNKNOWN = 14
 
 
-HUMAN_READABLE_LOCATIONS = {
+HUMAN_READABLE_LOCATIONS = { # TODO: move to GameLocation enum
     GameLocation.LOC_CAFETERIA: "Cafeteria",
     GameLocation.LOC_REACTOR: "Reactor",
     GameLocation.LOC_UPPER_ENGINE: "Upper Engine",
@@ -137,28 +142,17 @@ class GameMap:
         return ASCII_MAP
 
 
-class Task:
-    def __init__(self, name: str, location: GameLocation):
-        self.name = name
-        self.completed = False
-        self.location = location
+class Task(BaseModel, ABC):
+    name: str
+    completed: bool = False
+    location: GameLocation
 
+    @abstractmethod
     def complete(self, location: GameLocation):
-        self.completed = True
-
-    def __str__(self):
-        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
-
-    def __repr__(self):
-        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
+        pass
 
 
 class ShortTask(Task):
-    def __init__(self, name: str, location: GameLocation):
-        self.name = name
-        self.location = location
-        self.completed = False
-
     def complete(self, location: GameLocation) -> str:
         if self.completed:
             return f"Task {self.name} already completed!"
@@ -167,14 +161,15 @@ class ShortTask(Task):
         self.completed = True
         return f"Task {self.name} completed!"
 
+    def __str__(self):
+        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
+
+    def __repr__(self):
+        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
+
 
 class LongTask(Task):
-    def __init__(self, name: str, location: GameLocation):
-        self.name = name
-        self.location = location
-        self.turns_left = 2
-        self.completed = False
-
+    turns_left: int = 2
     def complete(self, location: GameLocation) -> str:
         if self.completed:
             return f"Task {self.name} already completed!"
@@ -211,69 +206,59 @@ class GameActionType(Enum):
         return NotImplemented
 
 
-class GameAction:
-    from game.models.player import Player 
-    def __init__(
-        self,
-        action: GameActionType,
-        source: Player,
-        target: Optional[Union[Player, GameLocation, Task, list]] = None,
-    ):
-        self.action_type: GameActionType = action
-        self.source = source
-        self.target = target
-        self.location = source.location
-        self.input_stories = {
-            GameActionType.MOVE: f"move to location {HUMAN_READABLE_LOCATIONS[self.target]}" if isinstance(self.target, GameLocation) else "Wait",
-            GameActionType.WAIT: f"wait in {HUMAN_READABLE_LOCATIONS[self.location]}",
-            GameActionType.DO_ACTION: f"complete task: {self.target.name if isinstance(self.target, Task) else self.target}",
-            GameActionType.REPORT: f"report dead body of {str(self.target)}",
-            GameActionType.KILL: f"eliminate {str(self.target)}",
-            GameActionType.VOTE: f"vote for {str(self.target)}",
-        }
-        self.output_stories = {
-            GameActionType.MOVE: f"You [{self.source}] moved to {HUMAN_READABLE_LOCATIONS[self.target]}" if isinstance(self.target, GameLocation) else "Wait",
-            GameActionType.WAIT: f"You [{self.source}] are waiting in {HUMAN_READABLE_LOCATIONS[self.location]}",
-            GameActionType.DO_ACTION: f"You[{self.source}]  {self.target}",
-            GameActionType.REPORT: f"You [{self.source}] reported {str(self.target)}",
-            GameActionType.KILL: f"You [{self.source}] eliminated {str(self.target)}",
-            GameActionType.VOTE: f"You [{self.source}] voted for {str(self.target)}",
-        }
-        self.spectator_stories = {
-            GameActionType.MOVE: f"{self.source} moved to {HUMAN_READABLE_LOCATIONS[self.target]} from {HUMAN_READABLE_LOCATIONS[self.location]}" if isinstance(self.target, GameLocation) else "Wait",
-            GameActionType.WAIT: f"{self.source} waited",
-            GameActionType.DO_ACTION: f"{self.source} doing task",
-            GameActionType.REPORT: f"{self.source} reported dead body of {self.target}",
-            GameActionType.KILL: f"{self.source} eliminated {self.target}",
-            GameActionType.VOTE: f"{self.source} voted for {self.target}",
-        }
+class GameAction(BaseModel):
+    type: GameActionType
+    source: Player = Field(default_factory=Player)
+    target: Optional[Union[Player, GameLocation, Task]] = None
+    text: str
+    result: str
+    spectator: str
 
-    def get_input_story(self):
-        return self.input_stories[self.action_type]
-
-    def get_output_story(self):
-        return self.output_stories[self.action_type]
-
-    def get_spectator_story(self):
-        return self.spectator_stories[self.action_type]
+    @model_validator(mode='after')
+    def set_stories(self):
+        if isinstance(self.target, GameLocation):
+            self.text = f"move to location {HUMAN_READABLE_LOCATIONS[self.target]}"
+            self.result = f"You [{self.source}] moved to {HUMAN_READABLE_LOCATIONS[self.target]}"
+            self.spectator = f"{self.source} moved to {HUMAN_READABLE_LOCATIONS[self.target]} from {HUMAN_READABLE_LOCATIONS[self.source.location]}"
+        elif self.type == GameActionType.WAIT:
+            self.text = f"wait in {HUMAN_READABLE_LOCATIONS[self.source.state.location]}"
+            self.result = f"You [{self.source}] are waiting in {HUMAN_READABLE_LOCATIONS[self.source.state.location]}"
+            self.spectator = f"{self.source} waited"
+        elif self.type == GameActionType.DO_ACTION:
+            self.text = f"complete task: {self.target.name if isinstance(self.target, Task) else self.target}"
+            self.result = f"You [{self.source}] {self.target}"
+            self.spectator = f"{self.source} doing task"
+        elif self.type == GameActionType.REPORT:
+            self.text = f"report dead body of {str(self.target)}"
+            self.result = f"You [{self.source}] reported {str(self.target)}"
+            self.spectator = f"{self.source} reported dead body of {self.target}"
+        elif self.type == GameActionType.KILL:
+            self.text = f"eliminate {str(self.target)}"
+            self.result = f"You [{self.source}] eliminated {str(self.target)}"
+            self.spectator = f"{self.source} eliminated {self.target}"
+        elif self.type == GameActionType.VOTE:
+            self.text = f"vote for {str(self.target)}"
+            self.result = f"You [{self.source}] voted for {str(self.target)}"
+            self.spectator = f"{self.source} voted for {self.target}"
+        return self
 
     def do_action(self):
         if (
-            self.action_type == GameActionType.REPORT
-            or self.action_type == GameActionType.WAIT
+            self.type == GameActionType.REPORT
+            or self.type == GameActionType.WAIT
         ):
             pass
-        if self.action_type == GameActionType.MOVE:
+        if self.type == GameActionType.MOVE:
             self.source.location = self.target
-        if self.action_type == GameActionType.DO_ACTION:
-            return self.target.complete(self.target.location)
-        if self.action_type == GameActionType.KILL:
-            self.target.state = PlayerState.DEAD
+        if self.type == GameActionType.DO_ACTION:
+            return self.target.complete(self.source.state.location)
+        if self.type == GameActionType.KILL:
+            self.target.state.life = PlayerState.DEAD
             self.source.kill_cooldown = IMPOSTOR_COOLDOWN
-        return self.get_output_story()
+        return self.result
 
     def __str__(self):
-        return f"{self.action_type} | {self.target}"
+        return f"{self.type} | {self.target}"
 
     def __repr__(self):
-        return f"{self.action_type} | {self.target}"
+        return f"{self.type} | {self.target}"

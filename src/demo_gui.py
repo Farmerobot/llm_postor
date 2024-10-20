@@ -10,8 +10,7 @@ model_name = "gpt-4o-mini"
 # model_name = "gemini-1.5-flash"
 
 # impostor = HumanPlayer(name="Warcin")
-impostor = AIPlayer(name="Warcin", llm_model_name=model_name)
-impostor.set_role(PlayerRole.IMPOSTOR)
+impostor = AIPlayer(name="Warcin", llm_model_name=model_name, role=PlayerRole.IMPOSTOR)
 
 players = [
     AIPlayer(name="Wateusz", llm_model_name=model_name),

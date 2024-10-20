@@ -1,4 +1,5 @@
 from typing import List, Optional
+from pydantic import Field
 
 from game.agents.adventure_agent import AdventureAgent
 from game.agents.discussion_agent import DiscussionAgent
@@ -13,7 +14,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 class AIPlayer(Player):
     llm_model_name: str
     llm: Optional[ChatOpenAI | ChatGoogleGenerativeAI] = None
-    model_config = Player.model_config
 
     def __init__(self, **data):
         super().__init__(**data)  # Initialize Player fields first
@@ -24,34 +24,41 @@ class AIPlayer(Player):
                 model=self.llm_model_name,
                 temperature=0.1,
             )
-        self.adventure_agent = AdventureAgent(llm=self.llm, player_name=self.name)
-        self.discussion_agent = DiscussionAgent(llm=self.llm, player_name=self.name)
-        self.voting_agent = VotingAgent(llm=self.llm, player_name=self.name)
-
         role_str = "crewmate" if self.role == PlayerRole.CREWMATE else "impostor"
-        self.adventure_agent.role = role_str
-        self.discussion_agent.role = role_str
-        self.voting_agent.role = role_str
+        self.adventure_agent = AdventureAgent(llm=self.llm, player_name=self.name, role=role_str)
+        self.discussion_agent = DiscussionAgent(llm=self.llm, player_name=self.name, role=role_str)
+        self.voting_agent = VotingAgent(llm=self.llm, player_name=self.name, role=role_str)
 
-    def prompt_action(self, prompt: str, actions: List[str]) -> int:
+    def prompt_action(self, actions: List[str]) -> int:
+        self.state.actions = actions
         self.adventure_agent.update_state(
-            observation=self.history.get_history_str(),
+            observations=self.history.get_history_str(),
             tasks=self.get_task_to_complete(),
             actions=actions,
-            current_location=HUMAN_READABLE_LOCATIONS[self.location],
+            current_location=HUMAN_READABLE_LOCATIONS[self.state.location],
         )
-        return self.adventure_agent.act()
+        prompts, chosen_action = self.adventure_agent.act()
+        self.state.llm_responses = self.adventure_agent.responses
+        self.state.response = chosen_action
+        self.state.prompt = prompts
+        return chosen_action
 
     def prompt_discussion(self) -> str:
-        self.history[-1]["observations"] = self.get_observation_history()
-        self.history[-1].move_to_end("observations", last=False)
-        history = self.get_history_str()
+        history = self.history.get_history_str()
         statements = self.get_message_str()
-        self.discussion_agent.update_state(observation=history, messages=statements)
-        points = self.discussion_agent.create_discussion_points(statements=statements)
-        return self.discussion_agent.act(points)
+        self.discussion_agent.update_state(observations=history, messages=statements)
+        message_prompt, message = self.discussion_agent.act()
+        self.state.llm_responses = self.discussion_agent.responses
+        self.state.response = message
+        self.state.prompt = message_prompt
+        return message
 
     def prompt_vote(self, voting_actions: List[str]) -> int:
-        self.voting_agent.update_state(observation=self.get_observation_history())
-        return self.voting_agent.choose_action(self.get_message_str(), voting_actions)
+        self.state.actions = voting_actions
+        self.voting_agent.update_state(observation=self.history.get_history_str(), actions=voting_actions)
+        vote_prompt, vote = self.voting_agent.choose_action(self.get_message_str())
+        self.state.llm_responses = self.voting_agent.responses
+        self.state.response = vote
+        self.state.prompt = vote_prompt
+        return vote
 
