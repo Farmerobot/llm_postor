@@ -1,6 +1,7 @@
 from game.game_engine import GameEngine
-from game.models.player import Player
-from game.models.game_models import GamePhase, PlayerRole
+from game.players.base_player import Player
+from game.models.engine import GamePhase
+from game.players.base_player import PlayerRole
 
 game = GameEngine()
 
@@ -17,4 +18,4 @@ players = [
 game.load_players(players, force_crewmate_to_impostor=False)
 game.init_game()
 
-game.main_game_loop()
+game.enter_main_game_loop()

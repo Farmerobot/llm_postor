@@ -1,7 +1,6 @@
 from typing import List, Optional
 
-from game.models.player import Player
-from game.models.player_history import RoundData
+from game.players.base_player import Player
 
 
 class HumanPlayer(Player):

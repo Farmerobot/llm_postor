@@ -2,10 +2,16 @@ from typing import List, Any
 from .base_agent import Agent
 from langchain.schema import HumanMessage
 from llm_prompts import DISCUSSION_TEMPLATE, DISCUSSION_RESPONSE_TEMPLATE
-import datetime
+
 
 class DiscussionAgent(Agent):
-    def update_state(self, observations: str, tasks: List[str] = None, actions: List[str] = None, messages: List[str] = None):
+    def update_state(
+        self,
+        observations: str,
+        tasks: List[str] = None,
+        actions: List[str] = None,
+        messages: List[str] = None,
+    ):
         self.state.history = observations
         self.state.messages = messages
 
@@ -34,5 +40,10 @@ class DiscussionAgent(Agent):
 
     def act(self) -> Any:
         points_prompt, points = self.create_discussion_points()
-        response_prompt, response = self.respond_to_statements(statements='\n'.join(self.state.messages), points=points)
-        return f"Points prompt: {points_prompt}\n\nResponse prompt: {response_prompt}", response
+        response_prompt, response = self.respond_to_statements(
+            statements="\n".join(self.state.messages), points=points
+        )
+        return (
+            f"Points prompt: {points_prompt}\n\nResponse prompt: {response_prompt}",
+            response,
+        )

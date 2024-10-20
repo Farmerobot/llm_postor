@@ -1,5 +1,6 @@
-from game.models.game_models import GamePhase, PlayerState
-from game.models.player import Player
+from game.models.engine import GamePhase
+from game.models.history import PlayerState
+from game.players.base_player import Player
 from typing import List
 from pydantic import BaseModel, Field
 
@@ -43,3 +44,12 @@ class GameState(BaseModel):
             and other_player.state.life == PlayerState.ALIVE
             and other_player.state.location == player.state.location
         ]
+
+    def to_dict(self):
+        return {
+            "players": [player.to_dict() for player in self.players],
+            "game_stage": self.game_stage.value,
+            "playthrough": self.playthrough,
+            "save_playthrough": self.save_playthrough,
+            "DEBUG": self.DEBUG,
+        }

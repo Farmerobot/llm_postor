@@ -1,9 +1,10 @@
 import pytest
 from unittest.mock import MagicMock
 from src.game.game_engine import GameEngine
-from src.game.models.player import PlayerRole
-from src.game.models.player_ai import AIPlayer
-from src.game.models.player_human import HumanPlayer
+from src.game.players.base_player import PlayerRole
+from src.game.players.ai import AIPlayer
+from src.game.players.human import HumanPlayer
+from src.game.utils import get_impostor_tasks
 
 
 def test_load_human_players():

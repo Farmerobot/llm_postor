@@ -1,6 +1,6 @@
 from game.game_engine import GameEngine
-from game.models.player import Player
-from game.models.game_models import GamePhase, PlayerRole
+from game.players.base_player import Player
+from game.models.engine import GamePhase, PlayerRole
 
 turns_to_complete: list[int] = []
 for model_name in ["gpt-4o-mini", "gpt-4o"]:
@@ -16,7 +16,7 @@ for model_name in ["gpt-4o-mini", "gpt-4o"]:
         game.DEBUG = True
         game.save_playthrough = f"Test_crewmate_action_{model_name}_{i}.txt"
         print(game.players[0].player_tasks)
-        game.main_game_loop(GamePhase.ACTION_PHASE)
+        game.enter_main_game_loop(GamePhase.ACTION_PHASE)
         turns_to_complete.append(
             max([player.turns_passed() for player in game.players])
         )

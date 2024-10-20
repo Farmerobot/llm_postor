@@ -1,13 +1,15 @@
 from typing import Optional, Union
 from pydantic import Field, BaseModel, model_validator
-from enum import Enum
+from enum import IntEnum
 
 from game.consts import IMPOSTOR_COOLDOWN
-from game.models.game_models import HUMAN_READABLE_LOCATIONS, GameLocation, PlayerState, Task
-from game.models.player import Player
+from game.models.engine import GameLocation
+from game.models.history import PlayerState
+from game.models.tasks import Task
+from game.players.base_player import Player
 
 
-class GameActionType(Enum):
+class GameActionType(IntEnum):
     VOTE = -1
     WAIT = 0
     MOVE = 1
@@ -34,15 +36,17 @@ class GameAction(BaseModel):
     result: str = ""
     spectator: str = ""
 
-    @model_validator(mode='after')
+    @model_validator(mode="after")
     def set_stories(self):
         if isinstance(self.target, GameLocation):
-            self.text = f"move to location {HUMAN_READABLE_LOCATIONS[self.target]}"
-            self.result = f"You [{self.player}] moved to {HUMAN_READABLE_LOCATIONS[self.target]}"
-            self.spectator = f"{self.player} moved to {HUMAN_READABLE_LOCATIONS[self.target]} from {HUMAN_READABLE_LOCATIONS[self.player.state.location]}"
+            self.text = f"move to location {self.target.value}"
+            self.result = f"You [{self.player}] moved to {self.target.value}"
+            self.spectator = f"{self.player} moved to {self.target.value} from {self.player.state.location.value}"
         elif self.type == GameActionType.WAIT:
-            self.text = f"wait in {HUMAN_READABLE_LOCATIONS[self.player.state.location]}"
-            self.result = f"You [{self.player}] are waiting in {HUMAN_READABLE_LOCATIONS[self.player.state.location]}"
+            self.text = f"wait in {self.player.state.location.value}"
+            self.result = (
+                f"You [{self.player}] are waiting in {self.player.state.location.value}"
+            )
             self.spectator = f"{self.player} waited"
         elif self.type == GameActionType.DO_ACTION:
             self.text = f"complete task: {self.target.name if isinstance(self.target, Task) else self.target}"
@@ -63,10 +67,7 @@ class GameAction(BaseModel):
         return self
 
     def do_action(self):
-        if (
-            self.type == GameActionType.REPORT
-            or self.type == GameActionType.WAIT
-        ):
+        if self.type == GameActionType.REPORT or self.type == GameActionType.WAIT:
             pass
         if self.type == GameActionType.MOVE:
             self.player.state.location = self.target

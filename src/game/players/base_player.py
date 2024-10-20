@@ -1,24 +1,30 @@
 from abc import ABC, abstractmethod
+from enum import Enum
 from typing import Dict, List, Optional, Any
-from pydantic import BaseModel, Field, ConfigDict, model_validator
-from game.models.game_models import (
+from pydantic import BaseModel, Field, ConfigDict, model_validator, ValidationError
+from game.models.engine import (
     GamePhase,
-    PlayerRole,
     GameLocation,
-    Task,
-    ShortTask,
 )
 import game.consts as game_consts
-from game.utils import get_random_tasks
-from .player_history import PlayerHistory, RoundData
+from game.utils import get_impostor_tasks, get_random_tasks
+from game.models.tasks import Task
+from game.models.history import PlayerHistory, RoundData
 from game.agents.adventure_agent import AdventureAgent
 from game.agents.discussion_agent import DiscussionAgent
 from game.agents.voting_agent import VotingAgent
 
 
+class PlayerRole(str, Enum):
+    CREWMATE = "Crewmate"
+    IMPOSTOR = "Impostor"
+    GHOST = "Ghost"
+    UNKNOWN = "Unknown"
+
+
 class Player(BaseModel, ABC):
     name: str
-    role: PlayerRole = PlayerRole.CREWMATE
+    role: PlayerRole = Field(default=PlayerRole.CREWMATE)
     is_impostor: bool = False
     kill_cooldown: int = 0
     state: RoundData = Field(default_factory=RoundData)
@@ -27,17 +33,20 @@ class Player(BaseModel, ABC):
     discussion_agent: Optional[DiscussionAgent] = None
     voting_agent: Optional[VotingAgent] = None
     
-    @model_validator(mode='after')
-    def post_update(self) -> 'Player':
-        if self.role == PlayerRole.IMPOSTOR:
-            self.is_impostor = True
-            self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
-            self.state.tasks = [ShortTask(name="Eliminate all crewmates", location=GameLocation.LOC_UNKNOWN)]
-        else:
-            self.is_impostor = False
-            self.kill_cooldown = 0
-            self.state.tasks = get_random_tasks()
-        return self
+    model_config = ConfigDict(validate_assignment=True)
+    
+    @model_validator(mode="before")
+    def set_impostor_status(cls, data: Any) -> Any:
+        if "role" in data:
+            if data["role"] == PlayerRole.IMPOSTOR:
+                data["is_impostor"] = True
+                data["kill_cooldown"] = game_consts.IMPOSTOR_COOLDOWN
+                data["state"] = RoundData(tasks=get_impostor_tasks())
+            else:
+                data["is_impostor"] = False
+                data["kill_cooldown"] = 0
+                data["state"] = RoundData(tasks=get_random_tasks())
+        return data
 
     def set_stage(self, stage: GamePhase) -> None:
         self.state.stage = stage
@@ -79,3 +88,22 @@ class Player(BaseModel, ABC):
 
     def __repr__(self):
         return self.name
+
+    def to_dict(self):
+        agent_data = {}
+        if self.adventure_agent:
+            agent_data["adventure_agent"] = self.adventure_agent.to_dict()
+        if self.discussion_agent:
+            agent_data["discussion_agent"] = self.discussion_agent.to_dict()
+        if self.voting_agent:
+            agent_data["voting_agent"] = self.voting_agent.to_dict()
+
+        return {
+            "name": self.name,
+            "role": self.role.value,
+            "is_impostor": self.is_impostor,
+            "kill_cooldown": self.kill_cooldown,
+            "state": self.state.to_dict(),
+            "history": self.history.to_dict(),
+            "agents": agent_data,
+        }

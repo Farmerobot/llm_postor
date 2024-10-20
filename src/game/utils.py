@@ -1,6 +1,7 @@
 from random import randint, sample
 from game import consts
-from game.models.game_models import GameLocation, ShortTask, LongTask
+from game.models.engine import GameLocation
+from game.models.tasks import ShortTask, LongTask
 
 
 def get_random_tasks() -> list:
@@ -9,12 +10,14 @@ def get_random_tasks() -> list:
     return short_tasks + long_tasks
 
 
+def get_impostor_tasks() -> list:
+    return [ShortTask(name="Eliminate all crewmates", location=GameLocation.LOC_UNKNOWN)]
+
+
 def get_short_tasks() -> list:
     tasks = [
         ShortTask(name="Empty the cafeteria trash", location=GameLocation.LOC_CAFETERIA),
-        ShortTask(name=
-            "Start the coffee maker in the cafeteria", location=GameLocation.LOC_CAFETERIA
-        ),
+        ShortTask(name="Start the coffee maker in the cafeteria", location=GameLocation.LOC_CAFETERIA),
         ShortTask(name="Fix wiring in cafeteria", location=GameLocation.LOC_CAFETERIA),
         ShortTask(name="Empty the storage trash chute", location=GameLocation.LOC_STORAGE),
         ShortTask(name="Fix wiring in storage", location=GameLocation.LOC_STORAGE),
@@ -35,12 +38,8 @@ def get_short_tasks() -> list:
         ShortTask(name="Fix wiring in medbay", location=GameLocation.LOC_MEDBAY),
         ShortTask(name="Check catalyzer in upper engine", location=GameLocation.LOC_UPPER_ENGINE),
         ShortTask(name="Check catalyzer in lower engine", location=GameLocation.LOC_LOWER_ENGINE),
-        ShortTask(name=
-            "Replace compression coil in upper engine", location=GameLocation.LOC_UPPER_ENGINE
-        ),
-        ShortTask(name=
-            "Replace compression coil in lower engine", location=GameLocation.LOC_LOWER_ENGINE
-        ),
+        ShortTask(name="Replace compression coil in upper engine", location=GameLocation.LOC_UPPER_ENGINE),
+        ShortTask(name="Replace compression coil in lower engine", location=GameLocation.LOC_LOWER_ENGINE),
     ]
     return sample(tasks, k=consts.NUM_SHORT_TASKS)
 

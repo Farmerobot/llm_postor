@@ -4,8 +4,11 @@ from langchain.schema import HumanMessage
 from llm_prompts import VOTING_TEMPLATE
 import re
 
+
 class VotingAgent(Agent):
-    def update_state(self, observations: str, tasks: List[str] = None, actions: List[str] = None):
+    def update_state(
+        self, observations: str, tasks: List[str] = None, actions: List[str] = None
+    ):
         self.state.history = observations
         self.state.available_actions = actions
 
@@ -16,7 +19,8 @@ class VotingAgent(Agent):
             discussion=discussion_log,
             history=self.state.history,
             actions="\n".join(
-                f"{i+1}. {action}" for i, action in enumerate(self.state.available_actions)
+                f"{i+1}. {action}"
+                for i, action in enumerate(self.state.available_actions)
             ),
         )
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
@@ -36,7 +40,7 @@ class VotingAgent(Agent):
             warning_str = f"{self.player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got {chosen_action} ({normalized_chosen_action} normalized)"
             print(warning_str)
             self.responses.append(warning_str)
-            return 0 # Default to first action if invalid
+            return 0  # Default to first action if invalid
 
     def act(self) -> Any:
         # choose_action is used

@@ -6,8 +6,15 @@ from langchain.schema import HumanMessage
 from llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 import re
 
+
 class AdventureAgent(Agent):
-    def update_state(self, observations: str, tasks: List[str], actions: List[str], current_location: str):
+    def update_state(
+        self,
+        observations: str,
+        tasks: List[str],
+        actions: List[str],
+        current_location: str,
+    ):
         self.state.history = observations
         self.state.current_tasks = tasks
         self.state.available_actions = actions
@@ -20,7 +27,9 @@ class AdventureAgent(Agent):
             ASCII_MAP=ASCII_MAP,
             history=self.state.history,
             tasks=self.state.current_tasks,
-            actions="<action>"+"</action><action>".join(self.state.available_actions)+"</action>",
+            actions="<action>"
+            + "</action><action>".join(self.state.available_actions)
+            + "</action>",
             current_location=self.state.current_location,
         )
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
@@ -55,7 +64,9 @@ class AdventureAgent(Agent):
     def act(self) -> Any:
         plan_prompt, plan = self.create_plan()
         action_prompt, action = self.choose_action(plan)
-        self.responses.append(f"Based on plan: {plan}\n{self.player_name} chose action: {action} {self.state.available_actions[action]}")
+        self.responses.append(
+            f"Based on plan: {plan}\n{self.player_name} chose action: {action} {self.state.available_actions[action]}"
+        )
         return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action
 
     @staticmethod

@@ -1,6 +1,6 @@
 from game.game_engine import GameEngine
-from game.models.player import Player
-from game.models.game_models import GamePhase, PlayerRole
+from game.players.base_player import Player
+from game.models.engine import GamePhase, PlayerRole
 
 n = 1
 for i in range(n):
@@ -19,7 +19,7 @@ for i in range(n):
     game.init_game()
     game.DEBUG = True
     game.save_playthrough = f"whole_game_test__new_{i}.txt"
-    game.main_game_loop()
+    game.enter_main_game_loop()
     crewmates_won = game.check_crewmates_win()
     impostor_won = game.check_impostors_win()
     print("Crewmates won" if crewmates_won else "Impostor won")

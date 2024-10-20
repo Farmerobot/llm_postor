@@ -1,30 +1,23 @@
 from game.game_state import GameState
-from game.models.game_models import (
-    HUMAN_READABLE_LOCATIONS,
+from game.models.engine import (
     GamePhase,
-    PlayerState,
     GameLocation,
-    PlayerRole,
-    ShortTask,
     DOORS,
 )
-from game.models.player import Player
-from game.models.player_human import HumanPlayer
-from game.models.game_action import GameAction, GameActionType
-from game.utils import get_random_tasks
+from game.players.base_player import Player, PlayerRole
+from game.models.history import PlayerState
+from game.players.human import HumanPlayer
+from game.models.action import GameAction, GameActionType
 from typing import Any, List, Callable, Optional
 import random
 from game import consts as game_consts
-from collections import OrderedDict, Counter
-
-from game.models.player_history import RoundData
-from pydantic import BaseModel, Field, ConfigDict
+from collections import Counter
+from pydantic import BaseModel, Field
 
 
 class GameEngine(BaseModel):
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
-    gui: Optional[Any] = None
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
         if len(players) < 3:
@@ -63,7 +56,7 @@ class GameEngine(BaseModel):
     def init_game(self) -> None:
         self.state.set_stage(GamePhase.ACTION_PHASE)
 
-    def main_game_loop(self, freeze_stage: Optional[GamePhase] = None) -> None:
+    def enter_main_game_loop(self, freeze_stage: Optional[GamePhase] = None) -> None:
         """
         Main game loop that controls the flow of the game.
 
@@ -77,7 +70,6 @@ class GameEngine(BaseModel):
 
             chosen_actions = self.get_player_actions()
             someone_reported = self.update_game_state(chosen_actions)
-            self.gui.update_gui()
 
             if someone_reported and freeze_stage is None:
                 self.discussion_loop()
@@ -146,17 +138,21 @@ class GameEngine(BaseModel):
 
                 # update stories of seen actions and players in room
                 for player in self.state.players:
-                    if player.state.life != PlayerState.DEAD and player != action.player:
+                    if (
+                        player.state.life != PlayerState.DEAD
+                        and player != action.player
+                    ):
                         if (
                             action.player.state.location == player.state.location
-                            or action.player.state.location == player.history.rounds[-1].location
+                            or action.player.state.location
+                            == player.history.rounds[-1].location
                         ):
-                            playthrough_text = f"Player {player} saw action {action.spectator} when {player} were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
+                            playthrough_text = f"Player {player} saw action {action.spectator} when {player} were in {action.player.state.location.value}"
                             self.state.playthrough.append(playthrough_text)
                             if self.state.DEBUG:
                                 print(playthrough_text)
                             player.state.seen_actions.append(
-                                f"you saw {action.spectator} when you were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
+                                f"you saw {action.spectator} when you were in {action.player.state.location.value}"
                             )
 
         # update players in room
@@ -169,7 +165,7 @@ class GameEngine(BaseModel):
                 and other_player.state.life == PlayerState.ALIVE
             ]
 
-            playthrough_text = f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.state.location]} with {players_in_room}"
+            playthrough_text = f"Player {player} is in {player.state.location.value} with {players_in_room}"
             self.state.playthrough.append(playthrough_text)
             if self.state.DEBUG:
                 print(playthrough_text)
@@ -189,7 +185,9 @@ class GameEngine(BaseModel):
         actions.append(GameAction(type=GameActionType.WAIT, player=player))
 
         # action for REPORT
-        dead_players_in_room = self.state.get_dead_players_in_location(player.state.location)
+        dead_players_in_room = self.state.get_dead_players_in_location(
+            player.state.location
+        )
         if dead_players_in_room:
             actions.append(
                 GameAction(
@@ -242,7 +240,6 @@ class GameEngine(BaseModel):
                     answer_str = f"Discussion: [{player}]: {answer}"
                     discussion_log.append(answer_str)
                     self.broadcast_message(answer_str)
-                    self.gui.update_gui()
             self.state.playthrough.append(f"Discussion log:")
             self.state.playthrough.append("\n".join(discussion_log))
             if self.state.DEBUG:
@@ -251,7 +248,9 @@ class GameEngine(BaseModel):
 
     def go_to_voting(self) -> None:
         dead_players = [
-            player for player in self.state.players if player.state.life == PlayerState.DEAD
+            player
+            for player in self.state.players
+            if player.state.life == PlayerState.DEAD
         ]
         votes = {}
         for player in self.state.players:
@@ -404,3 +403,6 @@ class GameEngine(BaseModel):
 
     def __repr__(self):
         return f"GameEngine | Players: {self.state.players} | Stage: {self.state.game_stage}"
+
+    def to_dict(self):
+        return self.state.dict()
