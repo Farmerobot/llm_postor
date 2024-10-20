@@ -24,8 +24,6 @@ from pydantic import BaseModel, Field, ConfigDict
 class GameEngine(BaseModel):
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
-    save_playthrough: str = ""
-    DEBUG: bool = Field(default=False)
     gui: Optional[Any] = None
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
@@ -104,11 +102,11 @@ class GameEngine(BaseModel):
             if player.state.life == PlayerState.ALIVE:
                 possible_actions = self.get_actions(player)
                 possible_actions_str = [action.text for action in possible_actions]
-                if self.DEBUG:
+                if self.state.DEBUG:
                     print(f"Player {player} actions: {possible_actions_str}")
                 action_int = player.prompt_action(possible_actions_str)
                 choosen_actions.append(possible_actions[action_int])
-                if self.DEBUG:
+                if self.state.DEBUG:
                     print(f"Player {player} choosen action: {choosen_actions[-1]}")
         return choosen_actions
 
@@ -155,7 +153,7 @@ class GameEngine(BaseModel):
                         ):
                             playthrough_text = f"Player {player} saw action {action.spectator} when {player} were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
                             self.state.playthrough.append(playthrough_text)
-                            if self.DEBUG:
+                            if self.state.DEBUG:
                                 print(playthrough_text)
                             player.state.seen_actions.append(
                                 f"you saw {action.spectator} when you were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
@@ -173,7 +171,7 @@ class GameEngine(BaseModel):
 
             playthrough_text = f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.state.location]} with {players_in_room}"
             self.state.playthrough.append(playthrough_text)
-            if self.DEBUG:
+            if self.state.DEBUG:
                 print(playthrough_text)
             if players_in_room:
                 player.state.player_in_room = f"Players in room with you: {', '.join([str(player) for player in players_in_room])}"
@@ -247,7 +245,7 @@ class GameEngine(BaseModel):
                     self.gui.update_gui()
             self.state.playthrough.append(f"Discussion log:")
             self.state.playthrough.append("\n".join(discussion_log))
-            if self.DEBUG:
+            if self.state.DEBUG:
                 print("Discussion log:")
                 print("\n".join(discussion_log))
 
@@ -277,7 +275,7 @@ class GameEngine(BaseModel):
                     f"{player} voted for {possible_actions[action].target}"
                 )
                 self.state.playthrough.append(playthrough_text)
-                if self.DEBUG:
+                if self.state.DEBUG:
                     print(playthrough_text)
 
         votes_counter = Counter(votes.values())
@@ -387,8 +385,8 @@ class GameEngine(BaseModel):
         return False
 
     def _save_playthrough(self) -> None:
-        if self.save_playthrough:
-            with open(self.save_playthrough, "w") as f:
+        if self.state.save_playthrough:
+            with open(self.state.save_playthrough, "w") as f:
                 f.write("\n".join(self.state.playthrough))
 
     def end_game(self) -> None:

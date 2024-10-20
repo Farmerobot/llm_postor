@@ -8,6 +8,8 @@ class GameState(BaseModel):
     players: List[Player] = Field(default_factory=list)
     game_stage: GamePhase = GamePhase.MAIN_MENU
     playthrough: List[str] = Field(default_factory=list)
+    save_playthrough: str = ""
+    DEBUG: bool = Field(default=False)
 
     def add_player(self, player: Player):
         self.players.append(player)
