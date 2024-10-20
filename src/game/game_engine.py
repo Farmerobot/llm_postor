@@ -13,11 +13,13 @@ import random
 from game import consts as game_consts
 from collections import Counter
 from pydantic import BaseModel, Field
+from game.gui_handler import GUIHandler
 
 
 class GameEngine(BaseModel):
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
+    gui_handler: GUIHandler = Field(default_factory=GUIHandler) # Initialize GUIHandler
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
         if len(players) < 3:
@@ -43,7 +45,7 @@ class GameEngine(BaseModel):
             if not available_players:
                 break  # No more players to assign as impostors
             chosen_player = random.choice(available_players)
-            chosen_player.role = PlayerRole.IMPOSTOR
+            chosen_player.set_role(PlayerRole.IMPOSTOR)
             impostors_to_assign -= 1
 
         # Check for imbalanced team sizes AFTER role assignment
@@ -70,6 +72,8 @@ class GameEngine(BaseModel):
 
             chosen_actions = self.get_player_actions()
             someone_reported = self.update_game_state(chosen_actions)
+            
+            self.gui_handler.update_gui(self.state)
 
             if someone_reported and freeze_stage is None:
                 self.discussion_loop()
@@ -98,6 +102,7 @@ class GameEngine(BaseModel):
                     print(f"Player {player} actions: {possible_actions_str}")
                 action_int = player.prompt_action(possible_actions_str)
                 choosen_actions.append(possible_actions[action_int])
+                self.gui_handler.update_gui(self.state) # Update GUI after player action
                 if self.state.DEBUG:
                     print(f"Player {player} choosen action: {choosen_actions[-1]}")
         return choosen_actions

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Dict, List, Optional, Any
-from pydantic import BaseModel, Field, ConfigDict, model_validator, ValidationError
+from pydantic import BaseModel, Field, ConfigDict
 from game.models.engine import (
     GamePhase,
     GameLocation,
@@ -35,18 +35,27 @@ class Player(BaseModel, ABC):
     
     model_config = ConfigDict(validate_assignment=True)
     
-    @model_validator(mode="before")
-    def set_impostor_status(cls, data: Any) -> Any:
-        if "role" in data:
-            if data["role"] == PlayerRole.IMPOSTOR:
-                data["is_impostor"] = True
-                data["kill_cooldown"] = game_consts.IMPOSTOR_COOLDOWN
-                data["state"] = RoundData(tasks=get_impostor_tasks())
-            else:
-                data["is_impostor"] = False
-                data["kill_cooldown"] = 0
-                data["state"] = RoundData(tasks=get_random_tasks())
-        return data
+    def __init__(self, **data: Any):
+        super().__init__(**data)
+        self.set_role(self.role)
+    
+    def set_role(self, role: PlayerRole) -> None:
+        self.role = role
+        if role == PlayerRole.IMPOSTOR:
+            self.is_impostor = True
+            self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
+            self.state = RoundData(tasks=get_impostor_tasks())
+            if self.adventure_agent: self.adventure_agent.role = PlayerRole.IMPOSTOR
+            if self.discussion_agent: self.discussion_agent.role = PlayerRole.IMPOSTOR
+            if self.voting_agent: self.voting_agent.role = PlayerRole.IMPOSTOR
+        else:
+            self.is_impostor = False
+            self.kill_cooldown = 0
+            self.state = RoundData(tasks=get_random_tasks())
+            if self.adventure_agent: self.adventure_agent.role = PlayerRole.CREWMATE
+            if self.discussion_agent: self.discussion_agent.role = PlayerRole.CREWMATE
+            if self.voting_agent: self.voting_agent.role = PlayerRole.CREWMATE
+
 
     def set_stage(self, stage: GamePhase) -> None:
         self.state.stage = stage

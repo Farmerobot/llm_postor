@@ -1,5 +1,4 @@
 import pytest
-from unittest.mock import MagicMock
 from src.game.game_engine import GameEngine
 from src.game.players.base_player import PlayerRole
 from src.game.players.ai import AIPlayer
@@ -23,14 +22,7 @@ def test_load_human_players():
 
 
 # Mocking ChatOpenAI and ChatGoogleGenerativeAI using pytest-mock
-def test_load_ai_players(mocker):
-    # Mock the AI model agents
-    mock_chat_openai = mocker.patch("src.game.players.ai.ChatOpenAI")
-    mock_chat_google_ai = mocker.patch("src.game.players.ai.ChatGoogleGenerativeAI")
-
-    # Set the return value for the mocked API call
-    mock_chat_openai.return_value = MagicMock()
-    mock_chat_google_ai.return_value = MagicMock()
+def test_load_ai_players():
     game_engine = GameEngine()
     player1 = AIPlayer(name="Player 1", llm_model_name="gpt-4o-mini")
     player2 = AIPlayer(name="Player 2", llm_model_name="gpt-4o-mini")

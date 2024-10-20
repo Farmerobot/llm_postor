@@ -22,7 +22,7 @@ class AIPlayer(Player):
                 model=self.llm_model_name,
                 temperature=0.1,
             )
-        role_str = "crewmate" if self.role == PlayerRole.CREWMATE else "impostor"
+        role_str = self.role.value
         self.adventure_agent = AdventureAgent(
             llm=llm, player_name=self.name, role=role_str
         )
