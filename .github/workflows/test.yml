@@ -1,0 +1,43 @@
+name: Run Tests on src Changes
+
+# Trigger the workflow on push, pull request, or manually via workflow_dispatch
+on:
+  push:
+    paths:
+      - 'src/**'     # Trigger on changes in the src directory
+      - 'test/**'   # Trigger on changes in the tests directory
+      - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
+  pull_request:
+    paths:
+      - 'src/**'     # Trigger on changes in the src directory'
+      - 'test/**'   # Trigger on changes in the tests directory
+      - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
+    
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the latest code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      # Install Poetry
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+
+      # Install dependencies via Poetry
+      - name: Install dependencies
+        run: poetry install
+
+      # Run tests using pytest
+      - name: Run Pytest
+        run: poetry run pytest
