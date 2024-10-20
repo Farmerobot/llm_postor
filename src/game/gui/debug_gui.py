@@ -74,7 +74,7 @@ class DebugGUI:
             player_state_label = self.player_tabs.winfo_children()[i].winfo_children()[
                 2
             ]
-            player_state_label.config(text=f"State: {player.state}")
+            player_state_label.config(text=f"State: {player.state.life}")
             # Update player location
             player_location_label = self.player_tabs.winfo_children()[
                 i
@@ -90,15 +90,7 @@ class DebugGUI:
                 7
             ]
             action_history_text.delete("1.0", tk.END)
-            history_str = ""
-            for entry in player.history.get_history():
-                for key, value in entry.observations.items():
-                    if isinstance(value, list):
-                        joined_value = "\n".join(value)
-                        history_str += f"{key}: {joined_value}\n"
-                    else:
-                        history_str += f"{key}: {value}\n"
-                history_str += "\n"
+            history_str = '\n'.join(player.history.get_history_str())
             action_history_text.insert(tk.END, history_str)
             # Update chat history
             chat_history_text = self.player_tabs.winfo_children()[i].winfo_children()[11]
@@ -123,13 +115,8 @@ class DebugGUI:
         # Update AI agent responses in the separate window
         self.agent_responses_text.delete("1.0", tk.END)
         for player in self.game_engine.state.players:
-            for response in player.history.get_history():
-                for key, value in response.observations.items():
-                    if isinstance(value, list):
-                        joined_value = "\n".join(value)
-                        self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {joined_value}\n")
-                    else:
-                        self.agent_responses_text.insert(tk.END, f"{player.name} {key}: {value}\n")
+            for response in player.history.get_history_str():
+                self.agent_responses_text.insert(tk.END, f"{response}\n\n")
 
         self.window.update()
     def run(self):

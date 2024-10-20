@@ -13,8 +13,8 @@ model_name = "gpt-4o-mini"
 impostor = AIPlayer(name="Warcin", llm_model_name=model_name, role=PlayerRole.IMPOSTOR)
 
 players = [
-    AIPlayer(name="Wateusz", llm_model_name=model_name),
-    AIPlayer(name="Waciej", llm_model_name=model_name),
+    # AIPlayer(name="Wateusz", llm_model_name=model_name),
+    # AIPlayer(name="Waciej", llm_model_name=model_name),
     AIPlayer(name="Warek", llm_model_name=model_name),
     AIPlayer(name="Wikolaj", llm_model_name=model_name),
     impostor,

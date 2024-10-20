@@ -38,6 +38,6 @@ class GameState(BaseModel):
             other_player
             for other_player in self.players
             if other_player != player
-            and other_player.state == PlayerState.ALIVE
-            and other_player.location == player.location
+            and other_player.state.life == PlayerState.ALIVE
+            and other_player.state.location == player.state.location
         ]

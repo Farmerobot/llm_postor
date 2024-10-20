@@ -10,7 +10,7 @@ from game.models.game_models import (
 )
 from game.models.player import Player
 from game.models.player_human import HumanPlayer
-from game.models.game_models import GameAction, GameActionType
+from game.models.game_action import GameAction, GameActionType
 from game.utils import get_random_tasks
 from typing import Any, List, Callable, Optional
 import random
@@ -79,6 +79,7 @@ class GameEngine(BaseModel):
 
             chosen_actions = self.get_player_actions()
             someone_reported = self.update_game_state(chosen_actions)
+            self.gui.update_gui()
 
             if someone_reported and freeze_stage is None:
                 self.discussion_loop()
@@ -121,15 +122,15 @@ class GameEngine(BaseModel):
         chosen_actions.sort(key=lambda x: x.type, reverse=True)
         someone_reported = False
         for action in chosen_actions:
-            self.state.playthrough.append(f"[{action.source}]: {action}")
-            if action.source.state.life != PlayerState.DEAD:
-                action.source.kill_cooldown = max(0, action.source.kill_cooldown - 1)
+            self.state.playthrough.append(f"[{action.player}]: {action}")
+            if action.player.state.life != PlayerState.DEAD:
+                action.player.kill_cooldown = max(0, action.player.kill_cooldown - 1)
                 if action.type == GameActionType.REPORT:
                     self.broadcast_history(
-                        "report", f"{action.source} reported a dead body"
+                        "report", f"{action.player} reported a dead body"
                     )
                     reported_players = self.state.get_dead_players_in_location(
-                        action.source.location
+                        action.player.state.location
                     )
                     self.broadcast_history(
                         "dead_players",
@@ -140,24 +141,24 @@ class GameEngine(BaseModel):
                     action.target, Player
                 ):
                     action.target.state.action_result = (
-                        f"You were eliminated by {action.source}"
+                        f"You were eliminated by {action.player}"
                     )
 
-                action.source.state.action_result = action.do_action()
+                action.player.state.action_result = action.do_action()
 
                 # update stories of seen actions and players in room
                 for player in self.state.players:
-                    if player.state != PlayerState.DEAD and player != action.source:
+                    if player.state.life != PlayerState.DEAD and player != action.player:
                         if (
-                            action.location == player.location
-                            or action.location == player.history.rounds[-1].location
+                            action.player.state.location == player.state.location
+                            or action.player.state.location == player.history.rounds[-1].location
                         ):
-                            playthrough_text = f"Player {player} saw action {action.get_spectator_story()} when {player} were in {HUMAN_READABLE_LOCATIONS[action.location]}"
+                            playthrough_text = f"Player {player} saw action {action.spectator} when {player} were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
                             self.state.playthrough.append(playthrough_text)
                             if self.DEBUG:
                                 print(playthrough_text)
                             player.state.seen_actions.append(
-                                f"you saw {action.get_spectator_story()} when you were in {HUMAN_READABLE_LOCATIONS[action.location]}"
+                                f"you saw {action.spectator} when you were in {HUMAN_READABLE_LOCATIONS[action.player.state.location]}"
                             )
 
         # update players in room
@@ -167,10 +168,10 @@ class GameEngine(BaseModel):
                 for other_player in self.state.players
                 if player.state.location == other_player.state.location
                 and player != other_player
-                and other_player.state == PlayerState.ALIVE
+                and other_player.state.life == PlayerState.ALIVE
             ]
 
-            playthrough_text = f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.location]} with {players_in_room}"
+            playthrough_text = f"Player {player} is in {HUMAN_READABLE_LOCATIONS[player.state.location]} with {players_in_room}"
             self.state.playthrough.append(playthrough_text)
             if self.DEBUG:
                 print(playthrough_text)
@@ -187,29 +188,41 @@ class GameEngine(BaseModel):
         actions = []
 
         # actions for WAIT
-        actions.append(GameAction(GameActionType.WAIT, player))
+        actions.append(GameAction(type=GameActionType.WAIT, player=player))
 
         # action for REPORT
-        dead_players_in_room = self.state.get_dead_players_in_location(player.location)
+        dead_players_in_room = self.state.get_dead_players_in_location(player.state.location)
         if dead_players_in_room:
             actions.append(
-                GameAction(GameActionType.REPORT, player, dead_players_in_room)
+                GameAction(
+                    type=GameActionType.REPORT,
+                    player=player,
+                    target=dead_players_in_room,
+                )
             )
 
         # actions for MOVE
-        for location in DOORS[player.location]:
-            actions.append(GameAction(GameActionType.MOVE, player, location))
+        for location in DOORS[player.state.location]:
+            actions.append(
+                GameAction(type=GameActionType.MOVE, player=player, target=location)
+            )
 
         # actions for tasks DO_ACTION
         for task in player.state.tasks:
-            if task.location == player.location and not task.completed:
-                actions.append(GameAction(GameActionType.DO_ACTION, player, task))
+            if task.location == player.state.location and not task.completed:
+                actions.append(
+                    GameAction(
+                        type=GameActionType.DO_ACTION, player=player, target=task
+                    )
+                )
 
         # actions for impostors KILL
         if player.is_impostor and player.kill_cooldown == 0:
             targets = self.state.get_player_targets(player)
             for target in targets:
-                actions.append(GameAction(GameActionType.KILL, player, target))
+                actions.append(
+                    GameAction(type=GameActionType.KILL, player=player, target=target)
+                )
 
         return actions
 
@@ -223,7 +236,7 @@ class GameEngine(BaseModel):
         discussion_log: list[str] = []
         for round in range(game_consts.NUM_CHATS):
             for player in self.state.players:
-                if player.state == PlayerState.ALIVE:
+                if player.state.life == PlayerState.ALIVE:
                     player.state.observations.append(
                         f"Discussion: [System]: You have {game_consts.NUM_CHATS - round} rounds left to discuss, then you will vote"
                     )
@@ -231,6 +244,7 @@ class GameEngine(BaseModel):
                     answer_str = f"Discussion: [{player}]: {answer}"
                     discussion_log.append(answer_str)
                     self.broadcast_message(answer_str)
+                    self.gui.update_gui()
             self.state.playthrough.append(f"Discussion log:")
             self.state.playthrough.append("\n".join(discussion_log))
             if self.DEBUG:
@@ -239,7 +253,7 @@ class GameEngine(BaseModel):
 
     def go_to_voting(self) -> None:
         dead_players = [
-            player for player in self.state.players if player.state == PlayerState.DEAD
+            player for player in self.state.players if player.state.life == PlayerState.DEAD
         ]
         votes = {}
         for player in self.state.players:
@@ -252,13 +266,13 @@ class GameEngine(BaseModel):
                 "Voting phase has started. You can vote who to banish"
             )
 
-            if player.state == PlayerState.ALIVE:
+            if player.state.life == PlayerState.ALIVE:
                 action = player.prompt_vote(possible_voting_actions_str)
                 votes[player] = possible_actions[action].target
                 player.state.observations.append(
                     f"You voted for {possible_actions[action].target}"
                 )
-                player.location = GameLocation.LOC_CAFETERIA
+                player.state.location = GameLocation.LOC_CAFETERIA
                 playthrough_text = (
                     f"{player} voted for {possible_actions[action].target}"
                 )
@@ -296,10 +310,16 @@ class GameEngine(BaseModel):
 
     def get_vote_actions(self, player: Player) -> list[GameAction]:
         actions = []
-        actions.append(GameAction(GameActionType.VOTE, player, self.nobody))
+        actions.append(
+            GameAction(type=GameActionType.VOTE, player=player, target=self.nobody)
+        )
         for other_player in self.state.players:
-            if other_player != player and other_player.state == PlayerState.ALIVE:
-                actions.append(GameAction(GameActionType.VOTE, player, other_player))
+            if other_player != player and other_player.state.life == PlayerState.ALIVE:
+                actions.append(
+                    GameAction(
+                        type=GameActionType.VOTE, player=player, target=other_player
+                    )
+                )
         return actions
 
     def broadcast(self, key: str, message: str) -> None:
@@ -314,8 +334,8 @@ class GameEngine(BaseModel):
 
     def remove_dead_players(self) -> None:
         for player in self.state.players:
-            if player.state == PlayerState.DEAD:
-                player.state = PlayerState.DEAD_REPORTED
+            if player.state.life == PlayerState.DEAD:
+                player.state.life = PlayerState.DEAD_REPORTED
 
     def check_impostors_win(self) -> bool:
         crewmates_alive = [
@@ -348,7 +368,7 @@ class GameEngine(BaseModel):
         ]
         turns_passed = max(len(player.history) for player in crewmates_alive)
         completed_tasks = [
-            task.completed for player in crewmates_alive for task in player.tasks
+            task.completed for player in crewmates_alive for task in player.state.tasks
         ]
 
         if turns_passed >= 100:

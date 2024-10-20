@@ -18,7 +18,7 @@ class RoundData(BaseModel):
     observations: List[str] = Field(default_factory=list)
     
 class PlayerHistory(BaseModel):
-    rounds: List[RoundData] = Field(default_factory=list)
+    rounds: List[RoundData] = Field(default_factory=lambda: [RoundData(location=GameLocation.LOC_CAFETERIA, stage=GamePhase.MAIN_MENU, life=PlayerState.ALIVE)])
 
     def add_round(self, round_data: RoundData):
         self.rounds.append(round_data)
