@@ -24,8 +24,8 @@ def test_load_human_players():
 # Mocking ChatOpenAI and ChatGoogleGenerativeAI using pytest-mock
 def test_load_ai_players(mocker):
     # Mock the AI model agents
-    mock_chat_openai = mocker.patch("src.game.models.player.ChatOpenAI")
-    mock_chat_google_ai = mocker.patch("src.game.models.player.ChatGoogleGenerativeAI")
+    mock_chat_openai = mocker.patch("src.game.models.player_ai.ChatOpenAI")
+    mock_chat_google_ai = mocker.patch("src.game.models.player_ai.ChatGoogleGenerativeAI")
 
     # Set the return value for the mocked API call
     mock_chat_openai.return_value = MagicMock()
