@@ -41,7 +41,7 @@ class AIPlayer(Player):
         )
         prompts, chosen_action = self.adventure_agent.act()
         self.state.llm_responses = self.adventure_agent.responses
-        self.state.response = chosen_action
+        self.state.response = str(chosen_action)
         self.state.prompt = prompts
         return chosen_action
 
@@ -62,6 +62,6 @@ class AIPlayer(Player):
         )
         vote_prompt, vote = self.voting_agent.choose_action(self.get_message_str())
         self.state.llm_responses = self.voting_agent.responses
-        self.state.response = vote
+        self.state.response = str(vote)
         self.state.prompt = vote_prompt
         return vote

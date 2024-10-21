@@ -1,3 +1,4 @@
+import time
 from game.game_state import GameState
 from game.models.engine import (
     GamePhase,
@@ -69,6 +70,8 @@ class GameEngine(BaseModel):
         print("Game started!")
         while not check_game_over():
             print(f"Game stage: {self.state.game_stage}")
+            if self.state.DEBUG:
+                time.sleep(0.5)
 
             chosen_actions = self.get_player_actions()
             someone_reported = self.update_game_state(chosen_actions)

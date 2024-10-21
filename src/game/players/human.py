@@ -22,7 +22,7 @@ class HumanPlayer(Player):
             try:
                 choosen_action = int(input("Choose action (enter the number): "))
                 if 0 <= choosen_action < len(actions):
-                    self.state.response = actions[choosen_action]
+                    self.state.response = str(choosen_action)
                     return choosen_action
                 else:
                     print(f"Please enter a number between 0 and {len(actions) - 1}")
@@ -48,7 +48,7 @@ class HumanPlayer(Player):
         self.state.actions = voting_actions
         answer = input("Choose player to banish: ")
         if answer.isdigit():
-            self.state.response = voting_actions[int(answer)]
+            self.state.response = str(answer)
             return int(answer)
         else:
             return self.prompt_vote(voting_actions)

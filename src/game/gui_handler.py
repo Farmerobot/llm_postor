@@ -86,7 +86,10 @@ class GUIHandler(BaseModel):
         
     def _display_action_taken(self, player: Player):
         action = player.history.rounds[-1].response
-        st.write(f"Action Taken: {player.history.rounds[-1].actions[action]}")
+        if action.isdigit():
+            st.write(f"Action Taken: {player.history.rounds[-1].actions[int(action)]}")
+        else:
+            st.write(f"Action Taken: {action}")
         
     def _display_action_result(self, player: Player):
         st.write(f"Action Result: {player.history.rounds[-1].action_result}")
