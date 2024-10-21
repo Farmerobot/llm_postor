@@ -102,7 +102,6 @@ class GameEngine(BaseModel):
                     print(f"Player {player} actions: {possible_actions_str}")
                 action_int = player.prompt_action(possible_actions_str)
                 choosen_actions.append(possible_actions[action_int])
-                self.gui_handler.update_gui(self.state) # Update GUI after player action
                 if self.state.DEBUG:
                     print(f"Player {player} choosen action: {choosen_actions[-1]}")
         return choosen_actions
@@ -160,6 +159,10 @@ class GameEngine(BaseModel):
                                 f"you saw {action.spectator} when you were in {action.player.state.location.value}"
                             )
 
+        for player in self.state.players:
+            # update player history
+            player.log_state_new_round()
+            
         # update players in room
         for player in self.state.players:
             players_in_room = [
@@ -179,8 +182,6 @@ class GameEngine(BaseModel):
             else:
                 player.state.player_in_room = "You are alone in the room"
 
-            # update player history
-            player.log_state_new_round()
         return someone_reported
 
     def get_actions(self, player: Player) -> list[GameAction]:
@@ -344,6 +345,13 @@ class GameEngine(BaseModel):
             p for p in self.state.get_alive_players() if not p.is_impostor
         ]
         impostors_alive = [p for p in self.state.get_alive_players() if p.is_impostor]
+        if len(impostors_alive) >= len(crewmates_alive):
+            self.state.log_action(
+                f"Impostors win! Impostors: {impostors_alive}, Crewmates: {crewmates_alive}"
+            )
+            for impostor in impostors_alive:
+                impostor.state.tasks[0].complete(location=GameLocation.LOC_UNKNOWN)
+            return True
         return len(impostors_alive) >= len(crewmates_alive)
 
     def check_crewmates_win(self) -> bool:

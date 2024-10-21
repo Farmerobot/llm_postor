@@ -68,8 +68,9 @@ class Player(BaseModel, ABC):
     def log_state_new_round(self) -> None:
         # Create a deep copy of the state before adding it to the history
         state_copy = copy.deepcopy(self.state)
+        print(f"Logging state: {state_copy}")
         self.history.add_round(state_copy)
-        self.state.tasks = [task for task in self.state.tasks if not task.completed]
+        # self.state.tasks = [task for task in self.state.tasks if not task.completed]
         self.state.llm_responses = []
         self.state.prompt = ""
         self.state.actions = []
