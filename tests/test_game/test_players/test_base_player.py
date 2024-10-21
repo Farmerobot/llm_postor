@@ -28,11 +28,9 @@ def test_role_assignment():
     assert player2.state.tasks == get_impostor_tasks()
 
 
-def test_ai_role_assignment():
-    player = AIPlayer(
-        name="Test Player", llm_model_name="gpt-4o-mini", role=PlayerRole.IMPOSTOR
-    )
-    player2 = AIPlayer(name="Test Player 2", llm_model_name="gpt-4o-mini")
+def test_ai_role_assignment(ai_players):
+    player = ai_players[0]
+    player2 = ai_players[1]
     player2.set_role(PlayerRole.IMPOSTOR)
     assert player.is_impostor is True
     assert player2.is_impostor is True

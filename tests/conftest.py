@@ -1,36 +1,20 @@
 from unittest.mock import MagicMock
-from unittest import mock as mocker
 
-def pytest_configure(config):
-    """
-    Allows plugins and conftest files to perform initial configuration.
-    This hook is called for every plugin and initial conftest
-    file after command line options have been parsed.
-    """
-    # Mock the AI model agents
-    mock_chat_openai = mocker.patch("src.game.players.ai.ChatOpenAI")
-    mock_chat_google_ai = mocker.patch("src.game.players.ai.ChatGoogleGenerativeAI")
+import pytest
+from src.game.players.ai import AIPlayer
+from src.game.players.base_player import PlayerRole
 
-    # Set the return value for the mocked API call
-    mock_chat_openai.return_value = MagicMock()
-    mock_chat_google_ai.return_value = MagicMock()
+@pytest.fixture
+def mocked_chat_openai(mocker):
+    mocker.patch("src.game.players.ai.ChatOpenAI", return_value=MagicMock())
 
+@pytest.fixture
+def mocked_chat_google_generative_ai(mocker):
+    mocker.patch("src.game.players.ai.ChatGoogleGenerativeAI", return_value=MagicMock())
 
-def pytest_sessionstart(session):
-    """
-    Called after the Session object has been created and
-    before performing collection and entering the run test loop.
-    """
-    
-
-def pytest_sessionfinish(session, exitstatus):
-    """
-    Called after whole test run finished, right before
-    returning the exit status to the system.
-    """
-    
-
-def pytest_unconfigure(config):
-    """
-    called before test process is exited.
-    """
+@pytest.fixture
+def ai_players(mocked_chat_openai, mocked_chat_google_generative_ai):
+    player1 = AIPlayer(name="Player 1", llm_model_name="gpt-4o-mini", role=PlayerRole.IMPOSTOR)
+    player2 = AIPlayer(name="Player 2", llm_model_name="gpt-4o-mini")
+    player3 = AIPlayer(name="Player 3", llm_model_name="gpt-4o-mini")
+    return [player1, player2, player3]

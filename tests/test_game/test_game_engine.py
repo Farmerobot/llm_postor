@@ -21,15 +21,10 @@ def test_load_human_players():
     assert isinstance(game_engine.state.players[2], HumanPlayer)
 
 
-# Mocking ChatOpenAI and ChatGoogleGenerativeAI using pytest-mock
-def test_load_ai_players():
+def test_load_ai_players(ai_players):
     game_engine = GameEngine()
-    player1 = AIPlayer(name="Player 1", llm_model_name="gpt-4o-mini")
-    player2 = AIPlayer(name="Player 2", llm_model_name="gpt-4o-mini")
-    player3 = AIPlayer(name="Player 3", llm_model_name="gpt-4o-mini")
-
     # Loading the AI players
-    game_engine.load_players([player1, player2, player3], impostor_count=1)
+    game_engine.load_players(ai_players, impostor_count=1)
 
     # Assertions
     assert len(game_engine.state.players) == 3
