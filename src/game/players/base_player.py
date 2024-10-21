@@ -13,7 +13,7 @@ from game.models.history import PlayerHistory, RoundData
 from game.agents.adventure_agent import AdventureAgent
 from game.agents.discussion_agent import DiscussionAgent
 from game.agents.voting_agent import VotingAgent
-
+import copy
 
 class PlayerRole(str, Enum):
     CREWMATE = "Crewmate"
@@ -66,7 +66,9 @@ class Player(BaseModel, ABC):
         return [task for task in self.state.tasks if not task.completed]
 
     def log_state_new_round(self) -> None:
-        self.history.add_round(self.state)
+        # Create a deep copy of the state before adding it to the history
+        state_copy = copy.deepcopy(self.state)
+        self.history.add_round(state_copy)
         self.state.tasks = [task for task in self.state.tasks if not task.completed]
         self.state.llm_responses = []
         self.state.prompt = ""

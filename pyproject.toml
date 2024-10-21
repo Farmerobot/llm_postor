@@ -30,7 +30,7 @@ pytest = "^8.3.3"
 
 [tool.pytest.ini_options]                                                                                                                                     
 pythonpath = ["src"]
-testpaths = ["test"]
+testpaths = ["tests"]
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.4"
