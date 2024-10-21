@@ -43,16 +43,14 @@ class GUIHandler(BaseModel):
         for i, (player, sidebar) in enumerate(zip(game_state.players, self.sidebar)):
             with sidebar:
                 self._display_short_player_info(player, st)
-        
-        self.game_log_placeholder.text("\n".join(game_state.playthrough))
+        with self.game_log_placeholder.container(height=500):
+            st.text("\n".join(game_state.playthrough))
         self.game_log_json.json(game_state.to_dict(), expanded=True)
         
     def _display_short_player_info(self, player: Player, placeholder: DeltaGenerator):
         with placeholder.container(border=True): 
-            st.subheader(player.name)
-            self._display_status(player)
-            self._display_role(player)
-            self._display_tasks(player)
+            self._display_name_role_status(player)
+            self._display_tasks_progress(player)
         
 
     def _display_player_info(self, player: Player, placeholder: DeltaGenerator):
@@ -60,6 +58,7 @@ class GUIHandler(BaseModel):
             st.subheader(player.name)
             self._display_status(player)
             self._display_role(player)
+            self._display_tasks_progress(player)
             self._display_tasks(player)
             self._display_location(player)
             self._display_action_taken(player)
@@ -67,19 +66,33 @@ class GUIHandler(BaseModel):
             self._display_recent_actions(player)
 
 
+    def _display_name_role_status(self, player: Player):
+        status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
+        role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
+        complete_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
+        st.write(f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon}")
+
     def _display_status(self, player: Player):
         status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
         st.write(f"Status: {status_icon} {player.state.life.value}")
 
     def _display_role(self, player: PlayerRole):
-        role_icon = "🕵️‍♂️" if player.role == PlayerRole.IMPOSTOR else "👨‍🚀"
+        role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
         st.write(f"Role: {role_icon} {player.role.value}")
 
-    def _display_tasks(self, player: Player):
+    def _display_tasks_progress(self, player: Player):
         completed_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
         total_tasks = len(player.state.tasks)
         st.progress(completed_tasks / total_tasks if total_tasks > 0 else 0) #Handle division by zero
+        
+    def _display_tasks(self, player: Player):
+        completed_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
+        total_tasks = len(player.state.tasks)
         st.write(f"Tasks: {completed_tasks}/{total_tasks}")
+        st.write("Tasks:")
+        for task in player.state.tasks:
+            st.write(f"- {task}")
+        
 
     def _display_location(self, player: Player):
         st.write(f"Location: {player.state.location.value} {player.state.player_in_room}")
