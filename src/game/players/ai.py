@@ -14,6 +14,9 @@ class AIPlayer(Player):
 
     def __init__(self, **data):
         super().__init__(**data)  # Initialize Player fields first
+        self.init_agents()
+        
+    def init_agents(self):
         llm = None
         if self.llm_model_name.startswith("gpt"):
             llm = ChatOpenAI(model=self.llm_model_name, temperature=0.1)

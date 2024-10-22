@@ -22,6 +22,7 @@ import json
 from game.players.ai import AIPlayer
 from game.players.fake_ai import FakeAIPlayer
 from game.models.tasks import ShortTask, LongTask, Task
+from game.agents.base_agent import Agent
 
 
 class GameEngine(BaseModel):
@@ -410,7 +411,15 @@ class GameEngine(BaseModel):
 
     def save_state(self) -> None:
         with open(game_consts.STATE_FILE, "w") as f:
-            json.dump(self.state.model_dump(), f)
+            for player in self.state.players:
+                if isinstance(player, AIPlayer):
+                    player.adventure_agent = None
+                    player.discussion_agent = None
+                    player.voting_agent = None
+            json.dump(self.state.model_dump(exclude={"adventure_agent", "discussion_agent", "voting_agent"}), f)
+            for player in self.state.players:
+                if isinstance(player, AIPlayer):
+                    player.init_agents()
             # yaml.dump(self.state.model_dump(), f)
 
     def load_state(self) -> None:
@@ -423,7 +432,6 @@ class GameEngine(BaseModel):
                     for player_data in data["players"]
                 ]
                 data["players"] = players
-                print(data["players"][1].state.tasks[0])
                 self.state = GameState.model_validate(
                     {**data}
                 )  # Update GameState with deserialized players
