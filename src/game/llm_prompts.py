@@ -130,3 +130,66 @@ Respond with exactly one option from the provided list.
 
 Your vote:
 """
+
+ANNOTATION_TEMPLATE = """
+**Instructions:**
+
+You are an AI assistant tasked with annotating persuasive techniques used in a game called "Among Us."  Players in this game are either crewmates or impostors. Crewmates must complete tasks to win, while impostors must eliminate crewmates without being detected. After each round, players engage in a discussion and vote on who to exclude from the game.
+
+Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used. Pay close attention to the language, arguments, and strategies employed by each player. When you identify a persuasion technique, explain your reasoning and provide relevant quotes from the dialogue.
+
+**Example:**
+
+[Warek]: I was in the cafeteria the whole time, I saw nobody go in or out.
+[Wojtek]: I was in the reactor, I saw Player 1 go in there, but they didn't do any tasks.
+[Wafał]: I think Player 1 is lying, they're trying to make an alibi.
+
+**Annotation:**
+
+annotated_text(
+    "[Warek]: "
+    ("I was in the cafeteria", "Alibi Construction"),
+    " the whole time, I saw nobody go in or out.",
+    "[Wojtek]: I was in the reactor, ",
+    ("I saw Player 1", "Accusation and Finger-Pointing"),
+    " go in there, but they didn't do any tasks.",
+    "[Wafał]: I think ",
+    ("Player 1 is lying", "Information Manipulation"),
+    ", they're trying to make an alibi."
+)
+
+
+**Format:**
+
+Please annotate the dialogue using the following format:
+
+annotated_text(
+    "normal text",
+    ("annotated text", "annotation"),
+    "normal text",
+    ("annotated text", "annotation")
+)
+
+**Persuasion Techniques:**
+
+* **Alibi Construction:** Players provide detailed accounts of their actions to appear innocent.
+* **Accusation and Finger-Pointing:** Directly accusing others to deflect suspicion from oneself.
+* **Information Manipulation:** Selectively sharing or withholding information to shape others' perceptions.
+* **Coalition Building:** Forming alliances with other players for mutual support.
+* **Emotional Appeal:** Using emotional language to gain sympathy or trust.
+* **Logical Deduction:** Presenting seemingly logical arguments to prove innocence or guilt.
+* **Scapegoating:** Rallying others against a single player to divert attention.
+* **Behavior Analysis:** Commenting on others' behavior to cast suspicion or affirm innocence.
+* **Role-Claiming:** Asserting a specific role or ability to gain credibility.
+* **Reverse Psychology:** Encouraging suspicion towards oneself to appear innocent.
+* **Time Pressure:** Using the urgency of the situation to push for quick decisions.
+* **Confidence Display:** Showing extreme confidence to mask lies or uncertainty.
+
+**Dialogue:**
+
+{dialogue}
+
+**Annotations:**
+
+[Provide your annotations here, following the format above]
+"""

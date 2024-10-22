@@ -4,6 +4,7 @@ from game.game_state import GameState
 from pydantic import BaseModel, Field
 from game.players.base_player import Player, PlayerRole
 from streamlit.delta_generator import DeltaGenerator
+from annotated_text import annotated_text
 
 from game.models.history import PlayerState
 
@@ -36,21 +37,96 @@ class GUIHandler(BaseModel):
 
     def update_gui(self, game_state: GameState):
         self.init_gui(game_state)
-        for i, (player, col) in enumerate(zip(game_state.players, self.cols)):
-            with col:
-                self._display_player_info(player, self.player_states_placeholders[i])
+        # for i, (player, col) in enumerate(zip(game_state.players, self.cols)):
+        #     with col:
+        #         self._display_player_info(player, self.player_states_placeholders[i])
                 
         for i, (player, sidebar) in enumerate(zip(game_state.players, self.sidebar)):
             with sidebar:
                 self._display_short_player_info(player, st)
         with self.game_log_placeholder.container(height=500):
-            st.text("\n".join(game_state.playthrough))
-        self.game_log_json.json(game_state.to_dict(), expanded=True)
+            # st.text("\n".join(game_state.playthrough))
+            annotated_text(
+    "[Warek]: I agree that ",
+    ("Wateusz's consistent activity in the Cafeteria raises suspicion", "Behavior Analysis"),
+    ", while ",
+    ("Waciej and Wafał's movement to Medbay should be monitored closely", "Behavior Analysis"),
+    ".",
+    "[Wojtek]: I saw ",
+    ("Wafał eliminate Waciej in Medbay", "Accusation and Finger-Pointing"),
+    ", which clearly makes him the impostor we need to vote out.",
+    "[Wafał]: I was in Medbay with both Waciej and Wojtek, and I can confirm ",
+    ("I did not eliminate anyone", "Alibi Construction"),
+    "; we should focus on ",
+    ("Wateusz's suspicious activity instead", "Scapegoating"),
+    ".",
+    "[Wateusz]: I was in the Cafeteria completing tasks and can confirm ",
+    ("I did not eliminate Waciej", "Alibi Construction"),
+    "; we should focus on verifying ",
+    ("Wojtek's claim against Wafał", "Information Manipulation"),
+    ".",
+    "[Warek]: I suggest we closely examine ",
+    ("Wojtek's claim against Wafał", "Information Manipulation"),
+    " and gather more details about ",
+    ("Wateusz's activities in the Cafeteria", "Behavior Analysis"),
+    " before making any decisions.",
+    "[Wojtek]: I stand by my claim that ",
+    ("Wafał is the impostor for eliminating Waciej", "Accusation and Finger-Pointing"),
+    ", and we need to vote him out immediately.",
+    "[Wafał]: I was in Medbay with both Waciej and Wojtek, and I did not eliminate anyone; let's focus on ",
+    ("Wateusz's suspicious activities in the Cafeteria instead", "Scapegoating"),
+    ".",
+    "[Wateusz]: I was in the Cafeteria completing tasks and did not eliminate Waciej; we need to clarify ",
+    ("Wojtek's claim about Wafał before voting", "Information Manipulation"),
+    ".",
+    "[Warek]: I believe we should focus on verifying ",
+    ("Wojtek's claim about Wafał", "Information Manipulation"),
+    " before making any voting decisions.",
+    "[Wojtek]: I urge everyone to vote out ",
+    ("Wafał immediately based on my eyewitness account", "Confidence Display"),
+    " of him eliminating Waciej in Medbay.",
+    "[Wafał]: I was in Medbay with both Waciej and Wojtek, and I did not eliminate anyone; we should focus on verifying ",
+    ("Wateusz's suspicious activities instead", "Scapegoating"),
+    ".",
+    "[Wateusz]: I agree that we need to verify ",
+    ("Wojtek's claim about Wafał before making any voting decisions", "Information Manipulation"),
+    ".",
+    "[Warek]: I propose we ask ",
+    ("Wojtek for specific details about the elimination", "Information Manipulation"),
+    " before making any voting decisions.",
+    "[Wojtek]: I stand by my eyewitness account of ",
+    ("Wafał eliminating Waciej", "Accusation and Finger-Pointing"),
+    " and urge everyone to vote him out immediately.",
+    "[Wafał]: I was in Medbay with Waciej and Wojtek, and I didn't eliminate anyone; we should focus on verifying ",
+    ("Wateusz's tasks instead", "Scapegoating"),
+    ".",
+    "[Wateusz]: I agree we need to clarify ",
+    ("Wojtek's claim about Wafał before making any voting decisions", "Information Manipulation"),
+    ".",
+    "[Warek]: ",
+    ("Wojtek, please provide specific details about the elimination you witnessed", "Information Manipulation"),
+    " to clarify your claim against Wafał.",
+    "[Wojtek]: I clearly saw ",
+    ("Wafał eliminate Waciej in Medbay", "Accusation and Finger-Pointing"),
+    ", and we need to vote him out immediately.",
+    "[Wafał]: I agree with investigating ",
+    ("Wateusz further", "Scapegoating"),
+    ", but let's also press ",
+    ("Wojtek for details on his accusation against me", "Information Manipulation"),
+    " to clarify the situation."
+)
+        self.game_log_json.json(game_state.to_dict())
         
     def _display_short_player_info(self, player: Player, placeholder: DeltaGenerator):
         with placeholder.container(border=True): 
             self._display_name_role_status(player)
             self._display_tasks_progress(player)
+            with st.expander("Info"):
+                self._display_location(player)
+                self._display_action_taken(player)
+                self._display_action_result(player)
+                self._display_recent_actions(player)
+                self._display_tasks(player)
         
 
     def _display_player_info(self, player: Player, placeholder: DeltaGenerator):
@@ -59,11 +135,11 @@ class GUIHandler(BaseModel):
             self._display_status(player)
             self._display_role(player)
             self._display_tasks_progress(player)
-            self._display_tasks(player)
             self._display_location(player)
             self._display_action_taken(player)
             self._display_action_result(player)
             self._display_recent_actions(player)
+            self._display_tasks(player)
 
 
     def _display_name_role_status(self, player: Player):

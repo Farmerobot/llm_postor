@@ -27,6 +27,7 @@ langchain-openai = "^0.2.2"
 langchain-google-genai = "^2.0.1"
 streamlit = "^1.39.0"
 pytest = "^8.3.3"
+st-annotated-text = "^4.0.1"
 
 [tool.pytest.ini_options]                                                                                                                                     
 pythonpath = ["src"]
