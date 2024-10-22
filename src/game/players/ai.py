@@ -65,3 +65,9 @@ class AIPlayer(Player):
         self.state.response = str(vote)
         self.state.prompt = vote_prompt
         return vote
+
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return self.name

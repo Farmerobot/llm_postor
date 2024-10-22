@@ -6,7 +6,7 @@ from game.consts import IMPOSTOR_COOLDOWN
 from game.models.engine import GameLocation
 from game.models.history import PlayerState
 from game.models.tasks import Task
-from game.players.base_player import Player
+from game.players.base_player import Player, PlayerRole
 
 
 class GameActionType(IntEnum):
@@ -51,7 +51,7 @@ class GameAction(BaseModel):
         elif self.type == GameActionType.DO_ACTION:
             self.text = f"complete task: {self.target.name if isinstance(self.target, Task) else self.target}"
             self.result = f"You [{self.player}] {self.target}"
-            self.spectator = f"{self.player} doing task"
+            self.spectator = f"{self.player} doing task {self.target.name if isinstance(self.target, Task) else self.target}"
         elif self.type == GameActionType.REPORT:
             self.text = f"report dead body of {str(self.target)}"
             self.result = f"You [{self.player}] reported {str(self.target)}"
@@ -67,6 +67,8 @@ class GameAction(BaseModel):
         return self
 
     def do_action(self):
+        if self.player.role == PlayerRole.IMPOSTOR:
+            self.player.kill_cooldown = max(0, self.player.kill_cooldown - 1)
         if self.type == GameActionType.REPORT or self.type == GameActionType.WAIT:
             pass
         if self.type == GameActionType.MOVE:
@@ -76,10 +78,14 @@ class GameAction(BaseModel):
         if self.type == GameActionType.KILL:
             self.target.state.life = PlayerState.DEAD
             self.player.kill_cooldown = IMPOSTOR_COOLDOWN
+            assert isinstance(self.target, Player)
+            self.target.state.action_result = (
+                f"You were eliminated by {self.player}"
+            )
         return self.result
 
     def __str__(self):
-        return f"{self.type} | {self.target}"
+        return f"{self.spectator}"
 
     def __repr__(self):
-        return f"{self.type} | {self.target}"
+        return f"{self.spectator}"

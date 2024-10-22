@@ -1,10 +1,14 @@
 import random
 from typing import List
 
+from pydantic import Field
+
 from game.players.base_player import Player, PlayerRole
 
 
 class FakeAIPlayer(Player):
+    llm_model_name: str
+    
     def prompt_action(self, actions: List[str]) -> int:
         random_action = random.randint(0, len(actions) - 1)
         self.state.actions = actions
@@ -29,3 +33,9 @@ class FakeAIPlayer(Player):
         self.state.llm_responses = ["This is a placeholder LLM response."]
         self.state.observations = ["This is a placeholder observation."]
         return random_player
+
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return self.name

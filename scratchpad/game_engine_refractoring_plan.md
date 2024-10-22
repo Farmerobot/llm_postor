@@ -15,13 +15,12 @@
 **Phase 2: Continue Game Functionality**
 
 1. **Modify `enter_main_game_loop`:**
-   - Add a parameter `continue_from_state` to `enter_main_game_loop`.
-   - If `continue_from_state` is provided, call `load_state` to load the game state from the specified file.
-   - If `continue_from_state` is not provided, start a new game as usual.
+   - Remove the `continue_from_state` parameter as it's always assumed the game will load from a state.
+   - Directly call `load_state` at the beginning of the function to load the game state from the predefined file.
 
 2. **Update Game Loop:**
-   - Modify the game loop to use the loaded `round_number` and `current_player_index` if a state was loaded.
-   - Ensure that the game loop continues from the correct round and player's turn.
+   - Use the loaded `round_number` and `current_player_index` to control the game loop.
+   - Instead of starting from `round_number = 0`, use the loaded `round_number` as the starting point.
    - Use `current_player_index` to determine which player should act next.
    - After each player's turn, increment `current_player_index` and wrap around to 0 if it reaches the end of the player list.
 
@@ -36,35 +35,6 @@
    - Provide a mechanism for users to select a saved state and continue playing from that point.
    - Display the current round number and the player whose turn it is in the GUI.
 
-**Example Code Snippets:**
-
-```python
-# src/game/game_engine.py
-
-class GameEngine(BaseModel):
-    # ... other attributes ...
-    round_number: int = 0
-    current_player_index: int = 0
-
-    def save_state(self, filename: str) -> None:
-        with open(filename, "w") as f:
-            json.dump(self.dict(), f)
-
-    def load_state(self, filename: str) -> None:
-        with open(filename, "r") as f:
-            data = json.load(f)
-            self.__dict__.update(data)
-
-    def enter_main_game_loop(self, continue_from_state: Optional[str] = None) -> None:
-        if continue_from_state:
-            self.load_state(continue_from_state)
-        # ... rest of the game loop ...
-        self.round_number += 1
-        current_player = self.state.players[self.current_player_index]
-        # ... get actions from current_player ...
-        self.current_player_index = (self.current_player_index + 1) % len(self.state.players)
-        # ... rest of the game loop ...
-```
 
 **Additional Considerations:**
 

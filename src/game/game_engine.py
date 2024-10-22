@@ -1,4 +1,6 @@
 import time
+
+import yaml
 from game.game_state import GameState
 from game.models.engine import (
     GamePhase,
@@ -17,11 +19,15 @@ from pydantic import BaseModel, Field
 from game.gui_handler import GUIHandler
 import json
 
+from game.players.ai import AIPlayer
+from game.players.fake_ai import FakeAIPlayer
+from game.models.tasks import ShortTask, LongTask, Task
+
 
 class GameEngine(BaseModel):
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
-    gui_handler: GUIHandler = Field(default_factory=GUIHandler) # Initialize GUIHandler
+    gui_handler: GUIHandler = Field(default_factory=GUIHandler)  # Initialize GUIHandler
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
         if len(players) < 3:
@@ -57,116 +63,124 @@ class GameEngine(BaseModel):
                 "Number of impostors cannot be greater than or equal to the number of crewmates."
             )
 
-    def init_game(self) -> None:
+    def init_game(self, game_state: GameState) -> None:
         self.state.set_stage(GamePhase.ACTION_PHASE)
 
-    def enter_main_game_loop(self, continue_from_state: Optional[str] = None) -> None:
+    def init_game(self) -> None:
+        self.state.set_stage(GamePhase.ACTION_PHASE)
+        self.load_state()
+
+    def perform_step(self) -> bool:
         """
-        Main game loop that controls the flow of the game.
+        This is the beginning of player turn. player state is already copied to history, cleared and can be freely modified
 
-        :param continue_from_state: If set, the game will load the state from the specified file.
+        :return: True if the game is over, False otherwise
         """
-        check_game_over = self.set_game_stage(continue_from_state)
-
-        print("Game started!")
-        while not check_game_over():
-            print(f"Game stage: {self.state.game_stage}")
-            if self.state.DEBUG:
-                time.sleep(0.5)
-
-            chosen_actions = self.get_player_actions()
-            someone_reported = self.update_game_state(chosen_actions)
-            
-            self.gui_handler.update_gui(self.state)
-
-            if someone_reported and continue_from_state is None:
-                self.discussion_loop()
-                self.go_to_voting()
-
-        # END OF GAME
-        if continue_from_state is None:
-            print("Game Over!")
+        print(
+            f"Round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}"
+        )
+        if self.state.game_stage == GamePhase.ACTION_PHASE:
+            self.perform_action_step()
+        elif self.state.game_stage == GamePhase.DISCUSS:
+            self.perform_discussion_step()
+        else:
+            raise ValueError("Probably main game stage. Init game first")
+        if self.check_game_over():
             self.end_game()
+            return True
+        self.state.player_to_act_next += 1
+            
+        if self.state.player_to_act_next == len(self.state.players):
+            self.state.player_to_act_next = 0
+            self.state.round_number += 1
+            for player in self.state.players:
+                player.log_state_new_round()
+            if (
+                self.state.round_of_discussion_start + game_consts.NUM_CHATS
+                <= self.state.round_number
+                and self.state.game_stage == GamePhase.DISCUSS
+            ):
+                self.go_to_voting()
+        while (
+            self.state.players[self.state.player_to_act_next].state.life
+            == PlayerState.DEAD
+        ):
+            self.state.player_to_act_next = (self.state.player_to_act_next + 1) % len(
+                self.state.players
+            )
+            print(f"Player to act next set to: {self.state.player_to_act_next}")
+            if self.state.player_to_act_next == 0:
+                self.state.round_number += 1
+                for player in self.state.players:
+                    # update player history
+                    player.log_state_new_round()
+                if (
+                    self.state.round_of_discussion_start + game_consts.NUM_CHATS
+                    <= self.state.round_number
+                    and self.state.game_stage == GamePhase.DISCUSS
+                ):
+                    self.go_to_voting()
+        self.save_state()
+        return False
 
-    def set_game_stage(self, continue_from_state: Optional[str]) -> Callable[[], bool]:
-        """Set the game stage and return the appropriate game over check function."""
-        if continue_from_state:
-            self.load_state(continue_from_state)
-            return self.check_game_over_action_crewmate
-        return self.check_game_over
+    def perform_action_step(self) -> None:
+        chosen_action = self.get_player_action()
+        self.update_game_state(chosen_action)
 
-    def get_player_actions(self) -> list[GameAction]:
+    def get_player_action(self) -> GameAction:
         """Get actions from all alive players."""
-        choosen_actions: list[GameAction] = []
-        for player in self.state.players:
-            if player.state.life == PlayerState.ALIVE:
-                possible_actions = self.get_actions(player)
-                possible_actions_str = [action.text for action in possible_actions]
-                if self.state.DEBUG:
-                    print(f"Player {player} actions: {possible_actions_str}")
-                action_int = player.prompt_action(possible_actions_str)
-                choosen_actions.append(possible_actions[action_int])
-                if self.state.DEBUG:
-                    print(f"Player {player} choosen action: {choosen_actions[-1]}")
-        return choosen_actions
+        choosen_action: GameAction = None
+        # Use round_number and current_player_index to determine the player's turn
+        current_player = self.state.players[self.state.player_to_act_next]
+        possible_actions = self.get_actions(current_player)
+        possible_actions_str = [action.text for action in possible_actions]
+        action_int = current_player.prompt_action(possible_actions_str)
+        choosen_action = possible_actions[action_int]
+        return choosen_action
 
-    def update_game_state(self, chosen_actions: list[GameAction]) -> bool:
+    def update_game_state(self, action: GameAction) -> None:
         """
-        Update game state based on actions
-        actions are sorted by action type in way that actions with higher priority are first
-        ex: REPORT > KILL > DO_ACTION > MOVE > WAIT
+        Update game and other player states based on action taken by player.
         Players can see actions of other players in the same room
         """
-        chosen_actions.sort(key=lambda x: x.type, reverse=True)
-        someone_reported = False
-        for action in chosen_actions:
-            self.state.playthrough.append(f"[{action.player}]: {action}")
-            if action.player.state.life != PlayerState.DEAD:
-                action.player.kill_cooldown = max(0, action.player.kill_cooldown - 1)
-                if action.type == GameActionType.REPORT:
-                    self.broadcast_history(
-                        "report", f"{action.player} reported a dead body"
-                    )
-                    reported_players = self.state.get_dead_players_in_location(
-                        action.player.state.location
-                    )
-                    self.broadcast_history(
-                        "dead_players",
-                        f"Dead players found: {', '.join(reported_players)}",
-                    )
-                    someone_reported = True  # in case of report; go to discussion
-                if action.type == GameActionType.KILL and isinstance(
-                    action.target, Player
-                ):
-                    action.target.state.action_result = (
-                        f"You were eliminated by {action.player}"
-                    )
+        # REPORT
+        if action.type == GameActionType.REPORT:
+            self.broadcast_history("report", f"{action.player} reported a dead body")
+            reported_players = self.state.get_dead_players_in_location(
+                action.player.state.location
+            )
+            assert reported_players
+            self.broadcast_history(
+                "dead_players",
+                f"Dead players found: {reported_players}",
+            )
+            self.state.set_stage(GamePhase.DISCUSS)
 
-                action.player.state.action_result = action.do_action()
+        prev_location = action.player.state.location
 
-                # update stories of seen actions and players in room
-                for player in self.state.players:
-                    if (
-                        player.state.life != PlayerState.DEAD
-                        and player != action.player
-                    ):
-                        if (
-                            action.player.state.location == player.state.location
-                            or action.player.state.location
-                            == player.history.rounds[-1].location
-                        ):
-                            playthrough_text = f"Player {player} saw action {action.spectator} when {player} were in {action.player.state.location.value}"
-                            self.state.playthrough.append(playthrough_text)
-                            if self.state.DEBUG:
-                                print(playthrough_text)
-                            player.state.seen_actions.append(
-                                f"you saw {action.spectator} when you were in {action.player.state.location.value}"
-                            )
+        # KILL, TASK, MOVE, WAIT - location changed
+        action.player.state.action_result = action.do_action()
 
-        for player in self.state.players:
-            # update player history
-            player.log_state_new_round()
-            
+        # update stories of seen actions and players in room
+        # when moving to a room, player can see actions of other players in both rooms
+        players_in_room = self.state.get_players_in_location(prev_location)
+        if action.player.state.location != prev_location:
+            players_in_room += self.state.get_players_in_location(
+                action.player.state.location
+            )
+
+        for player in players_in_room:
+            if player != action.player:
+                player.state.seen_actions.append(
+                    f"you saw {action.spectator} when you were in {action.player.state.location.value}"
+                )
+
+        self.state.log_action(f"{action.spectator}")
+        if players_in_room:
+            self.state.log_action(f"{players_in_room} saw this action")
+        else:
+            self.state.log_action(f"No one saw this action")
+
         # update players in room
         for player in self.state.players:
             players_in_room = [
@@ -176,17 +190,10 @@ class GameEngine(BaseModel):
                 and player != other_player
                 and other_player.state.life == PlayerState.ALIVE
             ]
-
-            playthrough_text = f"Player {player} is in {player.state.location.value} with {players_in_room}"
-            self.state.playthrough.append(playthrough_text)
-            if self.state.DEBUG:
-                print(playthrough_text)
             if players_in_room:
-                player.state.player_in_room = f"Players in room with you: {', '.join([str(player) for player in players_in_room])}"
+                player.state.player_in_room = f"Players in room with you: {players_in_room}"
             else:
                 player.state.player_in_room = "You are alone in the room"
-
-        return someone_reported
 
     def get_actions(self, player: Player) -> list[GameAction]:
         actions = []
@@ -198,12 +205,12 @@ class GameEngine(BaseModel):
         dead_players_in_room = self.state.get_dead_players_in_location(
             player.state.location
         )
-        if dead_players_in_room:
+        for dead in dead_players_in_room:
             actions.append(
                 GameAction(
                     type=GameActionType.REPORT,
                     player=player,
-                    target=dead_players_in_room,
+                    target=dead,
                 )
             )
 
@@ -232,29 +239,14 @@ class GameEngine(BaseModel):
 
         return actions
 
-    def discussion_loop(self) -> None:
-        self.state.set_stage(GamePhase.DISCUSS)
-        for player in self.state.players:
-            player.state.prompt = (
-                "Discussion phase has started. You can discuss and vote who to banish"
-            )
-
-        discussion_log: list[str] = []
-        for round in range(game_consts.NUM_CHATS):
-            for player in self.state.players:
-                if player.state.life == PlayerState.ALIVE:
-                    player.state.observations.append(
-                        f"Discussion: [System]: You have {game_consts.NUM_CHATS - round} rounds left to discuss, then you will vote"
-                    )
-                    answer: str = player.prompt_discussion()
-                    answer_str = f"Discussion: [{player}]: {answer}"
-                    discussion_log.append(answer_str)
-                    self.broadcast_message(answer_str)
-            self.state.playthrough.append(f"Discussion log:")
-            self.state.playthrough.append("\n".join(discussion_log))
-            if self.state.DEBUG:
-                print("Discussion log:")
-                print("\n".join(discussion_log))
+    def perform_discussion_step(self) -> None:
+        player = self.state.players[self.state.player_to_act_next]
+        player.state.observations.append(
+            f"Discussion: [System]: You have {self.state.round_of_discussion_start+game_consts.NUM_CHATS - self.state.round_number} rounds left to discuss, then you will vote"
+        )
+        answer: str = player.prompt_discussion()
+        answer_str = f"Discussion: [{player}]: {answer}"
+        self.broadcast_message(answer_str)
 
     def go_to_voting(self) -> None:
         dead_players = [
@@ -275,7 +267,7 @@ class GameEngine(BaseModel):
 
             if player.state.life == PlayerState.ALIVE:
                 action = player.prompt_vote(possible_voting_actions_str)
-                votes[player] = possible_actions[action].target
+                votes[player.name] = possible_actions[action].target.name
                 player.state.observations.append(
                     f"You voted for {possible_actions[action].target}"
                 )
@@ -283,21 +275,17 @@ class GameEngine(BaseModel):
                 playthrough_text = (
                     f"{player} voted for {possible_actions[action].target}"
                 )
-                self.state.playthrough.append(playthrough_text)
-                if self.state.DEBUG:
-                    print(playthrough_text)
+                self.state.log_action(playthrough_text)
 
         votes_counter = Counter(votes.values())
         two_most_common = votes_counter.most_common(2)
         if len(two_most_common) > 1 and two_most_common[0][1] == two_most_common[1][1]:
             self.broadcast_history("vote", "It's a tie! No one will be banished")
         else:
+            player_to_banish = [x for x in self.state.players if x.name == two_most_common[0][0]][0]
             assert isinstance(
-                two_most_common[0][0], Player
+                player_to_banish, Player
             )  # Ensure that the expression is of type Player
-            player_to_banish: Player = two_most_common[0][
-                0
-            ]  # Explicitly cast the expression to Player
             if player_to_banish == self.nobody:
                 self.broadcast_history("vote", "Nobody was banished!")
             elif player_to_banish.is_impostor:
@@ -308,12 +296,12 @@ class GameEngine(BaseModel):
                 self.broadcast_history(
                     "vote", f"{player_to_banish} was banished! They were a crewmate"
                 )
-            player_to_banish.state = PlayerState.DEAD
+            player_to_banish.state.life = PlayerState.DEAD
         for player, target in votes.items():
             self.broadcast_history(f"vote {player}", f"{player} voted for {target}")
 
-        self.state.game_stage = GamePhase.ACTION_PHASE
-        self.remove_dead_players()
+        self.state.set_stage(GamePhase.ACTION_PHASE)
+        self.mark_dead_players_as_reported()
 
     def get_vote_actions(self, player: Player) -> list[GameAction]:
         actions = []
@@ -330,8 +318,9 @@ class GameEngine(BaseModel):
         return actions
 
     def broadcast(self, key: str, message: str) -> None:
+        self.state.log_action(f"{key}: {message}")
         for player in self.state.get_alive_players():
-            player.state.observations.append(message)
+            player.state.observations.append(f"{key}: {message}")
 
     def broadcast_history(self, key: str, message: str) -> None:
         self.broadcast(key, message)
@@ -339,7 +328,7 @@ class GameEngine(BaseModel):
     def broadcast_message(self, message: str) -> None:
         self.broadcast("chat", message)
 
-    def remove_dead_players(self) -> None:
+    def mark_dead_players_as_reported(self) -> None:
         for player in self.state.players:
             if player.state.life == PlayerState.DEAD:
                 player.state.life = PlayerState.DEAD_REPORTED
@@ -416,19 +405,60 @@ class GameEngine(BaseModel):
             print("Impostors win!")
             self.state.log_action("Impostors win!")
 
+        self.save_state()
         self._save_playthrough()
 
-    def save_state(self, filename: str) -> None:
-        with open(filename, "w") as f:
-            json.dump(self.state.model_dump_json(), f)
+    def save_state(self) -> None:
+        with open(game_consts.STATE_FILE, "w") as f:
+            json.dump(self.state.model_dump(), f)
+            # yaml.dump(self.state.model_dump(), f)
 
-    def load_state(self, filename: str) -> None:
-        with open(filename, "r") as f:
-            data = json.load(f)
-            self.state = GameState.model_validate_json(data)
+    def load_state(self) -> None:
+        try:
+            with open(game_consts.STATE_FILE, "r") as f:
+                data = json.load(f)
+                # Deserialize players based on their type
+                players = [
+                    self._create_player_from_dict(player_data)
+                    for player_data in data["players"]
+                ]
+                data["players"] = players
+                print(data["players"][1].state.tasks[0])
+                self.state = GameState.model_validate(
+                    {**data}
+                )  # Update GameState with deserialized players
+        except FileNotFoundError:
+            print("No saved state found. Starting new game.")
+
+    def _create_player_from_dict(self, player_data: dict) -> Player:
+        # Deserialize tasks for the player's current state
+        player_data["state"]["tasks"] = [
+            self._create_task_from_dict(task_data)
+            for task_data in player_data["state"]["tasks"]
+        ]
+
+        # Deserialize tasks for each round in the player's history
+        for round_data in player_data["history"]["rounds"]:
+            round_data["tasks"] = [
+                self._create_task_from_dict(task_data)
+                for task_data in round_data["tasks"]
+            ]
+        llm_model_name = player_data.get("llm_model_name", "none")
+        if llm_model_name is None:
+            return HumanPlayer(**player_data)
+        elif llm_model_name == "fake":
+            return FakeAIPlayer(**player_data)
+        else:
+            return AIPlayer(**player_data)
+
+    def _create_task_from_dict(self, task_data: dict) -> Task:
+        if "turns_left" in task_data:
+            return LongTask(**task_data)
+        else:
+            return ShortTask(**task_data)
 
     def __repr__(self):
         return f"GameEngine | Players: {self.state.players} | Stage: {self.state.game_stage}"
 
     def to_dict(self):
-        return self.state.dict()
+        return self.state.to_dict()

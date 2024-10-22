@@ -1,4 +1,4 @@
-from game.models.engine import GamePhase
+from game.models.engine import GameLocation, GamePhase
 from game.models.history import PlayerState
 from game.players.base_player import Player
 from typing import List
@@ -12,7 +12,8 @@ class GameState(BaseModel):
     save_playthrough: str = ""
     DEBUG: bool = Field(default=False)
     round_number: int = 0
-    current_player_index: int = 0
+    player_to_act_next: int = 0
+    round_of_discussion_start: int = 0
 
     def add_player(self, player: Player):
         self.players.append(player)
@@ -21,9 +22,14 @@ class GameState(BaseModel):
         self.game_stage = stage
         for player in self.players:
             player.set_stage(stage)
+        if stage == GamePhase.DISCUSS:
+            self.player_to_act_next = 0
+            self.round_of_discussion_start = self.round_number
 
     def log_action(self, action: str):
         self.playthrough.append(action)
+        if self.DEBUG:
+            print(action)
 
     def get_alive_players(self) -> List[Player]:
         return [p for p in self.players if p.state.life == PlayerState.ALIVE]
@@ -31,12 +37,15 @@ class GameState(BaseModel):
     def get_dead_players(self) -> List[Player]:
         return [p for p in self.players if p.state.life == PlayerState.DEAD]
 
-    def get_dead_players_in_location(self, location: int) -> List[Player]:
+    def get_dead_players_in_location(self, location: GameLocation) -> List[Player]:
         return [
             p
             for p in self.players
-            if p.state == PlayerState.DEAD and p.location == location
+            if p.state.life == PlayerState.DEAD and p.state.location == location
         ]
+
+    def get_players_in_location(self, location: GameLocation) -> List[Player]:
+        return [p for p in self.players if p.state.location == location and p.state.life == PlayerState.ALIVE]
 
     def get_player_targets(self, player: Player) -> List[Player]:
         return [
@@ -55,5 +64,5 @@ class GameState(BaseModel):
             "save_playthrough": self.save_playthrough,
             "DEBUG": self.DEBUG,
             "round_number": self.round_number,
-            "current_player_index": self.current_player_index,
+            "current_player_index": self.player_to_act_next,
         }

@@ -32,6 +32,7 @@ class Player(BaseModel, ABC):
     adventure_agent: Optional[AdventureAgent] = None
     discussion_agent: Optional[DiscussionAgent] = None
     voting_agent: Optional[VotingAgent] = None
+    llm_model_name: Optional[str] = None
     
     model_config = ConfigDict(validate_assignment=True)
     
@@ -44,14 +45,14 @@ class Player(BaseModel, ABC):
         if role == PlayerRole.IMPOSTOR:
             self.is_impostor = True
             self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
-            self.state = RoundData(tasks=get_impostor_tasks())
+            if not self.state.tasks: self.state = RoundData(tasks=get_impostor_tasks())
             if self.adventure_agent: self.adventure_agent.role = PlayerRole.IMPOSTOR
             if self.discussion_agent: self.discussion_agent.role = PlayerRole.IMPOSTOR
             if self.voting_agent: self.voting_agent.role = PlayerRole.IMPOSTOR
         else:
             self.is_impostor = False
             self.kill_cooldown = 0
-            self.state = RoundData(tasks=get_random_tasks())
+            if not self.state.tasks: self.state = RoundData(tasks=get_random_tasks())
             if self.adventure_agent: self.adventure_agent.role = PlayerRole.CREWMATE
             if self.discussion_agent: self.discussion_agent.role = PlayerRole.CREWMATE
             if self.voting_agent: self.voting_agent.role = PlayerRole.CREWMATE
