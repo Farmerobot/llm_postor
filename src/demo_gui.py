@@ -25,7 +25,7 @@ def main():
     model_name = "gpt-4o-mini"  # Or any other suitable model name
 
     player_names = ["Wateusz", "Waciej", "Warek", "Wojtek", "Wafał", "Wymek"]
-    players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(3)]
+    players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(5)]
     # players = [FakeAIPlayer(name=player_names[i], llm_model_name="fake") for i in range(6)]
     game_engine.load_players(players, impostor_count=1)
     game_engine.init_game()

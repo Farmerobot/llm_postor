@@ -78,7 +78,7 @@ class Player(BaseModel, ABC):
         self.state.action_result = ""
         self.state.seen_actions = []
         self.state.player_in_room = ""
-        self.state.observations = []
+        # self.state.observations = [] # chat messages are here
 
     @abstractmethod
     def prompt_action(self, actions: List[str]) -> int:
@@ -93,7 +93,10 @@ class Player(BaseModel, ABC):
         pass
 
     def get_message_str(self) -> str:
-        return "\n".join(self.state.chat_history[-1])
+        """
+        :return: A string containing all the messages from the current round (observations with "chat" begginings)
+        """
+        return "\n".join([obs for obs in self.state.observations if obs.startswith("chat")])
 
     def __str__(self):
         return self.name

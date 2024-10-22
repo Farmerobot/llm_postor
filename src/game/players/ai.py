@@ -61,7 +61,7 @@ class AIPlayer(Player):
     def prompt_vote(self, voting_actions: List[str]) -> int:
         self.state.actions = voting_actions
         self.voting_agent.update_state(
-            observation=self.history.get_history_str(), actions=voting_actions
+            observations=self.history.get_history_str(), actions=voting_actions
         )
         vote_prompt, vote = self.voting_agent.choose_action(self.get_message_str())
         self.state.llm_responses = self.voting_agent.responses
