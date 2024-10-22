@@ -70,7 +70,10 @@ class GUIHandler(BaseModel):
         status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
         role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
         complete_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
-        st.write(f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon}")
+        if player.role == PlayerRole.IMPOSTOR:
+            st.write(f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon} ⏳{player.kill_cooldown}")
+        else:
+            st.write(f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon}")
 
     def _display_status(self, player: Player):
         status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
