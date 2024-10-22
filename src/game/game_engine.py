@@ -15,6 +15,7 @@ from game import consts as game_consts
 from collections import Counter
 from pydantic import BaseModel, Field
 from game.gui_handler import GUIHandler
+import json
 
 
 class GameEngine(BaseModel):
@@ -59,13 +60,13 @@ class GameEngine(BaseModel):
     def init_game(self) -> None:
         self.state.set_stage(GamePhase.ACTION_PHASE)
 
-    def enter_main_game_loop(self, freeze_stage: Optional[GamePhase] = None) -> None:
+    def enter_main_game_loop(self, continue_from_state: Optional[str] = None) -> None:
         """
         Main game loop that controls the flow of the game.
 
-        :param freeze_stage: If set, the game will stay in this stage (used for testing).
+        :param continue_from_state: If set, the game will load the state from the specified file.
         """
-        check_game_over = self.set_game_stage(freeze_stage)
+        check_game_over = self.set_game_stage(continue_from_state)
 
         print("Game started!")
         while not check_game_over():
@@ -78,19 +79,19 @@ class GameEngine(BaseModel):
             
             self.gui_handler.update_gui(self.state)
 
-            if someone_reported and freeze_stage is None:
+            if someone_reported and continue_from_state is None:
                 self.discussion_loop()
                 self.go_to_voting()
 
         # END OF GAME
-        if freeze_stage is None:
+        if continue_from_state is None:
             print("Game Over!")
             self.end_game()
 
-    def set_game_stage(self, freeze_stage: Optional[GamePhase]) -> Callable[[], bool]:
+    def set_game_stage(self, continue_from_state: Optional[str]) -> Callable[[], bool]:
         """Set the game stage and return the appropriate game over check function."""
-        if freeze_stage:
-            self.state.game_stage = freeze_stage
+        if continue_from_state:
+            self.load_state(continue_from_state)
             return self.check_game_over_action_crewmate
         return self.check_game_over
 
@@ -416,6 +417,15 @@ class GameEngine(BaseModel):
             self.state.log_action("Impostors win!")
 
         self._save_playthrough()
+
+    def save_state(self, filename: str) -> None:
+        with open(filename, "w") as f:
+            json.dump(self.state.model_dump_json(), f)
+
+    def load_state(self, filename: str) -> None:
+        with open(filename, "r") as f:
+            data = json.load(f)
+            self.state = GameState.model_validate_json(data)
 
     def __repr__(self):
         return f"GameEngine | Players: {self.state.players} | Stage: {self.state.game_stage}"

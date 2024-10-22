@@ -11,6 +11,8 @@ class GameState(BaseModel):
     playthrough: List[str] = Field(default_factory=list)
     save_playthrough: str = ""
     DEBUG: bool = Field(default=False)
+    round_number: int = 0
+    current_player_index: int = 0
 
     def add_player(self, player: Player):
         self.players.append(player)
@@ -52,4 +54,6 @@ class GameState(BaseModel):
             "playthrough": self.playthrough,
             "save_playthrough": self.save_playthrough,
             "DEBUG": self.DEBUG,
+            "round_number": self.round_number,
+            "current_player_index": self.current_player_index,
         }
