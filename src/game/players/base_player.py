@@ -26,7 +26,7 @@ class Player(BaseModel, ABC):
     name: str
     role: PlayerRole = Field(default=PlayerRole.CREWMATE)
     is_impostor: bool = False
-    kill_cooldown: int = 0
+    kill_cooldown: int = game_consts.IMPOSTOR_COOLDOWN
     state: RoundData = Field(default_factory=RoundData)
     history: PlayerHistory = Field(default_factory=PlayerHistory)
     adventure_agent: Optional[AdventureAgent] = None
@@ -44,7 +44,7 @@ class Player(BaseModel, ABC):
         self.role = role
         if role == PlayerRole.IMPOSTOR:
             self.is_impostor = True
-            self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
+            # self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
             self.state = RoundData(tasks=get_impostor_tasks())
             if self.adventure_agent: self.adventure_agent.role = PlayerRole.IMPOSTOR
             if self.discussion_agent: self.discussion_agent.role = PlayerRole.IMPOSTOR
