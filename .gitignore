@@ -229,3 +229,5 @@ fabric.properties
 .history/
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Python,PyCharm+all,VisualStudioCode
+
+game_state.json
