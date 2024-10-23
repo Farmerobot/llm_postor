@@ -25,8 +25,8 @@ def main():
     model_name = "gpt-4o-mini"  # Or any other suitable model name
 
     player_names = ["Wateusz", "Waciej", "Warek", "Wojtek", "Wafał", "Wymek"]
-    # players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(5)]
-    players = [FakeAIPlayer(name=player_names[i], llm_model_name="fake") for i in range(5)]
+    players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(5)]
+    # players = [FakeAIPlayer(name=player_names[i], llm_model_name="fake") for i in range(5)]
     game_engine.load_players(players, impostor_count=1)
     game_engine.init_game()
     
@@ -38,14 +38,13 @@ def main():
     #     json_game_state.players[0].state.tasks[0] = "DONE"
     #     gui_handler.update_gui(json_game_state)
 
-    # while not game_engine.perform_step():
-    #     gui_handler.update_gui(game_engine.state)
-        # time.sleep(5)
+    while not game_engine.perform_step():
+        gui_handler.update_gui(game_engine.state)
+        time.sleep(5)
     gui_handler.update_gui(game_engine.state)
     st.text("Game has ended")
     st.json(game_engine.to_dict(), expanded=False) # Display final game state
     st.text("\n".join(game_engine.state.playthrough)) # Display final game log
-
 
 if __name__ == "__main__":
     main()
