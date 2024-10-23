@@ -2,16 +2,17 @@ from typing import List, Dict
 from pydantic import BaseModel
 from game.players.base_player import Player
 from langchain_openai import ChatOpenAI
-from llm_prompts import PERSUASION_TECHNIQUES
+from game.llm_prompts import PERSUASION_TECHNIQUES
+from langchain.schema import HumanMessage
 import re
 
 class ChatAnalyzer(BaseModel):
     players: List[Player]
-    llm_model_name: str = "gpt-3.5-turbo"
+    llm_model_name: str = "gpt-4o-mini"
     persuasive_tricks: str = PERSUASION_TECHNIQUES
 
     def analyze(self) -> Dict[str, Dict[str, int]]:
-        llm = ChatOpenAI(model=self.llm_model_name, temperature=0.1)
+        llm = ChatOpenAI(model=self.llm_model_name, temperature=0)
         results = {}
 
         # Get messages from the first player
@@ -21,9 +22,18 @@ class ChatAnalyzer(BaseModel):
         player_messages = self.extract_player_messages(messages)
 
         for player_name, player_msgs in player_messages.items():
-            prompt = f"Analyze the following messages and count how many times each of the following persuasive tricks are used:\n{self.persuasive_tricks}\n\nMessages:\n{player_msgs}"
-            response = llm(prompt)
-            results[player_name] = self.parse_response(response)
+            prompt = f"""
+            Analyze the following messages and count how many times each of the following persuasive tricks are used:
+            \n{self.persuasive_tricks}\n\nMessages:\n{player_msgs}
+            <format>
+            trick1: count1
+            trick2: count2
+            </format>
+            
+            please provide the count for each trick in the format above. stick to format to avoid errors.
+            """
+            response = llm.invoke([HumanMessage(content=prompt)])
+            results[player_name] = self.parse_response(response.content.strip())
 
         return results
 
@@ -43,6 +53,7 @@ class ChatAnalyzer(BaseModel):
         return player_messages
 
     def parse_response(self, response: str) -> Dict[str, int]:
+        print(response)
         tricks_count = {}
         lines = response.split("\n")
         for line in lines:
