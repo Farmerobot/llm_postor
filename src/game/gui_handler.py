@@ -7,6 +7,7 @@ from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 
 from game.models.history import PlayerState
+from game.chat_analyzer import ChatAnalyzer
 
 
 class GUIHandler(BaseModel):
@@ -44,8 +45,8 @@ class GUIHandler(BaseModel):
         for i, (player, sidebar) in enumerate(zip(game_state.players, self.sidebar)):
             with sidebar:
                 self._display_short_player_info(player, st)
-        with self.game_log_placeholder.container(height=500):
-            # st.text("\n".join(game_state.playthrough))
+        with self.game_log_placeholder.container():
+            st.text("\n".join(game_state.playthrough))
             annotated_text(
     "[Warek]: I agree that ",
     ("Wateusz's consistent activity in the Cafeteria raises suspicion", "Behavior Analysis"),
@@ -115,6 +116,10 @@ class GUIHandler(BaseModel):
     ("Wojtek for details on his accusation against me", "Information Manipulation"),
     " to clarify the situation."
 )
+            chat_analyzer = ChatAnalyzer(players=game_state.players)
+            # chat_analyzer.analyze() returns Dict[str, Dict[str, int]]: with player name as key and dict of persuasive tricks as value with count as value
+            results = chat_analyzer.analyze()
+            st.write(results)
         self.game_log_json.json(game_state.to_dict())
         
     def _display_short_player_info(self, player: Player, placeholder: DeltaGenerator):
