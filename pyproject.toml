@@ -2,7 +2,7 @@
 name = "mk-ai-agent-test"
 version = "0.1.0"
 description = ""
-authors = ["Marcin Korcz"]
+authors = ["Marcin Korcz, Andrii Chmutov, Vasyl Korzavatykh, Mateusz Idziejczak, Mateusz Stawicki"]
 readme = "README.md"
 package-mode = false
 
