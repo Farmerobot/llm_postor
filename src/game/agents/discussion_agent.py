@@ -41,7 +41,7 @@ class DiscussionAgent(Agent):
     def act(self) -> Any:
         points_prompt, points = self.create_discussion_points()
         response_prompt, response = self.respond_to_statements(
-            statements="\n".join(self.state.messages), points=points
+            statements=self.state.messages, points=points
         )
         return (
             f"Points prompt: {points_prompt}\n\nResponse prompt: {response_prompt}",
