@@ -2,23 +2,13 @@ from typing import List, Dict
 from pydantic import BaseModel
 from game.players.base_player import Player
 from langchain_openai import ChatOpenAI
+from llm_prompts import PERSUASION_TECHNIQUES
 import re
 
 class ChatAnalyzer(BaseModel):
     players: List[Player]
     llm_model_name: str = "gpt-3.5-turbo"
-    persuasive_tricks: str = """
-    1. Appeal to Emotion
-    2. Bandwagon
-    3. Repetition
-    4. Testimonials
-    5. Plain Folks
-    6. Transfer
-    7. Fear
-    8. Logical Fallacies
-    9. Glittering Generalities
-    10. Name Calling
-    """
+    persuasive_tricks: str = PERSUASION_TECHNIQUES
 
     def analyze(self) -> Dict[str, Dict[str, int]]:
         llm = ChatOpenAI(model=self.llm_model_name, temperature=0.1)
