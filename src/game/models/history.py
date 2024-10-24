@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 
 from game.models.engine import GameLocation, GamePhase
 from game.models.tasks import Task
+from game.agents.usage_metadata import UsageMetadata
 
 
 class PlayerState(str, Enum):
@@ -18,6 +19,7 @@ class RoundData(BaseModel):
     life: PlayerState = PlayerState.ALIVE
     tasks: List[Task] = Field(default_factory=list)
     llm_responses: List[str] = Field(default_factory=list)
+    token_usage: UsageMetadata = Field(default_factory=UsageMetadata)
     prompt: str = ""
     actions: List[str] = Field(default_factory=list)
     response: str = ""
@@ -31,6 +33,7 @@ class RoundData(BaseModel):
             "location": self.location.value,
             "stage": self.stage.value,
             "life": self.life.value,
+            "token_usage": self.token_usage.to_dict(),
             "tasks": [str(task) for task in self.tasks],
             "llm_responses": self.llm_responses,
             "prompt": self.prompt,

@@ -1,5 +1,7 @@
 from typing import List, Any
 
+from langchain_openai import ChatOpenAI
+
 from game.consts import ASCII_MAP
 from .base_agent import Agent
 from langchain.schema import HumanMessage
@@ -8,6 +10,7 @@ import re
 
 
 class AdventureAgent(Agent):
+    llm: ChatOpenAI
     def update_state(
         self,
         observations: str,
@@ -33,6 +36,8 @@ class AdventureAgent(Agent):
             current_location=self.state.current_location,
         )
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
+        print(plan.usage_metadata)
+        self.add_token_usage(plan.usage_metadata)
         return plan_prompt, plan.content.strip()
 
     def choose_action(self, plan: str) -> int:
@@ -45,6 +50,7 @@ class AdventureAgent(Agent):
             plan=plan,
         )
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        self.add_token_usage(chosen_action.usage_metadata)
         chosen_action = chosen_action.content.strip()
         return action_prompt, self.check_action_valid(chosen_action)
 

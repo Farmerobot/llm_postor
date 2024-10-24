@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 from typing import Any, List
 from pydantic import BaseModel, Field
 
+from game.agents.usage_metadata import UsageMetadata
+from game.consts import TOKEN_COSTS
+
 
 class AgentState(BaseModel):
     history: str = Field(default_factory=str)
@@ -9,6 +12,7 @@ class AgentState(BaseModel):
     available_actions: List[str] = Field(default_factory=list)
     messages: List[str] = Field(default_factory=list)
     current_location: str = Field(default_factory=str)
+    token_usage: UsageMetadata = Field(default_factory=UsageMetadata)
 
     def to_dict(self):
         return {
@@ -17,6 +21,7 @@ class AgentState(BaseModel):
             "available_actions": self.available_actions,
             "messages": self.messages,
             "current_location": self.current_location,
+            "token_usage": self.token_usage.to_dict(),
         }
 
 
@@ -37,6 +42,20 @@ class Agent(ABC, BaseModel):
     @abstractmethod
     def act(self) -> Any:
         pass
+    
+    def add_token_usage(self, msg: dict):
+        # {'input_tokens': 998, 'output_tokens': 82, 'total_tokens': 1080, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+        self.state.token_usage.input_tokens += msg["input_tokens"]
+        self.state.token_usage.output_tokens += msg["output_tokens"]
+        self.state.token_usage.total_tokens += msg["total_tokens"]
+        self.state.token_usage.cache_read += msg["input_token_details"]["cache_read"]
+        self.update_cost()
+        
+    def update_cost(self):
+        self.state.token_usage.cost += self.state.token_usage.input_tokens * TOKEN_COSTS[self.llm.model_name]["input_tokens"] 
+        self.state.token_usage.cost += self.state.token_usage.output_tokens * TOKEN_COSTS[self.llm.model_name]["output_tokens"]
+        self.state.token_usage.cost += self.state.token_usage.cache_read * TOKEN_COSTS[self.llm.model_name]["cache_read"]
+        
 
     def to_dict(self):
         llm_data = "human"

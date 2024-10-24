@@ -36,7 +36,7 @@ def main():
         return
     
     game_engine.init_game()
-    game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
+    # game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
     
     if game_engine.state.game_stage == GamePhase.MAIN_MENU:
         st.warning("Viewing the game state only. No actions are being performed.")

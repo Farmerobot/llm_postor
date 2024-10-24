@@ -46,6 +46,7 @@ class GUIHandler(BaseModel):
             with sidebar:
                 self._display_short_player_info(player, st)
         with self.game_log_placeholder.container():
+            st.json(game_state.get_total_cost())
             st.text("\n".join(game_state.playthrough))
             annotated_text(
     "[Warek]: I agree that ",

@@ -8,6 +8,8 @@ from game.players.base_player import Player, PlayerRole
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+from game.agents.usage_metadata import UsageMetadata
+
 
 class AIPlayer(Player):
     llm_model_name: str
@@ -44,6 +46,7 @@ class AIPlayer(Player):
         )
         prompts, chosen_action = self.adventure_agent.act()
         self.state.llm_responses = self.adventure_agent.responses
+        self.add_token_usage(self.adventure_agent.state.token_usage)
         self.state.response = str(chosen_action)
         self.state.prompt = prompts
         return chosen_action
@@ -54,6 +57,7 @@ class AIPlayer(Player):
         self.discussion_agent.update_state(observations=history, messages=statements)
         message_prompt, message = self.discussion_agent.act()
         self.state.llm_responses = self.discussion_agent.responses
+        self.add_token_usage(self.discussion_agent.state.token_usage)
         self.state.response = message
         self.state.prompt = message_prompt
         return message
@@ -65,9 +69,17 @@ class AIPlayer(Player):
         )
         vote_prompt, vote = self.voting_agent.choose_action(self.get_message_str())
         self.state.llm_responses = self.voting_agent.responses
+        self.add_token_usage(self.voting_agent.state.token_usage)
         self.state.response = str(vote)
         self.state.prompt = vote_prompt
         return vote
+    
+    def add_token_usage(self, usage: UsageMetadata):
+        self.state.token_usage.input_tokens += usage.input_tokens
+        self.state.token_usage.output_tokens += usage.output_tokens
+        self.state.token_usage.total_tokens += usage.total_tokens
+        self.state.token_usage.cache_read += usage.cache_read
+        self.state.token_usage.cost += usage.cost
 
     def __str__(self):
         return self.name

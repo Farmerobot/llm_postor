@@ -24,6 +24,7 @@ class VotingAgent(Agent):
             ),
         )
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        self.add_token_usage(chosen_action.usage_metadata)
         chosen_action_str = chosen_action.content.strip()
         self.responses.append(f"Chosen vote: {chosen_action_str}")
         vote = self.check_action_valid(chosen_action_str)

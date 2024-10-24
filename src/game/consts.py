@@ -38,3 +38,21 @@ ASCII_MAP = """
 	|                                               |        |        /
 	|/----------------|--------------|--------------|--------|-------/
     """
+million = 1000000
+TOKEN_COSTS = {
+    "gpt-4o": {
+		"input_tokens": 2.5 / million,
+		"cache_read": 1.25 / million,
+		"output_tokens": 10 / million,
+	},
+    "gpt-4o-mini": {
+		"input_tokens": 0.15 / million,
+		"cache_read": 0.075 / million,
+		"output_tokens": 0.6 / million,
+	},
+	"gemini-1.5-flash": {
+		"input_tokens": 0,
+		"cache_read": 0,
+		"output_tokens": 0,
+	},
+}

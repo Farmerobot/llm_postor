@@ -60,6 +60,19 @@ class GameState(BaseModel):
             and other_player.state.life == PlayerState.ALIVE
             and other_player.state.location == player.state.location
         ]
+        
+    def get_total_cost(self) -> int:
+        output = {}
+        for player in self.players:
+            output[f"{player.name}_cost"] = player.state.token_usage.cost
+        total_cost = sum(output.values())
+        output["total_cost"] = total_cost
+        output["average_per_round"] = total_cost / (self.round_number+1)
+        output["average_per_player"] = total_cost / len(self.players)
+        output["average_per_round_per_player"] = total_cost / (len(self.players) * (self.round_number) + self.player_to_act_next + 1)
+        return output
+        
+            
 
     def to_dict(self):
         return {

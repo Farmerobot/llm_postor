@@ -86,7 +86,7 @@ class GameEngine(BaseModel):
             start = self.state.round_of_discussion_start
             now = self.state.round_number
             max = game_consts.NUM_CHATS
-            self.state.log_action(f"Discussion{now-start}/{max}: round: {now}. Player to act: {self.state.player_to_act_next}")
+            self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now}. Player to act: {self.state.player_to_act_next}")
             self.perform_discussion_step()
         else:
             print("Game is in MAIN_MENU stage - read_only mode")
@@ -341,7 +341,7 @@ class GameEngine(BaseModel):
 
     def broadcast_message(self, message: str) -> None:
         """Broadcasts a chat message to all alive players."""
-        self.broadcast("chat", message)
+        self.broadcast_observation("chat", message)
 
     def mark_dead_players_as_reported(self) -> None:
         """Marks all dead players as reported to avoid double reporting."""
