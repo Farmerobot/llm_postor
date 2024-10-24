@@ -1,9 +1,9 @@
+import re
 from typing import List, Any
 from .base_agent import Agent
 from langchain.schema import HumanMessage
-from game.llm_prompts import VOTING_TEMPLATE
-import re
 
+from llm_postor.game.llm_prompts import VOTING_TEMPLATE
 
 class VotingAgent(Agent):
     def update_state(

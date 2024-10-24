@@ -1,9 +1,9 @@
 import pytest
-from src.game.game_engine import GameEngine
-from src.game.players.base_player import PlayerRole
-from src.game.players.ai import AIPlayer
-from src.game.players.human import HumanPlayer
-from src.game.utils import get_impostor_tasks
+from llm_postor.game.game_engine import GameEngine
+from llm_postor.game.players.base_player import PlayerRole
+from llm_postor.game.players.ai import AIPlayer
+from llm_postor.game.players.human import HumanPlayer
+from llm_postor.game.utils import get_impostor_tasks
 
 
 def test_load_human_players():

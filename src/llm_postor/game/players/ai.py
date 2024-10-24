@@ -1,15 +1,12 @@
 from typing import List
-
-from game.agents.adventure_agent import AdventureAgent
-from game.agents.discussion_agent import DiscussionAgent
-from game.agents.voting_agent import VotingAgent
-from game.players.base_player import Player, PlayerRole
-
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from game.agents.usage_metadata import UsageMetadata
-
+from llm_postor.game.agents.adventure_agent import AdventureAgent
+from llm_postor.game.agents.discussion_agent import DiscussionAgent
+from llm_postor.game.agents.voting_agent import VotingAgent
+from llm_postor.game.players.base_player import Player, PlayerRole
+from llm_postor.game.agents.usage_metadata import UsageMetadata
 
 class AIPlayer(Player):
     llm_model_name: str

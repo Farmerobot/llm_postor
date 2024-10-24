@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "mk-ai-agent-test"
+name = "llm_postor"
 version = "0.1.0"
-description = ""
-authors = ["Marcin Korcz, Andrii Chmutov, Vasyl Korzavatykh, Mateusz Idziejczak, Mateusz Stawicki"]
+description = "This project tests and compares the persuasive abilities of large language models (LLMs) in a game-like environment simulating 'Among Us', where AI agents powered by LLMs interact, make decisions, and attempt to persuade each other."
+authors = ["Marcin Korcz", "Andrii Chmutov", "Vasyl Korzavatykh", "Mateusz Idziejczak", "Mateusz Stawicki"]
 readme = "README.md"
-package-mode = false
+package-mode = true
 
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^1.26.4"
-openai = "^1.23.1"
+openai = "^1.23.1"  
 pandas = "^2.2.2"
 torch = "^2.2.2"
 torchvision = "^0.17.2"
@@ -22,22 +22,24 @@ llama-index-embeddings-huggingface = "^0.2.0"
 ipykernel = "^6.29.4"
 ipywidgets = "^8.1.2"
 langchain = "^0.3.3"
-langchain-community = "^0.3.2"
+langchain-community = "^0.3.2"  
 langchain-openai = "^0.2.2"
 langchain-google-genai = "^2.0.1"
 streamlit = "^1.39.0"
-pytest = "^8.3.3"
 st-annotated-text = "^4.0.1"
-
-[tool.pytest.ini_options]                                                                                                                                     
-pythonpath = ["src"]
-testpaths = ["tests"]
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.4"
 pytest = "^8.3.3"
 pytest-mock = "^3.14.0"
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run-gui = "scripts.run_gui:run_gui"

@@ -1,10 +1,9 @@
-from game.models.engine import GameLocation, GamePhase
-from game.models.history import PlayerState
-from game.players.base_player import Player
 from typing import List
 from pydantic import BaseModel, Field
-
-from game.consts import TOKEN_COSTS
+from llm_postor.game.models.engine import GameLocation, GamePhase
+from llm_postor.game.models.history import PlayerState
+from llm_postor.game.players.base_player import Player
+from llm_postor.game.consts import TOKEN_COSTS
 
 
 class GameState(BaseModel):
@@ -68,7 +67,7 @@ class GameState(BaseModel):
         for player in self.players:
             output[f"{player.name}_cost"] = player.state.token_usage.cost
             # cost = 0
-            # cost += player.state.token_usage.input_tokens * TOKEN_COSTS["gpt-4o"]["input_tokens"] 
+            # cost += player.state.token_usage.input_tokens * TOKEN_COSTS["gpt-4o"]["input_tokens"]
             # cost += player.state.token_usage.output_tokens * TOKEN_COSTS["gpt-4o"]["output_tokens"]
             # cost += player.state.token_usage.cache_read * TOKEN_COSTS["gpt-4o"]["cache_read"]
             # output[f"{player.name}_cost"] = cost

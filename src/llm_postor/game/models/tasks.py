@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 from pydantic import BaseModel
 
-from game.models.engine import GameLocation
-
+from llm_postor.game.models.engine import GameLocation
 
 class Task(BaseModel, ABC):
     name: str

@@ -2,12 +2,11 @@ from typing import Optional, Union
 from pydantic import Field, BaseModel, model_validator
 from enum import IntEnum
 
-from game.consts import IMPOSTOR_COOLDOWN
-from game.models.engine import GameLocation
-from game.models.history import PlayerState
-from game.models.tasks import Task
-from game.players.base_player import Player, PlayerRole
-
+from llm_postor.game.consts import IMPOSTOR_COOLDOWN
+from llm_postor.game.models.engine import GameLocation
+from llm_postor.game.models.history import PlayerState
+from llm_postor.game.models.tasks import Task
+from llm_postor.game.players.base_player import Player, PlayerRole
 
 class GameActionType(IntEnum):
     VOTE = -1

@@ -2,9 +2,8 @@ from abc import ABC, abstractmethod
 from typing import Any, List
 from pydantic import BaseModel, Field
 
-from game.agents.usage_metadata import UsageMetadata
-from game.consts import TOKEN_COSTS
-
+from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.consts import TOKEN_COSTS
 
 class AgentState(BaseModel):
     history: str = Field(default_factory=str)

@@ -1,4 +1,4 @@
-# Analysis of Persuasive Capabilities of Large Language Models in Computer Games
+# LLMPostor
 
 [![Tests](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml/badge.svg)](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml)
 
@@ -10,57 +10,107 @@ This project aims to test and compare the persuasive abilities of large language
 
 ## Current Features
 
-1. **Web GUI**: A user-friendly interface built using [insert framework used, e.g., Flask, Streamlit] that allows:
-   - Observation of game progress in real-time.
-   - Analysis of specific agent actions at various points in the game, including transcripts of conversations and decision-making processes.
-   - Insight into the thought and decision-making process of LLMs through logging of their internal states (if available from the LLM).
-
-2. **Interactive Map**: A visual representation of the game environment, showing locations and movements of AI agents, using [insert library used, e.g., Pygame, a JavaScript library].
-
-3. **Post-Game Analysis**: After the game concludes, the system provides an in-depth analysis of the persuasive abilities demonstrated by AI agents, including metrics such as:
-    * Success rate of persuasive attempts.
-    * Frequency of different persuasive techniques used.
-    * Correlation between LLM model and persuasive success.
-
-4. **"Among Us" Simulation**: The project uses the popular game "Among Us" as a framework to test AI agents' abilities in interaction, deception, and persuasion.  The core mechanics of tasks, meetings, voting, and impostors are replicated.
-
-5. **Multiple AI Agents**: The system supports multiple AI agents, each of which can be powered by a different LLM (e.g., GPT-3, GPT-4, other open-source models), enabling comparative analysis of their persuasive capabilities.
+TODO
 
 ## Project Architecture
 
 The project is structured into several modules:
 
-* **`game_engine`**: Manages the game logic, including task assignment, player interactions, and game state transitions.
 * **`agents`**: Contains implementations of different AI agents, each using a specific LLM.
-* **`models`**: Defines data structures for players, tasks, and game state.
-* **`gui`**: Handles the user interface and visualization.
-* **`utils`**: Contains helper functions.
+* **`models`**: Defines data structures for tasks and game state.
+* **`players`**: Defines the players.
 
-## Technologies Used
+## Table of Contents
 
-* **Python 3.11**: Programming language.
-* **[List Libraries/Frameworks Used, e.g., Pydantic, Flask, Pygame, etc.]**:  Specific libraries and frameworks used for data modeling, web development, game visualization, etc.
-* **OpenAI API**: For accessing large language models.
+- Installation
+- Usage
+- Configuration
+- Running Tests
+- Contributing
+- License
 
+## Installation
 
-## Running Instructions
+This project requires Python 3.11 or higher.
 
-Required Python version: 3.11
+### 1. Install Poetry
 
-The project uses the `poetry` package manager, which can be installed following the instructions at [https://python-poetry.org/docs/](https://python-poetry.org/docs/)
+If you don't have Poetry installed, you can install it by following these steps:
 
-To install all dependencies using `poetry`, execute the following command:
+- For Unix/macOS:
 ```bash
-poetry install
+  curl -sSL https://install.python-poetry.org | python3 -
+```
+- For Windows:
+
+  Visit the official [Poetry installation page](https://python-poetry.org/docs/#installation) for Windows-specific instructions.
+
+Once installed, verify Poetry's installation by running:
+```bash
+  poetry --version
+```
+### 2. Clone the Repository and Install Dependencies
+
+- Clone the repository:
+
+```bash
+  git clone https://github.com/username/llm_poster.git
+  cd llm_poster
 ```
 
-Due to the use of large language models, it is necessary to provide an OpenAI API key. The key can be obtained at [https://beta.openai.com/signup/](https://beta.openai.com/signup/). After obtaining the key, assign it to the `OPENAI_API_KEY` environment variable.
+- Install dependencies using Poetry:
 
-To run the demonstration version, execute the following command:
 ```bash
-cd src
-poetry run python demo.py
+  poetry install
 ```
+
+### 3. Activate the Virtual Environment
+
+Once the dependencies are installed, activate the virtual environment:
+
+```bash
+  poetry shell
+```
+
+## Usage
+
+To run the simulation with the GUI:
+
+```bash
+  poetry run run-gui
+```
+
+## Configuration
+
+The project requires API keys for LLMs such as OpenAI. Set the following environment variables in your shell:
+
+```bash
+  export OPENAI_API_KEY=your-api-key
+```
+
+Alternatively, you can set these in a `.env` file at the project root.
+
+## Running Tests
+
+To run all tests, use the following command:
+
+```bash
+  poetry run pytest
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Commit your changes (git commit -m 'Add new feature').
+4. Push to the branch (git push origin feature-branch).
+5. Open a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Future Enhancements (Roadmap)
 
@@ -75,7 +125,6 @@ We are planning to add the following features to enhance the project:
 - **Human Player Interface**:  Allowing human players to participate in the game alongside AI agents, providing a more realistic and challenging environment for testing.
 - **API Documentation**: Comprehensive API documentation for integrating custom LLM models or analytical tools.
 - **Automated Testing**:  Implementation of automated tests to ensure the robustness and reliability of the game engine and AI agents.
-
 
 These planned features aim to make the project more comprehensive and versatile for researchers and enthusiasts in AI and NLP fields.
 

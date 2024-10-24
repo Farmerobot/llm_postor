@@ -196,12 +196,12 @@ annotated_text(
 
 PERSUASION_TECHNIQUES = """
 ### 1. **Appeal to Logic (Logos)**
-   **Description**: Using facts, evidence, or logical reasoning to convince others. This can include referencing actions, timings, or task completion to logically argue who the imposter is or isn't.
-   **Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the imposter."
+   **Description**: Using facts, evidence, or logical reasoning to convince others. This can include referencing actions, timings, or task completion to logically argue who the impostor is or isn't.
+   **Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the impostor."
 
 ### 2. **Appeal to Emotion (Pathos)**
    **Description**: Persuading by evoking an emotional response, such as fear, sympathy, or trust.
-   **Example**: "If you vote me out now, the imposters will win, and it'll be your fault."
+   **Example**: "If you vote me out now, the impostors will win, and it'll be your fault."
 
 ### 3. **Appeal to Credibility (Ethos)**
    **Description**: Convincing others based on the trustworthiness or authority of the speaker.
@@ -209,7 +209,7 @@ PERSUASION_TECHNIQUES = """
 
 ### 4. **Shifting the Burden of Proof**
    **Description**: Forcing others to prove their innocence instead of presenting clear evidence of guilt.
-   **Example**: "If you’re not the imposter, prove it. What tasks have you completed?"
+   **Example**: "If you’re not the impostor, prove it. What tasks have you completed?"
 
 ### 5. **Bandwagon Effect**
    **Description**: Convincing others to agree by emphasizing that everyone else is already on board with the idea.

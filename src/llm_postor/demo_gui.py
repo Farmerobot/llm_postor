@@ -1,26 +1,22 @@
 import json
 import time
-from openai import OpenAIError
 import streamlit as st
-from game.game_engine import GameEngine
-from game.players.ai import AIPlayer
-from game.gui_handler import GUIHandler
-from game.game_state import GameState
+from openai import OpenAIError
 from types import SimpleNamespace as Namespace
-from game.players.fake_ai import FakeAIPlayer
-from game.models.engine import GamePhase
-from game.chat_analyzer import ChatAnalyzer
 
-
+from llm_postor.game.game_engine import GameEngine
+from llm_postor.game.players.ai import AIPlayer
+from llm_postor.game.gui_handler import GUIHandler
+from llm_postor.game.game_state import GameState
+from llm_postor.game.players.fake_ai import FakeAIPlayer
+from llm_postor.game.models.engine import GamePhase
+from llm_postor.game.chat_analyzer import ChatAnalyzer
 
 # To run this script, you need to poetry install and then run the following command:
 # streamlit run src/demo_gui.py
 
-
-
-
 def main():
-    st.title("Among Us Game - susGPT")
+    st.title("Among Us Game - LLMPostor")
     gui_handler = GUIHandler()
     game_engine = GameEngine()
 

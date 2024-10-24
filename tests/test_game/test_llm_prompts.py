@@ -1,5 +1,5 @@
 import pytest
-from src.game.llm_prompts import (
+from llm_postor.game.llm_prompts import (
     ADVENTURE_PLAN_TEMPLATE,
     ADVENTURE_ACTION_TEMPLATE,
     DISCUSSION_TEMPLATE,
