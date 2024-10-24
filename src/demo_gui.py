@@ -36,16 +36,19 @@ def main():
         return
     
     game_engine.init_game()
-    # game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
+    game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
     
     if game_engine.state.game_stage == GamePhase.MAIN_MENU:
         st.warning("Viewing the game state only. No actions are being performed.")
     gui_handler.update_gui(game_engine.state)
     game_engine.state.DEBUG = True
 
-    while not game_engine.perform_step():
-        gui_handler.update_gui(game_engine.state)
+    # while not game_engine.perform_step():
+    #     gui_handler.update_gui(game_engine.state)
         # time.sleep(5)
+        
+    game_engine.perform_step()
+        
     gui_handler.update_gui(game_engine.state)
     st.text("Game has ended")
     chat_analyzer = ChatAnalyzer(players=game_engine.state.players)

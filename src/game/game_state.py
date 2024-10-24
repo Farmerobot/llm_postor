@@ -4,6 +4,8 @@ from game.players.base_player import Player
 from typing import List
 from pydantic import BaseModel, Field
 
+from game.consts import TOKEN_COSTS
+
 
 class GameState(BaseModel):
     players: List[Player] = Field(default_factory=list)
@@ -65,11 +67,18 @@ class GameState(BaseModel):
         output = {}
         for player in self.players:
             output[f"{player.name}_cost"] = player.state.token_usage.cost
+            # cost = 0
+            # cost += player.state.token_usage.input_tokens * TOKEN_COSTS["gpt-4o"]["input_tokens"] 
+            # cost += player.state.token_usage.output_tokens * TOKEN_COSTS["gpt-4o"]["output_tokens"]
+            # cost += player.state.token_usage.cache_read * TOKEN_COSTS["gpt-4o"]["cache_read"]
+            # output[f"{player.name}_cost"] = cost
         total_cost = sum(output.values())
         output["total_cost"] = total_cost
-        output["average_per_round"] = total_cost / (self.round_number+1)
+        divide_round = self.round_number if self.player_to_act_next == 0 and self.round_number != 0 else self.round_number + 1
+        output["average_per_round"] = total_cost / divide_round
         output["average_per_player"] = total_cost / len(self.players)
-        output["average_per_round_per_player"] = total_cost / (len(self.players) * (self.round_number) + self.player_to_act_next + 1)
+        add_player = 1 if self.player_to_act_next == 0 and self.round_number == 0 else 0
+        output["average_per_round_per_player"] = total_cost / (len(self.players) * (self.round_number) + self.player_to_act_next + add_player)
         return output
         
             

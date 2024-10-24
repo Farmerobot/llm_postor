@@ -179,6 +179,8 @@ class GameEngine(BaseModel):
             players_in_room += self.state.get_players_in_location(
                 action.player.state.location
             )
+        if action.player in players_in_room:
+            players_in_room.remove(action.player)
 
         for player in players_in_room:
             if player != action.player:
@@ -437,14 +439,16 @@ class GameEngine(BaseModel):
                     player.adventure_agent = None
                     player.discussion_agent = None
                     player.voting_agent = None
-            json.dump(self.state.model_dump(exclude={"adventure_agent", "discussion_agent", "voting_agent"}), f)
+            json.dump(self.state.model_dump(), f)
             for player in self.state.players:
                 if isinstance(player, AIPlayer):
                     player.init_agents()
             # yaml.dump(self.state.model_dump(), f)
 
     def load_state(self) -> bool:
-        """Loads a previously saved game state from a file."""
+        """Loads a previously saved game state from a file.
+        :return: True if the state was successfully loaded, False otherwise
+        """
         try:
             with open(game_consts.STATE_FILE, "r") as f:
                 data = json.load(f)
@@ -459,8 +463,10 @@ class GameEngine(BaseModel):
                 )  # Update GameState with deserialized players
         except FileNotFoundError:
             print("No saved state found. Starting new game.")
+            return False
         except Exception as e:
             return False
+        return True
 
     def _create_player_from_dict(self, player_data: dict) -> Player:
         """Creates a Player object from a dictionary representation."""
