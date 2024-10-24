@@ -1,20 +1,20 @@
-from random import randint, sample
+from random import sample
 from game import consts
 from game.models.engine import GameLocation
-from game.models.tasks import ShortTask, LongTask
+from game.models.tasks import ShortTask, LongTask, Task
 
 
-def get_random_tasks() -> list:
+def get_random_tasks() -> list[Task]:
     short_tasks = get_short_tasks()
     long_tasks = get_long_tasks()
     return short_tasks + long_tasks
 
 
-def get_impostor_tasks() -> list:
+def get_impostor_tasks() -> list[ShortTask]:
     return [ShortTask(name="Eliminate all crewmates", location=GameLocation.LOC_UNKNOWN)]
 
 
-def get_short_tasks() -> list:
+def get_short_tasks() -> list[ShortTask]:
     tasks = [
         ShortTask(name="Empty the cafeteria trash", location=GameLocation.LOC_CAFETERIA),
         ShortTask(name="Start the coffee maker in the cafeteria", location=GameLocation.LOC_CAFETERIA),
@@ -44,7 +44,7 @@ def get_short_tasks() -> list:
     return sample(tasks, k=consts.NUM_SHORT_TASKS)
 
 
-def get_long_tasks() -> list:
+def get_long_tasks() -> list[LongTask]:
     tasks = [
         LongTask(name="Align engine output in upper engine", location=GameLocation.LOC_UPPER_ENGINE),
         LongTask(name="Chart course in navigation", location=GameLocation.LOC_NAVIGATION),

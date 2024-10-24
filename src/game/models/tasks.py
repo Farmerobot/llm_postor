@@ -26,9 +26,6 @@ class ShortTask(Task):
     def __str__(self):
         return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
 
-    def __repr__(self):
-        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name}"
-
 
 class LongTask(Task):
     turns_left: int = 2
@@ -45,7 +42,4 @@ class LongTask(Task):
         return f"Task {self.name} requires {self.turns_left} more turns to complete."
 
     def __str__(self):
-        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name} | {self.turns_left} turns left to finish"
-
-    def __repr__(self):
         return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name} | {self.turns_left} turns left to finish"

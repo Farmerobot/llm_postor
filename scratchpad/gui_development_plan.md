@@ -1,34 +1,5 @@
 Here's a GUI development plan using Streamlit to visualize your Among Us game state, progressing from a basic JSON display to a richer, more interactive experience.
 
-**Phase 1: Data Visualization Design (High Effort)**
-
-* **Goal:**  Design the optimal way to display the game data, focusing on a clear and intuitive presentation of player information.  The primary goal is to create a user-friendly interface that allows for easy monitoring of the game's progress and individual player states.
-
-* **Techniques:**
-
-    * **Tabbed Interface:** Implement a tabbed interface, with one tab dedicated to each player. This allows for a clear separation of player information and prevents visual clutter.
-
-    * **Player Status Icons:**  Display a clear icon indicating each player's status (Alive/Dead/Eliminated).  Consider using universally understood symbols (e.g., a green checkmark for Alive, a red X for Dead/Eliminated).
-
-    * **Role Icons:** Display an icon representing each player's role (Crewmate/Impostor).  Again, use clear and easily distinguishable icons.
-
-    * **Task Progress:** Show the number of completed and remaining tasks for each player.  A progress bar could be a visually effective way to represent this information.
-
-    * **Players in Room:** Display icons or avatars representing the players currently in the same room as the selected player.  This provides a quick visual overview of the player's immediate surroundings.
-
-    * **Additional Information:** Consider including other relevant information in each player's tab:
-        * **Current Location:** The player's current location on the map.
-        * **Recent Actions:** A log of the player's most recent actions.
-        * **LLM Responses (Optional):**  If feasible, display the LLM's responses for each player's actions.  This could provide valuable insights into the AI's decision-making process.
-        * **Player History:** A summary of the player's actions and events throughout the game.
-        * **Suspicion Level (Optional):**  If you're tracking suspicion levels, display this information for each player.  This could be a numerical value or a visual representation (e.g., a thermometer).
-        * **Kill Cooldown (Impostors):** For impostors, display their kill cooldown timer.
-
-    * **Data Structure:**  Ensure your game data is structured in a way that makes it easy to access and display the information needed for each player tab.  Consider using a list of dictionaries or a similar data structure.
-
-    * **Responsive Design:**  Design the interface to be responsive, adapting to different screen sizes and resolutions.
-
-    * **Accessibility:**  Consider accessibility guidelines when designing the interface.  Use sufficient color contrast, appropriate font sizes, and clear labels.
 
 **Phase 2: Interactive Map (Medium Effort)**
 
