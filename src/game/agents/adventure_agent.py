@@ -10,7 +10,6 @@ import re
 
 
 class AdventureAgent(Agent):
-    llm: ChatOpenAI
     def update_state(
         self,
         observations: str,
@@ -36,7 +35,6 @@ class AdventureAgent(Agent):
             current_location=self.state.current_location,
         )
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
-        print(plan.usage_metadata)
         self.add_token_usage(plan.usage_metadata)
         return plan_prompt, plan.content.strip()
 
