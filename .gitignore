@@ -230,4 +230,6 @@ fabric.properties
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Python,PyCharm+all,VisualStudioCode
 
-game_state.json
+data/game_state.json
+CONVENTIONS.md
+scratchpad.md

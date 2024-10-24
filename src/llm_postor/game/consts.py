@@ -4,7 +4,7 @@ NUM_LONG_TASKS = 2
 NUM_CHATS = 5
 MIN_NAME = 2
 IMPOSTOR_COOLDOWN = 1
-STATE_FILE = "game_state.json"
+STATE_FILE = "data/game_state.json"
 PLAYER_COLORS = [
     "red",
     "blue",

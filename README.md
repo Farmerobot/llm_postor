@@ -19,6 +19,7 @@ The project is structured into several modules:
 * **`agents`**: Contains implementations of different AI agents, each using a specific LLM.
 * **`models`**: Defines data structures for tasks and game state.
 * **`players`**: Defines the players.
+* **`data`**: Contains saved game states ready to analyze. files are named in following format: `game_state_<phase>_<action_phase_count>_<discussion_phase_count>_<who_won>_<id>.json`.
 
 ## Table of Contents
 
