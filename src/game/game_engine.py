@@ -1,6 +1,4 @@
-import time
-
-import yaml
+import streamlit as st
 from game.game_state import GameState
 from game.models.engine import (
     GamePhase,
@@ -11,12 +9,11 @@ from game.players.base_player import Player, PlayerRole
 from game.models.history import PlayerState
 from game.players.human import HumanPlayer
 from game.models.action import GameAction, GameActionType
-from typing import Any, List, Callable, Optional
+from typing import Any, List
 import random
 from game import consts as game_consts
 from collections import Counter
 from pydantic import BaseModel, Field
-from game.gui_handler import GUIHandler
 import json
 
 from game.players.ai import AIPlayer
@@ -26,11 +23,12 @@ from game.agents.base_agent import Agent
 
 
 class GameEngine(BaseModel):
+    """Manages the game logic, including player actions, game state transitions, and win conditions."""
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
-    gui_handler: GUIHandler = Field(default_factory=GUIHandler)  # Initialize GUIHandler
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
+        """Loads players into the game and assigns roles (crewmate or impostor)."""
         if len(players) < 3:
             raise ValueError("Minimum number of players is 3.")
 
@@ -65,33 +63,41 @@ class GameEngine(BaseModel):
             )
 
     def init_game(self, game_state: GameState) -> None:
+        """Initializes the game with a given game state."""
         self.state = game_state
 
     def init_game(self) -> None:
+        """Initializes the game. Tries to set state from file, otherwise starts a new game."""
         assert self.state.players
         if not self.load_state():
             self.state.set_stage(GamePhase.ACTION_PHASE)
 
     def perform_step(self) -> bool:
+        """Executes a single step in the game, handling player turns and game state transitions.
+        only when player successfully completes the action, the next player will be called to act.
+        otherwise, the same player will be called to act again on next function call.
+        
+        :return: True if the game is over or in MAIN_MENU stage, False otherwise
         """
-        This is the beginning of player turn. player state is already copied to history, cleared and can be freely modified
-
-        :return: True if the game is over, False otherwise
-        """
-        print(
-            f"Round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}"
-        )
         if self.state.game_stage == GamePhase.ACTION_PHASE:
+            self.state.log_action(f"Action: round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}")
             self.perform_action_step()
         elif self.state.game_stage == GamePhase.DISCUSS:
+            start = self.state.round_of_discussion_start
+            now = self.state.round_number
+            max = game_consts.NUM_CHATS
+            self.state.log_action(f"Discussion{now-start}/{max}: round: {now}. Player to act: {self.state.player_to_act_next}")
             self.perform_discussion_step()
         else:
-            raise ValueError("Probably main game stage. Init game first")
+            print("Game is in MAIN_MENU stage - read_only mode")
+            return True
         if self.check_game_over():
             self.end_game()
             return True
         self.state.player_to_act_next += 1
             
+        # Only when round is over (all players have acted), the players' states are moved to history and the next round starts.
+        # this is because players can see actions from entire round, not just their own turn.
         if self.state.player_to_act_next == len(self.state.players):
             self.state.player_to_act_next = 0
             self.state.round_number += 1
@@ -103,14 +109,19 @@ class GameEngine(BaseModel):
                 and self.state.game_stage == GamePhase.DISCUSS
             ):
                 self.go_to_voting()
+                
+        # Skip dead players. This even works if dead players are at the end of round or at the beginning
+        # We check if next player is dead, and if so, we update the player_to_act_next to the next player
         while (
             self.state.players[self.state.player_to_act_next].state.life
-            == PlayerState.DEAD
+            != PlayerState.ALIVE
         ):
             self.state.player_to_act_next = (self.state.player_to_act_next + 1) % len(
                 self.state.players
             )
-            print(f"Player to act next set to: {self.state.player_to_act_next}")
+            self.state.log_action(f"Player to act next set to: {self.state.player_to_act_next}")
+            # if we happen to reach the end of the list, we need to start from the beginning and update the round number
+            # This is the same code as above, but we need to repeat it here, because we might have skipped dead players at the end
             if self.state.player_to_act_next == 0:
                 self.state.round_number += 1
                 for player in self.state.players:
@@ -126,11 +137,12 @@ class GameEngine(BaseModel):
         return False
 
     def perform_action_step(self) -> None:
+        """Handles the action phase of the game, where players take actions like moving, completing tasks, or killing."""
         chosen_action = self.get_player_action()
         self.update_game_state(chosen_action)
 
     def get_player_action(self) -> GameAction:
-        """Get actions from all alive players."""
+        """Gets the action chosen by the current player. LLMs are called here."""
         choosen_action: GameAction = None
         # Use round_number and current_player_index to determine the player's turn
         current_player = self.state.players[self.state.player_to_act_next]
@@ -141,18 +153,15 @@ class GameEngine(BaseModel):
         return choosen_action
 
     def update_game_state(self, action: GameAction) -> None:
-        """
-        Update game and other player states based on action taken by player.
-        Players can see actions of other players in the same room
-        """
+        """Updates the game state based on the action taken by a player."""
         # REPORT
         if action.type == GameActionType.REPORT:
-            self.broadcast_history("report", f"{action.player} reported a dead body")
+            self.broadcast_observation("report", f"{action.player} reported a dead body")
             reported_players = self.state.get_dead_players_in_location(
                 action.player.state.location
             )
             assert reported_players
-            self.broadcast_history(
+            self.broadcast_observation(
                 "dead_players",
                 f"Dead players found: {reported_players}",
             )
@@ -198,6 +207,7 @@ class GameEngine(BaseModel):
                 player.state.player_in_room = "You are alone in the room"
 
     def get_actions(self, player: Player) -> list[GameAction]:
+        """Gets a list of possible actions for a given player."""
         actions = []
 
         # actions for WAIT
@@ -242,6 +252,7 @@ class GameEngine(BaseModel):
         return actions
 
     def perform_discussion_step(self) -> None:
+        """Handles the discussion phase of the game, where players can chat and discuss their suspicions. LLMs are called here."""
         player = self.state.players[self.state.player_to_act_next]
         player.state.observations.append(
             f"Discussion: [System]: You have {self.state.round_of_discussion_start+game_consts.NUM_CHATS - self.state.round_number} rounds left to discuss, then you will vote"
@@ -251,6 +262,8 @@ class GameEngine(BaseModel):
         self.broadcast_message(answer_str)
 
     def go_to_voting(self) -> None:
+        """Initiates the voting phase of the game, where players vote to banish a suspect. 
+        LLMs are called here. There is no step. Voting is itself an entire step"""
         dead_players = [
             player
             for player in self.state.players
@@ -282,30 +295,31 @@ class GameEngine(BaseModel):
         votes_counter = Counter(votes.values())
         two_most_common = votes_counter.most_common(2)
         if len(two_most_common) > 1 and two_most_common[0][1] == two_most_common[1][1]:
-            self.broadcast_history("vote", "It's a tie! No one will be banished")
+            self.broadcast_observation("vote", "It's a tie! No one will be banished")
         else:
             player_to_banish = [x for x in self.state.players if x.name == two_most_common[0][0]][0]
             assert isinstance(
                 player_to_banish, Player
             )  # Ensure that the expression is of type Player
             if player_to_banish == self.nobody:
-                self.broadcast_history("vote", "Nobody was banished!")
+                self.broadcast_observation("vote", "Nobody was banished!")
             elif player_to_banish.is_impostor:
-                self.broadcast_history(
+                self.broadcast_observation(
                     "vote", f"{player_to_banish} was banished! They were an impostor"
                 )
             else:
-                self.broadcast_history(
+                self.broadcast_observation(
                     "vote", f"{player_to_banish} was banished! They were a crewmate"
                 )
             player_to_banish.state.life = PlayerState.DEAD
         for player, target in votes.items():
-            self.broadcast_history(f"vote {player}", f"{player} voted for {target}")
+            self.broadcast_observation(f"vote {player}", f"{player} voted for {target}")
 
         self.state.set_stage(GamePhase.ACTION_PHASE)
         self.mark_dead_players_as_reported()
 
     def get_vote_actions(self, player: Player) -> list[GameAction]:
+        """Gets a list of possible voting actions for a given player."""
         actions = []
         actions.append(
             GameAction(type=GameActionType.VOTE, player=player, target=self.nobody)
@@ -319,23 +333,24 @@ class GameEngine(BaseModel):
                 )
         return actions
 
-    def broadcast(self, key: str, message: str) -> None:
+    def broadcast_observation(self, key: str, message: str) -> None:
+        """Broadcasts an observation to all alive players. Players state observations are updated."""
         self.state.log_action(f"{key}: {message}")
         for player in self.state.get_alive_players():
             player.state.observations.append(f"{key}: {message}")
 
-    def broadcast_history(self, key: str, message: str) -> None:
-        self.broadcast(key, message)
-
     def broadcast_message(self, message: str) -> None:
+        """Broadcasts a chat message to all alive players."""
         self.broadcast("chat", message)
 
     def mark_dead_players_as_reported(self) -> None:
+        """Marks all dead players as reported to avoid double reporting."""
         for player in self.state.players:
             if player.state.life == PlayerState.DEAD:
                 player.state.life = PlayerState.DEAD_REPORTED
 
     def check_impostors_win(self) -> bool:
+        """Checks if the impostors have won the game."""
         crewmates_alive = [
             p for p in self.state.get_alive_players() if not p.is_impostor
         ]
@@ -350,9 +365,11 @@ class GameEngine(BaseModel):
         return len(impostors_alive) >= len(crewmates_alive)
 
     def check_crewmates_win(self) -> bool:
-        return self.check_win_by_tasks() or self.check_crewmate_win_by_voting()
+        """Checks if the crewmates have won the game."""
+        return self.check_win_by_tasks() or self.check_crewmate_win_by_voting() or self.check_game_over_action_crewmate()
 
     def check_win_by_tasks(self) -> bool:
+        """Checks if the crewmates have won by completing all tasks."""
         crewmates_alive = [
             p for p in self.state.get_alive_players() if not p.is_impostor
         ]
@@ -361,17 +378,20 @@ class GameEngine(BaseModel):
         )
 
     def check_crewmate_win_by_voting(self) -> bool:
+        """Checks if the crewmates have won by banishing all impostors."""
         impostors_alive = [p for p in self.state.get_alive_players() if p.is_impostor]
         return len(impostors_alive) == 0
 
     def check_game_over(self) -> bool:
+        """Checks if the game is over."""
         return self.check_impostors_win() or self.check_crewmates_win()
 
     def check_game_over_action_crewmate(self) -> bool:
+        """Checks if the game is over based on crewmate actions (turns passed or tasks completed)."""
         crewmates_alive = [
             p for p in self.state.get_alive_players() if not p.is_impostor
         ]
-        turns_passed = max(len(player.history) for player in crewmates_alive)
+        turns_passed = max(len(player.history.rounds) for player in crewmates_alive)
         completed_tasks = [
             task.completed for player in crewmates_alive for task in player.state.tasks
         ]
@@ -392,25 +412,25 @@ class GameEngine(BaseModel):
         return False
 
     def _save_playthrough(self) -> None:
+        """Saves the game playthrough to a file if specified."""
         if self.state.save_playthrough:
             with open(self.state.save_playthrough, "w") as f:
                 f.write("\n".join(self.state.playthrough))
 
     def end_game(self) -> None:
+        """Ends the game and saves the final state."""
         if self.check_crewmate_win_by_voting():
-            print("Crewmates win! All impostors were banished!")
             self.state.log_action("Crewmates win! All impostors were banished!")
         elif self.check_win_by_tasks():
-            print("Crewmates win! All tasks were completed!")
             self.state.log_action("Crewmates win! All tasks were completed!")
         elif self.check_impostors_win():
-            print("Impostors win!")
             self.state.log_action("Impostors win!")
 
         self.save_state()
         self._save_playthrough()
 
     def save_state(self) -> None:
+        """Saves the current game state to a file."""
         with open(game_consts.STATE_FILE, "w") as f:
             for player in self.state.players:
                 if isinstance(player, AIPlayer):
@@ -424,9 +444,7 @@ class GameEngine(BaseModel):
             # yaml.dump(self.state.model_dump(), f)
 
     def load_state(self) -> bool:
-        """
-        :return: True if state was loaded successfully, False otherwise
-        """
+        """Loads a previously saved game state from a file."""
         try:
             with open(game_consts.STATE_FILE, "r") as f:
                 data = json.load(f)
@@ -445,6 +463,7 @@ class GameEngine(BaseModel):
             return False
 
     def _create_player_from_dict(self, player_data: dict) -> Player:
+        """Creates a Player object from a dictionary representation."""
         # Deserialize tasks for the player's current state
         player_data["state"]["tasks"] = [
             self._create_task_from_dict(task_data)
@@ -466,13 +485,16 @@ class GameEngine(BaseModel):
             return AIPlayer(**player_data)
 
     def _create_task_from_dict(self, task_data: dict) -> Task:
+        """Creates a Task object from a dictionary representation."""
         if "turns_left" in task_data:
             return LongTask(**task_data)
         else:
             return ShortTask(**task_data)
 
     def __repr__(self):
-        return f"GameEngine | Players: {self.state.players} | Stage: {self.state.game_stage}"
+        """Returns a string representation of the GameEngine object."""
+        return self.to_dict()
 
     def to_dict(self):
+        """Returns a dictionary representation of the GameEngine object."""
         return self.state.to_dict()

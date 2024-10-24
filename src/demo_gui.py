@@ -8,6 +8,8 @@ from game.gui_handler import GUIHandler
 from game.game_state import GameState
 from types import SimpleNamespace as Namespace
 from game.players.fake_ai import FakeAIPlayer
+from game.models.engine import GamePhase
+from game.chat_analyzer import ChatAnalyzer
 
 
 
@@ -20,7 +22,7 @@ from game.players.fake_ai import FakeAIPlayer
 def main():
     st.title("Among Us Game - susGPT")
     gui_handler = GUIHandler()
-    game_engine = GameEngine(gui_handler=gui_handler)
+    game_engine = GameEngine()
 
     model_name = "gpt-4o-mini"  # Or any other suitable model name
 
@@ -34,6 +36,11 @@ def main():
         return
     
     game_engine.init_game()
+    game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
+    
+    if game_engine.state.game_stage == GamePhase.MAIN_MENU:
+        st.warning("Viewing the game state only. No actions are being performed.")
+    gui_handler.update_gui(game_engine.state)
     game_engine.state.DEBUG = True
 
     while not game_engine.perform_step():
@@ -41,6 +48,10 @@ def main():
         # time.sleep(5)
     gui_handler.update_gui(game_engine.state)
     st.text("Game has ended")
+    chat_analyzer = ChatAnalyzer(players=game_engine.state.players)
+    # chat_analyzer.analyze() returns Dict[str, Dict[str, int]]: with player name as key and dict of persuasive tricks as value with count as value
+    # results = chat_analyzer.analyze()
+    # st.write(results)
     st.json(game_engine.to_dict(), expanded=False) # Display final game state
     st.text("\n".join(game_engine.state.playthrough)) # Display final game log
 

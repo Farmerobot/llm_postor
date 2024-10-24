@@ -116,10 +116,6 @@ class GUIHandler(BaseModel):
     ("Wojtek for details on his accusation against me", "Information Manipulation"),
     " to clarify the situation."
 )
-            chat_analyzer = ChatAnalyzer(players=game_state.players)
-            # chat_analyzer.analyze() returns Dict[str, Dict[str, int]]: with player name as key and dict of persuasive tricks as value with count as value
-            results = chat_analyzer.analyze()
-            st.write(results)
         self.game_log_json.json(game_state.to_dict())
         
     def _display_short_player_info(self, player: Player, placeholder: DeltaGenerator):
