@@ -1,15 +1,15 @@
-from src.game.players.ai import AIPlayer
-from src.game.players.base_player import PlayerRole
-from src.game.players.human import HumanPlayer
-from src.game.utils import get_impostor_tasks, get_random_tasks
-from unittest.mock import MagicMock
-from src.game.models.tasks import ShortTask, LongTask
-from src.game.agents.adventure_agent import AdventureAgent
-from src.game.agents.discussion_agent import DiscussionAgent
-from src.game.agents.voting_agent import VotingAgent
-from src.game.models.engine import GameLocation, GamePhase
-
 import copy
+from unittest.mock import MagicMock
+from llm_postor.game.players.ai import AIPlayer
+from llm_postor.game.players.base_player import PlayerRole
+from llm_postor.game.players.human import HumanPlayer
+from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
+from llm_postor.game.models.tasks import ShortTask, LongTask
+from llm_postor.game.agents.adventure_agent import AdventureAgent
+from llm_postor.game.agents.discussion_agent import DiscussionAgent
+from llm_postor.game.agents.voting_agent import VotingAgent
+from llm_postor.game.models.engine import GameLocation, GamePhase
+
 
 def create_mock_task(completed=False, location=GameLocation.LOC_CAFETERIA):
     task = MagicMock(spec=ShortTask)

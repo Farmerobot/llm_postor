@@ -1,10 +1,8 @@
 import random
 from typing import List
-
 from pydantic import Field
 
-from game.players.base_player import Player, PlayerRole
-
+from llm_postor.game.players.base_player import Player, PlayerRole
 
 class FakeAIPlayer(Player):
     llm_model_name: str

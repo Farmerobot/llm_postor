@@ -1,14 +1,13 @@
-from typing import Any, List, Dict, Optional
 import streamlit as st
-from game.game_state import GameState
+from typing import Any, List, Dict, Optional
 from pydantic import BaseModel, Field
-from game.players.base_player import Player, PlayerRole
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 
-from game.models.history import PlayerState
-from game.chat_analyzer import ChatAnalyzer
-
+from llm_postor.game.game_state import GameState
+from llm_postor.game.players.base_player import Player, PlayerRole
+from llm_postor.game.models.history import PlayerState
+from llm_postor.game.chat_analyzer import ChatAnalyzer
 
 class GUIHandler(BaseModel):
     player_states_placeholders: List[DeltaGenerator] = Field(default_factory=list)

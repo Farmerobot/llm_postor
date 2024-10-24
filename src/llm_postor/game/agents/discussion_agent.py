@@ -1,8 +1,9 @@
 from typing import List, Any
 from .base_agent import Agent
 from langchain.schema import HumanMessage
-from game.llm_prompts import DISCUSSION_TEMPLATE, DISCUSSION_RESPONSE_TEMPLATE
 
+from llm_postor.game.llm_prompts import DISCUSSION_TEMPLATE
+from llm_postor.game.llm_prompts import DISCUSSION_RESPONSE_TEMPLATE
 
 class DiscussionAgent(Agent):
     def update_state(

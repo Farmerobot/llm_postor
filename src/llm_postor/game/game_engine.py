@@ -1,26 +1,25 @@
+import random
+import json
 import streamlit as st
-from game.game_state import GameState
-from game.models.engine import (
+from typing import Any, List
+from collections import Counter
+from pydantic import BaseModel, Field
+
+from llm_postor.game import consts as game_consts
+from llm_postor.game.game_state import GameState
+from llm_postor.game.models.engine import (
     GamePhase,
     GameLocation,
     DOORS,
 )
-from game.players.base_player import Player, PlayerRole
-from game.models.history import PlayerState
-from game.players.human import HumanPlayer
-from game.models.action import GameAction, GameActionType
-from typing import Any, List
-import random
-from game import consts as game_consts
-from collections import Counter
-from pydantic import BaseModel, Field
-import json
-
-from game.players.ai import AIPlayer
-from game.players.fake_ai import FakeAIPlayer
-from game.models.tasks import ShortTask, LongTask, Task
-from game.agents.base_agent import Agent
-
+from llm_postor.game.players.base_player import Player, PlayerRole
+from llm_postor.game.models.history import PlayerState
+from llm_postor.game.players.human import HumanPlayer
+from llm_postor.game.models.action import GameAction, GameActionType
+from llm_postor.game.players.ai import AIPlayer
+from llm_postor.game.players.fake_ai import FakeAIPlayer
+from llm_postor.game.models.tasks import ShortTask, LongTask, Task
+from llm_postor.game.agents.base_agent import Agent
 
 class GameEngine(BaseModel):
     """Manages the game logic, including player actions, game state transitions, and win conditions."""

@@ -1,8 +1,7 @@
 from random import sample
-from game import consts
-from game.models.engine import GameLocation
-from game.models.tasks import ShortTask, LongTask, Task
-
+from llm_postor.game import consts
+from llm_postor.game.models.engine import GameLocation
+from llm_postor.game.models.tasks import ShortTask, LongTask, Task
 
 def get_random_tasks() -> list[Task]:
     short_tasks = get_short_tasks()

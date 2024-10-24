@@ -1,26 +1,26 @@
+import copy
 from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Dict, List, Optional, Any
 from pydantic import BaseModel, Field, ConfigDict
-from game.models.engine import (
+
+from llm_postor.game.models.engine import (
     GamePhase,
     GameLocation,
 )
-import game.consts as game_consts
-from game.utils import get_impostor_tasks, get_random_tasks
-from game.models.tasks import Task
-from game.models.history import PlayerHistory, RoundData
-from game.agents.adventure_agent import AdventureAgent
-from game.agents.discussion_agent import DiscussionAgent
-from game.agents.voting_agent import VotingAgent
-import copy
+import llm_postor.game.consts as game_consts
+from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
+from llm_postor.game.models.tasks import Task
+from llm_postor.game.models.history import PlayerHistory, RoundData
+from llm_postor.game.agents.adventure_agent import AdventureAgent
+from llm_postor.game.agents.discussion_agent import DiscussionAgent
+from llm_postor.game.agents.voting_agent import VotingAgent
 
 class PlayerRole(str, Enum):
     CREWMATE = "Crewmate"
     IMPOSTOR = "Impostor"
     GHOST = "Ghost"
     UNKNOWN = "Unknown"
-
 
 class Player(BaseModel, ABC):
     name: str

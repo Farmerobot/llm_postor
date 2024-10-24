@@ -1,10 +1,11 @@
+import re
 from typing import List, Dict
 from pydantic import BaseModel
-from game.players.base_player import Player
 from langchain_openai import ChatOpenAI
-from game.llm_prompts import PERSUASION_TECHNIQUES
 from langchain.schema import HumanMessage
-import re
+
+from llm_postor.game.players.base_player import Player
+from llm_postor.game.llm_prompts import PERSUASION_TECHNIQUES
 
 class ChatAnalyzer(BaseModel):
     players: List[Player]

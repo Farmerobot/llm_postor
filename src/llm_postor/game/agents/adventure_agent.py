@@ -1,13 +1,11 @@
+import re
 from typing import List, Any
-
+from langchain.schema import HumanMessage
 from langchain_openai import ChatOpenAI
 
-from game.consts import ASCII_MAP
-from .base_agent import Agent
-from langchain.schema import HumanMessage
-from game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
-import re
-
+from llm_postor.game.agents.base_agent import Agent
+from llm_postor.game.consts import ASCII_MAP
+from llm_postor.game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 
 class AdventureAgent(Agent):
     def update_state(

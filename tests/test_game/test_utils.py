@@ -1,8 +1,8 @@
 import pytest
-from src.game.utils import get_random_tasks, get_impostor_tasks, get_short_tasks, get_long_tasks
-from src.game.models.engine import GameLocation
-from game.models.tasks import ShortTask, LongTask
-from src.game.consts import NUM_SHORT_TASKS, NUM_LONG_TASKS
+from llm_postor.game.utils import get_random_tasks, get_impostor_tasks, get_short_tasks, get_long_tasks
+from llm_postor.game.models.engine import GameLocation
+from llm_postor.game.models.tasks import ShortTask, LongTask
+from llm_postor.game.consts import NUM_SHORT_TASKS, NUM_LONG_TASKS
 
 def test_get_random_tasks_length():
     tasks = get_random_tasks()

@@ -1,10 +1,10 @@
 import os
 import json
 from typing import List
-
 from langchain_openai import ChatOpenAI
-from game.llm_prompts import ANNOTATION_TEMPLATE
 from langchain.schema import HumanMessage
+
+from llm_postor.game.llm_prompts import ANNOTATION_TEMPLATE
 
 def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4o-mini") -> str:
     """
