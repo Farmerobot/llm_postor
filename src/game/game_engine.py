@@ -65,11 +65,12 @@ class GameEngine(BaseModel):
             )
 
     def init_game(self, game_state: GameState) -> None:
-        self.state.set_stage(GamePhase.ACTION_PHASE)
+        self.state = game_state
 
     def init_game(self) -> None:
-        self.state.set_stage(GamePhase.ACTION_PHASE)
-        self.load_state()
+        assert self.state.players
+        if not self.load_state():
+            self.state.set_stage(GamePhase.ACTION_PHASE)
 
     def perform_step(self) -> bool:
         """
@@ -422,7 +423,10 @@ class GameEngine(BaseModel):
                     player.init_agents()
             # yaml.dump(self.state.model_dump(), f)
 
-    def load_state(self) -> None:
+    def load_state(self) -> bool:
+        """
+        :return: True if state was loaded successfully, False otherwise
+        """
         try:
             with open(game_consts.STATE_FILE, "r") as f:
                 data = json.load(f)
@@ -437,6 +441,8 @@ class GameEngine(BaseModel):
                 )  # Update GameState with deserialized players
         except FileNotFoundError:
             print("No saved state found. Starting new game.")
+        except Exception as e:
+            return False
 
     def _create_player_from_dict(self, player_data: dict) -> Player:
         # Deserialize tasks for the player's current state

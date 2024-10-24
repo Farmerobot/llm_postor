@@ -19,12 +19,17 @@ class GameState(BaseModel):
         self.players.append(player)
 
     def set_stage(self, stage: GamePhase):
+        if stage == self.game_stage:
+            print(f"Game is already in stage {stage}. Skipping")
+            return
         self.game_stage = stage
         for player in self.players:
             player.set_stage(stage)
         if stage == GamePhase.DISCUSS:
             self.player_to_act_next = 0
             self.round_of_discussion_start = self.round_number
+        elif stage == GamePhase.ACTION_PHASE:
+            self.player_to_act_next = 0
 
     def log_action(self, action: str):
         self.playthrough.append(action)
