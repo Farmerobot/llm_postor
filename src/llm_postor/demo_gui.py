@@ -1,14 +1,9 @@
-import json
-import time
 import streamlit as st
 from openai import OpenAIError
-from types import SimpleNamespace as Namespace
 
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.ai import AIPlayer
 from llm_postor.game.gui_handler import GUIHandler
-from llm_postor.game.game_state import GameState
-from llm_postor.game.players.fake_ai import FakeAIPlayer
 from llm_postor.game.models.engine import GamePhase
 from llm_postor.game.chat_analyzer import ChatAnalyzer
 
