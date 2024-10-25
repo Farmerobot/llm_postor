@@ -7,6 +7,7 @@ from llm_postor.game.agents.discussion_agent import DiscussionAgent
 from llm_postor.game.agents.voting_agent import VotingAgent
 from llm_postor.game.players.base_player import Player, PlayerRole
 from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.config import OPENAI_API_KEY, GOOGLE_GENAI_API_KEY
 
 class AIPlayer(Player):
     llm_model_name: str
@@ -14,16 +15,28 @@ class AIPlayer(Player):
     def __init__(self, **data):
         super().__init__(**data)  # Initialize Player fields first
         self.init_agents()
-        
+
     def init_agents(self):
         llm = None
         if self.llm_model_name.startswith("gpt"):
-            llm = ChatOpenAI(model=self.llm_model_name, temperature=0.1)
+            if not OPENAI_API_KEY:
+                raise ValueError("Missing OpenAI API key. Please set OPENAI_API_KEY in your environment.")
+            llm = ChatOpenAI(
+                model=self.llm_model_name,
+                temperature=0.1,
+                api_key=OPENAI_API_KEY  # Use the OpenAI API key
+            )
         elif self.llm_model_name.startswith("gemini"):
+            if not GOOGLE_GENAI_API_KEY:
+                raise ValueError("Missing Google GenAI API key. Please set GOOGLE_GENAI_API_KEY in your environment.")
             llm = ChatGoogleGenerativeAI(
                 model=self.llm_model_name,
                 temperature=0.1,
+                api_key=GOOGLE_GENAI_API_KEY  # Use the Google GenAI API key
             )
+        else:
+            raise ValueError(f"Unsupported model name '{self.llm_model_name}'. Please use a valid model prefix.")
+        print(OPENAI_API_KEY)
         role_str = self.role.value
         self.adventure_agent = AdventureAgent(
             llm=llm, player_name=self.name, role=role_str

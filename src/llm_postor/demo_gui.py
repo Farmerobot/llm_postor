@@ -7,8 +7,10 @@ from llm_postor.game.gui_handler import GUIHandler
 from llm_postor.game.models.engine import GamePhase
 from llm_postor.game.chat_analyzer import ChatAnalyzer
 
-# To run this script, you need to poetry install and then run the following command:
-# streamlit run src/demo_gui.py
+# To run this script, you need to 
+# `poetry install` 
+# and then run the following command:
+# `poetry run run-gui`
 
 def main():
     st.title("Among Us Game - LLMPostor")
