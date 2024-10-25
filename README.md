@@ -39,17 +39,21 @@ This project requires Python 3.11 or higher.
 If you don't have Poetry installed, you can install it by following these steps:
 
 - For Unix/macOS:
+
 ```bash
   curl -sSL https://install.python-poetry.org | python3 -
 ```
+
 - For Windows:
 
   Visit the official [Poetry installation page](https://python-poetry.org/docs/#installation) for Windows-specific instructions.
 
 Once installed, verify Poetry's installation by running:
+
 ```bash
   poetry --version
 ```
+
 ### 2. Clone the Repository and Install Dependencies
 
 - Clone the repository:
@@ -78,7 +82,7 @@ Once the dependencies are installed, activate the virtual environment:
 To run the simulation with the GUI:
 
 ```bash
-  poetry run run-gui
+  poetry run run_gui
 ```
 
 ## Configuration
