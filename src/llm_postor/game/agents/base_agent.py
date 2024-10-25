@@ -47,13 +47,18 @@ class Agent(ABC, BaseModel):
         self.state.token_usage.input_tokens += msg["input_tokens"]
         self.state.token_usage.output_tokens += msg["output_tokens"]
         self.state.token_usage.total_tokens += msg["total_tokens"]
-        self.state.token_usage.cache_read += msg["input_token_details"]["cache_read"]
+        if "cache_read" in msg["input_token_details"]:
+            self.state.token_usage.cache_read += msg["input_token_details"]["cache_read"]
         self.update_cost()
         
     def update_cost(self):
-        self.state.token_usage.cost += self.state.token_usage.input_tokens * TOKEN_COSTS[self.llm.model_name]["input_tokens"] 
-        self.state.token_usage.cost += self.state.token_usage.output_tokens * TOKEN_COSTS[self.llm.model_name]["output_tokens"]
-        self.state.token_usage.cost += self.state.token_usage.cache_read * TOKEN_COSTS[self.llm.model_name]["cache_read"]
+        for_model = self.llm.model_name
+        if for_model not in TOKEN_COSTS:
+            for_model = "gpt-4o-mini"
+        
+        self.state.token_usage.cost += self.state.token_usage.input_tokens * TOKEN_COSTS[for_model]["input_tokens"] 
+        self.state.token_usage.cost += self.state.token_usage.output_tokens * TOKEN_COSTS[for_model]["output_tokens"]
+        self.state.token_usage.cost += self.state.token_usage.cache_read * TOKEN_COSTS[for_model]["cache_read"]
         
 
     def to_dict(self):

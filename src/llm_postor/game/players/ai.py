@@ -16,14 +16,12 @@ class AIPlayer(Player):
         self.init_agents()
         
     def init_agents(self):
-        llm = None
-        if self.llm_model_name.startswith("gpt"):
-            llm = ChatOpenAI(model=self.llm_model_name, temperature=0.1)
-        elif self.llm_model_name.startswith("gemini"):
-            llm = ChatGoogleGenerativeAI(
-                model=self.llm_model_name,
-                temperature=0.1,
-            )
+        llm = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key="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",
+            model=self.llm_model_name, 
+            temperature=0.1
+        )
         role_str = self.role.value
         self.adventure_agent = AdventureAgent(
             llm=llm, player_name=self.name, role=role_str
