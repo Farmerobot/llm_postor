@@ -1,3 +1,4 @@
+from os import getenv
 from typing import List
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -18,7 +19,7 @@ class AIPlayer(Player):
     def init_agents(self):
         llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
-            api_key="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",
+            api_key=getenv("OPENROUTER_API_KEY"),
             model=self.llm_model_name, 
             temperature=0.1
         )
