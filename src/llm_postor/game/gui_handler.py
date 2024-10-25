@@ -47,7 +47,7 @@ class GUIHandler(BaseModel):
 
         for i, (player, sidebar) in enumerate(zip(game_state.players, self.sidebar)):
             with sidebar:
-                self._display_short_player_info(player, st)
+                self._display_short_player_info(player, i==game_state.player_to_act_next, st)
         with self.game_log_placeholder.container():
             self._display_map(game_state)
             st.json(game_state.get_total_cost())
@@ -55,9 +55,9 @@ class GUIHandler(BaseModel):
             self._display_annotated_text(game_state)
         self.game_log_json.json(game_state.to_dict())
 
-    def _display_short_player_info(self, player: Player, placeholder: DeltaGenerator):
+    def _display_short_player_info(self, player: Player, current: bool, placeholder: DeltaGenerator):
         with placeholder.container(border=True):
-            self._display_name_role_status(player)
+            self._display_name_role_status(player, current)
             self._display_tasks_progress(player)
             with st.expander("Info"):
                 self._display_location(player)
@@ -78,17 +78,18 @@ class GUIHandler(BaseModel):
             self._display_recent_actions(player)
             self._display_tasks(player)
 
-    def _display_name_role_status(self, player: Player):
+    def _display_name_role_status(self, player: Player, current: bool):
         status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
         role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
+        current_icon = "⭐️" if current else ""
         complete_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
         if player.role == PlayerRole.IMPOSTOR:
             st.write(
-                f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon} ⏳{player.kill_cooldown}"
+                f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon} ⏳{player.kill_cooldown} {current_icon}"
             )
         else:
             st.write(
-                f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon}"
+                f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon} {current_icon}"
             )
 
     def _display_status(self, player: Player):
@@ -191,25 +192,26 @@ class GUIHandler(BaseModel):
         # Add player markers
         def update_player_markers(game_state: GameState):
             fig.data = []  # Clear existing traces
-            for player in game_state.players:
+            for i, player in enumerate(game_state.players):
                 x, y = ROOM_COORDINATES[player.state.location]
+                marker_color = "yellow" if player.role == PlayerRole.CREWMATE else "red"
+                marker_size = 15
+                marker_symbol = "circle" if player.role == PlayerRole.CREWMATE else "square"
+
+                # Highlight the player to act next
+                if i == game_state.player_to_act_next:
+                    marker_size = 25
+                    marker_symbol = "star"
+
                 fig.add_trace(
                     go.Scatter(
                         x=[x * 200 + random.randint(-20, 20)],
                         y=[y * 200 + random.randint(-20, 20)],
                         mode="markers",
                         marker=dict(
-                            color=(
-                                "yellow"
-                                if player.role == PlayerRole.CREWMATE
-                                else "red"
-                            ),
-                            size=15,
-                            symbol=(
-                                "circle"
-                                if player.role == PlayerRole.CREWMATE
-                                else "square"
-                            ),
+                            color=marker_color,
+                            size=marker_size,
+                            symbol=marker_symbol,
                         ),
                         name=player.name,
                         customdata=[

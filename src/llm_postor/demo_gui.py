@@ -17,7 +17,8 @@ def main():
     gui_handler = GUIHandler()
     game_engine = GameEngine()
 
-    model_name = "gpt-4o-mini"  # Or any other suitable model name
+    # model_name = "openai/gpt-4o-mini"  # Or any other suitable model name
+    model_name = "google/gemini-flash-1.5-exp"  # Or any other suitable model name
 
     player_names = ["Mateusz", "Andrii", "Vasyl", "Marcin", "Dariusz", "Iwo"]
     try:
