@@ -37,9 +37,6 @@ Game Context:
 Your Current Objectives:
 {tasks}
 
-Current Map Layout:
-{ASCII_MAP}
-
 Actions You Can Take:
 {actions}
 

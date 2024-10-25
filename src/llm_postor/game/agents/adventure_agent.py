@@ -24,9 +24,8 @@ class AdventureAgent(Agent):
         plan_prompt = ADVENTURE_PLAN_TEMPLATE.format(
             player_name=self.player_name,
             player_role=self.role,
-            ASCII_MAP=ASCII_MAP,
             history=self.state.history,
-            tasks=self.state.current_tasks,
+            tasks=[str(task) for task in self.state.current_tasks],
             actions="<action>"
             + "</action><action>".join(self.state.available_actions)
             + "</action>",

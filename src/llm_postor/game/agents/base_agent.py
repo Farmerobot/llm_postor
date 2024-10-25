@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any, List
+from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
 from llm_postor.game.agents.usage_metadata import UsageMetadata
@@ -26,7 +27,7 @@ class AgentState(BaseModel):
 
 class Agent(ABC, BaseModel):
     # has to be Any because of MagicMock. TODO: Fix test integration with pydanitc
-    llm: Any  # Optional[ChatOpenAI | ChatGoogleGenerativeAI] = None
+    llm: ChatOpenAI = None
     state: AgentState = Field(default_factory=AgentState)
     responses: List[str] = Field(default_factory=list)
     player_name: str = ""
@@ -54,7 +55,8 @@ class Agent(ABC, BaseModel):
     def update_cost(self):
         for_model = self.llm.model_name
         if for_model not in TOKEN_COSTS:
-            for_model = "gpt-4o-mini"
+            print(f"Model {for_model} not found in TOKEN_COSTS. defaulting to openai/gpt-4o-mini")
+            for_model = "openai/gpt-4o-mini"
         
         self.state.token_usage.cost += self.state.token_usage.input_tokens * TOKEN_COSTS[for_model]["input_tokens"] 
         self.state.token_usage.cost += self.state.token_usage.output_tokens * TOKEN_COSTS[for_model]["output_tokens"]

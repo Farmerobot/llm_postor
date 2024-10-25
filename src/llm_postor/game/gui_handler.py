@@ -121,18 +121,18 @@ class GUIHandler(BaseModel):
         )
 
     def _display_action_taken(self, player: Player):
-        action = player.history.rounds[-1].response
+        action = player.state.response
         if action.isdigit():
-            st.write(f"Action Taken: {player.history.rounds[-1].actions[int(action)]}")
+            st.write(f"Action Taken: {player.state.actions[int(action)]}")
         else:
             st.write(f"Action Taken: {action}")
 
     def _display_action_result(self, player: Player):
-        st.write(f"Action Result: {player.history.rounds[-1].action_result}")
+        st.write(f"Action Result: {player.state.action_result}")
 
     def _display_recent_actions(self, player: Player):
         st.write("Seen Actions:")
-        for action in player.history.rounds[-1].seen_actions:
+        for action in player.state.seen_actions:
             st.write(f"- {action}")
 
     def _display_map(self, game_state: GameState):
