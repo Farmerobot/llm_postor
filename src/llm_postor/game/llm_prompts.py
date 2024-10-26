@@ -104,9 +104,10 @@ Your discussion points:
 Your name is {player_name}. You are a {player_role}.
 Respond to the recent messages. Your mesasage should not exceed one sentence and should be informative and short.
 Very short and concise responses are expected because time is important in fast discussions.
+Make sure the response feels natural, fits the context of the game and actually responds to last messages.
 
 
-Your one sentence response as {player_role}:
+Your short response:
 """
 
 VOTING_TEMPLATE = GAME_CONTEXT + """
