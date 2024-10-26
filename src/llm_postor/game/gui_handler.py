@@ -6,35 +6,41 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 import plotly.graph_objects as go
-
 from llm_postor.game.game_state import GameState
+from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.base_player import Player, PlayerRole
 from llm_postor.game.models.history import PlayerState
 from llm_postor.game.models.engine import ROOM_COORDINATES
 import plotly.graph_objects as go
+from llm_postor.game.chat_analyzer import ChatAnalyzer
 
 
 class GUIHandler(BaseModel):
-    player_states_placeholders: List[DeltaGenerator] = Field(default_factory=list)
-    game_log_placeholder: Optional[DeltaGenerator] = None
-    game_log_json: Optional[DeltaGenerator] = None
-    cols: List[DeltaGenerator] = Field(default_factory=list)
-    model_config = {"arbitrary_types_allowed": True}
 
-    def display_gui(self, game_state: GameState):
+    def display_gui(self, game_engine: GameEngine, chat_analyzer: ChatAnalyzer):
+        st.title("Among Us Game - LLMPostor")
         with st.sidebar:
-            for i, player in enumerate(game_state.players):
+            for i, player in enumerate(game_engine.state.players):
                 with st.empty():
                     self._display_short_player_info(
-                        player, i == game_state.player_to_act_next, st
+                        player, i == game_engine.state.player_to_act_next, st
                     )
 
-        with st.container():
-            self._display_map(game_state)
-            st.json(game_state.get_total_cost())
-            st.text("\n".join(game_state.playthrough))
-            self._display_annotated_text(game_state)
-        st.json(game_state.to_dict())
+
+        # Create a button to trigger the next step
+        if st.button("Make Step"):
+            game_engine.perform_step()
+            st.rerun()
+        self._display_map(game_engine.state)
+        st.json(game_engine.state.get_total_cost())
+        st.text("\n".join(game_engine.state.playthrough))
+        self._display_annotated_text(game_engine.state)
+        st.json(game_engine.state.to_dict())
+
+        # Analyze Chat Button
+        if st.button("Analyze Chat"):
+            results = chat_analyzer.analyze()
+            st.write(results)
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator

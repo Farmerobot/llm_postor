@@ -29,28 +29,11 @@ def load_game_engine():
     return game_engine
 
 def main():
-    st.title("Among Us Game - LLMPostor")
     gui_handler = GUIHandler()
     game_engine = load_game_engine()
-    make_step = False
-
-    # Create a button to trigger the next step
-    if st.button("Make Step"):
-        make_step = True
-
-    if make_step:
-        game_engine.perform_step()
-        make_step = False
-        st.rerun()
-
-    gui_handler.display_gui(game_engine.state)
-    st.text("Game has ended")
     chat_analyzer = ChatAnalyzer(players=game_engine.state.players)
-    # chat_analyzer.analyze() returns Dict[str, Dict[str, int]]: with player name as key and dict of persuasive tricks as value with count as value
-    # results = chat_analyzer.analyze()
-    # st.write(results)
-    st.json(game_engine.state.to_dict(), expanded=False) # Display final game state
-    st.text("\n".join(game_engine.state.playthrough)) # Display final game log
+
+    gui_handler.display_gui(game_engine, chat_analyzer)
 
 if __name__ == "__main__":
     main()
