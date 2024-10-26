@@ -67,7 +67,6 @@ class GameEngine(BaseModel):
 
     def init_game(self) -> None:
         """Initializes the game. Tries to set state from file, otherwise starts a new game."""
-        assert self.state.players
         if not self.load_state():
             self.state.set_stage(GamePhase.ACTION_PHASE)
 

@@ -12,44 +12,44 @@ from llm_postor.game.chat_analyzer import ChatAnalyzer
 # and then run the following command:
 # `poetry run run-gui`
 
+@st.cache_resource
+def load_game_engine():
+    game_engine = GameEngine()
+    
+    # Only for new game. Saved games have llm_model selected in the game state
+    model_name = "openai/gpt-4o-mini"
+    # model_name = "google/gemini-flash-1.5-exp"
+    
+    game_engine.init_game()
+    if not game_engine.state.players:
+        player_names = ["Mateusz", "Andrii", "Vasyl", "Marcin", "Dariusz", "Iwo"]
+        players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(5)]
+        game_engine.load_players(players, impostor_count=1)
+    game_engine.state.DEBUG = True
+    return game_engine
+
 def main():
     st.title("Among Us Game - LLMPostor")
     gui_handler = GUIHandler()
-    game_engine = GameEngine()
+    game_engine = load_game_engine()
+    make_step = False
 
-    model_name = "openai/gpt-4o-mini"
-    # model_name = "google/gemini-flash-1.5-exp"
+    # Create a button to trigger the next step
+    if st.button("Make Step"):
+        make_step = True
 
-    player_names = ["Mateusz", "Andrii", "Vasyl", "Marcin", "Dariusz", "Iwo"]
-    try:
-        players = [AIPlayer(name=player_names[i], llm_model_name=model_name) for i in range(5)]
-        # players = [FakeAIPlayer(name=player_names[i], llm_model_name="fake") for i in range(5)]
-        game_engine.load_players(players, impostor_count=1)
-    except OpenAIError:
-        st.error("OpenAI API key not set")
-        return
-    
-    game_engine.init_game()
-    game_engine.state.set_stage(GamePhase.MAIN_MENU) # pause the game at the main menu
-    
-    if game_engine.state.game_stage == GamePhase.MAIN_MENU:
-        st.warning("Viewing the game state only. No actions are being performed.")
-    gui_handler.update_gui(game_engine.state)
-    game_engine.state.DEBUG = True
+    if make_step:
+        game_engine.perform_step()
+        make_step = False
+        st.rerun()
 
-    # while not game_engine.perform_step():
-    #     gui_handler.update_gui(game_engine.state)
-        # time.sleep(5)
-        
-    game_engine.perform_step()
-        
-    gui_handler.update_gui(game_engine.state)
+    gui_handler.display_gui(game_engine.state)
     st.text("Game has ended")
     chat_analyzer = ChatAnalyzer(players=game_engine.state.players)
     # chat_analyzer.analyze() returns Dict[str, Dict[str, int]]: with player name as key and dict of persuasive tricks as value with count as value
     # results = chat_analyzer.analyze()
     # st.write(results)
-    st.json(game_engine.to_dict(), expanded=False) # Display final game state
+    st.json(game_engine.state.to_dict(), expanded=False) # Display final game state
     st.text("\n".join(game_engine.state.playthrough)) # Display final game log
 
 if __name__ == "__main__":
