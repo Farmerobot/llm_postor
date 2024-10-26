@@ -92,11 +92,11 @@ class Player(BaseModel, ABC):
     def prompt_vote(self, voting_actions: List[str]) -> int:
         pass
 
-    def get_message_str(self) -> str:
+    def get_chat_messages(self) -> str:
         """
         :return: A string containing all the messages from the current round (observations with "chat" begginings)
         """
-        return "\n".join([obs for obs in self.state.observations if obs.startswith("chat")])
+        return [obs[18:] for obs in self.state.observations if obs.startswith("chat")]
 
     def __str__(self):
         return self.name

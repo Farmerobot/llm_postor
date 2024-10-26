@@ -27,7 +27,7 @@ class AgentState(BaseModel):
 
 class Agent(ABC, BaseModel):
     # has to be Any because of MagicMock. TODO: Fix test integration with pydanitc
-    llm: ChatOpenAI = None
+    llm: Any = None
     state: AgentState = Field(default_factory=AgentState)
     responses: List[str] = Field(default_factory=list)
     player_name: str = ""

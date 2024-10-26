@@ -17,7 +17,7 @@ class ChatAnalyzer(BaseModel):
         results = {}
 
         # Get messages from the first player
-        messages = self.players[0].get_message_str()
+        messages = "\n".join(self.players[0].get_chat_messages())
         
         # Extract messages by player
         player_messages = self.extract_player_messages(messages)

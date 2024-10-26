@@ -20,6 +20,8 @@ class GUIHandler(BaseModel):
         st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
         st.title("Among Us Game - LLMPostor")
         with st.sidebar:
+            with st.container():
+                st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
             for i, player in enumerate(game_engine.state.players):
                 with st.empty():
                     self._display_short_player_info(
@@ -28,9 +30,7 @@ class GUIHandler(BaseModel):
 
 
         # Create a button to trigger the next step
-        if st.button("Make Step"):
-            game_engine.perform_step()
-            st.rerun()
+        should_perform_step = st.button("Make Step")
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)
@@ -38,14 +38,18 @@ class GUIHandler(BaseModel):
             with st.container(height=300):
                 st.text("\n".join(game_engine.state.playthrough))
         self._display_player_selection(game_engine.state.players)
-        st.json(game_engine.state.get_total_cost())
-        self._display_annotated_text(game_engine.state)
-        st.json(game_engine.state.to_dict())
-
+        self._display_discussion_chat(game_engine.state.players)
         # Analyze Chat Button
         if st.button("Analyze Chat"):
             results = chat_analyzer.analyze()
             st.write(results)
+        # st.json(game_engine.state.get_total_cost())
+        self._display_annotated_text(game_engine.state)
+        st.json(game_engine.state.to_dict(), expanded=False)
+            
+        if should_perform_step:
+            game_engine.perform_step()
+            st.rerun()
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
@@ -322,8 +326,19 @@ class GUIHandler(BaseModel):
             [len(players)] + list(range(len(players))),
             horizontal=True,
             key=f"player_selection_{players}",
-            format_func=lambda i: players[i].name if i < len(players) else "All",
+            format_func=lambda i: players[i].name if i < len(players) else "None",
         )
         # st.write(f"Selected Player: {players[selected_player].name if selected_player < len(players) else 'All'}")
-        if selected_player:
-            st.session_state.selected_player = selected_player
+        st.session_state.selected_player = selected_player
+    
+    def _display_discussion_chat(self, players: List[Player]):
+        discussion_chat = ""
+        if st.session_state.selected_player == len(players):
+            for player in players:
+                if player.state.life == PlayerState.ALIVE:
+                    discussion_chat = "\n".join(player.get_chat_messages())
+                    break
+        else:
+            player = players[st.session_state.selected_player]
+            discussion_chat = "\n".join([x for x in player.get_chat_messages() if x.startswith(f"[{player.name}]")])
+        st.text_area(label="Discussion log:", value=discussion_chat)

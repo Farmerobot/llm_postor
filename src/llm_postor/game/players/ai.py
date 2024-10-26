@@ -52,7 +52,7 @@ class AIPlayer(Player):
 
     def prompt_discussion(self) -> str:
         history = self.history.get_history_str()
-        statements = self.get_message_str()
+        statements = "\n".join(self.get_chat_messages())
         self.discussion_agent.update_state(observations=history, messages=statements)
         message_prompt, message = self.discussion_agent.act()
         self.state.llm_responses = self.discussion_agent.responses
@@ -66,7 +66,7 @@ class AIPlayer(Player):
         self.voting_agent.update_state(
             observations=self.history.get_history_str(), actions=voting_actions
         )
-        vote_prompt, vote = self.voting_agent.choose_action(self.get_message_str())
+        vote_prompt, vote = self.voting_agent.choose_action("\n".join(self.get_chat_messages()))
         self.state.llm_responses = self.voting_agent.responses
         self.add_token_usage(self.voting_agent.state.token_usage)
         self.state.response = str(vote)

@@ -31,7 +31,7 @@ class HumanPlayer(Player):
 
     def prompt_discussion(self) -> str:
         history = self.history.get_history_str()
-        messages = self.get_message_str()
+        messages = "\n".join(self.get_chat_messages())
         print(history)
         print(messages)
         print(f"{self.name} it's your turn to discuss")
