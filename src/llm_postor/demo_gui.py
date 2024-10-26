@@ -10,9 +10,9 @@ from llm_postor.game.chat_analyzer import ChatAnalyzer
 # To run this script, you need to 
 # `poetry install` 
 # and then run the following command:
-# `poetry run run-gui`
+# `poetry run run_gui`
 
-@st.cache_resource
+# @st.cache_resource
 def load_game_engine():
     game_engine = GameEngine()
     

@@ -5,7 +5,6 @@ from typing import List, Optional
 from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
-import plotly.graph_objects as go
 from llm_postor.game.game_state import GameState
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.base_player import Player, PlayerRole
@@ -18,6 +17,7 @@ from llm_postor.game.chat_analyzer import ChatAnalyzer
 class GUIHandler(BaseModel):
 
     def display_gui(self, game_engine: GameEngine, chat_analyzer: ChatAnalyzer):
+        st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
         st.title("Among Us Game - LLMPostor")
         with st.sidebar:
             for i, player in enumerate(game_engine.state.players):
@@ -31,9 +31,14 @@ class GUIHandler(BaseModel):
         if st.button("Make Step"):
             game_engine.perform_step()
             st.rerun()
-        self._display_map(game_engine.state)
+        col1, col2 = st.columns([2,1])
+        with col1:
+            self._display_map(game_engine.state)
+        with col2:
+            with st.container(height=300):
+                st.text("\n".join(game_engine.state.playthrough))
+        self._display_player_selection(game_engine.state.players)
         st.json(game_engine.state.get_total_cost())
-        st.text("\n".join(game_engine.state.playthrough))
         self._display_annotated_text(game_engine.state)
         st.json(game_engine.state.to_dict())
 
@@ -126,8 +131,8 @@ class GUIHandler(BaseModel):
 
     def _display_map(self, game_state: GameState):
         fig = go.Figure()
-        img_width = 836 * 2
-        img_height = 470 * 2
+        img_width = 836
+        img_height = 470
         scale_factor = 0.5
 
         # Add invisible scatter trace.
@@ -191,8 +196,8 @@ class GUIHandler(BaseModel):
 
                 fig.add_trace(
                     go.Scatter(
-                        x=[x * 200 + random.randint(-20, 20)],
-                        y=[y * 200 + random.randint(-20, 20)],
+                        x=[x * 100 + random.randint(-10, 10)],
+                        y=[y * 100 + random.randint(-10, 10)],
                         mode="markers",
                         marker=dict(
                             color=marker_color,
@@ -310,3 +315,15 @@ class GUIHandler(BaseModel):
             ),
             " to clarify the situation.",
         )
+        
+    def _display_player_selection(self, players: List[Player]):
+        selected_player = st.radio(
+            "Select Player",
+            [len(players)] + list(range(len(players))),
+            horizontal=True,
+            key=f"player_selection_{players}",
+            format_func=lambda i: players[i].name if i < len(players) else "All",
+        )
+        # st.write(f"Selected Player: {players[selected_player].name if selected_player < len(players) else 'All'}")
+        if selected_player:
+            st.session_state.selected_player = selected_player
