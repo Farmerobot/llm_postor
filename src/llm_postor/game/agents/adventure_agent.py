@@ -65,9 +65,8 @@ class AdventureAgent(Agent):
     def act(self) -> Any:
         plan_prompt, plan = self.create_plan()
         action_prompt, action = self.choose_action(plan)
-        self.responses.append(
-            f"Based on plan: {plan}\n{self.player_name} chose action: {action} {self.state.available_actions[action]}"
-        )
+        self.responses.append(plan)
+        self.responses.append(action)
         return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action
 
     @staticmethod

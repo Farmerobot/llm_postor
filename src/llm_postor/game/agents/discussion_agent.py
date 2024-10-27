@@ -25,7 +25,6 @@ class DiscussionAgent(Agent):
         )
         discussion_points = self.llm.invoke([HumanMessage(content=discussion_prompt)])
         self.add_token_usage(discussion_points.usage_metadata)
-        self.responses.append(f"Discussion points: {discussion_points.content.strip()}")
         return discussion_prompt, discussion_points.content.strip()
 
     def respond_to_statements(self, statements: str, points: str) -> str:
@@ -38,7 +37,6 @@ class DiscussionAgent(Agent):
         )
         response = self.llm.invoke([HumanMessage(content=response_prompt)])
         self.add_token_usage(response.usage_metadata)
-        self.responses.append(response.content.strip())
         return response_prompt, response.content.strip()
 
     def act(self) -> Any:
@@ -46,6 +44,8 @@ class DiscussionAgent(Agent):
         response_prompt, response = self.respond_to_statements(
             statements=self.state.messages, points=points
         )
+        self.responses.append(points)
+        self.responses.append(response)
         return (
             f"Points prompt: {points_prompt}\n\nResponse prompt: {response_prompt}",
             response,

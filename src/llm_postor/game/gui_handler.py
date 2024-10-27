@@ -12,7 +12,7 @@ from llm_postor.annotation import annotate_dialogue
 from llm_postor.game.game_state import GameState
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.base_player import Player, PlayerRole
-from llm_postor.game.models.history import PlayerState
+from llm_postor.game.models.history import PlayerState, RoundData
 from llm_postor.game.models.engine import ROOM_COORDINATES
 import plotly.graph_objects as go
 from llm_postor.game.chat_analyzer import ChatAnalyzer
@@ -55,12 +55,19 @@ class GUIHandler(BaseModel):
         estimated_cost_data = self.estimate_future_cost(cost_data, 10)
         combined_cost_data = self.combine_data(cost_data, estimated_cost_data)
         self.plot_cost(combined_cost_data)
+        
+        if st.session_state.selected_player < len(game_engine.state.players):
+            player: Player = game_engine.state.players[st.session_state.selected_player]
+            st.subheader(f"Player: {player.name} Chat History:")
+            self._display_chat_history(player.history.rounds)
+        
         st.text("Cost Breakdown:")
         st.json(game_engine.state.get_total_cost(), expanded=False)
         st.text("Raw Game State:")
         st.json(game_engine.state.to_dict(), expanded=False)
             
         if should_perform_step:
+            print("Performing step")
             game_engine.perform_step()
             st.rerun()
 
@@ -77,18 +84,6 @@ class GUIHandler(BaseModel):
                 self._display_recent_actions(player)
                 self._display_tasks(player)
 
-    def _display_player_info(self, player: Player, placeholder: DeltaGenerator):
-        with placeholder.container():  # Clear previous content
-            st.subheader(player.name)
-            self._display_status(player)
-            self._display_role(player)
-            self._display_tasks_progress(player)
-            self._display_location(player)
-            self._display_action_taken(player)
-            self._display_action_result(player)
-            self._display_recent_actions(player)
-            self._display_tasks(player)
-
     def _display_name_role_status(self, player: Player, current: bool):
         status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
         role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
@@ -102,14 +97,6 @@ class GUIHandler(BaseModel):
             st.write(
                 f"{status_icon} {player.name} - ({complete_tasks}/{len(player.state.tasks)}) {role_icon} {current_icon}"
             )
-
-    def _display_status(self, player: Player):
-        status_icon = "✅" if player.state.life == PlayerState.ALIVE else "❌"
-        st.write(f"Status: {status_icon} {player.state.life.value}")
-
-    def _display_role(self, player: PlayerRole):
-        role_icon = "😈" if player.role == PlayerRole.IMPOSTOR else "👤"
-        st.write(f"Role: {role_icon} {player.role.value}")
 
     def _display_tasks_progress(self, player: Player):
         completed_tasks = sum(1 for task in player.state.tasks if "DONE" in str(task))
@@ -347,3 +334,34 @@ class GUIHandler(BaseModel):
         )
 
         st.plotly_chart(fig)
+
+    def _display_chat_history(self, rounds: List[RoundData]):
+        """Displays the chat history for a player using st.chat_message."""
+        with st.container(height=500, border=True):
+            for round_data in rounds:
+                # 1. Prompt (Player Message)
+                with st.chat_message("user"):
+                    with st.expander("Prompt"):
+                        st.write(round_data.prompt)
+
+                # 2. Actions (System Message)
+                if round_data.actions:  # Check if actions exist
+                    with st.chat_message("system"):
+                        st.write("Actions:")
+                        for i, action in enumerate(round_data.actions):
+                            st.write(f"{i}. {action}")
+
+                # 3. Response (LLM Message)
+                for llm_response in round_data.llm_responses:
+                    with st.chat_message("assistant"):
+                        with st.expander("LLM Response"):  # Put llm_responses in expander
+                            st.write(llm_response)
+                    
+                # 4. Response
+                with st.chat_message("assistant"):
+                    st.write(round_data.response)
+
+                # 4. Action Result (System Message)
+                if round_data.action_result:  # Check if action result exists
+                    with st.chat_message("system"):
+                        st.write(f"Action Result: {round_data.action_result}")
