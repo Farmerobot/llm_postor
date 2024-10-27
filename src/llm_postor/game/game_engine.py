@@ -77,6 +77,9 @@ class GameEngine(BaseModel):
         
         :return: True if the game is over or in MAIN_MENU stage, False otherwise
         """
+        if self.check_game_over():
+            self.end_game()
+            return True
         if self.state.game_stage == GamePhase.ACTION_PHASE:
             self.state.log_action(f"Action: round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}")
             self.perform_action_step()
