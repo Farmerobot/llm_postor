@@ -144,29 +144,29 @@ Your goal is to analyze the dialogue between players and identify specific persu
 
 **Annotation:**
 
-annotated_text(
-    "[Warek]: "
-    ("I was in the cafeteria", "Alibi Construction"),
-    " the whole time, I saw nobody go in or out.",
-    "[Wojtek]: I was in the reactor, ",
-    ("I saw Player 1", "Accusation and Finger-Pointing"),
-    " go in there, but they didn't do any tasks.",
-    "[Wafał]: I think ",
-    ("Player 1 is lying", "Information Manipulation"),
-    ", they're trying to make an alibi."
-)
+[
+   {{"text": "[Warek]: I agree that ", "annotation": null}},
+   {{"text": "I was in the cafeteria", "annotation": "Alibi Construction"}},
+   {{"text": " the whole time, I saw nobody go in or out.", "annotation": null}},
+   {{"text": "[Wojtek]: I was in the reactor, ", "annotation": null}},
+   {{"text": "I saw Player 1", "annotation": "Accusation and Finger-Pointing"}},
+   {{"text": " go in there, but they didn't do any tasks.", "annotation": null}},
+   {{"text": "[Wafał]: I think ", "annotation": null}},
+   {{"text": "Player 1 is lying", "annotation": "Information Manipulation"}},
+   {{"text": ", they're trying to make an alibi.", "annotation": null}}
+]
 
 
 **Format:**
 
 Please annotate the dialogue using the following format:
 
-annotated_text(
-    "normal text",
-    ("annotated text", "annotation"),
-    "normal text",
-    ("annotated text", "annotation")
-)
+[
+    {{"text": "part of sentence", "annotation": null}},
+    {{"text": "annotated part of sentence", "annotation": "annotation"}},
+    {{"text": "part of sentence", "annotation": null}},
+    {{"text": "annotated part of sentence", "annotation": "annotation"}},
+]
 
 **Persuasion Techniques:**
 

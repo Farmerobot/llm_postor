@@ -4,9 +4,11 @@ from typing import List
 from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage
 
+from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.llm_prompts import ANNOTATION_TEMPLATE
 
-def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4o-mini") -> str:
+
+def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o-mini") -> str:
     """
     Annotates a dialogue with persuasion techniques using OpenAI API.
 
@@ -18,9 +20,15 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4o-mini") -> str
         The annotated dialogue in the specified format.
     """
 
-    llm = ChatOpenAI(model=llm_model_name, temperature=0.1)
+    llm = ChatOpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=OPENROUTER_API_KEY,
+        model=llm_model_name,
+        temperature=0.1,
+    )
     prompt = ANNOTATION_TEMPLATE.format(dialogue=dialogue)
     response = llm.invoke([HumanMessage(content=prompt)])
+    print(response.content)
 
     # Extract the annotated text from the response
     try:
@@ -30,6 +38,7 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4o-mini") -> str
         return response
 
     return annotated_text
+
 
 if __name__ == "__main__":
     # Example usage:
