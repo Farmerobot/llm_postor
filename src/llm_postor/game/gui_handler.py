@@ -2,6 +2,7 @@ import json
 import random
 import uuid
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
@@ -280,18 +281,26 @@ class GUIHandler(BaseModel):
             cost_data[player.name] = costs
         return cost_data
 
-    def estimate_future_cost(self, cost_data: Dict[str, List[float]], rounds_to_forecast: int) -> Dict[str, List[float]]:
-        """Estimates future cost using linear regression."""
+    def estimate_future_cost(self, cost_data: Dict[str, List[float]], rounds_to_forecast: int, degree: int = 2) -> Dict[str, List[float]]:
+        """Estimates future cost using polynomial regression for each player."""
         estimated_cost_data = {}
         for player_name, costs in cost_data.items():
             # Prepare data for linear regression
             X = [[i] for i in range(len(costs))]
             y = costs
+
+            # Create polynomial features
+            poly = PolynomialFeatures(degree=degree)
+            X_poly = poly.fit_transform(X)
+
+            # Train a separate model for each player
             model = LinearRegression()
-            model.fit(X, y)
+            model.fit(X_poly, y)
 
             # Estimate future costs
-            estimated_costs = [round(model.predict([[i]])[0], 4) for i in range(len(costs), len(costs) + rounds_to_forecast)]
+            future_rounds = [[i] for i in range(len(costs), len(costs) + rounds_to_forecast)]
+            future_rounds_poly = poly.transform(future_rounds)
+            estimated_costs = [round(model.predict([future_round])[0], 4) for future_round in future_rounds_poly]
             estimated_cost_data[player_name] = estimated_costs
         return estimated_cost_data
 
@@ -315,7 +324,7 @@ class GUIHandler(BaseModel):
             fig.add_trace(go.Scatter(x=list(range(1, len(actual_costs) + 1)), y=actual_costs, name=player_name, mode='lines'))
 
             # Plot estimated costs as dashed lines
-            fig.add_trace(go.Scatter(x=list(range(len(actual_costs), len(costs))), y=estimated_costs, name=player_name, mode='lines', line=dict(dash='dash')))
+            fig.add_trace(go.Scatter(x=list(range(len(actual_costs), len(costs)+1)), y=[actual_costs[-1]]+estimated_costs, name=player_name, mode='lines', line=dict(dash='dash')))
 
         # Calculate total cost
         total_costs = [sum(costs[i] for costs in cost_data.values()) for i in range(len(cost_data['Mateusz']))]
@@ -328,7 +337,7 @@ class GUIHandler(BaseModel):
         fig.add_trace(go.Scatter(x=list(range(1, len(actual_total_costs) + 1)), y=actual_total_costs, name="Total Cost", mode='lines'))
 
         # Plot estimated total cost as dashed lines
-        fig.add_trace(go.Scatter(x=list(range(len(actual_total_costs), len(total_costs))), y=estimated_total_costs, name="Total Cost", mode='lines', line=dict(dash='dash')))
+        fig.add_trace(go.Scatter(x=list(range(len(actual_total_costs), len(total_costs)+1)), y=[actual_total_costs[-1]]+estimated_total_costs, name="Total Cost", mode='lines', line=dict(dash='dash')))
 
         fig.update_layout(
             title="Player Cost Over Rounds",
