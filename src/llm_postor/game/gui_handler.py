@@ -53,9 +53,9 @@ class GUIHandler(BaseModel):
         # Cost Visualization
         cost_data = self.get_cost_data(game_engine)
         if game_engine.state.round_number >= 1:
-            estimated_cost_data = self.estimate_future_cost(cost_data, 10)
+            estimated_cost_data = self.estimate_future_cost(cost_data, 5)
             combined_cost_data = self.combine_data(cost_data, estimated_cost_data)
-            self.plot_cost(combined_cost_data)
+            self.plot_cost(combined_cost_data, 5)
         
         if st.session_state.selected_player < len(game_engine.state.players):
             player: Player = game_engine.state.players[st.session_state.selected_player]
@@ -299,14 +299,15 @@ class GUIHandler(BaseModel):
             combined_cost_data[player_name] = cost_data[player_name] + estimated_cost_data[player_name]
         return combined_cost_data
 
-    def plot_cost(self, cost_data: Dict[str, List[float]]):
+    def plot_cost(self, cost_data: Dict[str, List[float]], rounds_to_forecast: int):
         """Plots cost data using Plotly."""
         fig = go.Figure()
+        history = list(cost_data.values())[0]
 
         for player_name, costs in cost_data.items():
             # Separate actual and estimated costs
-            actual_costs = costs[:len(cost_data['Mateusz'])-10]
-            estimated_costs = costs[len(cost_data['Mateusz'])-10:]
+            actual_costs = costs[:len(history)-rounds_to_forecast]
+            estimated_costs = costs[len(history)-rounds_to_forecast:]
 
             # Plot actual costs as solid lines
             fig.add_trace(go.Scatter(x=list(range(1, len(actual_costs) + 1)), y=actual_costs, name=player_name, mode='lines'))
@@ -315,11 +316,11 @@ class GUIHandler(BaseModel):
             fig.add_trace(go.Scatter(x=list(range(len(actual_costs), len(costs)+1)), y=[actual_costs[-1]]+estimated_costs, name=player_name, mode='lines', line=dict(dash='dash')))
 
         # Calculate total cost
-        total_costs = [sum(costs[i] for costs in cost_data.values()) for i in range(len(cost_data['Mateusz']))]
+        total_costs = [sum(costs[i] for costs in cost_data.values()) for i in range(len(history))]
         
         # Separate actual and estimated total costs
-        actual_total_costs = total_costs[:len(cost_data['Mateusz'])-10]
-        estimated_total_costs = total_costs[len(cost_data['Mateusz'])-10:]
+        actual_total_costs = total_costs[:len(history)-rounds_to_forecast]
+        estimated_total_costs = total_costs[len(history)-rounds_to_forecast:]
 
         # Plot actual total cost as solid lines
         fig.add_trace(go.Scatter(x=list(range(1, len(actual_total_costs) + 1)), y=actual_total_costs, name="Total Cost", mode='lines'))
