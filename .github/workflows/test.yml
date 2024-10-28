@@ -4,14 +4,14 @@ name: Run Tests on src Changes
 on:
   push:
     paths:
-      - 'src/**'     # Trigger on changes in the src directory
-      - 'tests/**'   # Trigger on changes in the tests directory
+      - 'src/**'                      # Trigger on changes in the src directory
+      - 'tests/**'                    # Trigger on changes in the tests directory
       - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
   pull_request:
     paths:
-      - 'src/**'     # Trigger on changes in the src directory
-      - 'tests/**'   # Trigger on changes in the tests directory
-      - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/test.yml'
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -23,26 +23,36 @@ jobs:
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
     steps:
-      # Checkout the latest code
+      # ----------------------------------------------
+      #       Checkout Repository
+      # ----------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Set up Python
+      # ----------------------------------------------
+      #       Set Up Python
+      # ----------------------------------------------
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12'  # Specify your Python version
 
-      # Install Poetry
+      # ----------------------------------------------
+      #       Install Poetry
+      # ----------------------------------------------
       - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          echo "::add-path::$(python3 -m site --user-base)/bin"
+        uses: snok/install-poetry@v1
+        with:
+          version: '1.5.1'  # Specify the desired Poetry version
 
-      # Install dependencies via Poetry
+      # ----------------------------------------------
+      #       Install Dependencies
+      # ----------------------------------------------
       - name: Install dependencies
-        run: poetry install
+        run: poetry install --no-interaction --no-root
 
-      # Run tests using pytest
+      # ----------------------------------------------
+      #       Run Tests
+      # ----------------------------------------------
       - name: Run Pytest
         run: poetry run pytest
