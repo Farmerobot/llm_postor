@@ -59,6 +59,7 @@ class AdventureAgent(Agent):
         else:
             warning_str = f"{self.player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got {chosen_action} ({normalized_chosen_action} normalized)"
             print(warning_str)
+            raise ValueError(warning_str)
             self.responses.append(warning_str)
             return 0
 
