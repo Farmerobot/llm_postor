@@ -9,15 +9,18 @@ on:
       - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
   pull_request:
     paths:
-      - 'src/**'     # Trigger on changes in the src directory'
+      - 'src/**'     # Trigger on changes in the src directory
       - 'tests/**'   # Trigger on changes in the tests directory
       - '.github/workflows/test.yml'  # Trigger on changes to the workflow file
-    
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    # Set environment variables for the job
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
     steps:
       # Checkout the latest code
@@ -32,7 +35,9 @@ jobs:
 
       # Install Poetry
       - name: Install Poetry
-        run: curl -sSL https://install.python-poetry.org | python3 -
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "::add-path::$(python3 -m site --user-base)/bin"
 
       # Install dependencies via Poetry
       - name: Install dependencies
