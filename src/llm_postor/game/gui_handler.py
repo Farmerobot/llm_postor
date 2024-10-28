@@ -52,9 +52,10 @@ class GUIHandler(BaseModel):
             self._display_annotated_text(json.loads(st.session_state.results))
         # Cost Visualization
         cost_data = self.get_cost_data(game_engine)
-        estimated_cost_data = self.estimate_future_cost(cost_data, 10)
-        combined_cost_data = self.combine_data(cost_data, estimated_cost_data)
-        self.plot_cost(combined_cost_data)
+        if game_engine.state.round_number >= 1:
+            estimated_cost_data = self.estimate_future_cost(cost_data, 10)
+            combined_cost_data = self.combine_data(cost_data, estimated_cost_data)
+            self.plot_cost(combined_cost_data)
         
         if st.session_state.selected_player < len(game_engine.state.players):
             player: Player = game_engine.state.players[st.session_state.selected_player]

@@ -124,7 +124,7 @@ Available Voting Options:
 {actions}
 
 Based solely on the information presented in the discussion and your direct observations, select one voting option from the available choices.
-Respond with exactly one option from the provided list.
+Respond with exactly one option from the provided list of Available Voting Options and nothing else. Do not provide explanations.
 
 Your vote:
 """

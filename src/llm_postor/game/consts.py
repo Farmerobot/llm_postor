@@ -55,4 +55,29 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0,
 	},
+	"gryphe/mythomax-l2-13b": {
+		"input_tokens": 0.9 / million,
+		"cache_read": 0,
+		"output_tokens": 0.9 / million,
+	},
+	"microsoft/wizardlm-2-8x22b": {
+		"input_tokens": 0.5 / million,
+		"cache_read": 0,
+		"output_tokens": 0.5 / million,
+	},
+	"meta-llama/llama-3.1-8b-instruct": {
+		"input_tokens": 0.5 / million,
+		"cache_read": 0,
+		"output_tokens": 0.5 / million,
+	},
+	"nousresearch/hermes-3-llama-3.1-405b": {
+		"input_tokens": 1.79 / million,
+		"cache_read": 0,
+		"output_tokens": 2.49 / million,
+	},
+	"mistralai/mistral-nemo": {
+		"input_tokens": 0.13 / million,
+		"cache_read": 0,
+		"output_tokens": 0.13 / million,
+	},
 }

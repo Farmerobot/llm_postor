@@ -67,7 +67,7 @@ class AdventureAgent(Agent):
         plan_prompt, plan = self.create_plan()
         action_prompt, action = self.choose_action(plan)
         self.responses.append(plan)
-        self.responses.append(action)
+        self.responses.append(str(action))
         return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action
 
     @staticmethod
