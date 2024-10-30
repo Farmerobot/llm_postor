@@ -235,10 +235,6 @@ class GUIHandler(BaseModel):
             # Add spacing only if the next item is from a different player
             if previous_player and previous_player != current_player:
                 args.append("\n\n")  # Two newlines to separate different players
-                
-            print(f"Current Player: {current_player}")
-            print(f"Previous Player: {previous_player}")
-            print(f"Text for that player: {replaced_text}\n")
 
             # Combine multiple annotations into a single comma-separated string
             if item["annotation"]:
