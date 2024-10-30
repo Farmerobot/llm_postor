@@ -4,6 +4,7 @@ import uuid
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
+from collections import defaultdict, Counter
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
@@ -227,10 +228,12 @@ class GUIHandler(BaseModel):
         # Build the annotated_text arguments with conditional vertical spacing
         args = []
         previous_player = None
+        player_techniques = defaultdict(list)  # Dictionary to store techniques for each player
 
         for item in json_data:
             replaced_text = item["text"]
-            current_player = replaced_text.split("]:")[0] if "]: " in replaced_text else previous_player  # Extract player identifier
+            # Extract player identifier without brackets
+            current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
             # Add spacing only if the next item is from a different player
             if previous_player and previous_player != current_player:
@@ -240,15 +243,32 @@ class GUIHandler(BaseModel):
             if item["annotation"]:
                 combined_annotation = ", ".join(item["annotation"])
                 args.append((replaced_text, combined_annotation))
+                # Track each annotation for the current player
+                player_techniques[current_player].extend(item["annotation"])
             else:
                 args.append(replaced_text)
 
-
             previous_player = current_player
 
-        # Call annotated_text with the built arguments
+        # Display annotated text using Streamlit's annotated_text function
         annotated_text(*args)
 
+        # Add a header for the summary section
+        st.subheader("Technique Summary by Player")
+
+        # Display a summary of techniques used by each player
+        for player, techniques in player_techniques.items():
+            technique_counts = Counter(techniques)
+            sorted_techniques = sorted(technique_counts.items(), key=lambda x: x[1], reverse=True)
+            
+            # Display player name and total techniques
+            st.markdown(f"### {player}")
+            st.write(f"Total techniques used: {len(techniques)}")
+            
+            # Display the breakdown of each unique technique with its frequency
+            st.markdown("**Technique breakdown:**")
+            for technique, count in sorted_techniques:
+                st.write(f" - {technique}: {count} times")
 
     def _display_player_selection(self, players: List[Player]):
         selected_player = st.radio(
