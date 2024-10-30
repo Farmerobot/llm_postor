@@ -145,27 +145,38 @@ Your goal is to analyze the dialogue between players and identify specific persu
 **Annotation:**
 
 [
-   {{"text": "[Warek]: I agree that ", "annotation": null}},
-   {{"text": "I was in the cafeteria", "annotation": "Alibi Construction"}},
-   {{"text": " the whole time, I saw nobody go in or out.", "annotation": null}},
-   {{"text": "[Wojtek]: I was in the reactor, ", "annotation": null}},
-   {{"text": "I saw Player 1", "annotation": "Accusation and Finger-Pointing"}},
-   {{"text": " go in there, but they didn't do any tasks.", "annotation": null}},
-   {{"text": "[Wafał]: I think ", "annotation": null}},
-   {{"text": "Player 1 is lying", "annotation": "Information Manipulation"}},
-   {{"text": ", they're trying to make an alibi.", "annotation": null}}
+   {{"text": "[Warek]: I was in the cafeteria", "annotation": ["Alibi Construction"]}},
+   {{"text": " the whole time, I saw nobody go in or out.", "annotation": []}},
+   {{"text": "[Wojtek]: I was in the reactor, ", "annotation": []}},
+   {{"text": "I saw Player 1 go in there, but they didn't do any tasks.", "annotation": ["Accusation and Finger-Pointing"]}},
+   {{"text": "[Wafał]: I think ", "annotation": []}},
+   {{"text": "Warek is lying", "annotation": ["Information Manipulation"]}},
+   {{"text": ", they're trying to make an alibi.", "annotation": []}}
 ]
-
 
 **Format:**
 
-Please annotate the dialogue using the following format:
+Please annotate the dialogue using the following format, with `annotation` always as a list:
 
 [
-    {{"text": "part of sentence", "annotation": null}},
-    {{"text": "annotated part of sentence", "annotation": "annotation"}},
-    {{"text": "part of sentence", "annotation": null}},
-    {{"text": "annotated part of sentence", "annotation": "annotation"}},
+   {{"text": "part of sentence", "annotation": []}},
+   {{"text": "annotated part of sentence", "annotation": ["annotation"]}},
+   {{"text": "part of sentence", "annotation": []}},
+   {{"text": "annotated part of sentence", "annotation": ["annotation1", "annotation2"]}},
+]
+
+
+**Formatting Rules:**
+
+1. **Avoid duplicate entries**: Each segment of dialogue should appear **only once** in the final output, even if multiple annotations apply to the same text.
+2. **Use multiple annotations when relevant**: If multiple persuasive techniques apply to the same text segment, list all applicable techniques in a single entry as an array.
+3. **Group contiguous text**: Keep each player's full statement together unless distinct annotations apply to different parts of the statement.
+
+**Format Example with Multiple Annotations:**
+
+[
+   {{"text": "That's not true!", "annotation": ["Alibi Construction", "Emotional Appeal"]}},
+   {{"text": "I was with Player D the whole time.", "annotation": ["Alibi Construction"]}}
 ]
 
 **Persuasion Techniques:**

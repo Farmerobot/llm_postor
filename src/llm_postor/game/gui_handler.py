@@ -224,18 +224,35 @@ class GUIHandler(BaseModel):
         map_placeholder.plotly_chart(fig, use_container_width=True, key=uuid.uuid4())
 
     def _display_annotated_text(self, json_data: List[dict]):
-
-        # Build the annotated_text arguments
+        # Build the annotated_text arguments with conditional vertical spacing
         args = []
+        previous_player = None
+
         for item in json_data:
-            replaced_text = item["text"]#.replace("[", "\n[")
+            replaced_text = item["text"]
+            current_player = replaced_text.split("]:")[0] if "]: " in replaced_text else previous_player  # Extract player identifier
+
+            # Add spacing only if the next item is from a different player
+            if previous_player and previous_player != current_player:
+                args.append("\n\n")  # Two newlines to separate different players
+                
+            print(f"Current Player: {current_player}")
+            print(f"Previous Player: {previous_player}")
+            print(f"Text for that player: {replaced_text}\n")
+
+            # Combine multiple annotations into a single comma-separated string
             if item["annotation"]:
-                args.append((replaced_text, item["annotation"]))
+                combined_annotation = ", ".join(item["annotation"])
+                args.append((replaced_text, combined_annotation))
             else:
                 args.append(replaced_text)
 
+
+            previous_player = current_player
+
         # Call annotated_text with the built arguments
         annotated_text(*args)
+
 
     def _display_player_selection(self, players: List[Player]):
         selected_player = st.radio(
