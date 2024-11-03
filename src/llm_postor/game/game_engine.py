@@ -294,7 +294,8 @@ class GameEngine(BaseModel):
 
             if player.state.life == PlayerState.ALIVE:
                 action = player.prompt_vote(possible_voting_actions_str)
-                votes[player.name] = possible_actions[action].target.name
+                if possible_actions[action].target.name != "Nobody":
+                    votes[player.name] = possible_actions[action].target.name
                 player.state.observations.append(
                     f"You voted for {possible_actions[action].target}"
                 )
@@ -308,6 +309,8 @@ class GameEngine(BaseModel):
         two_most_common = votes_counter.most_common(2)
         if len(two_most_common) > 1 and two_most_common[0][1] == two_most_common[1][1]:
             self.broadcast_observation("vote", "It's a tie! No one will be banished")
+        elif len(two_most_common) == 0:
+            ...
         else:
             player_to_banish = [x for x in self.state.players if x.name == two_most_common[0][0]][0]
             assert isinstance(

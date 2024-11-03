@@ -10,6 +10,7 @@ Key Game Elements:
 - Tasks need to be completed to win. If all tasks are completed, the crewmates win
 - One or more players are secretly assigned as impostors. Your role is either a crewmate or an impostor
 - Impostors can eliminate crewmates, and both crewmates and impostors can report dead bodies
+- Impostors win when there is only one crewmate left
 - Crewmates complete the tasks and impostors can pretend doing tasks
 - Crewmates and impostors can call emergency meetings to discuss and vote on who to eject from the game
 - After each elimination, players must discuss and vote on who to eject from the game
@@ -21,7 +22,7 @@ Role of Crewmates:
 - Vote to eject impostors from the game
 
 Role of Impostors:
-- Eliminate crewmates to win the game
+- Eliminate crewmates to win the game (until there is only on crewmate left)
 - Blend in with crewmates to avoid being identified
 - Vote to eject crewmates from the game
 """
@@ -81,7 +82,7 @@ Your Observations:
 The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
 
 If there are no messages, share your observations during the game by creating simple and short bullet points.
-If there are messages, create short and informative discussion points that take into account both recent and past messages.
+If there are messages, create short and informative discussion points that take into account both recent and past messages and aligned with your goals in the game.
 
 Note: Your previous messages are tagged with your name, shown as [{player_name}], within the history.
 
@@ -101,8 +102,10 @@ Previous Discussion Points:
 {points}
 
 The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
+Try to push the discussion forward using Previous Discussion Points to benefit from it.
+Respond to recent messages concisely (one sentence) while considering the ongoing discussion and any relevant history. 
+Respond in a way that will be aligned with your goals and might help you to win.
 
-Respond to recent messages concisely (one sentence) while considering the ongoing discussion and any relevant history.
 If there are no messages, create short and informative opening message.
 
 Your name is {player_name}. You are a {player_role}.

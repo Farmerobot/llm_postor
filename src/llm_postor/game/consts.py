@@ -50,10 +50,10 @@ TOKEN_COSTS = {
 		"cache_read": 0.075 / million,
 		"output_tokens": 0.6 / million,
 	},
-	"google/gemini-flash-1.5-exp": {
-		"input_tokens": 0.075,
+	"google/gemini-flash-1.5": {
+		"input_tokens": 0.075 / million,
 		"cache_read": 0,
-		"output_tokens": 0.3,
+		"output_tokens": 0.3 / million,
 	},
 	"gryphe/mythomax-l2-13b": {
 		"input_tokens": 0.9 / million,
