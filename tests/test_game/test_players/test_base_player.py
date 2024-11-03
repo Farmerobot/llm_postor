@@ -61,10 +61,10 @@ def test_get_task_to_complete():
     assert tasks_to_complete[0] == incomplete_task
 
 
-def test_log_state_new_round():
+def test_log_state_new_round(prev_round_game_stage):
     player = HumanPlayer(name="Test Player")
+    player.log_state_new_round(prev_round_game_stage=prev_round_game_stage)
     initial_state = copy.deepcopy(player.state)
-    player.log_state_new_round()
     assert player.history.rounds[-1] == initial_state
     assert len(player.state.tasks) == len(get_random_tasks())
     assert player.state.llm_responses == []
