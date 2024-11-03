@@ -14,7 +14,7 @@ class PlayerState(str, Enum):
 
 class RoundData(BaseModel):
     location: GameLocation = GameLocation.LOC_CAFETERIA
-    stage: GamePhase = GamePhase.MAIN_MENU # purely for ease of debugging
+    stage: GamePhase = GamePhase.MAIN_MENU
     life: PlayerState = PlayerState.ALIVE
     tasks: List[Task] = Field(default_factory=list)
     llm_responses: List[str] = Field(default_factory=list)
