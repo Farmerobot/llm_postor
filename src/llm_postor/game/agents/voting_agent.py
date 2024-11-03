@@ -23,7 +23,9 @@ class VotingAgent(Agent):
                 for i, action in enumerate(self.state.available_actions)
             ),
         )
+        # print("\nAction prompt voting:", action_prompt)
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        # print("\nVoted for:", chosen_action.content)
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action_str = chosen_action.content.strip()
         self.responses.append(chosen_action_str)

@@ -18,17 +18,18 @@ def load_game_engine():
     
     # Only for new game. Saved games have llm_model selected in the game state
     model_name = "openai/gpt-4o-mini"
+    player_model_name = "meta-llama/llama-3.1-8b-instruct"
     # model_name = "google/gemini-flash-1.5-exp"
     
     game_engine.init_game()
     if not game_engine.state.players:
         player_names = ["Mateusz", "Andrii", "Vasyl", "Marcin", "Dariusz", "Iwo"]
         players = [
-            AIPlayer(name="Mateusz", llm_model_name="gryphe/mythomax-l2-13b"),
-            AIPlayer(name="Wojtek", llm_model_name="microsoft/wizardlm-2-8x22b"),
-            AIPlayer(name="Lolek", llm_model_name="meta-llama/llama-3.1-8b-instruct"),
-            AIPlayer(name="Norbert", llm_model_name="nousresearch/hermes-3-llama-3.1-405b"),
-            AIPlayer(name="Nemo", llm_model_name="mistralai/mistral-nemo"),
+            AIPlayer(name="Mateusz", role="Impostor", llm_model_name=model_name),
+            AIPlayer(name="Wojtek", llm_model_name=player_model_name),
+            AIPlayer(name="Lolek", llm_model_name=player_model_name),
+            AIPlayer(name="Norbert", llm_model_name=player_model_name),
+            AIPlayer(name="Nemo", llm_model_name=player_model_name),
         ]
         game_engine.load_players(players, impostor_count=1)
     game_engine.state.DEBUG = True

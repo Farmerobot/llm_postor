@@ -66,7 +66,9 @@ class Player(BaseModel, ABC):
     def get_task_to_complete(self) -> List[Task]:
         return [task for task in self.state.tasks if not task.completed]
 
-    def log_state_new_round(self) -> None:
+    def log_state_new_round(self, prev_round_game_stage) -> None:
+        # Before creating new state, update the game_stage in each players' history
+        self.state.stage = prev_round_game_stage
         # Create a deep copy of the state before adding it to the history
         state_copy = copy.deepcopy(self.state)
         self.history.add_round(state_copy)

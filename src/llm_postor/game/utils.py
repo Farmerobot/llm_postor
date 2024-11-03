@@ -13,8 +13,8 @@ def get_impostor_tasks() -> list[ShortTask]:
     return [ShortTask(name="Eliminate all crewmates", location=GameLocation.LOC_UNKNOWN)]
 
 
-def get_short_tasks() -> list[ShortTask]:
-    tasks = [
+def get_all_short_tasks() -> list[ShortTask]:
+    return [
         ShortTask(name="Empty the cafeteria trash", location=GameLocation.LOC_CAFETERIA),
         ShortTask(name="Start the coffee maker in the cafeteria", location=GameLocation.LOC_CAFETERIA),
         ShortTask(name="Fix wiring in cafeteria", location=GameLocation.LOC_CAFETERIA),
@@ -40,7 +40,14 @@ def get_short_tasks() -> list[ShortTask]:
         ShortTask(name="Replace compression coil in upper engine", location=GameLocation.LOC_UPPER_ENGINE),
         ShortTask(name="Replace compression coil in lower engine", location=GameLocation.LOC_LOWER_ENGINE),
     ]
-    return sample(tasks, k=consts.NUM_SHORT_TASKS)
+
+
+def get_short_tasks() -> list[ShortTask]:
+    return sample(get_all_short_tasks(), k=consts.NUM_SHORT_TASKS)
+
+
+def get_short_tasks_by_loc(location) -> list[ShortTask]:
+    return [task for task in get_all_short_tasks() if task.location == location]
 
 
 def get_long_tasks() -> list[LongTask]:

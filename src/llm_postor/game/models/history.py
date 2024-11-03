@@ -56,14 +56,24 @@ class PlayerHistory(BaseModel):
 
     def get_history_str(self) -> str:
         history_str = ""
+        last_action_idx = 0
         for i, round in enumerate(self.rounds):
-            seen_actions = ", ".join(round.seen_actions)
-            observations = ", ".join(round.observations)
-            history_str += f"Round {i+1}\n"
-            history_str += f"Location: {round.location}\n"
-            history_str += f"Seen Actions: {seen_actions}\n"
-            history_str += f"Players in Room: {round.player_in_room}\n"
-            history_str += f"Observations: {observations}\n"
+            if round.stage == GamePhase.ACTION_PHASE:
+                last_action_idx = i
+                seen_actions = "\n".join(round.seen_actions)
+                observations = "\n".join(round.observations)
+                history_str += f"Round {i+1}\n"
+                history_str += f"Location: {round.location}\n"
+                history_str += f"Seen Actions:\n{seen_actions}\n"
+                history_str += f"{round.player_in_room}\n"
+                history_str += f"Your plan:\n{round.llm_responses[0]}\n"
+                history_str += f"Your action: {round.llm_responses[1]}\n"
+                history_str += f"Observations:\n{observations}\n"
+            elif i == len(self.rounds) - 1 or self.rounds[i+1].stage == GamePhase.ACTION_PHASE:
+                observations = "\n".join(round.observations)
+                history_str += f"Round {i+1}\n" if last_action_idx == i-1 else f"Rounds {last_action_idx+2}-{i+1}\n"
+                history_str += f"Location: {round.location}\n"
+                history_str += f"Observations:\n{observations}\n"
         return history_str
 
     def to_dict(self):

@@ -36,6 +36,7 @@ class GUIHandler(BaseModel):
 
         # Create a button to trigger the next step
         should_perform_step = st.button("Make Step")
+#         should_perform_step = True
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)

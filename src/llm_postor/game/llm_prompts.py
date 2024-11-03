@@ -9,7 +9,8 @@ Key Game Elements:
 - Players can move between rooms
 - Tasks need to be completed to win. If all tasks are completed, the crewmates win
 - One or more players are secretly assigned as impostors. Your role is either a crewmate or an impostor
-- Impostors can eliminate crewmates, and crewmates can report dead bodies
+- Impostors can eliminate crewmates, and both crewmates and impostors can report dead bodies
+- Crewmates complete the tasks and impostors can pretend doing tasks
 - Crewmates and impostors can call emergency meetings to discuss and vote on who to eject from the game
 - After each elimination, players must discuss and vote on who to eject from the game
 - The game continues until tasks are completed or impostors eliminate enough crewmates to win
@@ -23,7 +24,6 @@ Role of Impostors:
 - Eliminate crewmates to win the game
 - Blend in with crewmates to avoid being identified
 - Vote to eject crewmates from the game
-
 """
 
 ADVENTURE_PLAN_TEMPLATE = GAME_CONTEXT + """
@@ -40,12 +40,15 @@ Your Current Objectives:
 Actions You Can Take:
 {actions}
 
-You are currently located in: {current_location}
+Current Location:
+{current_location}
 
-Based on this information, what is your next objective? 
-Provide a straightforward sequence of steps to achieve your current task. 
-Focus on completing the objective.
-The plan should not exceed 3-4 steps as it is a short plan for current situation.
+Instructions for Plan Creation
+Based on the information above, create a short plan that focuses on your next objective. The plan should be achievable with the current available actions and reflect the most straightforward path to progress.
+
+* Prioritize progression: Focus on advancing to new objectives.
+* Limit the plan to 3-4 steps to maintain focus on the current situation.
+* Adapt based on previous rounds: Review actions and plans from prior rounds and adjust your strategy.
 
 Next steps:
 """
@@ -55,21 +58,15 @@ You are {player_name} in a text-based social deduction game.
 Role: {player_role}
 Your current game state is:
 
-Your Planned Steps:
+Planned Steps:
+These are your intended steps based on your objective. However, please note that the following steps represent a general plan and do not represent your current options:
 {plan}
 
-Actions You Can Take:
+Available Actions:
+Now, please choose only one of the actions listed below that best aligns with your planned objective. These are the actions you can actually perform right now:
 {actions}
 
-Select one action from the available options that best aligns with your next planned step.
-Respond with exactly one action from the provided list. Avoid numbering or adding extra punctuation or information.
-
-For example, if one of the available actions is:
-<action>report dead body of [Wateusz, Warek]</action>
-You should respond with:
-report dead body of [Wateusz, Warek]
-
-Notice that the response should match the available actions exactly.
+Select one action from this list and respond with exactly that action as it is written. Do not invent actions or refer to the plan directly if they are not part of the list. Only the Available Actions matter in this decision.
 
 Selected action:
 """
@@ -81,11 +78,13 @@ Role: {player_role}
 Your Observations:
 {history}
 
-Recent Player Messages:
-{statements}
+The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
 
-If there are no messages share what you have observed during the game by creating simple and short bullet points. 
-If there are messages, create informative and short discussion points to plan a discussion.
+If there are no messages, share your observations during the game by creating simple and short bullet points.
+If there are messages, create short and informative discussion points that take into account both recent and past messages.
+
+Note: Your previous messages are tagged with your name, shown as [{player_name}], within the history.
+
 Your name is {player_name}. You are a {player_role}.
 
 Your {player_role} observations to be shared with others:
@@ -98,14 +97,18 @@ Role: {player_role}
 Recent Player Messages:
 {statements}
 
-Your discussion points:
+Previous Discussion Points:
 {points}
 
-Your name is {player_name}. You are a {player_role}.
-Respond to the recent messages. Your mesasage should not exceed one sentence and should be informative and short.
-Very short and concise responses are expected because time is important in fast discussions.
-Make sure the response feels natural, fits the context of the game and actually responds to last messages.
+The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
 
+Respond to recent messages concisely (one sentence) while considering the ongoing discussion and any relevant history.
+If there are no messages, create short and informative opening message.
+
+Your name is {player_name}. You are a {player_role}.
+
+Note_1: Consider your previous messages. They are tagged with your name, shown as [{player_name}], within the history.
+Note_2: Don't add any additional text to the output. Return only the text of your response.
 
 Your short response:
 """
@@ -116,9 +119,6 @@ Role: {player_role}
 
 Game History:
 {history}
-
-Discussion Record:
-{discussion}
 
 Available Voting Options:
 {actions}

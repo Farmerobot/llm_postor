@@ -15,6 +15,7 @@ class GameActionType(IntEnum):
     DO_ACTION = 2
     KILL = 3
     REPORT = 4
+    PRETEND = 5
 
     def __lt__(self, other):
         if isinstance(other, GameActionType):
@@ -62,13 +63,17 @@ class GameAction(BaseModel):
         elif self.type == GameActionType.VOTE:
             self.text = f"vote for {str(self.target)}"
             self.result = f"You [{self.player}] voted for {str(self.target)}"
-            self.spectator = f"{self.player} voted for {self.target}"
+            self.spectator = f"{self.player} voted for {self.target}" 
+        elif self.type == GameActionType.PRETEND:
+            self.text = f"pretend doing task: {self.target.name if isinstance(self.target, Task) else self.target}"
+            self.result = f"You [{self.player}] pretended {self.target}"
+            self.spectator = f"{self.player} doing task {self.target.name if isinstance(self.target, Task) else self.target}"
         return self
 
     def do_action(self):
         if self.player.role == PlayerRole.IMPOSTOR:
             self.player.kill_cooldown = max(0, self.player.kill_cooldown - 1)
-        if self.type == GameActionType.REPORT or self.type == GameActionType.WAIT:
+        if self.type in [GameActionType.REPORT, GameActionType.WAIT, GameActionType.PRETEND]:
             pass
         if self.type == GameActionType.MOVE:
             self.player.state.location = self.target

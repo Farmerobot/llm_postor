@@ -20,6 +20,7 @@ from llm_postor.game.players.ai import AIPlayer
 from llm_postor.game.players.fake_ai import FakeAIPlayer
 from llm_postor.game.models.tasks import ShortTask, LongTask, Task
 from llm_postor.game.agents.base_agent import Agent
+from llm_postor.game.utils import get_short_tasks_by_loc
 
 class GameEngine(BaseModel):
     """Manages the game logic, including player actions, game state transitions, and win conditions."""
@@ -103,7 +104,7 @@ class GameEngine(BaseModel):
             self.state.player_to_act_next = 0
             self.state.round_number += 1
             for player in self.state.players:
-                player.log_state_new_round()
+                player.log_state_new_round(prev_round_game_stage=self.state.game_stage)
             if (
                 self.state.round_of_discussion_start + game_consts.NUM_CHATS
                 <= self.state.round_number
@@ -127,7 +128,7 @@ class GameEngine(BaseModel):
                 self.state.round_number += 1
                 for player in self.state.players:
                     # update player history
-                    player.log_state_new_round()
+                    player.log_state_new_round(prev_round_game_stage=self.state.game_stage)
                 if (
                     self.state.round_of_discussion_start + game_consts.NUM_CHATS
                     <= self.state.round_number
@@ -180,14 +181,15 @@ class GameEngine(BaseModel):
             players_in_room += self.state.get_players_in_location(
                 action.player.state.location
             )
-        if action.player in players_in_room:
-            players_in_room.remove(action.player)
 
         for player in players_in_room:
             if player != action.player:
                 player.state.seen_actions.append(
-                    f"you saw {action.spectator} when you were in {action.player.state.location.value}"
+                    f"You saw {action.spectator} when you were in {player.state.location.value}"
                 )
+
+        if action.player in players_in_room:
+            players_in_room.remove(action.player)
 
         self.state.log_action(f"{action.spectator}")
         if players_in_room:
@@ -250,6 +252,13 @@ class GameEngine(BaseModel):
             for target in targets:
                 actions.append(
                     GameAction(type=GameActionType.KILL, player=player, target=target)
+                )
+        
+        # actions for impostros PRETEND
+        if player.is_impostor:
+            for task in get_short_tasks_by_loc(player.state.location):
+                actions.append(
+                    GameAction(type=GameActionType.PRETEND, player=player, target=task)
                 )
 
         return actions
@@ -318,7 +327,7 @@ class GameEngine(BaseModel):
         for player, target in votes.items():
             self.broadcast_observation(f"vote {player}", f"{player} voted for {target}")
 
-        self.state.set_stage(GamePhase.ACTION_PHASE)
+        self.state.set_stage(GamePhase.ACTION_PHASE) 
         self.mark_dead_players_as_reported()
 
     def get_vote_actions(self, player: Player) -> list[GameAction]:

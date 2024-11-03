@@ -23,7 +23,9 @@ class DiscussionAgent(Agent):
             history=self.state.history,
             statements=self.state.messages,
         )
+        # print("\nDiscussion prompt:", discussion_prompt)
         discussion_points = self.llm.invoke([HumanMessage(content=discussion_prompt)])
+        # print("\nDiscussion points:", discussion_points)
         self.add_token_usage(discussion_points.usage_metadata)
         return discussion_prompt, discussion_points.content.strip()
 
@@ -35,7 +37,9 @@ class DiscussionAgent(Agent):
             history="\n".join(self.state.history),
             statements=statements,
         )
+        # print("\nResponse prompt:", response_prompt)
         response = self.llm.invoke([HumanMessage(content=response_prompt)])
+        # print("\nResponse:", response.content)
         self.add_token_usage(response.usage_metadata)
         return response_prompt, response.content.strip()
 

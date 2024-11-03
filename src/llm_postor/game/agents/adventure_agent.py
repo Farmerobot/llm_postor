@@ -26,12 +26,12 @@ class AdventureAgent(Agent):
             player_role=self.role,
             history=self.state.history,
             tasks=[str(task) for task in self.state.current_tasks],
-            actions="<action>"
-            + "</action><action>".join(self.state.available_actions)
-            + "</action>",
+            actions="- " + "\n- ".join(self.state.available_actions),
             current_location=self.state.current_location,
         )
+        # print("\nPlan prompt:", plan_prompt)
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
+        # print("\nCreated plan:", plan.content)
         self.add_token_usage(plan.usage_metadata)
         return plan_prompt, plan.content.strip()
 
@@ -41,13 +41,15 @@ class AdventureAgent(Agent):
             player_role=self.role,
             history="\n".join(self.state.history),
             task=self.state.current_tasks,
-            actions=", ".join(self.state.available_actions),
+            actions="- " + "\n- ".join(self.state.available_actions),
             plan=plan,
         )
+        # print("\nAction prompt", action_prompt)
         chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        # print("\nChosen action:", chosen_action.content)
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action = chosen_action.content.strip()
-        return action_prompt, self.check_action_valid(chosen_action)
+        return action_prompt, *self.check_action_valid(chosen_action)
 
     def check_action_valid(self, chosen_action: str) -> int:
         normalized_chosen_action = self.normalize_action(chosen_action)
@@ -55,9 +57,9 @@ class AdventureAgent(Agent):
             self.normalize_action(action) for action in self.state.available_actions
         ]
         if normalized_chosen_action in normalized_available_actions:
-            return normalized_available_actions.index(normalized_chosen_action)
+            return normalized_available_actions.index(normalized_chosen_action), normalized_chosen_action
         else:
-            warning_str = f"{self.player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got {chosen_action} ({normalized_chosen_action} normalized)"
+            warning_str = f"{self.player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got '{chosen_action}'"
             print(warning_str)
             raise ValueError(warning_str)
             self.responses.append(warning_str)
@@ -65,10 +67,10 @@ class AdventureAgent(Agent):
 
     def act(self) -> Any:
         plan_prompt, plan = self.create_plan()
-        action_prompt, action = self.choose_action(plan)
+        action_prompt, action_idx, action = self.choose_action(plan)
         self.responses.append(plan)
-        self.responses.append(str(action))
-        return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action
+        self.responses.append(action)
+        return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action_idx
 
     @staticmethod
     def normalize_action(action: str) -> str:

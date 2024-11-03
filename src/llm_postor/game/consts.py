@@ -51,9 +51,9 @@ TOKEN_COSTS = {
 		"output_tokens": 0.6 / million,
 	},
 	"google/gemini-flash-1.5-exp": {
-		"input_tokens": 0,
+		"input_tokens": 0.075,
 		"cache_read": 0,
-		"output_tokens": 0,
+		"output_tokens": 0.3,
 	},
 	"gryphe/mythomax-l2-13b": {
 		"input_tokens": 0.9 / million,
@@ -66,9 +66,14 @@ TOKEN_COSTS = {
 		"output_tokens": 0.5 / million,
 	},
 	"meta-llama/llama-3.1-8b-instruct": {
-		"input_tokens": 0.5 / million,
+		"input_tokens": 0.05 / million,
 		"cache_read": 0,
-		"output_tokens": 0.5 / million,
+		"output_tokens": 0.05 / million,
+	},
+    "meta-llama/llama-3.1-70b-instruct": {
+        "input_tokens": 0.35 / million,
+        "cache_read": 0,
+        "output_tokens": 0.4 / million,
 	},
 	"nousresearch/hermes-3-llama-3.1-405b": {
 		"input_tokens": 1.79 / million,
