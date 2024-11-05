@@ -36,7 +36,6 @@ class GUIHandler(BaseModel):
 
         # Create a button to trigger the next step
         should_perform_step = st.button("Make Step")
-#         should_perform_step = True
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)
@@ -51,7 +50,7 @@ class GUIHandler(BaseModel):
             results = annotate_dialogue(discussion)
             st.session_state.results = results
         if "results" in st.session_state:
-            self._display_annotated_text(json.loads(st.session_state.results))
+            self._display_annotated_text(json.loads(st.session_state.results), game_engine.state.players)
         # Cost Visualization
         cost_data = self.get_cost_data(game_engine)
         if game_engine.state.round_number >= 1:
@@ -225,51 +224,91 @@ class GUIHandler(BaseModel):
         map_placeholder = st.empty()
         map_placeholder.plotly_chart(fig, use_container_width=True, key=uuid.uuid4())
 
-    def _display_annotated_text(self, json_data: List[dict]):
-        # Build the annotated_text arguments with conditional vertical spacing
+    def _display_annotated_text(self, json_data: List[dict], players: List[Player]):
         args = []
         previous_player = None
-        player_techniques = defaultdict(list)  # Dictionary to store techniques for each player
-
+        player_techniques = defaultdict(list)
+        
         for item in json_data:
             replaced_text = item["text"]
-            # Extract player identifier without brackets
             current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
-            # Add spacing only if the next item is from a different player
             if previous_player and previous_player != current_player:
-                args.append("\n\n")  # Two newlines to separate different players
+                args.append("\n\n")
 
-            # Combine multiple annotations into a single comma-separated string
             if item["annotation"]:
                 combined_annotation = ", ".join(item["annotation"])
                 args.append((replaced_text, combined_annotation))
-                # Track each annotation for the current player
                 player_techniques[current_player].extend(item["annotation"])
             else:
                 args.append(replaced_text)
 
             previous_player = current_player
 
-        # Display annotated text using Streamlit's annotated_text function
         annotated_text(*args)
 
-        # Add a header for the summary section
-        st.subheader("Technique Summary by Player")
+        # Determine unique models used by each team
+        crewmates = [p for p in players if not p.is_impostor]
+        impostors = [p for p in players if p.is_impostor]
+        
+        crewmate_models = set(p.llm_model_name for p in crewmates)
+        impostor_models = set(p.llm_model_name for p in impostors)
 
-        # Display a summary of techniques used by each player
-        for player, techniques in player_techniques.items():
-            technique_counts = Counter(techniques)
-            sorted_techniques = sorted(technique_counts.items(), key=lambda x: x[1], reverse=True)
-            
-            # Display player name and total techniques
-            st.markdown(f"### {player}")
-            st.write(f"Total techniques used: {len(techniques)}")
-            
-            # Display the breakdown of each unique technique with its frequency
+        # Flag to check if only one model per team exists
+        single_model_per_team = len(crewmate_models) == 1 and len(impostor_models) == 1
+
+        # Summary function with conditional header and model listing
+        def summarize_team(team, team_name, models):
+            model_names = ", ".join(models)
+            header_text = f"Summary for {team_name} - Model: {model_names}" if single_model_per_team else f"Summary for {team_name}"
+            st.subheader(header_text)
+            if not single_model_per_team:
+                st.write(f"Models used: {model_names}")
+
+            st.write(f"Number of {team_name.lower()}: {len(team)}")
+            st.write("Players:", ", ".join([p.name for p in team]))
+
+            total_techniques = sum(len(player_techniques[p.name]) for p in team)
+            avg_techniques = total_techniques / len(team) if team else 0
+            st.write(f"Total techniques: {total_techniques}")
+            st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+            # Technique breakdown for the team
+            all_team_techniques = [tech for p in team for tech in player_techniques[p.name]]
+            team_technique_counts = Counter(all_team_techniques)
             st.markdown("**Technique breakdown:**")
-            for technique, count in sorted_techniques:
-                st.write(f" - {technique}: {count} times")
+            for technique, count in team_technique_counts.items():
+                avg_per_player = count / len(team) if team else 0
+                st.write(f" - {technique}: {count} times - (avg per player: {avg_per_player:.2f})")
+
+        # Summaries for crewmates and impostors
+        summarize_team(crewmates, "Crewmates", crewmate_models)
+        summarize_team(impostors, "Impostors", impostor_models)
+
+        # Add model summary if multiple models are used within teams
+        if not single_model_per_team:
+            st.subheader("Summary by Model")
+            models = defaultdict(list)
+            for player in players:
+                models[player.llm_model_name].append(player)
+
+            for model_name, model_players in models.items():
+                st.markdown(f"### Model: {model_name}")
+                st.write(f"Number of players: {len(model_players)}")
+                st.write("Players:", ", ".join([p.name for p in model_players]))
+
+                total_techniques = sum(len(player_techniques[p.name]) for p in model_players)
+                avg_techniques = total_techniques / len(model_players) if model_players else 0
+                st.write(f"Total techniques: {total_techniques}")
+                st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+                # Technique breakdown for this model
+                all_model_techniques = [tech for p in model_players for tech in player_techniques[p.name]]
+                model_technique_counts = Counter(all_model_techniques)
+                st.markdown("**Technique breakdown:**")
+                for technique, count in model_technique_counts.items():
+                    avg_per_player = count / len(model_players) if model_players else 0
+                    st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
 
     def _display_player_selection(self, players: List[Player]):
         selected_player = st.radio(
