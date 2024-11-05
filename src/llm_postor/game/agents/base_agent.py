@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import Any, List
-from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
 from llm_postor.game.agents.usage_metadata import UsageMetadata
@@ -27,7 +26,6 @@ class AgentState(BaseModel):
 
 class Agent(ABC, BaseModel):
     # has to be Any because of MagicMock. TODO: Fix test integration with pydanitc
-    llm: Any = None
     state: AgentState = Field(default_factory=AgentState)
     responses: List[str] = Field(default_factory=list)
     player_name: str = ""

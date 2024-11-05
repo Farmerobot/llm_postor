@@ -15,25 +15,15 @@ class AIPlayer(Player):
 
     def __init__(self, **data):
         super().__init__(**data)  # Initialize Player fields first
-        self.init_agents()
-
-    def init_agents(self):
-        if not OPENROUTER_API_KEY:
-            raise ValueError("Missing OpenRouter API key. Please set OPENROUTER_API_KEY in your environment.")
-        llm = ChatOpenAI(
-            base_url="https://openrouter.ai/api/v1",
-            api_key=OPENROUTER_API_KEY,
-            model=self.llm_model_name, 
-            temperature=0.1
-        )
-        role_str = self.role.value
         self.adventure_agent = AdventureAgent(
-            llm=llm, player_name=self.name, role=role_str
+            llm_model_name=self.llm_model_name, player_name=self.name, role=self.role.value
         )
         self.discussion_agent = DiscussionAgent(
-            llm=llm, player_name=self.name, role=role_str
+            llm_model_name=self.llm_model_name, player_name=self.name, role=self.role.value
         )
-        self.voting_agent = VotingAgent(llm=llm, player_name=self.name, role=role_str)
+        self.voting_agent = VotingAgent(
+            llm_model_name=self.llm_model_name, player_name=self.name, role=self.role.value
+        )
 
     def prompt_action(self, actions: List[str]) -> int:
         self.state.actions = actions

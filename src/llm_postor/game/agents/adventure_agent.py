@@ -6,8 +6,26 @@ from langchain_openai import ChatOpenAI
 from llm_postor.game.agents.base_agent import Agent
 from llm_postor.game.consts import ASCII_MAP
 from llm_postor.game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
+from llm_postor.config import OPENROUTER_API_KEY
 
 class AdventureAgent(Agent):
+    llm: ChatOpenAI = None
+    llm_model_name: str
+
+    def __init__(self, **data):
+        super().__init__(**data)
+        self.init_llm()
+
+    def init_llm(self):
+        if not OPENROUTER_API_KEY:
+            raise ValueError("Missing OpenRouter API key. Please set OPENROUTER_API_KEY in your environment.")
+        self.llm = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=OPENROUTER_API_KEY,
+            model=self.llm_model_name,
+            temperature=0.1
+        )
+
     def update_state(
         self,
         observations: str,

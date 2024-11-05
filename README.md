@@ -4,13 +4,25 @@
 
 Source code for a project in Artificial Intelligence at the Faculty of Computing and Telecommunications at Poznan University of Technology.
 
+## Development History
+
+The project began with the goal of analyzing persuasion capabilities of large language models (LLMs) in a game setting. Initially based on the [mk-ai-agents](https://github.com/MarcinKorcz101/mk-ai-agents) project, it has undergone significant modifications to meet our analysis requirements. Key developments include transitioning from a terminal application to a GUI using Streamlit, implementing game state tracking, and integrating various LLM models for enhanced analysis. The project now supports detailed logging, game state saving, and a comprehensive GUI for better interaction and analysis.
+
 ## Project Description
+> powerful tool for analyzing and visualizing the persuasive abilities of LLMs in a game-like environment
 
 This project aims to test and compare the persuasive abilities of large language models (LLMs) in a game-like environment. The system simulates the game "Among Us," where AI agents, powered by various LLMs, interact, make decisions, and attempt to persuade each other.  The goal is to understand how different LLMs approach persuasion, deception, and social interaction within a complex, dynamic environment.  The project analyzes both the success of persuasive attempts and the strategies employed by the agents.
 
 ## Current Features
 
-TODO
+- GUI for game state visualization and interaction using Streamlit.
+- Game state tracking and saving for reproducibility and analysis.
+- Integration with multiple LLM models via OpenRouter.
+- Detailed logging and debugging tools.
+- Cost estimation and analysis of LLM usage.
+- Player state and history tracking.
+- Map visualization with player locations and game logs.
+- Discussion analysis with persuasion technique annotations.
 
 ## Project Architecture
 
@@ -87,10 +99,10 @@ To run the simulation with the GUI:
 
 ## Configuration
 
-The project requires API keys for LLMs such as OpenAI. Set the following environment variables in your shell:
+The project requires API keys for LLMs such as OpenRouter. Set the following environment variables in your shell:
 
 ```bash
-  export OPENAI_API_KEY=your-api-key
+  export OPENROUTER_API_KEY=your-api-key
 ```
 
 Alternatively, you can set these in a `.env` file at the project root.
@@ -121,15 +133,17 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 We are planning to add the following features to enhance the project:
 
-- **Configuration Panel**: A web-based configuration panel for setting game parameters (number of players, impostors, task difficulty), selecting LLM models, and customizing game scenarios.
-- **Real-time Statistics**: A dashboard displaying live game statistics, such as task completion rates, voting patterns, and agent success rates.
-- **NLP Metrics**: Integration of NLP metrics (e.g., sentiment analysis, readability scores) to analyze the quality and effectiveness of the language used by the AI agents.
-- **Scenario Editor**: A tool for creating and modifying game scenarios, allowing researchers to test the AI agents in different contexts and situations.
-- **Comparative Analysis Tools**: Advanced tools for comparing the performance of different LLM models, including statistical analysis and visualization of results.
-- **Export and Sharing**: Functionality for exporting game data and analysis results in various formats (e.g., CSV, JSON) for further analysis and sharing.
-- **Human Player Interface**:  Allowing human players to participate in the game alongside AI agents, providing a more realistic and challenging environment for testing.
-- **API Documentation**: Comprehensive API documentation for integrating custom LLM models or analytical tools.
-- **Automated Testing**:  Implementation of automated tests to ensure the robustness and reliability of the game engine and AI agents.
+- **Voting Results Visualization**: Display voting results using bar charts for clarity.
+- **Scenario Selection**: Allow users to choose or customize game scenarios.
+- **Player Customization**: Enable selection of preferred LLM models for players.
+- **Data Export**: Implement functionality to export game data for analysis.
+- **Configuration Panel**: A web-based panel for setting game parameters and customizing scenarios.
+- **NLP Metrics**: Analyze language quality and effectiveness.
+- **Scenario Editor**: Tool for creating and modifying game scenarios.
+- **Comparative Analysis Tools**: Compare LLM model performance with statistical analysis.
+- **Human Player Interface**: Allow human participation alongside AI agents.
+- **API Documentation**: Documentation for integrating custom LLM models.
+- **Automated Testing**: Ensure robustness and reliability with automated tests.
 
 These planned features aim to make the project more comprehensive and versatile for researchers and enthusiasts in AI and NLP fields.
 
