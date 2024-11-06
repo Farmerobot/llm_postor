@@ -453,9 +453,6 @@ class GameEngine(BaseModel):
                     player.discussion_agent = None
                     player.voting_agent = None
             json.dump(self.state.model_dump(), f)
-            for player in self.state.players:
-                if isinstance(player, AIPlayer):
-                    player.init_agents()
             # yaml.dump(self.state.model_dump(), f)
 
     def load_state(self, file_path: str) -> bool:

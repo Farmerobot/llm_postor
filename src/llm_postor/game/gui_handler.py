@@ -42,6 +42,8 @@ class GUIHandler(BaseModel):
         st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
         should_perform_step = st.button("Make Step")
+        if st.button("Clear Game State"):
+            self.clear_game_state()
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)
@@ -81,6 +83,15 @@ class GUIHandler(BaseModel):
 
     def tournaments(self):
         st.write("This is the Tournaments tab. Content will be added here.")
+
+    def clear_game_state(self):
+        """Deletes the game_state.json file to clear the game state."""
+        try:
+            os.remove("data/game_state.json")
+            st.success("Game state cleared successfully!")
+            st.rerun()
+        except FileNotFoundError:
+            st.warning("No game state file found.")
 
         if st.button("Analyze Tournaments"):
             self.analyze_tournaments()
