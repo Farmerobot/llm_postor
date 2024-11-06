@@ -122,7 +122,6 @@ class GUIHandler(BaseModel):
 
                     if item["annotation"]:
                         combined_annotation = ", ".join(item["annotation"])
-                        args.append((replaced_text, combined_annotation))
                         player_techniques[current_player].extend(item["annotation"])
 
                     previous_player = current_player
