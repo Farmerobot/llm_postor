@@ -80,7 +80,11 @@ class GUIHandler(BaseModel):
 
     def tournaments(self):
         st.write("This is the Tournaments tab. Content will be added here.")
-        
+
+        if st.button("Analyze Tournaments"):
+            self.analyze_tournaments()
+
+    def analyze_tournaments(self):
         # Directory containing tournament JSON files
         tournament_dir = "data/tournament"
         
@@ -93,16 +97,99 @@ class GUIHandler(BaseModel):
             
             # Create a new GameEngine instance
             game_engine = GameEngine()
+
             
             # Load the game state from the file
             if game_engine.load_state(file_path):
-                st.subheader(f"Tournament: {file_name}")
-                st.write(f"Game Stage: {game_engine.state.game_stage}")
-                st.write(f"Number of Players: {len(game_engine.state.players)}")
-                st.write(f"Round Number: {game_engine.state.round_number}")
-                # Add more details as needed
-            else:
-                st.write(f"Failed to load tournament from {file_name}")
+                game_state = game_engine.state
+                players = game_state.players
+                discussion_chat = "\n".join(players[0].get_chat_messages())
+                json_data = json.loads(annotate_dialogue(discussion_chat))
+                args = []
+                previous_player = None
+                player_techniques = defaultdict(list)
+                
+                for item in json_data:
+                    replaced_text = item["text"]
+                    current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
+
+                    if previous_player and previous_player != current_player:
+                        args.append("\n\n")
+
+                    if item["annotation"]:
+                        combined_annotation = ", ".join(item["annotation"])
+                        args.append((replaced_text, combined_annotation))
+                        player_techniques[current_player].extend(item["annotation"])
+                    else:
+                        args.append(replaced_text)
+
+                    previous_player = current_player
+
+                annotated_text(*args)
+
+                # Determine unique models used by each team
+                crewmates = [p for p in players if not p.is_impostor]
+                impostors = [p for p in players if p.is_impostor]
+                
+                crewmate_models = set(p.llm_model_name for p in crewmates)
+                impostor_models = set(p.llm_model_name for p in impostors)
+
+                # Flag to check if only one model per team exists
+                single_model_per_team = len(crewmate_models) == 1 and len(impostor_models) == 1
+
+                # Summary function with conditional header and model listing
+                def summarize_team(team, team_name, models):
+                    model_names = ", ".join(models)
+                    header_text = f"Summary for {team_name} - Model: {model_names}" if single_model_per_team else f"Summary for {team_name}"
+                    st.subheader(header_text)
+                    if not single_model_per_team:
+                        st.write(f"Models used: {model_names}")
+
+                    st.write(f"Number of {team_name.lower()}: {len(team)}")
+                    st.write("Players:", ", ".join([p.name for p in team]))
+
+                    total_techniques = sum(len(player_techniques[p.name]) for p in team)
+                    avg_techniques = total_techniques / len(team) if team else 0
+                    st.write(f"Total techniques: {total_techniques}")
+                    st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+                    # Technique breakdown for the team
+                    all_team_techniques = [tech for p in team for tech in player_techniques[p.name]]
+                    team_technique_counts = Counter(all_team_techniques)
+                    st.markdown("**Technique breakdown:**")
+                    for technique, count in team_technique_counts.items():
+                        avg_per_player = count / len(team) if team else 0
+                        st.write(f" - {technique}: {count} times - (avg per player: {avg_per_player:.2f})")
+
+                # Summaries for crewmates and impostors
+                summarize_team(crewmates, "Crewmates", crewmate_models)
+                summarize_team(impostors, "Impostors", impostor_models)
+
+                # Add model summary if multiple models are used within teams
+                if not single_model_per_team:
+                    st.subheader("Summary by Model")
+                    models = defaultdict(list)
+                    for player in players:
+                        models[player.llm_model_name].append(player)
+
+                    for model_name, model_players in models.items():
+                        st.markdown(f"### Model: {model_name}")
+                        st.write(f"Number of players: {len(model_players)}")
+                        st.write("Players:", ", ".join([p.name for p in model_players]))
+
+                        total_techniques = sum(len(player_techniques[p.name]) for p in model_players)
+                        avg_techniques = total_techniques / len(model_players) if model_players else 0
+                        st.write(f"Total techniques: {total_techniques}")
+                        st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+                        # Technique breakdown for this model
+                        all_model_techniques = [tech for p in model_players for tech in player_techniques[p.name]]
+                        model_technique_counts = Counter(all_model_techniques)
+                        st.markdown("**Technique breakdown:**")
+                        for technique, count in model_technique_counts.items():
+                            avg_per_player = count / len(model_players) if model_players else 0
+                            st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
