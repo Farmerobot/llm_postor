@@ -23,13 +23,13 @@ def load_game_engine():
     
     game_engine.init_game()
     if not game_engine.state.players:
-        player_names = ["Mateusz", "Andrii", "Vasyl", "Marcin", "Dariusz", "Iwo"]
+        player_names = ["Alice", "Bob", "Charlie", "Dave", "Erin"]
         players = [
-            AIPlayer(name="Mateusz", role="Impostor", llm_model_name=model_name),
-            AIPlayer(name="Wojtek", llm_model_name=player_model_name),
-            AIPlayer(name="Lolek", llm_model_name=player_model_name),
-            AIPlayer(name="Norbert", llm_model_name=player_model_name),
-            AIPlayer(name="Nemo", llm_model_name=player_model_name),
+            AIPlayer(name="Alice", role="Impostor", llm_model_name=model_name),
+            AIPlayer(name="Bob", llm_model_name=player_model_name),
+            AIPlayer(name="Charlie", llm_model_name=player_model_name),
+            AIPlayer(name="Dave", llm_model_name=player_model_name),
+            AIPlayer(name="Erin", llm_model_name=player_model_name),
         ]
         game_engine.load_players(players, impostor_count=1)
     game_engine.state.DEBUG = True
@@ -38,9 +38,8 @@ def load_game_engine():
 def main():
     gui_handler = GUIHandler()
     game_engine = load_game_engine()
-    chat_analyzer = ChatAnalyzer(players=game_engine.state.players)
-
-    gui_handler.display_gui(game_engine, chat_analyzer)
+    
+    gui_handler.display_gui(game_engine)
 
 if __name__ == "__main__":
     main()

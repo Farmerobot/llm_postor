@@ -1,6 +1,8 @@
 import json
 import random
 import uuid
+import os
+import concurrent.futures
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
@@ -20,10 +22,13 @@ from llm_postor.game.chat_analyzer import ChatAnalyzer
 
 
 class GUIHandler(BaseModel):
-
-    def display_gui(self, game_engine: GameEngine, chat_analyzer: ChatAnalyzer):
+    def display_gui(self, game_engine: GameEngine):
         st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
-        st.title("Among Us Game - LLMPostor")
+        game_overwiew, tournements = st.tabs(["Game Overview", "Tournaments"])
+        with game_overwiew:
+            self.game_overview(game_engine)
+        with tournements:
+            self.tournaments()
         with st.sidebar:
             with st.container():
                 st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
@@ -33,7 +38,8 @@ class GUIHandler(BaseModel):
                         player, i == game_engine.state.player_to_act_next, st
                     )
 
-
+    def game_overview(self, game_engine: GameEngine):
+        st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
         should_perform_step = st.button("Make Step")
         col1, col2 = st.columns([2,1])
@@ -72,6 +78,76 @@ class GUIHandler(BaseModel):
             print("Performing step")
             game_engine.perform_step()
             st.rerun()
+
+    def tournaments(self):
+        st.write("This is the Tournaments tab. Content will be added here.")
+
+        if st.button("Analyze Tournaments"):
+            self.analyze_tournaments()
+
+    def analyze_tournaments(self):
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
+        
+        # List all JSON files in the directory
+        tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
+        
+        # Dictionary to accumulate techniques for each model
+        model_techniques = defaultdict(lambda: defaultdict(int))
+        model_player_counts = defaultdict(int)
+
+        # Iterate over each file and load the game state
+        total_files = len(tournament_files)
+        progress_placeholder = st.empty()
+        def analyze_file(file_name):
+            file_path = os.path.join(tournament_dir, file_name)
+            game_engine = GameEngine()
+            if game_engine.load_state(file_path):
+                game_state = game_engine.state
+                players = game_state.players
+                discussion_chat = "\n".join(players[0].get_chat_messages())
+                json_data = json.loads(annotate_dialogue(discussion_chat))
+                previous_player = None
+                player_techniques = defaultdict(list)
+
+                for item in json_data:
+                    replaced_text = item["text"]
+                    current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
+
+                    if item["annotation"]:
+                        player_techniques[current_player].extend(item["annotation"])
+
+                    previous_player = current_player
+
+                for player in players:
+                    model_name = player.llm_model_name
+                    model_player_counts[model_name] += 1
+                    for technique in player_techniques[player.name]:
+                        model_techniques[model_name][technique] += 1
+
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
+            for future in concurrent.futures.as_completed(futures):
+                file_name = futures[future]
+                progress_placeholder.text(f"Finished analyzing {file_name}")
+
+        # Clear the progress message
+        progress_placeholder.empty()
+
+        # Display total and average techniques per player for each model
+        st.subheader("Model Techniques Summary Across All Tournaments")
+        for model_name, techniques in model_techniques.items():
+            st.markdown(f"### Model: {model_name}")
+            total_techniques = sum(techniques.values())
+            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
+            st.write(f"Total techniques: {total_techniques}")
+            st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+            st.markdown("**Technique breakdown:**")
+            for technique, count in techniques.items():
+                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
+                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
