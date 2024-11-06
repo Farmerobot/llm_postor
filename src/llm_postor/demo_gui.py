@@ -17,8 +17,8 @@ def load_game_engine():
     game_engine = GameEngine()
     
     # Only for new game. Saved games have llm_model selected in the game state
-    model_name = "openai/gpt-4o-mini"
-    player_model_name = "meta-llama/llama-3.1-8b-instruct"
+    model_name = "gryphe/mythomax-l2-13b"
+    player_model_name = "microsoft/wizardlm-2-7b"
     # model_name = "google/gemini-flash-1.5-exp"
     
     game_engine.init_game()

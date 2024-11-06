@@ -11,6 +11,7 @@ class AgentState(BaseModel):
     available_actions: List[str] = Field(default_factory=list)
     messages: List[str] = Field(default_factory=list)
     current_location: str = Field(default_factory=str)
+    in_room: str = Field(default_factory=str)
     token_usage: UsageMetadata = Field(default_factory=UsageMetadata)
 
     def to_dict(self):
@@ -20,6 +21,7 @@ class AgentState(BaseModel):
             "available_actions": self.available_actions,
             "messages": self.messages,
             "current_location": self.current_location,
+            "in_room": self.in_room,
             "token_usage": self.token_usage.to_dict(),
         }
 

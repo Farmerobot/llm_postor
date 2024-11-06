@@ -32,6 +32,7 @@ class AIPlayer(Player):
             tasks=self.get_task_to_complete(),
             actions=actions,
             current_location=self.state.location.value,
+            in_room=self.state.player_in_room,
         )
         prompts, chosen_action = self.adventure_agent.act()
         self.state.llm_responses = self.adventure_agent.responses

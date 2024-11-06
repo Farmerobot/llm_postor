@@ -65,6 +65,11 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0.5 / million,
 	},
+	"microsoft/wizardlm-2-7b": {
+		"input_tokens": 0.055 / million,
+		"cache_read": 0,
+		"output_tokens": 0.055 / million,
+	},
 	"meta-llama/llama-3.1-8b-instruct": {
 		"input_tokens": 0.05 / million,
 		"cache_read": 0,

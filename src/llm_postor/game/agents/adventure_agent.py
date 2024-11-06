@@ -10,6 +10,7 @@ from llm_postor.config import OPENROUTER_API_KEY
 
 class AdventureAgent(Agent):
     llm: ChatOpenAI = None
+    response_llm: ChatOpenAI = None
     llm_model_name: str
 
     def __init__(self, **data):
@@ -23,7 +24,13 @@ class AdventureAgent(Agent):
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
             model=self.llm_model_name,
-            temperature=0.1
+            temperature=1
+        )
+        self.response_llm = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=OPENROUTER_API_KEY,
+            model=self.llm_model_name,
+            temperature=0
         )
 
     def update_state(
@@ -32,11 +39,13 @@ class AdventureAgent(Agent):
         tasks: List[str],
         actions: List[str],
         current_location: str,
+        in_room: str,
     ):
         self.state.history = observations
         self.state.current_tasks = tasks
         self.state.available_actions = actions
         self.state.current_location = current_location
+        self.state.in_room = in_room
 
     def create_plan(self) -> str:
         plan_prompt = ADVENTURE_PLAN_TEMPLATE.format(
@@ -45,6 +54,7 @@ class AdventureAgent(Agent):
             history=self.state.history,
             tasks=[str(task) for task in self.state.current_tasks],
             actions="- " + "\n- ".join(self.state.available_actions),
+            in_room=self.state.in_room,
             current_location=self.state.current_location,
         )
         # print("\nPlan prompt:", plan_prompt)
@@ -63,7 +73,7 @@ class AdventureAgent(Agent):
             plan=plan,
         )
         # print("\nAction prompt", action_prompt)
-        chosen_action = self.llm.invoke([HumanMessage(content=action_prompt)])
+        chosen_action = self.response_llm.invoke([HumanMessage(content=action_prompt)])
         # print("\nChosen action:", chosen_action.content)
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action = chosen_action.content.strip()
@@ -92,4 +102,4 @@ class AdventureAgent(Agent):
 
     @staticmethod
     def normalize_action(action: str) -> str:
-        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().lower()
+        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").lower()

@@ -63,12 +63,12 @@ class PlayerHistory(BaseModel):
                 seen_actions = "\n".join(round.seen_actions)
                 observations = "\n".join(round.observations)
                 history_str += f"Round {i+1}\n"
-                history_str += f"Location: {round.location}\n"
+                history_str += f"Location: {round.location.value}\n"
                 history_str += f"Seen Actions:\n{seen_actions}\n"
-                history_str += f"{round.player_in_room}\n"
-                history_str += f"Your plan:\n{round.llm_responses[0]}\n"
+                history_str += f"Your previous plan:\n{round.llm_responses[0]}\n"
                 history_str += f"Your action: {round.llm_responses[1]}\n"
                 history_str += f"Observations:\n{observations}\n"
+                history_str += f"{round.player_in_room}\n"
             elif i == len(self.rounds) - 1 or self.rounds[i+1].stage == GamePhase.ACTION_PHASE:
                 observations = "\n".join(round.observations)
                 history_str += f"Round {i+1}\n" if last_action_idx == i-1 else f"Rounds {last_action_idx+2}-{i+1}\n"

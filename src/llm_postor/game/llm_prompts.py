@@ -38,14 +38,20 @@ Game Context:
 Your Current Objectives:
 {tasks}
 
-Actions You Can Take:
+These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
 {actions}
+Please note that at the moment you can not go anywhere else than listed in actions.
 
 Current Location:
 {current_location}
+Players currently in Room with you:
+{in_room}
 
 Instructions for Plan Creation
 Based on the information above, create a short plan that focuses on your next objective. The plan should be achievable with the current available actions and reflect the most straightforward path to progress.
+Note that this plan should take into account the actions you can perform right now and the current game state. If you need to move to a different location, ensure that it is included in the actions.
+For example if you need to complete a task in the Kitchen, but action to move to Kitchen is not available, you should not include the task in your plan.
+If you need to move to a location, but the action to move is not available, you should include the move action in your plan.
 
 * Prioritize progression: Focus on advancing to new objectives.
 * Limit the plan to 3-4 steps to maintain focus on the current situation.
@@ -57,6 +63,39 @@ Next steps:
 ADVENTURE_ACTION_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
+
+Output format:
+if the actions are:
+- action 1
+- action 2
+- action 3
+you should respond in this format:
+action 1
+
+Example output format:
+if the actions are:
+- move to location
+- do task
+- wait in room
+valid response is:
+move to location
+valid response is:
+do task
+valid response is:
+wait in room
+invalid response is:
+Wait in Room.
+invalid response is:
+move to location and do task
+invalid response is:
+move to location  (because something)
+invalid response is:
+- move to location
+invalid response is:
+Waldek is moving to location
+invalid response is:
+Waldek's action: move to location
+
 Your current game state is:
 
 Planned Steps:
@@ -64,12 +103,12 @@ These are your intended steps based on your objective. However, please note that
 {plan}
 
 Available Actions:
-Now, please choose only one of the actions listed below that best aligns with your planned objective. These are the actions you can actually perform right now:
+Now, please choose only one of the actions listed below that best aligns with your planned objective.
+Select one action from this list and respond with exactly that action as it is written. Do not invent actions or refer to the plan directly if they are not part of the list. Only the Available Actions matter in this decision.
+These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
 {actions}
 
-Select one action from this list and respond with exactly that action as it is written. Do not invent actions or refer to the plan directly if they are not part of the list. Only the Available Actions matter in this decision.
-
-Selected action:
+Choosen action is:
 """
 
 DISCUSSION_TEMPLATE = GAME_CONTEXT + """

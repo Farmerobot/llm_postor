@@ -32,11 +32,11 @@ class GUIHandler(BaseModel):
         with st.sidebar:
             with st.container():
                 st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
-            for i, player in enumerate(game_engine.state.players):
-                with st.empty():
-                    self._display_short_player_info(
-                        player, i == game_engine.state.player_to_act_next, st
-                    )
+                for i, player in enumerate(game_engine.state.players):
+                    with st.empty():
+                        self._display_short_player_info(
+                            player, i == game_engine.state.player_to_act_next, st
+                        )
 
     def game_overview(self, game_engine: GameEngine):
         st.title("Among Us Game - LLMPostor")
@@ -80,7 +80,13 @@ class GUIHandler(BaseModel):
             
         if should_perform_step:
             print("Performing step")
-            game_engine.perform_step()
+            try:
+                res = game_engine.perform_step()
+            except Exception as e:
+                if "LLM did" in str(e):
+                    pass
+                else:
+                    raise e
             st.rerun()
 
     def tournaments(self):
