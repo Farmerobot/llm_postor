@@ -77,8 +77,33 @@ class GUIHandler(BaseModel):
             game_engine.perform_step()
             st.rerun()
 
-    def tournements(self):
+    import os
+
+    def tournaments(self):
         st.write("This is the Tournaments tab. Content will be added here.")
+        
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
+        
+        # List all JSON files in the directory
+        tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
+        
+        # Iterate over each file and load the game state
+        for file_name in tournament_files:
+            file_path = os.path.join(tournament_dir, file_name)
+            
+            # Create a new GameEngine instance
+            game_engine = GameEngine()
+            
+            # Load the game state from the file
+            if game_engine.load_state(file_path):
+                st.subheader(f"Tournament: {file_name}")
+                st.write(f"Game Stage: {game_engine.state.game_stage}")
+                st.write(f"Number of Players: {len(game_engine.state.players)}")
+                st.write(f"Round Number: {game_engine.state.round_number}")
+                # Add more details as needed
+            else:
+                st.write(f"Failed to load tournament from {file_name}")
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
