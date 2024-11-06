@@ -41,7 +41,9 @@ class GUIHandler(BaseModel):
     def game_overview(self, game_engine: GameEngine):
         st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
-        should_perform_step = st.button("Make Step")
+        should_perform_step = st.checkbox("Perform Step")
+        if st.button("Make Step"):
+            should_perform_step = True
         if st.button("Clear Game State"):
             self.clear_game_state()
         col1, col2 = st.columns([2,1])
