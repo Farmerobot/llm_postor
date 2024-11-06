@@ -27,7 +27,7 @@ class GUIHandler(BaseModel):
         with game_overwiew:
             self.game_overview(game_engine)
         with tournements:
-            self.tournements()
+            self.tournaments()
         with st.sidebar:
             with st.container():
                 st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
@@ -77,8 +77,6 @@ class GUIHandler(BaseModel):
             print("Performing step")
             game_engine.perform_step()
             st.rerun()
-
-    import os
 
     def tournaments(self):
         st.write("This is the Tournaments tab. Content will be added here.")
