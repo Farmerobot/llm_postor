@@ -2,6 +2,7 @@ import json
 import random
 import uuid
 import os
+import concurrent.futures
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
@@ -98,40 +99,37 @@ class GUIHandler(BaseModel):
         # Iterate over each file and load the game state
         total_files = len(tournament_files)
         progress_placeholder = st.empty()
-        for file_number, file_name in enumerate(tournament_files, start=1):
-            progress_placeholder.text(f"Analyzing tournament {file_number} out of {total_files}")
+        def analyze_file(file_name):
             file_path = os.path.join(tournament_dir, file_name)
-
-            # Create a new GameEngine instance
             game_engine = GameEngine()
-
-            
-            # Load the game state from the file
             if game_engine.load_state(file_path):
                 game_state = game_engine.state
                 players = game_state.players
                 discussion_chat = "\n".join(players[0].get_chat_messages())
                 json_data = json.loads(annotate_dialogue(discussion_chat))
-                args = []
                 previous_player = None
                 player_techniques = defaultdict(list)
-                
+
                 for item in json_data:
                     replaced_text = item["text"]
                     current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
                     if item["annotation"]:
-                        combined_annotation = ", ".join(item["annotation"])
                         player_techniques[current_player].extend(item["annotation"])
 
                     previous_player = current_player
 
-                # Accumulate techniques for each model
                 for player in players:
                     model_name = player.llm_model_name
                     model_player_counts[model_name] += 1
                     for technique in player_techniques[player.name]:
                         model_techniques[model_name][technique] += 1
+
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
+            for future in concurrent.futures.as_completed(futures):
+                file_name = futures[future]
+                progress_placeholder.text(f"Finished analyzing {file_name}")
 
         # Clear the progress message
         progress_placeholder.empty()
