@@ -38,9 +38,8 @@ def load_game_engine():
 def main():
     gui_handler = GUIHandler()
     game_engine = load_game_engine()
-    chat_analyzer = ChatAnalyzer(players=game_engine.state.players)
-
-    gui_handler.display_gui(game_engine, chat_analyzer)
+    
+    gui_handler.display_gui(game_engine)
 
 if __name__ == "__main__":
     main()

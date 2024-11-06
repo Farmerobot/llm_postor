@@ -20,10 +20,13 @@ from llm_postor.game.chat_analyzer import ChatAnalyzer
 
 
 class GUIHandler(BaseModel):
-
-    def display_gui(self, game_engine: GameEngine, chat_analyzer: ChatAnalyzer):
+    def display_gui(self, game_engine: GameEngine):
         st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
-        st.title("Among Us Game - LLMPostor")
+        game_overwiew, tournements = st.tabs(["Game Overview", "Tournaments"])
+        with game_overwiew:
+            self.game_overview(game_engine)
+        with tournements:
+            self.tournements()
         with st.sidebar:
             with st.container():
                 st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
@@ -33,7 +36,8 @@ class GUIHandler(BaseModel):
                         player, i == game_engine.state.player_to_act_next, st
                     )
 
-
+    def game_overview(self, game_engine: GameEngine):
+        st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
         should_perform_step = st.button("Make Step")
         col1, col2 = st.columns([2,1])
@@ -72,6 +76,9 @@ class GUIHandler(BaseModel):
             print("Performing step")
             game_engine.perform_step()
             st.rerun()
+
+    def tournements(self):
+        st.write("This is the Tournaments tab. Content will be added here.")
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
