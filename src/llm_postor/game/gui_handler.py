@@ -1,6 +1,7 @@
 import json
 import random
 import uuid
+import os
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
