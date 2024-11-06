@@ -176,30 +176,19 @@ class GUIHandler(BaseModel):
                 summarize_team(crewmates, "Crewmates", crewmate_models)
                 summarize_team(impostors, "Impostors", impostor_models)
 
-                # Add model summary if multiple models are used within teams
-                if not single_model_per_team:
-                    st.subheader("Summary by Model")
-                    models = defaultdict(list)
-                    for player in players:
-                        models[player.llm_model_name].append(player)
+                # Display total and average techniques per player for each model
+                st.subheader("Model Techniques Summary Across All Tournaments")
+                for model_name, techniques in model_techniques.items():
+                    st.markdown(f"### Model: {model_name}")
+                    total_techniques = sum(techniques.values())
+                    avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
+                    st.write(f"Total techniques: {total_techniques}")
+                    st.write(f"Average techniques per player: {avg_techniques:.2f}")
 
-                    for model_name, model_players in models.items():
-                        st.markdown(f"### Model: {model_name}")
-                        st.write(f"Number of players: {len(model_players)}")
-                        st.write("Players:", ", ".join([p.name for p in model_players]))
-
-                        total_techniques = sum(len(player_techniques[p.name]) for p in model_players)
-                        avg_techniques = total_techniques / len(model_players) if model_players else 0
-                        st.write(f"Total techniques: {total_techniques}")
-                        st.write(f"Average techniques per player: {avg_techniques:.2f}")
-
-                        # Technique breakdown for this model
-                        all_model_techniques = [tech for p in model_players for tech in player_techniques[p.name]]
-                        model_technique_counts = Counter(all_model_techniques)
-                        st.markdown("**Technique breakdown:**")
-                        for technique, count in model_technique_counts.items():
-                            avg_per_player = count / len(model_players) if model_players else 0
-                            st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+                    st.markdown("**Technique breakdown:**")
+                    for technique, count in techniques.items():
+                        avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
+                        st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
 
 
     def _display_short_player_info(
@@ -569,16 +558,3 @@ class GUIHandler(BaseModel):
                 if round_data.action_result:  # Check if action result exists
                     with st.chat_message("system"):
                         st.write(f"Action Result: {round_data.action_result}")
-        # Display total and average techniques per player for each model
-        st.subheader("Model Techniques Summary Across All Tournaments")
-        for model_name, techniques in model_techniques.items():
-            st.markdown(f"### Model: {model_name}")
-            total_techniques = sum(techniques.values())
-            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
-            st.write(f"Total techniques: {total_techniques}")
-            st.write(f"Average techniques per player: {avg_techniques:.2f}")
-
-            st.markdown("**Technique breakdown:**")
-            for technique, count in techniques.items():
-                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
-                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
