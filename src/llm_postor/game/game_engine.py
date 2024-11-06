@@ -68,7 +68,7 @@ class GameEngine(BaseModel):
 
     def init_game(self) -> None:
         """Initializes the game. Tries to set state from file, otherwise starts a new game."""
-        if not self.load_state():
+        if not self.load_state(game_consts.STATE_FILE):
             self.state.set_stage(GamePhase.ACTION_PHASE)
 
     def perform_step(self) -> bool:
@@ -458,12 +458,12 @@ class GameEngine(BaseModel):
                     player.init_agents()
             # yaml.dump(self.state.model_dump(), f)
 
-    def load_state(self) -> bool:
+    def load_state(self, file_path: str) -> bool:
         """Loads a previously saved game state from a file.
         :return: True if the state was successfully loaded, False otherwise
         """
         try:
-            with open(game_consts.STATE_FILE, "r") as f:
+            with open(file_path, "r") as f:
                 data = json.load(f)
                 # Deserialize players based on their type
                 players = [
