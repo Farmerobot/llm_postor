@@ -117,19 +117,12 @@ class GUIHandler(BaseModel):
                     replaced_text = item["text"]
                     current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
-                    if previous_player and previous_player != current_player:
-                        args.append("\n\n")
-
                     if item["annotation"]:
                         combined_annotation = ", ".join(item["annotation"])
                         args.append((replaced_text, combined_annotation))
                         player_techniques[current_player].extend(item["annotation"])
-                    else:
-                        args.append(replaced_text)
 
                     previous_player = current_player
-
-                annotated_text(*args)
 
                 # Accumulate techniques for each model
                 for player in players:
@@ -138,57 +131,19 @@ class GUIHandler(BaseModel):
                     for technique in player_techniques[player.name]:
                         model_techniques[model_name][technique] += 1
 
-                # Determine unique models used by each team
-                crewmates = [p for p in players if not p.is_impostor]
-                impostors = [p for p in players if p.is_impostor]
-                
-                crewmate_models = set(p.llm_model_name for p in crewmates)
-                impostor_models = set(p.llm_model_name for p in impostors)
+        # Display total and average techniques per player for each model
+        st.subheader("Model Techniques Summary Across All Tournaments")
+        for model_name, techniques in model_techniques.items():
+            st.markdown(f"### Model: {model_name}")
+            total_techniques = sum(techniques.values())
+            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
+            st.write(f"Total techniques: {total_techniques}")
+            st.write(f"Average techniques per player: {avg_techniques:.2f}")
 
-                # Flag to check if only one model per team exists
-                single_model_per_team = len(crewmate_models) == 1 and len(impostor_models) == 1
-
-                # Summary function with conditional header and model listing
-                def summarize_team(team, team_name, models):
-                    model_names = ", ".join(models)
-                    header_text = f"Summary for {team_name} - Model: {model_names}" if single_model_per_team else f"Summary for {team_name}"
-                    st.subheader(header_text)
-                    if not single_model_per_team:
-                        st.write(f"Models used: {model_names}")
-
-                    st.write(f"Number of {team_name.lower()}: {len(team)}")
-                    st.write("Players:", ", ".join([p.name for p in team]))
-
-                    total_techniques = sum(len(player_techniques[p.name]) for p in team)
-                    avg_techniques = total_techniques / len(team) if team else 0
-                    st.write(f"Total techniques: {total_techniques}")
-                    st.write(f"Average techniques per player: {avg_techniques:.2f}")
-
-                    # Technique breakdown for the team
-                    all_team_techniques = [tech for p in team for tech in player_techniques[p.name]]
-                    team_technique_counts = Counter(all_team_techniques)
-                    st.markdown("**Technique breakdown:**")
-                    for technique, count in team_technique_counts.items():
-                        avg_per_player = count / len(team) if team else 0
-                        st.write(f" - {technique}: {count} times - (avg per player: {avg_per_player:.2f})")
-
-                # Summaries for crewmates and impostors
-                summarize_team(crewmates, "Crewmates", crewmate_models)
-                summarize_team(impostors, "Impostors", impostor_models)
-
-                # Display total and average techniques per player for each model
-                st.subheader("Model Techniques Summary Across All Tournaments")
-                for model_name, techniques in model_techniques.items():
-                    st.markdown(f"### Model: {model_name}")
-                    total_techniques = sum(techniques.values())
-                    avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
-                    st.write(f"Total techniques: {total_techniques}")
-                    st.write(f"Average techniques per player: {avg_techniques:.2f}")
-
-                    st.markdown("**Technique breakdown:**")
-                    for technique, count in techniques.items():
-                        avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
-                        st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+            st.markdown("**Technique breakdown:**")
+            for technique, count in techniques.items():
+                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
+                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
 
 
     def _display_short_player_info(
