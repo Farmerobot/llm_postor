@@ -97,8 +97,9 @@ class GUIHandler(BaseModel):
 
         # Iterate over each file and load the game state
         total_files = len(tournament_files)
+        progress_placeholder = st.empty()
         for file_number, file_name in enumerate(tournament_files, start=1):
-            st.write(f"Analyzing tournament {file_number} out of {total_files}")
+            progress_placeholder.text(f"Analyzing tournament {file_number} out of {total_files}")
             file_path = os.path.join(tournament_dir, file_name)
 
             # Create a new GameEngine instance
@@ -132,6 +133,9 @@ class GUIHandler(BaseModel):
                     model_player_counts[model_name] += 1
                     for technique in player_techniques[player.name]:
                         model_techniques[model_name][technique] += 1
+
+        # Clear the progress message
+        progress_placeholder.empty()
 
         # Display total and average techniques per player for each model
         st.subheader("Model Techniques Summary Across All Tournaments")
