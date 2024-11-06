@@ -91,6 +91,10 @@ class GUIHandler(BaseModel):
         # List all JSON files in the directory
         tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
         
+        # Dictionary to accumulate techniques for each model
+        model_techniques = defaultdict(lambda: defaultdict(int))
+        model_player_counts = defaultdict(int)
+
         # Iterate over each file and load the game state
         for file_name in tournament_files:
             file_path = os.path.join(tournament_dir, file_name)
@@ -126,6 +130,13 @@ class GUIHandler(BaseModel):
                     previous_player = current_player
 
                 annotated_text(*args)
+
+                # Accumulate techniques for each model
+                for player in players:
+                    model_name = player.llm_model_name
+                    model_player_counts[model_name] += 1
+                    for technique in player_techniques[player.name]:
+                        model_techniques[model_name][technique] += 1
 
                 # Determine unique models used by each team
                 crewmates = [p for p in players if not p.is_impostor]
@@ -558,3 +569,16 @@ class GUIHandler(BaseModel):
                 if round_data.action_result:  # Check if action result exists
                     with st.chat_message("system"):
                         st.write(f"Action Result: {round_data.action_result}")
+        # Display total and average techniques per player for each model
+        st.subheader("Model Techniques Summary Across All Tournaments")
+        for model_name, techniques in model_techniques.items():
+            st.markdown(f"### Model: {model_name}")
+            total_techniques = sum(techniques.values())
+            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
+            st.write(f"Total techniques: {total_techniques}")
+            st.write(f"Average techniques per player: {avg_techniques:.2f}")
+
+            st.markdown("**Technique breakdown:**")
+            for technique, count in techniques.items():
+                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
+                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
