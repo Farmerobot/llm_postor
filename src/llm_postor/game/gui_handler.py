@@ -96,7 +96,7 @@ class GUIHandler(BaseModel):
         model_player_counts = defaultdict(int)
 
         # Iterate over each file and load the game state
-        for file_name in tournament_files:
+        for file_number, file_name in enumerate(tournament_files):
             file_path = os.path.join(tournament_dir, file_name)
             
             # Create a new GameEngine instance
