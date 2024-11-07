@@ -12,7 +12,8 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 from llm_postor.annotation import annotate_dialogue
-from llm_postor.game.consts import TOKEN_COSTS, NUM_MAX_PLAYERS
+from llm_postor.game.consts import *
+from llm_postor.game.llm_prompts import *
 from llm_postor.game.game_state import GameState
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.base_player import Player, PlayerRole
@@ -668,3 +669,55 @@ class GUIHandler(BaseModel):
             game_engine.state.set_stage(GamePhase.ACTION_PHASE)
             game_engine.save_state()
             st.rerun()
+
+        # Configuration Settings
+        st.markdown(f"---")  # Separator for configuration settings
+        st.header(f"Game Configuration")
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        with col1:
+            num_max_players = st.number_input("Maximum Players", min_value=1, max_value=20, value=NUM_MAX_PLAYERS)
+        with col2:
+            num_short_tasks = st.number_input("Number of Short Tasks", min_value=1, max_value=10, value=NUM_SHORT_TASKS)
+        with col3:
+            num_long_tasks = st.number_input("Number of Long Tasks", min_value=1, max_value=10, value=NUM_LONG_TASKS)
+        with col4:
+            num_chats = st.number_input("Number of Chats", min_value=1, max_value=10, value=NUM_CHATS)
+        with col5:
+            impostor_cooldown = st.number_input("Impostor Cooldown", min_value=0, max_value=10, value=IMPOSTOR_COOLDOWN)
+        with col6:
+            state_file = st.text_input("Game State File", value=STATE_FILE)
+        adventure_plan_system_prompt = st.text_area("Adventure Plan System Prompt", value=ADVENTURE_PLAN_SYSTEM_PROMPT)
+        adventure_plan_user_prompt = st.text_area("Adventure Plan User Prompt", value=ADVENTURE_PLAN_USER_PROMPT)
+        adventure_action_system_prompt = st.text_area("Adventure Action System Prompt", value=ADVENTURE_ACTION_SYSTEM_PROMPT)
+        adventure_action_user_prompt = st.text_area("Adventure Action User Prompt", value=ADVENTURE_ACTION_USER_PROMPT)
+        discussion_system_prompt = st.text_area("Discussion System Prompt", value=DISCUSSION_SYSTEM_PROMPT)
+        discussion_user_prompt = st.text_area("Discussion User Prompt", value=DISCUSSION_USER_PROMPT)
+        discussion_response_system_prompt = st.text_area("Discussion Response System Prompt", value=DISCUSSION_RESPONSE_SYSTEM_PROMPT)
+        discussion_response_user_prompt = st.text_area("Discussion Response User Prompt", value=DISCUSSION_RESPONSE_USER_PROMPT)
+        voting_system_prompt = st.text_area("Voting System Prompt", value=VOTING_SYSTEM_PROMPT)
+        voting_user_prompt = st.text_area("Voting User Prompt", value=VOTING_USER_PROMPT)
+        persuasion_techniques = st.text_area("Persuasion Techniques", value=PERSUASION_TECHNIQUES)
+        annotation_template = st.text_area("Annotation Template", value=ANNOTATION_TEMPLATE)
+        if st.button("Save Settings"):
+            with open("src/llm_postor/game/llm_prompts.py", "w") as f:
+                f.write(f"ANNOTATION_TEMPLATE = \"\"\"{annotation_template}\"\"\"\n\n")
+                f.write(f"PERSUASION_TECHNIQUES = \"\"\"{persuasion_techniques}\"\"\"\n\n")
+                f.write(f"ADVENTURE_PLAN_SYSTEM_PROMPT = \"\"\"{adventure_plan_system_prompt}\"\"\"\n\n")
+                f.write(f"ADVENTURE_PLAN_USER_PROMPT = \"\"\"{adventure_plan_user_prompt}\"\"\"\n\n")
+                f.write(f"ADVENTURE_ACTION_SYSTEM_PROMPT = \"\"\"{adventure_action_system_prompt}\"\"\"\n\n")
+                f.write(f"ADVENTURE_ACTION_USER_PROMPT = \"\"\"{adventure_action_user_prompt}\"\"\"\n\n")
+                f.write(f"DISCUSSION_SYSTEM_PROMPT = \"\"\"{discussion_system_prompt}\"\"\"\n\n")
+                f.write(f"DISCUSSION_USER_PROMPT = \"\"\"{discussion_user_prompt}\"\"\"\n\n")
+                f.write(f"DISCUSSION_RESPONSE_SYSTEM_PROMPT = \"\"\"{discussion_response_system_prompt}\"\"\"\n\n")
+                f.write(f"DISCUSSION_RESPONSE_USER_PROMPT = \"\"\"{discussion_response_user_prompt}\"\"\"\n\n")
+                f.write(f"VOTING_SYSTEM_PROMPT = \"\"\"{voting_system_prompt}\"\"\"\n\n")
+                f.write(f"VOTING_USER_PROMPT = \"\"\"{voting_user_prompt}\"\"\"\n")
+            with open("src/llm_postor/game/consts.py", "w") as f:
+                f.write(f"NUM_MAX_PLAYERS = {num_max_players}\n")
+                f.write(f"NUM_SHORT_TASKS = {num_short_tasks}\n")
+                f.write(f"NUM_LONG_TASKS = {num_long_tasks}\n")
+                f.write(f"NUM_CHATS = {num_chats}\n")
+                f.write(f"IMPOSTOR_COOLDOWN = {impostor_cooldown}\n")
+                f.write(f"STATE_FILE = \"{state_file}\"\n")
+                f.write(f"TOKEN_COSTS = {TOKEN_COSTS}")
+            st.success("Settings saved successfully!")

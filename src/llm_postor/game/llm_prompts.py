@@ -1,5 +1,3 @@
-# LLM Prompts for various agents and actions. Absolutely no persusaion or manipulation involved.
-
 GAME_CONTEXT = """
 This is a text-based social deduction game where players explore a virtual house while trying to complete objectives. The game has two phases:
 1. Action Phase: Players can move between rooms and perform actions
