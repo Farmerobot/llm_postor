@@ -70,6 +70,11 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0.055 / million,
 	},
+	"qwen/qwen-2-7b-instruct": {
+		"input_tokens": 0.054 / million,
+		"cache_read": 0,
+		"output_tokens": 0.054 / million,
+	},
 	"meta-llama/llama-3.1-8b-instruct": {
 		"input_tokens": 0.05 / million,
 		"cache_read": 0,

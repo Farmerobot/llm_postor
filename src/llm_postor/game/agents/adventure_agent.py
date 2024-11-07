@@ -2,16 +2,23 @@ import re
 from typing import List, Any
 from langchain.schema import HumanMessage
 from langchain_openai import ChatOpenAI
+from pydantic import Field
 
 from llm_postor.game.agents.base_agent import Agent
 from llm_postor.game.consts import ASCII_MAP
 from llm_postor.game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
 from llm_postor.config import OPENROUTER_API_KEY
+from llm_postor.game.agents.usage_metadata import UsageMetadata
 
 class AdventureAgent(Agent):
     llm: ChatOpenAI = None
     response_llm: ChatOpenAI = None
     llm_model_name: str
+    history: str = Field(default="")
+    current_tasks: List[Any] = Field(default_factory=list)
+    available_actions: List[str] = Field(default_factory=list)
+    current_location: str = Field(default="")
+    in_room: str = Field(default="")
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -33,29 +40,35 @@ class AdventureAgent(Agent):
             temperature=0
         )
 
-    def update_state(
+    def act(
         self,
         observations: str,
         tasks: List[str],
         actions: List[str],
         current_location: str,
         in_room: str,
-    ):
-        self.state.history = observations
-        self.state.current_tasks = tasks
-        self.state.available_actions = actions
-        self.state.current_location = current_location
-        self.state.in_room = in_room
+    ) -> Any:
+        self.history = observations
+        self.current_tasks = tasks
+        self.available_actions = actions
+        self.current_location = current_location
+        self.in_room = in_room
+
+        plan_prompt, plan = self.create_plan()
+        action_prompt, action_idx, action = self.choose_action(plan)
+        self.responses.append(plan)
+        self.responses.append(action)
+        return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action_idx
 
     def create_plan(self) -> str:
         plan_prompt = ADVENTURE_PLAN_TEMPLATE.format(
             player_name=self.player_name,
             player_role=self.role,
-            history=self.state.history,
-            tasks=[str(task) for task in self.state.current_tasks],
-            actions="- " + "\n- ".join(self.state.available_actions),
-            in_room=self.state.in_room,
-            current_location=self.state.current_location,
+            history=self.history,
+            tasks=[str(task) for task in self.current_tasks],
+            actions="- " + "\n- ".join(self.available_actions),
+            in_room=self.in_room,
+            current_location=self.current_location,
         )
         # print("\nPlan prompt:", plan_prompt)
         plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
@@ -67,9 +80,9 @@ class AdventureAgent(Agent):
         action_prompt = ADVENTURE_ACTION_TEMPLATE.format(
             player_name=self.player_name,
             player_role=self.role,
-            history="\n".join(self.state.history),
-            task=self.state.current_tasks,
-            actions="- " + "\n- ".join(self.state.available_actions),
+            history="\n".join(self.history),
+            task=self.current_tasks,
+            actions="- " + "\n- ".join(self.available_actions),
             plan=plan,
         )
         # print("\nAction prompt", action_prompt)
@@ -82,7 +95,7 @@ class AdventureAgent(Agent):
     def check_action_valid(self, chosen_action: str) -> int:
         normalized_chosen_action = self.normalize_action(chosen_action)
         normalized_available_actions = [
-            self.normalize_action(action) for action in self.state.available_actions
+            self.normalize_action(action) for action in self.available_actions
         ]
         if normalized_chosen_action in normalized_available_actions:
             return normalized_available_actions.index(normalized_chosen_action), normalized_chosen_action
@@ -92,13 +105,6 @@ class AdventureAgent(Agent):
             raise ValueError(warning_str)
             self.responses.append(warning_str)
             return 0
-
-    def act(self) -> Any:
-        plan_prompt, plan = self.create_plan()
-        action_prompt, action_idx, action = self.choose_action(plan)
-        self.responses.append(plan)
-        self.responses.append(action)
-        return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action_idx
 
     @staticmethod
     def normalize_action(action: str) -> str:

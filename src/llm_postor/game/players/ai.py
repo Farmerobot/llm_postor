@@ -27,16 +27,15 @@ class AIPlayer(Player):
 
     def prompt_action(self, actions: List[str]) -> int:
         self.state.actions = actions
-        self.adventure_agent.update_state(
+        prompts, chosen_action = self.adventure_agent.act(
             observations=self.history.get_history_str(),
             tasks=self.get_task_to_complete(),
             actions=actions,
             current_location=self.state.location.value,
             in_room=self.state.player_in_room,
         )
-        prompts, chosen_action = self.adventure_agent.act()
         self.state.llm_responses = self.adventure_agent.responses
-        self.add_token_usage(self.adventure_agent.state.token_usage)
+        self.add_token_usage(self.adventure_agent.token_usage)
         self.state.response = str(chosen_action)
         self.state.prompt = prompts
         return chosen_action
@@ -44,22 +43,25 @@ class AIPlayer(Player):
     def prompt_discussion(self) -> str:
         history = self.history.get_history_str()
         statements = "\n".join(self.get_chat_messages())
-        self.discussion_agent.update_state(observations=history, messages=statements)
-        message_prompt, message = self.discussion_agent.act()
+        message_prompt, message = self.discussion_agent.act(
+            observations=history, messages=statements
+        )
         self.state.llm_responses = self.discussion_agent.responses
-        self.add_token_usage(self.discussion_agent.state.token_usage)
+        self.add_token_usage(self.discussion_agent.token_usage)
         self.state.response = message
         self.state.prompt = message_prompt
         return message
 
     def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
         self.state.actions = voting_actions
-        self.voting_agent.update_state(
-            observations=self.history.get_history_str(), actions=voting_actions
+        vote_prompt, vote = self.voting_agent.act(
+            observations=self.history.get_history_str(),
+            actions=voting_actions,
+            discussion_log="\n".join(self.get_chat_messages()),
+            dead_players=dead_players,
         )
-        vote_prompt, vote = self.voting_agent.choose_action("\n".join(self.get_chat_messages()), dead_players=dead_players)
         self.state.llm_responses = self.voting_agent.responses
-        self.add_token_usage(self.voting_agent.state.token_usage)
+        self.add_token_usage(self.voting_agent.token_usage)
         self.state.response = str(vote)
         self.state.prompt = vote_prompt
         return vote

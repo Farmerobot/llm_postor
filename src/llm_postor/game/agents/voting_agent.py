@@ -1,15 +1,20 @@
 import re
 from typing import List, Any
+
+from pydantic import Field
 from .base_agent import Agent
 from langchain.schema import HumanMessage
 from langchain_openai import ChatOpenAI
 
 from llm_postor.game.llm_prompts import VOTING_TEMPLATE
 from llm_postor.config import OPENROUTER_API_KEY
+from llm_postor.game.agents.usage_metadata import UsageMetadata
 
 class VotingAgent(Agent):
     llm: ChatOpenAI = None
     llm_model_name: str
+    history: str = Field(default="")
+    available_actions: List[str] = Field(default_factory=list)
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -25,22 +30,25 @@ class VotingAgent(Agent):
             temperature=0
         )
 
-    def update_state(
-        self, observations: str, tasks: List[str] = None, actions: List[str] = None
-    ):
-        self.state.history = observations
-        self.state.available_actions = actions
+    def act(
+        self,
+        observations: str,
+        actions: List[str],
+        discussion_log: str,
+        dead_players: List[str],
+    ) -> int:
+        self.history = observations
+        self.available_actions = actions
 
-    def choose_action(self, discussion_log: str, dead_players: List[str]) -> int:
         action_prompt = VOTING_TEMPLATE.format(
             player_name=self.player_name,
             player_role=self.role,
             discussion=discussion_log,
-            history=self.state.history,
+            history=self.history,
             dead_players=dead_players,
             actions="\n".join(
                 f"- {action}"
-                for i, action in enumerate(self.state.available_actions)
+                for i, action in enumerate(self.available_actions)
             ),
         )
         # print("\nAction prompt voting:", action_prompt)
@@ -55,7 +63,7 @@ class VotingAgent(Agent):
     def check_action_valid(self, chosen_action: str) -> int:
         normalized_chosen_action = self.normalize_action(chosen_action)
         normalized_available_actions = [
-            self.normalize_action(action) for action in self.state.available_actions
+            self.normalize_action(action) for action in self.available_actions
         ]
         if normalized_chosen_action in normalized_available_actions:
             return normalized_available_actions.index(normalized_chosen_action)
@@ -65,10 +73,6 @@ class VotingAgent(Agent):
             raise ValueError(warning_str)
             self.responses.append(warning_str)
             return 0  # Default to first action if invalid
-
-    def act(self) -> Any:
-        # choose_action is used
-        return 0
 
     @staticmethod
     def normalize_action(action: str) -> str:
