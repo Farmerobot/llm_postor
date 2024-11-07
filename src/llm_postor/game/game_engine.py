@@ -327,6 +327,7 @@ class GameEngine(BaseModel):
 
         self.state.set_stage(GamePhase.ACTION_PHASE) 
         self.mark_dead_players_as_reported()
+        self.save_state()
 
     def get_vote_actions(self, player: Player) -> list[GameAction]:
         """Gets a list of possible voting actions for a given player."""

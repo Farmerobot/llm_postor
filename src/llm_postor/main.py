@@ -11,6 +11,7 @@ def main():
     game_engine = GameEngine()
     
     game_engine.load_game()
+    game_engine.state.DEBUG = True
     
     gui_handler.display_gui(game_engine)
 

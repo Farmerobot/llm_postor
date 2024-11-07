@@ -47,18 +47,39 @@ class GUIHandler(BaseModel):
     def game_overview(self, game_engine: GameEngine):
         st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
-        should_perform_step = False
-        should_perform_step = st.checkbox("Perform Step", value=should_perform_step)
-        if st.button("Make Step"):
-            should_perform_step = True
-        if st.button("Clear Game State"):
-            self.clear_game_state()
-        # Add the "Save State to Tournaments" button
-        if st.button("Save State to Tournaments"):
-            if game_engine.check_game_over():
-                self.save_state_to_tournaments(game_engine)
-            else:
-                st.warning("Game is not over yet! Please finish the game first.")
+        should_perform_step = st.checkbox("Perform Steps automatically")
+
+        # Create columns for buttons
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+        # Buttons in columns
+        with col1:
+            if st.button("Make Step"):
+                should_perform_step = True
+        with col2:
+            if st.button("Clear Game State"):
+                self.clear_game_state()
+        with col3:
+            if st.button("Save State to Tournaments"):
+                if game_engine.check_game_over():
+                    self.save_state_to_tournaments(game_engine)
+                else:
+                    st.warning("Game is not over yet! Please finish the game first.")
+        with col4:
+            if st.button("Force Set and Step Action"):
+                game_engine.state.set_stage(GamePhase.ACTION_PHASE)
+                game_engine.perform_step()
+                st.rerun()
+        with col5:
+            if st.button("Force Set and Step Discussion"):
+                game_engine.state.set_stage(GamePhase.DISCUSS)
+                game_engine.perform_step()
+                st.rerun()
+        with col6:
+            if st.button("Force step Voting"):
+                game_engine.go_to_voting()
+                st.rerun()
+
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)
