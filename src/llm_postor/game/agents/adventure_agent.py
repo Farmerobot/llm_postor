@@ -1,12 +1,17 @@
 import re
 from typing import List, Any
-from langchain.schema import HumanMessage
+from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from pydantic import Field
 
 from llm_postor.game.agents.base_agent import Agent
 from llm_postor.game.consts import ASCII_MAP
-from llm_postor.game.llm_prompts import ADVENTURE_PLAN_TEMPLATE, ADVENTURE_ACTION_TEMPLATE
+from llm_postor.game.llm_prompts import (
+    ADVENTURE_PLAN_SYSTEM_PROMPT, 
+    ADVENTURE_PLAN_USER_PROMPT,
+    ADVENTURE_ACTION_SYSTEM_PROMPT,
+    ADVENTURE_ACTION_USER_PROMPT
+)
 from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.agents.usage_metadata import UsageMetadata
 
@@ -61,7 +66,7 @@ class AdventureAgent(Agent):
         return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action_idx
 
     def create_plan(self) -> str:
-        plan_prompt = ADVENTURE_PLAN_TEMPLATE.format(
+        plan_prompt = ADVENTURE_PLAN_USER_PROMPT.format(
             player_name=self.player_name,
             player_role=self.role,
             history=self.history,
@@ -70,23 +75,31 @@ class AdventureAgent(Agent):
             in_room=self.in_room,
             current_location=self.current_location,
         )
-        # print("\nPlan prompt:", plan_prompt)
-        plan = self.llm.invoke([HumanMessage(content=plan_prompt)])
+        
+        messages = [
+            SystemMessage(content=ADVENTURE_PLAN_SYSTEM_PROMPT),
+            HumanMessage(content=plan_prompt)
+        ]
+        
+        plan = self.llm.invoke(messages)
         # print("\nCreated plan:", plan.content)
         self.add_token_usage(plan.usage_metadata)
         return plan_prompt, plan.content.strip()
 
     def choose_action(self, plan: str) -> int:
-        action_prompt = ADVENTURE_ACTION_TEMPLATE.format(
+        action_prompt = ADVENTURE_ACTION_USER_PROMPT.format(
             player_name=self.player_name,
             player_role=self.role,
-            history="\n".join(self.history),
-            task=self.current_tasks,
-            actions="- " + "\n- ".join(self.available_actions),
             plan=plan,
+            actions="- " + "\n- ".join(self.available_actions),
         )
-        # print("\nAction prompt", action_prompt)
-        chosen_action = self.response_llm.invoke([HumanMessage(content=action_prompt)])
+        
+        messages = [
+            SystemMessage(content=ADVENTURE_ACTION_SYSTEM_PROMPT),
+            HumanMessage(content=action_prompt)
+        ]
+        
+        chosen_action = self.response_llm.invoke(messages)
         # print("\nChosen action:", chosen_action.content)
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action = chosen_action.content.strip()
