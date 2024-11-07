@@ -27,48 +27,6 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-VOTING_TEMPLATE = GAME_CONTEXT + """
-You are {player_name} in a text-based social deduction game.
-Role: {player_role}
-
-Game History:
-{history}
-
-<format>
-Output format:
-if the actions are:
-- vote for player 1
-- vote for player 2
-- vote for player 3
-you should respond in this format:
-vote for player 3
-
-Example actions:
-- vote for maciej
-- vote for nobody
-
-Valid responses:
-vote for maciej
-vote for nobody
-</format>
-
-Available Voting Options:
-{actions}
-
-Based solely on the information presented in the discussion and your direct observations, select one voting option from the available choices.
-Respond with exactly one option from the provided list of Available Voting Options and nothing else.
-These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
-{actions}
-
-You should not provide explanations or additional information in your response. Simply select one of the available options and submit your vote.
-Note that your vote can be cast on players available on the voting options list only.
-Note that you should NOT vote for {dead_players} as they are already out of the game. Voting for them does not make sense.
-There is nothing to assume. Just choose one of the available options and submit your vote
-{actions}
-
-Your vote:
-"""
-
 ANNOTATION_TEMPLATE = """
 **Instructions:**
 
@@ -391,4 +349,59 @@ Your Discussion Points:
 
 Recent Player Messages:
 {messages}
+"""
+
+VOTING_SYSTEM_PROMPT = """
+You are an AI assistant participating in a text-based social deduction game. Your goal is to vote strategically based on the information provided and your assigned role.
+
+""" + GAME_CONTEXT + """
+
+Instructions:
+
+You will receive information about the current game state, including:
+- Your role (crewmate or impostor)
+- The history of the discussion (including previous messages)
+- Your game observations
+- The list of available voting options
+
+Based on this information, select one voting option from the available choices.
+
+Format:
+Your response should be exactly one of the available voting options, formatted as a single line of text.
+
+Example:
+vote for player 3
+
+<format>
+Output format:
+if the actions are:
+- vote for player 1
+- vote for player 2
+- vote for player 3
+you should respond in this format:
+vote for player 3
+
+Example actions:
+- vote for maciej
+- vote for nobody
+
+Valid responses:
+vote for maciej
+vote for nobody
+</format>
+"""
+
+VOTING_USER_PROMPT = """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Game History:
+{history}
+
+Available Voting Options:
+{actions}
+
+Note that you should NOT vote for {dead_players} as they are already out of the game. Voting for them does not make sense.
+
+{actions}
 """
