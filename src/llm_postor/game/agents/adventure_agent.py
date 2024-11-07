@@ -102,4 +102,4 @@ class AdventureAgent(Agent):
 
     @staticmethod
     def normalize_action(action: str) -> str:
-        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").lower()
+        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").strip("- ").lower()

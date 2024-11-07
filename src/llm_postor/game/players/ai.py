@@ -52,12 +52,12 @@ class AIPlayer(Player):
         self.state.prompt = message_prompt
         return message
 
-    def prompt_vote(self, voting_actions: List[str]) -> int:
+    def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
         self.state.actions = voting_actions
         self.voting_agent.update_state(
             observations=self.history.get_history_str(), actions=voting_actions
         )
-        vote_prompt, vote = self.voting_agent.choose_action("\n".join(self.get_chat_messages()))
+        vote_prompt, vote = self.voting_agent.choose_action("\n".join(self.get_chat_messages()), dead_players=dead_players)
         self.state.llm_responses = self.voting_agent.responses
         self.add_token_usage(self.voting_agent.state.token_usage)
         self.state.response = str(vote)

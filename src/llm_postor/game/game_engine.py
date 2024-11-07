@@ -81,7 +81,13 @@ class GameEngine(BaseModel):
         if self.check_game_over():
             self.end_game()
             return True
-        if self.state.game_stage == GamePhase.ACTION_PHASE:
+        if (
+            self.state.round_of_discussion_start + game_consts.NUM_CHATS
+            <= self.state.round_number
+            and self.state.game_stage == GamePhase.DISCUSS
+        ):
+            self.go_to_voting()
+        elif self.state.game_stage == GamePhase.ACTION_PHASE:
             self.state.log_action(f"Action: round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}")
             self.perform_action_step()
         elif self.state.game_stage == GamePhase.DISCUSS:
@@ -105,12 +111,6 @@ class GameEngine(BaseModel):
             self.state.round_number += 1
             for player in self.state.players:
                 player.log_state_new_round(prev_round_game_stage=self.state.game_stage)
-            if (
-                self.state.round_of_discussion_start + game_consts.NUM_CHATS
-                <= self.state.round_number
-                and self.state.game_stage == GamePhase.DISCUSS
-            ):
-                self.go_to_voting()
                 
         # Skip dead players. This even works if dead players are at the end of round or at the beginning
         # We check if next player is dead, and if so, we update the player_to_act_next to the next player
@@ -129,12 +129,6 @@ class GameEngine(BaseModel):
                 for player in self.state.players:
                     # update player history
                     player.log_state_new_round(prev_round_game_stage=self.state.game_stage)
-                if (
-                    self.state.round_of_discussion_start + game_consts.NUM_CHATS
-                    <= self.state.round_number
-                    and self.state.game_stage == GamePhase.DISCUSS
-                ):
-                    self.go_to_voting()
         self.save_state()
         return False
 
@@ -293,7 +287,7 @@ class GameEngine(BaseModel):
             )
 
             if player.state.life == PlayerState.ALIVE:
-                action = player.prompt_vote(possible_voting_actions_str)
+                action = player.prompt_vote(possible_voting_actions_str, [p for p in self.state.players if p.state.life != PlayerState.ALIVE])
                 if possible_actions[action].target.name != "Nobody":
                     votes[player.name] = possible_actions[action].target.name
                 player.state.observations.append(

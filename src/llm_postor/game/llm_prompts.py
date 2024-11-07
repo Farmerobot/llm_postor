@@ -56,14 +56,15 @@ If you need to move to a location, but the action to move is not available, you 
 * Prioritize progression: Focus on advancing to new objectives.
 * Limit the plan to 3-4 steps to maintain focus on the current situation.
 * Adapt based on previous rounds: Review actions and plans from prior rounds and adjust your strategy.
-
-Next steps:
 """
 
 ADVENTURE_ACTION_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
+You can take the following actions:
+{actions}
 
+<format>
 Output format:
 if the actions are:
 - action 1
@@ -72,31 +73,19 @@ if the actions are:
 you should respond in this format:
 action 1
 
-Example output format:
-if the actions are:
+Example actions:
 - move to location
 - do task
 - wait in room
-valid response is:
-move to location
-valid response is:
-do task
-valid response is:
-wait in room
-invalid response is:
-Wait in Room.
-invalid response is:
-move to location and do task
-invalid response is:
-move to location  (because something)
-invalid response is:
-- move to location
-invalid response is:
-Waldek is moving to location
-invalid response is:
-Waldek's action: move to location
 
-Your current game state is:
+Valid responses:
+move to location
+do task
+wait in room
+</format>
+
+Available Actions:
+{actions}
 
 Planned Steps:
 These are your intended steps based on your objective. However, please note that the following steps represent a general plan and do not represent your current options:
@@ -120,8 +109,7 @@ Your Observations:
 
 The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
 
-If there are no messages, share your observations during the game by creating simple and short bullet points.
-If there are messages, create short and informative discussion points that take into account both recent and past messages and aligned with your goals in the game.
+Create short and informative discussion points that take into account both recent and past messages and aligned with your goals in the game.
 
 Note: Your previous messages are tagged with your name, shown as [{player_name}], within the history.
 
@@ -152,7 +140,7 @@ Your name is {player_name}. You are a {player_role}.
 Note_1: Consider your previous messages. They are tagged with your name, shown as [{player_name}], within the history.
 Note_2: Don't add any additional text to the output. Return only the text of your response.
 
-Your short response:
+There is now your turn to discuss. Your short response:
 """
 
 VOTING_TEMPLATE = GAME_CONTEXT + """
@@ -162,11 +150,37 @@ Role: {player_role}
 Game History:
 {history}
 
+<format>
+Output format:
+if the actions are:
+- vote for player 1
+- vote for player 2
+- vote for player 3
+you should respond in this format:
+vote for player 3
+
+Example actions:
+- vote for maciej
+- vote for nobody
+
+Valid responses:
+vote for maciej
+vote for nobody
+</format>
+
 Available Voting Options:
 {actions}
 
 Based solely on the information presented in the discussion and your direct observations, select one voting option from the available choices.
-Respond with exactly one option from the provided list of Available Voting Options and nothing else. Do not provide explanations.
+Respond with exactly one option from the provided list of Available Voting Options and nothing else.
+These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
+{actions}
+
+You should not provide explanations or additional information in your response. Simply select one of the available options and submit your vote.
+Note that your vote can be cast on players available on the voting options list only.
+Note that you should NOT vote for {dead_players} as they are already out of the game. Voting for them does not make sense.
+There is nothing to assume. Just choose one of the available options and submit your vote
+{actions}
 
 Your vote:
 """

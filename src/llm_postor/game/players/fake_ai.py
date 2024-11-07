@@ -23,7 +23,7 @@ class FakeAIPlayer(Player):
         self.state.observations = ["This is a placeholder observation."]
         return "I am a fake AI"
 
-    def prompt_vote(self, voting_actions: List[str]) -> int:
+    def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
         random_player = random.randint(0, len(voting_actions) - 1)
         self.state.actions = voting_actions
         self.state.prompt = "I am a fake AI, voting for the first player"

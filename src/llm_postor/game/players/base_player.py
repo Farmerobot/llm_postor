@@ -91,7 +91,7 @@ class Player(BaseModel, ABC):
         pass
 
     @abstractmethod
-    def prompt_vote(self, voting_actions: List[str]) -> int:
+    def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
         pass
 
     def get_chat_messages(self) -> str:

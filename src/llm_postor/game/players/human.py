@@ -39,7 +39,7 @@ class HumanPlayer(Player):
         self.state.response = answer
         return answer
 
-    def prompt_vote(self, voting_actions: List[str]) -> int:
+    def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
         voting_prompt = "\n".join(
             [f"{i}: {action}" for i, action in enumerate(voting_actions)]
         )

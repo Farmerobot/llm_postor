@@ -22,7 +22,7 @@ class VotingAgent(Agent):
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
             model=self.llm_model_name,
-            temperature=0.1
+            temperature=0
         )
 
     def update_state(
@@ -31,14 +31,15 @@ class VotingAgent(Agent):
         self.state.history = observations
         self.state.available_actions = actions
 
-    def choose_action(self, discussion_log: str) -> int:
+    def choose_action(self, discussion_log: str, dead_players: List[str]) -> int:
         action_prompt = VOTING_TEMPLATE.format(
             player_name=self.player_name,
             player_role=self.role,
             discussion=discussion_log,
             history=self.state.history,
+            dead_players=dead_players,
             actions="\n".join(
-                f"{i+1}. {action}"
+                f"- {action}"
                 for i, action in enumerate(self.state.available_actions)
             ),
         )
@@ -71,4 +72,4 @@ class VotingAgent(Agent):
 
     @staticmethod
     def normalize_action(action: str) -> str:
-        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().lower()
+        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").lower()

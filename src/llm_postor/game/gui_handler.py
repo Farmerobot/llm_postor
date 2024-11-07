@@ -29,19 +29,21 @@ class GUIHandler(BaseModel):
             self.game_overview(game_engine)
         with tournements:
             self.tournaments()
+        self.sidebar(game_engine=game_engine)
+        
+    def sidebar(self, game_engine: GameEngine):
         with st.sidebar:
-            with st.container():
-                st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
-                for i, player in enumerate(game_engine.state.players):
-                    with st.empty():
-                        self._display_short_player_info(
-                            player, i == game_engine.state.player_to_act_next, st
-                        )
+            st.write(f"{game_engine.state.game_stage.value}. Total cost: {round(game_engine.state.get_total_cost()['total_cost'], 3)}$")
+            for i, player in enumerate(game_engine.state.players):
+                self._display_short_player_info(
+                    player, i == game_engine.state.player_to_act_next, st
+                )
 
     def game_overview(self, game_engine: GameEngine):
         st.title("Among Us Game - LLMPostor")
         # Create a button to trigger the next step
-        should_perform_step = st.checkbox("Perform Step")
+        should_perform_step = False
+        should_perform_step = st.checkbox("Perform Step", value=should_perform_step)
         if st.button("Make Step"):
             should_perform_step = True
         if st.button("Clear Game State"):
