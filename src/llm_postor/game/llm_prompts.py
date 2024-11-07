@@ -27,31 +27,6 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-DISCUSSION_RESPONSE_TEMPLATE = GAME_CONTEXT + """
-You are {player_name} in a text-based social deduction game.
-Role: {player_role}
-
-Recent Player Messages:
-{statements}
-
-Previous Discussion Points:
-{points}
-
-The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
-Try to push the discussion forward using Previous Discussion Points to benefit from it.
-Respond to recent messages concisely (one sentence) while considering the ongoing discussion and any relevant history. 
-Respond in a way that will be aligned with your goals and might help you to win.
-
-If there are no messages, create short and informative opening message.
-
-Your name is {player_name}. You are a {player_role}.
-
-Note_1: Consider your previous messages. They are tagged with your name, shown as [{player_name}], within the history.
-Note_2: Don't add any additional text to the output. Return only the text of your response.
-
-There is now your turn to discuss. Your short response:
-"""
-
 VOTING_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
@@ -371,6 +346,48 @@ Role: {player_role}
 
 Your Observations:
 {history}
+
+Recent Player Messages:
+{messages}
+"""
+
+DISCUSSION_RESPONSE_SYSTEM_PROMPT = """
+You are an AI assistant participating in a text-based social deduction game. Your goal is to contribute to the discussion in a way that aligns with your assigned role and helps you achieve your objectives.
+
+"""+GAME_CONTEXT+"""
+
+Instructions:
+
+You will receive information about the current game state, including:
+- Your role (crewmate or impostor)
+- Your name
+- The history of the discussion (including previous messages)
+- Your previously planned discussion points
+
+Based on this information, create a short and informative response to the discussion that:
+- Takes into account both recent and past messages.
+- Is aligned with your goals in the game.
+- Pushes the discussion forward.
+
+Format:
+
+Your response should be a single sentence, formatted as follows:
+
+[Your response]
+
+Example:
+
+I was in the cafeteria the whole time, and I didn't see anyone enter or leave.
+
+Note: Your previous messages are tagged with your name, shown as [{your_name}], within the history.
+"""
+
+DISCUSSION_RESPONSE_USER_PROMPT = """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Your Discussion Points:
+{points}
 
 Recent Player Messages:
 {messages}
