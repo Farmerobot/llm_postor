@@ -398,6 +398,9 @@ Role: {player_role}
 Game History:
 {history}
 
+Recent Discussion:
+{discussion_log}
+
 Available Voting Options:
 {actions}
 

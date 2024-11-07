@@ -68,7 +68,7 @@ def test_log_state_new_round(prev_round_game_stage):
     assert player.history.rounds[-1] == initial_state
     assert len(player.state.tasks) == len(get_random_tasks())
     assert player.state.llm_responses == []
-    assert player.state.prompt == ""
+    assert player.state.prompts == []
     assert player.state.actions == []
     assert player.state.response == ""
     assert player.state.action_result == ""

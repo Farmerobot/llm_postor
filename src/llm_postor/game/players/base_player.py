@@ -74,7 +74,7 @@ class Player(BaseModel, ABC):
         self.history.add_round(state_copy)
         # self.state.tasks = [task for task in self.state.tasks if not task.completed]
         self.state.llm_responses = []
-        self.state.prompt = ""
+        self.state.prompts = []
         self.state.actions = []
         self.state.response = ""
         self.state.action_result = ""

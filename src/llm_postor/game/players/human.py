@@ -10,12 +10,12 @@ class HumanPlayer(Player):
         action_prompt = "\n".join(
             [f"{i}: {action}" for i, action in enumerate(actions)]
         )
-        self.state.prompt = f"Your turn {self.name}: Choose an action\n{action_prompt}"
-        self.state.prompt += "========================================"
+        self.state.prompts = f"Your turn {self.name}: Choose an action\n{action_prompt}"
+        self.state.prompts += "========================================"
         task_str = "\n".join([str(task) for task in self.tasks])
-        self.state.prompt += f"Here are your tasks: \n{task_str}"
-        self.state.prompt += "========================================"
-        print(self.state.prompt)
+        self.state.prompts += f"Here are your tasks: \n{task_str}"
+        self.state.prompts += "========================================"
+        print(self.state.prompts)
 
         while True:
             try:
@@ -43,7 +43,7 @@ class HumanPlayer(Player):
         voting_prompt = "\n".join(
             [f"{i}: {action}" for i, action in enumerate(voting_actions)]
         )
-        self.state.prompt = voting_prompt
+        self.state.prompts = voting_prompt
         self.state.actions = voting_actions
         answer = input("Choose player to banish: ")
         if answer.isdigit():

@@ -45,6 +45,7 @@ class VotingAgent(Agent):
         user_prompt = VOTING_USER_PROMPT.format(
             player_name=self.player_name,
             player_role=self.role,
+            discussion_log=discussion_log,
             history=self.history,
             actions="\n".join(f"- {action}" for action in self.available_actions),
             dead_players=", ".join(dead_players)
@@ -60,7 +61,7 @@ class VotingAgent(Agent):
         chosen_action_str = chosen_action.content.strip()
         self.responses.append(chosen_action_str)
         vote = self.check_action_valid(chosen_action_str)
-        return f"Vote prompt: {user_prompt}", vote
+        return [user_prompt], vote
 
     def check_action_valid(self, chosen_action: str) -> int:
         normalized_chosen_action = self.normalize_action(chosen_action)

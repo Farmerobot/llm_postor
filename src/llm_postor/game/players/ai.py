@@ -37,7 +37,7 @@ class AIPlayer(Player):
         self.state.llm_responses = self.adventure_agent.responses
         self.add_token_usage(self.adventure_agent.token_usage)
         self.state.response = str(chosen_action)
-        self.state.prompt = prompts
+        self.state.prompts = prompts
         return chosen_action
 
     def prompt_discussion(self) -> str:
@@ -49,7 +49,7 @@ class AIPlayer(Player):
         self.state.llm_responses = self.discussion_agent.responses
         self.add_token_usage(self.discussion_agent.token_usage)
         self.state.response = message
-        self.state.prompt = message_prompt
+        self.state.prompts = message_prompt
         return message
 
     def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
@@ -63,7 +63,7 @@ class AIPlayer(Player):
         self.state.llm_responses = self.voting_agent.responses
         self.add_token_usage(self.voting_agent.token_usage)
         self.state.response = str(vote)
-        self.state.prompt = vote_prompt
+        self.state.prompts = vote_prompt
         return vote
     
     def add_token_usage(self, usage: UsageMetadata):

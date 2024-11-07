@@ -46,10 +46,7 @@ class DiscussionAgent(Agent):
         response_prompt, response = self.respond_to_statements(points=points)
         self.responses.append(points)
         self.responses.append(response)
-        return (
-            f"Points prompt: {points_prompt}\n\nResponse prompt: {response_prompt}",
-            response,
-        )
+        return [points_prompt, response_prompt], response
 
     def create_discussion_points(self) -> str:
         system_message = SystemMessage(content=DISCUSSION_SYSTEM_PROMPT.format(

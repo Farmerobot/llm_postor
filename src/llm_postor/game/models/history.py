@@ -19,7 +19,7 @@ class RoundData(BaseModel):
     tasks: List[Task] = Field(default_factory=list)
     llm_responses: List[str] = Field(default_factory=list)
     token_usage: UsageMetadata = Field(default_factory=UsageMetadata)
-    prompt: str = ""
+    prompts: List[str] = Field(default_factory=list)
     actions: List[str] = Field(default_factory=list)
     response: str = ""
     action_result: str = ""
@@ -36,7 +36,7 @@ class RoundData(BaseModel):
             "token_usage": self.token_usage.to_dict(),
             "tasks": [str(task) for task in self.tasks],
             "llm_responses": self.llm_responses,
-            "prompt": self.prompt,
+            "prompts": self.prompts,
             "actions": self.actions,
             "response": self.response,
             "action_result": self.action_result,

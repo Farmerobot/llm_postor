@@ -62,7 +62,7 @@ class AdventureAgent(Agent):
         action_prompt, action_idx, action = self.choose_action(plan)
         self.responses.append(plan)
         self.responses.append(action)
-        return f"Plan prompt:\n{plan_prompt}\n\nAction prompt:{action_prompt}", action_idx
+        return [plan_prompt, action_prompt], action_idx
 
     def create_plan(self) -> str:
         plan_prompt = ADVENTURE_PLAN_USER_PROMPT.format(

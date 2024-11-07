@@ -95,17 +95,18 @@ class GUIHandler(BaseModel):
             st.session_state.results = results
         if "results" in st.session_state:
             self._display_annotated_text(json.loads(st.session_state.results), game_engine.state.players)
+        
+        if st.session_state.selected_player < len(game_engine.state.players):
+            player: Player = game_engine.state.players[st.session_state.selected_player]
+            st.subheader(f"Player: {player.name} Chat History:")
+            self._display_chat_history(player.history.rounds + [player.state])
+            
         # Cost Visualization
         cost_data = self.get_cost_data(game_engine)
         if game_engine.state.round_number >= 1:
             estimated_cost_data = self.estimate_future_cost(cost_data, 5)
             combined_cost_data = self.combine_data(cost_data, estimated_cost_data)
             self.plot_cost(combined_cost_data, 5)
-        
-        if st.session_state.selected_player < len(game_engine.state.players):
-            player: Player = game_engine.state.players[st.session_state.selected_player]
-            st.subheader(f"Player: {player.name} Chat History:")
-            self._display_chat_history(player.history.rounds)
         
         st.text("Cost Breakdown:")
         st.json(game_engine.state.get_total_cost(), expanded=False)
@@ -464,7 +465,7 @@ class GUIHandler(BaseModel):
 
     def _display_player_selection(self, players: List[Player]):
         selected_player = st.radio(
-            "Select Player",
+            "Select Player to see their discussion and llm messages:",
             [len(players)] + list(range(len(players))),
             horizontal=True,
             key=f"player_selection_{players}",
@@ -565,11 +566,13 @@ class GUIHandler(BaseModel):
     def _display_chat_history(self, rounds: List[RoundData]):
         """Displays the chat history for a player using st.chat_message."""
         with st.container(height=500, border=True):
-            for round_data in rounds:
+            for i, round_data in enumerate(rounds):
+                st.markdown(f"### Round {i}")
+                if not round_data.prompts: continue
                 # 1. Prompt (Player Message)
                 with st.chat_message("user"):
                     with st.expander("Prompt"):
-                        st.write(round_data.prompt)
+                        st.write(round_data.prompts[0])
 
                 # 2. Actions (System Message)
                 if round_data.actions:  # Check if actions exist
@@ -579,14 +582,16 @@ class GUIHandler(BaseModel):
                             st.write(f"{i}. {action}")
 
                 # 3. Response (LLM Message)
-                for llm_response in round_data.llm_responses:
-                    with st.chat_message("assistant"):
-                        with st.expander("LLM Response"):  # Put llm_responses in expander
-                            st.write(llm_response)
-                    
-                # 4. Response
                 with st.chat_message("assistant"):
-                    st.write(round_data.response)
+                    with st.expander("LLM Response"):  # Put llm_responses in expander
+                        st.write(round_data.llm_responses[0])
+                        
+                if len(round_data.prompts)>1:
+                    with st.chat_message("user"):
+                        with st.expander("Action Prompt"):
+                            st.write(round_data.prompts[1])
+                    with st.chat_message("assistant"):
+                        st.write(round_data.llm_responses[1])
 
                 # 4. Action Result (System Message)
                 if round_data.action_result:  # Check if action result exists
