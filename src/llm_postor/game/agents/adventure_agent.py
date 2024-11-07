@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI
 from pydantic import Field
 
 from llm_postor.game.agents.base_agent import Agent
-from llm_postor.game.consts import ASCII_MAP
 from llm_postor.game.llm_prompts import (
     ADVENTURE_PLAN_SYSTEM_PROMPT, 
     ADVENTURE_PLAN_USER_PROMPT,

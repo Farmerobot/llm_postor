@@ -19,7 +19,7 @@ from llm_postor.game.models.history import PlayerState, RoundData
 from llm_postor.game.models.engine import ROOM_COORDINATES
 import plotly.graph_objects as go
 from llm_postor.game.chat_analyzer import ChatAnalyzer
-
+import shutil
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
@@ -48,6 +48,12 @@ class GUIHandler(BaseModel):
             should_perform_step = True
         if st.button("Clear Game State"):
             self.clear_game_state()
+        # Add the "Save State to Tournaments" button
+        if st.button("Save State to Tournaments"):
+            if game_engine.check_game_over():
+                self.save_state_to_tournaments(game_engine)
+            else:
+                st.warning("Game is not over yet! Please finish the game first.")
         col1, col2 = st.columns([2,1])
         with col1:
             self._display_map(game_engine.state)
@@ -169,6 +175,29 @@ class GUIHandler(BaseModel):
                 avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
                 st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
 
+
+    def save_state_to_tournaments(self, game_engine: GameEngine):
+        """Saves the game state to the tournaments folder."""
+        impostor_model = None
+        crewmate_model = None
+        for player in game_engine.state.players:
+            if player.is_impostor:
+                impostor_model = player.adventure_agent.llm_model_name
+            else:
+                crewmate_model = player.adventure_agent.llm_model_name
+
+        # Construct the filename
+        impostor_model = impostor_model.split("/")[-1]
+        crewmate_model = crewmate_model.split("/")[-1]
+        filename = f"{impostor_model}_{crewmate_model}"
+        i = 1
+        while os.path.exists(f"data/tournament/{filename}_{i}.json"):
+            i += 1
+        filename = f"{filename}_{i}.json"
+
+        # Copy the game state file to the tournaments folder
+        shutil.copyfile("data/game_state.json", f"data/tournament/{filename}")
+        st.success(f"Game state saved to tournament folder as {filename}. You can clear the game state now.")
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
