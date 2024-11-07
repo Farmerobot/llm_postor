@@ -66,10 +66,9 @@ class GameEngine(BaseModel):
         """Initializes the game with a given game state."""
         self.state = game_state
 
-    def init_game(self) -> None:
+    def load_game(self) -> None:
         """Initializes the game. Tries to set state from file, otherwise starts a new game."""
-        if not self.load_state(game_consts.STATE_FILE):
-            self.state.set_stage(GamePhase.ACTION_PHASE)
+        self.load_state(game_consts.STATE_FILE)
 
     def perform_step(self) -> bool:
         """Executes a single step in the game, handling player turns and game state transitions.

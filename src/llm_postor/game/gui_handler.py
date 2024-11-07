@@ -12,22 +12,27 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 from llm_postor.annotation import annotate_dialogue
+from llm_postor.game.consts import TOKEN_COSTS, NUM_MAX_PLAYERS
 from llm_postor.game.game_state import GameState
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.base_player import Player, PlayerRole
 from llm_postor.game.models.history import PlayerState, RoundData
-from llm_postor.game.models.engine import ROOM_COORDINATES
+from llm_postor.game.models.engine import ROOM_COORDINATES, GamePhase
 import plotly.graph_objects as go
 from llm_postor.game.chat_analyzer import ChatAnalyzer
 import shutil
+from llm_postor.game.players.ai import AIPlayer
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
         st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
         game_overwiew, tournements = st.tabs(["Game Overview", "Tournaments"])
-        self.sidebar(game_engine=game_engine)
         with game_overwiew:
-            self.game_overview(game_engine)
+            if game_engine.state.game_stage == GamePhase.MAIN_MENU:
+                self.game_settings()
+            else:
+                self.sidebar(game_engine=game_engine)
+                self.game_overview(game_engine)
         with tournements:
             self.tournaments()
         
@@ -133,11 +138,11 @@ class GUIHandler(BaseModel):
                 game_state = game_engine.state
                 players = game_state.players
                 discussion_chat = "\n".join(players[0].get_chat_messages())
-                json_data = json.loads(annotate_dialogue(discussion_chat))
+                annotation_json = json.loads(annotate_dialogue(discussion_chat))
                 previous_player = None
                 player_techniques = defaultdict(list)
 
-                for item in json_data:
+                for item in annotation_json:
                     replaced_text = item["text"]
                     current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
@@ -350,12 +355,12 @@ class GUIHandler(BaseModel):
         map_placeholder = st.empty()
         map_placeholder.plotly_chart(fig, use_container_width=True, key=uuid.uuid4())
 
-    def _display_annotated_text(self, json_data: List[dict], players: List[Player]):
+    def _display_annotated_text(self, annotation_json: List[dict], players: List[Player]):
         args = []
         previous_player = None
         player_techniques = defaultdict(list)
         
-        for item in json_data:
+        for item in annotation_json:
             replaced_text = item["text"]
             current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
@@ -468,10 +473,10 @@ class GUIHandler(BaseModel):
             cost_data[player.name] = costs
         return cost_data
 
-    def estimate_future_cost(self, cost_data: Dict[str, List[float]], rounds_to_forecast: int, degree: int = 2) -> Dict[str, List[float]]:
+    def estimate_future_cost(self, player_costs: Dict[str, List[float]], rounds_to_forecast: int, degree: int = 2) -> Dict[str, List[float]]:
         """Estimates future cost using polynomial regression for each player."""
         estimated_cost_data = {}
-        for player_name, costs in cost_data.items():
+        for player_name, costs in player_costs.items():
             # Prepare data for linear regression
             X = [[i] for i in range(len(costs))]
             y = costs
@@ -491,19 +496,19 @@ class GUIHandler(BaseModel):
             estimated_cost_data[player_name] = estimated_costs
         return estimated_cost_data
 
-    def combine_data(self, cost_data: Dict[str, List[float]], estimated_cost_data: Dict[str, List[float]]) -> Dict[str, List[float]]:
+    def combine_data(self, player_costs: Dict[str, List[float]], estimated_player_costs: Dict[str, List[float]]) -> Dict[str, List[float]]:
         """Combines actual and estimated cost data."""
-        combined_cost_data = {}
-        for player_name in cost_data:
-            combined_cost_data[player_name] = cost_data[player_name] + estimated_cost_data[player_name]
-        return combined_cost_data
+        combined_player_costs = {}
+        for player_name in player_costs:
+            combined_player_costs[player_name] = player_costs[player_name] + estimated_player_costs[player_name]
+        return combined_player_costs
 
-    def plot_cost(self, cost_data: Dict[str, List[float]], rounds_to_forecast: int):
+    def plot_cost(self, player_costs: Dict[str, List[float]], rounds_to_forecast: int):
         """Plots cost data using Plotly."""
         fig = go.Figure()
-        history = list(cost_data.values())[0]
+        history = list(player_costs.values())[0]
 
-        for player_name, costs in cost_data.items():
+        for player_name, costs in player_costs.items():
             # Separate actual and estimated costs
             actual_costs = costs[:len(history)-rounds_to_forecast]
             estimated_costs = costs[len(history)-rounds_to_forecast:]
@@ -515,7 +520,7 @@ class GUIHandler(BaseModel):
             fig.add_trace(go.Scatter(x=list(range(len(actual_costs), len(costs)+1)), y=[actual_costs[-1]]+estimated_costs, name=player_name, mode='lines', line=dict(dash='dash')))
 
         # Calculate total cost
-        total_costs = [sum(costs[i] for costs in cost_data.values()) for i in range(len(history))]
+        total_costs = [sum(costs[i] for costs in player_costs.values()) for i in range(len(history))]
         
         # Separate actual and estimated total costs
         actual_total_costs = total_costs[:len(history)-rounds_to_forecast]
@@ -566,3 +571,73 @@ class GUIHandler(BaseModel):
                 if round_data.action_result:  # Check if action result exists
                     with st.chat_message("system"):
                         st.write(f"Action Result: {round_data.action_result}")
+
+    def game_settings(self):
+        """Displays the game settings tab for player configuration."""
+        st.title("Game Settings")
+        
+        col1, col2, col3 = st.columns([1, 1, 5])
+        with col1:
+            crewmate_count = st.number_input("Number of Crewmates", min_value=1, max_value=NUM_MAX_PLAYERS, value=4)
+        with col2:
+            impostor_count = st.number_input("Number of Impostors", min_value=1, max_value=NUM_MAX_PLAYERS - 1, value=1)
+
+        # Create a game engine instance
+        game_engine = GameEngine()
+
+        # Player configuration
+        player_names = ["Alice", "Bob", "Charlie", "Dave", "Erin", "Frank", "Grace", "Henry", "Isabella", "Jack", "Katie", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Ryan", "Sara", "Tom", "Ursula", "Victor", "Wendy", "Xander", "Yara", "Zane"]
+        players = []
+        models = sorted(TOKEN_COSTS.keys(), key=lambda x: TOKEN_COSTS[x]["input_tokens"])
+        col3, col4 = st.columns([1, 2])
+        with col3:
+            st.header(f"Crewmates:")
+        with col4:
+            crewmate_model = st.selectbox(
+                f"Model",
+                models,
+                format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                key=f"crewmate_model_selection"
+            )
+        cols_crewmate = st.columns(crewmate_count)
+        for i in range(crewmate_count + impostor_count):
+            if i == crewmate_count:
+                st.markdown(f"---")  # Separator for impostors
+                col5, col6 = st.columns([1, 2])
+                with col5:
+                    st.header(f"Impostors:")
+                with col6:
+                    impostor_model = st.selectbox(
+                        f"Model",
+                        models,
+                        format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                        key=f"impostor_model_selection"
+                    )
+                cols_impostor = st.columns(impostor_count)
+            model_name = crewmate_model if i < crewmate_count else impostor_model
+            if i < crewmate_count:
+                with cols_crewmate[i]:
+                    player_name = st.selectbox(
+                        f"Player {i+1}",
+                        player_names,
+                        index=i,
+                        key=f"player_selection_{i}"
+                    )
+            else:
+                with cols_impostor[i-crewmate_count]:
+                    player_name = st.selectbox(
+                        f"Player {i+1}",
+                        player_names,
+                        index=i,
+                        key=f"player_selection_{i}"
+                    )
+            # Create player object
+            player = AIPlayer(name=player_name, llm_model_name=model_name, role=PlayerRole.IMPOSTOR if i >= crewmate_count else PlayerRole.CREWMATE)
+            players.append(player)
+
+        # Confirmation button to start the game
+        if st.button("Start Game"):
+            game_engine.load_players(players, impostor_count=impostor_count)
+            game_engine.state.set_stage(GamePhase.ACTION_PHASE)
+            game_engine.save_state()
+            st.rerun()

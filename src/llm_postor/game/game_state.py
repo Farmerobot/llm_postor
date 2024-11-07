@@ -8,7 +8,7 @@ from llm_postor.game.consts import TOKEN_COSTS
 
 class GameState(BaseModel):
     players: List[Player] = Field(default_factory=list)
-    game_stage: GamePhase = GamePhase.MAIN_MENU
+    game_stage: GamePhase = Field(default=GamePhase.MAIN_MENU)
     playthrough: List[str] = Field(default_factory=list)
     save_playthrough: str = ""
     DEBUG: bool = Field(default=False)

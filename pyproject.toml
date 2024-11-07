@@ -29,4 +29,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-run_gui = "scripts.run_gui:run_gui"
+main = "scripts.main:main"
