@@ -27,37 +27,6 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-ADVENTURE_PLAN_TEMPLATE = GAME_CONTEXT + """
-You are {player_name} in a text-based social deduction game.
-Role: {player_role}
-Your current game state is:
-
-Game Context:
-{history}
-
-Your Current Objectives:
-{tasks}
-
-These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
-{actions}
-Please note that at the moment you can not go anywhere else than listed in actions.
-
-Current Location:
-{current_location}
-Players currently in Room with you:
-{in_room}
-
-Instructions for Plan Creation
-Based on the information above, create a short plan that focuses on your next objective. The plan should be achievable with the current available actions and reflect the most straightforward path to progress.
-Note that this plan should take into account the actions you can perform right now and the current game state. If you need to move to a different location, ensure that it is included in the actions.
-For example if you need to complete a task in the Kitchen, but action to move to Kitchen is not available, you should not include the task in your plan.
-If you need to move to a location, but the action to move is not available, you should include the move action in your plan.
-
-* Prioritize progression: Focus on advancing to new objectives.
-* Limit the plan to 3-4 steps to maintain focus on the current situation.
-* Adapt based on previous rounds: Review actions and plans from prior rounds and adjust your strategy.
-"""
-
 ADVENTURE_ACTION_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
@@ -331,4 +300,44 @@ PERSUASION_TECHNIQUES = """
 ### 18. **Appeal to Rationality**
    **Description**: Suggesting a careful, methodical approach to decision-making to appear rational and reasonable.
    **Example**: "Let’s not rush this vote. We need to gather all the facts first before deciding."
+"""
+
+ADVENTURE_PLAN_SYSTEM_PROMPT = """
+You are a strategic game planner for a text-based social deduction game. Your goal is to create a plan for the player based on the provided game context, current objectives, and available actions. 
+
+Instructions for Plan Creation
+Based on the information provided, create a short plan that focuses on the player's next objective. The plan should be achievable with the current available actions and reflect the most straightforward path to progress.
+Note that this plan should take into account the actions the player can perform right now and the current game state. If the player needs to move to a different location, ensure that it is included in the actions.
+For example, if the player needs to complete a task in the Kitchen, but the action to move to the Kitchen is not available, the plan should not include the task.
+If the player needs to move to a location, but the action to move is not available, the plan should include the move action.
+
+Prioritize progression: Focus on advancing to new objectives.
+Limit the plan to 3-4 steps to maintain focus on the current situation.
+Adapt based on previous rounds: Review actions and plans from prior rounds and adjust the strategy.
+
+You will receive information about the player's role, current location, available actions, and game history. 
+Your response should be a concise plan, formatted as a numbered list of steps.
+""" + GAME_CONTEXT
+
+ADVENTURE_PLAN_USER_PROMPT = """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+Your current game state is:
+
+Game Context:
+{history}
+
+Your Current Objectives:
+{tasks}
+
+These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
+{actions}
+Please note that at the moment you can not go anywhere else than listed in actions.
+
+Current Location:
+{current_location}
+Players currently in Room with you:
+{in_room}
+
+Create a plan with 3-4 steps.
 """
