@@ -2,11 +2,15 @@ from typing import List, Any
 
 from pydantic import Field
 from .base_agent import Agent
-from langchain.schema import HumanMessage
+from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 
-from llm_postor.game.llm_prompts import DISCUSSION_TEMPLATE
-from llm_postor.game.llm_prompts import DISCUSSION_RESPONSE_TEMPLATE
+from llm_postor.game.llm_prompts import (
+    DISCUSSION_SYSTEM_PROMPT, 
+    DISCUSSION_USER_PROMPT, 
+    DISCUSSION_RESPONSE_SYSTEM_PROMPT, 
+    DISCUSSION_RESPONSE_USER_PROMPT
+)
 from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.agents.usage_metadata import UsageMetadata
 
@@ -48,28 +52,29 @@ class DiscussionAgent(Agent):
         )
 
     def create_discussion_points(self) -> str:
-        discussion_prompt = DISCUSSION_TEMPLATE.format(
+        system_message = SystemMessage(content=DISCUSSION_SYSTEM_PROMPT.format(
+            your_name=self.player_name
+        ))
+        user_message = HumanMessage(content=DISCUSSION_USER_PROMPT.format(
             player_name=self.player_name,
             player_role=self.role,
             history=self.history,
-            statements=self.messages,
-        )
-        # print("\nDiscussion prompt:", discussion_prompt)
-        discussion_points = self.llm.invoke([HumanMessage(content=discussion_prompt)])
-        # print("\nDiscussion points:", discussion_points)
+            messages="\n".join(self.messages)
+        ))
+        discussion_points = self.llm.invoke([system_message, user_message])
         self.add_token_usage(discussion_points.usage_metadata)
-        return discussion_prompt, discussion_points.content.strip()
+        return user_message.content, discussion_points.content.strip()
 
     def respond_to_statements(self, points: str) -> str:
-        response_prompt = DISCUSSION_RESPONSE_TEMPLATE.format(
+        system_message = SystemMessage(content=DISCUSSION_RESPONSE_SYSTEM_PROMPT.format(
+            your_name=self.player_name
+        ))
+        user_message = HumanMessage(content=DISCUSSION_RESPONSE_USER_PROMPT.format(
             player_name=self.player_name,
             player_role=self.role,
             points=points,
-            history="\n".join(self.history),
-            statements=self.messages,
-        )
-        # print("\nResponse prompt:", response_prompt)
-        response = self.llm.invoke([HumanMessage(content=response_prompt)])
-        # print("\nResponse:", response.content)
+            messages="\n".join(self.messages)
+        ))
+        response = self.llm.invoke([system_message, user_message])
         self.add_token_usage(response.usage_metadata)
-        return response_prompt, response.content.strip()
+        return user_message.content, response.content.strip()
