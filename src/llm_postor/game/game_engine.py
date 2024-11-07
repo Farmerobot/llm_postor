@@ -287,7 +287,7 @@ class GameEngine(BaseModel):
             )
 
             if player.state.life == PlayerState.ALIVE:
-                action = player.prompt_vote(possible_voting_actions_str, [p for p in self.state.players if p.state.life != PlayerState.ALIVE])
+                action = player.prompt_vote(possible_voting_actions_str, [p.name for p in self.state.players if p.state.life != PlayerState.ALIVE])
                 if possible_actions[action].target.name != "Nobody":
                     votes[player.name] = possible_actions[action].target.name
                 player.state.observations.append(
