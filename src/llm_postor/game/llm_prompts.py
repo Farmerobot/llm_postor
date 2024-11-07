@@ -27,24 +27,6 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-DISCUSSION_TEMPLATE = GAME_CONTEXT + """
-You are {player_name} in a text-based social deduction game.
-Role: {player_role}
-
-Your Observations:
-{history}
-
-The discussion is cyclic, with each player speaking one by one in turn. Your previous responses are tagged with your name, shown as [{player_name}], within the history.
-
-Create short and informative discussion points that take into account both recent and past messages and aligned with your goals in the game.
-
-Note: Your previous messages are tagged with your name, shown as [{player_name}], within the history.
-
-Your name is {player_name}. You are a {player_role}.
-
-Your {player_role} observations to be shared with others:
-"""
-
 DISCUSSION_RESPONSE_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
@@ -346,4 +328,50 @@ Planned Steps:
 
 These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
 {actions}
+"""
+
+DISCUSSION_SYSTEM_PROMPT = """
+You are an AI assistant participating in a text-based social deduction game. Your goal is to contribute to the discussion in a way that aligns with your assigned role and helps you achieve your objectives.
+
+"""+GAME_CONTEXT+"""
+
+Instructions:
+
+You will receive information about the current game state, including:
+- Your role (crewmate or impostor)
+- Your name
+- The history of the discussion (including previous messages)
+- Your game observations
+
+Based on this information, create short and informative discussion points that:
+- Take into account both recent and past messages.
+- Are aligned with your goals in the game.
+- Push the discussion forward.
+
+Format:
+
+Your response should be a list of discussion points, formatted as follows:
+
+- Discussion point 1
+- Discussion point 2
+- ...
+
+Example:
+
+- Edwin asks about someone's alibi, maybe i should answer that
+- I was in the cafeteria the whole time, and I didn't see anyone enter or leave.
+- I think Red is suspicious because they were in the reactor for a long time.
+
+Note: Your previous messages are tagged with your name, shown as [{your_name}], within the history.
+"""
+
+DISCUSSION_USER_PROMPT = """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Your Observations:
+{history}
+
+Recent Player Messages:
+{messages}
 """
