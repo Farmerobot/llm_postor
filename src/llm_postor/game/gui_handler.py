@@ -658,6 +658,7 @@ class GUIHandler(BaseModel):
 
         # Confirmation button to start the game
         if st.button("Start Game"):
+            random.shuffle(players)
             game_engine.load_players(players, impostor_count=impostor_count)
             game_engine.state.set_stage(GamePhase.ACTION_PHASE)
             game_engine.save_state()
