@@ -607,9 +607,9 @@ class GUIHandler(BaseModel):
         
         col1, col2, col3 = st.columns([1, 1, 5])
         with col1:
-            crewmate_count = st.number_input("Number of Crewmates", min_value=1, max_value=NUM_MAX_PLAYERS, value=4)
+            crewmate_count = st.number_input("Number of Crewmates", min_value=1, max_value=10, value=4)
         with col2:
-            impostor_count = st.number_input("Number of Impostors", min_value=1, max_value=NUM_MAX_PLAYERS - 1, value=1)
+            impostor_count = st.number_input("Number of Impostors", min_value=1, max_value=10 - 1, value=1)
 
         # Create a game engine instance
         game_engine = GameEngine()
@@ -674,19 +674,18 @@ class GUIHandler(BaseModel):
 
         # Configuration Settings
         st.markdown(f"---")  # Separator for configuration settings
-        st.header(f"Game Configuration")
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        st.header(f"Game Consts Configuration")
+        st.markdown(f"> Remeber to save the settings after changing them!")
+        col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
-            num_max_players = st.number_input("Maximum Players", min_value=1, max_value=20, value=NUM_MAX_PLAYERS)
-        with col2:
             num_short_tasks = st.number_input("Number of Short Tasks", min_value=1, max_value=10, value=NUM_SHORT_TASKS)
-        with col3:
+        with col2:
             num_long_tasks = st.number_input("Number of Long Tasks", min_value=1, max_value=10, value=NUM_LONG_TASKS)
+        with col3:
+            num_chats = st.number_input("Number of Discussion rounds", min_value=1, max_value=10, value=NUM_CHATS)
         with col4:
-            num_chats = st.number_input("Number of Chats", min_value=1, max_value=10, value=NUM_CHATS)
-        with col5:
             impostor_cooldown = st.number_input("Impostor Cooldown", min_value=0, max_value=10, value=IMPOSTOR_COOLDOWN)
-        with col6:
+        with col5:
             state_file = st.text_input("Game State File", value=STATE_FILE)
         adventure_plan_system_prompt = st.text_area("Adventure Plan System Prompt", value=ADVENTURE_PLAN_SYSTEM_PROMPT)
         adventure_plan_user_prompt = st.text_area("Adventure Plan User Prompt", value=ADVENTURE_PLAN_USER_PROMPT)
@@ -714,7 +713,6 @@ class GUIHandler(BaseModel):
                 f.write(f"VOTING_SYSTEM_PROMPT = \"\"\"{voting_system_prompt}\"\"\"\n\n")
                 f.write(f"VOTING_USER_PROMPT = \"\"\"{voting_user_prompt}\"\"\"\n")
             with open("src/llm_postor/game/consts.py", "w") as f:
-                f.write(f"NUM_MAX_PLAYERS = {num_max_players}\n")
                 f.write(f"NUM_SHORT_TASKS = {num_short_tasks}\n")
                 f.write(f"NUM_LONG_TASKS = {num_long_tasks}\n")
                 f.write(f"NUM_CHATS = {num_chats}\n")
@@ -722,6 +720,8 @@ class GUIHandler(BaseModel):
                 f.write(f"STATE_FILE = \"{state_file}\"\n")
                 f.write(f"TOKEN_COSTS = {TOKEN_COSTS}")
             st.success("Settings saved successfully!")
+
+
     def _display_persuasion_techniques(self):
         st.title("Persuasion Techniques")
         st.markdown("""
