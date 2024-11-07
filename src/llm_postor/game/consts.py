@@ -80,6 +80,16 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0.05 / million,
 	},
+	"meta-llama/llama-3.2-1b-instruct": {
+		"input_tokens": 0.01 / million,
+		"cache_read": 0,
+		"output_tokens": 0.02 / million,
+	},
+	"meta-llama/llama-3.2-3b-instruct": {
+		"input_tokens": 0.03 / million,
+		"cache_read": 0,
+		"output_tokens": 0.05 / million,
+	},
     "meta-llama/llama-3.1-70b-instruct": {
         "input_tokens": 0.35 / million,
         "cache_read": 0,

@@ -18,7 +18,7 @@ class DiscussionAgent(Agent):
     llm: ChatOpenAI = None
     llm_model_name: str
     history: str = Field(default="")
-    messages: List[str] = Field(default_factory=list)
+    messages: str = Field(default_factory=list)
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -37,7 +37,7 @@ class DiscussionAgent(Agent):
     def act(
         self,
         observations: str,
-        messages: List[str],
+        messages: str,
     ) -> Any:
         self.history = observations
         self.messages = messages
@@ -59,7 +59,7 @@ class DiscussionAgent(Agent):
             player_name=self.player_name,
             player_role=self.role,
             history=self.history,
-            messages="\n".join(self.messages)
+            messages=self.messages
         ))
         discussion_points = self.llm.invoke([system_message, user_message])
         self.add_token_usage(discussion_points.usage_metadata)

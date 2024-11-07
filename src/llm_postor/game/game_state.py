@@ -27,10 +27,10 @@ class GameState(BaseModel):
         for player in self.players:
             player.set_stage(stage)
         if stage == GamePhase.DISCUSS:
-            self.player_to_act_next = 0
+            self.player_to_act_next = -1
             self.round_of_discussion_start = self.round_number
         elif stage == GamePhase.ACTION_PHASE:
-            self.player_to_act_next = 0
+            self.player_to_act_next = -1
 
     def log_action(self, action: str):
         self.playthrough.append(action)

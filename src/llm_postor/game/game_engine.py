@@ -78,6 +78,8 @@ class GameEngine(BaseModel):
         
         :return: True if the game is over or in MAIN_MENU stage, False otherwise
         """
+        if self.state.player_to_act_next == -1:
+            self.state.player_to_act_next = 0
         if self.check_game_over():
             self.end_game()
             return True
@@ -260,7 +262,7 @@ class GameEngine(BaseModel):
     def perform_discussion_step(self) -> None:
         """Handles the discussion phase of the game, where players can chat and discuss their suspicions. LLMs are called here."""
         player = self.state.players[self.state.player_to_act_next]
-        player.state.observations.append(
+        player.state.chat_messages.append(
             f"Discussion: [System]: You have {self.state.round_of_discussion_start+game_consts.NUM_CHATS - self.state.round_number} rounds left to discuss, then you will vote"
         )
         answer: str = player.prompt_discussion()
@@ -350,7 +352,9 @@ class GameEngine(BaseModel):
 
     def broadcast_message(self, message: str) -> None:
         """Broadcasts a chat message to all alive players."""
-        self.broadcast_observation("chat", message)
+        self.state.log_action(f"chat: {message}")
+        for player in self.state.get_alive_players():
+            player.state.chat_messages.append(f"chat: {message}")
 
     def mark_dead_players_as_reported(self) -> None:
         """Marks all dead players as reported to avoid double reporting."""
