@@ -73,7 +73,7 @@ class DiscussionAgent(Agent):
             player_name=self.player_name,
             player_role=self.role,
             points=points,
-            messages="\n".join(self.messages)
+            messages=self.messages
         ))
         response = self.llm.invoke([system_message, user_message])
         self.add_token_usage(response.usage_metadata)
