@@ -27,48 +27,6 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-ADVENTURE_ACTION_TEMPLATE = GAME_CONTEXT + """
-You are {player_name} in a text-based social deduction game.
-Role: {player_role}
-You can take the following actions:
-{actions}
-
-<format>
-Output format:
-if the actions are:
-- action 1
-- action 2
-- action 3
-you should respond in this format:
-action 1
-
-Example actions:
-- move to location
-- do task
-- wait in room
-
-Valid responses:
-move to location
-do task
-wait in room
-</format>
-
-Available Actions:
-{actions}
-
-Planned Steps:
-These are your intended steps based on your objective. However, please note that the following steps represent a general plan and do not represent your current options:
-{plan}
-
-Available Actions:
-Now, please choose only one of the actions listed below that best aligns with your planned objective.
-Select one action from this list and respond with exactly that action as it is written. Do not invent actions or refer to the plan directly if they are not part of the list. Only the Available Actions matter in this decision.
-These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
-{actions}
-
-Choosen action is:
-"""
-
 DISCUSSION_TEMPLATE = GAME_CONTEXT + """
 You are {player_name} in a text-based social deduction game.
 Role: {player_role}
@@ -340,4 +298,52 @@ Players currently in Room with you:
 {in_room}
 
 Create a plan with 3-4 steps.
+"""
+
+ADVENTURE_ACTION_SYSTEM_PROMPT = """
+You are an AI assistant helping a player in a text-based social deduction game. 
+Your goal is to help the player choose the best action based on their role, available actions, and planned steps.
+
+Game Context:
+"""+GAME_CONTEXT+"""
+
+Instructions:
+You will receive information about the player's role, available actions, and planned steps.
+Your response should be exactly one of the available actions, formatted as a single line of text.
+Do not invent actions or refer to the plan directly if they are not part of the list. Only the Available Actions matter in this decision.
+If the plan includes an action but this action is not on the list of available actions, you should choose the closest available action that aligns with the plan.
+
+<format>
+Output format:
+if the actions are:
+- action 1
+- action 2
+- action 3
+you should respond in this format:
+action 1
+
+Example actions:
+- move to location
+- do task
+- wait in room
+
+Valid responses:
+move to location
+do task
+wait in room
+</format>
+"""
+
+ADVENTURE_ACTION_USER_PROMPT = """
+You are {player_name} in a text-based social deduction game.
+Role: {player_role}
+
+Available Actions:
+{actions}
+
+Planned Steps:
+{plan}
+
+These are the only actions you can actually perform right now. No other actions are available to you and you should choose one of these actions to proceed:
+{actions}
 """
