@@ -25,11 +25,11 @@ class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
         st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
         game_overwiew, tournements = st.tabs(["Game Overview", "Tournaments"])
+        self.sidebar(game_engine=game_engine)
         with game_overwiew:
             self.game_overview(game_engine)
         with tournements:
             self.tournaments()
-        self.sidebar(game_engine=game_engine)
         
     def sidebar(self, game_engine: GameEngine):
         with st.sidebar:
