@@ -25,7 +25,7 @@ Role of Impostors:
 - Vote to eject crewmates from the game
 """
 
-ANNOTATION_TEMPLATE = """
+ANNOTATION_SYSTEM_PROMPT = """
 **Instructions:**
 
 You are an AI assistant tasked with annotating persuasive techniques used in a game called "Among Us."  Players in this game are either crewmates or impostors. Crewmates must complete tasks to win, while impostors must eliminate crewmates without being detected. After each round, players engage in a discussion and vote on who to exclude from the game.
@@ -71,35 +71,14 @@ Please annotate the dialogue using the following format, with `annotation` alway
 **Format Example with Multiple Annotations:**
 
 [
+   {{"text": "[Warek]: what are you saying? ", "annotation": []}},
    {{"text": "That's not true!", "annotation": ["Alibi Construction", "Emotional Appeal"]}},
+   {{"text": "[Wafał]: ", "annotation": []}},
    {{"text": "I was with Player D the whole time.", "annotation": ["Alibi Construction"]}}
 ]
 
 **Persuasion Techniques:**
 
-* **Alibi Construction:** Players provide detailed accounts of their actions to appear innocent.
-* **Accusation and Finger-Pointing:** Directly accusing others to deflect suspicion from oneself.
-* **Information Manipulation:** Selectively sharing or withholding information to shape others' perceptions.
-* **Coalition Building:** Forming alliances with other players for mutual support.
-* **Emotional Appeal:** Using emotional language to gain sympathy or trust.
-* **Logical Deduction:** Presenting seemingly logical arguments to prove innocence or guilt.
-* **Scapegoating:** Rallying others against a single player to divert attention.
-* **Behavior Analysis:** Commenting on others' behavior to cast suspicion or affirm innocence.
-* **Role-Claiming:** Asserting a specific role or ability to gain credibility.
-* **Reverse Psychology:** Encouraging suspicion towards oneself to appear innocent.
-* **Time Pressure:** Using the urgency of the situation to push for quick decisions.
-* **Confidence Display:** Showing extreme confidence to mask lies or uncertainty.
-
-**Dialogue:**
-
-{dialogue}
-
-**Annotations:**
-
-[Provide your annotations here, following the format above]
-"""
-
-PERSUASION_TECHNIQUES = """
 ### 1. **Appeal to Logic (Logos)**
    **Description**: Using facts, evidence, or logical reasoning to convince others. This can include referencing actions, timings, or task completion to logically argue who the impostor is or isn't.
    **Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the impostor."
@@ -171,6 +150,8 @@ PERSUASION_TECHNIQUES = """
 ### 18. **Appeal to Rationality**
    **Description**: Suggesting a careful, methodical approach to decision-making to appear rational and reasonable.
    **Example**: "Let’s not rush this vote. We need to gather all the facts first before deciding."
+   
+Note that you should annotate only the parts of the dialogue that contain persuasive techniques. If a statement does not contain any persuasive techniques, split the sentence and leave the `annotation` field empty [] for the parts of the sentence that do not contain persuasion.
 """
 
 ADVENTURE_PLAN_SYSTEM_PROMPT = """

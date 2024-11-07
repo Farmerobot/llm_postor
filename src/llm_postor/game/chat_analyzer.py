@@ -2,15 +2,14 @@ import re
 from typing import List, Dict
 from pydantic import BaseModel
 from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage
+from langchain.schema import HumanMessage, SystemMessage
 
 from llm_postor.game.players.base_player import Player
-from llm_postor.game.llm_prompts import PERSUASION_TECHNIQUES
+from llm_postor.game.llm_prompts import ANNOTATION_SYSTEM_PROMPT
 
 class ChatAnalyzer(BaseModel):
     players: List[Player]
     llm_model_name: str = "gpt-4o-mini"
-    persuasive_tricks: str = PERSUASION_TECHNIQUES
 
     def analyze(self) -> Dict[str, Dict[str, int]]:
         llm = ChatOpenAI(model=self.llm_model_name, temperature=0)
@@ -23,17 +22,11 @@ class ChatAnalyzer(BaseModel):
         player_messages = self.extract_player_messages(messages)
 
         for player_name, player_msgs in player_messages.items():
-            prompt = f"""
-            Analyze the following messages and count how many times each of the following persuasive tricks are used:
-            \n{self.persuasive_tricks}\n\nMessages:\n{player_msgs}
-            <format>
-            trick1: count1
-            trick2: count2
-            </format>
-            
-            please provide the count for each trick in the format above. stick to format to avoid errors.
-            """
-            response = llm.invoke([HumanMessage(content=prompt)])
+            prompt = ANNOTATION_SYSTEM_PROMPT
+            response = llm.invoke([
+                SystemMessage(content=prompt),
+                HumanMessage(content=player_msgs)
+            ])
             results[player_name] = self.parse_response(response.content.strip())
 
         return results

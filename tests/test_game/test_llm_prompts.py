@@ -5,8 +5,7 @@ from llm_postor.game.llm_prompts import (
     DISCUSSION_USER_PROMPT,
     DISCUSSION_RESPONSE_USER_PROMPT,
     VOTING_USER_PROMPT,
-    ANNOTATION_TEMPLATE,
-    PERSUASION_TECHNIQUES,
+    ANNOTATION_SYSTEM_PROMPT,
 )
 
 def test_prompt_templates_have_placeholders():
@@ -19,8 +18,7 @@ def test_prompt_templates_have_placeholders():
         DISCUSSION_USER_PROMPT,
         DISCUSSION_RESPONSE_USER_PROMPT,
         VOTING_USER_PROMPT,
-        ANNOTATION_TEMPLATE,
-        PERSUASION_TECHNIQUES
+        ANNOTATION_SYSTEM_PROMPT,
     ]
     assert all(template for template in templates)
 

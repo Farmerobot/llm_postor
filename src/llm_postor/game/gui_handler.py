@@ -696,12 +696,11 @@ class GUIHandler(BaseModel):
         discussion_response_user_prompt = st.text_area("Discussion Response User Prompt", value=DISCUSSION_RESPONSE_USER_PROMPT)
         voting_system_prompt = st.text_area("Voting System Prompt", value=VOTING_SYSTEM_PROMPT)
         voting_user_prompt = st.text_area("Voting User Prompt", value=VOTING_USER_PROMPT)
-        persuasion_techniques = st.text_area("Persuasion Techniques", value=PERSUASION_TECHNIQUES)
-        annotation_template = st.text_area("Annotation Template", value=ANNOTATION_TEMPLATE)
+        annotation_system_prompt = st.text_area("Annotation System prompt", value=ANNOTATION_SYSTEM_PROMPT)
         if st.button("Save Settings"):
+            # Here GAME_CONTEXT is integrated into the prompts
             with open("src/llm_postor/game/llm_prompts.py", "w") as f:
-                f.write(f"ANNOTATION_TEMPLATE = \"\"\"{annotation_template}\"\"\"\n\n")
-                f.write(f"PERSUASION_TECHNIQUES = \"\"\"{persuasion_techniques}\"\"\"\n\n")
+                f.write(f"ANNOTATION_SYSTEM_PROMPT = \"\"\"{annotation_system_prompt}\"\"\"\n\n")
                 f.write(f"ADVENTURE_PLAN_SYSTEM_PROMPT = \"\"\"{adventure_plan_system_prompt}\"\"\"\n\n")
                 f.write(f"ADVENTURE_PLAN_USER_PROMPT = \"\"\"{adventure_plan_user_prompt}\"\"\"\n\n")
                 f.write(f"ADVENTURE_ACTION_SYSTEM_PROMPT = \"\"\"{adventure_action_system_prompt}\"\"\"\n\n")
