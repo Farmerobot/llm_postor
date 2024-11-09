@@ -26,6 +26,7 @@ class GameEngine(BaseModel):
     """Manages the game logic, including player actions, game state transitions, and win conditions."""
     state: GameState = Field(default_factory=GameState)
     nobody: HumanPlayer = Field(default_factory=lambda: HumanPlayer(name="Nobody"))
+    file_path: str = Field(default=game_consts.STATE_FILE)
 
     def load_players(self, players: List[Player], impostor_count: int = 1) -> None:
         """Loads players into the game and assigns roles (crewmate or impostor)."""
@@ -68,7 +69,7 @@ class GameEngine(BaseModel):
 
     def load_game(self) -> None:
         """Initializes the game. Tries to set state from file, otherwise starts a new game."""
-        self.load_state(game_consts.STATE_FILE)
+        self.load_state(self.file_path)
 
     def perform_step(self) -> bool:
         """Executes a single step in the game, handling player turns and game state transitions.
@@ -444,21 +445,27 @@ class GameEngine(BaseModel):
 
     def save_state(self) -> None:
         """Saves the current game state to a file."""
-        with open(game_consts.STATE_FILE, "w") as f:
+        with open(self.file_path, "w") as f:
+            agents = [(player.adventure_agent, player.discussion_agent, player.voting_agent) 
+                      for player in self.state.players]
+            
             for player in self.state.players:
                 if isinstance(player, AIPlayer):
                     player.adventure_agent = None
                     player.discussion_agent = None
                     player.voting_agent = None
             json.dump(self.state.model_dump(), f)
+            
+            for player, agents in zip(self.state.players, agents):
+                player.adventure_agent, player.discussion_agent, player.voting_agent = agents
             # yaml.dump(self.state.model_dump(), f)
 
-    def load_state(self, file_path: str) -> bool:
+    def load_state(self, load_file_path: str) -> bool:
         """Loads a previously saved game state from a file.
         :return: True if the state was successfully loaded, False otherwise
         """
         try:
-            with open(file_path, "r") as f:
+            with open(load_file_path, "r") as f:
                 data = json.load(f)
                 # Deserialize players based on their type
                 players = [
