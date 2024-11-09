@@ -77,7 +77,8 @@ class PlayerHistory(BaseModel):
             elif i == len(self.rounds) - 1 or self.rounds[i+1].stage == GamePhase.ACTION_PHASE:
                 observations = "\n".join(round.observations)
                 history_str += f"Round {i+1}\n" if last_action_idx == i-1 else f"Rounds {last_action_idx+2}-{i+1}\n"
-                history_str += "" if last_action_idx == i-1 else f'Chat Messages:\n{"\n".join(round.chat_messages)}\n'
+                nl = '\n'
+                history_str += "" if last_action_idx == i-1 else f'Chat Messages:\n{nl.join(round.chat_messages)}\n'
                 history_str += f"Location: {round.location}\n"
                 history_str += f"Observations:\n{observations}\n"
         return history_str
