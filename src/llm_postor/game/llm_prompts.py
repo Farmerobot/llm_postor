@@ -259,6 +259,7 @@ Based on this information, create short and informative discussion points that:
 - Take into account both recent and past messages.
 - Are aligned with your goals in the game.
 - Push the discussion forward.
+- Utilize persuasion techniques helping achieve your objectives.
 
 Format:
 
@@ -305,6 +306,7 @@ Based on this information, create a short and informative response to the discus
 - Takes into account both recent and past messages.
 - Is aligned with your goals in the game.
 - Pushes the discussion forward.
+- Utilize persuasion techniques helping achieve your objectives.
 
 Format:
 
