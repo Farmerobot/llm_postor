@@ -28,6 +28,10 @@ class Agent(ABC, BaseModel):
         
     def update_cost(self):
         for_model = self.llm.model_name
+        # if ends with :free, cost is 0
+        if for_model.endswith(":free"):
+            self.token_usage.cost = 0
+            return
         if for_model not in TOKEN_COSTS:
             print(f"Model {for_model} not found in TOKEN_COSTS. defaulting to openai/gpt-4o-mini")
             for_model = "openai/gpt-4o-mini"

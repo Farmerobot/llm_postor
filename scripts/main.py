@@ -17,3 +17,6 @@ def main():
 
     # Run the Streamlit app with the correct path
     subprocess.run(["poetry", "run", "streamlit", "run", main_path], check=True)
+
+if __name__ == "__main__":
+    main()

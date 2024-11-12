@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "install",
+            "type": "shell",
+            "command": "poetry install",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "poetry run main",
+            "group": "build",
+            "dependsOn": "install",
+            "problemMatcher": []
+        }
+    ]
+}
