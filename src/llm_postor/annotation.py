@@ -31,7 +31,6 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o-mini")
         SystemMessage(content=prompt),
         HumanMessage(content=dialogue)
     ])
-    print(response.content)
 
     # Extract the annotated text from the response
     try:
