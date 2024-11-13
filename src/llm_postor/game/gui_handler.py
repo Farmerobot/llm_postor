@@ -117,7 +117,6 @@ class GUIHandler(BaseModel):
         st.json(game_engine.state.to_dict(), expanded=False)
             
         if should_perform_step:
-            print("Performing step")
             try:
                 res = game_engine.perform_step()
             except Exception as e:

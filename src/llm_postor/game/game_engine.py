@@ -90,13 +90,8 @@ class GameEngine(BaseModel):
         ):
             self.go_to_voting()
         elif self.state.game_stage == GamePhase.ACTION_PHASE:
-            self.state.log_action(f"Action: round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}")
             self.perform_action_step()
         elif self.state.game_stage == GamePhase.DISCUSS:
-            start = self.state.round_of_discussion_start
-            now = self.state.round_number
-            max = game_consts.NUM_CHATS
-            self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now}. Player to act: {self.state.player_to_act_next}")
             self.perform_discussion_step()
         else:
             print("Game is in MAIN_MENU stage - read_only mode")
@@ -187,11 +182,7 @@ class GameEngine(BaseModel):
         if action.player in players_in_room:
             players_in_room.remove(action.player)
 
-        self.state.log_action(f"{action.spectator}")
-        if players_in_room:
-            self.state.log_action(f"{players_in_room} saw this action")
-        else:
-            self.state.log_action(f"No one saw this action")
+        self.state.log_action(f"Action: round: {self.state.round_number}. p{self.state.player_to_act_next} {action.spectator} " + (f"{players_in_room} saw this action" if players_in_room else "No one saw this action"))
 
         # update players in room
         for player in self.state.players:

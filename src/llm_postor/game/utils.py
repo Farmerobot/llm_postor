@@ -72,8 +72,6 @@ def check_action_valid(available_actions: List[str], chosen_action: str, player_
 
     for action in normalized_available_actions:
         if action in normalized_chosen_action:
-            print(f"{player_name} LLM respondd with '{chosen_action}'")
-            print(f"{player_name} LLM chosen action '{action}'")
             return normalized_available_actions.index(action), action
 
     warning_str = f"{player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got '{chosen_action}'"
