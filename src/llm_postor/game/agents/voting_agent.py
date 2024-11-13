@@ -8,6 +8,7 @@ from langchain_openai import ChatOpenAI
 
 from llm_postor.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
 from llm_postor.config import OPENROUTER_API_KEY
+from llm_postor.game.utils import check_action_valid
 from llm_postor.game.agents.usage_metadata import UsageMetadata
 
 class VotingAgent(Agent):
@@ -60,23 +61,6 @@ class VotingAgent(Agent):
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action_str = chosen_action.content.strip()
         self.responses.append(chosen_action_str)
-        vote = self.check_action_valid(chosen_action_str)
-        return [user_prompt], vote
+        vote_idx, _ = check_action_valid(self.available_actions, chosen_action_str, self.player_name)
+        return [user_prompt], vote_idx
 
-    def check_action_valid(self, chosen_action: str) -> int:
-        normalized_chosen_action = self.normalize_action(chosen_action)
-        normalized_available_actions = [
-            self.normalize_action(action) for action in self.available_actions
-        ]
-        if normalized_chosen_action in normalized_available_actions:
-            return normalized_available_actions.index(normalized_chosen_action)
-        else:
-            warning_str = f"{self.player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got {chosen_action} ({normalized_chosen_action} normalized)"
-            print(warning_str)
-            raise ValueError(warning_str)
-            self.responses.append(warning_str)
-            return 0  # Default to first action if invalid
-
-    @staticmethod
-    def normalize_action(action: str) -> str:
-        return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").lower()
