@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 from llm_postor.annotation import annotate_dialogue
+from llm_postor.game import dummy
 from llm_postor.game.consts import *
 from llm_postor.game.llm_prompts import *
 from llm_postor.game.game_state import GameState
@@ -23,10 +24,35 @@ import plotly.graph_objects as go
 from llm_postor.game.chat_analyzer import ChatAnalyzer
 import shutil
 from llm_postor.game.players.ai import AIPlayer
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import datetime as dt
+
+class Watchdog(FileSystemEventHandler):
+    def __init__(self, hook):
+        self.hook = hook
+    def on_modified(self, event):
+        self.hook()
+        
+def update_dummy_module():
+    # Rewrite the dummy.py module. Because this script imports dummy,
+    # modifiying dummy.py will cause Streamlit to rerun this script.
+    # This is to update gui automatically when tournament is run.
+    # https://discuss.streamlit.io/t/how-to-monitor-the-filesystem-and-have-streamlit-updated-when-some-files-are-modified/822/9
+    dummy_path = dummy.__file__
+    with open(dummy_path, "w") as fp:
+        fp.write(f'timestamp = "{dt.datetime.now()}"')
+
+@st.cache_resource
+def install_monitor():
+    watchdog = Watchdog(update_dummy_module)
+    observer = Observer()
+    observer.schedule(watchdog, "data", recursive=False)
+    observer.start()
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
+        install_monitor()
         game_overwiew, tournements, techniques = st.tabs(["Game Overview", "Tournaments", "Persuasion Techniques"])
         with game_overwiew:
             if game_engine.state.game_stage == GamePhase.MAIN_MENU:

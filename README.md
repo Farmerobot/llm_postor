@@ -94,7 +94,7 @@ Once the dependencies are installed, activate the virtual environment:
 To run the simulation with the GUI:
 
 ```bash
-  poetry run run_gui
+  poetry run main
 ```
 
 ## Configuration
