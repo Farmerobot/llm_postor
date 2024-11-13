@@ -167,6 +167,8 @@ class GUIHandler(BaseModel):
                 for player in players:
                     if player.state.life == PlayerState.ALIVE:
                         discussion_chat = "\n".join(player.get_chat_messages())
+                        if not discussion_chat.strip():
+                            discussion_chat = "\n".join([obs[18:] for obs in player.state.observations if obs.startswith("chat")])
                         break
                 
                 print(f"Discussion chat: {discussion_chat}")
