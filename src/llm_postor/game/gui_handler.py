@@ -3,6 +3,7 @@ import random
 import uuid
 import os
 import concurrent.futures
+import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
@@ -257,21 +258,36 @@ class GUIHandler(BaseModel):
             st.warning("No data available. Please run the tournament analysis first.")
             return
 
-        # Display token usage for each model
+        # --- Token Usage Chart (Keep this as it is) ---
         self.plot_token_usage(model_input_tokens, model_output_tokens)
 
-        # Display the techniques for each model
+        # --- Techniques Table ---
+        st.subheader("Technique Breakdown by Model")
+        all_techniques = sorted(set(technique for model_data in model_techniques.values() for technique in model_data))
+        data = []
+        data2 = []
         for model_name, techniques in model_techniques.items():
-            st.markdown(f"### Model: {model_name}")
-            total_techniques = sum(techniques.values())
-            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
-            st.write(f"Total techniques: {total_techniques}")
-            st.write(f"Average techniques per player: {avg_techniques:.2f}")
+            row = {"Model": model_name}
+            row2 = {"Model": model_name}
+            row2["Total games"] = len(model_input_tokens[model_name])
+            row2["Total Uses"] = sum(techniques.values())
+            row2["Avg. per Game"] = row2["Total Uses"] / row2["Total games"] if row2["Total games"] else 0
+            row2["Avg. per Player"] = row2["Total Uses"] / model_player_counts[model_name] if model_player_counts[model_name] else 0
+            for technique in all_techniques:
+                row[technique] = techniques.get(technique, 0)  # Get count or 0 if not present
+            data.append(row)
+            data2.append(row2)
 
-            st.markdown("**Technique breakdown:**")
-            for technique, count in techniques.items():
-                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
-                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+        df = pd.DataFrame(data)
+        df = df.transpose()
+        df.columns = df.iloc[0]
+        df = df.iloc[1:]
+        df2 = pd.DataFrame(data2)
+        df2 = df2.transpose()
+        df2.columns = df2.iloc[0]
+        df2 = df2.iloc[1:]
+        st.dataframe(df2)
+        st.dataframe(df)  # Display DataFrame as a table
 
 
     def plot_token_usage(self, model_input_tokens: defaultdict[defaultdict[int]], model_output_tokens: defaultdict[defaultdict[int]]):
