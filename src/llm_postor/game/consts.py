@@ -70,4 +70,9 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0.13 / million,
 	},
+	"eva-unit-01/eva-qwen-2.5-32b": {
+		"input_tokens": 0.5 / million,
+		"cache_read": 0,
+		"output_tokens": 0.5 / million,
+  }
 }

@@ -98,16 +98,13 @@ class GUIHandler(BaseModel):
             if st.button("Force Set and Step Action"):
                 game_engine.state.set_stage(GamePhase.ACTION_PHASE)
                 game_engine.perform_step()
-                st.rerun()
         with col5:
             if st.button("Force Set and Step Discussion"):
                 game_engine.state.set_stage(GamePhase.DISCUSS)
                 game_engine.perform_step()
-                st.rerun()
         with col6:
             if st.button("Force step Voting"):
                 game_engine.go_to_voting()
-                st.rerun()
 
         col1, col2 = st.columns([2,1])
         with col1:
@@ -150,7 +147,6 @@ class GUIHandler(BaseModel):
                     pass
                 else:
                     raise e
-            st.rerun()
 
     def tournaments(self):
         st.title("Tournaments")
@@ -705,7 +701,6 @@ class GUIHandler(BaseModel):
             game_engine.load_players(players, impostor_count=impostor_count)
             game_engine.state.set_stage(GamePhase.ACTION_PHASE)
             game_engine.save_state()
-            st.rerun()
 
         # Configuration Settings
         st.markdown(f"---")  # Separator for configuration settings

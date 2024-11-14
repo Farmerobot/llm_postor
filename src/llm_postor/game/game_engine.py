@@ -343,7 +343,10 @@ class GameEngine(BaseModel):
 
     def broadcast_message(self, message: str) -> None:
         """Broadcasts a chat message to all alive players."""
-        self.state.log_action(f"chat: {message}")
+        start = self.state.round_of_discussion_start
+        now = self.state.round_number
+        max = game_consts.NUM_CHATS
+        self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now}. chat: {message}")
         for player in self.state.get_alive_players():
             player.state.chat_messages.append(f"chat: {message}")
 
