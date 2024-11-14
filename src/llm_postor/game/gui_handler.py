@@ -3,6 +3,7 @@ import random
 import uuid
 import os
 import concurrent.futures
+import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
@@ -12,6 +13,7 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 from llm_postor.annotation import annotate_dialogue
+from llm_postor.game import dummy
 from llm_postor.game.consts import *
 from llm_postor.game.llm_prompts import *
 from llm_postor.game.game_state import GameState
@@ -23,10 +25,37 @@ import plotly.graph_objects as go
 from llm_postor.game.chat_analyzer import ChatAnalyzer
 import shutil
 from llm_postor.game.players.ai import AIPlayer
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import datetime as dt
+
+from llm_postor.game.players.human import HumanPlayer
+
+class Watchdog(FileSystemEventHandler):
+    def __init__(self, hook):
+        self.hook = hook
+    def on_modified(self, event):
+        self.hook()
+        
+def update_dummy_module():
+    # Rewrite the dummy.py module. Because this script imports dummy,
+    # modifiying dummy.py will cause Streamlit to rerun this script.
+    # This is to update gui automatically when tournament is run.
+    # https://discuss.streamlit.io/t/how-to-monitor-the-filesystem-and-have-streamlit-updated-when-some-files-are-modified/822/9
+    dummy_path = dummy.__file__
+    with open(dummy_path, "w") as fp:
+        fp.write(f'timestamp = "{dt.datetime.now()}"')
+
+@st.cache_resource
+def install_monitor():
+    watchdog = Watchdog(update_dummy_module)
+    observer = Observer()
+    observer.schedule(watchdog, "data", recursive=False)
+    observer.start()
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
+        install_monitor()
         game_overwiew, tournements, techniques = st.tabs(["Game Overview", "Tournaments", "Persuasion Techniques"])
         with game_overwiew:
             if game_engine.state.game_stage == GamePhase.MAIN_MENU:
@@ -72,16 +101,13 @@ class GUIHandler(BaseModel):
             if st.button("Force Set and Step Action"):
                 game_engine.state.set_stage(GamePhase.ACTION_PHASE)
                 game_engine.perform_step()
-                st.rerun()
         with col5:
             if st.button("Force Set and Step Discussion"):
                 game_engine.state.set_stage(GamePhase.DISCUSS)
                 game_engine.perform_step()
-                st.rerun()
         with col6:
             if st.button("Force step Voting"):
                 game_engine.go_to_voting()
-                st.rerun()
 
         col1, col2 = st.columns([2,1])
         with col1:
@@ -117,7 +143,6 @@ class GUIHandler(BaseModel):
         st.json(game_engine.state.to_dict(), expanded=False)
             
         if should_perform_step:
-            print("Performing step")
             try:
                 res = game_engine.perform_step()
             except Exception as e:
@@ -125,13 +150,22 @@ class GUIHandler(BaseModel):
                     pass
                 else:
                     raise e
-            st.rerun()
 
     def tournaments(self):
-        st.write("This is the Tournaments tab. Content will be added here.")
+        st.title("Tournaments")
 
         if st.button("Analyze Tournaments"):
             self.analyze_tournaments()
+        
+        #read data/tournament_analysis.json
+        if os.path.exists("data/tournament_analysis.json"):
+            with open("data/tournament_analysis.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(model_techniques, model_player_counts, model_input_tokens, model_output_tokens)
 
     def clear_game_state(self):
         """Deletes the game_state.json file to clear the game state."""
@@ -152,17 +186,32 @@ class GUIHandler(BaseModel):
         # Dictionary to accumulate techniques for each model
         model_techniques = defaultdict(lambda: defaultdict(int))
         model_player_counts = defaultdict(int)
+        
+        # Dictionaries to store token usage per model
+        model_input_tokens = defaultdict(lambda: defaultdict(int))
+        model_output_tokens = defaultdict(lambda: defaultdict(int))
+                
 
         # Iterate over each file and load the game state
-        total_files = len(tournament_files)
-        progress_placeholder = st.empty()
+        progress_placeholder = st.text("Starting to analyze tournament files...")
         def analyze_file(file_name):
             file_path = os.path.join(tournament_dir, file_name)
             game_engine = GameEngine()
             if game_engine.load_state(file_path):
                 game_state = game_engine.state
                 players = game_state.players
-                discussion_chat = "\n".join(players[0].get_chat_messages())
+
+                discussion_chat = ""
+                # Get the longest discussion chat from all players - ensure the player was alive until the end
+                for player in players:
+                    if player.state.life == PlayerState.ALIVE:
+                        discussion_chat = "\n".join(player.get_chat_messages())
+                        if not discussion_chat.strip():
+                            discussion_chat = "\n".join([obs[18:] for obs in player.state.observations if obs.startswith("chat")])
+                        break
+                
+                print(f"Discussion chat: {discussion_chat}")
+
                 annotation_json = json.loads(annotate_dialogue(discussion_chat))
                 previous_player = None
                 player_techniques = defaultdict(list)
@@ -179,32 +228,97 @@ class GUIHandler(BaseModel):
                 for player in players:
                     model_name = player.llm_model_name
                     model_player_counts[model_name] += 1
+                    model_input_tokens[model_name][file_name] = player.state.token_usage.input_tokens
+                    model_output_tokens[model_name][file_name] = player.state.token_usage.output_tokens
                     for technique in player_techniques[player.name]:
                         model_techniques[model_name][technique] += 1
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
-            for future in concurrent.futures.as_completed(futures):
-                file_name = futures[future]
-                progress_placeholder.text(f"Finished analyzing {file_name}")
+        with st.status("Analyzing tournament files..."):
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
+                for future in concurrent.futures.as_completed(futures):
+                    file_name = futures[future]
+                    st.write(f"Finished analyzing {file_name}")
 
         # Clear the progress message
         progress_placeholder.empty()
+        
+        # save dicts to a file
+        with open("data/tournament_analysis.json", "w") as f:
+            json.dump({
+                "model_techniques": model_techniques,
+                "model_player_counts": model_player_counts,
+                "model_input_tokens": model_input_tokens,
+                "model_output_tokens": model_output_tokens
+            }, f)
+                
+    def _display_tournament_persuasion_analysis(self, model_techniques: Dict[str, Dict[str, int]], model_player_counts: Dict[str, int], model_input_tokens: Dict[str, int], model_output_tokens: Dict[str, int]):
+        st.title("Persuasion Techniques")
+        if not model_techniques:
+            st.warning("No data available. Please run the tournament analysis first.")
+            return
 
-        # Display total and average techniques per player for each model
-        st.subheader("Model Techniques Summary Across All Tournaments")
+        # --- Token Usage Chart (Keep this as it is) ---
+        self.plot_token_usage(model_input_tokens, model_output_tokens)
+
+        # --- Techniques Table ---
+        st.subheader("Technique Breakdown by Model")
+        all_techniques = sorted(set(technique for model_data in model_techniques.values() for technique in model_data))
+        data = []
+        data2 = []
         for model_name, techniques in model_techniques.items():
-            st.markdown(f"### Model: {model_name}")
-            total_techniques = sum(techniques.values())
-            avg_techniques = total_techniques / model_player_counts[model_name] if model_player_counts[model_name] else 0
-            st.write(f"Total techniques: {total_techniques}")
-            st.write(f"Average techniques per player: {avg_techniques:.2f}")
+            row = {"Model": model_name}
+            row2 = {"Model": model_name}
+            row2["Total games"] = len(model_input_tokens[model_name])
+            row2["Total Uses"] = sum(techniques.values())
+            row2["Avg. per Game"] = row2["Total Uses"] / row2["Total games"] if row2["Total games"] else 0
+            row2["Avg. per Player"] = row2["Total Uses"] / model_player_counts[model_name] if model_player_counts[model_name] else 0
+            for technique in all_techniques:
+                row[technique] = techniques.get(technique, 0)  # Get count or 0 if not present
+            data.append(row)
+            data2.append(row2)
 
-            st.markdown("**Technique breakdown:**")
-            for technique, count in techniques.items():
-                avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
-                st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
+        df = pd.DataFrame(data)
+        df = df.transpose()
+        df.columns = df.iloc[0]
+        df = df.iloc[1:]
+        df2 = pd.DataFrame(data2)
+        df2 = df2.transpose()
+        df2.columns = df2.iloc[0]
+        df2 = df2.iloc[1:]
+        st.dataframe(df2)
+        st.dataframe(df)  # Display DataFrame as a table
 
+
+    def plot_token_usage(self, model_input_tokens: defaultdict[defaultdict[int]], model_output_tokens: defaultdict[defaultdict[int]]):
+        """Plots input and output token usage per model."""
+        models = list(model_input_tokens.keys())
+        fig = go.Figure()
+
+        # Define colors for each model. Add more colors if needed.
+        colors = ['cyan', 'orange', 'green', 'red', 'purple', 'brown', 'pink', 'gray', 'olive', 'blue']
+
+        for i, model in enumerate(models):
+            input_tokens_model = [model_input_tokens[model][filename] for filename in model_input_tokens[model].keys()]
+            output_tokens_model = [model_output_tokens[model][filename] for filename in model_output_tokens[model].keys()]
+            fig.add_trace(go.Scatter(
+                x=input_tokens_model, 
+                y=output_tokens_model, 
+                mode='markers', 
+                name=model, 
+                marker=dict(color=colors[i % len(colors)]),
+                hovertemplate="<br>Input: %{x}<br>Output: %{y}",
+            ))
+
+        fig.update_layout(
+            title="Token Usage per Model",
+            xaxis_title="Input Tokens",  # Corrected x-axis title
+            yaxis_title="Output Tokens",  # Corrected y-axis title
+            showlegend=True,  # Show the legend
+            legend_title="Models",
+        )
+
+        st.plotly_chart(fig)
 
     def save_state_to_tournaments(self, game_engine: GameEngine):
         """Saves the game state to the tournaments folder."""
@@ -625,7 +739,7 @@ class GUIHandler(BaseModel):
             crewmate_model = st.selectbox(
                 f"Model",
                 models,
-                format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']}$ / {TOKEN_COSTS[model]['output_tokens']}$",
                 key=f"crewmate_model_selection"
             )
         cols_crewmate = st.columns(crewmate_count)
@@ -639,7 +753,7 @@ class GUIHandler(BaseModel):
                     impostor_model = st.selectbox(
                         f"Model",
                         models,
-                        format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                        format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']}$ / {TOKEN_COSTS[model]['output_tokens']}$",
                         key=f"impostor_model_selection"
                     )
                 cols_impostor = st.columns(impostor_count)
@@ -663,6 +777,8 @@ class GUIHandler(BaseModel):
             # Create player object
             player = AIPlayer(name=player_name, llm_model_name=model_name, role=PlayerRole.IMPOSTOR if i >= crewmate_count else PlayerRole.CREWMATE)
             players.append(player)
+        # players = players[1:]  # Remove the first player
+        # players.append(HumanPlayer(name="Mateusz", role=PlayerRole.CREWMATE))
 
         # Confirmation button to start the game
         if st.button("Start Game"):
@@ -670,7 +786,6 @@ class GUIHandler(BaseModel):
             game_engine.load_players(players, impostor_count=impostor_count)
             game_engine.state.set_stage(GamePhase.ACTION_PHASE)
             game_engine.save_state()
-            st.rerun()
 
         # Configuration Settings
         st.markdown(f"---")  # Separator for configuration settings
@@ -724,77 +839,4 @@ class GUIHandler(BaseModel):
 
     def _display_persuasion_techniques(self):
         st.title("Persuasion Techniques")
-        st.markdown("""
-            ### 1. **Appeal to Logic (Logos)**
-            **Description**: Using facts, evidence, or logical reasoning to convince others. This can include referencing actions, timings, or task completion to logically argue who the impostor is or isn't.
-            **Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the impostor."
-
-            ### 2. **Appeal to Emotion (Pathos)**
-            **Description**: Persuading by evoking an emotional response, such as fear, sympathy, or trust.
-            **Example**: "If you vote me out now, the impostors will win, and it'll be your fault."
-
-            ### 3. **Appeal to Credibility (Ethos)**
-            **Description**: Convincing others based on the trustworthiness or authority of the speaker.
-            **Example**: "I’ve never lied in this game before, and I’ve proven myself innocent multiple times."
-
-            ### 4. **Shifting the Burden of Proof**
-            **Description**: Forcing others to prove their innocence instead of presenting clear evidence of guilt.
-            **Example**: "If you’re not the impostor, prove it. What tasks have you completed?"
-
-            ### 5. **Bandwagon Effect**
-            **Description**: Convincing others to agree by emphasizing that everyone else is already on board with the idea.
-            **Example**: "Everyone else is already voting for Green. You should too."
-
-            ### 6. **Distraction**
-            **Description**: Diverting attention away from oneself or from the actual issue to avoid suspicion.
-            **Example**: "Why are we even talking about me? What about Red? No one’s questioned their movements!"
-
-            ### 7. **False Consensus**
-            **Description**: Claiming that others agree with your stance, even if no explicit support has been voiced.
-            **Example**: "Everyone thinks Blue is suspicious, so it’s probably them."
-
-            ### 8. **Appeal to Time Pressure**
-            **Description**: Using the limited time available in decision-making to pressure others into making quick, potentially rash decisions.
-            **Example**: "We only have 10 seconds left to vote. Just go with Red!"
-
-            ### 9. **Consensus Building**
-            **Description**: Actively working to build agreement among the group by aligning with others’ perspectives.
-            **Example**: "I think Blue’s right. I saw Red acting suspicious too. Let’s vote them out."
-
-            ### 10. **Gaslighting**
-            **Description**: Convincing others to doubt their own perceptions and reality, making them question what they saw or did.
-            **Example**: "You didn’t see me near the body. You must be confused, I was in Electrical the whole time."
-
-            ### 11. **Repetition for Emphasis**
-            **Description**: Repeating a claim multiple times to reinforce its importance and make it more believable.
-            **Example**: "I saw Wafał eliminate Waciej in Medbay. Wafał is the impostor, and I’ve seen it with my own eyes."
-
-            ### 12. **Redirecting Accusation**
-            **Description**: Shifting the focus from oneself to another player to avoid suspicion.
-            **Example**: "We should be talking about Wateusz’s activity in the Cafeteria, not my presence in Medbay."
-
-            ### 13. **Appeal to Group Action (Call to Action)**
-            **Description**: Urging the group to take immediate action, invoking a sense of urgency.
-            **Example**: "We need to vote out Wafał right now before it’s too late. I saw what I saw!"
-
-            ### 14. **Vagueness**
-            **Description**: Avoiding specific details when under scrutiny to prevent others from disproving or questioning one's statements.
-            **Example**: "I was just doing my tasks in Cafeteria, nothing out of the ordinary."
-
-            ### 15. **Appeal to Credibility (Repeated)**
-            **Description**: Restating one’s eyewitness claim as fact to reinforce credibility.
-            **Example**: "I’ve never lied before in this game, and I know what I saw. Wafał is the impostor."
-
-            ### 16. **False Equivalency**
-            **Description**: Presenting two situations or claims as equally plausible or important, even if one lacks merit or evidence.
-            **Example**: "I was in Medbay, just like Wojtek, and I didn’t see anything. How is his word better than mine?"
-
-            ### 17. **Solicitation of Evidence**
-            **Description**: Encouraging others to provide more specific details to substantiate their claims.
-            **Example**: "Wojtek, if you really saw Wafał, tell us exactly how it happened."
-
-            ### 18. **Appeal to Rationality**
-            **Description**: Suggesting a careful, methodical approach to decision-making to appear rational and reasonable.
-            **Example**: "Let’s not rush this vote. We need to gather all the facts first before deciding."
-            """
-            )
+        st.markdown(PERSUASION_TECHNIQUES)

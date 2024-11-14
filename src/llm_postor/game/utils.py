@@ -1,4 +1,6 @@
 from random import sample
+from typing import List
+import re
 from llm_postor.game import consts
 from llm_postor.game.models.engine import GameLocation
 from llm_postor.game.models.tasks import ShortTask, LongTask, Task
@@ -63,3 +65,19 @@ def get_long_tasks() -> list[LongTask]:
         LongTask(name="Submit scan in medbay", location=GameLocation.LOC_MEDBAY),
     ]
     return sample(tasks, k=consts.NUM_LONG_TASKS)
+
+def check_action_valid(available_actions: List[str], chosen_action: str, player_name: str) -> int:
+    normalized_chosen_action = normalize_action(chosen_action)
+    normalized_available_actions = [normalize_action(action) for action in available_actions]
+
+    for action in normalized_available_actions:
+        if action in normalized_chosen_action:
+            return normalized_available_actions.index(action), action
+
+    warning_str = f"{player_name} LLM did not conform to output format. Expected one of {normalized_available_actions}, but got '{chosen_action}'"
+    print(warning_str)
+    raise ValueError(warning_str)
+
+
+def normalize_action(action: str) -> str:
+    return re.sub(r"^\d+[\s:.)-]*", "", action).strip().strip(".").strip("- ").lower()

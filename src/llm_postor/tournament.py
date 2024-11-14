@@ -1,3 +1,6 @@
+import shutil
+import streamlit as st
+from llm_postor.game.consts import STATE_FILE
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.ai import AIPlayer
 from llm_postor.game.models.engine import GamePhase
@@ -71,6 +74,7 @@ class TournamentGame():
         while not res and self.game_engine.state.round_number < self.n_round_cut_off:
             try:
                 res = self.game_engine.perform_step()  # game is finished
+                shutil.copyfile(self.full_path, STATE_FILE)
             except Exception as e:
                 if "LLM did" in str(e):
                     continue

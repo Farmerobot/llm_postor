@@ -23,6 +23,11 @@ This project aims to test and compare the persuasive abilities of large language
 - Player state and history tracking.
 - Map visualization with player locations and game logs.
 - Discussion analysis with persuasion technique annotations.
+- Selection of preferred LLM models for players.
+- Implement functionality to export game data for analysis.
+- A web-based panel for setting game parameters and customizing scenarios.
+- Running tournaments along with game visualization
+- Analysing all games in a tournament and displaying the results and persuasioin techniques used by each model
 
 ## Project Architecture
 
@@ -94,7 +99,7 @@ Once the dependencies are installed, activate the virtual environment:
 To run the simulation with the GUI:
 
 ```bash
-  poetry run run_gui
+  poetry run main
 ```
 
 ## Configuration
@@ -134,15 +139,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 We are planning to add the following features to enhance the project:
 
 - **Voting Results Visualization**: Display voting results using bar charts for clarity.
-- **Scenario Selection**: Allow users to choose or customize game scenarios.
-- **Player Customization**: Enable selection of preferred LLM models for players.
-- **Data Export**: Implement functionality to export game data for analysis.
-- **Configuration Panel**: A web-based panel for setting game parameters and customizing scenarios.
-- **NLP Metrics**: Analyze language quality and effectiveness.
-- **Scenario Editor**: Tool for creating and modifying game scenarios.
-- **Comparative Analysis Tools**: Compare LLM model performance with statistical analysis.
+- **Scenario Selection**: Allow users to choose game states.
 - **Human Player Interface**: Allow human participation alongside AI agents.
-- **API Documentation**: Documentation for integrating custom LLM models.
+- **LiteLLM Support**: Integrate LiteLLM.
 - **Automated Testing**: Ensure robustness and reliability with automated tests.
 
 These planned features aim to make the project more comprehensive and versatile for researchers and enthusiasts in AI and NLP fields.

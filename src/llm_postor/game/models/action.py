@@ -47,7 +47,7 @@ class GameAction(BaseModel):
             self.result = (
                 f"You [{self.player}] are waiting in {self.player.state.location.value}"
             )
-            self.spectator = f"{self.player} waited"
+            self.spectator = f"{self.player} waited in {self.player.state.location.value}"
         elif self.type == GameActionType.DO_ACTION:
             self.text = f"complete task: {self.target.name if isinstance(self.target, Task) else self.target}"
             self.result = f"You [{self.player}] {self.target}"

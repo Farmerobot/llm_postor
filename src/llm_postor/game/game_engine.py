@@ -1,6 +1,5 @@
 import random
 import json
-import streamlit as st
 from typing import Any, List
 from collections import Counter
 from pydantic import BaseModel, Field
@@ -90,13 +89,8 @@ class GameEngine(BaseModel):
         ):
             self.go_to_voting()
         elif self.state.game_stage == GamePhase.ACTION_PHASE:
-            self.state.log_action(f"Action: round: {self.state.round_number}. Player to act: {self.state.player_to_act_next}")
             self.perform_action_step()
         elif self.state.game_stage == GamePhase.DISCUSS:
-            start = self.state.round_of_discussion_start
-            now = self.state.round_number
-            max = game_consts.NUM_CHATS
-            self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now}. Player to act: {self.state.player_to_act_next}")
             self.perform_discussion_step()
         else:
             print("Game is in MAIN_MENU stage - read_only mode")
@@ -123,7 +117,7 @@ class GameEngine(BaseModel):
             self.state.player_to_act_next = (self.state.player_to_act_next + 1) % len(
                 self.state.players
             )
-            self.state.log_action(f"Player to act next set to: {self.state.player_to_act_next}")
+            self.state.log_action(f"\033[90m Player to act next set to: {self.state.player_to_act_next} \033[00m")
             # if we happen to reach the end of the list, we need to start from the beginning and update the round number
             # This is the same code as above, but we need to repeat it here, because we might have skipped dead players at the end
             if self.state.player_to_act_next == 0:
@@ -187,11 +181,8 @@ class GameEngine(BaseModel):
         if action.player in players_in_room:
             players_in_room.remove(action.player)
 
-        self.state.log_action(f"{action.spectator}")
-        if players_in_room:
-            self.state.log_action(f"{players_in_room} saw this action")
-        else:
-            self.state.log_action(f"No one saw this action")
+        total_cost = round(sum(player.state.token_usage.cost for player in self.state.players), 6)
+        self.state.log_action(f"Action: round: {self.state.round_number} ({total_cost}$). p{self.state.player_to_act_next} {action.spectator} " + (f"{players_in_room} saw this action" if players_in_room else "No one saw this action"))
 
         # update players in room
         for player in self.state.players:
@@ -353,7 +344,11 @@ class GameEngine(BaseModel):
 
     def broadcast_message(self, message: str) -> None:
         """Broadcasts a chat message to all alive players."""
-        self.state.log_action(f"chat: {message}")
+        start = self.state.round_of_discussion_start
+        now = self.state.round_number
+        max = game_consts.NUM_CHATS
+        total_cost = round(sum(player.state.token_usage.cost for player in self.state.players), 6)
+        self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now} ({total_cost}$). chat: {message}")
         for player in self.state.get_alive_players():
             player.state.chat_messages.append(f"chat: {message}")
 

@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 
 from llm_postor.game.models.engine import GameLocation, GamePhase
 from llm_postor.game.models.tasks import Task
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 
 class PlayerState(str, Enum):
     ALIVE = "Alive"
@@ -70,8 +70,10 @@ class PlayerHistory(BaseModel):
                 if len(round.llm_responses)>1:
                     history_str += f"Your previous plan:\n{round.llm_responses[0]}\n"
                     history_str += f"Your action: {round.llm_responses[1]}\n"
-                else:
+                elif len(round.llm_responses)==1:
                     history_str += f"Your action:\n{round.llm_responses[0]}\n"
+                else:
+                    history_str += f"Your action:\n{round.response}\n"
                 history_str += f"Observations:\n{observations}\n"
                 history_str += f"{round.player_in_room}\n"
             elif i == len(self.rounds) - 1 or self.rounds[i+1].stage == GamePhase.ACTION_PHASE:

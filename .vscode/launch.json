@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.main:main",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.main",
+            "console": "integratedTerminal"
+        }
+    ]
+}
