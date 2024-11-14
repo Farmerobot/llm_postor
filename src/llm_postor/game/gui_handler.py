@@ -656,7 +656,7 @@ class GUIHandler(BaseModel):
             crewmate_model = st.selectbox(
                 f"Model",
                 models,
-                format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']}$ / {TOKEN_COSTS[model]['output_tokens']}$",
                 key=f"crewmate_model_selection"
             )
         cols_crewmate = st.columns(crewmate_count)
@@ -670,7 +670,7 @@ class GUIHandler(BaseModel):
                     impostor_model = st.selectbox(
                         f"Model",
                         models,
-                        format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']*1000000}$ / {TOKEN_COSTS[model]['output_tokens']*1000000}$",
+                        format_func=lambda model: f"{model} - {TOKEN_COSTS[model]['input_tokens']}$ / {TOKEN_COSTS[model]['output_tokens']}$",
                         key=f"impostor_model_selection"
                     )
                 cols_impostor = st.columns(impostor_count)

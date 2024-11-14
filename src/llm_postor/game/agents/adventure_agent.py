@@ -13,7 +13,7 @@ from llm_postor.game.llm_prompts import (
 )
 from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.utils import check_action_valid
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 
 class AdventureAgent(Agent):
     llm: ChatOpenAI = None

@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 
 from llm_postor.game.models.engine import GameLocation, GamePhase
 from llm_postor.game.models.tasks import Task
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 
 class PlayerState(str, Enum):
     ALIVE = "Alive"

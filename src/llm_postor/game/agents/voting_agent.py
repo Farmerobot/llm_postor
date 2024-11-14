@@ -9,7 +9,7 @@ from langchain_openai import ChatOpenAI
 from llm_postor.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
 from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.utils import check_action_valid
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 
 class VotingAgent(Agent):
     llm: ChatOpenAI = None

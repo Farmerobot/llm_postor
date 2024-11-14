@@ -117,7 +117,7 @@ class GameEngine(BaseModel):
             self.state.player_to_act_next = (self.state.player_to_act_next + 1) % len(
                 self.state.players
             )
-            self.state.log_action(f"Player to act next set to: {self.state.player_to_act_next}")
+            self.state.log_action(f"\033[90m Player to act next set to: {self.state.player_to_act_next} \033[00m")
             # if we happen to reach the end of the list, we need to start from the beginning and update the round number
             # This is the same code as above, but we need to repeat it here, because we might have skipped dead players at the end
             if self.state.player_to_act_next == 0:

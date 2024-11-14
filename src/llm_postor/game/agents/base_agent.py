@@ -3,7 +3,7 @@ from typing import Any, List
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 from llm_postor.game.consts import TOKEN_COSTS
 
 class Agent(ABC, BaseModel):
@@ -24,21 +24,6 @@ class Agent(ABC, BaseModel):
         self.token_usage.total_tokens += msg["total_tokens"]
         if "cache_read" in msg["input_token_details"]:
             self.token_usage.cache_read += msg["input_token_details"]["cache_read"]
-        self.update_cost()
-        
-    def update_cost(self):
-        for_model = self.llm.model_name
-        # if ends with :free, cost is 0
-        if for_model.endswith(":free"):
-            self.token_usage.cost = 0
-            return
-        if for_model not in TOKEN_COSTS:
-            print(f"Model {for_model} not found in TOKEN_COSTS. defaulting to openai/gpt-4o-mini")
-            for_model = "openai/gpt-4o-mini"
-        
-        self.token_usage.cost += self.token_usage.input_tokens * TOKEN_COSTS[for_model]["input_tokens"] 
-        self.token_usage.cost += self.token_usage.output_tokens * TOKEN_COSTS[for_model]["output_tokens"]
-        self.token_usage.cost += self.token_usage.cache_read * TOKEN_COSTS[for_model]["cache_read"]
         
 
     def to_dict(self):

@@ -12,7 +12,7 @@ from llm_postor.game.llm_prompts import (
     DISCUSSION_RESPONSE_USER_PROMPT
 )
 from llm_postor.config import OPENROUTER_API_KEY
-from llm_postor.game.agents.usage_metadata import UsageMetadata
+from llm_postor.game.models.usage_metadata import UsageMetadata
 
 class DiscussionAgent(Agent):
     llm: ChatOpenAI = None
