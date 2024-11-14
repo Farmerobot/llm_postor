@@ -157,9 +157,9 @@ class GUIHandler(BaseModel):
         if st.button("Analyze Tournaments"):
             self.analyze_tournaments()
         
-        #read data/tournament_analysis.json
-        if os.path.exists("data/tournament_analysis.json"):
-            with open("data/tournament_analysis.json", "r") as f:
+        #read data/analysis.json
+        if os.path.exists("data/analysis.json"):
+            with open("data/analysis.json", "r") as f:
                 data = json.load(f)
                 model_techniques = data["model_techniques"]
                 model_player_counts = data["model_player_counts"]
@@ -244,7 +244,7 @@ class GUIHandler(BaseModel):
         progress_placeholder.empty()
         
         # save dicts to a file
-        with open("data/tournament_analysis.json", "w") as f:
+        with open("data/analysis.json", "w") as f:
             json.dump({
                 "model_techniques": model_techniques,
                 "model_player_counts": model_player_counts,
