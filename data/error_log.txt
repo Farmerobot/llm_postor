@@ -1,0 +1,7 @@
+llama-3-1-8b-instruct_vs_gpt-4o-mini_1.json errored with code:
+{'message': 'This endpoint\'s maximum context length is 16000 tokens. However, you requested about  tokens (24362 of text input). Please reduce the length of either one, or use the "middle-out" transform to compress your prompt automatically.', 'code': 400}
+llama-3-1-8b-instruct_vs_gemini-flash-1-5_3.json errored with code:
+Expecting value: line 1 column 1 (char 0)
+gemini-flash-1-5_vs_llama-3-1-8b-instruct_2.json errored with code:
+{'message': 'This endpoint\'s maximum context length is 16000 tokens. However, you requested about 17118 tokens (17118 of text input). Please reduce the length of either one, or use the "middle-out" transform to compress your prompt automatically.', 'code': 400}
+24362
