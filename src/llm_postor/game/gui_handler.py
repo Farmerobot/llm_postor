@@ -155,6 +155,16 @@ class GUIHandler(BaseModel):
 
         if st.button("Analyze Tournaments"):
             self.analyze_tournaments()
+        
+        #read data/tournament_analysis.json
+        if os.path.exists("data/tournament_analysis.json"):
+            with open("data/tournament_analysis.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(model_techniques, model_player_counts, model_input_tokens, model_output_tokens)
 
     def clear_game_state(self):
         """Deletes the game_state.json file to clear the game state."""
@@ -175,6 +185,11 @@ class GUIHandler(BaseModel):
         # Dictionary to accumulate techniques for each model
         model_techniques = defaultdict(lambda: defaultdict(int))
         model_player_counts = defaultdict(int)
+        
+        # Dictionaries to store token usage per model
+        model_input_tokens = defaultdict(lambda: defaultdict(int))
+        model_output_tokens = defaultdict(lambda: defaultdict(int))
+                
 
         # Iterate over each file and load the game state
         progress_placeholder = st.text("Starting to analyze tournament files...")
@@ -212,20 +227,40 @@ class GUIHandler(BaseModel):
                 for player in players:
                     model_name = player.llm_model_name
                     model_player_counts[model_name] += 1
+                    model_input_tokens[model_name][file_name] = player.state.token_usage.input_tokens
+                    model_output_tokens[model_name][file_name] = player.state.token_usage.output_tokens
                     for technique in player_techniques[player.name]:
                         model_techniques[model_name][technique] += 1
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
-            for future in concurrent.futures.as_completed(futures):
-                file_name = futures[future]
-                progress_placeholder.text(f"Finished analyzing {file_name}")
+        with st.status("Analyzing tournament files..."):
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
+                for future in concurrent.futures.as_completed(futures):
+                    file_name = futures[future]
+                    st.write(f"Finished analyzing {file_name}")
 
         # Clear the progress message
         progress_placeholder.empty()
+        
+        # save dicts to a file
+        with open("data/tournament_analysis.json", "w") as f:
+            json.dump({
+                "model_techniques": model_techniques,
+                "model_player_counts": model_player_counts,
+                "model_input_tokens": model_input_tokens,
+                "model_output_tokens": model_output_tokens
+            }, f)
+                
+    def _display_tournament_persuasion_analysis(self, model_techniques: Dict[str, Dict[str, int]], model_player_counts: Dict[str, int], model_input_tokens: Dict[str, int], model_output_tokens: Dict[str, int]):
+        st.title("Persuasion Techniques")
+        if not model_techniques:
+            st.warning("No data available. Please run the tournament analysis first.")
+            return
 
-        # Display total and average techniques per player for each model
-        st.subheader("Model Techniques Summary Across All Tournaments")
+        # Display token usage for each model
+        self.plot_token_usage(model_input_tokens, model_output_tokens)
+
+        # Display the techniques for each model
         for model_name, techniques in model_techniques.items():
             st.markdown(f"### Model: {model_name}")
             total_techniques = sum(techniques.values())
@@ -238,6 +273,36 @@ class GUIHandler(BaseModel):
                 avg_per_player = count / model_player_counts[model_name] if model_player_counts[model_name] else 0
                 st.write(f" - {technique}: {count} times (avg per player: {avg_per_player:.2f})")
 
+
+    def plot_token_usage(self, model_input_tokens: defaultdict[defaultdict[int]], model_output_tokens: defaultdict[defaultdict[int]]):
+        """Plots input and output token usage per model."""
+        models = list(model_input_tokens.keys())
+        fig = go.Figure()
+
+        # Define colors for each model. Add more colors if needed.
+        colors = ['cyan', 'orange', 'green', 'red', 'purple', 'brown', 'pink', 'gray', 'olive', 'blue']
+
+        for i, model in enumerate(models):
+            input_tokens_model = [model_input_tokens[model][filename] for filename in model_input_tokens[model].keys()]
+            output_tokens_model = [model_output_tokens[model][filename] for filename in model_output_tokens[model].keys()]
+            fig.add_trace(go.Scatter(
+                x=input_tokens_model, 
+                y=output_tokens_model, 
+                mode='markers', 
+                name=model, 
+                marker=dict(color=colors[i % len(colors)]),
+                hovertemplate="<br>Input: %{x}<br>Output: %{y}",
+            ))
+
+        fig.update_layout(
+            title="Token Usage per Model",
+            xaxis_title="Input Tokens",  # Corrected x-axis title
+            yaxis_title="Output Tokens",  # Corrected y-axis title
+            showlegend=True,  # Show the legend
+            legend_title="Models",
+        )
+
+        st.plotly_chart(fig)
 
     def save_state_to_tournaments(self, game_engine: GameEngine):
         """Saves the game state to the tournaments folder."""
