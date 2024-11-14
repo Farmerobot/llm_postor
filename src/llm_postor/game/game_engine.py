@@ -181,7 +181,8 @@ class GameEngine(BaseModel):
         if action.player in players_in_room:
             players_in_room.remove(action.player)
 
-        self.state.log_action(f"Action: round: {self.state.round_number}. p{self.state.player_to_act_next} {action.spectator} " + (f"{players_in_room} saw this action" if players_in_room else "No one saw this action"))
+        total_cost = round(sum(player.state.token_usage.cost for player in self.state.players), 6)
+        self.state.log_action(f"Action: round: {self.state.round_number} ({total_cost}$). p{self.state.player_to_act_next} {action.spectator} " + (f"{players_in_room} saw this action" if players_in_room else "No one saw this action"))
 
         # update players in room
         for player in self.state.players:
@@ -346,7 +347,8 @@ class GameEngine(BaseModel):
         start = self.state.round_of_discussion_start
         now = self.state.round_number
         max = game_consts.NUM_CHATS
-        self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now}. chat: {message}")
+        total_cost = round(sum(player.state.token_usage.cost for player in self.state.players), 6)
+        self.state.log_action(f"Discussion ({now-start+1}/{max}): round: {now} ({total_cost}$). chat: {message}")
         for player in self.state.get_alive_players():
             player.state.chat_messages.append(f"chat: {message}")
 
