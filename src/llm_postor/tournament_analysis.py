@@ -4,16 +4,16 @@ import pandas as pd
 import os
 
 # Variables
-n_repetitions=1
+n_repetitions=3
 n_players = 5
 n_impostors = 1
 dir = 'data/tournament'
-n_round_cut_off = 3
-debug = True
+n_round_cut_off = 40
+debug = False
 ai_models = [
     "openai/gpt-4o-mini",
     "google/gemini-flash-1.5",
-    "meta-llama/llama-3.1-8b-instruct"
+    "meta-llama/llama-3.1-70b-instruct"
 ]
 
 OUTPUT = []

@@ -70,4 +70,9 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 0.13 / million,
 	},
+    "anthropic/claude-3-haiku": {
+		"input_tokens": 0.25 / million,
+		"cache_read": 0,
+		"output_tokens": 1.25 / million,
+	},
 }

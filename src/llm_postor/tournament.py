@@ -7,16 +7,16 @@ from itertools import permutations
 
 
 # Variables
-n_repetitions=1
+n_repetitions=3
 n_players = 5
 n_impostors = 1
 dir = 'data/tournament'
-n_round_cut_off = 3
-debug = True
+n_round_cut_off = 40
+debug = False
 ai_models = [
+    "meta-llama/llama-3.1-8b-instruct",
     "openai/gpt-4o-mini",
-    "google/gemini-flash-1.5",
-    "meta-llama/llama-3.1-8b-instruct"
+    "google/gemini-flash-1.5"
 ]
 
 
@@ -75,7 +75,12 @@ class TournamentGame():
                 if "LLM did" in str(e):
                     continue
                 else:
-                    self.add_file_name_flag("exception")
+                    try:
+                        self.add_file_name_flag("exception")
+                    except:
+                        ...
+                    with open("data/error_log.txt", "a") as file:
+                        file.write(f"{self.file_path} errored with code:\n{str(e)}\n")
                     break
 
         if self.game_engine.state.round_number >= self.n_round_cut_off:  # too many rounds
