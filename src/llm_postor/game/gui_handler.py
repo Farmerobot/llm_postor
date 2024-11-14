@@ -28,6 +28,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import datetime as dt
 
+from llm_postor.game.players.human import HumanPlayer
+
 class Watchdog(FileSystemEventHandler):
     def __init__(self, hook):
         self.hook = hook
@@ -694,6 +696,8 @@ class GUIHandler(BaseModel):
             # Create player object
             player = AIPlayer(name=player_name, llm_model_name=model_name, role=PlayerRole.IMPOSTOR if i >= crewmate_count else PlayerRole.CREWMATE)
             players.append(player)
+        # players = players[1:]  # Remove the first player
+        # players.append(HumanPlayer(name="Mateusz", role=PlayerRole.CREWMATE))
 
         # Confirmation button to start the game
         if st.button("Start Game"):

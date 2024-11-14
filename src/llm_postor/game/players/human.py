@@ -10,12 +10,13 @@ class HumanPlayer(Player):
         action_prompt = "\n".join(
             [f"{i}: {action}" for i, action in enumerate(actions)]
         )
-        self.state.prompts = f"Your turn {self.name}: Choose an action\n{action_prompt}"
-        self.state.prompts += "========================================"
-        task_str = "\n".join([str(task) for task in self.tasks])
-        self.state.prompts += f"Here are your tasks: \n{task_str}"
-        self.state.prompts += "========================================"
-        print(self.state.prompts)
+        task_str = "\n".join([str(task) for task in self.state.tasks])
+        self.state.prompts = []
+        self.state.prompts.append(f"Here are your tasks: \n{task_str}")
+        self.state.prompts.append("========================================")
+        self.state.prompts.append(f"Your turn {self.name}: Choose an action\n{action_prompt}")
+        self.state.prompts.append("========================================")
+        print("\n".join(self.state.prompts))
 
         while True:
             try:
@@ -27,14 +28,14 @@ class HumanPlayer(Player):
                     print(f"Please enter a number between 0 and {len(actions) - 1}")
             except ValueError:
                 print("Invalid input. Please enter a number.")
-            self.state.action_taken = "Invalid action"
+            self.state.action_result = "Invalid action"
 
     def prompt_discussion(self) -> str:
         history = self.history.get_history_str()
         messages = "\n".join(self.get_chat_messages())
         print(history)
         print(messages)
-        print(f"{self.name} it's your turn to discuss")
+        print(f"=============/n{self.name} it's your turn to discuss:\n=============")
         answer = input("")
         self.state.response = answer
         return answer
@@ -43,8 +44,10 @@ class HumanPlayer(Player):
         voting_prompt = "\n".join(
             [f"{i}: {action}" for i, action in enumerate(voting_actions)]
         )
-        self.state.prompts = voting_prompt
+        self.state.prompts = ["========================================"]
+        self.state.prompts += [voting_prompt]
         self.state.actions = voting_actions
+        print("\n".join(self.state.prompts))
         answer = input("Choose player to banish: ")
         if answer.isdigit():
             self.state.response = str(answer)
