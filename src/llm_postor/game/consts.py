@@ -22,7 +22,7 @@ TOKEN_COSTS = {
 		"cache_read": 0,
 		"output_tokens": 15,
 	},
-    "anthropic/claude-3.5-haiku": {  # 200k context
+    "anthropic/claude-3-5-haiku": {  # 200k context
         "input_tokens": 1,
 		"cache_read": 0,
 		"output_tokens": 5,

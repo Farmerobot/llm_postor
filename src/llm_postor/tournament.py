@@ -146,7 +146,7 @@ ai_models = [
     "google/gemini-flash-1.5",
     "google/gemini-pro-1.5",
     "anthropic/claude-3.5-sonnet",
-    "anthropic/claude-3.5-haiku"
+    "anthropic/claude-3-5-haiku"
 ]
 idx, parts = list(map(int, input("Input part of the experiment (e.g. 1/5, 3/5, etc.): ").split('/')))
 
