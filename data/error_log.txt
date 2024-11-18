@@ -294,3 +294,63 @@ llama-3-1-405b-instruct_vs_gemini-flash-1-5_3.json errored with code:
 {'message': 'max_tokens limit exceeded: 4096 > 123. To increase, visit https://openrouter.ai/credits and add more credits', 'code': 402}
 llama-3-1-405b-instruct_vs_gemini-flash-1-5_4.json errored with code:
 {'message': 'max_tokens limit exceeded: 4096 > 123. To increase, visit https://openrouter.ai/credits and add more credits', 'code': 402}
+gemini-flash-1-5_vs_gpt-4o-mini_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o-mini_5.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o_1.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o_5.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-flash-1-5_1.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-flash-1-5_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+llama-3-1-405b-instruct_vs_gemini-flash-1-5_1.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+llama-3-1-405b-instruct_vs_gemini-flash-1-5_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-flash-1-5_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-flash-1-5_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-flash-1-5_5.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+llama-3-1-405b-instruct_vs_gemini-flash-1-5_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+llama-3-1-405b-instruct_vs_gemini-flash-1-5_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-pro-1-5_1.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-pro-1-5_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-pro-1-5_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gemini-pro-1-5_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_claude-3-5-sonnet_1.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_claude-3-5-sonnet_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_claude-3-5-haiku_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_claude-3-5-haiku_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+claude-3-5-haiku_vs_gemini-flash-1-5_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+claude-3-5-haiku_vs_gemini-flash-1-5_4.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+claude-3-5-haiku_vs_gemini-flash-1-5_5.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+llama-3-1-405b-instruct_vs_llama-3-1-405b-instruct_2.json errored with code:
+{'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': '', 'provider_name': 'DeepInfra'}}
+gemini-flash-1-5_vs_gpt-4o-mini_2.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
+gemini-flash-1-5_vs_gpt-4o-mini_3.json errored with code:
+{'message': 'Provider returned error', 'code': 503, 'metadata': {'raw': '{\n  "error": {\n    "code": 503,\n    "message": "The model is overloaded. Please try again later.",\n    "status": "UNAVAILABLE"\n  }\n}\n', 'provider_name': 'Google AI Studio'}}
