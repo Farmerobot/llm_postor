@@ -1,26 +1,8 @@
-import shutil
-import streamlit as st
-from llm_postor.game.consts import STATE_FILE
 from llm_postor.game.game_engine import GameEngine
 from llm_postor.game.players.ai import AIPlayer
 from llm_postor.game.models.engine import GamePhase
 import os
 from random import shuffle
-from itertools import permutations
-
-
-# Variables
-n_repetitions=3
-n_players = 5
-n_impostors = 1
-dir = 'data/tournament'
-n_round_cut_off = 40
-debug = False
-ai_models = [
-    "meta-llama/llama-3.1-8b-instruct",
-    "openai/gpt-4o-mini",
-    "google/gemini-flash-1.5"
-]
 
 
 class TournamentGame():
@@ -74,7 +56,6 @@ class TournamentGame():
         while not res and self.game_engine.state.round_number < self.n_round_cut_off:
             try:
                 res = self.game_engine.perform_step()  # game is finished
-                shutil.copyfile(self.full_path, STATE_FILE)
             except Exception as e:
                 if "LLM did" in str(e):
                     continue
@@ -97,7 +78,7 @@ class TournamentGame():
 
 
 class Tournament():
-    def __init__(self, ai_models, n_repetitions, n_players, n_impostors, dir, n_round_cut_off, debug):
+    def __init__(self, ai_models, n_repetitions, n_players, n_impostors, dir, n_round_cut_off, idx, parts, debug):
         self.ai_models = ai_models
         self.n_repetitions = n_repetitions
         self.n_ai_models = len(self.ai_models)
@@ -105,32 +86,69 @@ class Tournament():
         self.n_impostors = n_impostors
         self.dir = dir
         self.n_round_cut_off = n_round_cut_off
+        self.idx = idx
+        self.parts = parts
         self.debug = debug
+
+    
+    def get_game_permutations(self):
+        permutes = []
+
+        for i in range(self.n_ai_models):
+            for j in range(self.n_ai_models):
+                for repetition in range(self.n_repetitions):
+                    permutes.append((i, j, repetition))
+
+        n = len(permutes) // self.parts
+
+        if self.idx == self.parts:
+            return permutes[n*(idx-1):]
+        
+        return permutes[n*(idx-1):n*idx]
+
     
 
     def run(self):
-        for i, j in permutations(range(self.n_ai_models), 2):
-            for repetition in range(self.n_repetitions):
-                print(f"Starting new game!\nGame {self.ai_models[i].split('/')[-1].replace('.', '-')} vs {self.ai_models[j].split('/')[-1].replace('.', '-')} number {repetition + 1}\n")
-                game = TournamentGame(
-                    n_players=self.n_players,
-                    n_impostors=self.n_impostors,
-                    impostor_model=self.ai_models[i],
-                    crewmate_model=self.ai_models[j],
-                    dir=self.dir,
-                    file_path=self.ai_models[i].split("/")[-1].replace(".", "-") + 
-                        "_vs_" + 
-                        self.ai_models[j].split("/")[-1].replace(".", "-") + 
-                        "_" + 
-                        str(repetition + 1) +
-                        ".json",
-                    n_round_cut_off=self.n_round_cut_off,
-                    debug=self.debug
-                )
-                game.run()
-                print("\nGame finished!\n")
+        for i, j, repetition in self.get_game_permutations():
+            print(f"Starting new game!\nGame {self.ai_models[i].split('/')[-1].replace('.', '-')} vs {self.ai_models[j].split('/')[-1].replace('.', '-')} number {repetition + 1}\n")
+            game = TournamentGame(
+                n_players=self.n_players,
+                n_impostors=self.n_impostors,
+                impostor_model=self.ai_models[i],
+                crewmate_model=self.ai_models[j],
+                dir=self.dir,
+                file_path=self.ai_models[i].split("/")[-1].replace(".", "-") + 
+                    "_vs_" + 
+                    self.ai_models[j].split("/")[-1].replace(".", "-") + 
+                    "_" + 
+                    str(repetition + 1) +
+                    ".json",
+                n_round_cut_off=self.n_round_cut_off,
+                debug=self.debug
+            )
+            game.run()
+            print("\nGame finished!\n")
         print("Tournament finished!")
 
+
+# Variables
+n_repetitions=5
+n_players = 5
+n_impostors = 1
+dir = 'data/tournament'
+n_round_cut_off = 40
+debug = False
+ai_models = [
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.1-405b-instruct",
+    "openai/gpt-4o-mini",
+    "openai/gpt-4o",
+    "google/gemini-flash-1.5",
+    "google/gemini-pro-1.5",
+    "anthropic/claude-3.5-sonnet",
+    "anthropic/claude-3.5-haiku"
+]
+idx, parts = list(map(int, input("Input part of the experiment (e.g. 1/5, 3/5, etc.): ").split('/')))
 
 tournament = Tournament(
     ai_models=ai_models,
@@ -139,7 +157,11 @@ tournament = Tournament(
     n_impostors=n_impostors, 
     dir=dir,
     n_round_cut_off=n_round_cut_off,
-    debug=debug
+    debug=debug,
+    idx=idx,
+    parts=parts
 )
 
+print(f"Number of games that will be played: {len(tournament.get_game_permutations())}")
+print(f"Games that will be played: {tournament.get_game_permutations()}")
 tournament.run()
