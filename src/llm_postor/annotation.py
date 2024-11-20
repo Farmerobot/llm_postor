@@ -20,24 +20,25 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o-mini")
         The annotated dialogue in the specified format.
     """
 
-    llm = ChatOpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=OPENROUTER_API_KEY,
-        model=llm_model_name,
-        temperature=0.1,
-    )
-    prompt = ANNOTATION_SYSTEM_PROMPT.format()
-    response = llm.invoke([
-        SystemMessage(content=prompt),
-        HumanMessage(content=dialogue)
-    ])
-
-    # Extract the annotated text from the response
     try:
+        llm = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=OPENROUTER_API_KEY,
+            model=llm_model_name,
+            temperature=0.1,
+        )
+        prompt = ANNOTATION_SYSTEM_PROMPT.format()
+        response = llm.invoke([
+            SystemMessage(content=prompt),
+            HumanMessage(content=dialogue)
+        ])
+
+        # Extract the annotated text from the response
         annotated_text = response.content.strip()
-    except (json.JSONDecodeError, KeyError):
-        print("Error parsing response. Returning raw response.")
-        return response
+    except Exception as e:
+        print(f"Error: {e} while annotating the dialogue: {dialogue}\n", e)
+        print("Returning empty string...")
+        annotated_text = None
 
     return annotated_text
 
