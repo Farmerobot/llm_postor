@@ -210,9 +210,13 @@ class GUIHandler(BaseModel):
                             discussion_chat = "\n".join([obs[18:] for obs in player.state.observations if obs.startswith("chat")])
                         break
                 
-                print(f"Discussion chat: {discussion_chat}")
+                # print(f"Discussion chat: {discussion_chat}")
 
                 annotation_json = json.loads(annotate_dialogue(discussion_chat))
+                if not annotation_json:
+                    print(f"No annotation found for file: {file_name}")
+                    st.write(f"No annotation found for file: {file_name}")
+
                 previous_player = None
                 player_techniques = defaultdict(list)
 
