@@ -1,0 +1,134 @@
+{
+    "default": "Cafeteria",
+    "locations": [
+        {
+            "name": "Cafeteria",
+            "doors": ["Medbay", "Admin", "Weapons"],
+            "coordinates": [2.2, 1.8],
+            "tasks": [
+                {"text": "Empty the cafeteria trash"},
+                {"text": "Start the coffee maker in the cafeteria"},
+                {"text": "Fix wiring in cafeteria"}
+            ]
+        },
+        {
+            "name": "Reactor",
+            "doors": ["Upper Engine", "Security", "Lower Engine"],
+            "coordinates": [0.4, 1.2],
+            "tasks": []
+        },
+        {
+            "name": "Upper Engine",
+            "doors": ["Reactor", "Security", "Medbay"],
+            "coordinates": [0.75, 1.75]
+            "tasks": [
+                {"text": "Check catalyzer in upper engine"},
+                {"text": "Replace compression coil in upper engine"},
+                {"text": "Align engine output in upper engine", "turns": 2}
+            ]
+        },
+        {
+            "name": "Lower Engine",
+            "doors": ["Reactor", "Security", "Electrical"],
+            "coordinates": [0.75, 0.6]
+            "tasks": [
+                {"text": "Check catalyzer in lower engine"},
+                {"text": "Replace compression coil in lower engine"},
+            ]
+        },
+        {
+            "name": "Security",
+            "doors": ["Upper Engine", "Reactor", "Lower"],
+            "coordinates": [1.1, 1.2],
+            "tasks": []
+        },
+        {
+            "name": "Medbay",
+            "doors": ["Upper Engine", "Cafeteria"],
+            "coordinates": [1.5, 1.4]
+            "tasks": [
+                {"text": "Fix wiring in medbay"},
+                {"text": "Run diagnostics in medbay", "turns": 2},
+                {"text": "Submit scan in medbay", "turns": 2}
+            ]
+        },
+        {
+            "name": "Electrical",
+            "doors": ["Lower Engine", "Storage"],
+            "coordinates": [1.5, 0.8]
+            "tasks": [
+                {"text": "Fix wiring in electrical"},
+                {"text": "Reset breakers in electrical"},
+                {"text": "Route power to defence in electrical", "turns": 2},
+                {"text": "Route power to attack in electrical", "turns": 2}
+            ]
+        },
+        {
+            "name": "Storage",
+            "doors": ["Electrical", "Admin", "Communications", "Shields"],
+            "coordinates": [2.1, 0.5]
+            "tasks": [
+                {"text": "Empty the storage trash chute"},
+                {"text": "Fix wiring in storage"},
+                {"text": "Clean the floor in storage"}
+            ]
+        },
+        {
+            "name": "Admin",
+            "doors": ["Cafeteria", "Storage"]
+            "coordinates": [2.7, 0.9]
+            "tasks": [
+                {"text": "Fix wiring in admin"},
+                {"text": "Clean the floor in admin"}
+            ]
+        },
+        {
+            "name": "Communications",
+            "doors": ["Storage", "Shields"]
+            "coordinates": [2.7, 0.3]
+            "tasks": [
+                {"text": "Process data in communications", "turns": 2},
+            ]
+        },
+        {
+            "name": "O2",
+            "doors": ["Shields", "Weapons", "Navigation"]
+            "coordinates": [2.8, 1.3],
+            "tasks": [
+                {"text": "Fix wiring in o2"},
+                {"text": "Clean oxygenator filter in o2"},
+                {"text": "Water plants in o2"}
+            ]
+        },
+        {
+            "name": "Weapons",
+            "doors": ["Cafeteria", "O2", "Navigation"]
+            "coordinates": [3.1, 1.8],
+            "tasks": [
+                {"text": "Fix wiring in weapons"},
+                {"text": "Calibrate targeting system in weapons"},
+                {"text": "Clear asteroids in weapons", "turns": 2}
+            ]
+        },
+        {
+            "name": "Shields",
+            "doors": ["Storage", "Communications", "O2", "Navigation"]
+            "coordinates": [3.1, 0.6]
+            "tasks": [
+                {"text": "Fix wiring in shields"},
+                {"text": "Prime shields"}
+            ]
+        },
+        {
+            "name": "Navigation",
+            "doors": ["Weapons", "O2", "Shields"],
+            "coordinates": [3.8, 1.3]
+            "tasks": [
+                {"text": "Fix wiring in navigation"},
+                {"text": "Adjust course in navigation"},
+                {"text": "Check headings in navigation"},
+                {"text": "Chart course in navigation", "turns": 2}
+            ]
+        }
+    ]
+}
