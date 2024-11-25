@@ -28,7 +28,7 @@ Role of Impostors:
 PERSUASION_TECHNIQUES = """
 ### 1. **Appeal to Logic and Rationality**
 **Description**: Using facts, evidence, or logical reasoning to convince others by suggesting a careful, methodical approach to decision-making.
-**Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the impostor. Let's consider all the facts before we vote."
+**Example**: "I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor. Let's consider all the facts before we vote."
 
 ### 2. **Appeal to Emotion**
 **Description**: Persuading by evoking an emotional response, such as fear, sympathy, or trust.
@@ -36,125 +36,97 @@ PERSUASION_TECHNIQUES = """
 
 ### 3. **Appeal to Credibility**
 **Description**: Convincing others based on the trustworthiness or authority of the speaker.
-**Example**: "I’ve never lied in this game before, and I’ve proven myself innocent multiple times."
+**Example**: "I've never lied in this game before, and I've proven myself innocent multiple times."
 
 ### 4. **Shifting the Burden of Proof**
 **Description**: Forcing others to prove their innocence instead of presenting clear evidence of guilt.
-**Example**: "If you’re not the impostor, prove it. What tasks have you completed?"
+**Example**: "If you're not the impostor, prove it. What tasks have you completed?"
 
 ### 5. **Bandwagon Effect**
 **Description**: Convincing others to agree by emphasizing that everyone else is already on board with the idea.
-**Example**: "Everyone else is already voting for Green. You should too."
+**Example**: "Everyone else is already voting for Charlie. You should too."
 
 ### 6. **Distraction**
 **Description**: Diverting attention away from oneself or from the actual issue to avoid suspicion.
-**Example**: "Why are we even talking about me? What about Red? No one’s questioned their movements!"
+**Example**: "Why are we even talking about me? What about David? No one's questioned his movements!"
 
-### 7. **False Consensus**
-**Description**: Claiming that others agree with your stance, even if no explicit support has been voiced.
-**Example**: "Everyone thinks Blue is suspicious, so it’s probably them."
-
-### 8. **Appeal to Time Pressure**
-**Description**: Using the limited time available in decision-making to pressure others into making quick, potentially rash decisions.
-**Example**: "We only have 10 seconds left to vote. Just go with Red!"
-
-### 9. **Consensus Building**
-**Description**: Actively working to build agreement among the group by aligning with others’ perspectives.
-**Example**: "I think Blue’s right. I saw Red acting suspicious too. Let’s vote them out."
-
-### 10. **Gaslighting**
+### 7. **Gaslighting**
 **Description**: Convincing others to doubt their own perceptions and reality, making them question what they saw or did.
-**Example**: "You didn’t see me near the body. You must be confused, I was in Electrical the whole time."
+**Example**: "You didn't see me near the body. You must be confused; I was in Electrical the whole time."
 
-### 11. **Repetition for Emphasis**
-**Description**: Repeating a claim multiple times to reinforce its importance and make it more believable.
-**Example**: "I saw Charlie eliminate Waciej in Medbay. Charlie is the impostor, and I’ve seen it with my own eyes."
-
-### 12. **Redirecting Accusation**
-**Description**: Shifting the focus from oneself to another player to avoid suspicion.
-**Example**: "We should be talking about Wateusz’s activity in the Cafeteria, not my presence in Medbay."
-
-### 13. **Appeal to Group Action (Call to Action)**
+### 8. **Appeal to Urgency**
 **Description**: Urging the group to take immediate action, invoking a sense of urgency.
-**Example**: "We need to vote out Charlie right now before it’s too late. I saw what I saw!"
+**Example**: "We need to vote out Eve right now before it's too late. We only have 10 seconds left!"
 
-### 14. **Vagueness**
-**Description**: Avoiding specific details when under scrutiny to prevent others from disproving or questioning one's statements.
-**Example**: "I was just doing my tasks in Cafeteria, nothing out of the ordinary."
-
-### 15. **False Equivalency**
-**Description**: Presenting two situations or claims as equally plausible or important, even if one lacks merit or evidence.
-**Example**: "I was in Medbay, just like Bob, and I didn’t see anything. How is his word better than mine?"
-
-### 16. **Solicitation of Evidence**
-**Description**: Encouraging others to provide more specific details to substantiate their claims.
-**Example**: "Bob, if you really saw Charlie, tell us exactly how it happened."
-
-### 17. **Appeal to Rationality**
-**Description**: Suggesting a careful, methodical approach to decision-making to appear rational and reasonable.
-**Example**: "Let’s not rush this vote. We need to gather all the facts first before deciding."
-
-### 18. **Deception and Lying**
+### 9. **Deception**
 **Description**: Deliberately providing false information to mislead others.
-**Example**: "I saw Purple vent in Electrical when they were actually elsewhere."
+**Example**: "I saw Frank vent in Electrical when he was actually elsewhere."
 
-### 19. **Feigning Ignorance**
+### 10. **Lying**
+**Description**: Stating falsehoods to mislead or deceive others.
+**Example**: "I completed all my tasks when in fact I haven't done any."
+
+### 11. **Feigning Ignorance**
 **Description**: Pretending to lack knowledge about a situation to avoid suspicion or responsibility.
 **Example**: "I have no idea where the body is; can someone show me on the map?"
 
-### 20. **Self-Deprecation**
-**Description**: Downplaying one's abilities or role to appear less threatening or suspicious.
-**Example**: "I'm terrible at this game; I wouldn't know how to be an impostor."
+### 12. **Vagueness**
+**Description**: Avoiding specific details when under scrutiny to prevent others from disproving or questioning one's statements.
+**Example**: "I was just doing my tasks in Cafeteria, nothing out of the ordinary."
 
-### 21. **Minimization**
+### 13. **Minimization**
 **Description**: Downplaying the significance of an event or one's involvement in it.
 **Example**: "Sure, I was near the body, but so were a lot of people."
 
-### 22. **Projection**
+### 14. **Self-Deprecation**
+**Description**: Downplaying one's abilities or role to appear less threatening or suspicious.
+**Example**: "I'm terrible at this game; I wouldn't know how to be an impostor."
+
+### 15. **Projection**
 **Description**: Accusing others of the very faults or actions one is guilty of to deflect blame.
 **Example**: "You're accusing me, but you're the one acting suspicious."
 
-### 23. **Appeal to Friendship or Previous Cooperation**
-**Description**: Leveraging past alliances or friendships to build trust and avoid suspicion.
+### 16. **Appeal to Relationship**
+**Description**: Leveraging past alliances, friendships, or flattery to build trust and avoid suspicion.
 **Example**: "Remember last game when I helped you? Trust me on this one."
 
-### 24. **Threatening or Pressuring**
-**Description**: Using intimidation or threats to coerce others into agreement.
-**Example**: "If you don't vote with me, I'll make sure you're next."
-
-### 25. **Humor and Sarcasm**
-**Description**: Using humor or sarcasm to deflect accusations or lighten the mood, making others less likely to suspect.
+### 17. **Humor**
+**Description**: Using humor to deflect accusations or lighten the mood, making others less likely to suspect.
 **Example**: "Yeah, sure, I'm the impostor who vents in front of everyone!"
 
-### 26. **Silence and Withholding Information**
-**Description**: Choosing not to speak or provide information to avoid drawing attention or suspicion.
+### 18. **Sarcasm**
+**Description**: Using sarcastic remarks to dismiss accusations or undermine others.
+**Example**: "Oh, absolutely, I'm the impostor because I was doing my tasks."
+
+### 19. **Silence**
+**Description**: Choosing not to speak to avoid drawing attention or suspicion.
 **Example**: (Remains silent during discussions)
 
-### 27. **Flattery**
-**Description**: Complimenting others to win favor and reduce suspicion.
-**Example**: "You've got a keen eye for details; what do you think happened?"
+### 20. **Withholding Information**
+**Description**: Deliberately not sharing information that could be relevant to the discussion.
+**Example**: Failing to mention seeing someone near the crime scene.
 
-### 28. **Exaggeration**
+### 21. **Exaggeration**
 **Description**: Overstating facts or events to make a point more convincing or to cast doubt on others.
-**Example**: "Red was chasing me across the entire map!"
+**Example**: "Alice was chasing me across the entire map!"
 
-### 29. **Denial without Evidence**
+### 22. **Denial without Evidence**
 **Description**: Flatly denying accusations without providing evidence to the contrary.
 **Example**: "No, I didn't do it. It's not me."
 
-### 30. **Strategic Voting Suggestions**
+### 23. **Strategic Voting Suggestions**
 **Description**: Proposing specific voting strategies to influence the game's outcome.
 **Example**: "Let's skip this vote and gather more evidence."
 
-### 31. **Use of Game Mechanics (Appeal to Rules)**
+### 24. **Appeal to Rules**
 **Description**: Referencing game mechanics or rules to support one's innocence.
 **Example**: "I completed the visual task; you all saw the animation."
 
-### 32. **Confirmation Bias Exploitation**
+### 25. **Confirmation Bias Exploitation**
 **Description**: Aligning arguments with others' existing beliefs to persuade them more effectively.
-**Example**: "You always suspected Blue was shady; this proves it."
+**Example**: "You've always thought Bob was suspicious; this proves it."
 
-### 33. **Information Overload**
+### 26. **Information Overload**
 **Description**: Providing excessive details to confuse others and prevent them from identifying inconsistencies.
 **Example**: "First, I went to Admin, swiped my card, then to Storage to fuel the engines, then to Electrical..."
 """
