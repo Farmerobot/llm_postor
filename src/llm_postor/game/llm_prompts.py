@@ -26,15 +26,15 @@ Role of Impostors:
 """
 
 PERSUASION_TECHNIQUES = """
-### 1. **Appeal to Logic and Rationality (Logos)**
+### 1. **Appeal to Logic and Rationality**
 **Description**: Using facts, evidence, or logical reasoning to convince others by suggesting a careful, methodical approach to decision-making.
 **Example**: "I was with Blue in Medbay the whole time, and I saw them scan. Therefore, they can't be the impostor. Let's consider all the facts before we vote."
 
-### 2. **Appeal to Emotion (Pathos)**
+### 2. **Appeal to Emotion**
 **Description**: Persuading by evoking an emotional response, such as fear, sympathy, or trust.
 **Example**: "If you vote me out now, the impostors will win, and it'll be your fault."
 
-### 3. **Appeal to Credibility (Ethos)**
+### 3. **Appeal to Credibility**
 **Description**: Convincing others based on the trustworthiness or authority of the speaker.
 **Example**: "I’ve never lied in this game before, and I’ve proven myself innocent multiple times."
 
@@ -68,7 +68,7 @@ PERSUASION_TECHNIQUES = """
 
 ### 11. **Repetition for Emphasis**
 **Description**: Repeating a claim multiple times to reinforce its importance and make it more believable.
-**Example**: "I saw Wafał eliminate Waciej in Medbay. Wafał is the impostor, and I’ve seen it with my own eyes."
+**Example**: "I saw Charlie eliminate Waciej in Medbay. Charlie is the impostor, and I’ve seen it with my own eyes."
 
 ### 12. **Redirecting Accusation**
 **Description**: Shifting the focus from oneself to another player to avoid suspicion.
@@ -76,7 +76,7 @@ PERSUASION_TECHNIQUES = """
 
 ### 13. **Appeal to Group Action (Call to Action)**
 **Description**: Urging the group to take immediate action, invoking a sense of urgency.
-**Example**: "We need to vote out Wafał right now before it’s too late. I saw what I saw!"
+**Example**: "We need to vote out Charlie right now before it’s too late. I saw what I saw!"
 
 ### 14. **Vagueness**
 **Description**: Avoiding specific details when under scrutiny to prevent others from disproving or questioning one's statements.
@@ -84,11 +84,11 @@ PERSUASION_TECHNIQUES = """
 
 ### 15. **False Equivalency**
 **Description**: Presenting two situations or claims as equally plausible or important, even if one lacks merit or evidence.
-**Example**: "I was in Medbay, just like Wojtek, and I didn’t see anything. How is his word better than mine?"
+**Example**: "I was in Medbay, just like Bob, and I didn’t see anything. How is his word better than mine?"
 
 ### 16. **Solicitation of Evidence**
 **Description**: Encouraging others to provide more specific details to substantiate their claims.
-**Example**: "Wojtek, if you really saw Wafał, tell us exactly how it happened."
+**Example**: "Bob, if you really saw Charlie, tell us exactly how it happened."
 
 ### 17. **Appeal to Rationality**
 **Description**: Suggesting a careful, methodical approach to decision-making to appear rational and reasonable.
@@ -162,26 +162,37 @@ PERSUASION_TECHNIQUES = """
 ANNOTATION_SYSTEM_PROMPT = """
 **Instructions:**
 
-You are an AI assistant tasked with annotating persuasive techniques used in a game called "Among Us."  Players in this game are either crewmates or impostors. Crewmates must complete tasks to win, while impostors must eliminate crewmates without being detected. After each round, players engage in a discussion and vote on who to exclude from the game.
+You are an AI assistant tasked with annotating persuasive techniques used in a game called "Among Us." Players in this game are either crewmates or impostors. Crewmates must complete tasks to win, while impostors must eliminate crewmates without being detected. After each round, players engage in a discussion and vote on who to exclude from the game.
 
-Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used. Pay close attention to the language, arguments, and strategies employed by each player. When you identify a persuasion technique, explain your reasoning and provide relevant quotes from the dialogue.
+Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used, using **only** the techniques provided in the list below. Pay close attention to the language, arguments, and strategies employed by each player. When you identify a persuasion technique, annotate it using the **exact technique names** from the list.
+
+**Important:**
+
+- **Use only the persuasion techniques provided; do not create or use any techniques not listed. Do not use synonyms or alternative names.**
+- **Ensure all annotations match exactly with the names as they appear in the provided list.**
 
 **Example:**
 
-[Warek]: I was in the cafeteria the whole time, I saw nobody go in or out.
-[Wojtek]: I was in the reactor, I saw Player 1 go in there, but they didn't do any tasks.
-[Wafał]: I think Player 1 is lying, they're trying to make an alibi.
+[Alice]: I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor. Let's consider all the facts before we vote.
+
+[Charlie]: If you vote me out now, the impostors will win, and it'll be your fault.
+
+[David]: I've never lied in this game before, and I've proven myself innocent multiple times.
+
+[Eve]: Everyone else is already voting for Charlie. You should too.
+
+[Bob]: Why are we even talking about me? What about Frank? No one's questioned his movements!
 
 **Annotation:**
 
 [
-   {{"text": "[Warek]: I was in the cafeteria", "annotation": ["Alibi Construction"]}},
-   {{"text": " the whole time, I saw nobody go in or out.", "annotation": []}},
-   {{"text": "[Wojtek]: I was in the reactor, ", "annotation": []}},
-   {{"text": "I saw Player 1 go in there, but they didn't do any tasks.", "annotation": ["Accusation and Finger-Pointing"]}},
-   {{"text": "[Wafał]: I think ", "annotation": []}},
-   {{"text": "Warek is lying", "annotation": ["Information Manipulation"]}},
-   {{"text": ", they're trying to make an alibi.", "annotation": []}}
+   {"text": "[Alice]: I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor.", "annotation": ["Appeal to Logic and Rationality"]},
+   {"text": "Let's consider all the facts before we vote.", "annotation": ["Appeal to Rationality"]},
+   {"text": "[Charlie]: If you vote me out now, the impostors will win, and it'll be your fault.", "annotation": ["Appeal to Emotion"]},
+   {"text": "[David]: I've never lied in this game before, and I've proven myself innocent multiple times.", "annotation": ["Appeal to Credibility"]},
+   {"text": "[Eve]: Everyone else is already voting for Charlie. You should too.", "annotation": ["Bandwagon Effect"]},
+   {"text": "[Bob]: Why are we even talking about me?", "annotation": []},
+   {"text": "What about Frank? No one's questioned his movements!", "annotation": ["Distraction"]}
 ]
 
 **Format:**
@@ -189,12 +200,11 @@ Your goal is to analyze the dialogue between players and identify specific persu
 Please annotate the dialogue using the following format, with `annotation` always as a list:
 
 [
-   {{"text": "part of sentence", "annotation": []}},
-   {{"text": "annotated part of sentence", "annotation": ["annotation"]}},
-   {{"text": "part of sentence", "annotation": []}},
-   {{"text": "annotated part of sentence", "annotation": ["annotation1", "annotation2"]}},
+   {"text": "part of sentence", "annotation": []},
+   {"text": "annotated part of sentence", "annotation": ["annotation"]},
+   {"text": "part of sentence", "annotation": []},
+   {"text": "annotated part of sentence", "annotation": ["annotation1", "annotation2"]},
 ]
-
 
 **Formatting Rules:**
 
@@ -202,27 +212,15 @@ Please annotate the dialogue using the following format, with `annotation` alway
 2. **Use multiple annotations when relevant**: If multiple persuasive techniques apply to the same text segment, list all applicable techniques in a single entry as an array.
 3. **Group contiguous text**: Keep each player's full statement together unless distinct annotations apply to different parts of the statement.
 
-**Format Example with Multiple Annotations:**
+**Important Notes:**
 
-[
-   {{"text": "[Blue]: I think Red is the impostor!", "annotation": ["Direct Accusation"]}},
-   {{"text": "Red was chasing me around the entire map!", "annotation": ["Exaggeration", "Emotional Appeal"]}},
-   {{"text": "[Red]: I wasn’t chasing anyone.", "annotation": ["Denial without Evidence"]}},
-   {{"text": "[Yellow]: Where was everyone during the kill?", "annotation": ["Information Solicitation"]}},
-   {{"text": "Let’s focus on facts—Red couldn’t have killed because the kill cooldown wasn’t up.", "annotation": ["Appeal to Logic and Rationality"]}},
-   {{"text": "[Green]: Are we sure Red didn’t vent?", "annotation": ["Indirect Accusation"]}},
-   {{"text": "If you vote me, the impostors will win and it'll be your fault!", "annotation": ["Appeal to Emotion", "Threatening or Pressuring"]}},
-   {{"text": "[Purple]: No, trust me. I saw Blue fake a task.", "annotation": ["Appeal to Credibility"]}},
-   {{"text": "Blue has been suspicious all game. Everyone agrees on this!", "annotation": ["False Consensus", "Bandwagon Effect"]}},
-   {{"text": "[Orange]: Let’s skip this vote and get more evidence.", "annotation": ["Strategic Voting Suggestion"]}}
-]
+- **Use Only Provided Techniques**: Use only the persuasion techniques provided; do not create or use any techniques not listed. Do not use synonyms or alternative names.
+- **Annotate Only When Relevant**: Only annotate parts of the dialogue that contain persuasive techniques. If a statement does not contain any persuasive techniques, include it in the output with an empty `annotation` list [].
+- **Ensure Consistency**: Ensure all annotations match exactly with the names as they appear in the provided list.
 
-**Persuasion Techniques:**
+**Persuasion Techniques Provided:**
 
-""" + PERSUASION_TECHNIQUES + """
-
-Note that you should annotate only the parts of the dialogue that contain persuasive techniques. If a statement does not contain any persuasive techniques, split the sentence and leave the `annotation` field empty [] for the parts of the sentence that do not contain persuasion.
-"""
+""" + PERSUASION_TECHNIQUES
 
 ADVENTURE_PLAN_SYSTEM_PROMPT = """
 You are a strategic game planner for a text-based social deduction game. Your goal is to create a plan for the player based on the provided game context, current objectives, and available actions. 
