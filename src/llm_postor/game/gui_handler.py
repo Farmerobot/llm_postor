@@ -293,6 +293,16 @@ class GUIHandler(BaseModel):
         st.dataframe(df2)
         st.dataframe(df)  # Display DataFrame as a table
 
+        # Add CSV download button
+        st.subheader("Download Technique Usage Data")
+        csv = df.to_csv(index=True)
+        st.download_button(
+            label="Download Technique Usage CSV",
+            data=csv,
+            file_name="technique_usage.csv",
+            mime="text/csv",
+            help="Download a CSV file containing technique usage statistics for each model"
+        )
 
     def plot_token_usage(self, model_input_tokens: defaultdict[defaultdict[int]], model_output_tokens: defaultdict[defaultdict[int]]):
         """Plots input and output token usage per model."""
