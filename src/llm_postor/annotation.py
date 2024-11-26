@@ -25,7 +25,7 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4") -> str:
     """
 
     try:
-        use_azure = True
+        use_azure = False
         # Try to initialize the model
         if use_azure and AZURE_API_KEY and AZURE_ENDPOINT and AZURE_DEPLOYMENT:
             # print(f"Using Azure OpenAI model: {llm_model_name}")

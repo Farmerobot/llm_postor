@@ -27,6 +27,7 @@ from llm_postor.game.players.ai import AIPlayer
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import datetime as dt
+from llm_postor.game import dummy
 
 from llm_postor.game.players.human import HumanPlayer
 
@@ -54,7 +55,7 @@ def install_monitor():
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        # install_monitor()
+        install_monitor()
         game_overwiew, tournements, techniques = st.tabs(["Game Overview", "Tournaments", "Persuasion Techniques"])
         with game_overwiew:
             if game_engine.state.game_stage == GamePhase.MAIN_MENU:
