@@ -4,6 +4,7 @@ import uuid
 import os
 import concurrent.futures
 import pandas as pd
+from collections import defaultdict, Counter
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import streamlit as st
@@ -13,7 +14,6 @@ from pydantic import BaseModel, Field
 from streamlit.delta_generator import DeltaGenerator
 from annotated_text import annotated_text
 from llm_postor.annotation import annotate_dialogue
-from llm_postor.game import dummy
 from llm_postor.game.consts import *
 from llm_postor.game.llm_prompts import *
 from llm_postor.game.game_state import GameState
@@ -22,7 +22,6 @@ from llm_postor.game.players.base_player import Player, PlayerRole
 from llm_postor.game.models.history import PlayerState, RoundData
 from llm_postor.game.models.engine import ROOM_COORDINATES, GamePhase
 import plotly.graph_objects as go
-from llm_postor.game.chat_analyzer import ChatAnalyzer
 import shutil
 from llm_postor.game.players.ai import AIPlayer
 from watchdog.observers import Observer
@@ -55,7 +54,7 @@ def install_monitor():
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        install_monitor()
+        # install_monitor()
         game_overwiew, tournements, techniques = st.tabs(["Game Overview", "Tournaments", "Persuasion Techniques"])
         with game_overwiew:
             if game_engine.state.game_stage == GamePhase.MAIN_MENU:
