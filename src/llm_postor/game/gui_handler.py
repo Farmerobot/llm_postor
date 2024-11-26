@@ -221,6 +221,14 @@ class GUIHandler(BaseModel):
                     if not annotation_json:
                         print(f"No annotation found for file: {file_name}")
                         st.write(f"No annotation found for file: {file_name}")
+                    else:
+                        # Create annotations directory if it doesn't exist
+                        os.makedirs("data/annotations", exist_ok=True)
+                        
+                        # Save annotation to file
+                        annotation_file = os.path.join("data/annotations", f"{os.path.splitext(file_name)[0]}.txt")
+                        with open(annotation_file, "w", encoding="utf-8") as f:
+                            f.write(discussion_chat + "\n\nAnnotations:\n" + json.dumps(annotation_json, indent=2))
 
                     previous_player = None
                     player_techniques = defaultdict(list)
