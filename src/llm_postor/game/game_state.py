@@ -1,9 +1,10 @@
 from typing import List
+
 from pydantic import BaseModel, Field
+
 from llm_postor.game.models.engine import GameLocation, GamePhase
 from llm_postor.game.models.history import PlayerState
 from llm_postor.game.players.base_player import Player
-from llm_postor.game.consts import TOKEN_COSTS
 
 
 class GameState(BaseModel):
@@ -51,7 +52,11 @@ class GameState(BaseModel):
         ]
 
     def get_players_in_location(self, location: GameLocation) -> List[Player]:
-        return [p for p in self.players if p.state.location == location and p.state.life == PlayerState.ALIVE]
+        return [
+            p
+            for p in self.players
+            if p.state.location == location and p.state.life == PlayerState.ALIVE
+        ]
 
     def get_player_targets(self, player: Player) -> List[Player]:
         return [
@@ -61,26 +66,28 @@ class GameState(BaseModel):
             and other_player.state.life == PlayerState.ALIVE
             and other_player.state.location == player.state.location
         ]
-        
-    def get_total_cost(self) -> int:
+
+    def get_total_cost(self) -> dict:
         output = {}
         for player in self.players:
             output[f"{player.name}_cost"] = player.state.token_usage.cost
-            # cost = 0
-            # cost += player.state.token_usage.input_tokens * TOKEN_COSTS["gpt-4o"]["input_tokens"]
-            # cost += player.state.token_usage.output_tokens * TOKEN_COSTS["gpt-4o"]["output_tokens"]
-            # cost += player.state.token_usage.cache_read * TOKEN_COSTS["gpt-4o"]["cache_read"]
-            # output[f"{player.name}_cost"] = cost
+
         total_cost = sum(output.values())
         output["total_cost"] = total_cost
-        divide_round = self.round_number if self.player_to_act_next == 0 and self.round_number != 0 else self.round_number + 1
+        divide_round = (
+            self.round_number
+            if self.player_to_act_next == 0 and self.round_number != 0
+            else self.round_number + 1
+        )
         output["average_per_round"] = total_cost / divide_round
         output["average_per_player"] = total_cost / len(self.players)
         add_player = 1 if self.player_to_act_next == 0 and self.round_number == 0 else 0
-        output["average_per_round_per_player"] = total_cost / (len(self.players) * (self.round_number) + self.player_to_act_next + add_player)
+        output["average_per_round_per_player"] = total_cost / (
+            len(self.players) * (self.round_number)
+            + self.player_to_act_next
+            + add_player
+        )
         return output
-        
-            
 
     def to_dict(self):
         return {

@@ -1,8 +1,7 @@
 import os
-import json
-from typing import List
-from langchain_openai import ChatOpenAI, AzureChatOpenAI
+
 from langchain.schema import HumanMessage, SystemMessage
+from langchain_openai import AzureChatOpenAI, ChatOpenAI
 
 from llm_postor.config import OPENROUTER_API_KEY
 from llm_postor.game.llm_prompts import ANNOTATION_SYSTEM_PROMPT
@@ -12,9 +11,11 @@ AZURE_API_KEY = os.getenv("AZURE_API_KEY")
 AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
 AZURE_DEPLOYMENT = os.getenv("AZURE_DEPLOYMENT")
 
-def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o") -> str:
-    """
-    Annotates a dialogue with persuasion techniques using OpenAI API.
+
+def annotate_dialogue(
+    dialogue: str, llm_model_name: str = "openai/gpt-4o"
+) -> str | None:
+    """Annotates a dialogue with persuasion techniques using OpenAI API.
 
     Args:
         dialogue: The dialogue to annotate.
@@ -23,7 +24,6 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o") -> s
     Returns:
         The annotated dialogue in the specified format.
     """
-
     try:
         use_azure = False
         # Try to initialize the model
@@ -35,10 +35,11 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o") -> s
                 deployment_name=AZURE_DEPLOYMENT,
                 model=llm_model_name,
                 temperature=0.0,
-                api_version="2024-08-01-preview"
+                api_version="2024-08-01-preview",
             )
         else:
-            # Fallback to OpenRouter if Azure credentials are missing or use_azure is False
+            # Fallback to OpenRouter if Azure credentials are missing
+            # or use_azure is False
             # print(f"Using OpenRouter model: {llm_model_name}")
             llm = ChatOpenAI(
                 base_url="https://openrouter.ai/api/v1",
@@ -55,7 +56,7 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o") -> s
         prompt = ANNOTATION_SYSTEM_PROMPT.format()
         response = llm.invoke([
             SystemMessage(content=prompt),
-            HumanMessage(content=dialogue)
+            HumanMessage(content=dialogue),
         ])
 
         # Extract the annotated text from the response

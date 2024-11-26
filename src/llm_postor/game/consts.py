@@ -15,19 +15,17 @@ TOKEN_COSTS = {
         "cache_read": 0.075,
         "output_tokens": 0.6,
     },
-    
     # CLAUDE
     "anthropic/claude-3.5-sonnet": {  # 200k context
         "input_tokens": 3,
-		"cache_read": 0,
-		"output_tokens": 15,
-	},
+        "cache_read": 0,
+        "output_tokens": 15,
+    },
     "anthropic/claude-3-5-haiku": {  # 200k context
         "input_tokens": 1,
-		"cache_read": 0,
-		"output_tokens": 5,
-	},
-    
+        "cache_read": 0,
+        "output_tokens": 5,
+    },
     # GOOGLE
     "google/gemini-flash-1.5": {  # 1M context
         "input_tokens": 0.075,
@@ -39,7 +37,6 @@ TOKEN_COSTS = {
         "cache_read": 0,
         "output_tokens": 5,
     },
-    
     # META
     "meta-llama/llama-3.2-1b-instruct": {  # 131k context
         "input_tokens": 0.01,
@@ -66,7 +63,6 @@ TOKEN_COSTS = {
         "cache_read": 0,
         "output_tokens": 1.79,
     },
-    
     # MICROSOFT
     "microsoft/wizardlm-2-7b": {  # 32k context
         "input_tokens": 0.055,
@@ -78,18 +74,17 @@ TOKEN_COSTS = {
         "cache_read": 0,
         "output_tokens": 0.5,
     },
-    
-    # ROLEPLAY 
+    # ROLEPLAY
     # 1. mythomax (too small context) 4k
-    # 2. llama 8b 
-    # 3. llama 70b 
+    # 2. llama 8b
+    # 3. llama 70b
     # 4. sonnet 3.5
-    # 5. mistral-nemo 
-    # 6. wizard 8x22b 
-    # 7. wizard 2-7b 
+    # 5. mistral-nemo
+    # 6. wizard 8x22b
+    # 7. wizard 2-7b
     # 8. nous hermes 405b
     # ?. qwen eva
-    "mistralai/mistral-nemo": { # 128k context
+    "mistralai/mistral-nemo": {  # 128k context
         "input_tokens": 0.15,
         "cache_read": 0,
         "output_tokens": 0.15,

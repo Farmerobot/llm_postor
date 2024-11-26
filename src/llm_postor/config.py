@@ -1,4 +1,5 @@
 import os
+
 from dotenv import load_dotenv
 
 # Always load from .env first, this will override any existing environment variables
@@ -12,8 +13,9 @@ if not OPENROUTER_API_KEY:
         "API key is missing. Please set OPENROUTER_API_KEY "
         "in your environment or in a .env file in the project root."
     )
-    
-# if src/llm_postor/game/dummy.py does not exist, create it. This is for abusing streamlit refresh when game_state.json changes
+
+# if src/llm_postor/game/dummy.py does not exist, create it.
+# This is for abusing streamlit refresh when game_state.json changes
 if not os.path.exists("src/llm_postor/game/dummy.py"):
     with open("src/llm_postor/game/dummy.py", "w") as f:
         f.write("timestamp = '2024-11-15 00:20:17.946790'")

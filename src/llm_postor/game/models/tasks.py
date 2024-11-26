@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
+
 from pydantic import BaseModel
 
 from llm_postor.game.models.engine import GameLocation
+
 
 class Task(BaseModel, ABC):
     name: str
@@ -41,4 +43,4 @@ class LongTask(Task):
         return f"Task {self.name} requires {self.turns_left} more turns to complete."
 
     def __str__(self):
-        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name} | {self.turns_left} turns left to finish"
+        return f"{'[DONE]' if self.completed else '[TODO]'} | {self.name} | {self.turns_left} turns left to finish"  # noqa: E501

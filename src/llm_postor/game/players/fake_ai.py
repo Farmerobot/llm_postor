@@ -1,12 +1,12 @@
 import random
 from typing import List
-from pydantic import Field
 
-from llm_postor.game.players.base_player import Player, PlayerRole
+from llm_postor.game.players.base_player import Player
+
 
 class FakeAIPlayer(Player):
     llm_model_name: str
-    
+
     def prompt_action(self, actions: List[str]) -> int:
         random_action = random.randint(0, len(actions) - 1)
         self.state.actions = actions

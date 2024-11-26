@@ -1,5 +1,6 @@
-from pydantic import Field
 from openai import BaseModel
+from pydantic import Field
+
 
 class UsageMetadata(BaseModel):
     input_tokens: int = Field(default=0)
@@ -7,7 +8,7 @@ class UsageMetadata(BaseModel):
     total_tokens: int = Field(default=0)
     cache_read: int = Field(default=0)
     cost: float = Field(default=0.0)
-    
+
     def to_dict(self):
         return {
             "input_tokens": self.input_tokens,

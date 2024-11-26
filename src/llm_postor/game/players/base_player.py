@@ -1,26 +1,29 @@
 import copy
 from abc import ABC, abstractmethod
 from enum import Enum
-from typing import Dict, List, Optional, Any
-from pydantic import BaseModel, Field, ConfigDict
+from typing import Any, List, Optional
 
-from llm_postor.game.models.engine import (
-    GamePhase,
-    GameLocation,
-)
+from pydantic import BaseModel, ConfigDict, Field
+
 import llm_postor.game.consts as game_consts
-from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
-from llm_postor.game.models.tasks import Task
-from llm_postor.game.models.history import PlayerHistory, RoundData
 from llm_postor.game.agents.adventure_agent import AdventureAgent
 from llm_postor.game.agents.discussion_agent import DiscussionAgent
 from llm_postor.game.agents.voting_agent import VotingAgent
+from llm_postor.game.models.engine import (
+    GameLocation,
+    GamePhase,
+)
+from llm_postor.game.models.history import PlayerHistory, RoundData
+from llm_postor.game.models.tasks import Task
+from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
+
 
 class PlayerRole(str, Enum):
     CREWMATE = "Crewmate"
     IMPOSTOR = "Impostor"
     GHOST = "Ghost"
     UNKNOWN = "Unknown"
+
 
 class Player(BaseModel, ABC):
     name: str
@@ -33,30 +36,37 @@ class Player(BaseModel, ABC):
     discussion_agent: Optional[DiscussionAgent] = None
     voting_agent: Optional[VotingAgent] = None
     llm_model_name: Optional[str] = None
-    
+
     model_config = ConfigDict(validate_assignment=True)
-    
+
     def __init__(self, **data: Any):
         super().__init__(**data)
         self.set_role(self.role)
-    
+
     def set_role(self, role: PlayerRole) -> None:
         self.role = role
         if role == PlayerRole.IMPOSTOR:
             self.is_impostor = True
             # self.kill_cooldown = game_consts.IMPOSTOR_COOLDOWN
-            if self.state.tasks != get_impostor_tasks(): self.state.tasks = get_impostor_tasks()
-            if self.adventure_agent: self.adventure_agent.role = PlayerRole.IMPOSTOR
-            if self.discussion_agent: self.discussion_agent.role = PlayerRole.IMPOSTOR
-            if self.voting_agent: self.voting_agent.role = PlayerRole.IMPOSTOR
+            if self.state.tasks != get_impostor_tasks():
+                self.state.tasks = get_impostor_tasks()
+            if self.adventure_agent:
+                self.adventure_agent.role = PlayerRole.IMPOSTOR
+            if self.discussion_agent:
+                self.discussion_agent.role = PlayerRole.IMPOSTOR
+            if self.voting_agent:
+                self.voting_agent.role = PlayerRole.IMPOSTOR
         else:
             self.is_impostor = False
             # self.kill_cooldown = 0
-            if not self.state.tasks: self.state.tasks=get_random_tasks()
-            if self.adventure_agent: self.adventure_agent.role = PlayerRole.CREWMATE
-            if self.discussion_agent: self.discussion_agent.role = PlayerRole.CREWMATE
-            if self.voting_agent: self.voting_agent.role = PlayerRole.CREWMATE
-
+            if not self.state.tasks:
+                self.state.tasks = get_random_tasks()
+            if self.adventure_agent:
+                self.adventure_agent.role = PlayerRole.CREWMATE
+            if self.discussion_agent:
+                self.discussion_agent.role = PlayerRole.CREWMATE
+            if self.voting_agent:
+                self.voting_agent.role = PlayerRole.CREWMATE
 
     def set_stage(self, stage: GamePhase) -> None:
         self.state.stage = stage
@@ -66,7 +76,7 @@ class Player(BaseModel, ABC):
     def get_task_to_complete(self) -> List[Task]:
         return [task for task in self.state.tasks if not task.completed]
 
-    def log_state_new_round(self, prev_round_game_stage) -> None:
+    def log_state_new_round(self, prev_round_game_stage: GamePhase) -> None:
         # Before creating new state, update the game_stage in each players' history
         self.state.stage = prev_round_game_stage
         # Create a deep copy of the state before adding it to the history
@@ -96,8 +106,11 @@ class Player(BaseModel, ABC):
         pass
 
     def get_chat_messages(self) -> List[str]:
-        """
-        :return: A string containing all the messages from the current round (observations with "chat" begginings)
+        """Contains all the messages from the current round
+        (observations with "chat" beginnings).
+
+        Returns:
+            Conversation in a list of strings
         """
         return [obs[18:] for obs in self.state.chat_messages if obs.startswith("chat")]
 

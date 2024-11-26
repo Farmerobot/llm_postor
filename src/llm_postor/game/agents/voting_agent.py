@@ -1,15 +1,15 @@
-import re
-from typing import List, Any
+from typing import List
 
-from pydantic import Field
-from .base_agent import Agent
 from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
+from pydantic import Field
 
-from llm_postor.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
 from llm_postor.config import OPENROUTER_API_KEY
+from llm_postor.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
 from llm_postor.game.utils import check_action_valid
-from llm_postor.game.models.usage_metadata import UsageMetadata
+
+from .base_agent import Agent
+
 
 class VotingAgent(Agent):
     llm: ChatOpenAI = None
@@ -23,12 +23,15 @@ class VotingAgent(Agent):
 
     def init_llm(self):
         if not OPENROUTER_API_KEY:
-            raise ValueError("Missing OpenRouter API key. Please set OPENROUTER_API_KEY in your environment.")
+            raise ValueError(
+                "Missing OpenRouter API key. "
+                "Please set OPENROUTER_API_KEY in your environment."
+            )
         self.llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
             model=self.llm_model_name,
-            temperature=0
+            temperature=0,
         )
 
     def act(
@@ -49,18 +52,19 @@ class VotingAgent(Agent):
             discussion_log=discussion_log,
             history=self.history,
             actions="\n".join(f"- {action}" for action in self.available_actions),
-            dead_players=", ".join(dead_players)
+            dead_players=", ".join(dead_players),
         )
 
         # print("\nAction prompt voting:", user_prompt)
         chosen_action = self.llm.invoke([
             SystemMessage(content=system_prompt),
-            HumanMessage(content=user_prompt)
+            HumanMessage(content=user_prompt),
         ])
         # print("\nVoted for:", chosen_action.content)
         self.add_token_usage(chosen_action.usage_metadata)
         chosen_action_str = chosen_action.content.strip()
         self.responses.append(chosen_action_str)
-        vote_idx, _ = check_action_valid(self.available_actions, chosen_action_str, self.player_name)
+        vote_idx, _ = check_action_valid(
+            self.available_actions, chosen_action_str, self.player_name
+        )
         return [user_prompt], vote_idx
-

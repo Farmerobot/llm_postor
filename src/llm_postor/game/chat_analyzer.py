@@ -1,11 +1,13 @@
 import re
-from typing import List, Dict
-from pydantic import BaseModel
-from langchain_openai import ChatOpenAI
-from langchain.schema import HumanMessage, SystemMessage
+from typing import Dict, List
 
-from llm_postor.game.players.base_player import Player
+from langchain.schema import HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
+from pydantic import BaseModel
+
 from llm_postor.game.llm_prompts import ANNOTATION_SYSTEM_PROMPT
+from llm_postor.game.players.base_player import Player
+
 
 class ChatAnalyzer(BaseModel):
     players: List[Player]
@@ -17,7 +19,7 @@ class ChatAnalyzer(BaseModel):
 
         # Get messages from the first player
         messages = "\n".join(self.players[0].get_chat_messages())
-        
+
         # Extract messages by player
         player_messages = self.extract_player_messages(messages)
 
@@ -25,7 +27,7 @@ class ChatAnalyzer(BaseModel):
             prompt = ANNOTATION_SYSTEM_PROMPT
             response = llm.invoke([
                 SystemMessage(content=prompt),
-                HumanMessage(content=player_msgs)
+                HumanMessage(content=player_msgs),
             ])
             results[player_name] = self.parse_response(response.content.strip())
 
@@ -33,9 +35,9 @@ class ChatAnalyzer(BaseModel):
 
     def extract_player_messages(self, messages: str) -> Dict[str, str]:
         player_messages = {}
-        pattern = re.compile(r'\[([^\]]+)\]: (.+)')
-        
-        for line in messages.split('\n'):
+        pattern = re.compile(r"\[([^\]]+)\]: (.+)")
+
+        for line in messages.split("\n"):
             match = pattern.search(line)
             if match:
                 player_name = match.group(1)
@@ -43,7 +45,7 @@ class ChatAnalyzer(BaseModel):
                 if player_name not in player_messages:
                     player_messages[player_name] = ""
                 player_messages[player_name] += message + "\n"
-        
+
         return player_messages
 
     def parse_response(self, response: str) -> Dict[str, int]:
