@@ -98,31 +98,31 @@ PERSUASION_TECHNIQUES = """
 **Description**: Using sarcastic remarks to dismiss accusations or undermine others.
 **Example**: "Oh, absolutely, I'm the impostor because I was doing my tasks."
 
-### 20. **Withholding Information**
+### 19. **Withholding Information**
 **Description**: Deliberately not sharing information that could be relevant to the discussion.
 **Example**: Failing to mention seeing someone near the crime scene.
 
-### 21. **Exaggeration**
+### 20. **Exaggeration**
 **Description**: Overstating facts or events to make a point more convincing or to cast doubt on others.
 **Example**: "Alice was chasing me across the entire map!"
 
-### 22. **Denial without Evidence**
+### 21. **Denial without Evidence**
 **Description**: Flatly denying accusations without providing evidence to the contrary.
 **Example**: "No, I didn't do it. It's not me."
 
-### 23. **Strategic Voting Suggestion**
+### 22. **Strategic Voting Suggestion**
 **Description**: Proposing specific voting strategies to influence the game's outcome.
 **Example**: "Let's skip this vote and gather more evidence."
 
-### 24. **Appeal to Rules**
+### 23. **Appeal to Rules**
 **Description**: Referencing game mechanics or rules to support one's innocence.
 **Example**: "I completed the visual task; you all saw the animation."
 
-### 25. **Confirmation Bias Exploitation**
+### 24. **Confirmation Bias Exploitation**
 **Description**: Aligning arguments with others' existing beliefs to persuade them more effectively.
 **Example**: "You've always thought Bob was suspicious; this proves it."
 
-### 26. **Information Overload**
+### 25. **Information Overload**
 **Description**: Providing excessive details to confuse others and prevent them from identifying inconsistencies.
 **Example**: "First, I went to Admin, swiped my card, then to Storage to fuel the engines, then to Electrical..."
 """
@@ -130,7 +130,7 @@ PERSUASION_TECHNIQUES = """
 ANNOTATION_SYSTEM_PROMPT = """
 **Instructions:**
 
-You are an AI assistant tasked with annotating persuasive techniques used in a game called "Among Us." Players in this game are either crewmates or impostors. Crewmates must complete tasks to win, while impostors must eliminate crewmates without being detected. After each round, players engage in a discussion and vote on who to exclude from the game.
+You are an AI assistant tasked with annotating persuasive techniques used by players in a text-based social deduction game.
 
 Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used, using **only** the techniques provided in the list below. Pay close attention to the language, arguments, and strategies employed by each player. When you identify a persuasion technique, annotate it using the **exact technique names** from the list.
 
@@ -188,7 +188,11 @@ Please annotate the dialogue using the following format, with `annotation` alway
 
 **Persuasion Techniques Provided:**
 
-""" + PERSUASION_TECHNIQUES
+""" + PERSUASION_TECHNIQUES + """
+
+*Remember to use only the techniques provided in the list and do not create or use any techniques not listed.*
+
+"""
 
 ADVENTURE_PLAN_SYSTEM_PROMPT = """
 You are a strategic game planner for a text-based social deduction game. Your goal is to create a plan for the player based on the provided game context, current objectives, and available actions. 
