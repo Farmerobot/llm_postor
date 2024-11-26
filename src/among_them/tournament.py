@@ -1,9 +1,9 @@
 import os
 from random import shuffle
 
-from llm_postor.game.game_engine import GameEngine
-from llm_postor.game.models.engine import GamePhase
-from llm_postor.game.players.ai import AIPlayer
+from among_them.game.game_engine import GameEngine
+from among_them.game.models.engine import GamePhase
+from among_them.game.players.ai import AIPlayer
 
 
 class TournamentGame:

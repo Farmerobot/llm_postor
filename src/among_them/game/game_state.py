@@ -2,9 +2,9 @@ from typing import List
 
 from pydantic import BaseModel, Field
 
-from llm_postor.game.models.engine import GameLocation, GamePhase
-from llm_postor.game.models.history import PlayerState
-from llm_postor.game.players.base_player import Player
+from among_them.game.models.engine import GameLocation, GamePhase
+from among_them.game.models.history import PlayerState
+from among_them.game.players.base_player import Player
 
 
 class GameState(BaseModel):

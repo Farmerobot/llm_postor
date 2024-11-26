@@ -19,9 +19,9 @@ from streamlit.delta_generator import DeltaGenerator
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-from llm_postor.annotation import annotate_dialogue
-from llm_postor.game import dummy
-from llm_postor.game.consts import (
+from among_them.annotation import annotate_dialogue
+from among_them.game import dummy
+from among_them.game.consts import (
     IMPOSTOR_COOLDOWN,
     NUM_CHATS,
     NUM_LONG_TASKS,
@@ -29,9 +29,9 @@ from llm_postor.game.consts import (
     STATE_FILE,
     TOKEN_COSTS,
 )
-from llm_postor.game.game_engine import GameEngine
-from llm_postor.game.game_state import GameState
-from llm_postor.game.llm_prompts import (
+from among_them.game.game_engine import GameEngine
+from among_them.game.game_state import GameState
+from among_them.game.llm_prompts import (
     ADVENTURE_ACTION_SYSTEM_PROMPT,
     ADVENTURE_ACTION_USER_PROMPT,
     ADVENTURE_PLAN_SYSTEM_PROMPT,
@@ -45,10 +45,10 @@ from llm_postor.game.llm_prompts import (
     VOTING_SYSTEM_PROMPT,
     VOTING_USER_PROMPT,
 )
-from llm_postor.game.models.engine import ROOM_COORDINATES, GamePhase
-from llm_postor.game.models.history import PlayerState, RoundData
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.base_player import Player, PlayerRole
+from among_them.game.models.engine import ROOM_COORDINATES, GamePhase
+from among_them.game.models.history import PlayerState, RoundData
+from among_them.game.players.ai import AIPlayer
+from among_them.game.players.base_player import Player, PlayerRole
 
 
 class Watchdog(FileSystemEventHandler):
@@ -1132,7 +1132,7 @@ class GUIHandler(BaseModel):
         )
         if st.button("Save Settings"):
             # Here GAME_CONTEXT is integrated into the prompts
-            with open("src/llm_postor/game/llm_prompts.py", "w") as f:
+            with open("src/among_them/game/llm_prompts.py", "w") as f:
                 f.write(
                     f'ANNOTATION_SYSTEM_PROMPT = """{annotation_system_prompt}"""\n\n'
                 )
@@ -1160,7 +1160,7 @@ class GUIHandler(BaseModel):
                 )
                 f.write(f'VOTING_SYSTEM_PROMPT = """{voting_system_prompt}"""\n\n')
                 f.write(f'VOTING_USER_PROMPT = """{voting_user_prompt}"""\n')
-            with open("src/llm_postor/game/consts.py", "w") as f:
+            with open("src/among_them/game/consts.py", "w") as f:
                 f.write(f"NUM_SHORT_TASKS = {num_short_tasks}\n")
                 f.write(f"NUM_LONG_TASKS = {num_long_tasks}\n")
                 f.write(f"NUM_CHATS = {num_chats}\n")

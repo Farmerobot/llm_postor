@@ -3,11 +3,11 @@ from typing import Optional, Self, Union
 
 from pydantic import BaseModel, Field, model_validator
 
-from llm_postor.game.consts import IMPOSTOR_COOLDOWN
-from llm_postor.game.models.engine import GameLocation
-from llm_postor.game.models.history import PlayerState
-from llm_postor.game.models.tasks import Task
-from llm_postor.game.players.base_player import Player, PlayerRole
+from among_them.game.consts import IMPOSTOR_COOLDOWN
+from among_them.game.models.engine import GameLocation
+from among_them.game.models.history import PlayerState
+from among_them.game.models.tasks import Task
+from among_them.game.players.base_player import Player, PlayerRole
 
 
 class GameActionType(IntEnum):

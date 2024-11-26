@@ -1,7 +1,7 @@
-from llm_postor.game.consts import NUM_LONG_TASKS, NUM_SHORT_TASKS
-from llm_postor.game.models.engine import GameLocation
-from llm_postor.game.models.tasks import LongTask, ShortTask
-from llm_postor.game.utils import (
+from among_them.game.consts import NUM_LONG_TASKS, NUM_SHORT_TASKS
+from among_them.game.models.engine import GameLocation
+from among_them.game.models.tasks import LongTask, ShortTask
+from among_them.game.utils import (
     get_impostor_tasks,
     get_long_tasks,
     get_random_tasks,

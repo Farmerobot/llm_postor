@@ -2,9 +2,9 @@ import re
 from random import sample
 from typing import List
 
-from llm_postor.game import consts
-from llm_postor.game.models.engine import GameLocation
-from llm_postor.game.models.tasks import LongTask, ShortTask, Task
+from among_them.game import consts
+from among_them.game.models.engine import GameLocation
+from among_them.game.models.tasks import LongTask, ShortTask, Task
 
 
 def get_random_tasks() -> list[Task]:

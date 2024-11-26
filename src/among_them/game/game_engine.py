@@ -5,21 +5,21 @@ from typing import List
 
 from pydantic import BaseModel, Field
 
-from llm_postor.game import consts as game_consts
-from llm_postor.game.game_state import GameState
-from llm_postor.game.models.action import GameAction, GameActionType
-from llm_postor.game.models.engine import (
+from among_them.game import consts as game_consts
+from among_them.game.game_state import GameState
+from among_them.game.models.action import GameAction, GameActionType
+from among_them.game.models.engine import (
     DOORS,
     GameLocation,
     GamePhase,
 )
-from llm_postor.game.models.history import PlayerState
-from llm_postor.game.models.tasks import LongTask, ShortTask, Task
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.base_player import Player, PlayerRole
-from llm_postor.game.players.fake_ai import FakeAIPlayer
-from llm_postor.game.players.human import HumanPlayer
-from llm_postor.game.utils import get_short_tasks_by_loc
+from among_them.game.models.history import PlayerState
+from among_them.game.models.tasks import LongTask, ShortTask, Task
+from among_them.game.players.ai import AIPlayer
+from among_them.game.players.base_player import Player, PlayerRole
+from among_them.game.players.fake_ai import FakeAIPlayer
+from among_them.game.players.human import HumanPlayer
+from among_them.game.utils import get_short_tasks_by_loc
 
 
 class GameEngine(BaseModel):

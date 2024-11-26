@@ -1,11 +1,11 @@
 import copy
 from unittest.mock import MagicMock
 
-from llm_postor.game.models.engine import GameLocation, GamePhase
-from llm_postor.game.models.tasks import ShortTask
-from llm_postor.game.players.base_player import Player, PlayerRole
-from llm_postor.game.players.human import HumanPlayer
-from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
+from among_them.game.models.engine import GameLocation, GamePhase
+from among_them.game.models.tasks import ShortTask
+from among_them.game.players.base_player import Player, PlayerRole
+from among_them.game.players.human import HumanPlayer
+from among_them.game.utils import get_impostor_tasks, get_random_tasks
 
 
 def create_mock_task(

@@ -1,7 +1,7 @@
 import streamlit as st
 
-from llm_postor.game.game_engine import GameEngine
-from llm_postor.game.gui_handler import GUIHandler
+from among_them.game.game_engine import GameEngine
+from among_them.game.gui_handler import GUIHandler
 
 # To run this script, you need to
 # `poetry install`
@@ -11,7 +11,7 @@ from llm_postor.game.gui_handler import GUIHandler
 
 def main():
     gui_handler = GUIHandler()
-    st.set_page_config(page_title="Among Us Game - LLMPostor", layout="wide")
+    st.set_page_config(page_title="Among Them", layout="wide")
     game_engine = GameEngine()
 
     game_engine.load_game()

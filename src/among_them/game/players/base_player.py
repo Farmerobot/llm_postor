@@ -5,17 +5,17 @@ from typing import Any, List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-import llm_postor.game.consts as game_consts
-from llm_postor.game.agents.adventure_agent import AdventureAgent
-from llm_postor.game.agents.discussion_agent import DiscussionAgent
-from llm_postor.game.agents.voting_agent import VotingAgent
-from llm_postor.game.models.engine import (
+import among_them.game.consts as game_consts
+from among_them.game.agents.adventure_agent import AdventureAgent
+from among_them.game.agents.discussion_agent import DiscussionAgent
+from among_them.game.agents.voting_agent import VotingAgent
+from among_them.game.models.engine import (
     GameLocation,
     GamePhase,
 )
-from llm_postor.game.models.history import PlayerHistory, RoundData
-from llm_postor.game.models.tasks import Task
-from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
+from among_them.game.models.history import PlayerHistory, RoundData
+from among_them.game.models.tasks import Task
+from among_them.game.utils import get_impostor_tasks, get_random_tasks
 
 
 class PlayerRole(str, Enum):

@@ -1,9 +1,9 @@
 import pytest
 
-from llm_postor.game.game_engine import GameEngine
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.base_player import Player, PlayerRole
-from llm_postor.game.players.human import HumanPlayer
+from among_them.game.game_engine import GameEngine
+from among_them.game.players.ai import AIPlayer
+from among_them.game.players.base_player import Player, PlayerRole
+from among_them.game.players.human import HumanPlayer
 
 
 def test_load_human_players():
