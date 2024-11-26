@@ -12,7 +12,7 @@ AZURE_API_KEY = os.getenv("AZURE_API_KEY")
 AZURE_ENDPOINT = os.getenv("AZURE_ENDPOINT")
 AZURE_DEPLOYMENT = os.getenv("AZURE_DEPLOYMENT")
 
-def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4") -> str:
+def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o") -> str:
     """
     Annotates a dialogue with persuasion techniques using OpenAI API.
 
@@ -43,7 +43,7 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "gpt-4") -> str:
             llm = ChatOpenAI(
                 base_url="https://openrouter.ai/api/v1",
                 api_key=OPENROUTER_API_KEY,
-                model=llm_model_name if not use_azure else "openai/gpt-4o",
+                model=llm_model_name,
                 temperature=0.0,
             )
     except Exception as e:
