@@ -1,0 +1,244 @@
+[Alice]: I was emptying the trash in the cafeteria, so I didn't see anything, but has anyone confirmed Erin's alibi?
+[Erin]: I can confirm Alice was indeed emptying the trash in the cafeteria while I was there, and it seemed like everyone was focused on tasks.
+[Bob]: I was in the Cafeteria and saw Alice emptying the trash, so I can confirm her alibi, but we should consider if anyone not in the Cafeteria could be suspicious.
+[Dave]: I was in the Cafeteria with Alice, Charlie, Erin, and Bob, and we all seemed to be focused on completing tasks; it might be useful to hear from anyone who wasn't there—where were you, and what were you doing?
+[Alice]: Dave's right, we need to know everyone's location, especially Green's, since they haven't spoken up yet about where they were.
+[Erin]: It's important to hear from Green about their location and actions during the time we were all in the cafeteria to help us identify any suspicious activity.
+[Bob]: We really need Green to share their location and actions during the time we were all in the Cafeteria, as their silence is concerning.
+[Dave]: Dave: Since Green hasn't responded yet, it's crucial for them to explain their whereabouts and actions during the time of the incident to clear any suspicions.
+[Alice]: Green's silence is definitely concerning, and for the sake of the group, we need to consider the possibility of sabotage if they don't speak up soon.
+[Erin]: If Green continues to remain silent, we should seriously consider them as a suspect for the next vote, given their lack of response and absence from the Cafeteria.
+[Bob]: Let's make sure everyone shares their remaining tasks so we can strategize completing them efficiently while we wait for Green to explain their actions.
+[Dave]: I agree with Bob; sharing our remaining tasks will help organize our efforts and ensure we complete them efficiently, so let's list them out while we wait for Green to respond.
+[Alice]: My remaining tasks are download data and swipe card, both in admin, so I'll be heading there now if anyone wants to join me.
+[Erin]: Let's focus on sharing our remaining tasks and pairing up for safety, and I'll be heading to the medbay for a scan if anyone wants to join me while we wait for Green's response.
+[Bob]: [Since Green hasn't responded, we should consider focusing our vote on them due to their silence, and I'll be heading to Admin next for my tasks if anyone wants to join me.]
+[Dave]: [It's concerning that Green hasn't responded yet, so let's keep an eye on their actions and consider voting for them if they remain silent, while I head to Weapons to fix the wiring—anyone want to join for safety?]
+[Alice]: Bob, I'm heading to Admin now; let's confirm each other's alibis and finish those tasks together for safety.
+[Erin]: [Since Green's silence is increasingly suspicious, let's plan to pair up for our tasks and consider voting for Green if they don't provide an explanation soon.]
+[Bob]: We should finalize our task list and pair up to ensure safety, especially since Green's silence remains a concern, and I'll join Alice in Admin to complete tasks together.
+[Dave]: [Given Green's continued silence, it's wise to pair up for tasks for safety, and I'll be in Weapons fixing wiring if anyone wants to join me.]
+[Alice]: Bob, I'm heading to Admin now, let's stick together and watch each other's backs while we complete our tasks.
+[Erin]: Let's continue pairing up for tasks to ensure safety and consider voting for Green if they remain silent, as their lack of response is highly suspicious.
+[Dave]: It's crucial we finalize our task list and pair up for safety, especially with Green's silence, and I'll be in Weapons fixing wiring if anyone wants to join me.
+[Alice]: Bob, I'm already in Admin, where are you?
+[Erin]: Let's make sure to finalize our task pairs and keep an eye on Green, as their silence is suspicious, and I'll be heading to the medbay for a scan if anyone wants to join me for safety.
+[Dave]: Given Green's silence and the fact that I was alone in Weapons, it might be wise to consider voting them out if they don't speak up soon, and let's ensure we pair up for our tasks to stay safe.
+[Alice]: Bob, I'm in Admin now; are you here yet, or did you get sidetracked?
+[Erin]: [Let's ensure we finalize our task list and pair up for safety, and if Green continues to remain silent, we should seriously consider voting them out as their lack of response is highly suspicious.]
+[Dave]: It's important to keep pairing up for tasks to ensure safety, and if Green doesn't provide an explanation soon, voting them out might be necessary.
+[Alice]: Bob, I'm in Admin and still don't see you; are you sure you're not mistaken about coming here?
+[Erin]: [Let's focus on pairing up for tasks to ensure safety, and if Green remains silent, we should strongly consider voting them out due to their suspicious lack of communication.]
+[Dave]: With Green's continued silence, it seems increasingly suspicious, so let's seriously consider voting them out if they don't provide an explanation soon, and I'll be in Weapons fixing wiring if anyone wants to join me for safety.
+[Alice]: Bob, I'm starting to get worried; I've been in Admin for a while now, and you still haven't shown up.
+[Erin]: It seems like Bob hasn't shown up in Admin as he said he would, which is concerning, so we should consider both Bob and Green as potential suspects due to their discrepancies and silence.
+[Dave]: Given that Bob hasn't shown up in Admin and Green remains silent, we should focus on voting one of them out as both are acting suspiciously, and I'll still be in Weapons fixing wiring if anyone wants to join me for safety.
+
+Annotations:
+[
+  {
+    "text": "[Alice]: I was emptying the trash in the cafeteria, so I didn't see anything, but has anyone confirmed Erin's alibi?",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: I can confirm Alice was indeed emptying the trash in the cafeteria while I was there, and it seemed like everyone was focused on tasks.",
+    "annotation": [
+      "Appeal to Credibility"
+    ]
+  },
+  {
+    "text": "[Bob]: I was in the Cafeteria and saw Alice emptying the trash, so I can confirm her alibi, but we should consider if anyone not in the Cafeteria could be suspicious.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: I was in the Cafeteria with Alice, Charlie, Erin, and Bob, and we all seemed to be focused on completing tasks; it might be useful to hear from anyone who wasn't there\u2014where were you, and what were you doing?",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Alice]: Dave's right, we need to know everyone's location, especially Green's, since they haven't spoken up yet about where they were.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Erin]: It's important to hear from Green about their location and actions during the time we were all in the cafeteria to help us identify any suspicious activity.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Bob]: We really need Green to share their location and actions during the time we were all in the Cafeteria, as their silence is concerning.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: Since Green hasn't responded yet, it's crucial for them to explain their whereabouts and actions during the time of the incident to clear any suspicions.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Alice]: Green's silence is definitely concerning, and for the sake of the group, we need to consider the possibility of sabotage if they don't speak up soon.",
+    "annotation": [
+      "Appeal to Emotion"
+    ]
+  },
+  {
+    "text": "[Erin]: If Green continues to remain silent, we should seriously consider them as a suspect for the next vote, given their lack of response and absence from the Cafeteria.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Bob]: Let's make sure everyone shares their remaining tasks so we can strategize completing them efficiently while we wait for Green to explain their actions.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: I agree with Bob; sharing our remaining tasks will help organize our efforts and ensure we complete them efficiently, so let's list them out while we wait for Green to respond.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: My remaining tasks are download data and swipe card, both in admin, so I'll be heading there now if anyone wants to join me.",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: Let's focus on sharing our remaining tasks and pairing up for safety, and I'll be heading to the medbay for a scan if anyone wants to join me while we wait for Green's response.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Bob]: Since Green hasn't responded, we should consider focusing our vote on them due to their silence, and I'll be heading to Admin next for my tasks if anyone wants to join me.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: It's concerning that Green hasn't responded yet, so let's keep an eye on their actions and consider voting for them if they remain silent, while I head to Weapons to fix the wiring\u2014anyone want to join for safety?",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm heading to Admin now; let's confirm each other's alibis and finish those tasks together for safety.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Erin]: Since Green's silence is increasingly suspicious, let's plan to pair up for our tasks and consider voting for Green if they don't provide an explanation soon.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Bob]: We should finalize our task list and pair up to ensure safety, especially since Green's silence remains a concern, and I'll join Alice in Admin to complete tasks together.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: Given Green's continued silence, it's wise to pair up for tasks for safety, and I'll be in Weapons fixing wiring if anyone wants to join me.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm heading to Admin now, let's stick together and watch each other's backs while we complete our tasks.",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: Let's continue pairing up for tasks to ensure safety and consider voting for Green if they remain silent, as their lack of response is highly suspicious.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: It's crucial we finalize our task list and pair up for safety, especially with Green's silence, and I'll be in Weapons fixing wiring if anyone wants to join me.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm already in Admin, where are you?",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: Let's make sure to finalize our task pairs and keep an eye on Green, as their silence is suspicious, and I'll be heading to the medbay for a scan if anyone wants to join me for safety.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: Given Green's silence and the fact that I was alone in Weapons, it might be wise to consider voting them out if they don't speak up soon, and let's ensure we pair up for our tasks to stay safe.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm in Admin now; are you here yet, or did you get sidetracked?",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: Let's ensure we finalize our task list and pair up for safety, and if Green continues to remain silent, we should seriously consider voting them out as their lack of response is highly suspicious.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: It's important to keep pairing up for tasks to ensure safety, and if Green doesn't provide an explanation soon, voting them out might be necessary.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm in Admin and still don't see you; are you sure you're not mistaken about coming here?",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: Let's focus on pairing up for tasks to ensure safety, and if Green remains silent, we should strongly consider voting them out due to their suspicious lack of communication.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: With Green's continued silence, it seems increasingly suspicious, so let's seriously consider voting them out if they don't provide an explanation soon, and I'll be in Weapons fixing wiring if anyone wants to join me for safety.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob, I'm starting to get worried; I've been in Admin for a while now, and you still haven't shown up.",
+    "annotation": []
+  },
+  {
+    "text": "[Erin]: It seems like Bob hasn't shown up in Admin as he said he would, which is concerning, so we should consider both Bob and Green as potential suspects due to their discrepancies and silence.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: Given that Bob hasn't shown up in Admin and Green remains silent, we should focus on voting one of them out as both are acting suspiciously, and I'll still be in Weapons fixing wiring if anyone wants to join me for safety.",
+    "annotation": [
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
+    ]
+  }
+]
