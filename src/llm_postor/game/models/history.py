@@ -1,10 +1,12 @@
 from enum import Enum
 from typing import List
+
 from pydantic import BaseModel, Field
 
 from llm_postor.game.models.engine import GameLocation, GamePhase
 from llm_postor.game.models.tasks import Task
 from llm_postor.game.models.usage_metadata import UsageMetadata
+
 
 class PlayerState(str, Enum):
     ALIVE = "Alive"
@@ -64,23 +66,34 @@ class PlayerHistory(BaseModel):
                 last_action_idx = i
                 seen_actions = "\n".join(round.seen_actions)
                 observations = "\n".join(round.observations)
-                history_str += f"Round {i+1}\n"
+                history_str += f"Round {i + 1}\n"
                 history_str += f"Location: {round.location.value}\n"
                 history_str += f"Seen Actions:\n{seen_actions}\n"
-                if len(round.llm_responses)>1:
+                if len(round.llm_responses) > 1:
                     history_str += f"Your previous plan:\n{round.llm_responses[0]}\n"
                     history_str += f"Your action: {round.llm_responses[1]}\n"
-                elif len(round.llm_responses)==1:
+                elif len(round.llm_responses) == 1:
                     history_str += f"Your action:\n{round.llm_responses[0]}\n"
                 else:
                     history_str += f"Your action:\n{round.response}\n"
                 history_str += f"Observations:\n{observations}\n"
                 history_str += f"{round.player_in_room}\n"
-            elif i == len(self.rounds) - 1 or self.rounds[i+1].stage == GamePhase.ACTION_PHASE:
+            elif (
+                i == len(self.rounds) - 1
+                or self.rounds[i + 1].stage == GamePhase.ACTION_PHASE
+            ):
                 observations = "\n".join(round.observations)
-                history_str += f"Round {i+1}\n" if last_action_idx == i-1 else f"Rounds {last_action_idx+2}-{i+1}\n"
-                nl = '\n'
-                history_str += "" if last_action_idx == i-1 else f'Chat Messages:\n{nl.join(round.chat_messages)}\n'
+                history_str += (
+                    f"Round {i + 1}\n"
+                    if last_action_idx == i - 1
+                    else f"Rounds {last_action_idx + 2}-{i + 1}\n"
+                )
+                nl = "\n"
+                history_str += (
+                    ""
+                    if last_action_idx == i - 1
+                    else f"Chat Messages:\n{nl.join(round.chat_messages)}\n"
+                )
                 history_str += f"Location: {round.location}\n"
                 history_str += f"Observations:\n{observations}\n"
         return history_str

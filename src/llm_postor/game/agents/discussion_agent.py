@@ -1,21 +1,22 @@
-from typing import List, Any
+from typing import Any
 
-from pydantic import Field
-from .base_agent import Agent
 from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
+from pydantic import Field
 
-from llm_postor.game.llm_prompts import (
-    DISCUSSION_SYSTEM_PROMPT, 
-    DISCUSSION_USER_PROMPT, 
-    DISCUSSION_RESPONSE_SYSTEM_PROMPT, 
-    DISCUSSION_RESPONSE_USER_PROMPT
-)
 from llm_postor.config import OPENROUTER_API_KEY
-from llm_postor.game.models.usage_metadata import UsageMetadata
+from llm_postor.game.llm_prompts import (
+    DISCUSSION_RESPONSE_SYSTEM_PROMPT,
+    DISCUSSION_RESPONSE_USER_PROMPT,
+    DISCUSSION_SYSTEM_PROMPT,
+    DISCUSSION_USER_PROMPT,
+)
+
+from .base_agent import Agent
+
 
 class DiscussionAgent(Agent):
-    llm: ChatOpenAI = None
+    llm: ChatOpenAI | None = None
     llm_model_name: str
     history: str = Field(default="")
     messages: str = Field(default_factory=list)
@@ -26,12 +27,15 @@ class DiscussionAgent(Agent):
 
     def init_llm(self):
         if not OPENROUTER_API_KEY:
-            raise ValueError("Missing OpenRouter API key. Please set OPENROUTER_API_KEY in your environment.")
+            raise ValueError(
+                "Missing OpenRouter API key. "
+                "Please set OPENROUTER_API_KEY in your environment."
+            )
         self.llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
             model=self.llm_model_name,
-            temperature=0.5
+            temperature=0.5,
         )
 
     def act(
@@ -49,29 +53,33 @@ class DiscussionAgent(Agent):
         return [points_prompt, response_prompt], response
 
     def create_discussion_points(self) -> str:
-        system_message = SystemMessage(content=DISCUSSION_SYSTEM_PROMPT.format(
-            your_name=self.player_name
-        ))
-        user_message = HumanMessage(content=DISCUSSION_USER_PROMPT.format(
-            player_name=self.player_name,
-            player_role=self.role,
-            history=self.history,
-            messages=self.messages
-        ))
+        system_message = SystemMessage(
+            content=DISCUSSION_SYSTEM_PROMPT.format(your_name=self.player_name)
+        )
+        user_message = HumanMessage(
+            content=DISCUSSION_USER_PROMPT.format(
+                player_name=self.player_name,
+                player_role=self.role,
+                history=self.history,
+                messages=self.messages,
+            )
+        )
         discussion_points = self.llm.invoke([system_message, user_message])
         self.add_token_usage(discussion_points.usage_metadata)
         return user_message.content, discussion_points.content.strip()
 
     def respond_to_statements(self, points: str) -> str:
-        system_message = SystemMessage(content=DISCUSSION_RESPONSE_SYSTEM_PROMPT.format(
-            your_name=self.player_name
-        ))
-        user_message = HumanMessage(content=DISCUSSION_RESPONSE_USER_PROMPT.format(
-            player_name=self.player_name,
-            player_role=self.role,
-            points=points,
-            messages=self.messages
-        ))
+        system_message = SystemMessage(
+            content=DISCUSSION_RESPONSE_SYSTEM_PROMPT.format(your_name=self.player_name)
+        )
+        user_message = HumanMessage(
+            content=DISCUSSION_RESPONSE_USER_PROMPT.format(
+                player_name=self.player_name,
+                player_role=self.role,
+                points=points,
+                messages=self.messages,
+            )
+        )
         response = self.llm.invoke([system_message, user_message])
         self.add_token_usage(response.usage_metadata)
         return user_message.content, response.content.strip()

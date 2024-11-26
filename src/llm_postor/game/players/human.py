@@ -1,29 +1,31 @@
-from typing import List, Optional
+from typing import List
 
 from llm_postor.game.players.base_player import Player
 
-class HumanPlayer(Player):
 
+class HumanPlayer(Player):
     def prompt_action(self, actions: List[str]) -> int:
         self.state.actions = actions
-        
-        action_prompt = "\n".join(
-            [f"{i}: {action}" for i, action in enumerate(actions)]
-        )
+
+        action_prompt = "\n".join([
+            f"{i}: {action}" for i, action in enumerate(actions)
+        ])
         task_str = "\n".join([str(task) for task in self.state.tasks])
         self.state.prompts = []
         self.state.prompts.append(f"Here are your tasks: \n{task_str}")
         self.state.prompts.append("========================================")
-        self.state.prompts.append(f"Your turn {self.name}: Choose an action\n{action_prompt}")
+        self.state.prompts.append(
+            f"Your turn {self.name}: Choose an action\n{action_prompt}"
+        )
         self.state.prompts.append("========================================")
         print("\n".join(self.state.prompts))
 
         while True:
             try:
-                choosen_action = int(input("Choose action (enter the number): "))
-                if 0 <= choosen_action < len(actions):
-                    self.state.response = str(choosen_action)
-                    return choosen_action
+                chosen_action = int(input("Choose action (enter the number): "))
+                if 0 <= chosen_action < len(actions):
+                    self.state.response = str(chosen_action)
+                    return chosen_action
                 else:
                     print(f"Please enter a number between 0 and {len(actions) - 1}")
             except ValueError:
@@ -41,9 +43,9 @@ class HumanPlayer(Player):
         return answer
 
     def prompt_vote(self, voting_actions: List[str], dead_players: List[str]) -> int:
-        voting_prompt = "\n".join(
-            [f"{i}: {action}" for i, action in enumerate(voting_actions)]
-        )
+        voting_prompt = "\n".join([
+            f"{i}: {action}" for i, action in enumerate(voting_actions)
+        ])
         self.state.prompts = ["========================================"]
         self.state.prompts += [voting_prompt]
         self.state.actions = voting_actions
