@@ -21,12 +21,19 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o-mini")
     """
 
     try:
+        # Try to initialize the model
         llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
             model=llm_model_name,
-            temperature=0.1,
+            temperature=0.0,
         )
+    except Exception as e:
+        print(f"Error initializing model {llm_model_name}: {e}")
+        return None
+
+    try:
+        # Try to invoke the model
         prompt = ANNOTATION_SYSTEM_PROMPT.format()
         response = llm.invoke([
             SystemMessage(content=prompt),
@@ -36,8 +43,8 @@ def annotate_dialogue(dialogue: str, llm_model_name: str = "openai/gpt-4o-mini")
         # Extract the annotated text from the response
         annotated_text = response.content.strip()
     except Exception as e:
-        print(f"Error: {e} while annotating the dialogue: {dialogue}\n", e)
-        print("Returning empty string...")
+        print(f"Error during model invocation: {e}")
+        print(f"Failed to annotate dialogue: {dialogue}\n")
         annotated_text = None
 
     return annotated_text
