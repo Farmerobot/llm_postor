@@ -194,55 +194,64 @@ class GUIHandler(BaseModel):
 
         # Iterate over each file and load the game state
         progress_placeholder = st.text("Starting to analyze tournament files...")
-        def analyze_file(file_name):
-            file_path = os.path.join(tournament_dir, file_name)
-            game_engine = GameEngine()
-            if game_engine.load_state(file_path):
-                game_state = game_engine.state
-                players = game_state.players
+        with st.status("Analyzing tournament files...") as status:
+            total_files = len(tournament_files)
+            progress_text = st.empty()
+            files_analyzed = 0
+            
+            def analyze_file(file_name):
+                file_path = os.path.join(tournament_dir, file_name)
+                game_engine = GameEngine()
+                if game_engine.load_state(file_path):
+                    game_state = game_engine.state
+                    players = game_state.players
 
-                discussion_chat = ""
-                # Get the longest discussion chat from all players - ensure the player was alive until the end
-                for player in players:
-                    if player.state.life == PlayerState.ALIVE:
-                        discussion_chat = "\n".join(player.get_chat_messages())
-                        if not discussion_chat.strip():
-                            discussion_chat = "\n".join([obs[18:] for obs in player.state.observations if obs.startswith("chat")])
-                        break
-                
-                # print(f"Discussion chat: {discussion_chat}")
+                    discussion_chat = ""
+                    # Get the longest discussion chat from all players - ensure the player was alive until the end
+                    for player in players:
+                        if player.state.life == PlayerState.ALIVE:
+                            discussion_chat = "\n".join(player.get_chat_messages())
+                            if not discussion_chat.strip():
+                                discussion_chat = "\n".join([obs[18:] for obs in player.state.observations if obs.startswith("chat")])
+                            break
+                    
+                    # print(f"Discussion chat: {discussion_chat}")
 
-                annotation_json = json.loads(annotate_dialogue(discussion_chat))
-                if not annotation_json:
-                    print(f"No annotation found for file: {file_name}")
-                    st.write(f"No annotation found for file: {file_name}")
+                    annotation_json = json.loads(annotate_dialogue(discussion_chat))
+                    if not annotation_json:
+                        print(f"No annotation found for file: {file_name}")
+                        st.write(f"No annotation found for file: {file_name}")
 
-                previous_player = None
-                player_techniques = defaultdict(list)
+                    previous_player = None
+                    player_techniques = defaultdict(list)
 
-                for item in annotation_json:
-                    replaced_text = item["text"]
-                    current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
+                    for item in annotation_json:
+                        replaced_text = item["text"]
+                        current_player = replaced_text.split("]:")[0].strip("[]") if "]: " in replaced_text else previous_player
 
-                    if item["annotation"]:
-                        player_techniques[current_player].extend(item["annotation"])
+                        if item["annotation"]:
+                            player_techniques[current_player].extend(item["annotation"])
 
-                    previous_player = current_player
+                        previous_player = current_player
 
-                for player in players:
-                    model_name = player.llm_model_name
-                    model_player_counts[model_name] += 1
-                    model_input_tokens[model_name][file_name] = player.state.token_usage.input_tokens
-                    model_output_tokens[model_name][file_name] = player.state.token_usage.output_tokens
-                    for technique in player_techniques[player.name]:
-                        model_techniques[model_name][technique] += 1
+                    for player in players:
+                        model_name = player.llm_model_name
+                        model_player_counts[model_name] += 1
+                        model_input_tokens[model_name][file_name] = player.state.token_usage.input_tokens
+                        model_output_tokens[model_name][file_name] = player.state.token_usage.output_tokens
+                        for technique in player_techniques[player.name]:
+                            model_techniques[model_name][technique] += 1
 
-        with st.status("Analyzing tournament files..."):
             with concurrent.futures.ThreadPoolExecutor() as executor:
                 futures = {executor.submit(analyze_file, file_name): file_name for file_name in tournament_files}
                 for future in concurrent.futures.as_completed(futures):
                     file_name = futures[future]
+                    files_analyzed += 1
+                    progress_text.write(f"Analyzing files... ({files_analyzed}/{total_files})")
                     st.write(f"Finished analyzing {file_name}")
+            
+            status.update(label="Analysis complete!", state="complete")
+            progress_text.empty()
 
         # Clear the progress message
         progress_placeholder.empty()
@@ -286,6 +295,7 @@ class GUIHandler(BaseModel):
         df = df.transpose()
         df.columns = df.iloc[0]
         df = df.iloc[1:]
+        df.index.name = "Persuasion Technique"  # Add this line to name the index
         df2 = pd.DataFrame(data2)
         df2 = df2.transpose()
         df2.columns = df2.iloc[0]
