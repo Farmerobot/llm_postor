@@ -4,7 +4,7 @@ from typing import Any, List
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
-from llm_postor.game.models.usage_metadata import UsageMetadata
+from among_them.game.models.usage_metadata import UsageMetadata
 
 
 class Agent(ABC, BaseModel):

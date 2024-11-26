@@ -1,4 +1,4 @@
-from llm_postor.game.game_engine import GameEngine
+from among_them.game.game_engine import GameEngine
 
 game_engine = GameEngine(file_path="data/game_state.json")
 game_engine.load_game()

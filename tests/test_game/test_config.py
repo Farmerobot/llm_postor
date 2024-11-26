@@ -4,7 +4,7 @@ from unittest import mock
 
 import pytest
 
-import llm_postor.config  # Import initially
+import among_them.config  # Import initially
 
 
 @pytest.fixture
@@ -17,4 +17,4 @@ def clear_env():
 def test_missing_openrouter_api_key(clear_env: None):
     # Reload the module to re-evaluate with the cleared environment variable
     with pytest.raises(ValueError, match="API key is missing"):
-        importlib.reload(llm_postor.config)
+        importlib.reload(among_them.config)

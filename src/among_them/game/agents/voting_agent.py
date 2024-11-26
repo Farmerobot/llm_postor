@@ -4,9 +4,9 @@ from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from pydantic import Field
 
-from llm_postor.config import OPENROUTER_API_KEY
-from llm_postor.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
-from llm_postor.game.utils import check_action_valid
+from among_them.config import OPENROUTER_API_KEY
+from among_them.game.llm_prompts import VOTING_SYSTEM_PROMPT, VOTING_USER_PROMPT
+from among_them.game.utils import check_action_valid
 
 from .base_agent import Agent
 

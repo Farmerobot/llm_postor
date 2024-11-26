@@ -3,20 +3,20 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from llm_postor.game.models.engine import GamePhase
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.base_player import PlayerRole
+from among_them.game.models.engine import GamePhase
+from among_them.game.players.ai import AIPlayer
+from among_them.game.players.base_player import PlayerRole
 
 
 @pytest.fixture
 def mocked_chat_openai(mocker: Any):
-    mocker.patch("llm_postor.game.players.ai.ChatOpenAI", return_value=MagicMock())
+    mocker.patch("among_them.game.players.ai.ChatOpenAI", return_value=MagicMock())
 
 
 @pytest.fixture
 def mocked_chat_google_generative_ai(mocker: Any):
     mocker.patch(
-        "llm_postor.game.players.ai.ChatGoogleGenerativeAI", return_value=MagicMock()
+        "among_them.game.players.ai.ChatGoogleGenerativeAI", return_value=MagicMock()
     )
 
 

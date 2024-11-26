@@ -4,7 +4,7 @@
 **/.DS_Store
 **/game_results/
 .idea/
-src/llm_postor/game/dummy.py
+src/among_them/game/dummy.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

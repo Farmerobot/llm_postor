@@ -1,11 +1,11 @@
 from typing import List
 
-from llm_postor.game.agents.adventure_agent import AdventureAgent
-from llm_postor.game.agents.discussion_agent import DiscussionAgent
-from llm_postor.game.agents.voting_agent import VotingAgent
-from llm_postor.game.consts import TOKEN_COSTS
-from llm_postor.game.models.usage_metadata import UsageMetadata
-from llm_postor.game.players.base_player import Player
+from among_them.game.agents.adventure_agent import AdventureAgent
+from among_them.game.agents.discussion_agent import DiscussionAgent
+from among_them.game.agents.voting_agent import VotingAgent
+from among_them.game.consts import TOKEN_COSTS
+from among_them.game.models.usage_metadata import UsageMetadata
+from among_them.game.players.base_player import Player
 
 
 class AIPlayer(Player):

@@ -1,6 +1,6 @@
 from typing import List
 
-from llm_postor.game.players.base_player import Player
+from among_them.game.players.base_player import Player
 
 
 class HumanPlayer(Player):

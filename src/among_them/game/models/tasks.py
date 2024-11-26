@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 from pydantic import BaseModel
 
-from llm_postor.game.models.engine import GameLocation
+from among_them.game.models.engine import GameLocation
 
 
 class Task(BaseModel, ABC):
