@@ -13,7 +13,7 @@ AZURE_DEPLOYMENT = os.getenv("AZURE_DEPLOYMENT")
 
 
 def annotate_dialogue(
-    dialogue: str, llm_model_name: str = "google/gemini-flash-1.5"
+    dialogue: str, llm_model_name: str = "openai/gpt-4o-mini"
 ) -> str | None:
     """Annotates a dialogue with persuasion techniques using OpenAI API.
 

@@ -245,10 +245,41 @@ class GUIHandler(BaseModel):
         if debug:
             if st.button("Analyze Tournaments"):
                 self.analyze_tournaments()
+            if st.button("Analyze Tournaments v2"):
+                self.analyze_tournaments_v2()
 
         # read data/analysis.json
         if os.path.exists("data/analysis.json"):
             with open("data/analysis.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(
+                    model_techniques,
+                    model_player_counts,
+                    model_input_tokens,
+                    model_output_tokens,
+                )
+        # read data/analysis_impostor.json
+        if os.path.exists("data/analysis_impostor.json"):
+            with open("data/analysis_impostor.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(
+                    model_techniques,
+                    model_player_counts,
+                    model_input_tokens,
+                    model_output_tokens,
+                )
+
+        # read data/analysis_crewmate.json
+        if os.path.exists("data/analysis_crewmate.json"):
+            with open("data/analysis_crewmate.json", "r") as f:
                 data = json.load(f)
                 model_techniques = data["model_techniques"]
                 model_player_counts = data["model_player_counts"]
@@ -413,6 +444,155 @@ class GUIHandler(BaseModel):
                 },
                 f,
             )
+            
+    def analyze_tournaments_v2(self):
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
+
+        # List all JSON files in the directory
+        tournament_files = [
+            f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
+
+        # Dictionary to accumulate techniques for each model
+        impostor_model_techniques = defaultdict(lambda: defaultdict(int))
+        crewmate_model_techniques = defaultdict(lambda: defaultdict(int))
+        impostor_model_player_counts = defaultdict(int)
+        crewmate_model_player_counts = defaultdict(int)
+
+        # Dictionaries to store token usage per model
+        impostor_model_input_tokens = defaultdict(lambda: defaultdict(int))
+        impostor_model_output_tokens = defaultdict(lambda: defaultdict(int))
+        crewmate_model_input_tokens = defaultdict(lambda: defaultdict(int))
+        crewmate_model_output_tokens = defaultdict(lambda: defaultdict(int))
+
+        # Iterate over each file and load the game state
+        progress_placeholder = st.text("Starting to analyze tournament files...")
+        with st.status("Analyzing tournament files...") as status:
+            total_files = len(tournament_files)
+            progress_text = st.empty()
+            files_analyzed = 0
+
+            def analyze_file(file_name: str):
+                file_path = os.path.join(tournament_dir, file_name)
+                game_engine = GameEngine()
+                if game_engine.load_state(file_path):
+                    game_state = game_engine.state
+                    players = game_state.players
+
+                    discussion_chat = ""
+                    # Get the longest discussion chat from all players - ensure the
+                    # player was alive until the end
+                    for player in players:
+                        if player.state.life == PlayerState.ALIVE:
+                            discussion_chat = "\n".join(player.get_chat_messages())
+                            if not discussion_chat.strip():
+                                discussion_chat = "\n".join([
+                                    obs[18:]
+                                    for obs in player.state.observations
+                                    if obs.startswith("chat")
+                                ])
+                            break
+
+                    if not discussion_chat:
+                        print(f"No discussion chat found for file: {file_name}")
+                        st.write(f"No discussion chat found for file: {file_name}")
+                        return
+
+                    annotation_json = None
+                    annotation_file = os.path.join(
+                        "data/annotations", file_name
+                    )
+                    with open(annotation_file, "r", encoding="utf-8") as f:
+                        annotation_json = json.load(f)
+
+                    previous_player = None
+                    player_techniques = defaultdict(list)
+
+                    for item in annotation_json:
+                        replaced_text = item["text"]
+                        current_player = (
+                            replaced_text.split("]:")[0].strip("[]")
+                            if "]: " in replaced_text
+                            else previous_player
+                        )
+
+                        if item["annotation"]:
+                            player_techniques[current_player].extend(item["annotation"])
+
+                        previous_player = current_player
+
+                    for player in players:
+                        model_name = player.llm_model_name
+                        if player.is_impostor:
+                            impostor_model_player_counts[model_name] += 1
+                            impostor_model_input_tokens[model_name][file_name] = (
+                                player.state.token_usage.input_tokens
+                            )
+                            impostor_model_output_tokens[model_name][file_name] = (
+                                player.state.token_usage.output_tokens
+                            )
+                            for technique in player_techniques[player.name]:
+                                impostor_model_techniques[model_name][technique] += 1
+                        else:
+                            crewmate_model_player_counts[model_name] += 1
+                            crewmate_model_input_tokens[model_name][file_name] = (
+                                player.state.token_usage.input_tokens
+                            )
+                            crewmate_model_output_tokens[model_name][file_name] = (
+                                player.state.token_usage.output_tokens
+                            )
+                            for technique in player_techniques[player.name]:
+                                crewmate_model_techniques[model_name][technique] += 1
+
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                futures = {
+                    executor.submit(analyze_file, file_name): file_name
+                    for file_name in tournament_files
+                }
+                for future in concurrent.futures.as_completed(futures):
+                    file_name = futures[future]
+                    files_analyzed += 1
+                    progress_text.write(
+                        f"Analyzing files... ({files_analyzed}/{total_files})"
+                    )
+                    try:
+                        future.result()  # This will raise any exceptions that occurred
+                        st.write(f"✅ Successfully analyzed {file_name}")
+                    except Exception as e:
+                        st.error(f"❌ Error analyzing {file_name}: {str(e)}")
+                        executor.shutdown()
+                        executor._threads.clear()
+                        raise e
+                
+            status.update(label="Analysis complete!", state="complete")
+            progress_text.empty()
+
+        # Clear the progress message
+        progress_placeholder.empty()
+
+        # save dicts to a file
+        with open("data/analysis_impostor.json", "w") as f:
+            json.dump(
+                {
+                    "model_techniques": impostor_model_techniques,
+                    "model_player_counts": impostor_model_player_counts,
+                    "model_input_tokens": impostor_model_input_tokens,
+                    "model_output_tokens": impostor_model_output_tokens,
+                },
+                f,
+            )
+        
+        with open("data/analysis_crewmate.json", "w") as f:
+            json.dump(
+                {
+                    "model_techniques": crewmate_model_techniques,
+                    "model_player_counts": crewmate_model_player_counts,
+                    "model_input_tokens": crewmate_model_input_tokens,
+                    "model_output_tokens": crewmate_model_output_tokens,
+                },
+                f,
+            )
 
     def _display_tournament_persuasion_analysis(
         self,
@@ -427,7 +607,7 @@ class GUIHandler(BaseModel):
             return
 
         # --- Token Usage Chart (Keep this as it is) ---
-        self.plot_token_usage(model_input_tokens, model_output_tokens)
+        # self.plot_token_usage(model_input_tokens, model_output_tokens)
 
         # --- Techniques Table ---
         st.subheader("Technique Breakdown by Model")
@@ -483,11 +663,12 @@ class GUIHandler(BaseModel):
         st.dataframe(df)  # Display DataFrame as a table
 
         # Add CSV download button
-        st.subheader("Download Technique Usage Data")
+        st.subheader(f"Download Technique Usage Data")
         csv = df.to_csv(index=True)
         st.download_button(
             label="Download Technique Usage CSV",
             data=csv,
+            key=f"{list(list(model_techniques.values())[0].values())[0]}",
             file_name="technique_usage.csv",
             mime="text/csv",
             help="Download a CSV file containing technique usage statistics for each model",  # noqa: E501
