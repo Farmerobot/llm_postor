@@ -82,13 +82,6 @@ class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
         # if OPENROUTER_API_KEY != "None":
         #     install_monitor()
-        hide_streamlit_style = """
-            <style>
-            [class^="_profileContainer_"] {display: none !important;}
-            </style>
-            """
-        st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
         game_overview, tournaments, techniques = st.tabs([
             "Game Overview",
             "Tournaments",
@@ -214,7 +207,7 @@ class GUIHandler(BaseModel):
                 if "previous_selected_file" not in st.session_state:
                     st.session_state.previous_selected_file = None
 
-                selected_file = st.selectbox("Select tournament file", tournament_files)
+                selected_file = st.selectbox("Select tournament file", tournament_files, index=0 if OPENROUTER_API_KEY!="None" else 1)
                 game_state_path = "data/game_state.json"
 
                 if selected_file == "None":
