@@ -216,6 +216,13 @@ class GUIHandler(BaseModel):
                     shutil.copy(os.path.join(tournament_dir, selected_file), game_state_path)
                     st.success(f"Loaded game state from {selected_file}")
                     st.session_state.previous_selected_file = selected_file
+                    
+                    # Try to load annotations if they exist
+                    annotation_file = os.path.join("data/annotations", selected_file)
+                    if os.path.exists(annotation_file):
+                        with open(annotation_file, 'r') as f:
+                            st.session_state.results = json.dumps(json.load(f))
+                            st.success("Loaded existing annotations")
 
     def tournaments(self):
         st.title("Tournaments")
