@@ -84,7 +84,7 @@ class GUIHandler(BaseModel):
         #     install_monitor()
         hide_streamlit_style = """
             <style>
-            [class^="_profileContainer_"] {visibility: hidden;}
+            [class^="_profileContainer_"] {display: none !important;}
             </style>
             """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
