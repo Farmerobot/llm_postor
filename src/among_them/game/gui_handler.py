@@ -93,7 +93,7 @@ class GUIHandler(BaseModel):
                 self.sidebar(game_engine=game_engine)
                 self.game_overview(game_engine)
         with tournaments:
-            self.tournaments(debug=OPENROUTER_API_KEY)
+            self.tournaments(debug=OPENROUTER_API_KEY!="None")
         with techniques:
             self._display_persuasion_techniques()
 
@@ -151,7 +151,7 @@ class GUIHandler(BaseModel):
         self._display_player_selection(game_engine.state.players)
         discussion = self._display_discussion_chat(game_engine.state.players)
         # Analyze Chat Button
-        if OPENROUTER_API_KEY:
+        if OPENROUTER_API_KEY != "None":
             if st.button("Analyze Chat"):
                 # results = chat_analyzer.analyze()
                 results = annotate_dialogue(discussion)
@@ -194,7 +194,7 @@ class GUIHandler(BaseModel):
             tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
             if tournament_files:
                 # Check for OpenRouter API key
-                tournament_files = ["None"] + (["DEBUG"] if OPENROUTER_API_KEY else []) + tournament_files
+                tournament_files = ["None"] + (["DEBUG"] if OPENROUTER_API_KEY != "None" else []) + tournament_files
                 if 'previous_selected_file' not in st.session_state:
                     st.session_state.previous_selected_file = None
                     
