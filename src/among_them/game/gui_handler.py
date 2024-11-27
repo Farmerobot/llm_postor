@@ -224,7 +224,7 @@ class GUIHandler(BaseModel):
                         with open(annotation_file, 'r') as f:
                             st.session_state.results = json.dumps(json.load(f))
                             st.success("Loaded existing annotations")
-                    if OPENROUTER_API_KEY != "None":
+                    if OPENROUTER_API_KEY == "None":
                         st.rerun()
 
     def tournaments(self, debug: bool = False):
