@@ -93,7 +93,7 @@ class GUIHandler(BaseModel):
                 self.sidebar(game_engine=game_engine)
                 self.game_overview(game_engine)
         with tournaments:
-            self.tournaments()
+            self.tournaments(debug=OPENROUTER_API_KEY)
         with techniques:
             self._display_persuasion_techniques()
 
@@ -224,11 +224,11 @@ class GUIHandler(BaseModel):
                             st.session_state.results = json.dumps(json.load(f))
                             st.success("Loaded existing annotations")
 
-    def tournaments(self):
+    def tournaments(self, debug: bool = False):
         st.title("Tournaments")
-
-        if st.button("Analyze Tournaments"):
-            self.analyze_tournaments()
+        if debug:
+            if st.button("Analyze Tournaments"):
+                self.analyze_tournaments()
 
         # read data/analysis.json
         if os.path.exists("data/analysis.json"):
