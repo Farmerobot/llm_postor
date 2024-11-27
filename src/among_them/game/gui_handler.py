@@ -80,7 +80,8 @@ def install_monitor():
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        install_monitor()
+        if OPENROUTER_API_KEY != "None":
+            install_monitor()
         game_overview, tournaments, techniques = st.tabs([
             "Game Overview",
             "Tournaments",
