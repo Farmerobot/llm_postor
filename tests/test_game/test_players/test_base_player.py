@@ -1,17 +1,16 @@
 import copy
 from unittest.mock import MagicMock
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.base_player import PlayerRole
-from llm_postor.game.players.human import HumanPlayer
-from llm_postor.game.utils import get_impostor_tasks, get_random_tasks
-from llm_postor.game.models.tasks import ShortTask, LongTask
-from llm_postor.game.agents.adventure_agent import AdventureAgent
-from llm_postor.game.agents.discussion_agent import DiscussionAgent
-from llm_postor.game.agents.voting_agent import VotingAgent
-from llm_postor.game.models.engine import GameLocation, GamePhase
+
+from among_them.game.models.engine import GameLocation, GamePhase
+from among_them.game.models.tasks import ShortTask
+from among_them.game.players.base_player import Player, PlayerRole
+from among_them.game.players.human import HumanPlayer
+from among_them.game.utils import get_impostor_tasks, get_random_tasks
 
 
-def create_mock_task(completed=False, location=GameLocation.LOC_CAFETERIA):
+def create_mock_task(
+    completed: bool = False, location: GameLocation = GameLocation.LOC_CAFETERIA
+):
     task = MagicMock(spec=ShortTask)
     task.completed = completed
     task.location = location
@@ -28,7 +27,7 @@ def test_role_assignment():
     assert player2.state.tasks == get_impostor_tasks()
 
 
-def test_ai_role_assignment(ai_players):
+def test_ai_role_assignment(ai_players: list[Player]):
     player = ai_players[0]
     player2 = ai_players[1]
     player2.set_role(PlayerRole.IMPOSTOR)
@@ -61,7 +60,7 @@ def test_get_task_to_complete():
     assert tasks_to_complete[0] == incomplete_task
 
 
-def test_log_state_new_round(prev_round_game_stage):
+def test_log_state_new_round(prev_round_game_stage: GamePhase):
     player = HumanPlayer(name="Test Player")
     player.log_state_new_round(prev_round_game_stage=prev_round_game_stage)
     initial_state = copy.deepcopy(player.state)
@@ -75,4 +74,3 @@ def test_log_state_new_round(prev_round_game_stage):
     assert player.state.seen_actions == []
     assert player.state.player_in_room == ""
     assert player.state.observations == []
-

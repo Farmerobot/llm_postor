@@ -1,9 +1,9 @@
 import pytest
-from llm_postor.game.game_engine import GameEngine
-from llm_postor.game.players.base_player import PlayerRole
-from llm_postor.game.players.ai import AIPlayer
-from llm_postor.game.players.human import HumanPlayer
-from llm_postor.game.utils import get_impostor_tasks
+
+from among_them.game.game_engine import GameEngine
+from among_them.game.players.ai import AIPlayer
+from among_them.game.players.base_player import Player, PlayerRole
+from among_them.game.players.human import HumanPlayer
 
 
 def test_load_human_players():
@@ -21,7 +21,7 @@ def test_load_human_players():
     assert isinstance(game_engine.state.players[2], HumanPlayer)
 
 
-def test_load_ai_players(ai_players):
+def test_load_ai_players(ai_players: list[Player]):
     game_engine = GameEngine()
     # Loading the AI players
     game_engine.load_players(ai_players, impostor_count=1)
@@ -43,7 +43,11 @@ def test_load_human_players_with_impostor():
     player3 = HumanPlayer(name="Player 3")
     game_engine.load_players([player1, player2, player3], impostor_count=1)
     assert len(game_engine.state.players) == 3
-    impostors = [player for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR]
+    impostors = [
+        player
+        for player in game_engine.state.players
+        if player.role == PlayerRole.IMPOSTOR
+    ]
     assert len(impostors) == 1
 
 
@@ -79,7 +83,11 @@ def test_load_ten_players_four_impostors():
     players = [HumanPlayer(name=f"Player {i}") for i in range(1, 11)]
     game_engine.load_players(players, impostor_count=4)
     assert len(game_engine.state.players) == 10
-    impostors = [player for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR]
+    impostors = [
+        player
+        for player in game_engine.state.players
+        if player.role == PlayerRole.IMPOSTOR
+    ]
     assert len(impostors) == 4
 
 
@@ -90,6 +98,9 @@ def test_one_impostor_when_impostor_count_is_one():
     player3 = HumanPlayer(name="Player 3")
     player4 = HumanPlayer(name="Player 4", role=PlayerRole.IMPOSTOR)
     game_engine.load_players([player1, player2, player3, player4], impostor_count=1)
-    impostors = [player for player in game_engine.state.players if player.role == PlayerRole.IMPOSTOR]
+    impostors = [
+        player
+        for player in game_engine.state.players
+        if player.role == PlayerRole.IMPOSTOR
+    ]
     assert len(impostors) == 1
-

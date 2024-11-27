@@ -1,17 +1,20 @@
 [tool.poetry]
-name = "llm_postor"
+name = "among_them"
 version = "0.1.0"
 description = "This project tests and compares the persuasive abilities of large language models (LLMs) in a game-like environment simulating 'Among Us', where AI agents powered by LLMs interact, make decisions, and attempt to persuade each other."
 authors = ["Marcin Korcz", "Andrii Chmutov", "Vasyl Korzavatykh", "Mateusz Idziejczak", "Mateusz Stawicki"]
 readme = "README.md"
 package-mode = true
+packages = [
+    { include = "among_them", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 openai = "^1.52.2"
 pydantic = "^2.9.2"
 langchain = "^0.3.4"
-langchain-community = "^0.3.3"  
+langchain-community = "^0.3.3"
 langchain-openai = "^0.2.3"
 langchain-google-genai = "^2.0.1"
 streamlit = "^1.39.0"
@@ -32,3 +35,31 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 main = "scripts.main:main"
 tournament = "scripts.tournament:main"
+
+[tool.ruff]
+preview = true
+
+[tool.ruff.lint]
+select = [
+    "ANN001",   # Missing type annotation for function argument
+    "DOC",      # Pydoclint
+    "D",        # Pydocstyle
+    "E",        # Pycodestyle
+    "F",        # Pyflakes
+    "I",        # Isort
+    "Q",        # Quotes
+]
+
+ignore = [
+    "D1",       # Missing docstrings
+    "D205",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+quote-style = "double"
