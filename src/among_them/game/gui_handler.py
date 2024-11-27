@@ -6,7 +6,7 @@ import random
 import shutil
 import uuid
 from collections import Counter, defaultdict
-from typing import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List, Optional
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -29,6 +29,7 @@ from among_them.game.consts import (
     STATE_FILE,
     TOKEN_COSTS,
 )
+from among_them.config import OPENROUTER_API_KEY
 from among_them.game.game_engine import GameEngine
 from among_them.game.game_state import GameState
 from among_them.game.llm_prompts import (
@@ -106,37 +107,40 @@ class GUIHandler(BaseModel):
                 )
 
     def game_overview(self, game_engine: GameEngine):
-        st.title("Among Us Game - LLMPostor")
-        # Create a button to trigger the next step
-        should_perform_step = st.checkbox("Perform Steps automatically")
+        st.title("Among Them")
+        should_perform_step = False
 
-        # Create columns for buttons
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        self._handle_tournament_file_selection(game_engine)
+        
+        if game_engine.state.DEBUG:
+            should_perform_step = st.checkbox("Perform Steps automatically")
+            # Create columns for buttons
+            col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-        # Buttons in columns
-        with col1:
-            if st.button("Make Step"):
-                should_perform_step = True
-        with col2:
-            if st.button("Clear Game State"):
-                self.clear_game_state()
-        with col3:
-            if st.button("Save State to Tournaments"):
-                if game_engine.check_game_over():
-                    self.save_state_to_tournaments(game_engine)
-                else:
-                    st.warning("Game is not over yet! Please finish the game first.")
-        with col4:
-            if st.button("Force Set and Step Action"):
-                game_engine.state.set_stage(GamePhase.ACTION_PHASE)
-                game_engine.perform_step()
-        with col5:
-            if st.button("Force Set and Step Discussion"):
-                game_engine.state.set_stage(GamePhase.DISCUSS)
-                game_engine.perform_step()
-        with col6:
-            if st.button("Force step Voting"):
-                game_engine.go_to_voting()
+            # Buttons in columns
+            with col1:
+                if st.button("Make Step"):
+                    should_perform_step = True
+            with col2:
+                if st.button("Clear Game State"):
+                    self.clear_game_state()
+            with col3:
+                if st.button("Save State to Tournaments"):
+                    if game_engine.check_game_over():
+                        self.save_state_to_tournaments(game_engine)
+                    else:
+                        st.warning("Game is not over yet! Please finish the game first.")
+            with col4:
+                if st.button("Force Set and Step Action"):
+                    game_engine.state.set_stage(GamePhase.ACTION_PHASE)
+                    game_engine.perform_step()
+            with col5:
+                if st.button("Force Set and Step Discussion"):
+                    game_engine.state.set_stage(GamePhase.DISCUSS)
+                    game_engine.perform_step()
+            with col6:
+                if st.button("Force step Voting"):
+                    game_engine.go_to_voting()
 
         col1, col2 = st.columns([2, 1])
         with col1:
@@ -147,10 +151,11 @@ class GUIHandler(BaseModel):
         self._display_player_selection(game_engine.state.players)
         discussion = self._display_discussion_chat(game_engine.state.players)
         # Analyze Chat Button
-        if st.button("Analyze Chat"):
-            # results = chat_analyzer.analyze()
-            results = annotate_dialogue(discussion)
-            st.session_state.results = results
+        if OPENROUTER_API_KEY:
+            if st.button("Analyze Chat"):
+                # results = chat_analyzer.analyze()
+                results = annotate_dialogue(discussion)
+                st.session_state.results = results
         if "results" in st.session_state:
             self._display_annotated_text(
                 json.loads(st.session_state.results), game_engine.state.players
@@ -181,6 +186,36 @@ class GUIHandler(BaseModel):
                     pass
                 else:
                     raise e
+
+    def _handle_tournament_file_selection(self, game_engine: Optional[GameEngine]):
+        # Get list of tournament files
+        tournament_dir = "data/tournament"
+        if os.path.exists(tournament_dir):
+            tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
+            if tournament_files:
+                # Check for OpenRouter API key
+                tournament_files = ["None"] + (["DEBUG"] if OPENROUTER_API_KEY else []) + tournament_files
+                if 'previous_selected_file' not in st.session_state:
+                    st.session_state.previous_selected_file = None
+                    
+                selected_file = st.selectbox("Select tournament file", tournament_files)
+                game_state_path = "data/game_state.json"
+
+                if selected_file == "None":
+                    if os.path.exists(game_state_path):
+                        os.remove(game_state_path)
+                        st.success("Game state cleared")
+                    st.session_state.previous_selected_file = None
+                elif selected_file == "DEBUG":
+                    if game_engine is not None:
+                        game_engine.state.DEBUG = True
+                        st.success("Debug mode enabled")
+                    st.session_state.previous_selected_file = "DEBUG"
+                elif selected_file and selected_file != st.session_state.previous_selected_file:
+                    # Copy selected file to game_state.json
+                    shutil.copy(os.path.join(tournament_dir, selected_file), game_state_path)
+                    st.success(f"Loaded game state from {selected_file}")
+                    st.session_state.previous_selected_file = selected_file
 
     def tournaments(self):
         st.title("Tournaments")
@@ -953,6 +988,7 @@ class GUIHandler(BaseModel):
     def game_settings(self):
         """Displays the game settings tab for player configuration."""
         st.title("Game Settings")
+        self._handle_tournament_file_selection(None)
 
         col1, col2, col3 = st.columns([1, 1, 5])
         with col1:

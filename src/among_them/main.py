@@ -14,8 +14,8 @@ def main():
     st.set_page_config(page_title="Among Them", layout="wide")
     game_engine = GameEngine()
 
-    game_engine.load_game()
     game_engine.state.DEBUG = True
+    game_engine.load_game()
 
     gui_handler.display_gui(game_engine)
 
