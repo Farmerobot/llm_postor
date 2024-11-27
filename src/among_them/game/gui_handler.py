@@ -82,6 +82,18 @@ class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
         # if OPENROUTER_API_KEY != "None":
         #     install_monitor()
+        html_string='''
+<script>
+// To break out of iframe and access the parent window
+const streamlitDoc = window.parent.document;
+
+// Make the replacement
+document.addEventListener("DOMContentLoaded", function(event){
+        streamlitDoc.querySelector('[class^="_profileContainer_"]').remove();
+        });
+</script>
+'''
+        st.html(html_string)
         game_overview, tournaments, techniques = st.tabs([
             "Game Overview",
             "Tournaments",
