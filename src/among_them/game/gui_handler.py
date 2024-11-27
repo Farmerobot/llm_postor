@@ -20,6 +20,7 @@ from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
 from among_them.annotation import annotate_dialogue
+from among_them.config import OPENROUTER_API_KEY
 from among_them.game import dummy
 from among_them.game.consts import (
     IMPOSTOR_COOLDOWN,
@@ -29,7 +30,6 @@ from among_them.game.consts import (
     STATE_FILE,
     TOKEN_COSTS,
 )
-from among_them.config import OPENROUTER_API_KEY
 from among_them.game.game_engine import GameEngine
 from among_them.game.game_state import GameState
 from among_them.game.llm_prompts import (
@@ -94,7 +94,7 @@ class GUIHandler(BaseModel):
                 self.sidebar(game_engine=game_engine)
                 self.game_overview(game_engine)
         with tournaments:
-            self.tournaments(debug=OPENROUTER_API_KEY!="None")
+            self.tournaments(debug=OPENROUTER_API_KEY != "None")
         with techniques:
             self._display_persuasion_techniques()
 
@@ -112,7 +112,7 @@ class GUIHandler(BaseModel):
         should_perform_step = False
 
         self._handle_tournament_file_selection(game_engine)
-        
+
         if game_engine.state.DEBUG:
             should_perform_step = st.checkbox("Perform Steps automatically")
             # Create columns for buttons
@@ -130,7 +130,9 @@ class GUIHandler(BaseModel):
                     if game_engine.check_game_over():
                         self.save_state_to_tournaments(game_engine)
                     else:
-                        st.warning("Game is not over yet! Please finish the game first.")
+                        st.warning(
+                            "Game is not over yet! Please finish the game first."
+                        )
             with col4:
                 if st.button("Force Set and Step Action"):
                     game_engine.state.set_stage(GamePhase.ACTION_PHASE)
@@ -192,13 +194,19 @@ class GUIHandler(BaseModel):
         # Get list of tournament files
         tournament_dir = "data/tournament"
         if os.path.exists(tournament_dir):
-            tournament_files = [f for f in os.listdir(tournament_dir) if f.endswith('.json')]
+            tournament_files = [
+                f for f in os.listdir(tournament_dir) if f.endswith(".json")
+            ]
             if tournament_files:
                 # Check for OpenRouter API key
-                tournament_files = ["None"] + (["DEBUG"] if OPENROUTER_API_KEY != "None" else []) + tournament_files
-                if 'previous_selected_file' not in st.session_state:
+                tournament_files = (
+                    ["None"]
+                    + (["DEBUG"] if OPENROUTER_API_KEY != "None" else [])
+                    + tournament_files
+                )
+                if "previous_selected_file" not in st.session_state:
                     st.session_state.previous_selected_file = None
-                    
+
                 selected_file = st.selectbox("Select tournament file", tournament_files)
                 game_state_path = "data/game_state.json"
 
@@ -212,16 +220,21 @@ class GUIHandler(BaseModel):
                         game_engine.state.DEBUG = True
                         st.success("Debug mode enabled")
                     st.session_state.previous_selected_file = "DEBUG"
-                elif selected_file and selected_file != st.session_state.previous_selected_file:
+                elif (
+                    selected_file
+                    and selected_file != st.session_state.previous_selected_file
+                ):
                     # Copy selected file to game_state.json
-                    shutil.copy(os.path.join(tournament_dir, selected_file), game_state_path)
+                    shutil.copy(
+                        os.path.join(tournament_dir, selected_file), game_state_path
+                    )
                     st.success(f"Loaded game state from {selected_file}")
                     st.session_state.previous_selected_file = selected_file
-                    
+
                     # Try to load annotations if they exist
                     annotation_file = os.path.join("data/annotations", selected_file)
                     if os.path.exists(annotation_file):
-                        with open(annotation_file, 'r') as f:
+                        with open(annotation_file, "r") as f:
                             st.session_state.results = json.dumps(json.load(f))
                             st.success("Loaded existing annotations")
                     if OPENROUTER_API_KEY == "None":
@@ -395,12 +408,12 @@ class GUIHandler(BaseModel):
         st.subheader("Technique Breakdown by Model")
         # Extract valid techniques from PERSUASION_TECHNIQUES string
         valid_techniques = []
-        for line in PERSUASION_TECHNIQUES.split('\n'):
-            if line.startswith('### ') and '**' in line:
+        for line in PERSUASION_TECHNIQUES.split("\n"):
+            if line.startswith("### ") and "**" in line:
                 # Extract technique name between ** **
-                technique = line.split('**')[1]
+                technique = line.split("**")[1]
                 valid_techniques.append(technique)
-        
+
         # Filter all_techniques to only include valid ones
         all_techniques = sorted(
             set(
