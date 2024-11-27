@@ -1,0 +1,380 @@
+[
+  {
+    "text": "[Erin]: I'm just grabbing a quick snack in the Cafeteria, I didn't see anyone suspicious around,",
+    "annotation": [
+      "Vagueness"
+    ]
+  },
+  {
+    "text": "but I did notice that Alex hasn't been seen for a while, wonder if they're okay.",
+    "annotation": [
+      "Distraction"
+    ]
+  },
+  {
+    "text": "[Dave]: I've been in the Library and the Engine Room, and I haven't seen Alex either,",
+    "annotation": [
+      "Vagueness"
+    ]
+  },
+  {
+    "text": "but I did notice that the Engine Room's task log seems to be missing some entries, which might be a sign that someone was trying to cover their tracks.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Charlie]: I've been trying to access the Engine Room's task log, but it's locked, which is unusual since I've had access to it before,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should investigate further to see if we can find any clues about Alex's disappearance and the missing task log entries.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Bob]: I've just accessed the Engine Room's task log and found a suspicious entry that seems to be a fake task, which might be a red flag for an impostor trying to cover their tracks,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should discuss this further with the group to see if we can identify any potential impostors.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Erin]: I think we should definitely investigate the suspicious task log entry and the missing task log entries further,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we ask Charlie to share more about the locked Engine Room's task log, as it might hold some crucial information about Alex's disappearance and the impostor's identity.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: Given the recent discussion about the suspicious task log entry in the Engine Room and the missing entries,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Charlie]: I agree with Erin and Dave that we should investigate the suspicious task log entry and the missing task log entries further,",
+    "annotation": [
+      "Bandwagon Effect"
+    ]
+  },
+  {
+    "text": "and I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should also discuss the fact that I was alone in Admin for a long time, and I didn't see anyone else in the room, which might be a sign that someone was trying to avoid being seen.",
+    "annotation": [
+      "Vagueness"
+    ]
+  },
+  {
+    "text": "[Bob]: I think we should also review the task log and look for any other suspicious entries or patterns that might indicate the presence of an impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we create a timeline of all the task completions and eliminations to see if we can identify any inconsistencies or anomalies that might help us identify the impostor.",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "[Erin]: I agree that we should investigate the suspicious task log entry and the missing task log entries further,",
+    "annotation": [
+      "Bandwagon Effect"
+    ]
+  },
+  {
+    "text": "and I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should also discuss the fact that I was in the Cafeteria around the same time as Erin and didn't see anyone suspicious,",
+    "annotation": [
+      "Vagueness"
+    ]
+  },
+  {
+    "text": "but I did notice that the task log for the Cafeteria seems to be up to date, which might be a sign that the impostor is trying to cover their tracks in multiple locations.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: I'd like to add that given the suspicious task log entry in the Engine Room and the missing entries,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "combined with the fact that Erin was in the Cafeteria around the same time as me and didn't see anyone suspicious,",
+    "annotation": [
+      "Vagueness"
+    ]
+  },
+  {
+    "text": "it's possible that the impostor is trying to create a false trail by making it seem like they were in multiple locations at once,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should investigate Erin's alibi further to see if she can provide any additional information that might help us identify the impostor.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Charlie]: I think we should create a timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and the missing entries,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to see if we can identify any inconsistencies or anomalies that might help us identify the impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we also investigate Erin's alibi further to see if she can provide any additional information that might help us identify the impostor.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Bob]: Given the recent discussion about the suspicious task log entry in the Engine Room and the missing entries,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and considering Erin's alibi seems suspicious,",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "I'd like to suggest that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry and Erin's whereabouts during that time,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Erin]: I think we should focus on creating a detailed timeline of all the task completions and eliminations, including the suspicious task log entry and Erin's whereabouts during that time,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: Let's create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and Erin's whereabouts during that time,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we also investigate Charlie's alibi for the time they were alone in Admin, as it might be a crucial piece of evidence in our investigation.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Charlie]: I'd like to propose that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and Erin's whereabouts during that time,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I think we should also investigate Erin's alibi further to see if she can provide any additional information that might help us identify the impostor,",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "considering her alibi seems suspicious and we need to gather more information to make an informed decision.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Bob]: Let's create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and Erin's whereabouts during that time,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we also investigate Charlie's alibi for the time they were alone in Admin and Dave's alibi for the time they were in the Library and the Engine Room,",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "as both of these alibis seem suspicious and might be crucial pieces of evidence in our investigation.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Erin]: I think we've been focusing too much on Erin's alibi, and it's time for us to shift the spotlight to Charlie's suspicious activities in the Admin room during the time they were alone,",
+    "annotation": [
+      "Projection"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and that they never mentioned it during the group's initial discussion, which raises some red flags for me.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: I think we should also investigate Charlie's alibi for the time they were alone in Admin, as it might be a crucial piece of evidence in our investigation,",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "and considering Charlie's suspicious activities in the Admin room during the time they were alone,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "I'd like to add that we should discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and that they never mentioned it during the group's initial discussion, which raises some serious red flags for me.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Charlie]: Given the recent discussion about the suspicious task log entry in the Engine Room and the missing entries,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and considering the multiple alibis that seem suspicious,",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "I'd like to propose that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry, Erin's whereabouts during that time, Charlie's alibi for the time they were alone in Admin, and Dave's alibi for the time they were in the Library and the Engine Room,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Bob]: I think we should create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room, Erin's whereabouts during that time, Charlie's alibi for the time they were alone in Admin, and Dave's alibi for the time they were in the Library and the Engine Room,",
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
+  },
+  {
+    "text": "to help us identify any inconsistencies or anomalies that might help us identify the impostor,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and I'd like to propose that we also discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked,",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "and that they never mentioned it during the group's initial discussion, which raises some serious red flags for me.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  }
+]
