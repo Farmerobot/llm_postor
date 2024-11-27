@@ -85,7 +85,6 @@ class GUIHandler(BaseModel):
         hide_streamlit_style = """
             <style>
             [class^="_profileContainer_"] {visibility: hidden;}
-            #root div div div div {visibility: hidden;}
             </style>
             """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
