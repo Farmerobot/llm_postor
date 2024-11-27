@@ -20,13 +20,13 @@
     ]
   },
   {
-    "text": "[Alice]: Bob, your claim that you saw me eliminate Erin is a serious accusation; can you describe the specific actions you witnessed to support this?",
+    "text": "[Alice]: Bob, your claim that you saw me eliminate Erin is a serious accusation;  can you describe the specific actions you witnessed to support this?",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Bob]: Alice, to clarify, I saw you standing over Erin in Medbay right before she was reported dead; can you explain your actions immediately before and after that moment?",
+    "text": "[Bob]: Alice, to clarify, I saw you standing over Erin in Medbay right before she was reported dead;  can you explain your actions immediately before and after that moment?",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
@@ -34,61 +34,64 @@
   {
     "text": "[Charlie]: Alice, given Bob's detailed account of witnessing you near Erin's body, a precise timeline of your movements around that time is crucial to clearing up this serious accusation.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob's accusation lacks specifics and conveniently ignores his own whereabouts during the alleged elimination, making him a far more suspicious candidate for ejection than myself.",
     "annotation": [
-      "Distraction",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: Alice, while I understand your skepticism, my account of seeing you near Erin's body before she was reported dead is corroborated by Charlie, and a precise timeline of your movements in Medbay is crucial to resolving this.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, given Bob's corroborated account and the urgency of resolving Erin's death, providing a detailed timeline of your Medbay activities is essential to clearing your name.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob's vague testimony and convenient lack of self-incrimination, coupled with Charlie's weak corroboration and need for clarification, makes him a far more likely suspect than myself.",
     "annotation": [
-      "Distraction",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: Alice, your continued evasiveness and failure to provide a clear alibi for your presence in Medbay near the time of Erin's death, coupled with Charlie's corroboration of my account, strengthens the case for your ejection.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, given Bob's detailed account corroborated by my own observation, a precise timeline of your actions in Medbay is crucial to resolving this, especially considering the urgency of identifying the imposter responsible for both Erin and Dave's deaths.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob's unsubstantiated accusation, coupled with his lack of an alibi and Charlie's weak corroboration, makes him a far more likely suspect than myself; let's vote him out.",
     "annotation": [
-      "Distraction",
-      "Projection",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Alice's continued refusal to provide a verifiable alibi, despite Charlie's corroboration of my account, makes her the more likely imposter; let's vote her out.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   },
@@ -96,6 +99,7 @@
     "text": "[Charlie]: Given Bob's detailed account, corroborated by my own observations, and Alice's continued lack of a verifiable alibi, a vote for Alice seems necessary to ensure the safety of the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   }

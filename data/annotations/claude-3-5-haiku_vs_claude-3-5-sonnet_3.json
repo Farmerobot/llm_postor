@@ -23,9 +23,7 @@
   },
   {
     "text": "[Charlie]: This is terrible! Dave was just here in the Cafeteria doing trash duty with me. Who could have eliminated him?",
-    "annotation": [
-      "Appeal to Emotion"
-    ]
+    "annotation": []
   },
   {
     "text": "[Bob]: Since multiple people can confirm Charlie's location and Dave was last seen in Cafeteria, we should focus on who had access to that area and wasn't being watched by others.",
@@ -54,13 +52,13 @@
   {
     "text": "[Bob]: I understand everyone's concerns, but I specifically went to Weapons because the asteroids task was about to expire, and I can prove my innocence by completing it right now in front of anyone who wants to watch.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: The fact that Bob is only now offering to do asteroids in front of everyone feels like a desperate attempt to divert attention from the fact that he was unaccounted for during Dave's elimination in Cafeteria.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
@@ -78,7 +76,7 @@
   {
     "text": "[Bob]: I understand everyone's suspicion, but the asteroids task timer is still visible in Weapons showing only 1 turn left, which proves I wasn't lying about the urgency - anyone can come verify this right now.",
     "annotation": [
-      "Appeal to Rules"
+      "Appeal to Logic"
     ]
   },
   {
@@ -102,7 +100,7 @@
   {
     "text": "[Bob]: I need everyone to focus on a critical inconsistency - Alice claims she was doing trash duty with Dave in Cafeteria, yet somehow also saw me leave, which would be impossible if she was focused on her task with Dave, so her story simply doesn't add up.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -114,7 +112,7 @@
   {
     "text": "[Alice]: Given that Erin has just confirmed seeing exactly what I reported about Bob leaving Cafeteria before Dave's death, I think we can safely dismiss Bob's desperate attempt to discredit my testimony and focus on the fact that multiple witnesses have now placed him at the scene right before the murder.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   }
 ]

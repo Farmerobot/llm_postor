@@ -5,9 +5,7 @@
   },
   {
     "text": "[Charlie]: Dave, you said you were in Medbay with Bob and Erin, but I saw Alice doing diagnostics there \u2013 are you sure it wasn't Alice you saw, and maybe Bob was somewhere else?",
-    "annotation": [
-      "Gaslighting"
-    ]
+    "annotation": []
   },
   {
     "text": "[Alice]: Charlie is right, I saw Bob doing diagnostics and Erin fixing wiring in Medbay, and Dave wasn't there when I first arrived.",
@@ -22,7 +20,7 @@
   {
     "text": "[Dave]: I understand the confusion, but I was indeed in Medbay with Bob and Erin, and I might have mixed up Alice and Bob since they were both doing diagnostics at different times.",
     "annotation": [
-      "Vagueness"
+      "Minimization"
     ]
   },
   {
@@ -40,20 +38,21 @@
   {
     "text": "[Erin]: Dave, your continued attempts to revise your story only deepen my suspicion, and I urge everyone to vote him out.",
     "annotation": [
+      "Appeal to Emotion",
       "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: Let's not jump to conclusions too quickly; with so many people moving in and out of Medbay, it's possible some actions were missed or misremembered, so we should focus on inconsistencies in everyone's stories rather than just mine.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
     "text": "[Charlie]: Dave, if you were in Medbay, what *specific* task did you complete there, and can anyone corroborate that?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -65,7 +64,7 @@
   {
     "text": "[Erin]: Dave, your vague \"missed or misremembered actions\" excuse doesn't explain why *neither* Alice *nor* Charlie saw you in Medbay \u2013 where *exactly* were you when Bob died, and what *specific* task did you do there?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -77,13 +76,14 @@
   {
     "text": "[Charlie]: Dave, your sudden interest in Bob's last known location seems like a blatant attempt to deflect attention away from your own highly suspicious behavior and inconsistent alibi.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Dave, stop deflecting and tell us *exactly* which task you claim to have done in Medbay, or we're voting you out.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -93,9 +93,9 @@
     ]
   },
   {
-    "text": "[Dave]: I was observing and ensuring tasks were being completed, not performing them myself, which is why I can't specify a task.",
+    "text": "[Dave]: I was observing and ensuring tasks were completed, not performing them myself, which is why I can't specify a task.",
     "annotation": [
-      "Vagueness"
+      "Lying"
     ]
   },
   {
@@ -107,8 +107,8 @@
   {
     "text": "[Alice]: Dave, you're clearly lying about your whereabouts and \"observing and ensuring tasks were completed\" isn't a real task, so we need to vote you out now before another crewmate dies.",
     "annotation": [
-      "Appeal to Urgency",
-      "Lying"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {

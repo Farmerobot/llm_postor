@@ -6,7 +6,7 @@
     ]
   },
   {
-    "text": "[Alice]: I can confirm Erin's report about the cafeteria trash, and I saw Bob, Dave, and Erin working on wiring in Weapons; let's hear everyone else's task progress and locations to compare notes.",
+    "text": "[Alice]: I can confirm Erin's report about the cafeteria trash, and I saw Bob, Dave, and Erin working on wiring in Weapons;  let's hear everyone else's task progress and locations to compare notes.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -14,7 +14,7 @@
   {
     "text": "[Dave]: I can confirm Erin and Alice's reports; I was in the cafeteria with them and Bob, then moved to Weapons to work on the asteroid task with Alice, and haven't seen anything suspicious.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -38,7 +38,7 @@
   {
     "text": "[Dave]: To help build that timeline, I can confirm I was with Erin and Alice in the Cafeteria, then moved to Weapons with Alice and Bob before completing my tasks.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -78,15 +78,15 @@
     ]
   },
   {
-    "text": "[Alice]: I spent a considerable time in Weapons with Dave and Bob on the asteroid task, then went directly to O2 to complete my tasks; I saw nothing suspicious and can confirm Dave's account.",
+    "text": "[Alice]: I spent a considerable time in Weapons with Dave and Bob on the asteroid task, then went directly to O2 to complete my tasks;  I saw nothing suspicious and can confirm Dave's account.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: To further clarify my timeline, I was in Weapons with Alice and Bob from 10:07 to 10:22, then proceeded directly to Navigation, completing my tasks there until 10:45, and I didn't see anyone suspicious.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -104,13 +104,13 @@
   {
     "text": "[Alice]: To further solidify my alibi, I was in O2 from 10:25 to 10:50, solely focused on oxygen tasks, and can confirm Dave's account of his movements after leaving Weapons.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
-    "text": "[Dave]: My precise timeline, corroborated by Alice, places me in Navigation from 10:22 to 10:45, far from Communications, and I urge everyone to focus on verifying the accounts of those near Communications before the discovery.",
+    "text": "[Dave]: My precise timeline, corroborated by Alice, places me in Navigation from 10:22 to 10:45,  far from Communications, and I urge everyone to focus on verifying the accounts of those near Communications before the discovery.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {

@@ -17,23 +17,23 @@
   },
   {
     "text": "[Erin]: I'm shocked about Bob's death, and we need to carefully piece together what happened - Alice, can you confirm exactly who was in Medbay when you arrived, as that might help us understand the sequence of events?",
-    "annotation": [
-      "Appeal to Emotion"
-    ]
+    "annotation": []
   },
   {
     "text": "[Charlie]: Dave, if you were in Weapons then Navigation, could you have seen anyone near Medbay, since that's between those two locations?",
-    "annotation": []
-  },
-  {
-    "text": "[Alice]: Dave, did you pass by Medbay on your way to Navigation? Could you have seen anything suspicious?",
-    "annotation": []
-  },
-  {
-    "text": "[Dave]: To be clear, Weapons is not near Medbay, and I didn't pass Medbay on my way to Navigation, so I couldn't have seen anything related to Bob's death there.",
     "annotation": [
       "Appeal to Logic"
     ]
+  },
+  {
+    "text": "[Alice]: Dave, did you pass by Medbay on your way to Navigation? Could you have seen anything suspicious?",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: To be clear, Weapons is not near Medbay, and I didn't pass Medbay on my way to Navigation, so I couldn't have seen anything related to Bob's death there.",
+    "annotation": []
   },
   {
     "text": "[Erin]: I suggest we focus on finding concrete evidence and tracking precise movements, as right now Alice's solo trip to Medbay seems the most suspicious, especially since no one can definitively confirm her exact activities during Bob's elimination.",
@@ -56,25 +56,25 @@
   {
     "text": "[Dave]: Charlie, why are you so intent on twisting my words and trying to make my movements seem suspicious when you haven't provided a clear account of your own actions?",
     "annotation": [
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I think we should carefully examine Charlie's motivations for creating conflict, as he seems to be strategically deflecting attention from himself by stirring up doubt about Dave's movements.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Dave, can you explain the route you took from Weapons to Navigation, listing the rooms you passed through, to clarify the ship's layout and your alibi?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin and Charlie, you seem awfully focused on everyone else's whereabouts instead of explaining what you were doing together in the cafeteria.",
     "annotation": [
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -91,7 +91,9 @@
   },
   {
     "text": "[Charlie]: Alice and Dave, can you both confirm that you saw each other in the cafeteria at the start of the round with Erin, Bob, and me?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Alice]: Erin, you said you were doing wiring with Charlie and Bob, but weren't you all doing the coffee maker task together at the start of the round?",

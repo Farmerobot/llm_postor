@@ -8,13 +8,13 @@
   {
     "text": "[Bob]: Alice, can you confirm seeing me in the Cafeteria and other rooms where I've reported completing tasks, as Charlie suggested we verify my movements?",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I can confirm seeing Bob in the Cafeteria, Admin, Storage, and Electrical; his movements and reported task completions align, and I haven't observed any suspicious behavior from him.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -68,7 +68,6 @@
   {
     "text": "[Alice]: Given the urgency of solving Dave and Erin's deaths, let's thoroughly investigate Medbay to establish a timeline before further accusations, focusing on verifiable evidence rather than speculation about task completions.",
     "annotation": [
-      "Appeal to Urgency",
       "Appeal to Logic"
     ]
   },

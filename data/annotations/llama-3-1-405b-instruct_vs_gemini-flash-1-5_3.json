@@ -24,7 +24,7 @@
   {
     "text": "[Erin]: I think we're getting sidetracked by focusing solely on the Admin room, and we should also investigate the Medbay, especially since Bob was headed there last time I saw him, and it's possible that's where Dave was going too.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -58,13 +58,13 @@
     ]
   },
   {
-    "text": "[Charlie]: Okay, let's hear Bob's account of his time in Medbay, then systematically check Admin and the other rooms to build a complete timeline of everyone's movements; this collaborative approach will help us identify inconsistencies and find the impostor.",
+    "text": "[Charlie]: Okay, let's hear Bob's account of his time in Medbay, then systematically check Admin and the other rooms to build a complete timeline of everyone's movements;  this collaborative approach will help us identify inconsistencies and find the impostor.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "[Bob]: I arrived at Medbay alone, completed my task, and left immediately without seeing anyone else; I can confirm I didn't see Dave there.",
+    "text": "[Bob]: I arrived at Medbay alone, completed my task, and left immediately without seeing anyone else;  I can confirm I didn't see Dave there.",
     "annotation": [
       "Denial without Evidence"
     ]
@@ -90,7 +90,7 @@
   {
     "text": "[Bob]: I completed the \"Submit Scan\" task in Medbay, which took approximately 15 seconds, and I saw no one else there.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Logic"
     ]
   },
   {
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "text": "[Alice]: Bob, to further clarify your timeline, please specify the exact time you entered and left Medbay, and describe precisely what you did during those 15 seconds.",
+    "text": "[Alice]: Bob,  to further clarify your timeline, please specify the exact time you entered and left Medbay, and describe precisely what you did during those 15 seconds.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -114,7 +114,7 @@
   {
     "text": "[Bob]: My 15-second scan in Medbay concluded before Dave's death, and a detailed timeline of everyone's movements will help us find the real culprit.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Logic"
     ]
   }
 ]

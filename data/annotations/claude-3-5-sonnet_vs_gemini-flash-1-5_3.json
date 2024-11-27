@@ -12,13 +12,15 @@
   {
     "text": "[Alice]: I can corroborate Dave's statement about being in Medbay with him and Erin after helping Bob start the coffee machine, and I agree that clarifying Bob's movements after leaving Admin with Charlie is crucial.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Relationship"
     ]
   },
   {
     "text": "[Erin]: I can confirm Dave and Alice's account of our time in Medbay, and it's important we get Bob to clarify his movements after leaving Admin with Charlie to ensure a complete timeline.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Relationship"
     ]
   },
   {
@@ -42,13 +44,14 @@
   {
     "text": "[Erin]: I agree with Dave and Alice; a precise timeline from Charlie about when he left Bob and when he found him is crucial to determining who was near Admin during that timeframe.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: I left Admin around 2 minutes ago for a quick 30-second hallway check, and when I returned to finish my task, I found Bob's body - I didn't see anyone else during my brief absence, which makes this even more unsettling.",
     "annotation": [
-      "Appeal to Emotion"
+      "Vagueness"
     ]
   },
   {
@@ -66,12 +69,14 @@
   {
     "text": "[Erin]: Given Charlie's precise timeline, let's systematically check everyone's alibis for the crucial window between his departure and return to Admin.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: I understand everyone's focus on my timeline, but I think we should also consider that Dave, Alice, and Erin seem suspiciously coordinated in their statements about being together in Medbay.",
     "annotation": [
+      "Distraction",
       "Projection"
     ]
   },
@@ -96,7 +101,8 @@
   {
     "text": "[Charlie]: The fact that Dave, Alice, and Erin are all asking identical questions and parroting each other's statements seems highly coordinated and suspicious - perhaps they're trying to control the narrative while one of them slipped away from Medbay unnoticed.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Exaggeration"
     ]
   },
   {
@@ -132,7 +138,8 @@
   {
     "text": "[Erin]: Charlie's accusation of coordinated statements is a deflection tactic designed to distract from his own proximity to the crime scene and his lack of a solid alibi.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -150,13 +157,15 @@
   {
     "text": "[Erin]: Charlie's shifting alibi and the convenient timing of his \"hallway check\" directly contradict his earlier statements and place him suspiciously close to both crime scenes.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: The fact that I've consistently reported finding both bodies while Erin keeps changing her story about the Medbay scans makes me question who's really being deceptive here.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -166,15 +175,17 @@
     ]
   },
   {
-    "text": "[Erin]: Charlie's repeated accusations of coordinated statements are a transparent attempt to deflect attention from his own weak alibi and proximity to both crime scenes.",
+    "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own weak alibi and proximity to both crime scenes.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: The fact that I've been completely transparent about my movements while Erin keeps changing her story about Medbay scans and Alice suspiciously switches from defending Erin to suddenly wanting to verify her statements seems like coordinated deception.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Exaggeration"
     ]
   },
   {
@@ -186,7 +197,8 @@
   {
     "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own suspicious proximity to both crime scenes and his increasingly inconsistent alibi.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -204,7 +216,8 @@
   {
     "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own inconsistent alibi and proximity to both crime scenes.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

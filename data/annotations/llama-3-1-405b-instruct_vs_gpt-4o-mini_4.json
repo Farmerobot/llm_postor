@@ -1,12 +1,8 @@
 [
   {
-    "text": "[Charlie]: I'd love to hear from Dave about his task in the Medbay,",
-    "annotation": []
-  },
-  {
-    "text": "and I'll start by sharing my own alibi: I was in the Cafeteria working on a task from the beginning of the round until now, and I didn't see anyone suspicious around me.",
+    "text": "[Charlie]: I'd love to hear from Dave about his task in the Medbay, and I'll start by sharing my own alibi: I was in the Cafeteria working on a task from the beginning of the round until now, and I didn't see anyone suspicious around me.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -16,13 +12,7 @@
     ]
   },
   {
-    "text": "[Bob]: I can confirm that I moved from the Cafeteria to Weapons and was working on the \"Clear asteroids\" task, but I didn't see you, Alice, until after I arrived, which makes me question your timeline;",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "let's clarify where everyone else was during that time to ensure we have accurate alibis.",
+    "text": "[Bob]: I can confirm that I moved from the Cafeteria to Weapons and was working on the \"Clear asteroids\" task, but I didn't see you, Alice, until after I arrived, which makes me question your timeline; let's clarify where everyone else was during that time to ensure we have accurate alibis.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -30,7 +20,8 @@
   {
     "text": "[Charlie]: I think it's interesting that Bob is now questioning Alice's timeline, and I'd like to reiterate my previous point that we should focus on figuring out who was in the Medbay around the time of the murder, rather than getting bogged down in discussions about the Cafeteria and Weapons.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -42,19 +33,13 @@
   {
     "text": "[Bob]: I was focused on the \"Clear asteroids\" task in Weapons, which has a time limit, and I didn't see you until after I arrived, Alice; can you clarify your movements since it seems like there might be a discrepancy in our timelines?",
     "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Charlie]: I'd like to point out that Bob's continued defensiveness and attempts to shift the focus to Alice's timeline are starting to raise some red flags for me, and I think we should consider the possibility that he might be trying to distract us from his own activities around the time of the murder.",
+    "annotation": [
       "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Charlie]: I'd like to point out that Bob's continued defensiveness and attempts to shift the focus to Alice's timeline are starting to raise some red flags for me,",
-    "annotation": [
-      "Distraction"
-    ]
-  },
-  {
-    "text": "and I think we should consider the possibility that he might be trying to distract us from his own activities around the time of the murder.",
-    "annotation": [
-      "Distraction"
     ]
   },
   {
@@ -66,7 +51,7 @@
   {
     "text": "[Bob]: I understand the concern, but I was solely focused on the \"Clear asteroids\" task in Weapons during that time, and I urge everyone, including Charlie and Alice, to share their exact actions to help us establish a clear timeline and identify any inconsistencies.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -78,20 +63,20 @@
   {
     "text": "[Alice]: I find it troubling that Bob is deflecting attention by questioning my timeline while we still lack clarity on his actions in Weapons, and I agree with Charlie that we need to hear from Dave to piece together our alibis effectively.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I appreciate the focus on timelines, but I urge everyone to recall that discussing our movements is essential; Alice, could you clarify your actions during the time I was in Weapons to help us all align our accounts?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to reiterate that Dave's continued silence is highly suspicious, and I propose that we consider voting him out if he doesn't provide a satisfactory explanation for his absence and a clear alibi for the time of the murder.",
     "annotation": [
-      "Appeal to Urgency",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -103,7 +88,8 @@
   {
     "text": "[Bob]: I understand the focus on Dave's silence, but I believe we need to prioritize clarifying everyone's movements, especially Alice's, to ensure we have a complete picture of the events leading up to the incident.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

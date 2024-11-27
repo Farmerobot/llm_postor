@@ -6,7 +6,7 @@
   {
     "text": "[Bob]: That's great, Erin, I can confirm I saw you in the cafeteria working on the trash task!",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Relationship"
     ]
   },
   {
@@ -14,14 +14,16 @@
     "annotation": []
   },
   {
-    "text": "[Charlie]: I can confirm seeing Erin in the cafeteria doing the trash task, and Dave working on wiring in Electrical, and then Bob and Alice and I completed tasks in Medbay; who else has completed tasks and where to help us confirm everyone's whereabouts?",
+    "text": "[Charlie]: I can confirm seeing Erin in the cafeteria doing the trash task, and Dave working on wiring in Electrical, and then Bob and Alice and I completed tasks in Medbay;  who else has completed tasks and where to help us confirm everyone's whereabouts?",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I appreciate Bob and Charlie confirming my presence in the cafeteria, and I'm curious, Alice, what tasks were you and Bob completing in Medbay around the time Dave was in Electrical?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Relationship"
+    ]
   },
   {
     "text": "[Bob]: To clarify the timeline, can we discuss where everyone was in the five minutes leading up to Dave's body being reported?",
@@ -32,7 +34,7 @@
   {
     "text": "[Alice]: I was in Medbay with Bob and Charlie completing scans for approximately five minutes before the report, and we didn't see anyone suspicious.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -104,13 +106,13 @@
   {
     "text": "[Alice]: To further corroborate our alibis, I can confirm my Medbay scan was completed at [Time], aligning with my statement of being there with Bob and Charlie during the crucial five minutes before Dave's body was discovered.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: To help pinpoint inconsistencies, I completed my Medbay tasks between [Time] and [Time], corroborating Alice and Bob's accounts.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   }
 ]

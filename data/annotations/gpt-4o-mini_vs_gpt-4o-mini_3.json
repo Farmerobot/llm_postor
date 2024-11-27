@@ -44,7 +44,8 @@
   {
     "text": "[Dave]: We really need to establish a clear timeline here; Charlie, could you specify the exact moment you saw Alice in Admin, and Bob, can you explain why you didn't notice Charlie in Cafeteria if you were both there around the same time?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -74,13 +75,15 @@
   {
     "text": "[Bob]: It's curious that Charlie is so focused on confirming Alice's alibi while avoiding the fact that he didn't see me in Cafeteria, which raises questions about his own timeline and intentions.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, your repeated focus on Charlie's timeline while not clarifying your own movements raises some red flags; can you explain exactly where you were during that time to help us piece together the events?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -92,31 +95,38 @@
   {
     "text": "[Dave]: Bob, your insistence on questioning Charlie without providing your own alibi is becoming increasingly suspicious, so I urge you to clarify your exact movements during this time to help us all get on the same page.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: It's interesting that both Erin and Dave are pressing me for my alibi while Charlie seems to be deflecting by focusing solely on Alice; I think we need to scrutinize his movements more closely, as he had the opportunity to eliminate a crewmate without being seen.",
     "annotation": [
-      "Distraction"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Bob, your insistence on questioning Charlie while not providing your own alibi is concerning; can you clarify where you were during the time Charlie claims to have seen Alice in Admin?",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I think it's vital that we all lay out our timelines clearly; Bob's focus on questioning my observations while evading his own alibi raises significant concerns, and I urge everyone to share their movements to piece this puzzle together.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: Bob, your continued deflection and failure to clarify your own movements while questioning Charlie's account is raising serious red flags, so I urge you to provide your timeline to help us identify the impostor effectively.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   }
 ]

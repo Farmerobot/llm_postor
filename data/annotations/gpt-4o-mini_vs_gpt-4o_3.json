@@ -1,24 +1,12 @@
 [
   {
-    "text": "[Dave]: I was in the cafeteria the whole time and can confirm that Charlie and Erin were both busy with tasks, which gives them solid alibis,",
+    "text": "[Dave]: I was in the cafeteria the whole time and can confirm that Charlie and Erin were both busy with tasks, which gives them solid alibis, but we should definitely ask Bob what he was doing in Weapons since he was away from the group.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "but we should definitely ask Bob what he was doing in Weapons since he was away from the group.",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
-  },
-  {
-    "text": "[Bob]: I moved to Weapons to clear asteroids right after fixing the wiring in the Cafeteria,",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "so let's hear from those who weren't with us in the Cafeteria to piece together more information.",
+    "text": "[Bob]: I moved to Weapons to clear asteroids right after fixing the wiring in the Cafeteria, so let's hear from those who weren't with us in the Cafeteria to piece together more information.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -32,7 +20,7 @@
   {
     "text": "[Alice]: I moved to Admin to complete my tasks and was alone there, so I didn't see anyone else or any suspicious activity.",
     "annotation": [
-      "Vagueness"
+      "Appeal to Logic"
     ]
   },
   {
@@ -68,7 +56,7 @@
   {
     "text": "[Bob]: Alice, can you clarify which specific tasks you were doing in Admin, as it might help us verify your story against task progress or anyone else's observations?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -78,15 +66,9 @@
     ]
   },
   {
-    "text": "[Alice]: I completed the wiring task in Admin and was about to clean the floor when the meeting was called, so I couldn't see anyone else there,",
+    "text": "[Alice]: I completed the wiring task in Admin and was about to clean the floor when the meeting was called, so I couldn't see anyone else there, but Bob, can you confirm if you saw anyone else in Weapons while you were clearing asteroids to help narrow down suspects?",
     "annotation": [
-      "Vagueness"
-    ]
-  },
-  {
-    "text": "but Bob, can you confirm if you saw anyone else in Weapons while you were clearing asteroids to help narrow down suspects?",
-    "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -98,13 +80,13 @@
   {
     "text": "[Bob]: I was alone in Weapons the entire time I was there, so I didn't see anyone else who could have been involved in Erin's elimination.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Alice, since you were alone in Admin, can you explain why no one else was seen moving through there, and Bob, did you really not hear anything unusual while you were in Weapons?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {

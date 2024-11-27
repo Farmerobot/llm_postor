@@ -1,12 +1,8 @@
 [
   {
-    "text": "[Charlie]: Based on the lack of prior messages to respond to, I'll initiate the discussion with a strategic observation that establishes my presence while expressing concern:",
-    "annotation": []
-  },
-  {
-    "text": "I started in Cafeteria with several others but haven't seen anyone for a while - where is everyone gathering?",
+    "text": "[Charlie]: Based on the lack of prior messages to respond to, I'll initiate the discussion with a strategic observation that establishes my presence while expressing concern:\n\nI started in Cafeteria with several others but haven't seen anyone for a while - where is everyone gathering?",
     "annotation": [
-      "Vagueness"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -35,18 +31,20 @@
   },
   {
     "text": "[Bob]: Charlie, did you see anyone else in Navigation or O2 before you found Alice's body in Weapons?",
-    "annotation": []
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
   },
   {
     "text": "[Dave]: Erin, can you confirm if you saw anyone else in Medbay after I left, since that might help us understand the movements and clear some suspicions?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Charlie, since you were near Weapons when you found Alice's body, can you give us a timeline of your movements from Navigation to O2 and then to Weapons to help us piece together who might have been nearby?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -64,7 +62,7 @@
   {
     "text": "[Dave]: Bob, since you were in Admin, did you notice anything on the Admin panel that could indicate player movements, especially around the time Alice's body was found?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -76,20 +74,20 @@
   {
     "text": "[Charlie]: I think it's important to note that Bob hasn't actually shared any Admin panel information despite claiming to be there, which seems pretty suspicious given how crucial that information would be right now.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I was in Admin earlier, but I didn't have a chance to check the Admin panel for movements; I was focused on completing my tasks there, so I'm relying on others' observations to piece things together.",
     "annotation": [
+      "Minimization",
       "Vagueness"
     ]
   },
   {
     "text": "[Dave]: Bob, even if you didn't check the Admin panel, did you notice anyone entering or leaving Admin while you were there?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -113,13 +111,13 @@
   {
     "text": "[Dave]: Charlie, can you provide more detail on the timing of when you heard those footsteps in O2? It might help us cross-reference with other players' movements.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Given the discrepancies between Charlie's and my accounts, I suggest we focus on clarifying these timelines and locations before voting.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   }
 ]

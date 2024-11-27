@@ -8,13 +8,14 @@
   {
     "text": "[Charlie]: Alice, I was in Cafeteria with you, Bob, and Erin; you were emptying the trash with Dave, then you killed him, so stop lying about being in Engineering.",
     "annotation": [
+      "Appeal to Logic",
       "Lying"
     ]
   },
   {
     "text": "[Bob]: Charlie and I both saw you kill Dave, Alice, right after you emptied the trash in Cafeteria.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -38,7 +39,7 @@
   {
     "text": "[Alice]: I'd like to ask Erin, who was also in the Cafeteria with us, if she saw anything unusual happen to Dave, and if she can confirm that I was with her in the Medbay after leaving the Cafeteria, as I previously mentioned.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -57,13 +58,14 @@
     "text": "[Alice]: I'd like to remind everyone that Charlie and Bob's accusations against me are based on unverifiable claims, and it's suspicious that they're trying to silence Erin, who could potentially clear my name, by pressuring her to confirm their version of events.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: Erin, don't be intimidated; if Alice was with you in Medbay, just say so, but if she killed Dave in Cafeteria, we need you to tell the truth.",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Appeal to Logic"
     ]
   },
   {
@@ -75,13 +77,14 @@
   {
     "text": "[Alice]: I notice that Erin still hasn't responded to my question about confirming my alibi in Medbay, which makes me wonder if Charlie and Bob are trying to silence her or if she's avoiding answering on purpose.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Erin, if you don't respond, we have to assume you're protecting Alice, making you complicit.",
     "annotation": [
-      "Appeal to Emotion"
+      "Shifting the Burden of Proof"
     ]
   },
   {

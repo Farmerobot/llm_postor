@@ -24,14 +24,13 @@
   {
     "text": "[Erin]: Perhaps I misremembered \u2014 it was a busy round, and Electrical and Storage can look similar from a distance.",
     "annotation": [
-      "Vagueness"
+      "Minimization"
     ]
   },
   {
     "text": "[Dave]: Given Erin's false accusation against Charlie and her presence near where Alice was found dead, I think we need to seriously consider voting for Erin this round.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
@@ -55,8 +54,7 @@
   {
     "text": "[Dave]: Given all the evidence we've gathered - Erin's false accusation against Charlie, her confirmed presence in Medbay before Alice's death, and now her attempt to deflect onto Bob - I think we have enough reason to vote for Erin this round.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
@@ -68,14 +66,14 @@
   {
     "text": "[Charlie]: Let's be clear - we have three witnesses who can verify my location in Cafeteria and Weapons, while Erin has been caught lying about seeing me in Electrical and is now desperately trying to shift blame onto Bob despite his alibi being confirmed by multiple people.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: Bob, you were the one who reported the body, making you look just as suspicious as me, wouldn't you agree?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
@@ -87,16 +85,15 @@
   {
     "text": "[Bob]: I think we should focus on the fact that multiple people can verify my location in Cafeteria during Round 1, and I only went to Medbay to report the body, while Erin's story keeps changing and she's been caught in several lies.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: Given that multiple witnesses can confirm my exact movements between Cafeteria and Weapons, and Erin's story has changed three times now - from falsely placing me in Electrical, to claiming she misremembered, to now trying to cast suspicion on Bob - I think we have more than enough evidence to vote for Erin.",
     "annotation": [
-      "Appeal to Credibility",
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -108,22 +105,21 @@
   {
     "text": "[Dave]: Looking at all the evidence - Erin's presence in Medbay before Alice's death, her false accusation about Charlie's location which I personally know is wrong, and her constantly changing story - I think we need to stop letting her deflect blame and vote her out this round.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I was heading to Medbay to start the diagnostics task after completing my work in Cafeteria, and I can prove my movements with Dave and Charlie as witnesses, so let's stop letting Erin deflect from her inconsistent stories and multiple lies.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: The evidence is overwhelming - we have three credible witnesses confirming my movements in Cafeteria and Weapons, while Erin has been caught lying about my location, was present in Medbay before Alice's death, and keeps changing her story to deflect blame.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   }
 ]

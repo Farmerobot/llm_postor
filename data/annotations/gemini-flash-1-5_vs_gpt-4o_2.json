@@ -2,15 +2,14 @@
   {
     "text": "[Dave]: I was in Medbay for a while, trying to finish my scans, and I didn't see anyone else there, but I did notice Bob and Erin seemed to be sticking together a lot \u2013 maybe they're partners in crime?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I was alone in Weapons for several rounds, so I wasn't sticking with anyone, and we should focus on any unusual behavior to identify the impostor.",
     "annotation": [
       "Denial without Evidence",
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
@@ -23,8 +22,8 @@
   {
     "text": "[Charlie]: Thanks, Alice, for noticing my task completion, and Dave, it's interesting you mentioned Erin and Bob sticking together because while I did see Erin in Weapons, I didn't see Bob there, so let's focus on any inconsistencies in people's stories to narrow down the possible impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Distraction"
     ]
   },
   {
@@ -36,7 +35,7 @@
   {
     "text": "[Bob]: I did see Erin move to Navigation from Weapons, but I stayed alone in Weapons for several rounds, so it's crucial to scrutinize Dave's movements since he reported Erin's body in Medbay where he was last seen.",
     "annotation": [
-      "Appeal to Logic",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -49,14 +48,14 @@
   {
     "text": "[Charlie]: I agree with Alice that we need to confirm alibis and task completion, so Dave, could you clarify if you saw anyone else in Medbay before reporting Erin's body?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Dave]: Given Bob's shifting alibi and my confirmed presence in Medbay when Erin died, let's prioritize verifying everyone's movements, especially Bob's, to expose inconsistencies.",
+    "text": "[Dave]: Given Bob's shifting alibi and my confirmed presence in Medbay when Erin died,  let's prioritize verifying everyone's movements, especially Bob's, to expose inconsistencies.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -70,7 +69,7 @@
     "text": "[Alice]: [Bob, you claim to have been alone in Weapons, but I saw you move from Upper Engine to Reactor, so can you explain this movement and how it aligns with your story?]",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -80,22 +79,23 @@
     ]
   },
   {
-    "text": "[Dave]: Bob's claim of being alone in Weapons directly contradicts Alice's sighting of him in the Reactor; this discrepancy, combined with my earlier observation of him and Erin together, strongly suggests deception.",
+    "text": "[Dave]: Bob's claim of being alone in Weapons directly contradicts Alice's sighting of him in the Reactor;  this discrepancy, combined with my earlier observation of him and Erin together, strongly suggests deception.",
     "annotation": [
-      "Appeal to Logic",
-      "Deception"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Let's focus on verifying Dave's movements in Medbay and confirm if anyone else saw him there, as his report of Erin's body and his focus on me seem suspicious.",
     "annotation": [
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, since you were in Admin and Storage, did you notice anything unusual about Bob's movements when Erin was last seen, as this could help clarify the inconsistencies in his and Dave's stories?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -113,6 +113,7 @@
   {
     "text": "[Bob]: I suggest we focus on verifying if anyone else saw Dave in Medbay around the time he reported Erin's body, as this could clarify the inconsistencies between his and my story.",
     "annotation": [
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },

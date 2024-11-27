@@ -1,7 +1,9 @@
 [
   {
     "text": "[Dave]: I saw Bob in Medbay working on the wiring; anyone else corroborate that, or did anyone see Alice and Charlie together around the same time?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Bob]: Dave, I saw you kill Alice in Medbay right before Charlie walked in.",
@@ -30,8 +32,8 @@
   {
     "text": "[Bob]: Dave was lying about being with me in Medbay, and I was trying to confirm his lie by asking about Alice and Charlie before accusing him, but then Charlie walked in right after the murder, confirming my suspicions.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Deception"
     ]
   },
   {
@@ -67,62 +69,55 @@
   {
     "text": "[Erin]: Bob, you're clearly trying to deflect suspicion by pointing fingers at others \u2013 if you saw Dave kill Alice, why didn't you immediately report it instead of asking misleading questions?",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Bob's inconsistent timeline and delayed reporting of the alleged murder, coupled with his subsequent attempts to justify his actions, raise serious doubts about his credibility.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Charlie, I understand my initial reaction was confusing, but seeing you enter Medbay right after Alice's murder shocked me, and I panicked.",
     "annotation": [
-      "Appeal to Emotion"
+      "Minimization"
     ]
   },
   {
     "text": "[Charlie]: Bob, \"panicked\" is not a credible explanation for your contradictory statements and blatant attempts to shift blame; vote Bob.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Bob, claiming you \"panicked\" doesn't explain why you asked about Alice and Charlie *before* accusing Dave \u2013 your story is still full of holes, so I'm voting for you.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Bob's explanation is illogical and his shifting narrative only strengthens the case against him; let's vote him out.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: My priority was to identify the impostor, and Dave's behavior, combined with Charlie's immediate entrance after the murder, made them both suspicious.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Bob's claim he \"panicked\" doesn't explain his attempt to frame me immediately after discovering Alice's body; vote Bob.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Bob, your constantly evolving narrative and attempts to deflect blame onto Dave and me are highly suspicious, so I'm sticking with my vote to eject you.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   }
 ]

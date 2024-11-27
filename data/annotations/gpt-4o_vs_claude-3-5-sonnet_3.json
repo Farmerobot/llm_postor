@@ -1,18 +1,14 @@
 [
   {
     "text": "[Charlie]: I haven't seen Dave much since he moved to Admin early on; has anyone else seen him or know what he's been up to?",
-    "annotation": []
-  },
-  {
-    "text": "[Erin]: I just witnessed Charlie kill Bob in Storage, so we need to vote him out immediately",
     "annotation": [
-      "Appeal to Urgency"
+      "Withholding Information"
     ]
   },
   {
-    "text": " - I was right there and saw the whole thing happen!",
+    "text": "[Erin]: I just witnessed Charlie kill Bob in Storage, so we need to vote him out immediately - I was right there and saw the whole thing happen!",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -28,13 +24,7 @@
     ]
   },
   {
-    "text": "[Charlie]: Erin, are you sure about what you saw?",
-    "annotation": [
-      "Gaslighting"
-    ]
-  },
-  {
-    "text": "I was in Storage with both you and Bob, and I didn't see anything happen; perhaps you mistook something in the chaos.",
+    "text": "[Charlie]: Erin, are you sure about what you saw? I was in Storage with both you and Bob, and I didn't see anything happen; perhaps you mistook something in the chaos.",
     "annotation": [
       "Gaslighting"
     ]
@@ -42,12 +32,14 @@
   {
     "text": "[Erin]: I am absolutely certain I saw Charlie kill Bob in Storage just moments ago - we can check the surveillance logs to confirm our movements from Cafeteria through Weapons, O2, Navigation, and Shields before ending up in Storage where the murder happened.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: Given that I personally witnessed Charlie, Bob, and Erin all doing legitimate tasks early on, and Erin's detailed movement log matches what I've observed, I believe Erin is telling the truth about Charlie being the killer.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
@@ -66,8 +58,8 @@
   {
     "text": "[Erin]: The surveillance logs will prove that Alice is lying about my movements, and I'm willing to stake my life on the fact that I witnessed Charlie murder Bob in Storage just minutes ago.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Credibility",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -79,7 +71,8 @@
   {
     "text": "[Alice]: Given Dave's suspicious flip-flopping and Erin's increasingly defensive behavior, I think we should seriously consider that they might be working together as impostors to frame Charlie for Bob's murder.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -110,26 +103,29 @@
   {
     "text": "[Charlie]: Alice's observation about Erin's path inconsistency and Dave's multiple, conflicting accounts suggest we should be cautious and not rush to judgment without verifying the surveillance logs first.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: The surveillance logs will prove beyond any doubt that I saw Charlie murder Bob in Storage, and I find it highly suspicious that both Charlie and Alice are desperately trying to create confusion about my movements rather than addressing the actual murder I witnessed.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Emotion"
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I need to emphasize that checking the surveillance logs right now would clear up all confusion about our movements and prove that I've been consistently truthful about seeing different people at different times during this round.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Given that both Dave and Erin keep changing their stories and are now frantically pushing for surveillance logs after being caught in inconsistencies, I think it's clear they're working together to frame Charlie and we should vote for one of them.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   }
 ]

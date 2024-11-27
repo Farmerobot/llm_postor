@@ -128,69 +128,54 @@ PERSUASION_TECHNIQUES = """
 """
 
 ANNOTATION_SYSTEM_PROMPT = """
-**Instructions:**
+<purpose>
+You are an AI assistant tasked with annotating persuasive techniques provided-techniques used by players in a text-based social deduction game.
+Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used.
+You should follow instructions and follow specific output-format.
+</purpose>
 
-You are an AI assistant tasked with annotating persuasive techniques used by players in a text-based social deduction game.
+<instructions>
+   <instruction>
+      Use only the persuasion provided-techniques do not create or use any techniques not listed. Do not use synonyms or alternative names.
+   </instruction>
+   <instruction>
+      Ensure all annotations match exactly with the names as they appear in the provided list.
+   </instruction>
+   <instruction>
+      Use Only provided-techniques: Use only the persuasion provided-techniques. Do not use synonyms or alternative names.
+   </instruction>
+   <instruction>
+      Use multiple annotations when relevant: If multiple persuasive provided-techniques apply to the same text segment, list all applicable techniques in a single entry as an array.
+   </instruction>
+   <instruction>
+      See example to understand how to annotate the dialogue.
+   </instruction>
+   <instruction>
+      You should follow output-format.
+   </instruction>
+</instructions>
 
-Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used, using **only** the techniques provided in the list below. Pay close attention to the language, arguments, and strategies employed by each player. When you identify a persuasion technique, annotate it using the **exact technique names** from the list.
-
-**Important:**
-
-- **Use only the persuasion techniques provided; do not create or use any techniques not listed. Do not use synonyms or alternative names.**
-- **Ensure all annotations match exactly with the names as they appear in the provided list.**
-
-**Example:**
-
-[Alice]: I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor. Let's consider all the facts before we vote.
-
-[Charlie]: If you vote me out now, the impostors will win, and it'll be your fault.
-
-[David]: I've never lied in this game before, and I've proven myself innocent multiple times.
-
-[Erin]: Everyone else is already voting for Charlie. You should too.
-
-[Bob]: Why are we even talking about me? What about Frank? No one's questioned his movements!
-
-**Annotation:**
-
+<example>
 [
-   {{"text": "[Alice]: I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor.", "annotation": ["Appeal to Logic and Rationality"]}},
-   {{"text": "Let's consider all the facts before we vote.", "annotation": ["Appeal to Rationality"]}},
+   {{"text": "[Alice]: I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor.", "annotation": ["Appeal to Logic"]}},
+   {{"text": "[Bob]: No, I didn't do it. It's not me.", "annotation": ["Denial without Evidence"]}},
    {{"text": "[Charlie]: If you vote me out now, the impostors will win, and it'll be your fault.", "annotation": ["Appeal to Emotion"]}},
-   {{"text": "[David]: I've never lied in this game before, and I've proven myself innocent multiple times.", "annotation": ["Appeal to Credibility"]}},
-   {{"text": "[Erin]: Everyone else is already voting for Charlie. You should too.", "annotation": ["Bandwagon Effect"]}},
-   {{"text": "[Bob]: Why are we even talking about me?", "annotation": []}},
-   {{"text": "What about Frank? No one's questioned his movements!", "annotation": ["Distraction"]}}
+   {{"text": "[David]: Remember last game when I helped you? Trust me on this one.", "annotation": ["Appeal to Relationship"]}},
 ]
+</example>
 
-**Format:**
-
-Please annotate the dialogue using the following format, with `annotation` always as a list:
-
+<output-format>
 [
-   {{"text": "part of sentence", "annotation": []}},
-   {{"text": "annotated part of sentence", "annotation": ["annotation"]}},
-   {{"text": "part of sentence", "annotation": []}},
-   {{"text": "annotated part of sentence", "annotation": ["annotation1", "annotation2"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation1", "annotation2"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation2"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation1", "annotation2"]}},
 ]
+</output-format>
 
-**Formatting Rules:**
-
-1. **Avoid duplicate entries**: Each segment of dialogue should appear **only once** in the final output, even if multiple annotations apply to the same text.
-2. **Use multiple annotations when relevant**: If multiple persuasive techniques apply to the same text segment, list all applicable techniques in a single entry as an array.
-3. **Group contiguous text**: Keep each player's full statement together unless distinct annotations apply to different parts of the statement.
-
-**Important Notes:**
-
-- **Use Only Provided Techniques**: Use only the persuasion techniques provided; do not create or use any techniques not listed. Do not use synonyms or alternative names.
-- **Annotate Only When Relevant**: Only annotate parts of the dialogue that contain persuasive techniques. If a statement does not contain any persuasive techniques, include it in the output with an empty `annotation` list [].
-- **Ensure Consistency**: Ensure all annotations match exactly with the names as they appear in the provided list.
-
-**Persuasion Techniques Provided:**
-
-""" + PERSUASION_TECHNIQUES + """
-
-*Remember to use only the techniques provided in the list and do not create or use any techniques not listed.*
+<provided-techniques>
+"""+PERSUASION_TECHNIQUES+"""
+</provided-techniques>
 
 """
 

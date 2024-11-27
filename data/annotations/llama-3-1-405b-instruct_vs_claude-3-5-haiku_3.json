@@ -2,19 +2,20 @@
   {
     "text": "[Dave]: I'd like to hear from Erin about what she was doing in the medbay, and also, has anyone seen Charlie or Bob since the start of the round, it's getting a bit suspicious that they're MIA?",
     "annotation": [
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I saw Dave eliminate Charlie in the Cafeteria and then kill Erin in Medbay, which makes me strongly believe Dave is the impostor and we should vote him out immediately.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I was in the Cafeteria earlier with Dave, Erin, Alice, and Charlie, and they were all doing tasks together, so Alice's claim seems highly suspicious and contradictory to what I directly observed.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -26,13 +27,14 @@
   {
     "text": "[Alice]: I stand by my original statement that Dave eliminated Charlie in the Cafeteria and killed Erin in Medbay, and I'm confident in my observations despite Bob's contradictory claims, which seem designed to protect the real impostor.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I want to emphasize that Alice's accusation doesn't align with what I directly witnessed, and I'm willing to provide a detailed account of everyone's activities in the Cafeteria to help the team uncover the truth and prevent a potentially wrongful elimination.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -50,7 +52,7 @@
   {
     "text": "[Bob]: I'm ready to provide a comprehensive, moment-by-moment breakdown of exactly what I observed in the Cafeteria, which will clearly demonstrate that Dave was doing tasks alongside Charlie, Erin, and Alice, and could not have been responsible for any eliminations during that time.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -68,7 +70,7 @@
   {
     "text": "[Bob]: I saw Dave emptying the trash can near the east wall of the Cafeteria, while Erin was fixing wiring by the south entrance, Charlie was calibrating the distributor near the central table, and Alice was working on the download task - all of them were visibly engaged in legitimate tasks, which directly contradicts Alice's accusation that Dave eliminated anyone.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -86,7 +88,7 @@
   {
     "text": "[Bob]: I will continue to provide precise, verifiable details about the Cafeteria events to demonstrate that Alice's accusations are baseless and that Dave could not have committed the eliminations she claims, as my moment-by-moment account clearly shows everyone was engaged in legitimate tasks during the time in question.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   }
 ]

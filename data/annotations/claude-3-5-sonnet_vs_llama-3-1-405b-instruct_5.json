@@ -1,7 +1,9 @@
 [
   {
     "text": "[Charlie]: I'm concerned that everyone seems really spread out - maybe we should stick together more to keep each other safe.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Emotion"
+    ]
   },
   {
     "text": "[Erin]: I agree with Charlie that it's a good idea to stick together, but we also need to consider completing tasks to progress in the game, so maybe we can prioritize tasks in the same general area to stay relatively close to each other.",
@@ -12,7 +14,7 @@
   {
     "text": "[Alice]: I think we should start by focusing on tasks in the Admin area, as I've already been working on some of those, and then we can move on to other areas together, does anyone have any specific tasks they've been working on that we can prioritize next?",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -92,8 +94,7 @@
   {
     "text": "[Charlie]: I know exactly what I saw - Bob definitely entered Storage from Admin, and Alice's claim that she was in Admin but didn't see him makes no sense, which makes me highly suspicious of her intentions.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Logic"
     ]
   },
   {

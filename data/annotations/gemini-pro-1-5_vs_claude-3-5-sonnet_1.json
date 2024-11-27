@@ -30,15 +30,13 @@
   {
     "text": "[Erin]: Given Bob's suspicious behavior in falsely placing me in Navigation and his weak excuse about being mistaken, I think we need to seriously consider that he's trying to frame me to cover up his own involvement in Alice's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I find it very telling that Bob is now backtracking on his Navigation claim after multiple of us confirmed seeing Erin go to Weapons, and this kind of deliberate misinformation seems like classic impostor behavior.",
     "annotation": [
-      "Appeal to Logic",
-      "Deception"
+      "Appeal to Logic"
     ]
   },
   {
@@ -50,6 +48,7 @@
   {
     "text": "[Bob]: Perhaps we should focus on who *hasn't* provided a clear alibi, rather than dwelling on an honest mistake I made about Erin's location.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -99,7 +98,7 @@
   {
     "text": "[Bob]: Has anyone considered that Charlie's supposed \"wiring task\" could be a clever ruse to observe and manipulate our movements?",
     "annotation": [
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -111,13 +110,15 @@
   {
     "text": "[Charlie]: I was doing the wiring task in plain view of multiple crewmates, including Dave who can verify this, so Bob's desperate attempt to cast doubt on my activities only further proves he's trying to deflect from his own guilt as the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I was literally standing next to Charlie doing the same wiring task, so Bob's attempt to discredit Charlie's observations is completely false and just proves he's desperately trying to avoid being voted out as the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   }
 ]

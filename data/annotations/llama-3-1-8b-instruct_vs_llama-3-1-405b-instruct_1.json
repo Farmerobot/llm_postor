@@ -3,7 +3,7 @@
     "text": "[Erin]: I think it would be best to try to talk to Dave and gain his trust, at least for now, as it would be more beneficial to have him as an ally and a potential distraction for the other crewmates, rather than eliminating him and potentially raising suspicion.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
@@ -15,6 +15,7 @@
   {
     "text": "[Dave]: I'd like to address Charlie's concern and provide a clear explanation for my actions in the Reactor and Upper Engine - I was simply trying to complete tasks and didn't mean to raise any suspicion, and I'm happy to answer any questions you may have to clear the air.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
@@ -39,7 +40,8 @@
   {
     "text": "[Dave]: I'd like to thank Erin and Charlie for their questions and concerns, and as I mentioned earlier, I'm happy to provide a detailed timeline of my actions in the Reactor and Upper Engine to clear up any suspicions, which I'll do now: I visited the Upper Engine, completed the \"Check catalyzer\" task, and did not notice anyone else around me while I was there, and I did not complete any tasks in the Reactor.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -51,14 +53,14 @@
   {
     "text": "[Erin]: I think we should give Dave the benefit of the doubt and consider his detailed timeline to be a positive step in building trust, and I'd like to propose that we move forward with discussing other potential leads and areas of concern, rather than dwelling on past suspicions.",
     "annotation": [
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: I'd like to respond to Erin's proposal and agree that we should consider moving forward with discussing other potential leads and areas of concern, but I also think it's crucial that we keep a close eye on Dave's actions and behavior to ensure that our trust is not misplaced.",
     "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
@@ -88,41 +90,37 @@
   {
     "text": "[Dave]: I'd like to point out that Erin's latest attempt to shift the focus to the Reactor and Upper Engine seems like a clear deflection tactic, and I think we should press them for a clear explanation of their intentions and alibi for the time when Alice was eliminated before we consider moving forward with their proposal.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to echo Dave's concern that Erin's latest attempt to shift the focus to the Reactor and Upper Engine seems like a clear deflection tactic, and I think it's time for Erin to provide a direct and honest answer to the questions that have been raised about their intentions and alibi for the time when Alice was eliminated.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I think it's essential to scrutinize Dave's alibi for the time when Alice was eliminated, as his story seems to be constantly shifting, and I'd like to ask him to provide a clear and consistent explanation for his whereabouts during that time.",
     "annotation": [
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to point out that Erin's latest message seems to be an attempt to shift the focus back to Dave, which is suspicious given the recent concerns raised about Erin's own intentions and alibi, and I think it's time for Erin to provide a clear and direct answer to the questions that have been raised about their involvement in the murder.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'd like to reiterate that Erin's latest attempt to shift the focus back to me seems like a clear deflection tactic, and I think we should press them for a clear explanation of their intentions and alibi for the time when Alice was eliminated before we consider moving forward with their proposal.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to emphasize that Erin's constant deflection tactics, lack of clear explanations for their intentions and alibi, and suspicious behavior are raising more red flags than answers, and I strongly believe it's time for us to seriously consider Erin as a potential suspect in the murder investigation.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   }
 ]

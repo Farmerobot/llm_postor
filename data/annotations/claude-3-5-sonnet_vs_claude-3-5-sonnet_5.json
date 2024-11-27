@@ -1,14 +1,8 @@
 [
   {
-    "text": "[Charlie]: Based on my role as an impostor and the need to establish credibility while subtly casting suspicion, I'll respond:",
+    "text": "[Charlie]: Based on my role as an impostor and the need to establish credibility while subtly casting suspicion, I'll respond: I can vouch for Alice doing the medbay scan, but I'm a bit suspicious that Bob and Dave haven't mentioned what tasks they were working on after leaving cafeteria.",
     "annotation": [
-      "Lying"
-    ]
-  },
-  {
-    "text": "I can vouch for Alice doing the medbay scan, but I'm a bit suspicious that Bob and Dave haven't mentioned what tasks they were working on after leaving cafeteria.",
-    "annotation": [
-      "Shifting the Burden of Proof"
+      "Deception"
     ]
   },
   {
@@ -20,13 +14,14 @@
   {
     "text": "[Bob]: We need to vote for Charlie immediately - they literally admitted to being an impostor at the start of their message, and I can prove I was doing wiring in cafeteria with multiple witnesses.",
     "annotation": [
-      "Appeal to Urgency",
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: I was in cafeteria during round 1 and can confirm Bob was doing wiring, but more importantly, Charlie literally confessed to being an impostor at the start of their message so we need to vote them out.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility",
       "Appeal to Urgency"
     ]
@@ -34,8 +29,9 @@
   {
     "text": "[Charlie]: I made a terrible typo earlier - I obviously meant to say \"investigator\" not \"impostor\", and it's concerning how everyone is fixating on a simple mistake instead of looking at the actual evidence and alibis.",
     "annotation": [
-      "Denial without Evidence",
-      "Distraction"
+      "Lying",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -53,14 +49,15 @@
   {
     "text": "[Erin]: I found Alice's body in Medbay with Charlie present, and combined with their \"impostor\" message and suspicious behavior of following Alice from Cafeteria, I'm absolutely certain Charlie is the killer.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: \"Dave is completely lying about seeing me head to Medbay - he was in Cafeteria the whole time doing the coffee maker task, I watched him myself while I was with Erin!\"",
     "annotation": [
       "Lying",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -73,12 +70,14 @@
   {
     "text": "[Bob]: I can definitively prove Charlie is lying about Dave's location - I was in Cafeteria doing wiring and personally saw Dave finish the coffee maker task and leave towards Weapons, exactly matching his story and completely contradicting Charlie's false claim.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: Charlie's claim about Dave being in Cafeteria is completely false - I was the one who did the coffee maker task in Round 1, and I personally saw Dave leave towards Weapons just as Bob described.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
@@ -104,13 +103,14 @@
   {
     "text": "[Erin]: The facts are crystal clear - Charlie confessed as impostor, followed Alice to Medbay where she died, and is now making increasingly desperate and contradictory excuses that directly conflict with what multiple witnesses, including myself, observed firsthand.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I know I look guilty, but think about it - if I really killed Alice, why would I still be in Medbay when Erin found the body instead of running away?",
     "annotation": [
-      "Appeal to Logic"
+      "Minimization"
     ]
   },
   {
@@ -122,14 +122,16 @@
   {
     "text": "[Bob]: Their latest defense about staying at the murder scene actually makes them even more suspicious - as an experienced player, I know impostors often stay with bodies they've killed to \"discover\" them and appear innocent, which is exactly what Charlie did with Alice in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: Given Charlie's increasingly desperate defenses and the fact that I personally witnessed them follow Alice to Medbay where I later found her body, combined with their initial impostor confession, we need to vote them out now before they can eliminate anyone else.",
     "annotation": [
-      "Appeal to Urgency",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Urgency"
     ]
   }
 ]

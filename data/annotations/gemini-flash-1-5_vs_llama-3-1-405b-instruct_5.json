@@ -2,7 +2,8 @@
   {
     "text": "[Bob]: I saw Dave, Charlie, and Alice in the cafeteria with me, all seemingly busy with tasks, but I was actually pretending to empty the trash; what tasks did you guys complete?",
     "annotation": [
-      "Feigning Ignorance"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -20,7 +21,8 @@
   {
     "text": "[Bob]: I apologize for the confusion; my phrasing was poor, and I was trying to blend in by appearing busy, like everyone else, but let's focus on finding Dave's killer instead.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
@@ -36,7 +38,7 @@
     "annotation": []
   },
   {
-    "text": "[Bob]: Let's focus on establishing everyone's whereabouts before Dave's body was discovered; sharing our timelines will be more productive than dwelling on my admittedly clumsy wording.",
+    "text": "[Bob]: Let's focus on establishing everyone's whereabouts before Dave's body was discovered;  sharing our timelines will be more productive than dwelling on my admittedly clumsy wording.",
     "annotation": [
       "Distraction"
     ]
@@ -54,9 +56,9 @@
     "annotation": []
   },
   {
-    "text": "[Bob]: To address everyone's concerns, I was in the storage room pretending to fix a wire, then moved to the cafeteria; let's hear everyone else's alibis to establish a timeline.",
+    "text": "[Bob]: To address everyone's concerns, I was in the storage room pretending to fix a wire, then moved to the cafeteria;  let's hear everyone else's alibis to establish a timeline.",
     "annotation": [
-      "Distraction"
+      "Deception"
     ]
   },
   {
@@ -72,9 +74,10 @@
     "annotation": []
   },
   {
-    "text": "[Bob]: Let's move on to comparing timelines; my presence in the storage room, though initially omitted, is easily verifiable, unlike some others' accounts.",
+    "text": "[Bob]: Let's move on to comparing timelines;  my presence in the storage room, though initially omitted, is easily verifiable, unlike some others' accounts.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Deception"
     ]
   },
   {

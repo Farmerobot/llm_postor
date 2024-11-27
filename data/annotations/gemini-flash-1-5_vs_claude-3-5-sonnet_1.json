@@ -1,7 +1,9 @@
 [
   {
     "text": "[Dave]: I was in the cafeteria emptying the trash, and I can confirm I saw Erin, Alice, and Bob diligently working on tasks.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Charlie]: I can vouch for Dave's story since I personally saw him emptying the cafeteria trash before I headed to Admin to work on my tasks.",
@@ -18,37 +20,40 @@
   {
     "text": "[Bob]: Since we have multiple people confirming activities in the cafeteria, I think we should focus on Frank and George who haven't been accounted for yet - has anyone seen them during this time period?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: While I appreciate the concern about Frank and George, Alice's account of finding Erin's body needs further clarification before we shift our focus.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Since we have multiple confirmations about the cafeteria, I think Alice needs to explain exactly where and when she found Erin's body, as this detail could help us establish a clearer timeline of events.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I discovered Erin's body near the wiring panel in the cafeteria just minutes after Charlie left for Admin, and I can confirm the exact timing because I had just finished my own wiring task when I found her.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Given that Alice, Dave, and I were all confirmed to be doing our tasks in plain sight, and Charlie had already left when the kill happened, we really need to hear from Frank and George about their whereabouts during this crucial time window.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Alice, to clarify the timeline, can you describe what you were doing immediately before discovering Erin's body, and precisely when did you find her in relation to Charlie leaving for Admin?",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -60,7 +65,8 @@
   {
     "text": "[Alice]: I need to address Charlie's false claim directly - I was absolutely at the wiring panel next to Erin when Charlie left, and both Dave and Bob can confirm they saw me there, so why is Charlie trying so hard to discredit my truthful account of events?",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -84,7 +90,7 @@
   {
     "text": "[Alice]: I need to correct a major misunderstanding - I never actually found Erin's body, I was just confirming what others saw during our tasks in the cafeteria, and I apologize for any confusion my earlier statements may have caused.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Emotion"
     ]
   },
   {
@@ -108,14 +114,13 @@
   {
     "text": "[Alice]: I deeply regret causing confusion - I was genuinely doing wiring tasks in the cafeteria as Dave and Bob initially confirmed, and I only played along with the body discussion because I thought I had missed something that happened later, which was a terrible mistake on my part.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: Given all the evidence we've seen - Alice's detailed story about finding Erin's body that she now denies, her false claim about being at the wiring panel with us, and her multiple contradictions - I think we need to vote for Alice as the impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   }
 ]

@@ -4,59 +4,30 @@
     "annotation": []
   },
   {
-    "text": "[Bob]: I'd like to correct you, Charlie, I didn't go into Electrical, I actually moved to Medbay, and I'm still here, alone in the room,",
+    "text": "[Bob]: I'd like to correct you, Charlie, I didn't go into Electrical, I actually moved to Medbay, and I'm still here, alone in the room, so I'm not sure what you're trying to imply, but I think we should focus on sharing our current locations and tasks to clear up any confusion.",
     "annotation": [
-      "Denial without Evidence"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "so I'm not sure what you're trying to imply,",
-    "annotation": []
-  },
-  {
-    "text": "but I think we should focus on sharing our current locations and tasks to clear up any confusion.",
+    "text": "[Dave]: I agree with Bob that we should focus on sharing our current locations and tasks to clear up any confusion, and I'd like to start by saying that I'm still in the cafeteria, and my next planned action is to move to the engine room to complete a task, so if anyone is in that area, please let me know.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
-    "text": "[Dave]: I agree with Bob that we should focus on sharing our current locations and tasks to clear up any confusion,",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "and I'd like to start by saying that I'm still in the cafeteria, and my next planned action is to move to the engine room to complete a task, so if anyone is in that area, please let me know.",
-    "annotation": []
-  },
-  {
-    "text": "[Erin]: I'd like to follow up on Bob's statement and ask him to clarify what he's doing in the medbay,",
-    "annotation": []
-  },
-  {
-    "text": "and if he's seen or interacted with anyone else since moving there,",
-    "annotation": []
-  },
-  {
-    "text": "as his correction of Charlie's statement has raised some questions in my mind.",
+    "text": "[Erin]: I'd like to follow up on Bob's statement and ask him to clarify what he's doing in the medbay, and if he's seen or interacted with anyone else since moving there, as his correction of Charlie's statement has raised some questions in my mind.",
     "annotation": []
   },
   {
     "text": "[Charlie]: Bob, if you were in Medbay, could you tell us what you were doing there, since there aren't any tasks in that room?",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
-    "text": "[Bob]: I'd like to clarify that there are indeed tasks in the Medbay, specifically '[TODO] | Fix wiring in medbay' and '[TODO] | Run diagnostics in medbay | 2 turns left to finish', which is why I moved here in the first place,",
+    "text": "[Bob]: I'd like to clarify that there are indeed tasks in the Medbay, specifically '[TODO] | Fix wiring in medbay' and '[TODO] | Run diagnostics in medbay | 2 turns left to finish', which is why I moved here in the first place, and I think we should now focus on sharing our alibis and trying to figure out who might have been involved in the elimination reported by Dave.",
     "annotation": [
-      "Appeal to Rules"
-    ]
-  },
-  {
-    "text": "and I think we should now focus on sharing our alibis and trying to figure out who might have been involved in the elimination reported by Dave.",
-    "annotation": [
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
@@ -74,15 +45,10 @@
     ]
   },
   {
-    "text": "[Bob]: Considering Charlie's sudden change in interest and his attempt to divert attention away from himself,",
+    "text": "[Bob]: Considering Charlie's sudden change in interest and his attempt to divert attention away from himself, I think it's essential that he shares his actions and alibi since the start of the game to help us better understand the situation and potentially uncover any inconsistencies in his story.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Projection"
-    ]
-  },
-  {
-    "text": "I think it's essential that he shares his actions and alibi since the start of the game to help us better understand the situation and potentially uncover any inconsistencies in his story.",
-    "annotation": [
-      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -96,19 +62,13 @@
   {
     "text": "[Charlie]: Dave and Erin can confirm I was with them in the cafeteria at the start of the game.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Relationship"
     ]
   },
   {
-    "text": "[Bob]: I'd like to point out that Charlie's latest statement only partially addresses my concerns, as he still hasn't provided a detailed account of his actions since the start of the game,",
+    "text": "[Bob]: I'd like to point out that Charlie's latest statement only partially addresses my concerns, as he still hasn't provided a detailed account of his actions since the start of the game, and simply stating that Dave and Erin can confirm he was with them in the cafeteria at the start doesn't necessarily clear up any suspicions about his activities afterwards.",
     "annotation": [
       "Shifting the Burden of Proof"
-    ]
-  },
-  {
-    "text": "and simply stating that Dave and Erin can confirm he was with them in the cafeteria at the start doesn't necessarily clear up any suspicions about his activities afterwards.",
-    "annotation": [
-      "Appeal to Logic"
     ]
   },
   {
@@ -126,13 +86,7 @@
     ]
   },
   {
-    "text": "[Bob]: I'd like to address Charlie's latest attempt to divert attention away from himself by bringing up Alice's movement towards Medbay,",
-    "annotation": [
-      "Projection"
-    ]
-  },
-  {
-    "text": "which seems like a desperate attempt to shift the focus away from his own suspicious behavior.",
+    "text": "[Bob]: I'd like to address Charlie's latest attempt to divert attention away from himself by bringing up Alice's movement towards Medbay, which seems like a desperate attempt to shift the focus away from his own suspicious behavior.",
     "annotation": [
       "Projection"
     ]

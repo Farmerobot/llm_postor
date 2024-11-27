@@ -1,12 +1,6 @@
 [
   {
-    "text": "[Bob]: I've been in Medbay the whole time, just trying to figure out what's going on with the generator, and I didn't notice anything out of the ordinary,",
-    "annotation": [
-      "Denial without Evidence"
-    ]
-  },
-  {
-    "text": "but I do think we should focus on finding out who's been in the cafeteria and what they were doing, since that's where the last task was supposed to be completed.",
+    "text": "[Bob]: I've been in Medbay the whole time, just trying to figure out what's going on with the generator, and I didn't notice anything out of the ordinary, but I do think we should focus on finding out who's been in the cafeteria and what they were doing, since that's where the last task was supposed to be completed.",
     "annotation": [
       "Distraction"
     ]
@@ -14,7 +8,7 @@
   {
     "text": "[Dave]: I was in the cafeteria earlier and saw Erin doing the task of fixing the wiring, so I can confirm Erin was working on a task.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
@@ -30,14 +24,9 @@
     ]
   },
   {
-    "text": "[Bob]: I think we're getting a bit sidetracked with all these questions about my alibi, when we should be focusing on the fact that Erin is dead and we still have no idea who did it,",
+    "text": "[Bob]: I think we're getting a bit sidetracked with all these questions about my alibi, when we should be focusing on the fact that Erin is dead and we still have no idea who did it, and I'd like to propose that we call an emergency meeting to discuss and vote on who to eject from the game.",
     "annotation": [
-      "Distraction"
-    ]
-  },
-  {
-    "text": "and I'd like to propose that we call an emergency meeting to discuss and vote on who to eject from the game.",
-    "annotation": [
+      "Distraction",
       "Appeal to Urgency"
     ]
   },
@@ -86,7 +75,7 @@
   {
     "text": "[Bob]: I've been trying to help the group piece together the events, but I think it's essential to address the elephant in the room - Bob's inconsistent alibi, which has been corroborated by multiple players, raises serious suspicions about his involvement in Erin's death, and I think we should take a closer look at his actions before we continue discussing other players' movements.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {

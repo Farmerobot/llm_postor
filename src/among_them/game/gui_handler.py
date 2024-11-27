@@ -80,8 +80,8 @@ def install_monitor():
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        if OPENROUTER_API_KEY != "None":
-            install_monitor()
+        # if OPENROUTER_API_KEY != "None":
+        #     install_monitor()
         game_overview, tournaments, techniques = st.tabs([
             "Game Overview",
             "Tournaments",
@@ -302,17 +302,36 @@ class GUIHandler(BaseModel):
                                 ])
                             break
 
-                    annotation_json = json.loads(annotate_dialogue(discussion_chat))
+                    if not discussion_chat:
+                        print(f"No discussion chat found for file: {file_name}")
+                        st.write(f"No discussion chat found for file: {file_name}")
+                        return
+
+                    annotation_json = None
+                    annotated = annotate_dialogue(discussion_chat).strip()
+                    if not annotated:
+                        raise ValueError("no annotation")
+                        return
+                    if annotated.startswith("```json"):
+                        annotated = annotated.split("```json", 1)[1].split("```", 1)[0].strip()
+                    
+                    try:
+                        annotation_json = json.loads(annotated)
+                    except Exception as e:
+                        print(annotated)
+                        raise e
                     if not annotation_json:
                         print(f"No annotation found for file: {file_name}")
                         st.write(f"No annotation found for file: {file_name}")
+                        raise ValueError("no annotation")
+                        return
                     else:
                         # Create annotations directory if it doesn't exist
                         os.makedirs("data/annotations", exist_ok=True)
 
                         # Save annotation to file
                         annotation_file = os.path.join(
-                            "data/annotations", f"{os.path.splitext(file_name)[0]}.json"
+                            "data/annotations", file_name
                         )
                         with open(annotation_file, "w", encoding="utf-8") as f:
                             json.dump(annotation_json, f, indent=2)
@@ -356,8 +375,14 @@ class GUIHandler(BaseModel):
                     progress_text.write(
                         f"Analyzing files... ({files_analyzed}/{total_files})"
                     )
-                    st.write(f"Finished analyzing {file_name}")
-
+                    try:
+                        future.result()  # This will raise any exceptions that occurred
+                        st.write(f"✅ Successfully analyzed {file_name}")
+                    except Exception as e:
+                        st.error(f"❌ Error analyzing {file_name}: {str(e)}")
+                        executor._threads.clear()
+                        raise e
+                
             status.update(label="Analysis complete!", state="complete")
             progress_text.empty()
 

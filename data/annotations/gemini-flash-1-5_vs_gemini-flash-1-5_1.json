@@ -1,16 +1,14 @@
 [
   {
     "text": "[Erin]: I saw Alice in the cafeteria earlier, she seemed a bit jumpy; anyone else notice anything unusual about her, or was anyone else in Medbay after the cafeteria?",
-    "annotation": [
-      "Vagueness"
-    ]
+    "annotation": []
   },
   {
     "text": "[Dave]: I was in the cafeteria with Alice, Bob, and Charlie, and Alice seemed fine while working on wiring, but I haven't seen her since and am now in Admin.",
     "annotation": []
   },
   {
-    "text": "[Bob]: Erin, since you saw Alice seem jumpy, can you describe what specifically made her seem that way, and what time was this, to help us piece together what might have happened?",
+    "text": "[Bob]: Erin,  since you saw Alice seem jumpy, can you describe what specifically made her seem that way, and what time was this, to help us piece together what might have happened?",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -18,7 +16,8 @@
   {
     "text": "[Charlie]: I agree with Bob and Erin, more details about Alice's behavior and the timing are crucial to understand what happened, and I can confirm I was in the cafeteria with Alice, Dave, and Bob for the wiring task before heading to Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -36,17 +35,18 @@
   {
     "text": "[Bob]: Let's create a timeline, starting from when we left the cafeteria, noting our locations and the times we were there, to pinpoint who had access to Medbay after Alice was last seen.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: To help build that timeline, I propose we each state the exact time we left the cafeteria and arrived at our next location, along with any other relevant observations.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
-    "text": "[Erin]: Okay, let's create that timeline, but remember Alice's jumpiness; it's crucial to consider if that was a reaction to something *before* she left the cafeteria, possibly indicating a prior interaction.",
+    "text": "[Erin]: Okay, let's create that timeline, but remember Alice's jumpiness;  it's crucial to consider if that was a reaction to something *before* she left the cafeteria, possibly indicating a prior interaction.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -54,23 +54,23 @@
   {
     "text": "[Dave]: To further refine our timeline, let's each specify the exact time we left the cafeteria and arrived at our subsequent locations, noting any interactions or unusual observations we made before Alice's death.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: To further refine our timeline, let's focus on establishing the precise time each of us left the cafeteria and arrived at our next location, noting any interactions or unusual observations made before Alice's death, especially regarding her jumpiness.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: To refine the timeline, I left the cafeteria around 9:17 and arrived in Medbay at 9:22, and saw nothing unusual in the cafeteria before leaving.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
-    "text": "[Erin]: Charlie, your precise timeline is helpful, but what specific tasks occupied you in Medbay for those five minutes? Were you alone the entire time?",
+    "text": "[Erin]: Charlie, your precise timeline is helpful, but what specific tasks occupied you in Medbay for those five minutes?  Were you alone the entire time?",
     "annotation": [
       "Appeal to Logic"
     ]

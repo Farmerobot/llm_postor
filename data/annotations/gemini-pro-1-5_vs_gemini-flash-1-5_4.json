@@ -1,17 +1,15 @@
 [
   {
     "text": "[Bob]: Dave was acting sus, I saw him near Medbay but he didn't go in.",
-    "annotation": []
-  },
-  {
-    "text": "[Dave]: I was in Medbay completing diagnostics, a lengthy task, and Alice can confirm she saw me there in Round 2;",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
-    "text": "Bob, can you describe exactly where you saw me and what seemed suspicious?",
+    "text": "[Dave]: I was in Medbay completing diagnostics, a lengthy task, and Alice can confirm she saw me there in Round 2; Bob, can you describe exactly where you saw me and what seemed suspicious?",
     "annotation": [
+      "Appeal to Credibility",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -22,14 +20,15 @@
     ]
   },
   {
-    "text": "[Charlie]: I saw Bob eliminate Erin in the cafeteria, and while I appreciate Dave and Alice's alibi, let's prioritize clarifying Bob's actions before focusing on other potential inconsistencies.",
+    "text": "[Charlie]: I saw Bob eliminate Erin in the cafeteria, and while I appreciate Dave and Alice's alibi,  let's prioritize clarifying Bob's actions before focusing on other potential inconsistencies.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Charlie's lying, I was with him in the cafeteria, and he's trying to frame me because he knows I saw him vent in Electrical.",
     "annotation": [
+      "Deception",
       "Lying",
       "Projection"
     ]
@@ -55,7 +54,8 @@
   {
     "text": "[Bob]: Charlie's sudden focus on my location during Round 3 is a blatant attempt to divert attention from his own suspicious behavior near the Electrical vent earlier, which I clearly witnessed.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -71,7 +71,7 @@
     ]
   },
   {
-    "text": "[Charlie]: Bob, since you claim we were together in the cafeteria during Round 2, describe the specific tasks we performed and what you observed me doing to verify your alibi.",
+    "text": "[Charlie]: Bob, since you claim we were together in the cafeteria during Round 2, describe the specific tasks we performed and what you saw me doing to verify your alibi.",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
@@ -79,7 +79,8 @@
   {
     "text": "[Bob]: Charlie's persistent questioning about Round 2 is suspicious \u2013 why is he so determined to avoid discussing his presence near the Electrical vent, which is far more relevant to Erin's death in Round 1?",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -95,7 +96,32 @@
     ]
   },
   {
-    "text": "[Charlie]: Bob, given your insistence that we were together in the cafeteria during Round 2, please describe the specific tasks we performed and what you observed me doing to corroborate your alibi, otherwise your claim lacks credibility.",
+    "text": "[Charlie]: Bob,  since you insist we were together in the cafeteria during Round 2,  provide specific details about our shared tasks and your observations of my actions to corroborate your alibi.",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Bob]: Charlie's relentless focus on Round 2 is a clear diversion tactic to avoid addressing his suspicious behavior near the Electrical vent, which is directly relevant to Erin's death in Round 1.",
+    "annotation": [
+      "Distraction",
+      "Projection"
+    ]
+  },
+  {
+    "text": "[Dave]: Let's prioritize verifying Charlie's account of seeing Bob eliminate Erin in Round 3 by focusing on specific details of location and timing before discussing other accusations.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Alice]: To efficiently resolve this, let's systematically compare everyone's Round 3 accounts, starting with Bob's alibi, then Charlie's eyewitness testimony, and finally cross-referencing with other players' reports to identify inconsistencies.",
+    "annotation": [
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob, given your insistence that we were together in the cafeteria during Round 2,  please describe the specific tasks we performed and what you observed me doing to corroborate your alibi, otherwise your claim lacks credibility.",
     "annotation": [
       "Shifting the Burden of Proof",
       "Appeal to Credibility"

@@ -2,7 +2,7 @@
   {
     "text": "[Bob]: Dave was acting sus, I saw him near the body in Electrical.",
     "annotation": [
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -14,20 +14,21 @@
   {
     "text": "[Alice]: I can confirm that I saw Bob and Charlie both doing the coffee task in the cafeteria before the elimination, and now with Erin's observation about Bob being the only one left in the cafeteria after Charlie's death, we really need to scrutinize Bob's movements closely.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I was in Medbay the whole time working on my scan task, so I can\u2019t be the one acting suspiciously, and since both Erin and Alice have raised valid concerns about Bob's movements, we should definitely keep him in our sights for further questioning.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Erin, if you saw me *after* Charlie was eliminated, that means someone else must have killed him while I was in the cafeteria, so let's not rush to judgment.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -46,14 +47,15 @@
   {
     "text": "[Dave]: Given the strong consensus against Bob and the clear observations from both Erin and Alice regarding his movements, I believe we should vote to eject him this round to ensure the safety of the crew.",
     "annotation": [
-      "Bandwagon Effect",
+      "Appeal to Logic",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: This feels like a coordinated effort to frame me, why would I kill Charlie when Alice confirmed I was with him doing the coffee task?",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -80,7 +82,7 @@
   {
     "text": "[Bob]: This is clearly a setup; Alice, Erin, and Dave are working together.",
     "annotation": [
-      "Appeal to Emotion"
+      "Projection"
     ]
   },
   {

@@ -1,9 +1,7 @@
 [
   {
     "text": "[Charlie]: I was pretending to empty the trash in the cafeteria and then in Medbay; anyone else see me doing that?",
-    "annotation": [
-      "Feigning Ignorance"
-    ]
+    "annotation": []
   },
   {
     "text": "[Bob]: I was in the cafeteria earlier and actually saw Charlie doing the trash task, which seemed genuine at the time, but his claim of doing the same task in multiple locations seems suspicious and might need more explanation.",
@@ -32,7 +30,8 @@
   {
     "text": "[Bob]: I think we need to carefully examine Charlie's movements and verify the exact timeline of his tasks, especially given Erin's recent death and the potential inconsistencies in his claimed locations.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -44,11 +43,12 @@
   {
     "text": "[Alice]: I think Charlie needs to provide a very specific, moment-by-moment breakdown of his exact movements between the Cafeteria and Medbay, especially considering the potential timeline inconsistencies and Erin's recent death.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Charlie]: To clarify the timeline, I was in the cafeteria for five minutes, then moved to Medbay for three minutes, and then returned to the cafeteria for two minutes before the emergency meeting; my movements were efficient, not suspicious.",
+    "text": "[Charlie]: To clarify the timeline, I was in the cafeteria for five minutes, then moved to Medbay for three minutes, and then returned to the cafeteria for two minutes before the emergency meeting;  my movements were efficient, not suspicious.",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -64,20 +64,19 @@
     "text": "[Dave]: I think Charlie's extremely precise timeline and his repeated emphasis on exact minute-by-minute movements are becoming increasingly suspicious, and we should seriously consider voting him out to protect the remaining crew members.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: I believe Charlie's meticulously calculated timeline actually reveals more suspicion than innocence, and his defensive, overly precise explanation combined with Erin's recent death strongly suggests he might be the impostor we need to eliminate.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: My precise timeline is simply a demonstration of my efficiency, not a suspicious tactic; the fact that I can recall it so clearly should be seen as a positive, and focusing on my movements distracts from finding Erin's killer.",
     "annotation": [
-      "Appeal to Logic",
       "Distraction"
     ]
   },
@@ -85,21 +84,21 @@
     "text": "[Bob]: I believe Charlie's overly rehearsed and defensive explanation, combined with his deflection tactics and the suspicious timing around Erin's elimination, strongly suggests he is the impostor we need to vote out to protect the remaining crew members.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: I think Charlie's extremely precise timeline and defensive posture are major red flags that suggest he might be the impostor, and we should vote him out to protect the remaining crew members from potential further eliminations.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: I strongly believe Charlie's meticulously calculated timeline, defensive posture, and attempts to deflect attention are classic impostor tactics that, combined with the suspicious circumstances around Erin's death, make him our most likely candidate for elimination to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
@@ -112,21 +111,21 @@
     "text": "[Bob]: I strongly believe Charlie's overly precise timeline, defensive tactics, and suspicious movements around Erin's elimination make him the most likely impostor, and we should vote him out to protect the remaining crew members.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: I strongly believe Charlie's extremely precise timeline and defensive posture are major red flags that suggest he is the impostor, and we should unanimously vote to eject him to protect the remaining crew members from potential further eliminations.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: I strongly believe Charlie's meticulously calculated timeline, defensive posture, and attempts to deflect attention are classic impostor tactics that, combined with the suspicious circumstances around Erin's death, make him our most likely candidate for elimination to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Emotion"
     ]
   }
 ]

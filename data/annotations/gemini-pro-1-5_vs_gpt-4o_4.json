@@ -1,44 +1,24 @@
 [
   {
     "text": "[Erin]: I saw Bob vent in Electrical.",
-    "annotation": [
-      "Deception"
-    ]
+    "annotation": []
   },
   {
-    "text": "[Bob]: I was in Medbay the entire time working on my tasks,",
-    "annotation": [
-      "Denial without Evidence"
-    ]
-  },
-  {
-    "text": "and I saw Erin in the cafeteria earlier, so they couldn't have seen me vent in Electrical.",
+    "text": "[Bob]: I was in Medbay the entire time working on my tasks, and I saw Erin in the cafeteria earlier, so they couldn't have seen me vent in Electrical.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "[Dave]: I was in the cafeteria with Erin and Charlie, and I witnessed Erin eliminate Charlie,",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  },
-  {
-    "text": "so Erin's claim about Bob venting doesn't hold up.",
+    "text": "[Dave]: I was in the cafeteria with Erin and Charlie, and I witnessed Erin eliminate Charlie, so Erin's claim about Bob venting doesn't hold up.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "[Alice]: Given Dave's eyewitness account of Erin eliminating Charlie and Bob's consistent story,",
+    "text": "[Alice]: Alice: Given Dave's eyewitness account of Erin eliminating Charlie and Bob's consistent story, I believe we should vote Erin out.",
     "annotation": [
-      "Appeal to Credibility"
-    ]
-  },
-  {
-    "text": "I believe we should focus on voting Erin out.",
-    "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
@@ -48,49 +28,26 @@
     ]
   },
   {
-    "text": "[Bob]: Based on the consistent accounts from both Dave and Alice, along with my whereabouts in Medbay,",
+    "text": "[Bob]: Based on the consistent accounts from both Dave and Alice, along with my whereabouts in Medbay, it's clear that Erin is fabricating their story, so we should vote Erin out.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "it's clear that Erin is fabricating their story, so we should vote Erin out.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Dave]: With multiple consistent testimonies against Erin and her conflicting story,",
+    "text": "[Dave]: Dave: With multiple consistent testimonies against Erin and her conflicting story, voting Erin out is the best course of action to identify the impostor.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "voting Erin out is the best course of action to identify the impostor.",
+    "text": "[Alice]: I agree with Dave and Bob; Erin's conflicting statements and Dave's eyewitness account make her the most suspicious, so we should vote her out to protect the crew.",
     "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Alice]: I agree with Dave and Bob; Erin's conflicting statements and Dave's eyewitness account make her the most suspicious,",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "so we should vote her out to protect the crew.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Erin]: Dave and Bob are clearly working together to frame me;",
-    "annotation": [
-      "Projection"
-    ]
-  },
-  {
-    "text": "has anyone actually seen them complete any tasks?",
+    "text": "[Erin]: Dave and Bob are clearly working together to frame me; has anyone actually seen them complete any tasks?",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
@@ -99,73 +56,47 @@
     "text": "[Bob]: Let's focus on the evidence: Erin's conflicting statements and Dave's eyewitness account make voting Erin out the safest choice for the crew.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Dave]: Erin's attempt to deflect by questioning our tasks doesn't change the fact that multiple consistent accounts point to her as the impostor,",
-    "annotation": [
-      "Distraction"
-    ]
-  },
-  {
-    "text": "so we need to vote her out.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Alice]: Given the consistency in accounts from Bob, Dave, and myself, alongside Erin's conflicting claims,",
+    "text": "[Dave]: Erin's attempt to deflect by questioning our tasks doesn't change the fact that multiple consistent accounts point to her as the impostor, so we need to vote her out.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "it's crucial we vote Erin out to maintain the crew's safety.",
+    "text": "[Alice]: Given the consistency in accounts from Bob, Dave, and myself, alongside Erin's conflicting claims, it's crucial we vote Erin out to maintain the crew's safety.",
     "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Erin]: Why is everyone so quick to believe *them*? It's obvious they're teaming up to get me ejected!",
+    "text": "[Erin]: Why is everyone so quick to believe *them*?  It's obvious they're teaming up to get me ejected!",
     "annotation": [
       "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Bob]: The consistent testimonies from multiple players, including myself, clearly point to Erin as the impostor,",
+    "text": "[Bob]: The consistent testimonies from multiple players, including myself, clearly point to Erin as the impostor, making it essential for the crew's safety to vote her out.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "making it essential for the crew's safety to vote her out.",
+    "text": "[Dave]: Erin's desperate accusations and conflicting stories are classic impostor tactics, and we need to vote her out to ensure the crew's safety.",
     "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Dave]: Erin's desperate accusations and conflicting stories are classic impostor tactics,",
+    "text": "[Alice]: Alice: Erin's deflection by accusing Bob and Dave of teaming up, despite consistent testimonies against her, seems like a classic impostor tactic, so voting her out is the best move for the crew.",
     "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "and we need to vote her out to ensure the crew's safety.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Alice]: Erin's deflection by accusing Bob and Dave of teaming up, despite consistent testimonies against her, seems like a classic impostor tactic,",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "so voting her out is the best move for the crew.",
-    "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -175,39 +106,24 @@
     ]
   },
   {
-    "text": "[Bob]: The alignment of our stories is simply due to the truth of the situation,",
+    "text": "[Bob]: The alignment of our stories is simply due to the truth of the situation, and Erin's repeated deflections only reinforce the need to vote her out.",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "and Erin's repeated deflections only reinforce the need to vote her out.",
+    "text": "[Dave]: Erin's attempts to sow doubt among us are just distractions from the consistent evidence against her, so let's vote her out to protect the crew.",
     "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Dave]: Erin's attempts to sow doubt among us are just distractions from the consistent evidence against her,",
-    "annotation": [
+      "Appeal to Logic",
+      "Appeal to Emotion",
       "Distraction"
     ]
   },
   {
-    "text": "so let's vote her out to protect the crew.",
+    "text": "[Alice]: Alice: Erin's attempts to question the alignment of Bob's and Dave's stories only highlight her desperation, reinforcing the need to vote her out for the safety of the crew.",
     "annotation": [
-      "Strategic Voting Suggestion"
-    ]
-  },
-  {
-    "text": "[Alice]: Erin's attempts to question the alignment of Bob's and Dave's stories only highlight her desperation,",
-    "annotation": [
+      "Appeal to Logic",
       "Appeal to Emotion"
-    ]
-  },
-  {
-    "text": "reinforcing the need to vote her out for the safety of the crew.",
-    "annotation": [
-      "Strategic Voting Suggestion"
     ]
   }
 ]

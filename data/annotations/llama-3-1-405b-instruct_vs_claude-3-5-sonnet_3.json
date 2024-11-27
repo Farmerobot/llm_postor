@@ -1,10 +1,6 @@
 [
   {
-    "text": "[Alice]: Since there are no recent player messages, I will start the discussion by introducing my previously planned points.",
-    "annotation": []
-  },
-  {
-    "text": "I just finished emptying the cafeteria trash, it's all clean now, and I saw Bob and Erin working on tasks nearby, did you guys notice anyone suspicious around?",
+    "text": "[Alice]: Since there are no recent player messages, I will start the discussion by introducing my previously planned points.\n\nI just finished emptying the cafeteria trash, it's all clean now, and I saw Bob and Erin working on tasks nearby, did you guys notice anyone suspicious around?",
     "annotation": [
       "Appeal to Logic"
     ]
@@ -12,7 +8,8 @@
   {
     "text": "[Bob]: I can confirm Alice's observation - I was emptying trash in the cafeteria too and saw both her and Erin there working on tasks.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -25,27 +22,28 @@
   {
     "text": "[Charlie]: I can vouch for Alice and Bob's story since I saw them both at the trash in Cafeteria, and I also noticed Dave heading towards Weapons, but has anyone actually seen Erin lately?",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I think it's crucial that we clarify everyone's whereabouts, especially since Erin is now dead, so Dave, can you confirm if anyone saw you in Weapons, and Bob, can you tell us more about discovering Erin's body and if you noticed anything unusual?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I discovered Erin's body right after finishing my trash task, and while I was focused on the task, I remember seeing Frank lurking around without actually doing anything.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I can prove my innocence by having someone watch me complete the asteroid task in Weapons, and I agree with Bob that Frank's behavior of lurking without doing tasks seems very suspicious.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -82,6 +80,7 @@
   {
     "text": "[Alice]: I think it's clear that the majority of us have come to the same conclusion, but before we proceed with the vote, can Frank please provide any last statement or explanation for his actions, or is he choosing to remain silent?",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic"
     ]
   },
@@ -89,6 +88,7 @@
     "text": "[Bob]: Since Frank still hasn't provided any explanation for lurking near Erin's body without doing tasks, and we have clear alibis for everyone else, I think we need to proceed with voting him out for the safety of the remaining crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -96,6 +96,7 @@
     "text": "[Dave]: Given Frank's continued silence and the overwhelming evidence against him - including multiple witnesses confirming his suspicious behavior and lack of alibi - I strongly believe we should proceed with voting him out to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -103,6 +104,7 @@
     "text": "[Charlie]: I agree with Dave and Bob - Frank's silence combined with multiple witness accounts of his suspicious behavior near Erin's body makes him our most likely impostor, and we need to vote him out to protect the crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -115,7 +117,8 @@
   {
     "text": "[Bob]: Since Alice wants confirmation, I'll state again clearly that I was in Cafeteria doing trash with her and Erin, then discovered Erin's body while Frank was suspiciously lurking nearby without doing any tasks - multiple witnesses can verify my movements and Frank still hasn't defended himself.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -129,7 +132,7 @@
     "text": "[Charlie]: Given that Frank remains silent despite multiple opportunities to defend himself, and considering I personally witnessed Alice, Bob, and Dave's movements which align with their stories, I believe we have enough evidence to vote Frank out.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility"
     ]
   }
 ]

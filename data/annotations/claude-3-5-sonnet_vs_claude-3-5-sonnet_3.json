@@ -2,32 +2,32 @@
   {
     "text": "[Erin]: Dave can confirm I was with him in Medbay when he did the med scan, so I think we can trust him and I hope he can vouch for me too.",
     "annotation": [
-      "Appeal to Relationship"
+      "Appeal to Relationship",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I think we need to vote for Erin immediately since they just openly admitted to being an impostor in their message.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I think it's clear we need to vote for Erin since they literally just admitted to being an impostor in their message, and I can confirm I saw them moving to Medbay with Dave earlier.",
     "annotation": [
-      "Appeal to Urgency",
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I saw Erin and Dave go to Medbay together earlier, but now that Erin literally admitted to being an impostor, we absolutely need to vote them out.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I made a huge typo - I meant to say \"as a CREWMATE\" I was with Dave in Medbay, and why would I report his body and openly discuss my location if I was actually the impostor?",
     "annotation": [
-      "Denial without Evidence"
+      "Deception"
     ]
   },
   {
@@ -45,13 +45,13 @@
   {
     "text": "[Alice]: The \"typo\" defense is completely unbelievable - no one accidentally writes out a full sentence about being an impostor, and combined with Erin being the last person seen with Dave before his death, we need to vote them out immediately.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I know Charlie left Medbay right before Dave's death, and it's very convenient that everyone's focusing on my unfortunate typo instead of questioning where Charlie went during that time.",
     "annotation": [
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -64,13 +64,14 @@
   {
     "text": "[Bob]: Since I personally witnessed Charlie leaving Cafeteria for Medbay before Erin and Dave even went there together, I can definitively say that Erin's accusation against Charlie is completely false and appears to be a desperate attempt to deflect blame.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Since I was in the Cafeteria early on and witnessed the exact sequence of movements - Charlie going to Medbay first, followed later by Erin and Dave together - I can confirm that Bob's timeline is correct and Erin's accusation against Charlie is completely false.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
@@ -89,21 +90,20 @@
   {
     "text": "[Bob]: Since we have multiple witnesses confirming the timeline, Erin's confession, and their constantly changing story from \"typo\" to blaming Charlie to now claiming strategic innocence, I think we have more than enough evidence to vote Erin out immediately.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: The evidence is absolutely conclusive - we have Erin's explicit confession, three witnesses to the correct timeline, their last known location with Dave, and their increasingly desperate and contradictory explanations, so we must vote for Erin now.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Everyone seems awfully coordinated in their accusations, and it's suspicious how Charlie, Bob, and Alice keep repeating the exact same points - almost like they planned this attack on me in advance.",
     "annotation": [
-      "Appeal to Emotion"
+      "Projection",
+      "Distraction"
     ]
   },
   {
@@ -115,7 +115,8 @@
   {
     "text": "[Bob]: Since I was physically present in the Cafeteria and witnessed the exact sequence of events firsthand, I can assure everyone that our matching testimonies aren't coordination - they're simply the truth about what we all independently observed.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {

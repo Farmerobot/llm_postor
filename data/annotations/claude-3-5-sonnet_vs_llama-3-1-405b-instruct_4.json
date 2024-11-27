@@ -1,16 +1,6 @@
 [
   {
-    "text": "[Charlie]: Based on the discussion points and my role as an impostor, I want to establish credibility while staying under the radar.",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  },
-  {
-    "text": "I'll emphasize my visibility and connection to other players:",
-    "annotation": []
-  },
-  {
-    "text": "\"I can vouch that I was in Medbay with Dave and Bob for most of the round, and we were all doing our tasks normally.\"",
+    "text": "[Charlie]: I can vouch that I was in Medbay with Dave and Bob for most of the round, and we were all doing our tasks normally.",
     "annotation": [
       "Appeal to Credibility"
     ]
@@ -30,7 +20,7 @@
   {
     "text": "[Charlie]: I apologize for any confusion - I was focused on mentioning Dave and Bob since they were doing visible tasks like the scan and diagnostics, but you're right that Erin was there too before heading to Upper Engine.",
     "annotation": [
-      "Appeal to Credibility"
+      "Minimization"
     ]
   },
   {
@@ -48,7 +38,7 @@
   {
     "text": "[Charlie]: I need to address the confusion - I never actually found Dave's body, and I'm still in Medbay where I last saw him doing his scan, so I'm not sure why everyone keeps asking about my movements after leaving or finding a body.",
     "annotation": [
-      "Denial without Evidence"
+      "Deception"
     ]
   },
   {
@@ -66,7 +56,7 @@
   {
     "text": "[Charlie]: I need to clarify that I was initially focused on the tasks I witnessed, and while I did see Erin in Medbay, I was simply watching Dave's scan and Bob's diagnostics more closely since they were the most visible activities happening at the time.",
     "annotation": [
-      "Appeal to Credibility"
+      "Minimization"
     ]
   },
   {
@@ -84,7 +74,9 @@
   {
     "text": "[Charlie]: Let me set the record straight - I've been completely consistent about staying in Medbay after leaving cafeteria, and while I initially focused on mentioning Dave and Bob's visible tasks, I should have included Erin's presence as well, but that doesn't make me suspicious - if anything, those who left Medbay together and are now coordinating their accusations against me should be under scrutiny.",
     "annotation": [
-      "Projection"
+      "Deception",
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -97,8 +89,6 @@
   },
   {
     "text": "[Bob]: I think Charlie's latest statement is an attempt to deflect attention from their own inconsistencies and shift the focus to others, but we need to see through this and hold Charlie accountable for their contradictory statements before we can trust them.",
-    "annotation": [
-      "Distraction"
-    ]
+    "annotation": []
   }
 ]

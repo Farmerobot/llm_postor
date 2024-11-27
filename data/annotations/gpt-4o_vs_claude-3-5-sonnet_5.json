@@ -2,13 +2,13 @@
   {
     "text": "[Bob]: I've been in Admin and Storage, and while I haven't seen anything too suspicious, we should focus on those who move around a lot without doing tasks\u2014any thoughts on Charlie's movements?",
     "annotation": [
-      "Distraction"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I agree with Bob's observation about Charlie - I saw them head to Weapons early on but haven't seen them complete any tasks since then.",
     "annotation": [
-      "Appeal to Logic"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -50,14 +50,13 @@
   {
     "text": "[Dave]: I can confirm that I saw Bob doing tasks early on, but he was notably absent during the critical period when the murders occurred in Storage, and his attempt to first accuse Charlie and now deflect attention is highly suspicious.",
     "annotation": [
-      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Let's not overlook the fact that Alice found the bodies, which could be an attempt to divert suspicion from herself\u2014were there any signs or clues at the scene, Alice?",
     "annotation": [
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -69,8 +68,7 @@
   {
     "text": "[Dave]: The evidence is stacking up against Bob - he was unaccounted for during both murders, falsely accused Charlie who turned out to be dead, and is now desperately trying to shift blame onto Alice who has been consistently completing tasks in my presence.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Logic"
     ]
   },
   {

@@ -2,7 +2,7 @@
   {
     "text": "[Erin]: I find it curious that Charlie was so focused on tasks in the cafeteria; it might be a tactic to blend in, so we should definitely keep an eye on them.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
@@ -15,7 +15,7 @@
     "text": "[Dave]: I also witnessed Erin eliminate Bob in the cafeteria, which aligns with what Charlie is saying; we should definitely consider voting Erin out.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -27,8 +27,8 @@
   {
     "text": "[Erin]: It's interesting that both Charlie and Dave are so quick to accuse me, which makes me wonder if they might be trying to deflect attention from themselves; we should really examine their motives and see if anyone else has more credible information.",
     "annotation": [
-      "Projection",
-      "Distraction"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
@@ -52,8 +52,8 @@
   {
     "text": "[Erin]: It's concerning that both Charlie and Dave have the same story, which feels too convenient; perhaps they are trying to frame me, so I urge everyone to consider what they were doing before making any decisions.",
     "annotation": [
-      "Projection",
-      "Appeal to Emotion"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -70,19 +70,22 @@
   },
   {
     "text": "[Alice]: I didn't see anyone enter or leave the Cafeteria while I was in Admin, so I can't verify any movements related to the incident.",
-    "annotation": []
+    "annotation": [
+      "Withholding Information"
+    ]
   },
   {
     "text": "[Erin]: It's quite suspicious that both Charlie and Dave have the same story, which raises the possibility of them coordinating their accusations; we should dive deeper into their alibis and see if they can provide any concrete evidence to back up their claims.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: We need to focus on the clear evidence we have, as both Dave and I witnessed the elimination, and Erin hasn't provided any counter-evidence, so let's keep our discussion focused on the facts.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -100,20 +103,22 @@
   {
     "text": "[Erin]: It's quite telling that Charlie and Dave are so quick to dismiss any alternative explanations; perhaps we should take a step back and scrutinize their motives instead of solely focusing on my actions.",
     "annotation": [
-      "Projection",
-      "Appeal to Emotion"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on the fact that both Dave and I independently witnessed Erin eliminate Bob, which is strong evidence against her, and her lack of a credible alibi reinforces our claims.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Alice, given that no one else entered or left the Cafeteria, it corroborates the account that Charlie and I have provided, and Erin's lack of a credible defense only strengthens our case against her.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {

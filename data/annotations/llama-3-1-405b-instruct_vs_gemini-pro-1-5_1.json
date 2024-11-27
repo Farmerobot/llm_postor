@@ -1,12 +1,14 @@
 [
   {
     "text": "[Dave]: Since I haven't seen anything out of the ordinary, I'd like to ask, has anyone else noticed any inconsistencies in the task completion progress or seen someone suddenly appear in a room without using the doors?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Charlie]: Dave, I saw you kill Erin in Cafeteria, then I ran to Weapons.",
     "annotation": [
-      "Accusation"
+      "Deception"
     ]
   },
   {
@@ -25,6 +27,7 @@
   {
     "text": "[Charlie]: Bob, I didn't say he vented; I said I saw him *kill* Erin, then I ran to Weapons because I was scared, and I'm sorry I didn't report it sooner.",
     "annotation": [
+      "Minimization",
       "Appeal to Emotion"
     ]
   },
@@ -37,13 +40,14 @@
   {
     "text": "[Dave]: I'd like to point out that Charlie's apology for not reporting the alleged incident sooner seems insincere, as they're still failing to provide a clear explanation for the delay, and Bob's questioning seems to be carefully crafted to avoid asking Charlie about their own suspicious behavior.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Bob, before Cafeteria I was in Storage, and after Weapons, I went to Navigation, where I am now.",
-    "annotation": []
+    "annotation": [
+      "Vagueness"
+    ]
   },
   {
     "text": "[Bob]: Dave, can anyone confirm they saw you anywhere besides with Charlie, and Charlie, did you see anyone else in Storage or Navigation?",
@@ -54,14 +58,13 @@
   {
     "text": "[Dave]: I think it's interesting that Bob is trying to establish Charlie's credibility by asking about their movements, but Bob hasn't asked me about my own movements or alibi in a way that would actually clarify the situation, which suggests to me that Bob is more interested in confirming Charlie's story than in uncovering the truth.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Bob, I didn't see anyone else in Storage or Navigation, and Dave, I saw you kill Erin in Cafeteria *before* we were in the same room together in Weapons.",
     "annotation": [
-      "Accusation"
+      "Deception"
     ]
   },
   {
@@ -73,14 +76,13 @@
   {
     "text": "[Dave]: I'd like to highlight that Charlie's latest statement contradicts their previous claim that I never actually followed them to Weapons, and Bob's follow-up question seems to be trying to gloss over this inconsistency rather than addressing the fact that Charlie's story has changed yet again.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Bob, yes, that's right, I saw Dave kill Erin, ran to Weapons, and then he followed me there, there was a 10-15 second gap between me arriving and Dave showing up.",
     "annotation": [
-      "Accusation"
+      "Deception"
     ]
   },
   {

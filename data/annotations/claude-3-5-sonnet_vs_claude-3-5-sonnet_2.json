@@ -2,7 +2,7 @@
   {
     "text": "[Dave]: I started in cafeteria with Bob, Erin, Charlie, and Alice, then moved to weapons where Alice joined me later - can anyone account for Bob, Erin, and Charlie's movements after that?",
     "annotation": [
-      "Feigning Ignorance"
+      "Information Overload"
     ]
   },
   {
@@ -26,32 +26,33 @@
   {
     "text": "[Dave]: I find it suspicious that Charlie left Bob and Erin alone in Medbay when we all know it's safer to stay in groups, especially since Alice was just found dead.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: Since Dave is trying to cast suspicion on Charlie despite Charlie's movements matching perfectly with what Erin and I witnessed, I think we need to focus on Dave's inconsistent behavior and lack of details about finding Alice's body.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Given the suspicious timing of Dave's accusation against Charlie and his failure to explain how he found Alice's body, I think we need to seriously consider that Dave might be trying to deflect attention from himself.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I find it telling that Dave is trying to make my verified movements seem suspicious while completely avoiding any explanation about how or where he found Alice's body.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: The fact that you're all so quick to defend each other while attacking me seems coordinated - I was just trying to understand everyone's movements to help find the real impostor.",
     "annotation": [
-      "Appeal to Emotion"
+      "Projection",
+      "Distraction"
     ]
   },
   {
@@ -99,7 +100,8 @@
   {
     "text": "[Dave]: The fact that you're all fixating on my mention of Alice's death while ignoring that no one has actually explained where her body was found or who reported it seems pretty coordinated and suspicious to me.",
     "annotation": [
-      "Appeal to Emotion"
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -111,13 +113,13 @@
   {
     "text": "[Erin]: Dave's desperate attempt to shift focus onto who reported Alice's body only further proves his guilt, since he was the one who first revealed her death while attacking Charlie without any report being made.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Dave's attempt to question who reported Alice's body is especially suspicious since he was the first one to reveal her death while trying to frame me earlier.",
     "annotation": [
-      "Distraction"
+      "Appeal to Logic"
     ]
   }
 ]

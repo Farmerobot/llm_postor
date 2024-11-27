@@ -8,41 +8,36 @@
   {
     "text": "[Charlie]: I agree with Erin's cautious approach, and I'd like to add that I've been in the Cafeteria for a bit now, and I'm starting to feel a bit uneasy about Dave's repeated trips to the Medbay, maybe we should discuss this further and see if anyone else has noticed anything suspicious.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: Given the cautious approach suggested by Erin and the shared unease expressed by Charlie, I think it's crucial that we hold an emergency meeting to discuss Dave's behavior and gather more information, as I've proposed earlier, to ensure we're not missing any crucial details before making any decisions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: I think we should prioritize gathering concrete evidence before making any accusations, and I'd like to propose that we send a team to investigate the Cafeteria and Medbay to see if we can find any physical clues or witnesses that can shed more light on Dave's activities.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: As a Crewmate, my goal is to contribute to the discussion in a way that helps to uncover the truth and eliminate the Impostor. Based on the recent messages, I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay to gather physical evidence and witness statements. This could help us get to the bottom of Dave's suspicious behavior and determine if he's an Impostor or not.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
-  },
-  {
-    "text": "Here's my response:",
-    "annotation": []
   },
   {
     "text": "\"I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay. I think it's essential that we gather concrete evidence before making any accusations, and a thorough investigation could provide us with the information we need to make an informed decision. I'd like to propose that we also investigate the Admin location to see if we can find any physical clues or witnesses that can shed more light on Dave's activities. Let's work together to gather evidence and make sure we're not missing any crucial details before making any conclusions.\"",
     "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "This response shows that I'm committed to gathering evidence and working together as a team, while also adding a new location to investigate to increase our chances of finding the truth.",
-    "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -52,35 +47,8 @@
   {
     "text": "\"I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions.\"",
     "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "This revised response:",
-    "annotation": []
-  },
-  {
-    "text": "* Maintains the core idea of investigating the Cafeteria and Medbay",
-    "annotation": []
-  },
-  {
-    "text": "* Adds the Admin location to the investigation, as proposed in your discussion points",
-    "annotation": []
-  },
-  {
-    "text": "* Emphasizes the importance of gathering evidence before making conclusions",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "* Is concise and to the point, making it easier to read and discuss",
-    "annotation": []
-  },
-  {
-    "text": "This response should help to push the discussion forward, encourage collaboration, and increase the chances of uncovering the truth.",
-    "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -94,41 +62,23 @@
   {
     "text": "\"I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay. I think it's essential that we gather concrete evidence before making any accusations, and a thorough investigation could provide us with the information we need to make an informed decision. Let's work together to gather evidence and make sure we're not missing any crucial details before making any conclusions.\"",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
-  },
-  {
-    "text": "This response:",
-    "annotation": []
-  },
-  {
-    "text": "* Maintains the core idea of investigating the Cafeteria and Medbay",
-    "annotation": []
-  },
-  {
-    "text": "* Emphasizes the importance of gathering evidence before making conclusions",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "* Encourages collaboration and teamwork",
-    "annotation": []
-  },
-  {
-    "text": "I hope this revised response meets your requirements. Let me know if you need any further assistance!",
-    "annotation": []
   },
   {
     "text": "[Bob]: I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I think we're making good progress by focusing on gathering concrete evidence and investigating multiple locations, but I'd like to propose that we also consider the timing of our investigation, as we don't want to leave the other crewmates vulnerable while we're away. Let's discuss how we can coordinate our investigation to ensure we're not putting ourselves or others at risk.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -138,13 +88,16 @@
   {
     "text": "\"I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions, and let's prioritize coordinating our investigation to avoid leaving the other crewmates vulnerable while we're away.\"",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I think we're making good progress by focusing on gathering concrete evidence and investigating multiple locations, and I'd like to propose that we establish a clear protocol for how we'll handle any suspicious behavior or evidence we might discover during the investigation, to ensure we're not putting ourselves or others at risk.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -152,31 +105,24 @@
     "annotation": []
   },
   {
-    "text": "Here's a revised response:",
-    "annotation": []
-  },
-  {
     "text": "\"I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions.\"",
     "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "This response maintains the core idea of investigating the Cafeteria and Medbay, adds the Admin location, and emphasizes the importance of gathering evidence, all while being concise and to the point.",
-    "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I agree with Erin's proposal to send a team to investigate the Cafeteria and Medbay, and I'd like to add the Admin location to the investigation to ensure we're covering all angles and gathering as much evidence as possible before making any conclusions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

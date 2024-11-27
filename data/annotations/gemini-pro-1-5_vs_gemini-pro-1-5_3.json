@@ -4,25 +4,13 @@
     "annotation": []
   },
   {
-    "text": "[Dave]: That's a lie, Alice.",
+    "text": "[Dave]: That's a lie, Alice. I was with Erin in Medbay the entire time.",
     "annotation": [
       "Denial without Evidence"
     ]
   },
   {
-    "text": "I was with Erin in Medbay the entire time.",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  },
-  {
-    "text": "[Erin]: Alice, were you alone when you supposedly saw this venting?",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
-  },
-  {
-    "text": "Were there any other witnesses?",
+    "text": "[Erin]: Alice, were you alone when you supposedly saw this venting? Were there any other witnesses?",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
@@ -30,8 +18,7 @@
   {
     "text": "[Charlie]: Alice, why would you lie about Dave when I just saw *you* kill Bob in the cafeteria?",
     "annotation": [
-      "Appeal to Emotion",
-      "Lying"
+      "Appeal to Logic"
     ]
   },
   {
@@ -43,7 +30,7 @@
   {
     "text": "[Dave]: Erin, can you confirm we were together in Medbay?",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Relationship"
     ]
   },
   {
@@ -61,19 +48,13 @@
   {
     "text": "[Alice]: Isn't it convenient how Erin and Dave corroborate each other's stories, yet neither of them can explain what they were *doing* in Medbay for so long?",
     "annotation": [
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Dave]: Alice, you're trying to deflect.",
+    "text": "[Dave]: Alice, you're trying to deflect.  Erin and I explained what we were doing - we were doing tasks. I was scanning and Erin was fixing wiring.",
     "annotation": [
       "Distraction"
-    ]
-  },
-  {
-    "text": "Erin and I explained what we were doing - we were doing tasks. I was scanning and Erin was fixing wiring.",
-    "annotation": [
-      "Appeal to Credibility"
     ]
   },
   {
@@ -109,13 +90,13 @@
   {
     "text": "[Charlie]: Alice, you're trying to frame me because you know I saw you kill Bob \u2013 why else would I accuse you immediately after finding his body?",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Charlie, are you absolutely *positive* it was me you saw, or could it have been someone else who looks similar, perhaps wearing the same color suit?",
     "annotation": [
-      "Gaslighting"
+      "Distraction"
     ]
   },
   {
@@ -127,7 +108,7 @@
   {
     "text": "[Erin]: Alice, stop deflecting and tell us where you were when Bob died and who can confirm your alibi.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {

@@ -9,15 +9,11 @@
   },
   {
     "text": "[Dave]: I completed the wiring task in the cafeteria and plan to head to Admin next, so maybe we can form a group to cover each other as we move to our tasks.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
+    "annotation": []
   },
   {
     "text": "[Alice]: I completed the task \"Empty the cafeteria trash\" and plan to head to Medbay next to start my scan task; sticking together in small groups could be a good idea for safety.",
-    "annotation": [
-      "Strategic Voting Suggestion"
-    ]
+    "annotation": []
   },
   {
     "text": "[Bob]: I think it's interesting that Dave was quick to suggest moving to a new location after reporting Erin's body, and I'd like to hear more about what he saw when he found her, was anyone else around, and did he notice anything unusual?",
@@ -42,7 +38,8 @@
   {
     "text": "[Bob]: I think it's suspicious that Alice is trying to divert attention to someone pretending to do a task nearby, maybe she's trying to cover her own tracks, especially since she was working on the same task as Erin and me.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -51,11 +48,15 @@
   },
   {
     "text": "[Dave]: Let's focus on gathering more information and observations from everyone, especially since we were all in the cafeteria together; did anyone see someone acting suspiciously or moving towards Erin before the body was found?",
-    "annotation": []
+    "annotation": [
+      "Strategic Voting Suggestion"
+    ]
   },
   {
     "text": "[Alice]: I was focused on completing the trash task alongside Bob and Erin, so I didn't notice anyone acting suspiciously at that moment, but Dave, did you see anyone lingering near the trash chute before we all dispersed?",
-    "annotation": []
+    "annotation": [
+      "Vagueness"
+    ]
   },
   {
     "text": "[Bob]: I'd like to point out that Alice's latest response seems inconsistent with her previous statement, where she implied someone might have been pretending to do a task nearby, but now she's claiming she didn't notice anyone acting suspiciously while working on the trash task alongside Erin and me.",
@@ -74,31 +75,29 @@
   {
     "text": "[Alice]: Let's focus on the fact that we were all in the cafeteria together; it might be beneficial to review who moved where after we completed our tasks to identify any suspicious movements or patterns.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I'd like to reiterate that Alice's statements seem inconsistent, and I think it's suspicious that she's trying to divert attention to reviewing who moved where after completing tasks, instead of addressing the inconsistencies in her own statements.",
     "annotation": [
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: It seems like there's a lot of focus on Alice's statements and potential inconsistencies, but we should carefully consider if those are significant enough to indicate suspicious behavior or if they might be a misunderstanding or oversight.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
     "text": "[Dave]: I think it's important to clarify the timeline and actions of everyone in the cafeteria; let's each recount our movements and tasks to see if any inconsistencies arise.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I understand the concern about my statements, but I was merely suggesting that the possibility of someone pretending to do a task shouldn't be dismissed; let's focus on clarifying the timeline of our movements in the cafeteria to identify any unusual behavior.",
     "annotation": [
-      "Appeal to Logic"
+      "Minimization"
     ]
   }
 ]

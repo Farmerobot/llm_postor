@@ -14,8 +14,7 @@
   {
     "text": "[Alice]: Charlie, I've been stuck in Weapons trying to finish the wiring task, and Dave can confirm I was briefly in Cafeteria earlier before heading there; has anyone else had trouble with tasks being buggy?",
     "annotation": [
-      "Appeal to Credibility",
-      "Feigning Ignorance"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -51,8 +50,9 @@
   {
     "text": "[Dave]: I was focused on my task in Medbay and might have been momentarily distracted, but Alice's inconsistent story about her whereabouts seems far more suspicious than my actions, and I think we should carefully examine her movements before pointing fingers at me.",
     "annotation": [
+      "Minimization",
       "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -70,15 +70,14 @@
   {
     "text": "[Erin]: Dave, your \"momentary distraction\" excuse doesn't explain how you missed Bob dying right next to us in Medbay, so I'm still voting to eject you.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I find it curious that Alice is so adamantly trying to redirect suspicion onto me when her own timeline of movements is riddled with inconsistencies, and Erin didn't even see her in the Cafeteria as she claims.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -90,8 +89,7 @@
   {
     "text": "[Alice]: Dave, your \"momentary distraction\" excuse doesn't hold up \u2013 how could you be so engrossed in a task in Medbay's small space that you missed Bob dying right beside you, and can anyone confirm they saw you doing a task there?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -104,7 +102,7 @@
     "text": "[Dave]: I think Alice's aggressive questioning and shifting narrative are more suspicious than my momentary distraction, especially since Erin confirmed she didn't see Alice in Cafeteria as claimed, which raises serious doubts about her credibility.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {

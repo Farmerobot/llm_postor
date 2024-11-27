@@ -1,7 +1,9 @@
 [
   {
     "text": "[Bob]: I noticed that Erin still hasn't checked in, and I'm getting a bit worried - did anyone see her after she left for Weapons, or should we consider checking up on her?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Urgency"
+    ]
   },
   {
     "text": "[Dave]: I saw Erin leave the Cafeteria and head towards Weapons; I haven't seen her since, so it might be a good idea to check on her.",
@@ -36,37 +38,33 @@
   {
     "text": "[Erin]: I moved to Weapons because I had two urgent tasks to complete there, and since I was alone the whole time, it's crucial we consider who might have entered the Cafeteria after I left, as that's where the impostor likely struck.",
     "annotation": [
-      "Appeal to Urgency"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to ask Erin again: can she provide more details about her tasks in Weapons, specifically what exactly she did during the calibration process and how long it took her, as her vagueness on this topic is starting to raise more suspicions in my mind.",
     "annotation": [
-      "Vagueness"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I think it's important we focus on confirming Erin's tasks in Weapons; if she can provide specific details about the calibration process and clearing asteroids, it might clear up some of the suspicion around her.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
     "text": "[Alice]: I agree with Dave that verifying Erin's tasks in Weapons could help clear some suspicion; Erin, could you share more specific details about the calibration process and how long it took you to clear asteroids?",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
     "text": "[Erin]: I completed the calibration of the targeting system in Weapons by aligning the crosshairs with the targets on the screen, which took a few minutes, and then I efficiently cleared asteroids, so let's focus on who entered the Cafeteria after I left.",
     "annotation": [
-      "Appeal to Logic"
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Erin's latest explanation about the calibration process still seems quite brief, and I think we should press her for even more specific details, such as the exact sequence of steps she took and how she verified the targeting system was functioning correctly.",
     "annotation": [
-      "Vagueness"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -83,9 +81,7 @@
   },
   {
     "text": "[Erin]: Erin: I understand the need for specifics, Bob, so let me clarify: after aligning the crosshairs with the targets, I received a confirmation beep indicating the targeting system was calibrated correctly, and clearing asteroids involved targeting and shooting each one, which took a few minutes due to their random movement patterns.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
+    "annotation": []
   },
   {
     "text": "[Bob]: I think it's time for us to start considering who we're going to vote out, and given Erin's suspicious behavior and inconsistent explanations, I'm still leaning towards her as the most likely impostor.",

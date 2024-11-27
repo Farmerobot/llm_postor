@@ -1,13 +1,7 @@
 [
   {
-    "text": "[Dave]: I was in the Cafeteria for most of the rounds, and I saw Erin and Bob doing tasks there multiple times; they seem to be working diligently,",
+    "text": "[Dave]: I was in the Cafeteria for most of the rounds, and I saw Erin and Bob doing tasks there multiple times; they seem to be working diligently, but can anyone confirm if Erin was doing tasks when she moved to Admin with Alice?",
     "annotation": []
-  },
-  {
-    "text": "but can anyone confirm if Erin was doing tasks when she moved to Admin with Alice?",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
   },
   {
     "text": "[Alice]: I can confirm that Erin was doing tasks in Storage before moving to Admin, as I saw her fixing wiring in Storage.",
@@ -22,31 +16,17 @@
     ]
   },
   {
-    "text": "[Charlie]: Based on what I've seen and the confirmations from others, Erin seems very task-focused,",
+    "text": "[Charlie]: Based on what I've seen and the confirmations from others, Erin seems very task-focused, but can anyone verify Alice's actions in Medbay, or should we be cautious about her movements?",
     "annotation": [
       "Appeal to Logic"
     ]
   },
   {
-    "text": "but can anyone verify Alice's actions in Medbay, or should we be cautious about her movements?",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
-  },
-  {
     "text": "[Dave]: I noticed Alice was quick to report the body, but was anyone else in Admin who can confirm her actions there before the report?",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
+    "annotation": []
   },
   {
-    "text": "[Alice]: Alice: I was in Medbay earlier working on my scan task alone,",
-    "annotation": [
-      "Denial without Evidence"
-    ]
-  },
-  {
-    "text": "but Dave, since you saw Erin and me in Admin, can you or anyone else verify if someone else was nearby before I reported the body?",
+    "text": "[Alice]: Alice: I was in Medbay earlier working on my scan task alone, but Dave, since you saw Erin and me in Admin, can you or anyone else verify if someone else was nearby before I reported the body?",
     "annotation": [
       "Shifting the Burden of Proof"
     ]
@@ -58,15 +38,9 @@
     ]
   },
   {
-    "text": "[Charlie]: It seems like Erin and Bob have been consistently confirmed by multiple players,",
+    "text": "[Charlie]: It seems like Erin and Bob have been consistently confirmed by multiple players, but we need more information about Alice's actions, especially since no one has confirmed seeing her in Medbay.",
     "annotation": [
       "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "but we need more information about Alice's actions, especially since no one has confirmed seeing her in Medbay.",
-    "annotation": [
-      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -76,14 +50,9 @@
     ]
   },
   {
-    "text": "[Alice]: Charlie, I understand the suspicion around my Medbay visit, but I assure you I was working on my scan task alone,",
+    "text": "[Alice]: Charlie, I understand the suspicion around my Medbay visit, but I assure you I was working on my scan task alone, and it would be helpful if anyone could confirm seeing me there to clear up any doubts.",
     "annotation": [
-      "Denial without Evidence"
-    ]
-  },
-  {
-    "text": "and it would be helpful if anyone could confirm seeing me there to clear up any doubts.",
-    "annotation": [
+      "Appeal to Emotion",
       "Shifting the Burden of Proof"
     ]
   },
@@ -118,15 +87,9 @@
     ]
   },
   {
-    "text": "[Charlie]: I did see Alice moving from Electrical to Storage, which supports her account,",
+    "text": "[Charlie]: I did see Alice moving from Electrical to Storage, which supports her account, but I'm still concerned about the lack of confirmation for her time in Medbay.",
     "annotation": [
       "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "but I'm still concerned about the lack of confirmation for her time in Medbay.",
-    "annotation": [
-      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -136,15 +99,9 @@
     ]
   },
   {
-    "text": "[Alice]: Alice: I understand the concern about my presence in Medbay, but I assure you I was there working on my scan task alone,",
+    "text": "[Alice]: Alice: I understand the concern about my presence in Medbay, but I assure you I was there working on my scan task alone, and I hope my detailed path helps clear up any doubts about my movements.",
     "annotation": [
-      "Denial without Evidence"
-    ]
-  },
-  {
-    "text": "and I hope my detailed path helps clear up any doubts about my movements.",
-    "annotation": [
-      "Appeal to Logic"
+      "Appeal to Emotion"
     ]
   },
   {
