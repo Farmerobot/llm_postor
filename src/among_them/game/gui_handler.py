@@ -302,14 +302,10 @@ class GUIHandler(BaseModel):
 
                         # Save annotation to file
                         annotation_file = os.path.join(
-                            "data/annotations", f"{os.path.splitext(file_name)[0]}.txt"
+                            "data/annotations", f"{os.path.splitext(file_name)[0]}.json"
                         )
                         with open(annotation_file, "w", encoding="utf-8") as f:
-                            f.write(
-                                discussion_chat
-                                + "\n\nAnnotations:\n"
-                                + json.dumps(annotation_json, indent=2)
-                            )
+                            json.dump(annotation_json, f, indent=2)
 
                     previous_player = None
                     player_techniques = defaultdict(list)
@@ -387,11 +383,21 @@ class GUIHandler(BaseModel):
 
         # --- Techniques Table ---
         st.subheader("Technique Breakdown by Model")
+        # Extract valid techniques from PERSUASION_TECHNIQUES string
+        valid_techniques = []
+        for line in PERSUASION_TECHNIQUES.split('\n'):
+            if line.startswith('### ') and '**' in line:
+                # Extract technique name between ** **
+                technique = line.split('**')[1]
+                valid_techniques.append(technique)
+        
+        # Filter all_techniques to only include valid ones
         all_techniques = sorted(
             set(
                 technique
                 for model_data in model_techniques.values()
                 for technique in model_data
+                if technique in valid_techniques
             )
         )
         data = []
