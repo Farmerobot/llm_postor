@@ -2,6 +2,8 @@
 
 This project aims to test and compare the persuasive abilities of large language models (LLMs) in a game-like environment. The system simulates the game "Among Us" where AI agents, powered by various LLMs, interact, make decisions, and attempt to persuade each other. The goal is to understand how different LLMs approach persuasion, deception, and social interaction within a complex, dynamic environment.  The project analyzes both the success of persuasive attempts and the strategies employed by the agents.
 
+![overview.png](images/overview.png)
+
 ## Current Features
 
 - GUI for game state visualization and interaction using Streamlit.
@@ -26,6 +28,8 @@ The project is structured into several modules:
 * **`models`**: Defines data structures for tasks and game state.
 * **`players`**: Defines the players.
 * **`data`**: Contains saved game states ready to analyze. files are named in following format: `game_state_<phase>_<action_phase_count>_<discussion_phase_count>_<who_won>_<id>.json`.
+
+![diagram.png](images/diagram.png)
 
 ## Table of Contents
 
