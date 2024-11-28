@@ -1,17 +1,6 @@
 # Among Them
 
-[![Tests](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml/badge.svg)](https://github.com/Farmerobot/mk-ai-agents/actions/workflows/test.yml)
-
-Source code for a project in Artificial Intelligence at the Faculty of Computing and Telecommunications at Poznan University of Technology.
-
-## Development History
-
-The project began with the goal of analyzing persuasion capabilities of large language models (LLMs) in a game setting. Initially based on the [mk-ai-agents](https://github.com/MarcinKorcz101/mk-ai-agents) project, it has undergone significant modifications to meet our analysis requirements. Key developments include transitioning from a terminal application to a GUI using Streamlit, implementing game state tracking, and integrating various LLM models for enhanced analysis. The project now supports detailed logging, game state saving, and a comprehensive GUI for better interaction and analysis.
-
-## Project Description
-> powerful tool for analyzing and visualizing the persuasive abilities of LLMs in a game-like environment
-
-This project aims to test and compare the persuasive abilities of large language models (LLMs) in a game-like environment. The system simulates the game "Among Us," where AI agents, powered by various LLMs, interact, make decisions, and attempt to persuade each other.  The goal is to understand how different LLMs approach persuasion, deception, and social interaction within a complex, dynamic environment.  The project analyzes both the success of persuasive attempts and the strategies employed by the agents.
+This project aims to test and compare the persuasive abilities of large language models (LLMs) in a game-like environment. The system simulates the game "Among Us" where AI agents, powered by various LLMs, interact, make decisions, and attempt to persuade each other. The goal is to understand how different LLMs approach persuasion, deception, and social interaction within a complex, dynamic environment.  The project analyzes both the success of persuasive attempts and the strategies employed by the agents.
 
 ## Current Features
 
@@ -44,8 +33,6 @@ The project is structured into several modules:
 - Usage
 - Configuration
 - Running Tests
-- Contributing
-- License
 
 ## Installation
 
@@ -73,12 +60,7 @@ Once installed, verify Poetry's installation by running:
 
 ### 2. Clone the Repository and Install Dependencies
 
-- Clone the repository:
-
-```bash
-  git clone https://github.com/username/llm_poster.git
-  cd llm_poster
-```
+- Clone the repository
 
 - Install dependencies using Poetry:
 
@@ -119,20 +101,6 @@ To run all tests, use the following command:
 ```bash
   poetry run pytest
 ```
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature-branch).
-3. Commit your changes (git commit -m 'Add new feature').
-4. Push to the branch (git push origin feature-branch).
-5. Open a pull request on GitHub.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Future Enhancements (Roadmap)
 

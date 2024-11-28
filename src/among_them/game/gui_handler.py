@@ -18,9 +18,9 @@ from sklearn.preprocessing import PolynomialFeatures
 from streamlit.delta_generator import DeltaGenerator
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
-import queue
 
 from among_them.annotation import annotate_dialogue
+from among_them.config import OPENROUTER_API_KEY
 from among_them.game import dummy
 from among_them.game.consts import (
     IMPOSTOR_COOLDOWN,
@@ -50,9 +50,7 @@ from among_them.game.models.engine import ROOM_COORDINATES, GamePhase
 from among_them.game.models.history import PlayerState, RoundData
 from among_them.game.players.ai import AIPlayer
 from among_them.game.players.base_player import Player, PlayerRole
-import re
-import threading
-from concurrent.futures import wait
+
 
 class Watchdog(FileSystemEventHandler):
     def __init__(self, hook: Callable):
@@ -82,7 +80,8 @@ def install_monitor():
 
 class GUIHandler(BaseModel):
     def display_gui(self, game_engine: GameEngine):
-        # install_monitor()
+        # if OPENROUTER_API_KEY != "None":
+        #     install_monitor()
         game_overview, tournaments, techniques = st.tabs([
             "Game Overview",
             "Tournaments",
@@ -95,7 +94,7 @@ class GUIHandler(BaseModel):
                 self.sidebar(game_engine=game_engine)
                 self.game_overview(game_engine)
         with tournaments:
-            self.tournaments()
+            self.tournaments(debug=OPENROUTER_API_KEY != "None")
         with techniques:
             self._display_persuasion_techniques()
 
@@ -110,36 +109,41 @@ class GUIHandler(BaseModel):
 
     def game_overview(self, game_engine: GameEngine):
         st.title("Among Them")
-        # Create a button to trigger the next step
-        should_perform_step = st.checkbox("Perform Steps automatically")
+        should_perform_step = False
 
-        # Create columns for buttons
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        self._handle_tournament_file_selection(game_engine)
 
-        # Buttons in columns
-        with col1:
-            if st.button("Make Step"):
-                should_perform_step = True
-        with col2:
-            if st.button("Clear Game State"):
-                self.clear_game_state()
-        with col3:
-            if st.button("Save State to Tournaments"):
-                if game_engine.check_game_over():
-                    self.save_state_to_tournaments(game_engine)
-                else:
-                    st.warning("Game is not over yet! Please finish the game first.")
-        with col4:
-            if st.button("Force Set and Step Action"):
-                game_engine.state.set_stage(GamePhase.ACTION_PHASE)
-                game_engine.perform_step()
-        with col5:
-            if st.button("Force Set and Step Discussion"):
-                game_engine.state.set_stage(GamePhase.DISCUSS)
-                game_engine.perform_step()
-        with col6:
-            if st.button("Force step Voting"):
-                game_engine.go_to_voting()
+        if game_engine.state.DEBUG:
+            should_perform_step = st.checkbox("Perform Steps automatically")
+            # Create columns for buttons
+            col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+            # Buttons in columns
+            with col1:
+                if st.button("Make Step"):
+                    should_perform_step = True
+            with col2:
+                if st.button("Clear Game State"):
+                    self.clear_game_state()
+            with col3:
+                if st.button("Save State to Tournaments"):
+                    if game_engine.check_game_over():
+                        self.save_state_to_tournaments(game_engine)
+                    else:
+                        st.warning(
+                            "Game is not over yet! Please finish the game first."
+                        )
+            with col4:
+                if st.button("Force Set and Step Action"):
+                    game_engine.state.set_stage(GamePhase.ACTION_PHASE)
+                    game_engine.perform_step()
+            with col5:
+                if st.button("Force Set and Step Discussion"):
+                    game_engine.state.set_stage(GamePhase.DISCUSS)
+                    game_engine.perform_step()
+            with col6:
+                if st.button("Force step Voting"):
+                    game_engine.go_to_voting()
 
         col1, col2 = st.columns([2, 1])
         with col1:
@@ -150,10 +154,11 @@ class GUIHandler(BaseModel):
         self._display_player_selection(game_engine.state.players)
         discussion = self._display_discussion_chat(game_engine.state.players)
         # Analyze Chat Button
-        if st.button("Analyze Chat"):
-            # results = chat_analyzer.analyze()
-            results = annotate_dialogue(discussion)
-            st.session_state.results = results
+        if OPENROUTER_API_KEY != "None":
+            if st.button("Analyze Chat"):
+                # results = chat_analyzer.analyze()
+                results = annotate_dialogue(discussion)
+                st.session_state.results = results
         if "results" in st.session_state:
             self._display_annotated_text(
                 json.loads(st.session_state.results), game_engine.state.players
@@ -185,28 +190,65 @@ class GUIHandler(BaseModel):
                 else:
                     raise e
 
-    def tournaments(self):
-        """Display tournament analysis page."""
-        st.title("Tournament Analysis")
+    def _handle_tournament_file_selection(self, game_engine: Optional[GameEngine]):
+        # Get list of tournament files
+        tournament_dir = "data/tournament"
+        if os.path.exists(tournament_dir):
+            tournament_files = [
+                f for f in os.listdir(tournament_dir) if f.endswith(".json")
+            ]
+            if tournament_files:
+                # Check for OpenRouter API key
+                tournament_files = (
+                    ["None"]
+                    + (["DEBUG"] if OPENROUTER_API_KEY != "None" else [])
+                    + tournament_files
+                )
+                if "previous_selected_file" not in st.session_state:
+                    st.session_state.previous_selected_file = None
 
-        # Directory containing tournament JSON files
-        directory = st.text_input("Directory containing tournament JSON files", value="data/tournament")
+                selected_file = st.selectbox("Select tournament file", tournament_files, index=0 if OPENROUTER_API_KEY!="None" else 1)
+                game_state_path = "data/game_state.json"
 
-        # List all JSON files in the directory
-        tournament_files = [
-            f for f in os.listdir(directory) if f.endswith(".json")
-        ]
+                if selected_file == "None":
+                    if os.path.exists(game_state_path):
+                        os.remove(game_state_path)
+                        st.success("Game state cleared")
+                    st.session_state.previous_selected_file = None
+                elif selected_file == "DEBUG":
+                    if game_engine is not None:
+                        game_engine.state.DEBUG = True
+                        st.success("Debug mode enabled")
+                    st.session_state.previous_selected_file = "DEBUG"
+                elif (
+                    selected_file
+                    and selected_file != st.session_state.previous_selected_file
+                ):
+                    # Copy selected file to game_state.json
+                    shutil.copy(
+                        os.path.join(tournament_dir, selected_file), game_state_path
+                    )
+                    st.success(f"Loaded game state from {selected_file}")
+                    st.session_state.previous_selected_file = selected_file
 
-        if not tournament_files:
-            st.warning("No tournament files found in the specified directory.")
-            return
+                    # Try to load annotations if they exist
+                    annotation_file = os.path.join("data/annotations", selected_file)
+                    if os.path.exists(annotation_file):
+                        with open(annotation_file, "r") as f:
+                            st.session_state.results = json.dumps(json.load(f))
+                            st.success("Loaded existing annotations")
+                    if OPENROUTER_API_KEY == "None":
+                        st.rerun()
+
+    def tournaments(self, debug: bool = False):
+        st.title("Tournaments")
+        if debug:
+            if st.button("Analyze Tournaments"):
+                self.analyze_tournaments()
+            if st.button("Analyze Tournaments v2"):
+                self.analyze_tournaments_v2()
 
         # read data/analysis.json
-        model_techniques = None
-        model_player_counts = None
-        model_input_tokens = None
-        model_output_tokens = None
-        
         if os.path.exists("data/analysis.json"):
             with open("data/analysis.json", "r") as f:
                 data = json.load(f)
@@ -214,262 +256,184 @@ class GUIHandler(BaseModel):
                 model_player_counts = data["model_player_counts"]
                 model_input_tokens = data["model_input_tokens"]
                 model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(
+                    model_techniques,
+                    model_player_counts,
+                    model_input_tokens,
+                    model_output_tokens,
+                )
+        # read data/analysis_impostor.json
+        if os.path.exists("data/analysis_impostor.json"):
+            with open("data/analysis_impostor.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(
+                    model_techniques,
+                    model_player_counts,
+                    model_input_tokens,
+                    model_output_tokens,
+                )
 
-        # Add button to analyze multiple tournaments
-        if st.button("Analyze Tournaments"):
-            self.analyze_tournaments(tournament_files, directory)
+        # read data/analysis_crewmate.json
+        if os.path.exists("data/analysis_crewmate.json"):
+            with open("data/analysis_crewmate.json", "r") as f:
+                data = json.load(f)
+                model_techniques = data["model_techniques"]
+                model_player_counts = data["model_player_counts"]
+                model_input_tokens = data["model_input_tokens"]
+                model_output_tokens = data["model_output_tokens"]
+                self._display_tournament_persuasion_analysis(
+                    model_techniques,
+                    model_player_counts,
+                    model_input_tokens,
+                    model_output_tokens,
+                )
 
-        # Create DataFrame for technique usage if data exists
-        if model_techniques:
-            rows = []
-            for model, techniques in model_techniques.items():
-                for technique, count in techniques.items():
-                    rows.append({
-                        "Model": model,
-                        "Technique": technique,
-                        "Count": count,
-                        "Average": count / model_player_counts[model]
-                        if model in model_player_counts and model_player_counts[model] > 0
-                        else 0,
-                    })
+    def clear_game_state(self):
+        """Deletes the game_state.json file to clear the game state."""
+        try:
+            os.remove("data/game_state.json")
+            st.success("Game state cleared successfully!")
+            st.rerun()
+        except FileNotFoundError:
+            st.warning("No game state file found.")
 
-            df = pd.DataFrame(rows)
-            
-            # Create pivot table
-            df2 = df.pivot(index="Model", columns="Technique", values="Count").fillna(0)
+    def analyze_tournaments(self):
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
 
-            # Display DataFrames
-            st.subheader("Technique Usage by Model")
-            st.dataframe(df2)
-            st.dataframe(df)  # Display DataFrame as a table
+        # List all JSON files in the directory
+        tournament_files = [
+            f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
 
-        st.subheader("Detailed Tournament Analysis")
-        if st.button("Start Detailed Analysis", key="start_detailed_analysis"):
-            # First, load and process all files once
-            progress_text = st.empty()
-            progress_bar = st.progress(0)
-            total_files = len(tournament_files)
-            
-            # Structure to store all processed data
-            role_technique_data = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
-            processed_files = 0
-            lock = threading.Lock()
-            progress_queue = queue.Queue()
-            
-            # Precompile regex for player name extraction
-            player_name_pattern = re.compile(r'\[(.*?)\]:')
-            
-            def process_file(file_name: str):
-                try:
-                    # Load game state
-                    game_engine = GameEngine()
-                    if not game_engine.load_state(os.path.join(directory, file_name)):
-                        progress_queue.put(("error", f"Failed to load game state: {file_name}"))
-                        return
-                        
-                    # Create mapping of player name to (model, role)
-                    player_info = {
-                        player.name: (player.llm_model_name, player.role)
-                        for player in game_engine.state.players
-                    }
-                    
-                    # Load annotations
-                    annotation_file = os.path.join(
-                        "data/annotations", 
-                        f"{os.path.splitext(file_name)[0]}.json"
-                    )
-                    if not os.path.exists(annotation_file):
-                        progress_queue.put(("error", f"Annotation file not found: {annotation_file}"))
-                        return
-                        
-                    with open(annotation_file, "r", encoding="utf-8") as f:
-                        annotation_json = json.load(f)
-                    
-                    # Local dictionary to store counts for this file
-                    local_counts = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
-                        
-                    # Process annotations
-                    for item in annotation_json:
-                        match = player_name_pattern.match(item["text"])
-                        if not match:
-                            continue
-                            
-                        player_name = match.group(1)
-                        if player_name not in player_info:
-                            continue
-                            
-                        model, role = player_info[player_name]
-                        # Use set to avoid counting duplicate techniques in the same message
-                        techniques = set(item.get("annotation", []))
-                        for technique in techniques:
-                            local_counts[model][role][technique] += 1
-                    
-                    # Update global counts with thread safety
-                    with lock:
-                        for model in local_counts:
-                            for role in local_counts[model]:
-                                for technique, count in local_counts[model][role].items():
-                                    role_technique_data[model][role][technique] += count
-                    
-                    # Report progress
-                    progress_queue.put(("progress", 1))
-                except Exception as e:
-                    progress_queue.put(("error", f"Error processing {file_name}: {str(e)}"))
-
-            # Create thread pool
-            with concurrent.futures.ThreadPoolExecutor(max_workers=min(32, os.cpu_count() * 4)) as executor:
-                # Submit all files for processing
-                futures = [executor.submit(process_file, file_name) for file_name in tournament_files]
-                
-                # Monitor progress while threads are running
-                completed = 0
-                errors = []
-                while completed < total_files:
-                    try:
-                        msg_type, msg_data = progress_queue.get(timeout=1.0)
-                        if msg_type == "progress":
-                            completed += msg_data
-                            progress = completed / total_files
-                            progress_text.text(f"Processing files: {completed}/{total_files} ({int(progress*100)}%)")
-                            progress_bar.progress(progress)
-                        elif msg_type == "error":
-                            errors.append(msg_data)
-                            st.warning(msg_data)
-                    except queue.Empty:
-                        # Check if all threads are done
-                        if all(future.done() for future in futures):
-                            break
-                
-                # Wait for all threads to complete
-                concurrent.futures.wait(futures)
-            
-            progress_text.empty()
-            progress_bar.empty()
-            
-            if errors:
-                st.error(f"Completed with {len(errors)} errors. Check warnings above for details.")
-            
-            st.subheader("Download Analysis Data")
-            
-            # Create CSVs from processed data using string building for better performance
-            
-            # All techniques CSV
-            csv_parts = ["Model,Technique,Count"]
-            for model in role_technique_data:
-                for role in role_technique_data[model]:
-                    for technique, count in role_technique_data[model][role].items():
-                        csv_parts.append(f"{model},{technique},{count}")
-            csv = "\n".join(csv_parts)
-            
-            st.download_button(
-                label="Download All Techniques",
-                data=csv,
-                file_name="technique_usage.csv",
-                mime="text/csv",
-                help="Download a CSV file containing technique usage statistics for all models",
-            )
-            
-            # Crewmate techniques CSV
-            csv_parts = ["Model,Technique,Count"]
-            for model in role_technique_data:
-                for technique, count in role_technique_data[model][PlayerRole.CREWMATE].items():
-                    if count > 0:
-                        csv_parts.append(f"{model},{technique},{count}")
-            crewmate_csv = "\n".join(csv_parts)
-            
-            st.download_button(
-                label="Download Crewmate Techniques",
-                data=crewmate_csv,
-                file_name="crewmate_technique_usage.csv",
-                mime="text/csv",
-                help="Download a CSV file containing technique usage statistics for crewmate models only",
-            )
-            
-            # Impostor techniques CSV
-            csv_parts = ["Model,Technique,Count"]
-            for model in role_technique_data:
-                for technique, count in role_technique_data[model][PlayerRole.IMPOSTOR].items():
-                    if count > 0:
-                        csv_parts.append(f"{model},{technique},{count}")
-            impostor_csv = "\n".join(csv_parts)
-            
-            st.download_button(
-                label="Download Impostor Techniques",
-                data=impostor_csv,
-                file_name="impostor_technique_usage.csv",
-                mime="text/csv",
-                help="Download a CSV file containing technique usage statistics for impostor models only",
-            )
-        else:
-            if not model_techniques:
-                st.info("Click 'Start Detailed Analysis' to analyze the tournament files by role.")
-
-    def analyze_tournaments(self, tournament_files: List[str], directory: str):
-        """Analyze tournament files."""
         # Dictionary to accumulate techniques for each model
         model_techniques = defaultdict(lambda: defaultdict(int))
         model_player_counts = defaultdict(int)
 
         # Dictionaries to store token usage per model
-        model_input_tokens = defaultdict(dict)
-        model_output_tokens = defaultdict(dict)
+        model_input_tokens = defaultdict(lambda: defaultdict(int))
+        model_output_tokens = defaultdict(lambda: defaultdict(int))
 
-        # Create progress bar
-        progress_text = st.empty()
-        progress_bar = st.progress(0)
-        total_files = len(tournament_files)
+        # Iterate over each file and load the game state
+        progress_placeholder = st.text("Starting to analyze tournament files...")
+        with st.status("Analyzing tournament files...") as status:
+            total_files = len(tournament_files)
+            progress_text = st.empty()
+            files_analyzed = 0
 
-        # Process each file
-        for i, file_name in enumerate(tournament_files):
-            progress = (i + 1) / total_files
-            progress_text.text(f"Analyzing tournament files: {i+1}/{total_files} ({int(progress*100)}%)")
-            progress_bar.progress(progress)
+            def analyze_file(file_name: str):
+                file_path = os.path.join(tournament_dir, file_name)
+                game_engine = GameEngine()
+                if game_engine.load_state(file_path):
+                    game_state = game_engine.state
+                    players = game_state.players
 
-            # Load game state
-            game_engine = GameEngine()
-            if not game_engine.load_state(os.path.join(directory, file_name)):
-                continue
+                    discussion_chat = ""
+                    # Get the longest discussion chat from all players - ensure the
+                    # player was alive until the end
+                    for player in players:
+                        if player.state.life == PlayerState.ALIVE:
+                            discussion_chat = "\n".join(player.get_chat_messages())
+                            if not discussion_chat.strip():
+                                discussion_chat = "\n".join([
+                                    obs[18:]
+                                    for obs in player.state.observations
+                                    if obs.startswith("chat")
+                                ])
+                            break
 
-            # Process players
-            for player in game_engine.state.players:
-                model_player_counts[player.llm_model_name] += 1
+                    if not discussion_chat:
+                        print(f"No discussion chat found for file: {file_name}")
+                        st.write(f"No discussion chat found for file: {file_name}")
+                        return
 
-            # Load annotations
-            annotation_file = os.path.join(
-                "data/annotations", f"{os.path.splitext(file_name)[0]}.json"
-            )
-            if not os.path.exists(annotation_file):
-                continue
+                    annotation_json = None
+                    annotated = annotate_dialogue(discussion_chat).strip()
+                    if not annotated:
+                        raise ValueError("no annotation")
+                        return
+                    if annotated.startswith("```json"):
+                        annotated = annotated.split("```json", 1)[1].split("```", 1)[0].strip()
+                    
+                    try:
+                        annotation_json = json.loads(annotated)
+                    except Exception as e:
+                        print(annotated)
+                        raise e
+                    if not annotation_json:
+                        print(f"No annotation found for file: {file_name}")
+                        st.write(f"No annotation found for file: {file_name}")
+                        raise ValueError("no annotation")
+                        return
+                    else:
+                        # Create annotations directory if it doesn't exist
+                        os.makedirs("data/annotations", exist_ok=True)
 
-            with open(annotation_file, "r", encoding="utf-8") as f:
-                annotation_json = json.load(f)
+                        # Save annotation to file
+                        annotation_file = os.path.join(
+                            "data/annotations", file_name
+                        )
+                        with open(annotation_file, "w", encoding="utf-8") as f:
+                            json.dump(annotation_json, f, indent=2)
 
-            # Process annotations
-            for item in annotation_json:
-                if "]: " not in item["text"]:
-                    continue
+                    previous_player = None
+                    player_techniques = defaultdict(list)
 
-                player_name = item["text"].split("]:")[0].strip("[]")
-                for player in game_engine.state.players:
-                    if player.name == player_name:
-                        for technique in item.get("annotation", []):
-                            model_techniques[player.llm_model_name][technique] += 1
+                    for item in annotation_json:
+                        replaced_text = item["text"]
+                        current_player = (
+                            replaced_text.split("]:")[0].strip("[]")
+                            if "]: " in replaced_text
+                            else previous_player
+                        )
 
-            # Process token usage
-            for player in game_engine.state.players:
-                model = player.llm_model_name
-                model_input_tokens[model][file_name] = (
-                    player.input_tokens if hasattr(player, "input_tokens") else 0
-                )
-                model_output_tokens[model][file_name] = (
-                    player.output_tokens if hasattr(player, "output_tokens") else 0
-                )
+                        if item["annotation"]:
+                            player_techniques[current_player].extend(item["annotation"])
 
-        # Clear progress indicators
-        progress_text.empty()
-        progress_bar.empty()
+                        previous_player = current_player
 
-        # Save analysis results
+                    for player in players:
+                        model_name = player.llm_model_name
+                        model_player_counts[model_name] += 1
+                        model_input_tokens[model_name][file_name] = (
+                            player.state.token_usage.input_tokens
+                        )
+                        model_output_tokens[model_name][file_name] = (
+                            player.state.token_usage.output_tokens
+                        )
+                        for technique in player_techniques[player.name]:
+                            model_techniques[model_name][technique] += 1
+
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                futures = {
+                    executor.submit(analyze_file, file_name): file_name
+                    for file_name in tournament_files
+                }
+                for future in concurrent.futures.as_completed(futures):
+                    file_name = futures[future]
+                    files_analyzed += 1
+                    progress_text.write(
+                        f"Analyzing files... ({files_analyzed}/{total_files})"
+                    )
+                    try:
+                        future.result()  # This will raise any exceptions that occurred
+                        st.write(f"✅ Successfully analyzed {file_name}")
+                    except Exception as e:
+                        st.error(f"❌ Error analyzing {file_name}: {str(e)}")
+                        executor._threads.clear()
+                        raise e
+                
+            status.update(label="Analysis complete!", state="complete")
+            progress_text.empty()
+
+        # Clear the progress message
+        progress_placeholder.empty()
+
+        # save dicts to a file
         with open("data/analysis.json", "w") as f:
             json.dump(
                 {
@@ -480,6 +444,288 @@ class GUIHandler(BaseModel):
                 },
                 f,
             )
+            
+    def analyze_tournaments_v2(self):
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
+
+        # List all JSON files in the directory
+        tournament_files = [
+            f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
+
+        # Dictionary to accumulate techniques for each model
+        impostor_model_techniques = defaultdict(lambda: defaultdict(int))
+        crewmate_model_techniques = defaultdict(lambda: defaultdict(int))
+        impostor_model_player_counts = defaultdict(int)
+        crewmate_model_player_counts = defaultdict(int)
+
+        # Dictionaries to store token usage per model
+        impostor_model_input_tokens = defaultdict(lambda: defaultdict(int))
+        impostor_model_output_tokens = defaultdict(lambda: defaultdict(int))
+        crewmate_model_input_tokens = defaultdict(lambda: defaultdict(int))
+        crewmate_model_output_tokens = defaultdict(lambda: defaultdict(int))
+
+        # Iterate over each file and load the game state
+        progress_placeholder = st.text("Starting to analyze tournament files...")
+        with st.status("Analyzing tournament files...") as status:
+            total_files = len(tournament_files)
+            progress_text = st.empty()
+            files_analyzed = 0
+
+            def analyze_file(file_name: str):
+                file_path = os.path.join(tournament_dir, file_name)
+                game_engine = GameEngine()
+                if game_engine.load_state(file_path):
+                    game_state = game_engine.state
+                    players = game_state.players
+
+                    discussion_chat = ""
+                    # Get the longest discussion chat from all players - ensure the
+                    # player was alive until the end
+                    for player in players:
+                        if player.state.life == PlayerState.ALIVE:
+                            discussion_chat = "\n".join(player.get_chat_messages())
+                            if not discussion_chat.strip():
+                                discussion_chat = "\n".join([
+                                    obs[18:]
+                                    for obs in player.state.observations
+                                    if obs.startswith("chat")
+                                ])
+                            break
+
+                    if not discussion_chat:
+                        print(f"No discussion chat found for file: {file_name}")
+                        st.write(f"No discussion chat found for file: {file_name}")
+                        return
+
+                    annotation_json = None
+                    annotation_file = os.path.join(
+                        "data/annotations", file_name
+                    )
+                    with open(annotation_file, "r", encoding="utf-8") as f:
+                        annotation_json = json.load(f)
+
+                    previous_player = None
+                    player_techniques = defaultdict(list)
+
+                    for item in annotation_json:
+                        replaced_text = item["text"]
+                        current_player = (
+                            replaced_text.split("]:")[0].strip("[]")
+                            if "]: " in replaced_text
+                            else previous_player
+                        )
+
+                        if item["annotation"]:
+                            player_techniques[current_player].extend(item["annotation"])
+
+                        previous_player = current_player
+
+                    for player in players:
+                        model_name = player.llm_model_name
+                        if player.is_impostor:
+                            impostor_model_player_counts[model_name] += 1
+                            impostor_model_input_tokens[model_name][file_name] = (
+                                player.state.token_usage.input_tokens
+                            )
+                            impostor_model_output_tokens[model_name][file_name] = (
+                                player.state.token_usage.output_tokens
+                            )
+                            for technique in player_techniques[player.name]:
+                                impostor_model_techniques[model_name][technique] += 1
+                        else:
+                            crewmate_model_player_counts[model_name] += 1
+                            crewmate_model_input_tokens[model_name][file_name] = (
+                                player.state.token_usage.input_tokens
+                            )
+                            crewmate_model_output_tokens[model_name][file_name] = (
+                                player.state.token_usage.output_tokens
+                            )
+                            for technique in player_techniques[player.name]:
+                                crewmate_model_techniques[model_name][technique] += 1
+
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                futures = {
+                    executor.submit(analyze_file, file_name): file_name
+                    for file_name in tournament_files
+                }
+                for future in concurrent.futures.as_completed(futures):
+                    file_name = futures[future]
+                    files_analyzed += 1
+                    progress_text.write(
+                        f"Analyzing files... ({files_analyzed}/{total_files})"
+                    )
+                    try:
+                        future.result()  # This will raise any exceptions that occurred
+                        st.write(f"✅ Successfully analyzed {file_name}")
+                    except Exception as e:
+                        st.error(f"❌ Error analyzing {file_name}: {str(e)}")
+                        executor.shutdown()
+                        executor._threads.clear()
+                        raise e
+                
+            status.update(label="Analysis complete!", state="complete")
+            progress_text.empty()
+
+        # Clear the progress message
+        progress_placeholder.empty()
+
+        # save dicts to a file
+        with open("data/analysis_impostor.json", "w") as f:
+            json.dump(
+                {
+                    "model_techniques": impostor_model_techniques,
+                    "model_player_counts": impostor_model_player_counts,
+                    "model_input_tokens": impostor_model_input_tokens,
+                    "model_output_tokens": impostor_model_output_tokens,
+                },
+                f,
+            )
+        
+        with open("data/analysis_crewmate.json", "w") as f:
+            json.dump(
+                {
+                    "model_techniques": crewmate_model_techniques,
+                    "model_player_counts": crewmate_model_player_counts,
+                    "model_input_tokens": crewmate_model_input_tokens,
+                    "model_output_tokens": crewmate_model_output_tokens,
+                },
+                f,
+            )
+
+    def _display_tournament_persuasion_analysis(
+        self,
+        model_techniques: Dict[str, Dict[str, int]],
+        model_player_counts: Dict[str, int],
+        model_input_tokens: Dict[str, int],
+        model_output_tokens: Dict[str, int],
+    ):
+        st.title("Persuasion Techniques")
+        if not model_techniques:
+            st.warning("No data available. Please run the tournament analysis first.")
+            return
+
+        # --- Token Usage Chart (Keep this as it is) ---
+        # self.plot_token_usage(model_input_tokens, model_output_tokens)
+
+        # --- Techniques Table ---
+        st.subheader("Technique Breakdown by Model")
+        # Extract valid techniques from PERSUASION_TECHNIQUES string
+        valid_techniques = []
+        for line in PERSUASION_TECHNIQUES.split("\n"):
+            if line.startswith("### ") and "**" in line:
+                # Extract technique name between ** **
+                technique = line.split("**")[1]
+                valid_techniques.append(technique)
+
+        # Filter all_techniques to only include valid ones
+        all_techniques = sorted(
+            set(
+                technique
+                for model_data in model_techniques.values()
+                for technique in model_data
+                if technique in valid_techniques
+            )
+        )
+        data = []
+        data2 = []
+        for model_name, techniques in model_techniques.items():
+            row = {"Model": model_name}
+            row2 = {"Model": model_name}
+            row2["Total games"] = len(model_input_tokens[model_name])
+            row2["Total Uses"] = sum(techniques.values())
+            row2["Avg. per Game"] = (
+                row2["Total Uses"] / row2["Total games"] if row2["Total games"] else 0
+            )
+            row2["Avg. per Player"] = (
+                row2["Total Uses"] / model_player_counts[model_name]
+                if model_player_counts[model_name]
+                else 0
+            )
+            for technique in all_techniques:
+                row[technique] = techniques.get(
+                    technique, 0
+                )  # Get count or 0 if not present
+            data.append(row)
+            data2.append(row2)
+
+        df = pd.DataFrame(data)
+        df = df.transpose()
+        df.columns = df.iloc[0]
+        df = df.iloc[1:]
+        df.index.name = "Persuasion Technique"  # Add this line to name the index
+        df2 = pd.DataFrame(data2)
+        df2 = df2.transpose()
+        df2.columns = df2.iloc[0]
+        df2 = df2.iloc[1:]
+        st.dataframe(df2)
+        st.dataframe(df)  # Display DataFrame as a table
+
+        # Add CSV download button
+        st.subheader(f"Download Technique Usage Data")
+        csv = df.to_csv(index=True)
+        st.download_button(
+            label="Download Technique Usage CSV",
+            data=csv,
+            key=f"{list(list(model_techniques.values())[0].values())[0]}",
+            file_name="technique_usage.csv",
+            mime="text/csv",
+            help="Download a CSV file containing technique usage statistics for each model",  # noqa: E501
+        )
+
+    def plot_token_usage(
+        self,
+        model_input_tokens: defaultdict[defaultdict[int]],
+        model_output_tokens: defaultdict[defaultdict[int]],
+    ):
+        """Plots input and output token usage per model."""
+        models = list(model_input_tokens.keys())
+        fig = go.Figure()
+
+        # Define colors for each model. Add more colors if needed.
+        colors = [
+            "cyan",
+            "orange",
+            "green",
+            "red",
+            "purple",
+            "brown",
+            "pink",
+            "gray",
+            "olive",
+            "blue",
+        ]
+
+        for i, model in enumerate(models):
+            input_tokens_model = [
+                model_input_tokens[model][filename]
+                for filename in model_input_tokens[model].keys()
+            ]
+            output_tokens_model = [
+                model_output_tokens[model][filename]
+                for filename in model_output_tokens[model].keys()
+            ]
+            fig.add_trace(
+                go.Scatter(
+                    x=input_tokens_model,
+                    y=output_tokens_model,
+                    mode="markers",
+                    name=model,
+                    marker=dict(color=colors[i % len(colors)]),
+                    hovertemplate="<br>Input: %{x}<br>Output: %{y}",
+                )
+            )
+
+        fig.update_layout(
+            title="Token Usage per Model",
+            xaxis_title="Input Tokens",  # Corrected x-axis title
+            yaxis_title="Output Tokens",  # Corrected y-axis title
+            showlegend=True,  # Show the legend
+            legend_title="Models",
+        )
+
+        st.plotly_chart(fig)
 
     def save_state_to_tournaments(self, game_engine: GameEngine):
         """Saves the game state to the tournaments folder."""
@@ -506,15 +752,6 @@ class GUIHandler(BaseModel):
             f"Game state saved to tournament folder as {filename}. "
             "You can clear the game state now."
         )
-
-    def clear_game_state(self):
-        """Deletes the game_state.json file to clear the game state."""
-        try:
-            os.remove("data/game_state.json")
-            st.success("Game state cleared successfully!")
-            st.rerun()
-        except FileNotFoundError:
-            st.warning("No game state file found.")
 
     def _display_short_player_info(
         self, player: Player, current: bool, placeholder: DeltaGenerator
@@ -986,6 +1223,7 @@ class GUIHandler(BaseModel):
     def game_settings(self):
         """Displays the game settings tab for player configuration."""
         st.title("Game Settings")
+        self._handle_tournament_file_selection(None)
 
         col1, col2, col3 = st.columns([1, 1, 5])
         with col1:

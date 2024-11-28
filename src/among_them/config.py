@@ -9,10 +9,11 @@ load_dotenv(override=True)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 if not OPENROUTER_API_KEY:
-    raise ValueError(
-        "API key is missing. Please set OPENROUTER_API_KEY "
-        "in your environment or in a .env file in the project root."
-    )
+    OPENROUTER_API_KEY = "None"
+    # raise ValueError(
+    #     "API key is missing. Please set OPENROUTER_API_KEY "
+    #     "in your environment or in a .env file in the project root."
+    # )
 
 # if src/among_them/game/dummy.py does not exist, create it.
 # This is for abusing streamlit refresh when game_state.json changes
