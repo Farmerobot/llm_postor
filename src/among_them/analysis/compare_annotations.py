@@ -27,38 +27,9 @@ def get_all_unique_annotations(annotations1: Dict[str, Set[str]], annotations2: 
     return all_annotations
 
 def calculate_cohens_kappa(annotations1: Dict[str, Set[str]], annotations2: Dict[str, Set[str]], 
-                         common_texts: Set[str]) -> Dict[str, float]:
+                         common_texts: Set[str]) -> float:
     # Get all unique annotation labels
     all_annotations = get_all_unique_annotations(annotations1, annotations2)
-    
-    # Create binary matrices for each annotation type
-    kappa_scores = {}
-    
-    for annotation in all_annotations:
-        rater1_scores = []
-        rater2_scores = []
-        
-        # Count occurrences to check if we have enough variation
-        count_rater1 = 0
-        count_rater2 = 0
-        
-        for text in common_texts:
-            score1 = 1 if annotation in annotations1[text] else 0
-            score2 = 1 if annotation in annotations2[text] else 0
-            rater1_scores.append(score1)
-            rater2_scores.append(score2)
-            count_rater1 += score1
-            count_rater2 += score2
-        
-        # Only calculate kappa if both raters used at least one positive and one negative label
-        if (count_rater1 > 0 and count_rater1 < len(common_texts) and 
-            count_rater2 > 0 and count_rater2 < len(common_texts)):
-            try:
-                kappa = cohen_kappa_score(rater1_scores, rater2_scores, labels=[0, 1])
-                if not np.isnan(kappa):
-                    kappa_scores[annotation] = kappa
-            except:
-                continue
     
     # Calculate overall kappa
     all_rater1_scores = []
@@ -76,44 +47,58 @@ def calculate_cohens_kappa(annotations1: Dict[str, Set[str]], annotations2: Dict
     if unique_scores1 > 1 and unique_scores2 > 1:
         try:
             overall_kappa = cohen_kappa_score(all_rater1_scores, all_rater2_scores, labels=[0, 1])
-            if not np.isnan(overall_kappa):
-                kappa_scores['overall'] = overall_kappa
-            else:
-                kappa_scores['overall'] = 0.0
+            return float(overall_kappa) if not np.isnan(overall_kappa) else 0.0
         except:
-            kappa_scores['overall'] = 0.0
+            return 0.0
     else:
-        kappa_scores['overall'] = 0.0
+        return 0.0
+
+def compare_directories(dir1: str, dir2: str) -> Tuple[dict, float]:
+    # Get all JSON files in both directories
+    files1 = {f for f in os.listdir(dir1) if f.endswith('.json')}
+    files2 = {f for f in os.listdir(dir2) if f.endswith('.json')}
+    
+    # Find common files
+    common_files = files1 & files2
+    
+    # Collect all annotations
+    all_annotations1 = {}  # text -> set of annotations
+    all_annotations2 = {}
+    
+    for filename in common_files:
+        file1_path = os.path.join(dir1, filename)
+        file2_path = os.path.join(dir2, filename)
         
-    return kappa_scores
-
-def compare_annotations(file1_path: str, file2_path: str) -> Tuple[dict, Dict[str, float]]:
-    # Load both JSON files
-    data1 = load_json_file(file1_path)
-    data2 = load_json_file(file2_path)
-
-    # Get annotations by text for both files
-    annotations1 = get_annotations_by_text(data1)
-    annotations2 = get_annotations_by_text(data2)
-
-    # Compare annotations
+        # Load annotations from both files
+        data1 = load_json_file(file1_path)
+        data2 = load_json_file(file2_path)
+        
+        # Get annotations by text
+        annotations1 = get_annotations_by_text(data1)
+        annotations2 = get_annotations_by_text(data2)
+        
+        # Merge into all_annotations
+        all_annotations1.update(annotations1)
+        all_annotations2.update(annotations2)
+    
+    # Find texts present in both sets
+    common_texts = set(all_annotations1.keys()) & set(all_annotations2.keys())
+    
+    # Calculate Cohen's Kappa for all annotations
+    kappa_score = calculate_cohens_kappa(all_annotations1, all_annotations2, common_texts)
+    
+    # Prepare comparison results
     comparison_results = {
         'matching_texts': [],
         'different_annotations': [],
-        'unique_to_file1': [],
-        'unique_to_file2': []
+        'unique_to_dir1': [],
+        'unique_to_dir2': []
     }
-
-    # Find texts present in both files
-    common_texts = set(annotations1.keys()) & set(annotations2.keys())
-    
-    # Calculate Cohen's Kappa scores
-    kappa_scores = calculate_cohens_kappa(annotations1, annotations2, common_texts)
     
     # Analyze common texts
     for text in common_texts:
-        annot1 = annotations1[text]
-        annot2 = annotations2[text]
+        annot1 = all_annotations1[text]
+        annot2 = all_annotations2[text]
         
         if annot1 == annot2:
             comparison_results['matching_texts'].append({
@@ -129,28 +114,21 @@ def compare_annotations(file1_path: str, file2_path: str) -> Tuple[dict, Dict[st
                 'unique_to_file1': list(annot1 - annot2),
                 'unique_to_file2': list(annot2 - annot1)
             })
-
-    # Find texts unique to each file
-    for text in set(annotations1.keys()) - common_texts:
-        comparison_results['unique_to_file1'].append({
+    
+    # Find texts unique to each directory
+    for text in set(all_annotations1.keys()) - common_texts:
+        comparison_results['unique_to_dir1'].append({
             'text': text,
-            'annotations': list(annotations1[text])
+            'annotations': list(all_annotations1[text])
         })
-
-    for text in set(annotations2.keys()) - common_texts:
-        comparison_results['unique_to_file2'].append({
+    
+    for text in set(all_annotations2.keys()) - common_texts:
+        comparison_results['unique_to_dir2'].append({
             'text': text,
-            'annotations': list(annotations2[text])
+            'annotations': list(all_annotations2[text])
         })
-
-    return comparison_results, kappa_scores
-
-def analyze_annotation_distribution(data: List[dict]) -> Dict[str, int]:
-    distribution = defaultdict(int)
-    for item in data:
-        for annotation in item.get('annotation', []):
-            distribution[annotation] += 1
-    return dict(distribution)
+    
+    return comparison_results, kappa_score
 
 def main():
     # Example usage
@@ -164,60 +142,34 @@ def main():
         "annotations_gemini_2_ev"
     ]
     
-    # Get all JSON files in the human annotations directory
-    human_dir = os.path.join(base_dir, "annotations_human")
-    human_files = [f for f in os.listdir(human_dir) if f.endswith('.json')]
-    
     results = []
     
-    # Compare each human annotation file with its counterparts in other directories
-    for filename in human_files:
-        human_file_path = os.path.join(human_dir, filename)
+    # Compare human annotations with each other directory
+    human_dir = os.path.join(base_dir, dirs_to_compare[0])
+    
+    for compare_dir in dirs_to_compare[1:]:
+        comparison_dir = os.path.join(base_dir, compare_dir)
+        comparison_results, kappa_score = compare_directories(human_dir, comparison_dir)
         
-        for compare_dir in dirs_to_compare[1:]:  # Skip human directory
-            compare_file_path = os.path.join(base_dir, compare_dir, filename)
-            
-            if os.path.exists(compare_file_path):
-                comparison_results, kappa_scores = compare_annotations(
-                    human_file_path, compare_file_path
-                )
-                
-                # Add overall results
-                results.append({
-                    'filename': filename,
-                    'comparison': f'human_vs_{compare_dir}',
-                    'overall_kappa': kappa_scores.get('overall', 0.0),
-                })
-                
-                # Add per-technique results
-                for technique, score in kappa_scores.items():
-                    if technique != 'overall':
-                        results.append({
-                            'filename': filename,
-                            'comparison': f'human_vs_{compare_dir}',
-                            'technique': technique,
-                            'kappa': score,
-                        })
+        results.append({
+            'comparison': f'human_vs_{compare_dir}',
+            'kappa_score': kappa_score,
+            'matching_texts': len(comparison_results['matching_texts']),
+            'different_annotations': len(comparison_results['different_annotations']),
+            'unique_to_human': len(comparison_results['unique_to_dir1']),
+            'unique_to_other': len(comparison_results['unique_to_dir2'])
+        })
     
-    # Save results to CSV files
-    overall_output = os.path.join(base_dir, 'annotation_comparison_overall.csv')
-    technique_output = os.path.join(base_dir, 'annotation_comparison_by_technique.csv')
+    # Save results to CSV file
+    output_file = os.path.join(base_dir, 'annotation_comparison_results.csv')
     
-    # Write overall results
-    overall_results = [r for r in results if 'technique' not in r]
-    with open(overall_output, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['filename', 'comparison', 'overall_kappa'])
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['comparison', 'kappa_score', 'matching_texts', 
+                                             'different_annotations', 'unique_to_human', 'unique_to_other'])
         writer.writeheader()
-        writer.writerows(overall_results)
+        writer.writerows(results)
     
-    # Write technique-specific results
-    technique_results = [r for r in results if 'technique' in r]
-    with open(technique_output, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['filename', 'comparison', 'technique', 'kappa'])
-        writer.writeheader()
-        writer.writerows(technique_results)
-    
-    print(f"Results have been saved to: {overall_output} and {technique_output}")
+    print(f"Results have been saved to: {output_file}")
 
 if __name__ == "__main__":
     main()
