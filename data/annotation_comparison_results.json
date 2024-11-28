@@ -1,5 +1,15 @@
 [
   {
+    "filename": "gpt-4o-mini_vs_llama-3-1-8b-instruct_5.json",
+    "comparison": "human_vs_annotations_gemini_2_ev",
+    "agreement_score": 1.0
+  },
+  {
+    "filename": "llama-3-1-405b-instruct_vs_gemini-flash-1-5_3.json",
+    "comparison": "human_vs_annotations_gemini_2_ev",
+    "agreement_score": 1.0
+  },
+  {
     "filename": "claude-3-5-haiku_vs_gpt-4o_1.json",
     "comparison": "human_vs_annotations_4o_mini_ev",
     "agreement_score": 0.1
@@ -8,6 +18,11 @@
     "filename": "claude-3-5-haiku_vs_gpt-4o_1.json",
     "comparison": "human_vs_annotations_gemini_ev",
     "agreement_score": 0.3
+  },
+  {
+    "filename": "claude-3-5-haiku_vs_gpt-4o_1.json",
+    "comparison": "human_vs_annotations_gemini_2_ev",
+    "agreement_score": 0.95
   },
   {
     "filename": "gpt-4o_vs_gpt-4o-mini_1.json",
@@ -20,6 +35,11 @@
     "agreement_score": 0.45
   },
   {
+    "filename": "gpt-4o_vs_gpt-4o-mini_1.json",
+    "comparison": "human_vs_annotations_gemini_2_ev",
+    "agreement_score": 1.0
+  },
+  {
     "filename": "gemini-flash-1-5_vs_claude-3-5-sonnet_5.json",
     "comparison": "human_vs_annotations_4o_mini_ev",
     "agreement_score": 0.07692307692307693
@@ -28,5 +48,10 @@
     "filename": "gemini-flash-1-5_vs_claude-3-5-sonnet_5.json",
     "comparison": "human_vs_annotations_gemini_ev",
     "agreement_score": 0.26666666666666666
+  },
+  {
+    "filename": "gemini-flash-1-5_vs_claude-3-5-sonnet_5.json",
+    "comparison": "human_vs_annotations_gemini_2_ev",
+    "agreement_score": 0.8666666666666667
   }
 ]

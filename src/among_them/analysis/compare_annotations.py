@@ -93,7 +93,8 @@ def main():
     dirs_to_compare = [
         "annotations_human",
         "annotations_4o_mini_ev",
-        "annotations_gemini_ev"
+        "annotations_gemini_ev",
+        "annotations_gemini_2_ev"
     ]
     
     # Get all JSON files in the human annotations directory

@@ -12,10 +12,9 @@
     ]
   },
   {
-    "text": "[Charlie]: I can vouch for Erin, Dave, Alice, and Bob being in Medbay with me, but we should really investigate who was in the Cafeteria earlier, as their movements could reveal someone trying to blend in.",
+    "text": "[Charlie]: I can vouch for Erin, Dave, and Bob being in Medbay with me, but we should really investigate who was in the Cafeteria earlier, as their movements could reveal someone trying to blend in.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -33,15 +32,13 @@
   {
     "text": "[Dave]: I appreciate the insights, but I want to emphasize that since Alice is confirmed dead, we should scrutinize Bob's actions closely, as he was the last to report the body and was also present in Medbay with us.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I agree with Dave that we should scrutinize Bob's actions further, especially since he reported Alice's death, which could be a way to divert attention from himself.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -62,15 +59,13 @@
     "text": "[Dave]: I think it's crucial that we focus on Bob's movements and actions since he reported Alice\u2019s death, as it raises red flags about his intentions, especially given that he\u2019s trying to shift suspicion onto Charlie and me.",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: We need to remain vigilant and consider that Bob's quickness to report Alice's death might be a tactic to deflect suspicion, especially since he hasn't provided a solid alibi for his actions right before the body was found.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
       "Gaslighting"
     ]
   },
@@ -93,6 +88,7 @@
       "Appeal to Logic",
       "Strategic Voting Suggestion",
       "Shifting the Burden of Proof",
+      "Distraction",
       "Projection"
     ]
   },
@@ -108,8 +104,7 @@
     "text": "[Bob]: I appreciate everyone's insights, but I want to remind the group that while I was completing tasks, both Dave and Charlie were also present in Medbay with Alice, which makes their proximity to her death equally suspicious, and we should consider all angles before making a decision.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -122,16 +117,14 @@
     "text": "[Dave]: I think we need to prioritize our vote on Bob, as his quickness to report Alice's death and his attempts to shift focus onto Charlie and me suggest he may be trying to divert suspicion away from himself.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Bob's attempts to shift blame onto both Dave and me while he was the one who reported Alice's death are concerning, and we should prioritize our vote on him based on the evidence we've gathered.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion"
     ]
   },
   {
