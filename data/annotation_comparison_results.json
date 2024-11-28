@@ -2,12 +2,12 @@
   {
     "filename": "gpt-4o-mini_vs_llama-3-1-8b-instruct_5.json",
     "comparison": "human_vs_annotations_gemini_2_ev",
-    "agreement_score": 1.0
+    "agreement_score": 0.6
   },
   {
     "filename": "llama-3-1-405b-instruct_vs_gemini-flash-1-5_3.json",
     "comparison": "human_vs_annotations_gemini_2_ev",
-    "agreement_score": 1.0
+    "agreement_score": 0.55
   },
   {
     "filename": "claude-3-5-haiku_vs_gpt-4o_1.json",

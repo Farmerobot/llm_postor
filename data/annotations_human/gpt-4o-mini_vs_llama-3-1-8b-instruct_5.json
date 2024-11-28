@@ -10,14 +10,16 @@
     "text": "[Alice]: I've been working in Medbay alongside Charlie, and I can confirm that we were both focused on completing the \"Submit scan in medbay\" task, which is still incomplete, so I'm concerned that Erin's sudden departure from Medbay might be more than just a coincidence.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Erin]: I'm glad Charlie and Alice are confirming each other's alibis, but I think we need to take a closer look at their task progress, as I'm not convinced that the \"Submit scan in medbay\" task is as complete as they're making it seem, and I'd like to know if anyone has seen any suspicious behavior around the Medbay area.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
@@ -45,7 +47,7 @@
     "text": "[Dave]: I find it quite suspicious that Erin is pushing for a review of the task logs when she herself has not provided any solid alibi, and it seems like a tactic to shift focus away from her own questionable behavior.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -59,7 +61,8 @@
     "text": "[Erin]: I think it's essential that we take a closer look at the task logs and review the Medbay area together, as I'm starting to suspect that Charlie and Alice might be withholding information or even manipulating the task progress to avoid being questioned, and I'd like to get to the bottom of this to ensure the safety of the crew, and I'd like to propose that we also review my own alibi from the time I was in Medbay to ensure that I'm not being unfairly targeted.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -96,14 +99,16 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Projection",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: I'd like to propose that we shift the focus back to verifying Charlie's task progress in Medbay, as I'm still concerned that the \"Submit scan in medbay\" task is not as complete as he and Alice are claiming, and I think it's essential to investigate further to clear up any doubts and ensure we're not overlooking any potential impostors.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   }
 ]
