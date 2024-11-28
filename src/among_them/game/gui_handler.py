@@ -50,7 +50,7 @@ from among_them.game.models.engine import ROOM_COORDINATES, GamePhase
 from among_them.game.models.history import PlayerState, RoundData
 from among_them.game.players.ai import AIPlayer
 from among_them.game.players.base_player import Player, PlayerRole
-
+import csv
 
 class Watchdog(FileSystemEventHandler):
     def __init__(self, hook: Callable):
@@ -247,6 +247,8 @@ class GUIHandler(BaseModel):
                 self.analyze_tournaments()
             if st.button("Analyze Tournaments v2"):
                 self.analyze_tournaments_v2()
+            if st.button("Analyze Persuasion Wins"):
+                self.analyze_persuasion_wins()
 
         # read data/analysis.json
         if os.path.exists("data/analysis.json"):
@@ -593,6 +595,72 @@ class GUIHandler(BaseModel):
                 },
                 f,
             )
+
+    def analyze_persuasion_wins(self):
+        # Directory containing tournament JSON files
+        tournament_dir = "data/tournament"
+        output_file = "data/persuasion_wins_analysis.csv"
+
+        # List all JSON files in the directory
+        tournament_files = [
+            f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
+
+        # Create CSV file and write header
+        with open(output_file, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['file_name', 'role', 'number_of_persuasive_phrases', 'is_win'])
+
+            # Iterate over each file and load the game state
+            for file_name in tournament_files:
+                file_path = os.path.join(tournament_dir, file_name)
+                game_engine = GameEngine()
+                if game_engine.load_state(file_path):
+                    game_state = game_engine.state
+                    players = game_state.players
+
+                    # Get annotations
+                    annotation_file = os.path.join("data/annotations", file_name)
+                    try:
+                        with open(annotation_file, "r", encoding="utf-8") as f:
+                            annotation_json = json.load(f)
+                    except FileNotFoundError:
+                        print(f"No annotation file found for: {file_name}")
+                        continue
+
+                    # Count persuasive phrases per player
+                    previous_player = None
+                    player_techniques = defaultdict(list)
+
+                    for item in annotation_json:
+                        replaced_text = item["text"]
+                        current_player = (
+                            replaced_text.split("]:")[0].strip("[]")
+                            if "]: " in replaced_text
+                            else previous_player
+                        )
+
+                        if item["annotation"]:
+                            player_techniques[current_player].extend(item["annotation"])
+
+                        previous_player = current_player
+
+                    # Write data for each player
+                    for player in players:
+                        role = "impostor" if player.is_impostor else "crewmate"
+                        num_techniques = len(player_techniques[player.name])
+                        
+                        # Determine if player won
+                        is_win = False
+                        impostor_wins = game_engine.check_impostors_win()
+                        if player.is_impostor:
+                            is_win = impostor_wins
+                        else:
+                            is_win = not impostor_wins
+
+                        writer.writerow([file_name, role, num_techniques, is_win])
+
+        print(f"Analysis complete. Results saved to {output_file}")
 
     def _display_tournament_persuasion_analysis(
         self,
