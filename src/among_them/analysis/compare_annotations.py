@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 from collections import defaultdict
 from typing import Dict, List, Set, Tuple
 
@@ -119,13 +120,16 @@ def main():
                     'filename': filename,
                     'comparison': f'human_vs_{compare_dir}',
                     'agreement_score': agreement_score,
-                    # 'details': comparison_results
                 })
     
-    # Save results to a file
-    output_file = os.path.join(base_dir, 'annotation_comparison_results.json')
-    with open(output_file, 'w') as f:
-        json.dump(results, f, indent=2)
+    # Save results to a CSV file
+    output_file = os.path.join(base_dir, 'annotation_comparison_results.csv')
+    
+    # Write to CSV
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=['filename', 'comparison', 'agreement_score'])
+        writer.writeheader()
+        writer.writerows(results)
     
     print(f"Results have been saved to: {output_file}")
 
