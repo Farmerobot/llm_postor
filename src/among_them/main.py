@@ -16,58 +16,50 @@ def main():
     # Inject JavaScript to remove the footer
     js = """
     <script>
-        window.addEventListener('load', function() {
-            console.log('Script loaded and running');
-            
-            function getTopWindow(currentWindow) {
-                console.log('Current window location:', currentWindow.location.href);
-                if (currentWindow.parent === currentWindow) {
-                    console.log('Found top window');
-                    return currentWindow;
-                }
-                console.log('Moving up to parent window');
-                return getTopWindow(currentWindow.parent);
-            }
-
+        function removeProfileContainers(topWindow) {
             try {
-                console.log('Getting top window...');
-                const topWindow = getTopWindow(window);
-                console.log('Top window location:', topWindow.location.href);
+                const divs = topWindow.document.getElementsByTagName('div');
+                console.log('Checking', divs.length, 'divs');
                 
-                const observer = new MutationObserver(function(mutations) {
-                    console.log('DOM mutation detected');
-                    try {
-                        const divs = topWindow.document.getElementsByTagName('div');
-                        console.log('Found', divs.length, 'divs');
-                        
-                        // Convert to array to avoid live collection issues when removing elements
-                        Array.from(divs).forEach((div, index) => {
-                            console.log(`Checking div ${index}:`, div.className);
-                            if (div.className && 
-                                (div.className.includes('_profileContainer') || 
-                                 div.className.includes('_profile'))) {
-                                console.log('Found profile div, removing...', div.className);
-                                div.remove();
-                                console.log('Profile div removed');
-                            }
-                        });
-                    } catch (err) {
-                        console.error('Error in observer callback:', err);
+                Array.from(divs).forEach((div, index) => {
+                    if (div.className && div.className.includes('_profileContainer')) {
+                        console.log('Found profile div, removing...', div.className);
+                        div.remove();
                     }
                 });
-
-                console.log('Setting up observer...');
-                observer.observe(topWindow.document, { 
-                    childList: true, 
-                    subtree: true,
-                    attributes: true,
-                    attributeFilter: ['class']
-                });
-                console.log('Observer setup complete');
             } catch (err) {
-                console.error('Error in main script:', err);
+                console.error('Error removing containers:', err);
             }
-        });
+        }
+
+        function getTopWindow(currentWindow) {
+            if (currentWindow.parent === currentWindow) {
+                return currentWindow;
+            }
+            return getTopWindow(currentWindow.parent);
+        }
+
+        // Run immediately
+        const topWindow = getTopWindow(window);
+        removeProfileContainers(topWindow);
+
+        // Also run frequently during page load
+        const checkInterval = setInterval(() => {
+            removeProfileContainers(topWindow);
+        }, 100);
+
+        // After 5 seconds, slow down the checks
+        setTimeout(() => {
+            clearInterval(checkInterval);
+            // Set up observer for any future changes
+            const observer = new MutationObserver(() => removeProfileContainers(topWindow));
+            observer.observe(topWindow.document, { 
+                childList: true, 
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['class']
+            });
+        }, 5000);
     </script>
     """
     st.components.v1.html(js, height=0)
