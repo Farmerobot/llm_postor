@@ -16,19 +16,14 @@ def main():
     # Inject JavaScript to remove the footer
     js = """
     <script>
-        // Inject CSS immediately to hide the element before we can remove it
-        const style = document.createElement('style');
-        style.textContent = `
-            div[class*='_profileContainer'] { 
-                display: none !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-            }
-        `;
-        document.head.appendChild(style);
+        function getTopWindow(currentWindow) {
+            if (currentWindow.parent === currentWindow) return currentWindow;
+            return getTopWindow(currentWindow.parent);
+        }
 
-        function removeProfileContainers(topWindow) {
+        document.addEventListener('DOMContentLoaded', () => {
             try {
+                const topWindow = getTopWindow(window);
                 const divs = topWindow.document.getElementsByTagName('div');
                 Array.from(divs).forEach(div => {
                     if (div.className?.includes('_profileContainer')) {
@@ -36,24 +31,7 @@ def main():
                     }
                 });
             } catch (err) {}
-        }
-
-        function getTopWindow(currentWindow) {
-            if (currentWindow.parent === currentWindow) return currentWindow;
-            return getTopWindow(currentWindow.parent);
-        }
-
-        // Run as early as possible
-        try {
-            const topWindow = getTopWindow(window);
-            
-            // Inject the CSS into top window as well
-            const topStyle = topWindow.document.createElement('style');
-            topStyle.textContent = style.textContent;
-            topWindow.document.head.appendChild(topStyle);
-
-            // Run immediately
-        } catch (err) {}
+        });
     </script>
     """
     st.components.v1.html(js, height=0)
