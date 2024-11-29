@@ -53,7 +53,6 @@ def main():
             topWindow.document.head.appendChild(topStyle);
 
             // Run immediately
-            removeProfileContainers(topWindow);
         } catch (err) {}
     </script>
     """
