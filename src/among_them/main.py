@@ -18,16 +18,25 @@ def main():
     <script>
         // Wait for the page to fully load
         window.addEventListener('load', function() {
+            function getTopWindow(currentWindow) {
+                if (currentWindow.parent === currentWindow) {
+                    return currentWindow;
+                }
+                return getTopWindow(currentWindow.parent);
+            }
+
+            const topWindow = getTopWindow(window);
+            
             // Use MutationObserver to watch for changes in the DOM
             const observer = new MutationObserver(function(mutations) {
-                // Get all divs in the document
-                const divs = document.getElementsByTagName('div');
+                // Get all divs in the top document
+                const divs = topWindow.document.getElementsByTagName('div');
                 // If there are divs
                 if (divs.length > 0) {
                     // Get the last div
                     const lastDiv = divs[divs.length - 1];
                     // Check if it contains the profile container
-                    if (lastDiv.className.includes('_profile')) {
+                    if (lastDiv.className && lastDiv.className.includes('_profile')) {
                         lastDiv.remove();
                         // Disconnect the observer once we've found and removed the div
                         observer.disconnect();
@@ -35,8 +44,8 @@ def main():
                 }
             });
 
-            // Start observing the document with the configured parameters
-            observer.observe(document, { childList: true, subtree: true });
+            // Start observing the top document with the configured parameters
+            observer.observe(topWindow.document, { childList: true, subtree: true });
         });
     </script>
     """
