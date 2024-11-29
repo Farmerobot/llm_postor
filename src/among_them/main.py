@@ -54,28 +54,6 @@ def main():
 
             // Run immediately
             removeProfileContainers(topWindow);
-
-            // Run very frequently at start
-            for(let i = 1; i <= 10; i++) {
-                setTimeout(() => removeProfileContainers(topWindow), i * 10);
-            }
-
-            // Then run regularly for a few seconds
-            const checkInterval = setInterval(() => {
-                removeProfileContainers(topWindow);
-            }, 50);
-
-            // After 3 seconds, switch to observer
-            setTimeout(() => {
-                clearInterval(checkInterval);
-                const observer = new MutationObserver(() => removeProfileContainers(topWindow));
-                observer.observe(topWindow.document, { 
-                    childList: true, 
-                    subtree: true,
-                    attributes: true,
-                    attributeFilter: ['class']
-                });
-            }, 3000);
         } catch (err) {}
     </script>
     """
