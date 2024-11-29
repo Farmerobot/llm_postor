@@ -12,6 +12,36 @@ from among_them.game.gui_handler import GUIHandler
 def main():
     gui_handler = GUIHandler()
     st.set_page_config(page_title="Among Them", layout="wide")
+    
+    # Inject JavaScript to remove the footer
+    js = """
+    <script>
+        // Wait for the page to fully load
+        window.addEventListener('load', function() {
+            // Use MutationObserver to watch for changes in the DOM
+            const observer = new MutationObserver(function(mutations) {
+                // Get all divs in the document
+                const divs = document.getElementsByTagName('div');
+                // If there are divs
+                if (divs.length > 0) {
+                    // Get the last div
+                    const lastDiv = divs[divs.length - 1];
+                    // Check if it contains the profile container
+                    if (lastDiv.className.includes('_profile')) {
+                        lastDiv.remove();
+                        // Disconnect the observer once we've found and removed the div
+                        observer.disconnect();
+                    }
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            observer.observe(document, { childList: true, subtree: true });
+        });
+    </script>
+    """
+    st.components.v1.html(js, height=0)
+    
     game_engine = GameEngine()
 
     game_engine.state.DEBUG = True
