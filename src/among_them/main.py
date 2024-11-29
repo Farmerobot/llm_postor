@@ -16,7 +16,6 @@ def main():
     # Inject JavaScript to remove the footer
     js = """
     <script>
-        // Wait for the page to fully load
         window.addEventListener('load', function() {
             function getTopWindow(currentWindow) {
                 if (currentWindow.parent === currentWindow) {
