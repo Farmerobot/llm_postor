@@ -34,29 +34,23 @@ def main():
                 const topWindow = getTopWindow(window);
                 console.log('Top window location:', topWindow.location.href);
                 
-                // Use MutationObserver to watch for changes in the DOM
                 const observer = new MutationObserver(function(mutations) {
                     console.log('DOM mutation detected');
                     try {
-                        // Get all divs in the top document
                         const divs = topWindow.document.getElementsByTagName('div');
                         console.log('Found', divs.length, 'divs');
                         
-                        // If there are divs
-                        if (divs.length > 0) {
-                            // Get the last div
-                            const lastDiv = divs[divs.length - 1];
-                            console.log('Last div class:', lastDiv.className);
-                            
-                            // Check if it contains the profile container
-                            if (lastDiv.className && lastDiv.className.includes('_profile')) {
-                                console.log('Found profile div, removing...');
-                                lastDiv.remove();
+                        // Convert to array to avoid live collection issues when removing elements
+                        Array.from(divs).forEach((div, index) => {
+                            console.log(`Checking div ${index}:`, div.className);
+                            if (div.className && 
+                                (div.className.includes('_profileContainer') || 
+                                 div.className.includes('_profile'))) {
+                                console.log('Found profile div, removing...', div.className);
+                                div.remove();
                                 console.log('Profile div removed');
-                                observer.disconnect();
-                                console.log('Observer disconnected');
                             }
-                        }
+                        });
                     } catch (err) {
                         console.error('Error in observer callback:', err);
                     }
@@ -65,7 +59,9 @@ def main():
                 console.log('Setting up observer...');
                 observer.observe(topWindow.document, { 
                     childList: true, 
-                    subtree: true 
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ['class']
                 });
                 console.log('Observer setup complete');
             } catch (err) {
