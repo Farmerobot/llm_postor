@@ -16,50 +16,67 @@ def main():
     # Inject JavaScript to remove the footer
     js = """
     <script>
+        // Inject CSS immediately to hide the element before we can remove it
+        const style = document.createElement('style');
+        style.textContent = `
+            div[class*='_profileContainer'] { 
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+        `;
+        document.head.appendChild(style);
+
         function removeProfileContainers(topWindow) {
             try {
                 const divs = topWindow.document.getElementsByTagName('div');
-                console.log('Checking', divs.length, 'divs');
-                
-                Array.from(divs).forEach((div, index) => {
-                    if (div.className && div.className.includes('_profileContainer')) {
-                        console.log('Found profile div, removing...', div.className);
+                Array.from(divs).forEach(div => {
+                    if (div.className?.includes('_profileContainer')) {
                         div.remove();
                     }
                 });
-            } catch (err) {
-                console.error('Error removing containers:', err);
-            }
+            } catch (err) {}
         }
 
         function getTopWindow(currentWindow) {
-            if (currentWindow.parent === currentWindow) {
-                return currentWindow;
-            }
+            if (currentWindow.parent === currentWindow) return currentWindow;
             return getTopWindow(currentWindow.parent);
         }
 
-        // Run immediately
-        const topWindow = getTopWindow(window);
-        removeProfileContainers(topWindow);
+        // Run as early as possible
+        try {
+            const topWindow = getTopWindow(window);
+            
+            // Inject the CSS into top window as well
+            const topStyle = topWindow.document.createElement('style');
+            topStyle.textContent = style.textContent;
+            topWindow.document.head.appendChild(topStyle);
 
-        // Also run frequently during page load
-        const checkInterval = setInterval(() => {
+            // Run immediately
             removeProfileContainers(topWindow);
-        }, 100);
 
-        // After 5 seconds, slow down the checks
-        setTimeout(() => {
-            clearInterval(checkInterval);
-            // Set up observer for any future changes
-            const observer = new MutationObserver(() => removeProfileContainers(topWindow));
-            observer.observe(topWindow.document, { 
-                childList: true, 
-                subtree: true,
-                attributes: true,
-                attributeFilter: ['class']
-            });
-        }, 5000);
+            // Run very frequently at start
+            for(let i = 1; i <= 10; i++) {
+                setTimeout(() => removeProfileContainers(topWindow), i * 10);
+            }
+
+            // Then run regularly for a few seconds
+            const checkInterval = setInterval(() => {
+                removeProfileContainers(topWindow);
+            }, 50);
+
+            // After 3 seconds, switch to observer
+            setTimeout(() => {
+                clearInterval(checkInterval);
+                const observer = new MutationObserver(() => removeProfileContainers(topWindow));
+                observer.observe(topWindow.document, { 
+                    childList: true, 
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ['class']
+                });
+            }, 3000);
+        } catch (err) {}
     </script>
     """
     st.components.v1.html(js, height=0)
