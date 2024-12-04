@@ -25,7 +25,6 @@
   {
     "text": "[Dave]: I think Charlie's response about being in the cafeteria with Erin and Bob is a good start, but I still want to hear directly from Erin to confirm if Charlie was indeed with them for the entire time they were working on the wiring task.",
     "annotation": [
-      "appeal to agreement",
       "demand for evidence"
     ]
   },
@@ -48,8 +47,8 @@
     "text": "[Bob]: I'd like to reiterate that I was in the cafeteria the whole time, and I didn't see anyone suspicious around Erin, but I do think it's crucial that Charlie clarifies what they meant by \"pretending\" to do the task, as it's still unclear and raises some suspicions.",
     "annotation": [
       "repetition",
-      "appeal to importance",
-      "appeal to doubt"
+      "appeal to doubt",
+      "demand for evidence"
     ]
   },
   {
@@ -119,9 +118,8 @@
     "text": "[Dave]: I agree with Bob's suggestion to vote out Charlie, as their consistent evasion of a direct answer and attempts to shift the focus to Alice and me have significantly heightened my suspicions, and I believe we have enough evidence to suggest that Charlie is hiding something and it's time for us to take action and vote them out of the game.",
     "annotation": [
       "appeal to agreement",
-      "call to action",
       "accusation",
-      "appeal to evidence"
+      "call to action"
     ]
   },
   {
@@ -136,7 +134,8 @@
     "annotation": [
       "accusation",
       "appeal to agreement",
-      "appeal to evidence"
+      "appeal to evidence",
+      "call to action"
     ]
   },
   {
@@ -144,8 +143,7 @@
     "annotation": [
       "repetition",
       "accusation",
-      "deflection",
-      "appeal to importance"
+      "deflection"
     ]
   },
   {

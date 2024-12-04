@@ -23,17 +23,17 @@
   {
     "text": "[Erin]: I noticed Dave and Charlie both starting the coffee maker task at different times, which seems odd because I already completed it; can anyone explain this?",
     "annotation": [
-      "accusation",
       "questioning",
-      "appeal to doubt"
+      "appeal to doubt",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Charlie]: I can confirm that I saw Dave doing the coffee maker task twice, which is unusual, so maybe he can clarify why he did it again?",
     "annotation": [
-      "accusation",
-      "demand for evidence",
-      "questioning"
+      "confirmation",
+      "questioning",
+      "accusation"
     ]
   },
   {
@@ -49,14 +49,16 @@
     "annotation": [
       "appeal to importance",
       "accusation",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: Let's focus on the timeline of events in the cafeteria and see if anyone can confirm their location during Bob's death, as this might help us understand the situation better.",
     "annotation": [
       "call to action",
-      "appeal to logic"
+      "appeal to logic",
+      "information gathering"
     ]
   },
   {
@@ -64,7 +66,7 @@
     "annotation": [
       "providing an alibi",
       "confirmation",
-      "demand for evidence",
+      "information gathering",
       "questioning"
     ]
   },
@@ -81,14 +83,16 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: I agree with Alice that sharing our locations and actions around the time of Bob's death is crucial, so let's all clarify where we were and what we were doing to piece together any inconsistencies.",
     "annotation": [
       "appeal to agreement",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -111,20 +115,23 @@
     "text": "[Alice]: I'm curious about the timeline of events in the cafeteria, especially since Dave was seen doing the coffee maker task twice\u2014Charlie, did you notice anything else odd or anyone else acting suspiciously?",
     "annotation": [
       "information gathering",
-      "questioning"
+      "questioning",
+      "leading question"
     ]
   },
   {
     "text": "[Erin]: I agree with Alice and Charlie that we should all share our locations and actions during Bob's death to identify any inconsistencies and clarify any misunderstandings, especially regarding Dave's repeated coffee maker task.",
     "annotation": [
       "appeal to agreement",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on clarifying everyone's whereabouts and actions during Bob's death to uncover any inconsistencies and better understand the situation.",
     "annotation": [
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -139,7 +146,8 @@
     "text": "[Alice]: I think it's important for us to focus on clarifying everyone's whereabouts during Bob's death, particularly since Dave's repeated coffee maker task has raised suspicions that need to be addressed.",
     "annotation": [
       "appeal to importance",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -154,7 +162,8 @@
     "text": "[Charlie]: It's crucial we all clarify our actions and locations during Bob's death, as understanding the timeline can help us identify any inconsistencies, especially with the repeated coffee maker task.",
     "annotation": [
       "appeal to importance",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   }
 ]

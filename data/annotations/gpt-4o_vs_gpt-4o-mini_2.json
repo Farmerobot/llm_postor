@@ -81,7 +81,8 @@
   {
     "text": "[Bob]: I find it interesting that Alice is questioning my eagerness to point fingers at Erin while she was the last seen near Dave, and I urge everyone to share their exact locations during the last rounds to clarify this timeline.",
     "annotation": [
-      "tu quoque",
+      "ad hominem",
+      "shifting blame",
       "call to action",
       "information gathering"
     ]
@@ -105,6 +106,7 @@
   {
     "text": "[Bob]: I find it troubling that Erin continues to deflect attention from her weak alibi in Weapons, and I urge everyone to share their movements clearly so we can piece together the timeline surrounding Dave's disappearance and determine who the impostor might be.",
     "annotation": [
+      "accusation",
       "deflection",
       "call to action",
       "information gathering"

@@ -26,15 +26,16 @@
     "text": "[Dave]: I'd like to reiterate my support for Alice's task-focused strategy and propose that we establish a temporary hub in the cafeteria to coordinate our efforts, as it seems to be a central location with multiple tasks and several crewmates already present.",
     "annotation": [
       "appeal to agreement",
-      "suggestion"
+      "suggestion",
+      "appeal to logic"
     ]
   },
   {
     "text": "[Alice]: I'd like to propose that we focus on verifying Charlie's progress in Medbay, as Bob's question seems to have raised some concerns about the consistency of Charlie's objective completion, and it would be wise to ensure that we're all on the same page before moving forward with task completion.",
     "annotation": [
-      "appeal to importance",
       "suggestion",
-      "demand for evidence"
+      "appeal to importance",
+      "appeal to agreement"
     ]
   },
   {
@@ -47,10 +48,10 @@
   {
     "text": "[Bob]: Given the new information about Erin's elimination and Dave's report of the dead body, I'd like to shift our focus towards identifying potential impostors and propose that Dave shares more about their actions leading up to the discovery, as their involvement in the situation seems suspicious.",
     "annotation": [
-      "appeal to importance",
-      "suggestion",
-      "demand for evidence",
-      "accusation"
+      "call to action",
+      "accusation",
+      "information gathering",
+      "shifting blame"
     ]
   },
   {
@@ -85,7 +86,8 @@
   {
     "text": "[Dave]: I'd like to address Charlie's question and confirm that Alice was indeed with me in the cafeteria for most of the time, but I don't recall if she saw me leave the cafeteria at any point before I reported finding Erin's body.",
     "annotation": [
-      "confirmation"
+      "confirmation",
+      "providing an alibi"
     ]
   },
   {
@@ -129,8 +131,8 @@
     "text": "[Charlie]: I'd like to point out that Alice's repeated emphasis on task completion and establishing a temporary hub in the cafeteria seems suspicious, especially given the recent events, and I'd like to ask her to explain why she's so focused on this aspect when we have a potential impostor among us and a crewmate has already been eliminated.",
     "annotation": [
       "accusation",
-      "questioning",
-      "appeal to importance"
+      "appeal to doubt",
+      "questioning"
     ]
   },
   {
@@ -138,7 +140,7 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
-      "demand for evidence"
+      "information gathering"
     ]
   },
   {

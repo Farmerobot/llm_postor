@@ -17,19 +17,17 @@
   {
     "text": "[Dave]: I just completed my task in Weapons and, while I was alone there, I\u2019m concerned that Charlie and Bob might not be telling the full truth about their activities in the cafeteria, so let's hear more about what tasks they were actually doing.",
     "annotation": [
-      "providing an alibi",
       "appeal to doubt",
-      "demand for evidence",
-      "questioning"
+      "information gathering",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: I can confirm that I saw Erin running diagnostics in Medbay, and while we were busy there, it\u2019s essential for everyone to share their task details so we can piece together the timeline and verify alibis effectively.",
     "annotation": [
       "confirmation",
-      "appeal to importance",
-      "call to action",
-      "information gathering"
+      "providing an alibi",
+      "appeal to importance"
     ]
   },
   {
@@ -44,8 +42,8 @@
     "text": "[Erin]: I appreciate everyone's input, but I think it's crucial we focus on the fact that Charlie was in the cafeteria where Bob was found dead; we need to clarify what he was really doing there to piece together this timeline.",
     "annotation": [
       "appeal to importance",
-      "demand for evidence",
-      "information gathering"
+      "information gathering",
+      "appeal to evidence"
     ]
   },
   {
@@ -61,7 +59,6 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
-      "demand for evidence",
       "information gathering"
     ]
   },
@@ -69,16 +66,15 @@
     "text": "[Charlie]: Since everyone's so focused on my alibi, let me be crystal clear - I was doing the coffee maker task and Bob was alive when I last saw him, while Dave conveniently has no witnesses for his time in Weapons.",
     "annotation": [
       "providing an alibi",
-      "ad hominem",
-      "deflection"
+      "deflection",
+      "ad hominem"
     ]
   },
   {
     "text": "[Erin]: Charlie, instead of deflecting to Dave, can you provide specific details about the coffee maker task you claim to have been doing, such as how long it took and if anyone can corroborate your story?",
     "annotation": [
-      "accusation",
-      "deflection",
       "demand for evidence",
+      "deflection",
       "questioning"
     ]
   },
@@ -88,16 +84,15 @@
       "appeal to doubt",
       "appeal to fear",
       "demand for evidence",
-      "questioning"
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: Charlie, your continued deflection and lack of specifics about the coffee maker task are concerning, and I believe we should focus on clarifying your actions since you were the last seen with Bob.",
     "annotation": [
-      "appeal to doubt",
-      "deflection",
+      "accusation",
       "appeal to importance",
-      "demand for evidence"
+      "deflection"
     ]
   },
   {
@@ -119,17 +114,17 @@
     "text": "[Dave]: Charlie, your persistent deflection and inability to provide a clear timeline for your coffee maker task are raising serious doubts about your alibi, and we must prioritize clarifying your actions since you were the last person seen with Bob.",
     "annotation": [
       "appeal to doubt",
-      "deflection",
+      "accusation",
       "appeal to importance",
-      "demand for evidence"
+      "deflection"
     ]
   },
   {
     "text": "[Alice]: Charlie, your vague responses about the coffee maker task are raising significant concerns, and until you provide specific details and corroboration from others in the cafeteria, we should remain focused on your actions since you were the last seen with Bob.",
     "annotation": [
       "appeal to doubt",
-      "appeal to importance",
-      "demand for evidence"
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {
@@ -137,30 +132,30 @@
     "annotation": [
       "providing an alibi",
       "deflection",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
     "text": "[Erin]: Charlie, while your detailed explanation of the coffee maker task is noted, it's critical that you provide the names of anyone who can confirm you were in the cafeteria during that time, as your alibi hinges on this corroboration.",
     "annotation": [
-      "appeal to importance",
-      "demand for evidence"
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {
     "text": "[Dave]: Charlie, your insistence on questioning my actions while failing to provide any corroboration for your own alibi is increasingly suspicious, and we need to focus on the fact that you were the last seen with Bob, which is a serious concern.",
     "annotation": [
       "accusation",
-      "appeal to doubt",
-      "appeal to importance"
+      "appeal to importance",
+      "deflection"
     ]
   },
   {
     "text": "[Alice]: Charlie, your lack of corroboration and constant deflection only heightens my suspicion, and until you can provide concrete evidence of your whereabouts in the cafeteria, we need to keep scrutinizing your alibi regarding Bob's elimination.",
     "annotation": [
       "appeal to doubt",
-      "deflection",
-      "demand for evidence"
+      "demand for evidence",
+      "accusation"
     ]
   }
 ]

@@ -53,7 +53,7 @@
     "text": "[Erin]: Dave's continued evasion of our timing questions about Bob in Medbay is becoming increasingly suspicious, especially since he keeps deflecting by bringing up his earlier verified presence in Cafeteria.",
     "annotation": [
       "accusation",
-      "appeal to doubt"
+      "contradiction"
     ]
   },
   {
@@ -74,7 +74,6 @@
     "text": "[Erin]: Dave's persistent refusal to provide clear timing about his Medbay encounters with Bob, combined with his obvious deflection tactics, makes me confident we should vote him out this round.",
     "annotation": [
       "accusation",
-      "appeal to evidence",
       "call to action"
     ]
   },
@@ -82,7 +81,6 @@
     "text": "[Charlie]: Dave's latest deflection about \"who else had access to Medbay\" only reinforces my suspicion, since he's still refusing to give us the simple timeline we've repeatedly asked for about when he saw Bob alive versus finding his body.",
     "annotation": [
       "accusation",
-      "appeal to doubt",
       "repetition"
     ]
   },
@@ -97,7 +95,7 @@
     "text": "[Erin]: Dave's latest suggestion to reconstruct everyone's movements feels like yet another attempt to avoid answering our direct questions about his own timeline with Bob in Medbay, which only makes him more suspicious.",
     "annotation": [
       "accusation",
-      "appeal to doubt"
+      "contradiction"
     ]
   },
   {

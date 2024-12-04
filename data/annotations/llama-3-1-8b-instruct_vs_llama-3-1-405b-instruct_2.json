@@ -20,7 +20,8 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
-      "information gathering"
+      "information gathering",
+      "appeal to doubt"
     ]
   },
   {
@@ -42,8 +43,9 @@
     "text": "[Alice]: I'd like to point out that Dave's response about the electrical panel seems inconsistent with the fact that Bob is now dead, and I think we should press Dave for more information about his whereabouts and actions leading up to the discovery of Bob's body.",
     "annotation": [
       "contradiction",
-      "call to action",
-      "information gathering"
+      "accusation",
+      "information gathering",
+      "call to action"
     ]
   },
   {
@@ -52,7 +54,7 @@
       "appeal to agreement",
       "contradiction",
       "information gathering",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {
@@ -66,8 +68,8 @@
     "annotation": [
       "appeal to importance",
       "contradiction",
-      "call to action",
-      "suggestion"
+      "suggestion",
+      "call to action"
     ]
   },
   {
@@ -90,7 +92,8 @@
     "text": "[Dave]: I'd like to remind everyone that we're still missing a lot of information and that we shouldn't jump to conclusions or make rash decisions based on incomplete evidence, and I suggest we review the task logs and security footage to get a clearer picture of what happened before we consider voting anyone out.",
     "annotation": [
       "appeal to logic",
-      "suggestion"
+      "suggestion",
+      "call to action"
     ]
   },
   {
@@ -105,7 +108,7 @@
     "annotation": [
       "appeal to agreement",
       "contradiction",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -113,7 +116,7 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -133,6 +136,7 @@
   {
     "text": "[Alice]: I'd like to reiterate that despite Dave's recent willingness to cooperate with the investigation, his alibi remains contradicted by multiple players, and we should prioritize resolving this discrepancy before considering any other tasks or suggestions.",
     "annotation": [
+      "repetition",
       "contradiction",
       "appeal to importance"
     ]
@@ -149,7 +153,8 @@
     "text": "[Dave]: I understand that my alibi has been questioned, but I assure you that I'm telling the truth about staying in the Cafeteria after completing the wiring task, and I'd like to ask Charlie if they've found any evidence in the task logs or security footage that contradicts my story.",
     "annotation": [
       "providing an alibi",
-      "information gathering"
+      "demand for evidence",
+      "questioning"
     ]
   }
 ]

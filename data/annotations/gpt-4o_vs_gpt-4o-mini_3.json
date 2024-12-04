@@ -114,7 +114,7 @@
     "annotation": [
       "accusation",
       "ad hominem",
-      "appeal to fear",
+      "appeal to importance",
       "call to action"
     ]
   },
@@ -122,8 +122,9 @@
     "text": "[Alice]: Erin's repeated inconsistencies and her admission of \"pretending\" to swipe the card in Admin are too concerning to ignore, and I believe we must vote her out to protect the crew from potential impostor actions.",
     "annotation": [
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "appeal to importance",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -146,8 +147,7 @@
     "text": "[Dave]: Erin's attempt to deflect the blame onto me regarding Charlie's whereabouts only adds to the growing evidence against her, and we need to act decisively to vote her out for the safety of the crew.",
     "annotation": [
       "accusation",
-      "deflection",
-      "appeal to evidence",
+      "shifting blame",
       "call to action",
       "appeal to fear"
     ]
@@ -157,7 +157,6 @@
     "annotation": [
       "accusation",
       "shifting blame",
-      "appeal to evidence",
       "call to action",
       "appeal to fear"
     ]

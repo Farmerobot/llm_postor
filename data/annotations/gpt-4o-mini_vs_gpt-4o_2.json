@@ -10,8 +10,8 @@
     "text": "[Charlie]: I saw Erin eliminate Bob in the cafeteria, and we should consider voting Erin out based on this clear evidence.",
     "annotation": [
       "accusation",
-      "call to action",
-      "appeal to evidence"
+      "appeal to evidence",
+      "call to action"
     ]
   },
   {
@@ -19,8 +19,7 @@
     "annotation": [
       "accusation",
       "appeal to agreement",
-      "call to action",
-      "appeal to evidence"
+      "call to action"
     ]
   },
   {
@@ -36,8 +35,7 @@
     "annotation": [
       "appeal to doubt",
       "shifting blame",
-      "call to action",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -68,8 +66,7 @@
     "annotation": [
       "appeal to doubt",
       "accusation",
-      "call to action",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -128,8 +125,8 @@
     "text": "[Erin]: It's quite telling that Charlie and Dave are so quick to dismiss any alternative explanations; perhaps we should take a step back and scrutinize their motives instead of solely focusing on my actions.",
     "annotation": [
       "appeal to doubt",
-      "call to action",
-      "information gathering"
+      "shifting blame",
+      "call to action"
     ]
   },
   {
@@ -150,8 +147,9 @@
     "text": "[Alice]: We should carefully consider the possibility of Charlie and Dave coordinating their story, as their synchronized accusations against Erin seem too convenient, and it's crucial to scrutinize their motives and alibis further before making a decision.",
     "annotation": [
       "appeal to doubt",
+      "accusation",
       "call to action",
-      "information gathering"
+      "demand for evidence"
     ]
   }
 ]

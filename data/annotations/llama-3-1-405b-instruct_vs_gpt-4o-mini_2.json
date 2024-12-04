@@ -9,7 +9,7 @@
     "text": "[Erin]: I noticed that both Alice and Charlie were in Medbay with me, but I didn't see them complete any tasks there; can either of you explain what you were doing?",
     "annotation": [
       "questioning",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
@@ -17,7 +17,7 @@
     "annotation": [
       "confirmation",
       "appeal to importance",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
@@ -39,7 +39,7 @@
     "text": "[Bob]: We need to focus on the timeline of events in Medbay; if Charlie was there with both Alice and Erin, we should ask him why he didn't complete any tasks and clarify what he was doing instead.",
     "annotation": [
       "appeal to importance",
-      "information gathering",
+      "demand for evidence",
       "questioning"
     ]
   },
@@ -61,8 +61,8 @@
   {
     "text": "[Bob]: We need to hear from Alice to clarify what she witnessed in Medbay, as her perspective could help us determine if either Charlie or Erin is trying to deflect blame with their vague explanations.",
     "annotation": [
-      "information gathering",
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   },
   {
@@ -101,7 +101,7 @@
     "text": "[Erin]: Charlie, your attempts to deflect by questioning Bob's observations only serve to highlight your own lack of clarity regarding your actions in Medbay, and I reiterate that we need Alice to share her perspective to help us sort through this uncertainty.",
     "annotation": [
       "deflection",
-      "accusation",
+      "demand for evidence",
       "call to action"
     ]
   },

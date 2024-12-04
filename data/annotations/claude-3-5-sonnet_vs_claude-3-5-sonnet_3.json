@@ -3,8 +3,7 @@
     "text": "[Erin]: Based on my role as an impostor and the current discussion points, I should establish my alibi and subtly cast suspicion, so I'll say:\n\nDave can confirm I was with him in Medbay when he did the med scan, so I think we can trust him and I hope he can vouch for me too.",
     "annotation": [
       "providing an alibi",
-      "appeal to agreement",
-      "appeal to authority"
+      "appeal to agreement"
     ]
   },
   {
@@ -42,21 +41,20 @@
     "annotation": [
       "confirmation",
       "accusation",
-      "appeal to doubt",
       "call to action"
     ]
   },
   {
     "text": "[Bob]: The \"typo\" explanation makes no sense - who accidentally types out a full confession about being an impostor, and the fact that Erin was last seen with Dave before his death is too suspicious to ignore.",
     "annotation": [
-      "appeal to logic",
+      "contradiction",
       "accusation"
     ]
   },
   {
     "text": "[Alice]: The \"typo\" defense is completely unbelievable - no one accidentally writes out a full sentence about being an impostor, and combined with Erin being the last person seen with Dave before his death, we need to vote them out immediately.",
     "annotation": [
-      "appeal to logic",
+      "contradiction",
       "accusation",
       "call to action"
     ]
@@ -64,8 +62,9 @@
   {
     "text": "[Erin]: I know Charlie left Medbay right before Dave's death, and it's very convenient that everyone's focusing on my unfortunate typo instead of questioning where Charlie went during that time.",
     "annotation": [
-      "shifting blame",
-      "appeal to doubt"
+      "accusation",
+      "deflection",
+      "shifting blame"
     ]
   },
   {
@@ -80,16 +79,15 @@
     "text": "[Bob]: Since I personally witnessed Charlie leaving Cafeteria for Medbay before Erin and Dave even went there together, I can definitively say that Erin's accusation against Charlie is completely false and appears to be a desperate attempt to deflect blame.",
     "annotation": [
       "confirmation",
-      "accusation",
-      "deflection",
-      "appeal to evidence"
+      "contradiction",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: Since I was in the Cafeteria early on and witnessed the exact sequence of movements - Charlie going to Medbay first, followed later by Erin and Dave together - I can confirm that Bob's timeline is correct and Erin's accusation against Charlie is completely false.",
     "annotation": [
       "confirmation",
-      "appeal to evidence",
+      "contradiction",
       "accusation"
     ]
   },
@@ -113,8 +111,8 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "contradiction",
-      "call to action"
+      "call to action",
+      "contradiction"
     ]
   },
   {
@@ -122,37 +120,37 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "contradiction",
-      "call to action"
+      "call to action",
+      "contradiction"
     ]
   },
   {
     "text": "[Erin]: Everyone seems awfully coordinated in their accusations, and it's suspicious how Charlie, Bob, and Alice keep repeating the exact same points - almost like they planned this attack on me in advance.",
     "annotation": [
       "accusation",
-      "appeal to doubt"
+      "appeal to doubt",
+      "ad hominem"
     ]
   },
   {
     "text": "[Charlie]: The fact that three separate witnesses can independently confirm the same timeline isn't coordination - it's simply the truth about what happened with Erin and Dave in Medbay.",
     "annotation": [
       "appeal to logic",
-      "appeal to evidence"
+      "contradiction"
     ]
   },
   {
     "text": "[Bob]: Since I was physically present in the Cafeteria and witnessed the exact sequence of events firsthand, I can assure everyone that our matching testimonies aren't coordination - they're simply the truth about what we all independently observed.",
     "annotation": [
       "appeal to evidence",
-      "appeal to logic"
+      "contradiction"
     ]
   },
   {
     "text": "[Alice]: Since I was physically present and witnessed everything firsthand, I can assure everyone that our matching accounts aren't suspicious coordination - they're simply accurate observations of the same events, and combined with Erin's confession and constantly changing story, the evidence for voting them out is overwhelming.",
     "annotation": [
       "appeal to evidence",
-      "appeal to logic",
-      "accusation"
+      "contradiction"
     ]
   }
 ]

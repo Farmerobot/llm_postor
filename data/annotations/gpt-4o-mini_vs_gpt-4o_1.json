@@ -43,7 +43,6 @@
   {
     "text": "[Charlie]: When I found Alice, there was no one else nearby, and the area was quiet, so I suspect the impostor might have used a vent to escape unnoticed while we were all preoccupied.",
     "annotation": [
-      "providing an alibi",
       "suggestion"
     ]
   },
@@ -85,9 +84,8 @@
   {
     "text": "[Erin]: I think we should also consider that if the impostor was among us in the cafeteria, they could have easily pretended to do tasks while observing our actions, so let's scrutinize Bob and Charlie's interactions closely as they seem to be creating a strong alibi together.",
     "annotation": [
-      "appeal to logic",
-      "accusation",
-      "information gathering"
+      "suggestion",
+      "accusation"
     ]
   },
   {
@@ -101,8 +99,8 @@
     "text": "[Charlie]: Since we all agree on analyzing movements, can everyone share where they went after the cafeteria tasks to help us identify any inconsistencies?",
     "annotation": [
       "appeal to agreement",
-      "call to action",
-      "information gathering"
+      "information gathering",
+      "call to action"
     ]
   },
   {
@@ -124,8 +122,9 @@
   {
     "text": "[Dave]: Let's all share the exact order of our movements after the cafeteria tasks to help identify any gaps or overlaps in our timelines.",
     "annotation": [
-      "call to action",
-      "information gathering"
+      "suggestion",
+      "information gathering",
+      "call to action"
     ]
   },
   {

@@ -17,7 +17,8 @@
   {
     "text": "[Erin]: It seems like we're making good progress on tasks, but I'd still like to hear from Charlie about their overall plan and any other tasks they've completed beyond starting the coffee maker.",
     "annotation": [
-      "information gathering"
+      "information gathering",
+      "demand for evidence"
     ]
   },
   {
@@ -31,8 +32,9 @@
   {
     "text": "[Alice]: I understand Charlie's concern about discussing Dave's death, but I'd like to clarify that I simply reported the body after finding it in the engine room, and I didn't see anyone suspicious around, so I'd appreciate it if Charlie could now answer my original question about their actions and plans beyond starting the coffee maker.",
     "annotation": [
+      "appeal to logic",
       "providing an alibi",
-      "appeal to logic"
+      "demand for evidence"
     ]
   },
   {
@@ -48,7 +50,8 @@
     "text": "[Erin]: I agree with Bob that Charlie's deflection is raising suspicions, and I'd like to add that it's crucial we establish a clear understanding of everyone's actions and alibis before we proceed with any further discussions or accusations.",
     "annotation": [
       "appeal to agreement",
-      "appeal to importance"
+      "appeal to importance",
+      "demand for evidence"
     ]
   },
   {
@@ -62,16 +65,17 @@
     "text": "[Bob]: I appreciate Charlie's attempt to address our concerns, but I still haven't heard a clear answer to my question about their actions and plans beyond starting the coffee maker, so I'd like to ask again: Charlie, can you please provide a detailed account of what you've been doing and what tasks you've completed or plan to complete?",
     "annotation": [
       "appeal to logic",
-      "repetition",
       "demand for evidence",
-      "information gathering"
+      "information gathering",
+      "repetition"
     ]
   },
   {
     "text": "[Erin]: I think it's essential that Charlie provides a clear and concise answer to Bob's question about their actions and plans, as their continued vagueness is not only raising suspicions but also hindering our ability to work together effectively as a team.",
     "annotation": [
       "appeal to importance",
-      "appeal to logic"
+      "appeal to logic",
+      "demand for evidence"
     ]
   },
   {
@@ -92,14 +96,15 @@
     "text": "[Bob]: I'd like to thank Charlie for finally providing a clear answer about their actions and plans, but I also share Alice's concern about the timing and vagueness of their previous responses, so I'd like to ask Charlie to confirm if they have an alibi for the time when Dave's body was discovered and if they've completed any tasks in the medbay as they claimed.",
     "annotation": [
       "appeal to agreement",
-      "demand for evidence"
+      "demand for evidence",
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: I think it's crucial that Charlie provides a clear and concise answer to Alice's and Bob's latest questions about their alibi and tasks completed in the medbay, as their previous responses have raised suspicions and we need to establish trust among the team to move forward effectively.",
     "annotation": [
       "appeal to importance",
-      "appeal to logic"
+      "demand for evidence"
     ]
   },
   {
@@ -113,7 +118,7 @@
     "text": "[Alice]: I'd like to summarize the key points from Charlie's latest response: they claim to have visited the medbay but didn't complete any tasks due to the emergency meeting, and they don't have a solid alibi for the time of Dave's death as they were alone in the cafeteria and medbay; I think it's essential we discuss the implications of this new information and consider whether Charlie's story adds up.",
     "annotation": [
       "summary",
-      "appeal to logic"
+      "appeal to importance"
     ]
   },
   {

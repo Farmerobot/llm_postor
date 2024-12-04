@@ -75,7 +75,7 @@
     "annotation": [
       "ad hominem",
       "appeal to logic",
-      "appeal to evidence",
+      "confirmation",
       "contradiction"
     ]
   },
@@ -83,7 +83,8 @@
     "text": "[Dave]: Given that Bob claims to have witnessed Alice's tasks but was suspiciously quick to defend her after Charlie's death, and considering Erin's earlier admission about faking tasks, I think we need to seriously consider the possibility that Bob and Alice are working together as impostors.",
     "annotation": [
       "appeal to doubt",
-      "accusation"
+      "accusation",
+      "appeal to evidence"
     ]
   },
   {
@@ -116,7 +117,7 @@
       "contradiction",
       "accusation",
       "call to action",
-      "providing an alibi"
+      "appeal to logic"
     ]
   },
   {
@@ -130,7 +131,8 @@
     "text": "[Erin]: It's concerning that both Alice and Bob are so quick to dismiss Dave's alibi while presenting their own accounts as flawless, which suggests they might be coordinating to mislead us and divert attention from their own actions.",
     "annotation": [
       "appeal to doubt",
-      "accusation"
+      "accusation",
+      "appeal to logic"
     ]
   },
   {
@@ -145,14 +147,15 @@
     "annotation": [
       "contradiction",
       "accusation",
-      "providing an alibi"
+      "appeal to logic"
     ]
   },
   {
     "text": "[Bob]: Given that I witnessed Dave's movements firsthand and he keeps lying about being in Admin during Round 2, plus Erin's earlier admission about faking tasks, I think we need to focus on these concrete facts rather than their attempts to create confusion about the timeline.",
     "annotation": [
       "appeal to evidence",
-      "accusation"
+      "accusation",
+      "appeal to logic"
     ]
   }
 ]

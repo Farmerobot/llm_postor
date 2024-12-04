@@ -72,7 +72,8 @@
     "text": "[Bob]: Alice, you're contradicting yourself and changing your story. First, Charlie was with Dave in the Library, now you're saying you \"misremembered.\" What exactly *do* you remember?",
     "annotation": [
       "contradiction",
-      "questioning"
+      "accusation",
+      "demand for evidence"
     ]
   },
   {
@@ -93,7 +94,7 @@
     "text": "[Erin]: Alice, you're contradicting yourself again\u2014you just said *we* shouldn't jump to conclusions based on *your* shifting narratives, but moments ago you were insisting *we* focus on Charlie based on your now-admitted faulty memory.",
     "annotation": [
       "contradiction",
-      "tu quoque"
+      "accusation"
     ]
   },
   {
@@ -108,6 +109,7 @@
     "text": "[Dave]: Alice, you're so focused on Charlie's \"moving around\" that you seem to have forgotten where *you* were \u2013 perhaps you should tell us instead.",
     "annotation": [
       "shifting blame",
+      "demand for evidence",
       "questioning"
     ]
   },
@@ -115,30 +117,30 @@
     "text": "[Alice]: I'd like to contribute to the discussion by suggesting that we focus on gathering more information about Charlie's alibis and actions, rather than relying solely on Alice's shifting narratives, which seem to be creating more confusion than clarity.",
     "annotation": [
       "deflection",
-      "information gathering",
-      "suggestion"
+      "suggestion",
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: Alice, you're repeating the same deflection tactic *again*, trying to shift focus to Charlie instead of explaining your own contradictory statements.",
     "annotation": [
       "accusation",
-      "deflection",
-      "tu quoque"
+      "deflection"
     ]
   },
   {
     "text": "[Bob]: Alice, you're repeating yourself and still haven't explained your contradictory statements about Charlie and Dave.",
     "annotation": [
-      "repetition",
-      "accusation"
+      "accusation",
+      "repetition"
     ]
   },
   {
     "text": "[Dave]: Alice, you're still avoiding the question: where were *you* during rounds 1-5, and who were *you* with?",
     "annotation": [
-      "questioning",
-      "accusation"
+      "accusation",
+      "demand for evidence",
+      "questioning"
     ]
   }
 ]

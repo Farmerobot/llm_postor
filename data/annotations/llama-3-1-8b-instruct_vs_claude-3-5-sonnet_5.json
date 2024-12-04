@@ -46,7 +46,8 @@
     "text": "[Alice]: Given that I personally witnessed both Bob and Charlie in Medbay, and Dave's movements match my own observations, Erin's accusations seem like a desperate attempt to create chaos and avoid being caught in her lies.",
     "annotation": [
       "appeal to evidence",
-      "accusation"
+      "accusation",
+      "deflection"
     ]
   },
   {
@@ -93,14 +94,15 @@
     "annotation": [
       "appeal to evidence",
       "call to action",
-      "accusation"
+      "accusation",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Erin]: The movement logs will clearly show I was in Upper Engine when Charlie's body was found, and I challenge Bob, Dave, and Alice to explain why their coordinated stories keep contradicting each other about my supposed locations.",
     "annotation": [
       "appeal to evidence",
-      "questioning",
+      "call to action",
       "accusation"
     ]
   },
@@ -138,7 +140,8 @@
     "text": "[Alice]: The movement logs and multiple witness accounts clearly show that Erin was in Medbay when Charlie's body was found, not in Upper Engine as she claims, and her attempt to paint this as a conspiracy only makes her look more suspicious.",
     "annotation": [
       "appeal to evidence",
-      "accusation"
+      "accusation",
+      "deflection"
     ]
   },
   {

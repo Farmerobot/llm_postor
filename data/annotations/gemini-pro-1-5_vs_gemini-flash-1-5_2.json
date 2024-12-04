@@ -1,7 +1,9 @@
 [
   {
     "text": "[Bob]: I saw Dave heading towards Navigation a few minutes ago.",
-    "annotation": []
+    "annotation": [
+      "appeal to evidence"
+    ]
   },
   {
     "text": "[Dave]: I can confirm I was in Weapons the entire time, working on the asteroid task, and Alice was there with me;  Bob, are you sure you saw me near Navigation, because I haven't left Weapons since the start of the round.",
@@ -35,8 +37,7 @@
     "text": "[Dave]: I appreciate Charlie and Alice corroborating my account, but let's prioritize finding Erin's killer by focusing on who was near Navigation when she died.",
     "annotation": [
       "appeal to agreement",
-      "appeal to importance",
-      "call to action"
+      "appeal to importance"
     ]
   },
   {

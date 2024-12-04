@@ -36,13 +36,14 @@
     "annotation": [
       "deflection",
       "appeal to doubt",
-      "ad hominem"
+      "accusation"
     ]
   },
   {
     "text": "[Erin]: I believe we need to carefully verify Dave's claim about Bob eliminating Alice, as his accusation seems too direct and could potentially be a strategic attempt to divert attention from himself, especially given Bob's counter-suggestion to scrutinize Dave's own actions.",
     "annotation": [
       "appeal to doubt",
+      "accusation",
       "deflection"
     ]
   },
@@ -100,7 +101,6 @@
     "text": "[Bob]: I'd like to request that we take a closer look at Dave's alibi during the time Alice was eliminated, as his claim of witnessing the elimination seems suspiciously convenient given his own history of suspicious behavior in Medbay, and I'd appreciate it if he could provide more specific details about the sequence of events, including any potential witnesses or security footage, to help us better understand what happened.",
     "annotation": [
       "appeal to doubt",
-      "ad hominem",
       "demand for evidence",
       "information gathering"
     ]
@@ -117,7 +117,7 @@
     "annotation": [
       "challenge",
       "appeal to consistency",
-      "appeal to authority"
+      "appeal to evidence"
     ]
   },
   {
@@ -148,8 +148,8 @@
     "text": "[Dave]: I challenge Bob to explain why he keeps deflecting attention instead of directly addressing the clear and consistent testimony from Charlie and me about his elimination of Alice in Medbay.",
     "annotation": [
       "challenge",
-      "accusation",
-      "ad hominem"
+      "ad hominem",
+      "appeal to consistency"
     ]
   },
   {

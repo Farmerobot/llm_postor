@@ -13,15 +13,15 @@
       "confirmation",
       "providing an alibi",
       "appeal to importance",
-      "accusation"
+      "appeal to agreement"
     ]
   },
   {
     "text": "[Dave]: I understand that Erin and Bob have established their alibis in the Cafeteria, but I was focused on completing my task and moving to Medbay, where I only saw Charlie doing a task, and it's interesting that both Erin and Bob are pointing fingers at Charlie and me; perhaps they are trying to divert attention from themselves, so we should definitely scrutinize their movements as well.",
     "annotation": [
       "providing an alibi",
-      "accusation",
       "deflection",
+      "accusation",
       "call to action"
     ]
   },
@@ -46,22 +46,24 @@
     "annotation": [
       "deflection",
       "accusation",
-      "call to action",
-      "providing an alibi"
+      "demand for evidence",
+      "call to action"
     ]
   },
   {
     "text": "[Dave]: I completed my task in the Cafeteria and moved to Medbay, where I only saw Charlie doing a task, so I was focused on my objectives rather than lingering suspiciously, and I find it odd that Erin and Bob are so quick to accuse us despite having alibis themselves.",
     "annotation": [
       "providing an alibi",
-      "accusation"
+      "accusation",
+      "appeal to logic"
     ]
   },
   {
     "text": "[Charlie]: I find it interesting that Erin and Bob are so focused on accusing Dave and me, even though we have been completing tasks, while they seem to be trying to deflect from their own actions and the timeline surrounding Alice's elimination.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "demand for evidence"
     ]
   },
   {
@@ -69,7 +71,7 @@
     "annotation": [
       "accusation",
       "suggestion",
-      "call to action"
+      "demand for evidence"
     ]
   },
   {
@@ -94,15 +96,16 @@
     "annotation": [
       "appeal to agreement",
       "call to action",
-      "deflection"
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: I think we're getting bogged down in a cycle of finger-pointing and accusations, and it's time to take a step back and focus on the facts: we still have tasks to complete, and we can't afford to let personal biases and suspicions get in the way of our objective. Let's take a closer look at the Medbay and see if we can find any concrete evidence of Charlie and Dave's suspicious behavior, rather than relying on hearsay and speculation.",
     "annotation": [
-      "appeal to logic",
       "appeal to importance",
-      "call to action"
+      "appeal to logic",
+      "call to action",
+      "demand for evidence"
     ]
   },
   {
@@ -118,7 +121,7 @@
     "annotation": [
       "appeal to importance",
       "accusation",
-      "call to action"
+      "demand for evidence"
     ]
   },
   {
@@ -126,17 +129,17 @@
     "annotation": [
       "appeal to importance",
       "shifting blame",
-      "suggestion"
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: I think it's time to refocus on the facts and tasks at hand, rather than getting bogged down in a cycle of accusations and finger-pointing, but I'd like to propose that we take a closer look at my own movements and timeline surrounding Alice's elimination to ensure I'm not trying to deceive us, and it's interesting that both Charlie and Dave are trying to deflect attention from their own actions by pointing fingers at me, so let's scrutinize their movements as well.",
     "annotation": [
-      "appeal to logic",
+      "appeal to importance",
       "suggestion",
-      "call to action",
+      "demand for evidence",
       "deflection",
-      "accusation"
+      "call to action"
     ]
   },
   {
@@ -144,12 +147,13 @@
     "annotation": [
       "shifting blame",
       "call to action",
-      "providing an alibi"
+      "demand for evidence"
     ]
   },
   {
     "text": "[Dave]: I find it quite telling that Erin is now advocating for a focus on facts after previously accusing Charlie and me; this sudden shift makes me question her intentions and whether she might be trying to cover her tracks instead of genuinely seeking the truth.",
     "annotation": [
+      "contradiction",
       "appeal to doubt",
       "accusation"
     ]
@@ -157,9 +161,9 @@
   {
     "text": "[Charlie]: I find it suspicious that Erin is now urging us to focus on facts after previously pointing fingers at both Dave and me, which makes me question her motives and whether she's trying to deflect attention from her own actions.",
     "annotation": [
+      "contradiction",
       "appeal to doubt",
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   }
 ]

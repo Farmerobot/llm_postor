@@ -96,21 +96,21 @@
     "text": "[Bob]: Charlie, you're twisting things, the Cafeteria *was* busy at the start, with myself, Alice, Erin, *and you* \u2013 you killed Dave right after Erin left, so it wasn't a crowded room, but it also wasn't empty.",
     "annotation": [
       "accusation",
-      "contradiction"
+      "repetition"
     ]
   },
   {
     "text": "[Alice]: Charlie's trying to discredit Bob's testimony because it directly implicates him in Dave's murder, remember, Charlie's initial lie about me venting proves he's the impostor.",
     "annotation": [
       "accusation",
-      "appeal to evidence"
+      "repetition"
     ]
   },
   {
     "text": "[Erin]: Charlie's trying to create reasonable doubt by suggesting Bob is the only witness, but Bob already explained the Cafeteria emptied out shortly after the game began, leaving him alone with Charlie when the murder happened.",
     "annotation": [
       "accusation",
-      "appeal to evidence"
+      "appeal to doubt"
     ]
   },
   {
@@ -130,7 +130,6 @@
     "text": "[Alice]: Charlie's desperate demand for an exact timeline is a classic stalling tactic; Bob's account is consistent, and we need to vote Charlie out now.",
     "annotation": [
       "accusation",
-      "appeal to consistency",
       "call to action"
     ]
   },

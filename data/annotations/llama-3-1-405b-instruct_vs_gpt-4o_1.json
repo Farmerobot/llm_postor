@@ -88,8 +88,8 @@
     "text": "[Dave]: I think it's interesting that Erin is now asking Bob about potential witnesses or suspects in the Cafeteria, but she still hasn't provided a clear explanation for her activities in the Weapons room, which seems evasive and warrants further investigation.",
     "annotation": [
       "accusation",
-      "deflection",
-      "appeal to doubt"
+      "appeal to doubt",
+      "deflection"
     ]
   },
   {
@@ -102,8 +102,8 @@
   {
     "text": "[Erin]: Let's clarify who actually reported Charlie and where the body was found, as this confusion might be hindering our efforts to piece together everyone's movements accurately.",
     "annotation": [
-      "suggestion",
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   },
   {
@@ -124,21 +124,22 @@
   {
     "text": "[Bob]: Let's focus on clarifying who reported Charlie's body and where it was found, as this will help us accurately piece together everyone's movements and identify any inconsistencies.",
     "annotation": [
-      "suggestion",
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: Let's clarify who reported Charlie's body and where it was found, as this will help us accurately piece together everyone's movements and identify any inconsistencies.",
     "annotation": [
-      "suggestion",
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   },
   {
     "text": "[Alice]: I'm still unclear on who reported Charlie's body and where it was found, as this information is crucial to understanding everyone's movements and clearing up any confusion.",
     "annotation": [
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   }
 ]

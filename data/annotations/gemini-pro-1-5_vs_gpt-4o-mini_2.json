@@ -78,6 +78,7 @@
     "text": "[Bob]: I think we should definitely keep investigating Charlie's behavior, as his shifting statements and uncertainty about Dave's presence raise red flags that could indicate he's trying to divert attention from himself.",
     "annotation": [
       "accusation",
+      "appeal to evidence",
       "deflection"
     ]
   },
@@ -100,21 +101,24 @@
     "text": "[Dave]: Charlie, while your suggestion to look at where everyone was before the cafeteria is interesting, it seems like a tactic to distract us from your inconsistent statements, so we should remain focused on those without alibis during Erin's elimination.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "appeal to logic"
     ]
   },
   {
     "text": "[Bob]: Charlie, your attempt to shift the focus to where we were before the cafeteria seems like a diversion; let\u2019s stick to scrutinizing your inconsistent statements and anyone else without a solid alibi during Erin's elimination.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "appeal to logic"
     ]
   },
   {
     "text": "[Alice]: I agree with Bob and Dave; Charlie's attempts to divert our attention away from his inconsistent statements only heighten my suspicion of him, and we should remain focused on scrutinizing him as we discuss our next steps.",
     "annotation": [
       "appeal to agreement",
-      "accusation"
+      "accusation",
+      "appeal to importance"
     ]
   },
   {
@@ -129,7 +133,8 @@
     "text": "[Dave]: Charlie, your continued insistence on discussing our whereabouts before the cafeteria only serves to deflect attention from your inconsistent statements, and we should stay focused on scrutinizing you as the main suspect.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "appeal to logic"
     ]
   },
   {
@@ -145,7 +150,8 @@
     "text": "[Alice]: I believe it's time we take decisive action and vote Charlie out, as his attempts to redirect the conversation and his inconsistent statements are strong indicators of his guilt.",
     "annotation": [
       "call to action",
-      "accusation"
+      "accusation",
+      "appeal to evidence"
     ]
   }
 ]

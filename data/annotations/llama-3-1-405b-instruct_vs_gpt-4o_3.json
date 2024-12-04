@@ -3,8 +3,7 @@
     "text": "[Bob]: I noticed that Erin still hasn't checked in, and I'm getting a bit worried - did anyone see her after she left for Weapons, or should we consider checking up on her?",
     "annotation": [
       "appeal to emotion",
-      "call to action",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -97,7 +96,6 @@
   {
     "text": "[Dave]: Let's focus on gathering more information about everyone's whereabouts during the time of Charlie's death to narrow down potential suspects and consider checking the Admin logs for any suspicious movements.",
     "annotation": [
-      "call to action",
       "information gathering",
       "suggestion"
     ]
@@ -106,8 +104,7 @@
     "text": "[Alice]: Since Erin provided details about her tasks in Weapons, let's consider checking the Admin logs to verify movements and see if anyone suspicious entered the Cafeteria after she left.",
     "annotation": [
       "appeal to agreement",
-      "suggestion",
-      "call to action"
+      "suggestion"
     ]
   },
   {
@@ -126,7 +123,6 @@
   {
     "text": "[Dave]: Let's ensure we have a clear understanding of everyone's movements and consider checking the Admin logs to verify if someone entered the Cafeteria after Erin left, as this could help us identify the impostor.",
     "annotation": [
-      "call to action",
       "information gathering",
       "suggestion"
     ]
@@ -141,7 +137,7 @@
   {
     "text": "[Erin]: I understand the suspicion, Bob, but let's prioritize checking the Admin logs to see if anyone entered the Cafeteria after I left, as this could reveal the impostor's identity.",
     "annotation": [
-      "appeal to logic",
+      "appeal to agreement",
       "call to action"
     ]
   }

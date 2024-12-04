@@ -12,7 +12,7 @@
       "appeal to importance",
       "suggestion",
       "information gathering",
-      "call to action"
+      "demand for evidence"
     ]
   },
   {
@@ -43,7 +43,7 @@
     "annotation": [
       "appeal to agreement",
       "information gathering",
-      "call to action"
+      "demand for evidence"
     ]
   },
   {
@@ -83,7 +83,7 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "appeal to evidence",
+      "demand for evidence",
       "accusation"
     ]
   },
@@ -98,8 +98,8 @@
   {
     "text": "I think it's essential that we also ask Erin and Alice to provide more specific details about their interactions with Dave in Medbay, as well as their own activities and whereabouts during that time, to help build a more complete picture of what happened in Medbay.",
     "annotation": [
-      "information gathering",
-      "appeal to importance"
+      "appeal to importance",
+      "information gathering"
     ]
   },
   {
@@ -147,7 +147,7 @@
     "text": "[Alice]: I'd like to reiterate the importance of gathering more concrete evidence and alibis from players who have been in Medbay, such as Erin and Alice, as well as Dave, whose sudden movement to Medbay around the time the dead body was reported seems suspicious, and I think it's essential that we ask Dave to provide a detailed timeline of his activities in Medbay, including the exact time he arrived and left, as well as any interactions he had with other players, to help clarify his alibi and ensure we're not missing any crucial information.",
     "annotation": [
       "appeal to importance",
-      "appeal to evidence",
+      "demand for evidence",
       "information gathering"
     ]
   },
@@ -170,7 +170,7 @@
     "text": "[Charlie]: I'd like to reiterate the importance of gathering more concrete evidence and alibis from players who have been in Medbay, such as Erin and Alice, as well as Dave, whose sudden movement to Medbay around the time the dead body was reported seems suspicious.",
     "annotation": [
       "appeal to importance",
-      "appeal to evidence",
+      "demand for evidence",
       "accusation"
     ]
   },
@@ -178,7 +178,8 @@
     "text": "I think it's essential that we ask Dave to provide a detailed timeline of his activities in Medbay, including the exact time he arrived and left, as well as any interactions he had with other players, to help clarify his alibi and ensure we're not missing any crucial information.",
     "annotation": [
       "appeal to importance",
-      "information gathering"
+      "information gathering",
+      "demand for evidence"
     ]
   },
   {
@@ -192,8 +193,7 @@
   {
     "text": "I'd also like to ask Erin and Alice to provide more specific details about their interactions with Dave in Medbay, as well as their own activities and whereabouts during that time, to help build a more complete picture of what happened in Medbay.",
     "annotation": [
-      "information gathering",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {

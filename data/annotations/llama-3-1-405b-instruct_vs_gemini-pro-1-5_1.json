@@ -23,9 +23,8 @@
     "text": "[Dave]: Charlie's sudden accusation against me seems convenient, especially since they didn't mention it earlier when we were in the same room, and now Bob is trying to corroborate it - I think we should scrutinize their actions and alibis before making any hasty decisions.",
     "annotation": [
       "accusation",
-      "appeal to doubt",
       "deflection",
-      "call to action"
+      "appeal to logic"
     ]
   },
   {
@@ -45,8 +44,8 @@
     "text": "[Dave]: I'd like to point out that Charlie's apology for not reporting the alleged incident sooner seems insincere, as they're still failing to provide a clear explanation for the delay, and Bob's questioning seems to be carefully crafted to avoid asking Charlie about their own suspicious behavior.",
     "annotation": [
       "ad hominem",
-      "appeal to doubt",
-      "accusation"
+      "accusation",
+      "appeal to doubt"
     ]
   },
   {
@@ -80,7 +79,7 @@
     "text": "[Bob]: Charlie, to clarify, you saw Dave kill Erin, then ran to Weapons, and then Dave followed you to Weapons? If so, how long was the gap between you arriving in Weapons and Dave arriving?",
     "annotation": [
       "questioning",
-      "demand for evidence"
+      "information gathering"
     ]
   },
   {

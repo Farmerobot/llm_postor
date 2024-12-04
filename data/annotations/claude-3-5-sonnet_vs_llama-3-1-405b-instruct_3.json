@@ -11,8 +11,8 @@
     "text": "[Alice]: I agree with Bob that Erin has been quiet, but I've actually seen Erin doing tasks in Medbay, such as Fix wiring and Run diagnostics, which suggests they might be a crewmate.",
     "annotation": [
       "appeal to agreement",
-      "appeal to evidence",
-      "providing an alibi"
+      "providing an alibi",
+      "appeal to logic"
     ]
   },
   {
@@ -36,10 +36,9 @@
   {
     "text": "[Bob]: I saw Dave in Admin doing wiring and followed him to Storage where I found his body, so I'm wondering where Charlie was during this time since they seem so interested in my movements.",
     "annotation": [
-      "appeal to evidence",
+      "providing an alibi",
       "questioning",
-      "information gathering",
-      "ad hominem"
+      "shifting blame"
     ]
   },
   {
@@ -119,7 +118,6 @@
     "text": "[Charlie]: I'd like to thank Alice for pointing out Bob's deflection attempt and reiterate that we should focus on resolving the discrepancies in his timeline before moving on to other topics.",
     "annotation": [
       "appeal to agreement",
-      "repetition",
       "appeal to importance"
     ]
   },
@@ -128,8 +126,7 @@
     "annotation": [
       "call to action",
       "demand for evidence",
-      "accusation",
-      "shifting blame"
+      "appeal to doubt"
     ]
   },
   {
@@ -137,7 +134,7 @@
     "annotation": [
       "providing an alibi",
       "appeal to importance",
-      "accusation"
+      "shifting blame"
     ]
   },
   {
@@ -145,7 +142,6 @@
     "annotation": [
       "appeal to doubt",
       "appeal to agreement",
-      "call to action",
       "demand for evidence"
     ]
   },
@@ -162,7 +158,7 @@
     "text": "[Erin]: I'd like to thank Alice and Charlie for their continued efforts to hold Bob accountable for the discrepancies in his timeline, and I agree that his latest attempt to clarify his story still raises more questions than answers.",
     "annotation": [
       "appeal to agreement",
-      "appeal to doubt"
+      "appeal to importance"
     ]
   }
 ]

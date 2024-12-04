@@ -39,8 +39,8 @@
   {
     "text": "[Bob]: I think we need to carefully investigate both Dave and Charlie's movements, as their conflicting statements and the recent eliminations of Alice and Erin suggest one of them might be trying to mislead us.",
     "annotation": [
-      "call to action",
-      "appeal to evidence"
+      "appeal to evidence",
+      "information gathering"
     ]
   },
   {
@@ -61,8 +61,8 @@
   {
     "text": "[Bob]: I believe we need to methodically review everyone's movements and alibis, focusing on gathering concrete evidence rather than engaging in heated accusations that could distract us from identifying the real threat.",
     "annotation": [
-      "call to action",
       "appeal to logic",
+      "call to action",
       "appeal to importance"
     ]
   },
@@ -86,7 +86,8 @@
     "text": "[Bob]: I propose we create a comprehensive timeline of events, focusing on verifying Dave's claimed task completion in Admin and carefully examining the sequence of movements around Alice and Erin's eliminations to systematically narrow down potential impostors.",
     "annotation": [
       "suggestion",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -94,7 +95,7 @@
     "annotation": [
       "accusation",
       "appeal to doubt",
-      "call to action"
+      "information gathering"
     ]
   },
   {

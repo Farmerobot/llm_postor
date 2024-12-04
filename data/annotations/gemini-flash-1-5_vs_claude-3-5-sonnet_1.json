@@ -94,6 +94,7 @@
     "text": "[Dave]: Alice, your claim of finding Erin's body minutes after Charlie left contradicts Bob's statement that Erin was alive when he and I were working with her; this discrepancy needs resolving before we consider other possibilities.",
     "annotation": [
       "contradiction",
+      "appeal to evidence",
       "appeal to importance"
     ]
   },
@@ -123,6 +124,7 @@
     "text": "[Dave]: Alice's shifting story about finding Erin's body, directly contradicted by Bob and Charlie, strongly suggests she's the impostor.",
     "annotation": [
       "contradiction",
+      "appeal to evidence",
       "accusation"
     ]
   },
@@ -130,7 +132,8 @@
     "text": "[Charlie]: I think we've gathered enough evidence - Alice first gave detailed specifics about finding Erin's body \"minutes after I left,\" but now claims she never found a body at all, which is a clear sign she's trying to cover her tracks as the impostor.",
     "annotation": [
       "appeal to evidence",
-      "accusation"
+      "accusation",
+      "contradiction"
     ]
   },
   {
@@ -142,7 +145,8 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "call to action"
+      "call to action",
+      "contradiction"
     ]
   }
 ]

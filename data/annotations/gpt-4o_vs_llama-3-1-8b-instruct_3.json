@@ -17,7 +17,6 @@
     "text": "[Bob]: I agree with Alice that we should discuss and vote on Erin's recent actions in the Cafeteria and Medbay, and I'd like to add that we should also consider Erin's potential motives for drawing attention to Alice's movements, as it may be a clever distraction from her own suspicious behavior.",
     "annotation": [
       "appeal to agreement",
-      "call to action",
       "accusation",
       "deflection"
     ]
@@ -57,8 +56,8 @@
     "text": "[Dave]: I'd like to propose that we give Erin the opportunity to provide a detailed timeline of her activities during the time she was supposedly working on the wiring task in the Cafeteria, and I think it's essential that we also ask her to provide concrete evidence of her task completion, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior.",
     "annotation": [
       "suggestion",
-      "demand for evidence",
-      "appeal to importance"
+      "appeal to importance",
+      "demand for evidence"
     ]
   },
   {
@@ -80,8 +79,8 @@
     "text": "[Bob]: Given Erin's continued attempts to downplay her suspicious behavior and shift the focus away from her own actions, I think it's essential that we press her for concrete evidence of her task completion in the Cafeteria, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior.",
     "annotation": [
       "accusation",
-      "demand for evidence",
       "appeal to importance",
+      "demand for evidence",
       "shifting blame"
     ]
   },
@@ -106,7 +105,7 @@
       "accusation",
       "appeal to importance",
       "demand for evidence",
-      "deflection"
+      "call to action"
     ]
   },
   {
@@ -127,7 +126,6 @@
   {
     "text": "[Erin]: I understand the need for clarity, so I'll provide a detailed timeline of my activities, but let's also ensure we examine the actions and alibis of all players to have a balanced view.",
     "annotation": [
-      "providing an alibi",
       "appeal to logic"
     ]
   },
@@ -143,8 +141,8 @@
     "text": "[Bob]: Given Erin's continued attempts to downplay her suspicious behavior and shift the focus away from her own actions, I think it's essential that we press her for concrete evidence of her task completion in the Cafeteria, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we also ask her to explain the discrepancy between her claim of working on the wiring task in the Cafeteria and Alice's observation of her moving between Cafeteria and Medbay a lot, as this inconsistency raises further questions about her credibility.",
     "annotation": [
       "accusation",
-      "demand for evidence",
       "appeal to importance",
+      "demand for evidence",
       "contradiction",
       "shifting blame"
     ]

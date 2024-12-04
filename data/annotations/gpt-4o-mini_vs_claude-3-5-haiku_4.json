@@ -34,6 +34,7 @@
     "text": "[Charlie]: I can definitively confirm Erin's statement: I was in Medbay and directly witnessed Alice eliminating Dave, so we must vote Alice out to protect the remaining crewmates.",
     "annotation": [
       "confirmation",
+      "accusation",
       "appeal to fear",
       "call to action"
     ]
@@ -42,8 +43,8 @@
     "text": "[Erin]: I believe we have clear evidence from both myself and Charlie that Alice is the impostor, and we must vote her out to prevent further eliminations and protect our remaining team.",
     "annotation": [
       "appeal to evidence",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -59,7 +60,7 @@
     "annotation": [
       "appeal to consistency",
       "call to action",
-      "appeal to evidence"
+      "accusation"
     ]
   },
   {
@@ -81,7 +82,7 @@
   {
     "text": "[Charlie]: I believe Alice's repeated attempts to cast doubt on our consistent testimony only further prove her guilt, and we must vote her out to prevent any more crewmate eliminations.",
     "annotation": [
-      "appeal to consistency",
+      "accusation",
       "call to action",
       "appeal to fear"
     ]
@@ -107,6 +108,7 @@
     "text": "[Charlie]: I stand by my testimony that Alice is the impostor who eliminated Dave in Medbay, and her continued attempts to create doubt only further confirm her guilt, so we must vote her out to protect the remaining crewmates.",
     "annotation": [
       "appeal to consistency",
+      "accusation",
       "call to action",
       "appeal to fear"
     ]
@@ -116,7 +118,7 @@
     "annotation": [
       "call to action",
       "appeal to consistency",
-      "appeal to evidence"
+      "accusation"
     ]
   }
 ]

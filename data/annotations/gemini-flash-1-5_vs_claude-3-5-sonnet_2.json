@@ -75,8 +75,8 @@
       "appeal to evidence",
       "contradiction",
       "deflection",
-      "accusation",
       "call to action",
+      "accusation",
       "appeal to fear"
     ]
   },
@@ -84,9 +84,9 @@
     "text": "[Erin]: Since I was continuously in the Cafeteria and personally witnessed Charlie doing tasks there before his death, I can definitively state that Bob's changing story about not seeing Dave leave, followed by Charlie's death shortly after being alone with Bob, strongly suggests Bob is the impostor.",
     "annotation": [
       "providing an alibi",
-      "contradiction",
+      "accusation",
       "appeal to evidence",
-      "accusation"
+      "appeal to fear"
     ]
   },
   {
@@ -100,8 +100,8 @@
   {
     "text": "[Bob]: While I appreciate the concern over Dave's movements, let's not overlook the inconsistencies in Alice and Erin's testimonies and the suspicious timing of Charlie's death; focusing solely on Dave distracts from the bigger picture.",
     "annotation": [
-      "deflection",
-      "appeal to doubt"
+      "appeal to doubt",
+      "deflection"
     ]
   },
   {
@@ -109,7 +109,8 @@
     "annotation": [
       "contradiction",
       "accusation",
-      "deflection"
+      "deflection",
+      "appeal to fear"
     ]
   },
   {
@@ -124,8 +125,8 @@
     "text": "[Dave]: The evidence is overwhelming - three of us have maintained consistent stories about my movements while Bob keeps changing his narrative, lying about not seeing me leave, falsely claiming testimony inconsistencies, and most suspiciously, Charlie was found dead right after being alone with Bob in Cafeteria.",
     "annotation": [
       "appeal to evidence",
-      "contradiction",
       "accusation",
+      "contradiction",
       "appeal to fear"
     ]
   },
@@ -133,7 +134,7 @@
     "text": "[Bob]: Let's not rush to judgment based on conflicting accounts;  the timing of Charlie's death is suspicious, but we need more concrete evidence before accusing anyone.",
     "annotation": [
       "appeal to doubt",
-      "demand for evidence"
+      "appeal to evidence"
     ]
   },
   {

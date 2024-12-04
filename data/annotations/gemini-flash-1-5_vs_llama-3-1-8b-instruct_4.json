@@ -9,9 +9,9 @@
     "text": "[Erin]: I think it's a good idea to have an emergency meeting to discuss our progress and coordinate our efforts, as I mentioned earlier, and I'd like to add that we should also discuss Charlie's claim of being in the cafeteria and see if anyone else witnessed him there, as his task of emptying the trash seems like a minor one that could have been done by anyone.",
     "annotation": [
       "call to action",
+      "appeal to importance",
       "appeal to doubt",
-      "information gathering",
-      "suggestion"
+      "questioning"
     ]
   },
   {
@@ -19,7 +19,7 @@
     "annotation": [
       "appeal to importance",
       "appeal to doubt",
-      "information gathering"
+      "accusation"
     ]
   },
   {
@@ -41,8 +41,8 @@
     "text": "[Alice]: I think it's crucial that we press Charlie for more information about his movements and interactions in the Admin room, as his claim of not noticing Bob's dead body raises significant red flags and warrants further investigation.",
     "annotation": [
       "appeal to importance",
-      "information gathering",
-      "demand for evidence"
+      "demand for evidence",
+      "information gathering"
     ]
   },
   {
@@ -80,6 +80,7 @@
     "text": "[Erin]: I think it's essential that we press Charlie for more information about his movements and interactions in the Admin room, as his claim of not noticing Bob's dead body raises significant red flags and warrants further investigation, and I'd like to propose that we create a detailed timeline of his actions in the Admin room, including the exact time he was there, what he was doing, and any potential interactions he may have had with Bob's body, as this will help us assess his credibility and determine whether his claim is plausible.",
     "annotation": [
       "appeal to importance",
+      "demand for evidence",
       "suggestion",
       "information gathering"
     ]
@@ -96,7 +97,7 @@
   {
     "text": "[Charlie]: A comprehensive timeline of everyone's movements is crucial for a fair assessment, but let's not forget to consider the possibility that someone might be deliberately obscuring their actions.",
     "annotation": [
-      "appeal to logic",
+      "appeal to importance",
       "appeal to doubt"
     ]
   },

@@ -39,7 +39,7 @@
   {
     "text": "[Dave]: I firmly stand by my previous statement that Alice is the impostor, as her claim that we were together in Medbay and Upper Engine is completely false, and I have concrete evidence of her eliminating Bob in the Upper Engine while I was actually in Medbay.",
     "annotation": [
-      "repetition",
+      "appeal to consistency",
       "accusation",
       "appeal to evidence"
     ]
@@ -84,7 +84,8 @@
     "text": "[Dave]: I challenge Alice to explain how she could simultaneously be in the cafeteria eliminating Charlie and in Medbay with me, as her contradictory statements clearly reveal her role as the impostor trying to manipulate our perception of events.",
     "annotation": [
       "contradiction",
-      "accusation"
+      "accusation",
+      "demand for evidence"
     ]
   },
   {

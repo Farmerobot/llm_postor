@@ -40,8 +40,8 @@
     "text": "[Bob]: Charlie, I went to Navigation after Weapons, then I saw Dave in Cafeteria again, so Alice, are you *sure* you saw *both* Erin and Dave in Admin together?",
     "annotation": [
       "confirmation",
-      "demand for evidence",
-      "questioning"
+      "information gathering",
+      "appeal to doubt"
     ]
   },
   {
@@ -80,14 +80,14 @@
     "text": "[Alice]: Dave, your shifting explanations about being alone in Cafeteria, with Erin in Admin, and then back in Cafeteria make you the prime suspect in Erin's death.",
     "annotation": [
       "accusation",
-      "contradiction"
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Charlie]: Dave, your continued attempts to deflect and change the subject only reinforce my belief that you're responsible for Erin's death.",
     "annotation": [
       "accusation",
-      "deflection"
+      "appeal to consistency"
     ]
   },
   {
@@ -134,23 +134,23 @@
     "text": "[Bob]: Dave, we've given you multiple chances to explain your conflicting locations \u2013 vote to eject.",
     "annotation": [
       "call to action",
-      "contradiction"
+      "appeal to consistency"
     ]
   },
   {
     "text": "[Alice]: Dave's trying to shift suspicion to Charlie, but *everyone* places him with Erin right before she died.",
     "annotation": [
       "shifting blame",
-      "accusation",
-      "appeal to group"
+      "appeal to group",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: Dave, you've claimed three different locations \u2013 alone in Cafeteria, with Erin in Admin, then alone again in Cafeteria \u2013 while Alice and Bob corroborate seeing you with Erin shortly before her death; explain this contradiction or face ejection.",
     "annotation": [
       "contradiction",
+      "appeal to evidence",
       "demand for evidence",
-      "questioning",
       "call to action"
     ]
   }

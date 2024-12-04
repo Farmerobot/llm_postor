@@ -55,7 +55,8 @@
     "text": "[Dave]: Bob, your attempt to paint us as colluding is desperate and illogical; why would three crewmates protect each other if one of us was the impostor?",
     "annotation": [
       "accusation",
-      "appeal to logic"
+      "appeal to logic",
+      "ad hominem"
     ]
   },
   {
@@ -69,7 +70,8 @@
     "text": "[Charlie]: Bob, if you're so concerned about evidence, why don't you explain how you knew Alice was dead before her body was reported?",
     "annotation": [
       "tu quoque",
-      "demand for evidence"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
@@ -92,7 +94,8 @@
     "text": "[Bob]: It's interesting that Charlie, Erin, and Dave continue to avoid answering my questions about the specifics of what they claim to have witnessed, and instead resort to personal attacks and demands for me to confess, which only adds to my suspicion that they might be hiding something.",
     "annotation": [
       "appeal to doubt",
-      "accusation"
+      "accusation",
+      "ad hominem"
     ]
   },
   {
@@ -121,13 +124,15 @@
     "text": "[Bob]: It seems Charlie, Erin, and Dave are still refusing to provide actual evidence or answer my questions about their claims, and instead are choosing to selectively focus on my previous questions to try to paint me as guilty, which only further supports my suspicion that they are coordinating their accusations to frame me.",
     "annotation": [
       "appeal to doubt",
-      "accusation"
+      "accusation",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Charlie]: Bob, your increasingly elaborate attempts to deflect blame only make you look more guilty, so let's just vote you out.",
     "annotation": [
       "shifting blame",
+      "accusation",
       "call to action"
     ]
   },

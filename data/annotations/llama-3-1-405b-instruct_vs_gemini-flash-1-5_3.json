@@ -29,7 +29,8 @@
   {
     "text": "[Erin]: I think we're getting sidetracked by focusing solely on the Admin room, and we should also investigate the Medbay, especially since Bob was headed there last time I saw him, and it's possible that's where Dave was going too.",
     "annotation": [
-      "suggestion"
+      "suggestion",
+      "appeal to logic"
     ]
   },
   {
@@ -132,8 +133,7 @@
     "text": "[Charlie]: Bob, given the short timeframe and proximity to Dave's discovery, a more detailed account of your 15-second Medbay task, including the precise time you entered and left, is crucial for establishing a reliable timeline.",
     "annotation": [
       "appeal to importance",
-      "demand for evidence",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {

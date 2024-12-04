@@ -42,8 +42,7 @@
     "text": "[Alice]: I'd like to ask Charlie to clarify what he means by \"synchronized exit\" again, as his previous explanation still doesn't align with my own movements, and I'd also like to ask Bob to provide more details about how he discovered Erin's body, as Charlie's comment about it being \"convenient\" raises some concerns that need to be addressed.",
     "annotation": [
       "demand for evidence",
-      "questioning",
-      "appeal to doubt"
+      "questioning"
     ]
   },
   {
@@ -126,8 +125,7 @@
   {
     "text": "[Charlie]: I appreciate everyone's commitment to transparency, and while I understand the desire for specific details, I want to emphasize that my observations about Bob and Alice's movements might be a misinterpretation, and I'm fully supportive of our task tracking efforts to help identify any potential inconsistencies.",
     "annotation": [
-      "appeal to agreement",
-      "appeal to doubt"
+      "appeal to agreement"
     ]
   },
   {

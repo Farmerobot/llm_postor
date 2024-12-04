@@ -58,22 +58,22 @@
     "text": "[Charlie]: Erin and Dave, your testimonies corroborate each other perfectly; almost too perfectly\u2014did you discuss your statements beforehand?",
     "annotation": [
       "accusation",
-      "questioning"
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Bob]: Erin and Dave, since you both were in the cafeteria and have consistent testimonies, do you recall if Charlie moved in a way that could suggest he was trying to cover for something?",
     "annotation": [
       "questioning",
-      "information gathering"
+      "leading question"
     ]
   },
   {
     "text": "[Erin]: I find it suspicious that Charlie is trying to shift the focus onto me and Dave despite our consistent testimonies; it seems like deflecting attention from himself.",
     "annotation": [
       "accusation",
-      "deflection",
-      "shifting blame"
+      "shifting blame",
+      "deflection"
     ]
   },
   {
@@ -86,7 +86,7 @@
   {
     "text": "[Charlie]: Erin and Dave, your unwavering identical accounts, while seemingly innocent, raise concerns about the possibility of collusion; could you each describe a unique detail from your time in the cafeteria to clarify the independence of your testimonies?",
     "annotation": [
-      "accusation",
+      "appeal to doubt",
       "demand for evidence",
       "questioning"
     ]
@@ -102,7 +102,8 @@
     "text": "[Erin]: I find it strange that Charlie is questioning the consistency of our testimonies when it actually strengthens our credibility; perhaps we should consider why he is so eager to cast doubt.",
     "annotation": [
       "appeal to logic",
-      "appeal to doubt"
+      "appeal to doubt",
+      "ad hominem"
     ]
   },
   {
@@ -116,16 +117,16 @@
     "text": "[Charlie]: Bob's lack of a solid alibi, coupled with Erin and Dave's suspiciously matching testimonies, makes him a more likely suspect than me.",
     "annotation": [
       "appeal to evidence",
-      "accusation",
-      "shifting blame"
+      "shifting blame",
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: Charlie, your quickness to question others' credibility and shift blame without substantial evidence raises more suspicion than the consistent accounts from Erin and Dave.",
     "annotation": [
+      "tu quoque",
       "accusation",
-      "shifting blame",
-      "ad hominem"
+      "shifting blame"
     ]
   },
   {
@@ -169,7 +170,8 @@
     "text": "[Charlie]: Erin and Dave's matching testimonies are too precise;  let's vote for Erin to see if their story holds up under scrutiny.",
     "annotation": [
       "accusation",
-      "call to action"
+      "call to action",
+      "appeal to doubt"
     ]
   },
   {
@@ -183,35 +185,40 @@
     "text": "[Erin]: Charlie seems to be deflecting suspicion onto others with unfounded accusations, which is quite suspicious and could indicate he's trying to mislead us.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "ad hominem"
     ]
   },
   {
     "text": "[Charlie]: Erin and Dave's identical accounts are too precise; let's vote for Erin to expose any inconsistencies in their coordinated story.",
     "annotation": [
       "accusation",
-      "call to action"
+      "call to action",
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Bob]: I find Charlie's insistence on voting out Erin without solid evidence suspicious, especially since Erin confirmed my presence in Weapons, which aligns with my alibi.",
     "annotation": [
       "accusation",
-      "appeal to evidence"
+      "appeal to evidence",
+      "ad hominem"
     ]
   },
   {
     "text": "[Erin]: Charlie seems overly eager to vote me out without solid evidence, which feels like a tactic to deflect suspicion from himself, so we should consider his motives carefully.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "ad hominem"
     ]
   },
   {
     "text": "[Charlie]: Erin and Dave's suspiciously similar accounts, coupled with their defensive reactions, strongly suggest collusion; let's vote Erin out to test the validity of their coordinated story.",
     "annotation": [
       "accusation",
-      "call to action"
+      "call to action",
+      "appeal to doubt"
     ]
   },
   {
@@ -219,27 +226,30 @@
     "annotation": [
       "call to action",
       "appeal to logic",
-      "deflection"
+      "ad hominem"
     ]
   },
   {
     "text": "[Erin]: Let's focus on completing our tasks and observing Charlie's actions closely in the upcoming rounds, as his eagerness to cast doubt without substantial evidence raises suspicion.",
     "annotation": [
       "call to action",
-      "appeal to logic"
+      "appeal to logic",
+      "ad hominem"
     ]
   },
   {
     "text": "[Charlie]: Given Erin and Dave's suspiciously matching testimonies, let's vote for Erin to see if their story holds up under scrutiny.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "appeal to doubt",
+      "call to action",
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: Charlie's quickness to question others and push for votes without solid evidence is concerning, and we should keep an eye on his actions while focusing on completing our tasks.",
     "annotation": [
       "accusation",
+      "ad hominem",
       "call to action"
     ]
   },
@@ -247,6 +257,7 @@
     "text": "[Erin]: Let's focus on completing our tasks and observing Charlie's actions closely, as his quickness to cast doubt without substantial evidence raises suspicion.",
     "annotation": [
       "call to action",
+      "ad hominem",
       "appeal to logic"
     ]
   }

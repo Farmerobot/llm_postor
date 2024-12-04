@@ -2,16 +2,15 @@
   {
     "text": "[Alice]: I was in Electrical for a while, then saw Bob in Medbay, and then went to Cafeteria \u2013 anyone else see anything unusual?",
     "annotation": [
-      "providing an alibi",
       "information gathering"
     ]
   },
   {
     "text": "[Dave]: I was in the Cafeteria earlier and saw Charlie waiting around, and I also noticed that Erin moved to Medbay from the Cafeteria when I was there, which seems like a significant movement, so maybe we should keep an eye on the Medbay to see if anything suspicious happens there?",
     "annotation": [
-      "providing an alibi",
-      "appeal to importance",
-      "suggestion"
+      "information gathering",
+      "suggestion",
+      "appeal to importance"
     ]
   },
   {
@@ -41,8 +40,8 @@
     "text": "[Bob]: I think it's essential to press Alice for more information about her time in Electrical and her interaction with me in Medbay, as her statement suggests she might have seen or heard something relevant that could help us clarify the timeline of events.",
     "annotation": [
       "appeal to importance",
-      "information gathering",
-      "demand for evidence"
+      "demand for evidence",
+      "information gathering"
     ]
   },
   {
@@ -96,8 +95,9 @@
   {
     "text": "[Alice]: Focusing on the Medbay timeline before Erin's arrival, as suggested, will reveal inconsistencies more effectively than general accusations, so let's diligently document everyone's whereabouts.",
     "annotation": [
-      "appeal to logic",
-      "call to action"
+      "appeal to agreement",
+      "suggestion",
+      "appeal to logic"
     ]
   },
   {

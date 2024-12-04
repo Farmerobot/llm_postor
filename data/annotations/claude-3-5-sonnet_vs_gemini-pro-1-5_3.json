@@ -23,7 +23,7 @@
     "text": "[Alice]: Erin is lying, I was in Weapons with Charlie, but Erin killed him, not me - Dave can confirm I was heading towards Weapons after Cafeteria.",
     "annotation": [
       "accusation",
-      "appeal to authority"
+      "appeal to evidence"
     ]
   },
   {
@@ -56,7 +56,8 @@
   {
     "text": "[Erin]: I find it interesting that Alice first claimed to be \"in Weapons with Charlie\" but now says she was just \"heading there\" when it happened - her story keeps changing while mine has stayed consistent.",
     "annotation": [
-      "contradiction"
+      "contradiction",
+      "appeal to consistency"
     ]
   },
   {
@@ -78,27 +79,29 @@
     "text": "[Alice]: Dave, I saw you leave the Cafeteria *towards* Weapons just before I went in, corroborating that I was going there and found Charlie and Erin, where Erin then killed him.",
     "annotation": [
       "accusation",
-      "providing an alibi"
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Erin]: I find it very suspicious that Alice is now claiming Dave went towards Weapons when both Dave and Bob have already confirmed they were together in Medbay, which clearly shows she's making false accusations.",
     "annotation": [
       "accusation",
-      "contradiction"
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Dave]: Alice, accusing me of being near Weapons contradicts both Bob's and my confirmed presence in Medbay, further demonstrating the inconsistency in your narrative.",
     "annotation": [
-      "contradiction"
+      "contradiction",
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Bob]: Alice, your claim that you saw Dave heading towards Weapons is demonstrably false, as both Dave and I confirmed we were in Medbay together \u2014 are you trying to mislead us?",
     "annotation": [
       "contradiction",
-      "accusation"
+      "accusation",
+      "questioning"
     ]
   },
   {
@@ -113,7 +116,7 @@
     "annotation": [
       "call to action",
       "appeal to evidence",
-      "contradiction"
+      "accusation"
     ]
   },
   {
@@ -127,7 +130,8 @@
     "text": "[Bob]: Alice, you placed Dave in Weapons, then heading towards Weapons, and now suggest he *might* have gone to Medbay after \u2013 your story is evolving to deflect blame, while Erin and Dave's accounts remain consistent.",
     "annotation": [
       "contradiction",
-      "shifting blame"
+      "accusation",
+      "appeal to consistency"
     ]
   },
   {

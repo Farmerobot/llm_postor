@@ -28,8 +28,8 @@
     "annotation": [
       "confirmation",
       "appeal to agreement",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -51,8 +51,8 @@
     "text": "[Bob]: I am absolutely certain that Charlie is the impostor, and we must vote them out immediately to prevent any further eliminations of our crewmates.",
     "annotation": [
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -60,16 +60,16 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Charlie]: It's quite telling that Alice, Bob, and Dave are so adamant about voting me out without providing any concrete evidence to support their claims, and I'd like to ask them to clarify the discrepancies in their testimonies, specifically why they initially claimed to have witnessed the incident in different locations, Upper Engine and Medbay.",
     "annotation": [
-      "appeal to doubt",
       "demand for evidence",
-      "questioning"
+      "questioning",
+      "appeal to doubt"
     ]
   },
   {
@@ -84,8 +84,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -93,8 +93,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -110,8 +110,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -119,8 +119,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -128,8 +128,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -152,8 +152,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
@@ -161,8 +161,8 @@
     "annotation": [
       "appeal to consistency",
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   }
 ]

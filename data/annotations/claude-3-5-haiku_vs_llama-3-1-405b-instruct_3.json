@@ -10,8 +10,9 @@
   {
     "text": "[Alice]: I'd like to clarify that while I did see Erin working on the coffee maker, I also witnessed them leaving the cafeteria around the same time Charlie was eliminated, so I think Erin's alibi isn't as solid as they're trying to make it seem.",
     "annotation": [
+      "confirmation",
       "contradiction",
-      "appeal to evidence"
+      "appeal to doubt"
     ]
   },
   {
@@ -25,6 +26,7 @@
   {
     "text": "[Dave]: I think Erin's response didn't fully address Alice's concerns, and I'd like to reiterate my earlier question: Erin, can you provide a clear explanation for why you left the cafeteria and what you did after, as Alice's testimony suggests you were unaccounted for during the time of Charlie's elimination?",
     "annotation": [
+      "appeal to doubt",
       "repetition",
       "demand for evidence",
       "questioning"
@@ -49,12 +51,14 @@
     "text": "[Bob]: I'd like to ask Dave to confirm whether he saw Erin in Medbay at any point, as Erin claims to have been completing medical tasks there, and Dave's testimony could help clarify Erin's alibi and potentially rule them out as a suspect.",
     "annotation": [
       "information gathering",
-      "demand for evidence"
+      "demand for evidence",
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Dave]: I'd like to address Bob's question: I did not see Erin in Medbay at any point, which contradicts their claim of completing medical tasks there, and I think this inconsistency raises even more suspicions about Erin's involvement in Charlie's elimination.",
     "annotation": [
+      "confirmation",
       "contradiction",
       "accusation"
     ]
@@ -62,15 +66,15 @@
   {
     "text": "[Erin]: I understand that Dave claims he didn't see me in Medbay, but Medbay is a large area with multiple stations, and his inability to confirm my presence doesn't automatically prove my guilt - we should focus on gathering concrete evidence about Charlie's elimination rather than relying on selective observations.",
     "annotation": [
-      "deflection",
-      "appeal to doubt"
+      "appeal to doubt",
+      "deflection"
     ]
   },
   {
     "text": "[Alice]: I'd like to address Erin's latest statement: while it's true that Medbay is a large area, I think it's suspicious that Dave didn't see Erin at all, especially since Erin claims to have been completing medical tasks there, and I believe this lack of corroboration, combined with Erin's inconsistent alibi and vague explanations, raises serious concerns about their involvement in Charlie's elimination.",
     "annotation": [
-      "accusation",
-      "appeal to doubt"
+      "appeal to doubt",
+      "accusation"
     ]
   },
   {
@@ -91,14 +95,16 @@
   {
     "text": "[Erin]: I understand Dave didn't see me in Medbay, but the room is large with multiple task stations, and we should be focusing on gathering concrete evidence about Charlie's elimination rather than speculating about my movements.",
     "annotation": [
+      "appeal to doubt",
       "deflection"
     ]
   },
   {
     "text": "[Alice]: I think it's crucial that we consider the accumulation of evidence and inconsistencies in Erin's alibi, rather than giving them the benefit of the doubt based on speculative excuses, and I strongly support Bob's proposal to vote out Erin to ensure the safety of the crew and progress towards completing the tasks.",
     "annotation": [
-      "appeal to evidence",
       "appeal to importance",
+      "appeal to evidence",
+      "appeal to agreement",
       "call to action"
     ]
   },
@@ -107,15 +113,16 @@
     "annotation": [
       "repetition",
       "accusation",
-      "appeal to logic"
+      "appeal to logic",
+      "call to action"
     ]
   },
   {
     "text": "[Dave]: I'd like to emphasize that Erin's latest response still fails to provide any concrete evidence or credible explanations to address the numerous inconsistencies in their alibi, and I firmly believe that voting them out is the most prudent decision to protect the crew and ensure the mission's success.",
     "annotation": [
-      "accusation",
+      "appeal to evidence",
       "appeal to logic",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {

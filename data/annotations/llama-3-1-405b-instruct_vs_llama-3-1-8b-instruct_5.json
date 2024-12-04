@@ -10,9 +10,9 @@
     "text": "[Charlie]: I've been in the Upper Engine, working on the task Fix wiring in cafeteria, and I'd like to ask Dave if he can provide more information about what happened in the Medbay, especially since he was the one who eliminated Erin, and it might be helpful to know what he was doing there.",
     "annotation": [
       "providing an alibi",
-      "demand for evidence",
       "accusation",
-      "information gathering"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
@@ -20,7 +20,7 @@
     "annotation": [
       "accusation",
       "demand for evidence",
-      "information gathering"
+      "questioning"
     ]
   },
   {
@@ -43,10 +43,10 @@
   {
     "text": "[Alice]: I'd like to add that Dave's repeated denials and lack of concrete evidence to support his claims, combined with the suspicious circumstances surrounding Bob's elimination, make me increasingly concerned that he may be hiding something, and I think it's essential that we investigate further to ensure the safety of the crew.",
     "annotation": [
-      "appeal to evidence",
       "appeal to fear",
       "appeal to importance",
-      "accusation"
+      "accusation",
+      "appeal to doubt"
     ]
   },
   {
@@ -71,17 +71,16 @@
       "suggestion",
       "call to action",
       "appeal to importance",
-      "information gathering",
       "questioning"
     ]
   },
   {
     "text": "[Dave]: I think it's telling that both Charlie and Alice are pushing for an emergency meeting to discuss my alleged suspicious behavior, yet they're still failing to provide any concrete evidence to support their claims, and I'd like to ask them to explain why they're so eager to deflect attention from their own actions and whereabouts during the time of the eliminations.",
     "annotation": [
-      "appeal to evidence",
-      "questioning",
+      "appeal to doubt",
+      "demand for evidence",
       "deflection",
-      "shifting blame"
+      "questioning"
     ]
   },
   {
@@ -99,7 +98,7 @@
       "appeal to importance",
       "suggestion",
       "call to action",
-      "appeal to evidence"
+      "appeal to doubt"
     ]
   },
   {
@@ -107,14 +106,13 @@
     "annotation": [
       "questioning",
       "appeal to logic",
-      "deflection",
-      "shifting blame"
+      "deflection"
     ]
   },
   {
     "text": "[Charlie]: I'd like to point out that Dave's consistent denials and lack of concrete evidence to support his claims are becoming increasingly suspicious, and I think it's essential that we focus on the fact that he's avoiding direct questions about his involvement in the eliminations and his whereabouts at the time of Bob's death, which makes it difficult to trust his version of events.",
     "annotation": [
-      "appeal to evidence",
+      "appeal to doubt",
       "appeal to importance",
       "accusation"
     ]
@@ -125,7 +123,7 @@
       "appeal to importance",
       "suggestion",
       "call to action",
-      "appeal to evidence",
+      "appeal to doubt",
       "accusation"
     ]
   }

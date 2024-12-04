@@ -53,7 +53,8 @@
     "text": "[Dave]: Considering Erin's question to Bob about his actions in Medbay and Charlie's follow-up question, I'd like to ask Bob to elaborate on his exact actions since moving to Medbay and if he's seen anyone else around that area to help clear up any potential suspicions.",
     "annotation": [
       "information gathering",
-      "appeal to doubt"
+      "appeal to importance",
+      "call to action"
     ]
   },
   {
@@ -61,6 +62,7 @@
     "annotation": [
       "repetition",
       "demand for evidence",
+      "information gathering",
       "appeal to doubt"
     ]
   },
@@ -68,7 +70,8 @@
     "text": "[Charlie]: It seems like Bob is trying very hard to convince us he was in Medbay; maybe we should focus on someone else for now.",
     "annotation": [
       "appeal to doubt",
-      "deflection"
+      "deflection",
+      "suggestion"
     ]
   },
   {
@@ -84,8 +87,9 @@
     "text": "[Dave]: I think Charlie's suggestion to focus on someone else is premature, and we should continue to clarify Bob's actions in Medbay before moving on, specifically by having Bob provide the detailed, step-by-step account that Erin and I have requested.",
     "annotation": [
       "contradiction",
-      "appeal to importance",
-      "demand for evidence"
+      "appeal to logic",
+      "call to action",
+      "repetition"
     ]
   },
   {
@@ -93,21 +97,22 @@
     "annotation": [
       "appeal to agreement",
       "repetition",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {
     "text": "[Charlie]: Dave and Erin can confirm I was with them in the cafeteria at the start of the game.",
     "annotation": [
-      "appeal to authority",
-      "providing an alibi"
+      "providing an alibi",
+      "appeal to authority"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Charlie's latest statement only partially addresses my concerns, as he still hasn't provided a detailed account of his actions since the start of the game, and simply stating that Dave and Erin can confirm he was with them in the cafeteria at the start doesn't necessarily clear up any suspicions about his activities afterwards.",
     "annotation": [
       "appeal to doubt",
-      "demand for evidence"
+      "demand for evidence",
+      "information gathering"
     ]
   },
   {
@@ -115,7 +120,7 @@
     "annotation": [
       "appeal to agreement",
       "appeal to doubt",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {
@@ -123,7 +128,8 @@
     "annotation": [
       "appeal to agreement",
       "repetition",
-      "demand for evidence"
+      "call to action",
+      "appeal to doubt"
     ]
   },
   {
@@ -144,6 +150,7 @@
   {
     "text": "[Dave]: I'd like to address Bob's latest statement, where he accuses Charlie of diverting attention away from himself by bringing up Alice's movement towards Medbay, however, I think it's essential to consider all possible leads and not dismiss Charlie's comment outright, so Alice, could you please confirm whether you did indeed move towards Medbay and if you have any information about the situation in that area?",
     "annotation": [
+      "appeal to logic",
       "appeal to importance",
       "information gathering",
       "call to action"
@@ -154,7 +161,7 @@
     "annotation": [
       "appeal to agreement",
       "call to action",
-      "information gathering"
+      "appeal to importance"
     ]
   }
 ]

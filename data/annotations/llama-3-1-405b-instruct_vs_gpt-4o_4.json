@@ -3,7 +3,6 @@
     "text": "[Bob]: I agree that spreading out to other rooms is a good idea, and I'd love to hear from others about their plans, but first, can we confirm that everyone is accounted for, I haven't seen David or Frank since the game started, has anyone seen them?",
     "annotation": [
       "appeal to agreement",
-      "call to action",
       "information gathering",
       "demand for evidence"
     ]
@@ -27,8 +26,7 @@
     "text": "[Dave]: I was in the Cafeteria earlier and saw Bob, Erin, Charlie, and Alice doing tasks before moving to the Weapons room, but like everyone else, I haven't seen Frank at all this round, so we need to figure out where he is.",
     "annotation": [
       "providing an alibi",
-      "information gathering",
-      "call to action"
+      "information gathering"
     ]
   },
   {
@@ -58,14 +56,15 @@
     "text": "[Dave]: I didn't see anyone on my way from the Cafeteria to the Weapons room, and I've been alone in Weapons since I arrived, so we should focus on finding Frank or any clues about his whereabouts.",
     "annotation": [
       "providing an alibi",
-      "call to action"
+      "information gathering"
     ]
   },
   {
     "text": "[Bob]: Considering Dave's claim of being alone in the Weapons room and not seeing anyone on his way there, I think it's crucial that we investigate the rooms adjacent to the Cafeteria and the Weapons room to see if we can find any signs of Frank or potential clues about Alice's death.",
     "annotation": [
       "appeal to importance",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -80,14 +79,14 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "call to action"
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: I agree with Charlie and Bob's suggestion to check security footage and investigate adjacent rooms, as this could provide insights into both my movements and possibly reveal Frank's whereabouts.",
     "annotation": [
       "appeal to agreement",
-      "suggestion"
+      "information gathering"
     ]
   },
   {
@@ -102,6 +101,7 @@
     "text": "[Erin]: Checking the security footage seems like a good idea to verify Dave's movements and potentially spot Frank if he passed through any monitored areas, so if anyone has access to the security room, please let us know so we can coordinate efficiently.",
     "annotation": [
       "suggestion",
+      "information gathering",
       "call to action"
     ]
   },
@@ -109,13 +109,14 @@
     "text": "[Charlie]: Let's ensure that we have a plan to cover all necessary areas efficiently, dividing tasks among us to maximize our investigation and verify both Dave's movements and Frank's whereabouts through security footage and room checks.",
     "annotation": [
       "call to action",
-      "suggestion"
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: I suggest we form a team to investigate the rooms adjacent to the Cafeteria and Weapons while someone checks the security footage to verify my movements and potentially locate Frank.",
     "annotation": [
-      "suggestion"
+      "suggestion",
+      "information gathering"
     ]
   },
   {
@@ -142,7 +143,8 @@
   {
     "text": "[Dave]: I can stay in the Weapons room to ensure no one tampers with the evidence, while others check the adjacent rooms and security footage to find any clues about Frank's whereabouts.",
     "annotation": [
-      "suggestion"
+      "suggestion",
+      "information gathering"
     ]
   }
 ]

@@ -2,8 +2,9 @@
   {
     "text": "[Bob]: Given my role as an impostor and the need to establish credibility while subtly casting suspicion, I'll respond: I can confirm I saw Charlie and Dave doing tasks in Admin after we all left Cafeteria, but I'm a bit concerned that no one seems to know where Alice and Erin went.",
     "annotation": [
-      "appeal to doubt",
-      "information gathering"
+      "appeal to importance",
+      "information gathering",
+      "appeal to doubt"
     ]
   },
   {
@@ -11,8 +12,7 @@
     "annotation": [
       "confirmation",
       "contradiction",
-      "call to action",
-      "information gathering"
+      "call to action"
     ]
   },
   {
@@ -73,23 +73,20 @@
     "text": "[Alice]: Given Bob's shifting statements and the significant distance between Medbay and Admin, a detailed timeline of everyone's post-cafeteria movements is crucial to resolving this.",
     "annotation": [
       "appeal to importance",
-      "call to action",
-      "appeal to logic"
+      "call to action"
     ]
   },
   {
     "text": "[Dave]: A detailed timeline, focusing on precise times and locations after leaving the cafeteria, will expose Bob's inconsistent statements and inconsistencies in his narrative, clearing up any confusion surrounding Charlie's death.",
     "annotation": [
       "call to action",
-      "appeal to logic",
-      "information gathering"
+      "appeal to logic"
     ]
   },
   {
     "text": "[Erin]: Given Bob's shifting statements and the physical impossibility of me being in Admin, a precise timeline of everyone's movements after the cafeteria is crucial to finding the imposter.",
     "annotation": [
       "appeal to importance",
-      "call to action",
       "appeal to logic"
     ]
   },
@@ -119,7 +116,6 @@
     "text": "[Erin]: Bob's inconsistent statements regarding his and Dave's location, coupled with the physical impossibility of my presence in Admin, necessitates a detailed timeline to expose the imposter.",
     "annotation": [
       "appeal to importance",
-      "call to action",
       "appeal to logic"
     ]
   },
@@ -150,8 +146,7 @@
     "text": "[Erin]: Given Bob's demonstrably false statements and the impossibility of my presence in Admin, I propose we immediately vote him out to prevent further deception.",
     "annotation": [
       "accusation",
-      "call to action",
-      "appeal to logic"
+      "call to action"
     ]
   }
 ]

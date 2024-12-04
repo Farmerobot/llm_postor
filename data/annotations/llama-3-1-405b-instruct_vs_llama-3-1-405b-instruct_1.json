@@ -115,6 +115,7 @@
     "text": "[Charlie]: I'd like to ask the group to consider the fact that Erin has now also acknowledged that Alice provided a clear explanation for her actions in the Cafeteria, and yet Dave continues to push this false narrative, which further reinforces my suspicion that he's trying to deflect attention from himself and his own questionable actions.",
     "annotation": [
       "appeal to agreement",
+      "contradiction",
       "accusation"
     ]
   },
@@ -131,8 +132,9 @@
     "text": "[Dave]: It's interesting that Alice, Erin, and Charlie are now forming a united front against me, but I'd like to remind everyone that this kind of behavior is exactly what impostors would do to manipulate the discussion and avoid scrutiny, and I think it's essential that we take a closer look at their actions and alibis as well, rather than solely focusing on me.",
     "annotation": [
       "ad hominem",
-      "shifting blame",
-      "appeal to importance"
+      "deflection",
+      "appeal to importance",
+      "demand for evidence"
     ]
   },
   {
@@ -146,6 +148,7 @@
     "annotation": [
       "deflection",
       "accusation",
+      "appeal to importance",
       "call to action"
     ]
   },

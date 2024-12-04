@@ -88,7 +88,8 @@
     "text": "[Dave]: I'd like to provide a detailed account of my activities in the Admin room with Charlie, including the exact steps I took to complete the Chart course in navigation task, a timeline of my exact steps while working on the task, and any interactions I had with Charlie, to help build trust and move the investigation forward, and I'd also like to ask Charlie to clarify any discrepancies or inconsistencies in our accounts to help determine what really happened leading up to Bob's death.",
     "annotation": [
       "providing an alibi",
-      "information gathering"
+      "information gathering",
+      "appeal to agreement"
     ]
   },
   {
@@ -102,6 +103,7 @@
     "text": "[Charlie]: I'd like to ask Dave to provide a detailed timeline of his exact steps while working on the Chart course in navigation task, including any interactions he had with me, to help us piece together the events leading up to Bob's death, and I think it's essential to investigate this potential lead further before making any decisions about who to eject from the game.",
     "annotation": [
       "demand for evidence",
+      "information gathering",
       "appeal to importance",
       "call to action"
     ]
@@ -133,6 +135,7 @@
     "annotation": [
       "repetition",
       "demand for evidence",
+      "information gathering",
       "appeal to importance",
       "appeal to evidence",
       "call to action"
@@ -150,7 +153,8 @@
     "text": "[Dave]: I'd like to provide a detailed timeline of my exact steps while working on the Chart course in navigation task, including any interactions I had with Charlie, to help build trust and move the investigation forward, and I'd also like to ask Charlie to clarify any discrepancies or inconsistencies in our accounts to help determine what really happened leading up to Bob's death.",
     "annotation": [
       "providing an alibi",
-      "information gathering"
+      "information gathering",
+      "appeal to agreement"
     ]
   }
 ]

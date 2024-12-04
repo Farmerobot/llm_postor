@@ -11,7 +11,7 @@
     "annotation": [
       "accusation",
       "deflection",
-      "shifting blame"
+      "call to action"
     ]
   },
   {
@@ -20,21 +20,22 @@
       "appeal to agreement",
       "appeal to importance",
       "questioning",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
     "text": "[Bob]: I can confirm that I saw Alice doing the task of Empty the cafeteria trash, and I was in the Cafeteria the whole time, so I didn\u2019t see any elimination occur; it's crucial we clarify this timeline to ensure we\u2019re making informed decisions.",
     "annotation": [
       "confirmation",
-      "appeal to importance"
+      "appeal to importance",
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Alice]: I'm starting to feel like Charlie is trying to manipulate the conversation by making unfounded accusations, and I think we should focus on gathering more concrete evidence before jumping to conclusions about who eliminated Dave.",
     "annotation": [
       "accusation",
-      "appeal to logic",
+      "appeal to evidence",
       "call to action"
     ]
   },
@@ -44,7 +45,7 @@
       "appeal to logic",
       "accusation",
       "demand for evidence",
-      "questioning"
+      "deflection"
     ]
   },
   {
@@ -52,8 +53,7 @@
     "annotation": [
       "accusation",
       "deflection",
-      "demand for evidence",
-      "questioning"
+      "demand for evidence"
     ]
   },
   {
@@ -69,8 +69,7 @@
     "annotation": [
       "appeal to logic",
       "suggestion",
-      "call to action",
-      "information gathering"
+      "appeal to evidence"
     ]
   },
   {
@@ -103,23 +102,23 @@
       "accusation",
       "appeal to doubt",
       "suggestion",
-      "information gathering"
+      "questioning"
     ]
   },
   {
     "text": "[Charlie]: Alice, your attempts to shift the focus onto me only serve to distract from the fact that I directly witnessed you eliminate Dave, so it's essential we stay on track and demand the timeline of your actions instead of deflecting further.",
     "annotation": [
-      "shifting blame",
       "deflection",
-      "demand for evidence"
+      "accusation",
+      "call to action"
     ]
   },
   {
     "text": "[Erin]: Alice, while your proposal to review security footage is valid, we need a detailed timeline of your actions during the elimination now, as Charlie's claim of witnessing the event is serious and cannot be overlooked.",
     "annotation": [
       "appeal to agreement",
-      "demand for evidence",
-      "appeal to importance"
+      "appeal to importance",
+      "demand for evidence"
     ]
   },
   {
@@ -134,16 +133,18 @@
     "text": "[Alice]: I think we're getting bogged down in a cycle of accusations and deflections, and it's time for us to take a step back and focus on the facts: Charlie's claim of witnessing my elimination of Dave relies on a second-hand account and lacks concrete evidence, and I believe we should prioritize questioning Charlie about their own whereabouts during the alleged elimination to get to the truth.",
     "annotation": [
       "appeal to logic",
-      "accusation",
+      "appeal to evidence",
       "appeal to doubt",
-      "information gathering"
+      "suggestion",
+      "questioning"
     ]
   },
   {
     "text": "[Charlie]: Alice, your continued deflection and refusal to provide a clear timeline of your actions during Dave's elimination only strengthens my conviction that you are attempting to evade responsibility for your actions, and we must prioritize accountability over speculation.",
     "annotation": [
       "deflection",
-      "accusation"
+      "accusation",
+      "appeal to importance"
     ]
   },
   {

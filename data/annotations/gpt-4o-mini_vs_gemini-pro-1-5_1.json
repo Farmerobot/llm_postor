@@ -46,15 +46,14 @@
     "text": "[Erin]: I think it's crucial we focus on Bob's conflicting statements about his whereabouts; if he was truly with Dave in Admin, then Alice's account of not seeing him there raises serious questions about his honesty.",
     "annotation": [
       "appeal to importance",
-      "appeal to doubt",
-      "accusation"
+      "contradiction",
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Alice]: Bob, you're contradicting yourself again \u2013 first you said you were with Dave in Admin, then you claimed I wasn't in Shields when you were, but I clearly remember you joining me there after I finished in Weapons.",
     "annotation": [
-      "contradiction",
-      "repetition"
+      "contradiction"
     ]
   },
   {
@@ -67,7 +66,7 @@
     "text": "[Erin]: I find it quite suspicious that Bob is so adamant about his timeline, yet Alice's consistent account contradicts him, which makes me wonder if he's trying to deflect attention from himself.",
     "annotation": [
       "appeal to doubt",
-      "accusation",
+      "contradiction",
       "deflection"
     ]
   },
@@ -90,7 +89,7 @@
     "annotation": [
       "call to action",
       "contradiction",
-      "accusation"
+      "appeal to doubt"
     ]
   },
   {

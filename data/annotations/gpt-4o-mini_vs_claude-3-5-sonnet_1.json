@@ -83,6 +83,7 @@
   {
     "text": "[Dave]: I want to firmly state that I was wrong to initially support Charlie's coffee maker story - I actually saw Alice move from Cafeteria to Medbay early in the game, which directly contradicts Charlie's changing claims about her being at Upper Engine, making him highly suspicious.",
     "annotation": [
+      "repetition",
       "contradiction",
       "accusation"
     ]

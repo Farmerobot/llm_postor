@@ -50,7 +50,7 @@
     "text": "[Alice]: Bob, your insistence on deflecting blame to Dave only strengthens our suspicions against you, especially since both Erin and I can confirm your suspicious behavior around Charlie before his elimination.",
     "annotation": [
       "accusation",
-      "confirmation",
+      "appeal to evidence",
       "deflection"
     ]
   },
@@ -58,9 +58,8 @@
     "text": "[Erin]: Bob, your continued attempts to deflect blame onto Dave only further solidify our suspicions about your involvement in Charlie's elimination, so I strongly urge everyone to vote for you to protect our team.",
     "annotation": [
       "accusation",
-      "deflection",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -110,7 +109,7 @@
       "accusation",
       "deflection",
       "appeal to fear",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {
@@ -119,7 +118,7 @@
       "accusation",
       "deflection",
       "appeal to fear",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {

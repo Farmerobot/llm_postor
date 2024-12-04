@@ -42,7 +42,8 @@
     "annotation": [
       "appeal to importance",
       "call to action",
-      "suggestion"
+      "suggestion",
+      "information gathering"
     ]
   },
   {
@@ -89,8 +90,9 @@
     "text": "[Bob]: I think it's time we take a closer look at Charlie's behavior and lack of response to our questions, and I'd like to propose that we hold an emergency meeting to discuss their silence and gather more information about their whereabouts and alibi for the time when the task in Electrical was completed, as Erin's observation that no one was around when she saw the task completed is a crucial piece of information that we need to investigate further and Charlie's silence is only adding to the mystery.",
     "annotation": [
       "appeal to importance",
+      "suggestion",
       "call to action",
-      "suggestion"
+      "information gathering"
     ]
   },
   {
@@ -107,15 +109,17 @@
     "annotation": [
       "appeal to importance",
       "call to action",
-      "suggestion"
+      "suggestion",
+      "information gathering"
     ]
   },
   {
     "text": "[Bob]: I think it's time we take a closer look at Charlie's behavior and lack of response to our questions, and I'd like to propose that we hold an emergency meeting to discuss their silence and gather more information about their whereabouts and alibi for the time when the task in Electrical was completed, as Erin's observation that no one was around when she saw the task completed is a crucial piece of information that we need to investigate further and Charlie's silence is only adding to the mystery.",
     "annotation": [
       "appeal to importance",
+      "suggestion",
       "call to action",
-      "suggestion"
+      "information gathering"
     ]
   }
 ]

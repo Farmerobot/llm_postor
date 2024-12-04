@@ -30,7 +30,8 @@
       "appeal to agreement",
       "repetition",
       "suggestion",
-      "call to action"
+      "call to action",
+      "appeal to doubt"
     ]
   },
   {
@@ -104,9 +105,8 @@
     "text": "[Dave]: I agree with Charlie's suggestion that we gather more confirmations from others who might have seen Alice in Upper Engine to strengthen her alibi, but I also think we should consider the fact that Alice has been transparent about her actions and task progress so far, which is more than we can say for some other players, like Bob, who has been moving between the same rooms as Erin and still needs to provide more clarity on his actions.",
     "annotation": [
       "appeal to agreement",
-      "appeal to evidence",
-      "ad hominem",
-      "demand for evidence"
+      "call to action",
+      "ad hominem"
     ]
   },
   {
@@ -133,17 +133,17 @@
     "text": "[Dave]: I'd like to follow up on Charlie's recent suggestion that Bob's movements might be strategic, especially since he was often in the same rooms as Erin, and ask Bob to provide more details about his actions and task progress to alleviate any concerns.",
     "annotation": [
       "appeal to agreement",
-      "demand for evidence",
-      "information gathering"
+      "information gathering",
+      "call to action"
     ]
   },
   {
     "text": "[Alice]: I'd like to emphasize that while I've provided a clear explanation of my actions and task progress, and have been transparent about my alibi, Bob's defensiveness and lack of clear answers to our questions only raises more suspicions, and I think it's time for us to seriously consider voting him out.",
     "annotation": [
-      "appeal to evidence",
+      "appeal to importance",
       "ad hominem",
       "call to action",
-      "appeal to importance"
+      "appeal to doubt"
     ]
   },
   {

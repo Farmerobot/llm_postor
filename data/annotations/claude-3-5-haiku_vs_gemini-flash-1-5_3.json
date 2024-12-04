@@ -24,8 +24,7 @@
     "text": "[Erin]: I saw Dave in Medbay with Charlie and myself for three rounds completing diagnostics, and then Alice eliminated Charlie right after I finished the wiring there.",
     "annotation": [
       "confirmation",
-      "accusation",
-      "providing an alibi"
+      "accusation"
     ]
   },
   {
@@ -55,7 +54,8 @@
     "text": "[Erin]: Alice's shifting accusations and lack of a verifiable alibi during Charlie's death warrant further scrutiny before we consider Dave's movements.",
     "annotation": [
       "accusation",
-      "demand for evidence"
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {

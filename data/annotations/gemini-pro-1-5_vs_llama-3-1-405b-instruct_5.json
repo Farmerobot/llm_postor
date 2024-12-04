@@ -40,8 +40,8 @@
     "text": "[Alice]: I'd like to reiterate the importance of clarifying Charlie's alibi, and since Charlie claims to have been working on a task in Medbay, I'd like to ask: Charlie, can you provide any evidence or details about the task you were working on, and did anyone see you completing this task or can you provide any proof to support your claim?",
     "annotation": [
       "appeal to importance",
-      "repetition",
-      "demand for evidence"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
@@ -67,15 +67,14 @@
   {
     "text": "[Alice]: I think Charlie's continued failure to provide concrete evidence or details about the task they claim to have been working on in Medbay, combined with the discrepancies in their statements, warrants further investigation and consideration of the possibility that Charlie might be an impostor.",
     "annotation": [
-      "accusation",
-      "appeal to evidence"
+      "appeal to evidence",
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: I'd like to agree with Alice that Charlie's lack of concrete evidence and discrepancies in their statements raise suspicions about their true identity, and I think it's crucial to investigate Medbay and Electrical to verify Charlie's alibi and potentially uncover any evidence of impostor activity.",
     "annotation": [
       "appeal to agreement",
-      "accusation",
       "call to action"
     ]
   },
@@ -89,7 +88,7 @@
   {
     "text": "[Dave]: If Charlie was truly in Medbay, they should be able to describe the specific task they were doing.",
     "annotation": [
-      "demand for evidence"
+      "appeal to logic"
     ]
   },
   {
@@ -119,7 +118,6 @@
   {
     "text": "[Dave]: Charlie's sudden detailed task description seems awfully convenient after so much questioning, don't you think?",
     "annotation": [
-      "accusation",
       "appeal to doubt"
     ]
   },

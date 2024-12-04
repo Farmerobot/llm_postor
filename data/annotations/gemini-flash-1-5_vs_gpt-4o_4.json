@@ -88,11 +88,10 @@
   {
     "text": "[Erin]: [With both Dave and I consistently witnessing Charlie eliminate Bob, and Alice noting Charlie's evasiveness, it's clear that voting Charlie out is the safest move to protect the crewmates.]",
     "annotation": [
-      "confirmation",
+      "repetition",
       "accusation",
-      "appeal to logic",
-      "call to action",
-      "appeal to group"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -125,9 +124,8 @@
     "annotation": [
       "repetition",
       "accusation",
-      "appeal to logic",
-      "call to action",
-      "appeal to group"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -160,9 +158,8 @@
     "annotation": [
       "repetition",
       "accusation",
-      "appeal to logic",
-      "call to action",
-      "appeal to group"
+      "appeal to fear",
+      "call to action"
     ]
   }
 ]

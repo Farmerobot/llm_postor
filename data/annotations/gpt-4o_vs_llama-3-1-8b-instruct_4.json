@@ -3,7 +3,7 @@
     "text": "[Bob]: I noticed that many of us were in Medbay for quite some time; can anyone confirm if all tasks there were completed?",
     "annotation": [
       "information gathering",
-      "questioning"
+      "call to action"
     ]
   },
   {
@@ -19,7 +19,7 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "contradiction"
+      "demand for evidence"
     ]
   },
   {
@@ -34,7 +34,7 @@
     "annotation": [
       "appeal to importance",
       "call to action",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
@@ -47,8 +47,7 @@
   {
     "text": "[Bob]: Let's call Alice and Dave to confirm my presence in Medbay, as their input can clarify the situation and help us focus on task completion.",
     "annotation": [
-      "call to action",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {
@@ -70,7 +69,6 @@
   {
     "text": "[Bob]: Let's focus on clarifying the timeline of movements between Medbay and Upper Engine to resolve any misunderstandings, and bringing Alice and Dave into the discussion could provide the clarity we need.",
     "annotation": [
-      "appeal to importance",
       "call to action"
     ]
   },
@@ -92,8 +90,7 @@
   {
     "text": "[Bob]: While we wait for Alice and Dave to join, let's also consider if anyone saw unusual activity in Upper Engine that might help us understand the bigger picture.",
     "annotation": [
-      "information gathering",
-      "suggestion"
+      "information gathering"
     ]
   },
   {

@@ -86,8 +86,8 @@
   {
     "text": "[Erin]: Perhaps Dave and Charlie are working together to frame me, since they seem so coordinated in their accusations.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "shifting blame",
+      "accusation"
     ]
   },
   {
@@ -101,7 +101,8 @@
     "text": "[Dave]: Erin, suggesting that Charlie and I are coordinating against you is a weak attempt to divert attention from your contradictory statements, which simply don't hold up to scrutiny.",
     "annotation": [
       "accusation",
-      "deflection"
+      "deflection",
+      "contradiction"
     ]
   }
 ]

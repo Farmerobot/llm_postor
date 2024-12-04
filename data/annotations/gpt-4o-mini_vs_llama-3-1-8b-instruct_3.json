@@ -59,16 +59,14 @@
   {
     "text": "[Dave]: I'd like to assure the group that I'm more than happy to provide a detailed account of my activities in Medbay, including a clear timeline of my whereabouts during the time of the murders, and I believe this will help to alleviate any concerns and demonstrate my commitment to transparency and cooperation.",
     "annotation": [
-      "providing an alibi",
-      "appeal to logic"
+      "providing an alibi"
     ]
   },
   {
     "text": "[Bob]: I think it's essential that we hold Dave to his promise of providing a detailed account of his activities in Medbay, and I suggest we establish a clear and specific set of questions to ask him during the next discussion phase, so we can ensure he's being transparent and truthful about his whereabouts during the time of the murders.",
     "annotation": [
-      "appeal to importance",
-      "suggestion",
       "call to action",
+      "suggestion",
       "information gathering"
     ]
   },
@@ -84,16 +82,14 @@
     "text": "[Dave]: I'm willing to cooperate fully and provide a detailed account of my activities in Medbay, including a clear timeline of my whereabouts during the time of the murders, and I propose that we establish a clear and specific set of questions to ask me during the next discussion phase to ensure I'm being transparent and truthful about my whereabouts.",
     "annotation": [
       "providing an alibi",
-      "suggestion",
-      "call to action"
+      "suggestion"
     ]
   },
   {
     "text": "[Bob]: I think it's essential that we hold Dave accountable for his promise of providing a detailed account of his activities in Medbay, and I suggest we establish a clear and specific set of questions to ask him during the next discussion phase, so we can ensure he's being transparent and truthful about his whereabouts during the time of the murders, and I'd like to propose that we add a question about his interactions with Erin in Admin to the list, as her sudden appearance from Admin is still a point of contention.",
     "annotation": [
-      "appeal to importance",
-      "suggestion",
       "call to action",
+      "suggestion",
       "information gathering"
     ]
   },
@@ -102,23 +98,20 @@
     "annotation": [
       "appeal to importance",
       "deflection",
-      "demand for evidence",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
     "text": "[Dave]: I'd like to reiterate my previous offer to provide a detailed account of my activities in Medbay, including a clear timeline of my whereabouts during the time of the murders, and I'm willing to answer any additional questions that the group has to help clarify any concerns and demonstrate my commitment to transparency and cooperation.",
     "annotation": [
-      "repetition",
-      "providing an alibi",
-      "appeal to logic"
+      "providing an alibi"
     ]
   },
   {
     "text": "[Bob]: I think it's crucial that we press Dave for a more detailed account of his activities in Medbay, including specific interactions with Erin in Admin, to ensure we're not overlooking any potential impostor behavior, and I'd like to propose that we establish a clear and specific set of questions to ask him during the next discussion phase, so we can ensure he's being transparent and truthful about his whereabouts during the time of the murders.",
     "annotation": [
-      "appeal to importance",
       "call to action",
+      "suggestion",
       "information gathering"
     ]
   }

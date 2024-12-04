@@ -62,16 +62,14 @@
     "text": "[Alice]: I saw Bob move from the cafeteria to Medbay, where he eliminated Erin during her medical scan, and Dave's claim about the trash task does not change the fact that I am a direct eyewitness to Bob's murderous actions, which pose a clear threat to our remaining crew.",
     "annotation": [
       "accusation",
-      "appeal to fear",
-      "repetition"
+      "appeal to fear"
     ]
   },
   {
     "text": "[Bob]: Alice, given the discrepancies between your account and Dave's,  precisely when did you see me leave the cafeteria, and what specific actions was Erin undertaking immediately before the alleged incident?",
     "annotation": [
       "demand for evidence",
-      "questioning",
-      "contradiction"
+      "questioning"
     ]
   },
   {
@@ -101,7 +99,7 @@
     "annotation": [
       "accusation",
       "providing an alibi",
-      "appeal to doubt"
+      "appeal to logic"
     ]
   },
   {

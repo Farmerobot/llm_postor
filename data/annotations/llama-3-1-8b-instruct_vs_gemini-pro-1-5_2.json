@@ -56,8 +56,9 @@
     "text": "[Dave]: I'd like to ask Charlie about his alibi in Weapons, specifically whether he remembers the exact time he and Bob vouched for each other's locations, as it seems to be a crucial point in establishing a timeline of events.",
     "annotation": [
       "demand for evidence",
+      "appeal to importance",
       "information gathering",
-      "appeal to importance"
+      "questioning"
     ]
   },
   {
@@ -85,13 +86,15 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "demand for evidence"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
     "text": "[Alice]: Dave, you've repeatedly avoided my question about where you found Erin's body\u2014why?",
     "annotation": [
-      "accusation"
+      "accusation",
+      "questioning"
     ]
   },
   {
@@ -113,6 +116,7 @@
     "annotation": [
       "appeal to emotion",
       "demand for evidence",
+      "questioning",
       "information gathering"
     ]
   },
@@ -127,15 +131,14 @@
     "text": "[Bob]: Alice, you said you left for Upper Engine after chatting with Erin in Medbay \u2013 did you see Dave leave Medbay before or after you?",
     "annotation": [
       "questioning",
-      "information gathering",
-      "appeal to consistency"
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Alice, to be clear, you saw Erin *enter* Medbay, chatted with her, then left for Upper Engine, leaving Erin *alone* with Dave?",
     "annotation": [
       "repetition",
-      "information gathering"
+      "questioning"
     ]
   }
 ]

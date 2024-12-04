@@ -1,0 +1,150 @@
+[
+  {
+    "text": "[Erin]: I saw Bob heading towards navigation after he said he was fixing wiring, wasn't that supposed to be in electrical?",
+    "annotation": [
+      "questioning",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Dave]: I can say with certainty that Bob was in the cafeteria fixing wiring with me and several others - I think you might be confusing him with someone else, Erin.",
+    "annotation": [
+      "confirmation",
+      "appeal to doubt"
+    ]
+  },
+  {
+    "text": "[Alice]: I was watching everyone in the cafeteria closely while making coffee, and Bob never left - he was fixing wiring the entire time, so I think Erin might be mistaken about seeing him go to navigation.",
+    "annotation": [
+      "confirmation",
+      "appeal to doubt"
+    ]
+  },
+  {
+    "text": "[Bob]: I appreciate Dave and Alice backing me up, but I'm really concerned about why Erin would make up seeing me in navigation when I was clearly in the cafeteria the whole time with multiple witnesses.",
+    "annotation": [
+      "appeal to agreement",
+      "appeal to evidence",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Erin]: I must have been mistaken, it was hard to see with so many people moving around the cafeteria.",
+    "annotation": [
+      "appeal to doubt"
+    ]
+  },
+  {
+    "text": "[Dave]: Given Erin's quick backtracking about Bob's location and the fact that she was the only one confused about the crowded cafeteria situation, I think we need to focus more attention on her movements during that time period.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Alice]: Since we all saw Charlie get killed in the cafeteria and Erin is the only one who tried to create false accusations about Bob's location, I think we have enough evidence to vote for Erin as the impostor.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Bob]: Given that Erin's false accusation about my location coincided with Charlie's murder in the cafeteria, and she immediately backtracked when others confirmed my alibi, I believe we have strong evidence that she's trying to create confusion to cover her role as the impostor.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Wouldn't it make more sense that one of you killed Charlie while everyone was distracted by the wiring repairs, hoping to blend in with the crowd?",
+    "annotation": [
+      "shifting blame",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Dave]: I was directly watching Charlie complete the trash task before they were killed, and Erin was the only one who left their task station during that critical time period.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Alice]: I saw Charlie completing the trash task with my own eyes while making coffee, and Erin was the only person who left her station right before Charlie was killed, so her attempt to blame \"the crowd\" doesn't match what we all witnessed.",
+    "annotation": [
+      "appeal to evidence",
+      "contradiction",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Bob]: Since both Dave and Alice witnessed Charlie at the trash task and saw Erin leave her station right before the murder, and given Erin's false accusation about my location followed by her suspicious backtracking, I think we have overwhelming evidence to vote for Erin as the impostor.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Erin]: If I were the impostor, wouldn't I have sabotaged the lights to create chaos and confusion instead of just standing around the cafeteria?",
+    "annotation": [
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Dave]: The fact that you're now deflecting with hypotheticals about sabotaging lights instead of addressing why you left your station right before Charlie's death and tried to frame Bob only makes you look more suspicious, Erin.",
+    "annotation": [
+      "accusation",
+      "ad hominem"
+    ]
+  },
+  {
+    "text": "[Alice]: Given that both Dave and I saw Charlie at the trash task, witnessed Erin leave her station right before the murder, and caught her making false accusations about Bob's location, I think we have clear and consistent evidence from multiple witnesses to vote for Erin.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Bob]: Given that three of us have consistently corroborated the events in the cafeteria while Erin keeps changing her story and deflecting with hypotheticals, I think we need to vote now before we lose any more time or crewmates.",
+    "annotation": [
+      "appeal to consistency",
+      "appeal to evidence",
+      "appeal to fear",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Erin]: This feels like a coordinated attack; why are you three so focused on me when we should be figuring out who killed Charlie?",
+    "annotation": [
+      "appeal to emotion",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Dave]: The evidence is overwhelming - we have three consistent witness accounts of your movements and false accusations, while your story has changed from accusing Bob, to claiming confusion, to suggesting sabotage scenarios, and now crying conspiracy.",
+    "annotation": [
+      "appeal to evidence",
+      "accusation",
+      "contradiction"
+    ]
+  },
+  {
+    "text": "[Alice]: The fact that Erin has changed her story multiple times - from falsely accusing Bob, to claiming confusion about the cafeteria, to suggesting someone else did it during repairs, to questioning why she didn't sabotage lights, and now alleging conspiracy - shows a clear pattern of deception that we can't ignore.",
+    "annotation": [
+      "contradiction",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Bob]: Given that Erin has now resorted to claiming conspiracy after cycling through multiple contradictory explanations, while Dave, Alice, and I have maintained consistent accounts of witnessing her leave her station before Charlie's death and make false accusations, we need to vote now before she can eliminate another crewmate.",
+    "annotation": [
+      "appeal to consistency",
+      "appeal to evidence",
+      "appeal to fear",
+      "call to action"
+    ]
+  }
+]

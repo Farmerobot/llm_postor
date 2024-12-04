@@ -30,7 +30,7 @@
     "text": "[Charlie]: If you were emptying the trash with him, Alice, then why is the trash still full?",
     "annotation": [
       "contradiction",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
@@ -101,8 +101,8 @@
   {
     "text": "[Bob]: Erin, if you were in Medbay with Alice, why haven't you said anything to defend her, especially when she's claiming you can corroborate her alibi?",
     "annotation": [
-      "appeal to logic",
-      "questioning"
+      "questioning",
+      "appeal to logic"
     ]
   }
 ]

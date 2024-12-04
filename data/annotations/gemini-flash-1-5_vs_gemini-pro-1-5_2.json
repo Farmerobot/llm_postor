@@ -10,8 +10,7 @@
     "text": "[Bob]: Charlie, I saw you kill Erin in the Cafeteria, so your feigned concern about Dave and Alice is just a distraction.",
     "annotation": [
       "accusation",
-      "ad hominem",
-      "deflection"
+      "ad hominem"
     ]
   },
   {
@@ -35,8 +34,7 @@
     "annotation": [
       "contradiction",
       "appeal to doubt",
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   },
   {
@@ -59,8 +57,7 @@
     "text": "[Alice]: Bob, you said you saw Charlie vent in Medbay; can you describe the exact location of the vent you saw him use, and were there any other distinguishing features nearby?",
     "annotation": [
       "demand for evidence",
-      "questioning",
-      "information gathering"
+      "questioning"
     ]
   },
   {
@@ -115,6 +112,7 @@
     "text": "[Alice]: Dave, I'm with you now in Medbay, and Bob is right, there *is* a vent on the north wall by the scanner, confirming his account and proving Charlie is the impostor.",
     "annotation": [
       "confirmation",
+      "appeal to evidence",
       "accusation"
     ]
   },

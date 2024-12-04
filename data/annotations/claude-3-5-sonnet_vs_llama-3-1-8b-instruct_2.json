@@ -76,7 +76,8 @@
     "annotation": [
       "appeal to logic",
       "demand for evidence",
-      "questioning"
+      "information gathering",
+      "appeal to importance"
     ]
   },
   {
@@ -85,7 +86,8 @@
       "repetition",
       "suggestion",
       "call to action",
-      "information gathering"
+      "information gathering",
+      "appeal to logic"
     ]
   },
   {
@@ -111,7 +113,8 @@
       "demand for evidence",
       "suggestion",
       "call to action",
-      "information gathering"
+      "information gathering",
+      "repetition"
     ]
   },
   {
@@ -144,11 +147,10 @@
     "text": "[Alice]: I'd like to ask Dave to clarify what he means by \"synchronized behavior\" and provide specific examples of the phrases or actions he's referring to, rather than making a general accusation about our coordination, and I think it's essential to focus on verifying the facts and creating a clear understanding of each player's movements and actions, which is why I propose that we create a list of specific tasks and locations that each player has visited, and that we ask each player to confirm the tasks they've completed and the locations they've visited, to help us better understand their movements and clear up any remaining doubts.",
     "annotation": [
       "demand for evidence",
-      "questioning",
+      "information gathering",
       "appeal to importance",
       "suggestion",
-      "call to action",
-      "information gathering"
+      "call to action"
     ]
   },
   {

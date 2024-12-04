@@ -3,15 +3,15 @@
     "text": "[Bob]: I'm a bit puzzled by Charlie's sudden change of location, and I think we should discuss why they moved from Upper Engine to Medbay, especially considering Dave's similar movement pattern.",
     "annotation": [
       "appeal to doubt",
-      "questioning",
-      "appeal to importance"
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: I'd like to add to Bob's point that Charlie's movement to Medbay seems suspicious, and I'd like to ask Charlie directly: what was your reason for moving to Medbay, and did you find any tasks or clues there that you can share with the group?",
     "annotation": [
       "appeal to agreement",
-      "questioning",
+      "accusation",
       "demand for evidence",
       "information gathering"
     ]
@@ -59,6 +59,7 @@
     "text": "[Alice]: I agree with Dave's point that we should focus on finding tasks and clues rather than targeting specific players without concrete evidence, and I'd like to propose that we share our current task lists and locations to better coordinate our efforts and identify potential areas of concern.",
     "annotation": [
       "appeal to agreement",
+      "appeal to logic",
       "suggestion",
       "call to action"
     ]
@@ -68,7 +69,8 @@
     "annotation": [
       "appeal to importance",
       "suggestion",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -91,9 +93,9 @@
   {
     "text": "[Alice]: I'd like to summarize the current discussion and action plan to ensure we're on the same page: we need to investigate Medbay, share our current task lists and locations, and prioritize completing tasks while also trying to identify potential impostors, and I propose that we start by sharing our task lists and locations to better coordinate our efforts and identify potential areas of concern.",
     "annotation": [
+      "appeal to importance",
       "suggestion",
-      "call to action",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {
@@ -102,15 +104,15 @@
       "repetition",
       "appeal to importance",
       "suggestion",
-      "call to action"
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: I think it's time to put Bob's proposal to a test and ask him to share his own task list and location history, as he's been quite keen on scrutinizing Charlie and me, and it's only fair that he's transparent about his own actions and findings.",
     "annotation": [
-      "suggestion",
       "call to action",
-      "appeal to fairness"
+      "demand for evidence",
+      "tu quoque"
     ]
   },
   {
@@ -118,8 +120,7 @@
     "annotation": [
       "repetition",
       "suggestion",
-      "call to action",
-      "appeal to fairness"
+      "call to action"
     ]
   },
   {
@@ -133,7 +134,8 @@
     "text": "[Bob]: I'd like to propose that we create a task force to investigate the recent report of a dead body and identify potential impostors, rather than focusing solely on Medbay, and I'd like to suggest that we start by gathering more information about the circumstances surrounding the death and any potential clues that may have been left behind, while also keeping an eye on Charlie and Dave's actions and explanations to ensure we're not missing any potential suspicious activity.",
     "annotation": [
       "suggestion",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -141,8 +143,7 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "call to action",
-      "appeal to fairness"
+      "call to action"
     ]
   },
   {
@@ -150,8 +151,7 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "call to action",
-      "appeal to fairness"
+      "call to action"
     ]
   },
   {
@@ -159,8 +159,7 @@
     "annotation": [
       "appeal to agreement",
       "suggestion",
-      "call to action",
-      "appeal to fairness"
+      "call to action"
     ]
   }
 ]

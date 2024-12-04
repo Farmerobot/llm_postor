@@ -72,7 +72,6 @@
     "text": "[Erin]: Alice, you're clearly trying to deflect and confuse us, but Bob and I both saw you vent, so it's time for you to go.",
     "annotation": [
       "accusation",
-      "deflection",
       "call to action"
     ]
   },
@@ -80,7 +79,6 @@
     "text": "[Bob]: Alice, if you can't explain your impossible movement between Security and Weapons, then your attempts to deflect blame onto Charlie, Erin, and me just confirm your guilt.",
     "annotation": [
       "demand for evidence",
-      "deflection",
       "accusation"
     ]
   },
@@ -88,8 +86,7 @@
     "text": "[Alice]: Bob's claim about teleportation is impossible, and Erin's vague accusation about venting lacks specific details - why are they so eager to vote me out without concrete proof?",
     "annotation": [
       "appeal to doubt",
-      "questioning",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
@@ -102,15 +99,13 @@
   {
     "text": "[Erin]: Alice, your desperate attempts to deflect blame only confirm your guilt \u2013 two people saw you vent, and you still haven't explained your impossible movement.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: Alice, your deflection tactics are transparent, and I'm voting with Charlie and Erin to eject you.",
     "annotation": [
       "accusation",
-      "deflection",
       "call to action"
     ]
   },
@@ -124,22 +119,19 @@
   {
     "text": "[Charlie]: Alice,  stop trying to deflect; two people saw you vent, and you lied about being with me and Dave in Weapons.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   },
   {
     "text": "[Erin]: Alice, your questions are just desperate attempts to avoid the fact that both Bob and I saw you vent in Security.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: Alice, you're grasping at straws; two people saw you vent, and you lied about being with Charlie and Dave \u2013 just admit you're the impostor.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "accusation"
     ]
   }
 ]

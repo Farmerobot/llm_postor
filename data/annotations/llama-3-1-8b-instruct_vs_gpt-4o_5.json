@@ -39,8 +39,8 @@
   {
     "text": "[Alice]: Alice: Erin, since you moved from the Cafeteria to Medbay earlier, did you see Bob or notice anything unusual in Medbay?",
     "annotation": [
-      "leading question",
-      "information gathering"
+      "information gathering",
+      "leading question"
     ]
   },
   {
@@ -55,7 +55,8 @@
     "text": "[Charlie]: Alice, since you and I have been in some of the same rooms, did you notice anything suspicious, and Erin, can you confirm if you saw Bob in Medbay or if anything seemed off there?",
     "annotation": [
       "information gathering",
-      "demand for evidence"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
@@ -76,7 +77,8 @@
     "text": "[Charlie]: Erin, your input is crucial right now; did you see Bob in Medbay, or was there anything unusual that could help us piece together the timeline and locate Dave?",
     "annotation": [
       "appeal to importance",
-      "information gathering"
+      "information gathering",
+      "questioning"
     ]
   },
   {

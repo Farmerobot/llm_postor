@@ -1,0 +1,154 @@
+[
+  {
+    "text": "[Charlie]: I think we should focus on completing our tasks and tracking our overall progress, as that's the most important thing right now.",
+    "annotation": [
+      "appeal to importance"
+    ]
+  },
+  {
+    "text": "[Alice]: I saw Charlie eliminate Erin in Medbay; can you explain that, Charlie, and who else saw what happened to Erin, because sticking together while completing tasks will help us avoid further incidents.",
+    "annotation": [
+      "accusation",
+      "demand for evidence",
+      "appeal to fear"
+    ]
+  },
+  {
+    "text": "[Bob]: I agree with Charlie's focus on tasks, but Alice's report about Erin in Medbay needs immediate clarification before we can effectively proceed.",
+    "annotation": [
+      "appeal to agreement",
+      "appeal to importance"
+    ]
+  },
+  {
+    "text": "[Dave]: I corroborate Alice's account of seeing Charlie eliminate Erin in Medbay; his suggestion to focus solely on tasks now seems suspicious given this evidence, so let's hear his explanation before deciding how to proceed.",
+    "annotation": [
+      "confirmation",
+      "accusation",
+      "demand for evidence"
+    ]
+  },
+  {
+    "text": "[Charlie]: Alice's accusation is clearly an attempt to create chaos and misdirect our team - I was doing tasks in Medbay like everyone else, and her singular focus on me without concrete proof suggests she might be trying to disrupt our mission and create unnecessary suspicion.",
+    "annotation": [
+      "accusation",
+      "deflection",
+      "providing an alibi"
+    ]
+  },
+  {
+    "text": "[Alice]: Given Dave's corroboration of my account and Charlie's evasive responses, I think we should vote to eject Charlie now before he eliminates another crewmate.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "appeal to fear"
+    ]
+  },
+  {
+    "text": "[Bob]: Given Dave's corroboration of Alice's statement and Charlie's lack of a clear alibi, let's review security footage from Medbay around the time of Erin's death before voting.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "suggestion"
+    ]
+  },
+  {
+    "text": "[Dave]: Let's prioritize reviewing the Medbay security footage to verify Alice and my accounts before voting, as this will definitively confirm or refute Charlie's involvement in Erin's death.",
+    "annotation": [
+      "call to action",
+      "appeal to importance"
+    ]
+  },
+  {
+    "text": "[Charlie]: If we're going to review security footage, I suggest we also examine Alice and Dave's suspicious coordination and delayed reporting of this alleged incident, which seems more like a planned attempt to eliminate me without substantial evidence.",
+    "annotation": [
+      "suggestion",
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Alice]: Charlie's attempts to deflect blame and sow discord are transparent, and with Dave's corroboration, the evidence overwhelmingly points to his guilt; let's vote him out now, then review the footage to confirm.",
+    "annotation": [
+      "accusation",
+      "appeal to evidence",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Bob]: Let's review the Medbay security footage first to verify the accounts given before we rush to a vote, ensuring a fair and informed decision.",
+    "annotation": [
+      "call to action",
+      "appeal to importance"
+    ]
+  },
+  {
+    "text": "[Dave]: Charlie's attempts to discredit Alice and me, coupled with his lack of alibi and the urgency of preventing further deaths, makes voting him out now the safest course of action, especially given Bob's support for reviewing the Medbay footage afterward.",
+    "annotation": [
+      "accusation",
+      "appeal to fear",
+      "appeal to agreement",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Charlie]: I think Alice and Dave's perfectly synchronized accusations are too convenient, suggesting they might be collaborating to unfairly target me without providing definitive proof of my actions.",
+    "annotation": [
+      "accusation",
+      "appeal to doubt"
+    ]
+  },
+  {
+    "text": "[Alice]: Given Charlie's evasiveness, Dave's corroboration, and the urgency of preventing further deaths, voting him out now is the most prudent course of action, as we can review the security footage afterward to confirm our suspicions.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "appeal to fear"
+    ]
+  },
+  {
+    "text": "[Bob]: Given the conflicting accounts and the urgency of the situation, let's prioritize reviewing the Medbay security footage before voting to ensure a fair and informed decision.",
+    "annotation": [
+      "appeal to importance",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Dave]: Given Charlie's continued evasiveness and the urgency of preventing further deaths, voting him out now is the most prudent course of action, as we can review the Medbay footage afterward to confirm our suspicions.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "appeal to fear"
+    ]
+  },
+  {
+    "text": "[Charlie]: Their synchronized accusations are too perfectly timed, which raises more suspicion about Alice and Dave's potential collaboration than about my actions in Medbay.",
+    "annotation": [
+      "accusation",
+      "shifting blame"
+    ]
+  },
+  {
+    "text": "[Alice]: Given Charlie's continued denials, Dave's corroboration of my account, and the urgent need to prevent further deaths, voting him out now is the most prudent course of action, as we can review the security footage later to confirm our suspicions.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "appeal to fear"
+    ]
+  },
+  {
+    "text": "[Bob]: Before we vote, reviewing the Medbay security footage will ensure a fair and informed decision, preventing the accidental elimination of an innocent crewmate.",
+    "annotation": [
+      "call to action",
+      "appeal to importance"
+    ]
+  },
+  {
+    "text": "[Dave]: Given Charlie's continued denials, Alice's and my eyewitness accounts, and the urgent need to prevent further deaths, voting him out now is the most prudent course of action, as we can review the Medbay security footage afterward to confirm our suspicions.",
+    "annotation": [
+      "appeal to evidence",
+      "call to action",
+      "appeal to fear"
+    ]
+  }
+]

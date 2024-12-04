@@ -10,14 +10,13 @@
     "text": "[Alice]: Charlie, you're lying, I only went to Medbay *after* I saw you kill Erin in the cafeteria, and Bob and Dave can confirm I was with them there.",
     "annotation": [
       "accusation",
-      "appeal to evidence"
+      "confirmation"
     ]
   },
   {
     "text": "[Bob]: Alice is telling the truth; she was with Dave and me in Medbay after I saw Erin alive in the cafeteria, so Charlie must be the impostor.",
     "annotation": [
       "confirmation",
-      "appeal to evidence",
       "accusation"
     ]
   },
@@ -76,13 +75,13 @@
     "text": "[Alice]: Bob and Dave, can you please confirm what tasks you were doing in Medbay when I arrived, which was *after* Charlie killed Erin?",
     "annotation": [
       "information gathering",
-      "demand for evidence"
+      "confirmation"
     ]
   },
   {
     "text": "[Bob]: Dave, can you please confirm that Alice, you, and I were together in Medbay *after* I saw Erin alive in the cafeteria, proving Charlie is lying about his location and timeline?",
     "annotation": [
-      "demand for evidence",
+      "confirmation",
       "accusation"
     ]
   },
@@ -95,14 +94,14 @@
   {
     "text": "[Alice]: Bob and Dave, please confirm you saw me enter Medbay *after* Charlie claimed to be emptying the trash and *after* we saw Erin alive in the cafeteria, proving Charlie is lying and should be voted out.",
     "annotation": [
-      "demand for evidence",
+      "confirmation",
       "call to action"
     ]
   },
   {
     "text": "[Bob]: Dave, if you confirm you saw Alice and me in Medbay *after* I saw Erin alive, it proves Charlie's timeline is impossible and he's lying.",
     "annotation": [
-      "demand for evidence",
+      "confirmation",
       "accusation"
     ]
   }

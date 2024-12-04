@@ -66,8 +66,8 @@
     "text": "[Charlie]: I want to emphasize that my direct eyewitness account of Erin eliminating Alice is unambiguous, and Dave's corroboration confirms that voting to eject Erin is the most logical choice to protect our remaining crewmates from further impostor threats.",
     "annotation": [
       "repetition",
-      "appeal to evidence",
       "appeal to logic",
+      "appeal to evidence",
       "call to action",
       "appeal to fear"
     ]
@@ -101,6 +101,7 @@
   {
     "text": "[Erin]: I'd like to ask Charlie, doesn't it seem suspicious that you're being overly aggressive in your pursuit to eject me, and isn't it possible that this behavior is actually a desperate attempt to deflect attention from your own guilt, and that you're the impostor trying to frame me?",
     "annotation": [
+      "questioning",
       "appeal to doubt",
       "accusation",
       "deflection"

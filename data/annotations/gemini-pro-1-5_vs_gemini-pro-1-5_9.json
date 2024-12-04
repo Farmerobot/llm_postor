@@ -1,0 +1,103 @@
+[
+  {
+    "text": "[Alice]: I saw Charlie vent in Electrical.",
+    "annotation": [
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Alice, you're lying, I saw you kill Dave in Medbay right in front of me and Bob!",
+    "annotation": [
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Bob]: Erin and I both saw Alice kill Dave in Medbay, so Alice is definitely the impostor.",
+    "annotation": [
+      "accusation",
+      "appeal to evidence"
+    ]
+  },
+  {
+    "text": "[Alice]: Why would I report the body if I killed Dave?  Wouldn't I have just left him there?",
+    "annotation": [
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Erin]: Alice, trying to shift blame to Charlie after we both saw you kill Dave is just making you look more suspicious.",
+    "annotation": [
+      "shifting blame",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Bob]: Alice, self-reporting is a classic impostor tactic to deflect suspicion, just like you're doing now.",
+    "annotation": [
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin and Bob conveniently have the *exact* same story, almost as if they planned it together, wouldn't you agree?",
+    "annotation": [
+      "appeal to doubt",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Alice, your attempt to paint Bob and I as colluding is a weak defense; we're telling the truth, so vote Alice.",
+    "annotation": [
+      "accusation",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Bob]: Alice's attempt to frame Erin and me as colluding is a desperate last-ditch effort to avoid getting ejected for murdering Dave.",
+    "annotation": [
+      "accusation",
+      "appeal to emotion"
+    ]
+  },
+  {
+    "text": "[Alice]: Isn't it strange that Erin and Bob haven't mentioned doing any tasks this whole time, focusing only on accusing me?",
+    "annotation": [
+      "appeal to doubt",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Alice,  your deflection by pointing out our focus on your crime is a common tactic used by impostors to avoid taking responsibility.",
+    "annotation": [
+      "deflection",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Bob]: Alice,  your attempt to discredit Erin and me by questioning our task progress is a blatant distraction from the fact that we both witnessed you kill Dave.",
+    "annotation": [
+      "deflection",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Alice]: If Erin and Bob are so sure they saw me kill Dave, then tell me, what tasks were you two supposedly completing in Medbay at that time?",
+    "annotation": [
+      "demand for evidence",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Erin]: Bob and I were both doing Medbay scans; I was about to start mine when you killed Dave, Alice.",
+    "annotation": [
+      "providing an alibi"
+    ]
+  },
+  {
+    "text": "[Bob]: Alice, your continued attempts to deflect blame only further solidify Erin's and my accounts of you murdering Dave.",
+    "annotation": [
+      "accusation",
+      "deflection"
+    ]
+  }
+]

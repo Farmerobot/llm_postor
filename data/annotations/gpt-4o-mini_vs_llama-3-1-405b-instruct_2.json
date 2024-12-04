@@ -66,7 +66,6 @@
   {
     "text": "[Bob]: I think we should focus on Dave's alibi since he claims to have been in the cafeteria the whole time, yet he didn't notice anyone entering or leaving, which seems a bit suspicious and could indicate he knows more than he's letting on.",
     "annotation": [
-      "suggestion",
       "appeal to doubt",
       "accusation"
     ]
@@ -99,7 +98,7 @@
   {
     "text": "[Bob]: I believe we should maintain our focus on Dave, as his repeated attempts to shift the blame onto Charlie only deepen the suspicion surrounding his unclear alibi and lack of awareness of others in the cafeteria during crucial moments.",
     "annotation": [
-      "suggestion",
+      "appeal to consistency",
       "shifting blame",
       "appeal to doubt"
     ]
@@ -132,8 +131,8 @@
   {
     "text": "[Bob]: I think it's clear that Dave's insistence on creating a timeline is a tactic to divert attention from his suspicious alibi, so we should press him to clarify his tasks in the cafeteria to expose any inconsistencies.",
     "annotation": [
-      "accusation",
       "deflection",
+      "call to action",
       "demand for evidence"
     ]
   },
@@ -141,7 +140,6 @@
     "text": "[Charlie]: I agree with Bob that Dave's proposal to create a shared timeline seems like an attempt to shift the focus away from his own suspicious alibi, and I think we should continue to press him for a more detailed explanation of his activities in the cafeteria.",
     "annotation": [
       "appeal to agreement",
-      "accusation",
       "deflection",
       "demand for evidence"
     ]
@@ -150,7 +148,6 @@
     "text": "[Alice]: I agree with Bob and Charlie that Dave's proposal to create a shared timeline seems like an attempt to divert attention from his suspicious alibi, and I think we should continue to press him for a more detailed explanation of his activities in the cafeteria, specifically addressing the inconsistencies in his alibi and providing a clear explanation of what he was doing during the time he claims to have been there.",
     "annotation": [
       "appeal to agreement",
-      "accusation",
       "deflection",
       "demand for evidence"
     ]

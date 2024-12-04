@@ -72,10 +72,10 @@
   {
     "text": "[Dave]: I understand the scrutiny on my movements, but I urge everyone to share their own timelines as well; Charlie, can you explain what you were doing during the time of Bob's elimination to ensure we are all held accountable?",
     "annotation": [
-      "appeal to logic",
+      "appeal to importance",
       "call to action",
       "questioning",
-      "demand for evidence"
+      "information gathering"
     ]
   },
   {
@@ -109,10 +109,10 @@
   {
     "text": "[Dave]: I appreciate the focus on accountability, but I believe it's equally important for everyone to share their timelines; Charlie, can you clarify your actions during Bob's elimination so we can ensure all perspectives are considered?",
     "annotation": [
-      "appeal to logic",
+      "appeal to importance",
       "call to action",
       "questioning",
-      "demand for evidence"
+      "information gathering"
     ]
   },
   {
@@ -135,9 +135,8 @@
   {
     "text": "[Charlie]: I'd like to remind everyone that we've been focusing on Dave's suspicious behavior for several rounds now, and while his continued evasion of specific details about his tasks and movements is certainly concerning, I think it's equally crucial that we scrutinize Charlie's own actions and movements, particularly during Bob's elimination, to ensure we're not overlooking any potential discrepancies.",
     "annotation": [
-      "repetition",
-      "accusation",
       "appeal to importance",
+      "accusation",
       "call to action"
     ]
   },
@@ -146,8 +145,8 @@
     "annotation": [
       "providing an alibi",
       "confirmation",
-      "appeal to logic",
-      "call to action"
+      "call to action",
+      "appeal to importance"
     ]
   },
   {
@@ -164,7 +163,8 @@
     "annotation": [
       "accusation",
       "deflection",
-      "call to action"
+      "call to action",
+      "appeal to importance"
     ]
   }
 ]

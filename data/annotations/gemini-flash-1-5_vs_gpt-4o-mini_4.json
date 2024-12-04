@@ -26,14 +26,15 @@
   {
     "text": "[Erin]: Alice, your accusation is serious and lacks crucial details;  while I was in Medbay, your account omits your own actions and Dave's testimony doesn't fully support your claim, leaving reasonable doubt.",
     "annotation": [
-      "appeal to doubt",
       "accusation",
+      "appeal to doubt",
       "demand for evidence"
     ]
   },
   {
     "text": "[Alice]: Erin, while your doubts are noted, I must emphasize that I directly witnessed you eliminate Bob, and your quick movement to Medbay right after raises significant red flags that we cannot ignore.",
     "annotation": [
+      "repetition",
       "appeal to importance",
       "accusation"
     ]
@@ -98,8 +99,8 @@
     "text": "[Erin]: While a timeline is crucial, Alice's accusation lacks sufficient corroborating evidence, and focusing solely on my movements distracts from a thorough investigation of everyone's actions.",
     "annotation": [
       "appeal to importance",
-      "appeal to logic",
-      "demand for evidence"
+      "appeal to evidence",
+      "deflection"
     ]
   },
   {
@@ -113,7 +114,6 @@
   {
     "text": "[Dave]: I believe we should continue to focus on establishing a clear timeline of events, as this will help us objectively evaluate the claims being made and avoid making hasty decisions based on unverified accusations.",
     "annotation": [
-      "appeal to importance",
       "appeal to logic",
       "appeal to evidence"
     ]

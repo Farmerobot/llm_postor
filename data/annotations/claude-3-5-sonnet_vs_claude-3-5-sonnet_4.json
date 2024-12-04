@@ -39,16 +39,14 @@
     "text": "[Alice]: I find it very suspicious that Dave is questioning our consistent stories when he's the one who found Bob's body and hasn't explained where exactly he found it.",
     "annotation": [
       "accusation",
-      "appeal to consistency",
-      "demand for evidence"
+      "ad hominem"
     ]
   },
   {
     "text": "[Erin]: The fact that Dave keeps deflecting and hasn't told us where he found Bob's body is extremely suspicious, especially since the rest of us have been transparent about our movements.",
     "annotation": [
       "accusation",
-      "deflection",
-      "appeal to consistency"
+      "ad hominem"
     ]
   },
   {
@@ -68,7 +66,6 @@
   {
     "text": "[Alice]: I was doing tasks in Storage when Dave supposedly found Bob's body, but if he was in Medbay for a scan, how did he discover the body in the first place?",
     "annotation": [
-      "providing an alibi",
       "questioning",
       "contradiction"
     ]
@@ -78,7 +75,7 @@
     "annotation": [
       "contradiction",
       "confirmation",
-      "appeal to consistency"
+      "accusation"
     ]
   },
   {
@@ -107,15 +104,14 @@
     "text": "[Erin]: Dave's claim about doing both the coffee maker task and a Medbay scan is impossible given the timeline - I was watching him at the coffee maker during the exact time he claims to have been scanning, and these tasks can't be done simultaneously.",
     "annotation": [
       "contradiction",
-      "appeal to logic",
-      "providing an alibi"
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Charlie]: Dave's claim about doing a scan in Medbay is impossible since I personally saw him doing the coffee maker task at that exact time, and I stayed in Cafeteria the whole time to verify everyone's movements.",
     "annotation": [
       "contradiction",
-      "providing an alibi",
+      "appeal to evidence",
       "confirmation"
     ]
   },
@@ -129,23 +125,23 @@
   {
     "text": "[Alice]: I know for a fact that Dave is lying about Charlie being near Storage because I was there myself and never saw Charlie leave the Cafeteria area during that entire time period.",
     "annotation": [
-      "accusation",
-      "providing an alibi"
+      "contradiction",
+      "confirmation"
     ]
   },
   {
     "text": "[Erin]: I think we have more than enough evidence now - Dave has been caught in multiple lies about his location, tasks, and what he claims to have seen, while the rest of us can verify each other's movements and timelines.",
     "annotation": [
       "appeal to evidence",
-      "appeal to consistency"
+      "confirmation"
     ]
   },
   {
     "text": "[Charlie]: Based on Dave's increasingly contradictory statements and the fact that he was the last person seen with Bob before finding his body, I think we have enough evidence to vote him out.",
     "annotation": [
       "appeal to evidence",
-      "contradiction",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   }
 ]

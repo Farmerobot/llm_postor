@@ -103,16 +103,16 @@
     "text": "[Erin]: I agree with Bob on verifying task logs, but let's also focus on Charlie's movements to Upper Engine, as this could provide additional context on the situation.",
     "annotation": [
       "appeal to agreement",
-      "appeal to importance"
+      "suggestion",
+      "information gathering"
     ]
   },
   {
     "text": "[Alice]: I think we should prioritize reviewing the camera footage in the Cafeteria to see if it shows anyone entering or leaving during the time of the report, as this could help clarify whether I was indeed in the Cafeteria at the time and provide additional context on the situation, and I'd also like to ask the group if anyone has any information about what task Charlie was trying to complete up in Upper Engine or if they were just trying to create a diversion.",
     "annotation": [
-      "appeal to importance",
       "suggestion",
-      "information gathering",
-      "questioning"
+      "appeal to evidence",
+      "information gathering"
     ]
   },
   {

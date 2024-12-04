@@ -28,6 +28,7 @@
     "text": "[Bob]: I'd like to clarify that I didn't accuse Dave of anything, I just asked him to share what he was doing in Medbay to clear up any potential misunderstandings, and I think it's interesting that Erin is so quick to jump to my defense's opposition without providing an alibi for their own time in Upper Engine.",
     "annotation": [
       "deflection",
+      "information gathering",
       "demand for evidence",
       "accusation"
     ]
@@ -79,8 +80,8 @@
     "text": "[Bob]: I'd like to ask Alice to confirm whether she saw me eliminate Charlie, as Erin claims, since Alice was in Medbay with me at the time, and her testimony would greatly help clarify the situation.",
     "annotation": [
       "information gathering",
-      "demand for evidence",
-      "appeal to authority"
+      "appeal to authority",
+      "demand for evidence"
     ]
   },
   {

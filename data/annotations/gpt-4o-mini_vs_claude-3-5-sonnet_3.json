@@ -93,7 +93,7 @@
     "annotation": [
       "appeal to doubt",
       "demand for evidence",
-      "ad hominem"
+      "accusation"
     ]
   },
   {
@@ -123,9 +123,9 @@
   {
     "text": "[Alice]: It's interesting how Bob, Erin, and Dave are so quick to dismiss my observations while failing to account for their own lack of awareness regarding Charlie's movements; their coordinated defense raises serious doubts about their innocence.",
     "annotation": [
-      "ad hominem",
       "appeal to doubt",
-      "accusation"
+      "accusation",
+      "ad hominem"
     ]
   },
   {

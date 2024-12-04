@@ -20,8 +20,7 @@
       "confirmation",
       "providing an alibi",
       "questioning",
-      "call to action",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {
@@ -60,16 +59,15 @@
     "annotation": [
       "appeal to agreement",
       "call to action",
-      "information gathering",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {
     "text": "[Bob]: I understand the concern, but I was solely focused on the \"Clear asteroids\" task in Weapons during that time, and I urge everyone, including Charlie and Alice, to share their exact actions to help us establish a clear timeline and identify any inconsistencies.",
     "annotation": [
-      "providing an alibi",
+      "appeal to logic",
       "call to action",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {
@@ -83,10 +81,10 @@
   {
     "text": "[Alice]: I find it troubling that Bob is deflecting attention by questioning my timeline while we still lack clarity on his actions in Weapons, and I agree with Charlie that we need to hear from Dave to piece together our alibis effectively.",
     "annotation": [
-      "appeal to agreement",
       "accusation",
       "deflection",
-      "appeal to importance"
+      "appeal to agreement",
+      "information gathering"
     ]
   },
   {
@@ -101,9 +99,8 @@
     "text": "[Charlie]: I'd like to reiterate that Dave's continued silence is highly suspicious, and I propose that we consider voting him out if he doesn't provide a satisfactory explanation for his absence and a clear alibi for the time of the murder.",
     "annotation": [
       "accusation",
-      "appeal to importance",
-      "call to action",
-      "demand for evidence"
+      "appeal to doubt",
+      "call to action"
     ]
   },
   {
@@ -111,7 +108,7 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {

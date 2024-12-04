@@ -35,10 +35,10 @@
     "text": "[Alice]: I think it's crucial that we keep an open mind and consider all possibilities, including the possibility that I might be an impostor myself, and I'd like to propose that we also discuss the fact that I was in Medbay the whole time and didn't notice anything unusual, but maybe I can be of more help in the discussion to uncover the truth, and I agree with Bob that we should call an emergency meeting to discuss and vote on whether to investigate further, and I think it's essential that we also consider the possibility that there may be more than one impostor among us.",
     "annotation": [
       "appeal to importance",
-      "suggestion",
       "providing an alibi",
-      "appeal to logic",
-      "call to action"
+      "suggestion",
+      "call to action",
+      "appeal to agreement"
     ]
   },
   {
@@ -61,9 +61,9 @@
     "text": "[Charlie]: I think it's essential that we also consider the possibility that there may be more than one impostor among us, and I'd like to propose that we also discuss the fact that I was in Admin the whole time and didn't notice anything unusual, but maybe I can be of more help in the discussion to uncover the truth, and I agree with Bob that we should establish a clear set of rules for how we'll communicate and share information to ensure we're all on the same page, and I think creating a shared document or a designated area in the chat where we can post updates and information about our actions and intentions is a great idea.",
     "annotation": [
       "appeal to importance",
-      "suggestion",
       "providing an alibi",
-      "appeal to agreement"
+      "appeal to agreement",
+      "suggestion"
     ]
   },
   {

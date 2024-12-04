@@ -10,16 +10,14 @@
     "text": "[Erin]: I moved to Medbay for legitimate tasks and actually witnessed Dave doing a scan there, while Alice seems to be making accusations without any real proof of suspicious behavior.",
     "annotation": [
       "providing an alibi",
-      "accusation",
-      "appeal to evidence"
+      "accusation"
     ]
   },
   {
     "text": "[Bob]: I can vouch for Dave being innocent since Erin saw him doing a scan in Medbay, which is a visual task that can't be faked, and I've also seen both Alice and Erin doing legitimate tasks in the cafeteria earlier.",
     "annotation": [
       "confirmation",
-      "providing an alibi",
-      "appeal to evidence"
+      "providing an alibi"
     ]
   },
   {
@@ -44,7 +42,6 @@
     "annotation": [
       "deflection",
       "accusation",
-      "appeal to evidence",
       "demand for evidence"
     ]
   },
@@ -52,7 +49,7 @@
     "text": "[Bob]: I just found Charlie's body in Weapons, and Alice was the only other person who entered that room before the murder happened, so I think we need to focus on her movements and actions during that time.",
     "annotation": [
       "accusation",
-      "appeal to evidence",
+      "appeal to importance",
       "call to action"
     ]
   },
@@ -61,8 +58,7 @@
     "annotation": [
       "appeal to evidence",
       "deflection",
-      "call to action",
-      "accusation"
+      "call to action"
     ]
   },
   {
@@ -78,8 +74,7 @@
     "annotation": [
       "deflection",
       "demand for evidence",
-      "accusation",
-      "appeal to logic"
+      "accusation"
     ]
   },
   {
@@ -95,8 +90,7 @@
     "text": "[Dave]: I think it's significant that Bob directly witnessed the sequence of events in Weapons - Charlie doing asteroids, Alice entering, and then finding Charlie's body - which strongly supports what we've all been saying about Alice's suspicious behavior.",
     "annotation": [
       "appeal to evidence",
-      "appeal to agreement",
-      "appeal to importance"
+      "appeal to agreement"
     ]
   },
   {
@@ -119,40 +113,37 @@
     "text": "[Bob]: I witnessed the entire sequence firsthand - Charlie doing asteroids, Alice entering Weapons, and then finding Charlie's body - and Alice still hasn't provided any explanation for what she was doing during those crucial moments when the murder occurred.",
     "annotation": [
       "appeal to evidence",
-      "demand for evidence",
-      "repetition"
+      "demand for evidence"
     ]
   },
   {
     "text": "[Dave]: Based on my scan being verified by both Erin and Bob, plus Bob's clear eyewitness account of Alice entering Weapons before Charlie's death, I think we have overwhelming evidence to vote for Alice as the impostor.",
     "annotation": [
       "appeal to evidence",
-      "confirmation",
-      "call to action",
-      "accusation"
+      "call to action"
     ]
   },
   {
     "text": "[Alice]: Bob's eagerness to eliminate me without providing concrete proof of my actions during Charlie's murder seems like a deliberate attempt to redirect suspicion away from himself, and I challenge him to explain exactly what specific action he saw me commit that proves I killed Charlie.",
     "annotation": [
       "ad hominem",
-      "shifting blame",
-      "demand for evidence"
+      "demand for evidence",
+      "shifting blame"
     ]
   },
   {
     "text": "[Erin]: The evidence is undeniable at this point - we have Bob's direct eyewitness account of the sequence in Weapons, multiple cleared players through verified tasks, and Alice's continued failure to explain her actions during Charlie's murder despite having multiple opportunities to do so.",
     "annotation": [
       "appeal to evidence",
-      "appeal to importance",
-      "demand for evidence"
+      "appeal to consistency",
+      "call to action"
     ]
   },
   {
     "text": "[Bob]: Given that I directly witnessed Charlie doing asteroids, saw Alice enter Weapons, and then found Charlie's body, combined with Alice's repeated refusal to explain her actions during those crucial moments, I believe we have all the evidence we need to vote her out.",
     "annotation": [
       "appeal to evidence",
-      "repetition",
+      "appeal to consistency",
       "call to action"
     ]
   },
@@ -160,10 +151,8 @@
     "text": "[Dave]: With Bob's clear eyewitness account of the sequence in Weapons, my verified medical scan, and Alice's continued deflection instead of explaining her actions, I think we have more than enough evidence to confidently vote for Alice as the impostor.",
     "annotation": [
       "appeal to evidence",
-      "confirmation",
       "deflection",
-      "call to action",
-      "accusation"
+      "call to action"
     ]
   }
 ]

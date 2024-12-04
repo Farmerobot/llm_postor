@@ -33,13 +33,13 @@
     "text": "[Erin]: I was uploading data files in Admin which several people can verify, and I'm asking about locations because I want to help solve this case - Dave's quick accusation seems more suspicious to me.",
     "annotation": [
       "providing an alibi",
-      "shifting blame"
+      "deflection"
     ]
   },
   {
     "text": "[Dave]: I'd like to clarify that my initial question was not an accusation, but rather a request for more information, and I still haven't received a clear explanation from Erin about the circumstances surrounding the discovery of the dead body they reported.",
     "annotation": [
-      "providing an alibi",
+      "deflection",
       "demand for evidence"
     ]
   },
@@ -65,13 +65,14 @@
     "annotation": [
       "contradiction",
       "accusation",
+      "ad hominem",
       "shifting blame"
     ]
   },
   {
     "text": "[Dave]: I'd like to clarify that I was referring to the fact that Erin reported a dead body earlier, but didn't provide any details about it, and I'd like Erin to provide a clear answer to the questions that Bob, Charlie, and I have been asking, rather than trying to deflect attention by accusing me of framing them.",
     "annotation": [
-      "repetition",
+      "deflection",
       "demand for evidence"
     ]
   },
@@ -93,26 +94,28 @@
     "text": "[Erin]: I find it very telling that Dave, Bob, and Charlie keep coordinating their stories about a non-existent body report, while completely ignoring my question about Alice's whereabouts - has anyone actually seen her recently?",
     "annotation": [
       "accusation",
-      "information gathering",
-      "shifting blame"
+      "shifting blame",
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: I think it's suspicious that Erin is trying to shift the focus to Alice's whereabouts, especially since Erin has been evasive about their own actions and hasn't provided clear answers to our questions.",
     "annotation": [
-      "appeal to doubt",
+      "accusation",
       "shifting blame"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Erin's latest attempt to shift the focus to Alice's whereabouts seems like a desperate attempt to divert attention from their own suspicious behavior.",
     "annotation": [
+      "accusation",
       "shifting blame"
     ]
   },
   {
     "text": "[Charlie]: I think it's clear that Erin is trying to deflect attention from their own suspicious actions by bringing up Alice's whereabouts, but we shouldn't fall for this tactic and instead focus on getting clear answers from Erin about their actions and movements.",
     "annotation": [
+      "accusation",
       "deflection"
     ]
   },
@@ -120,15 +123,15 @@
     "text": "[Erin]: I've been completely honest about my movements and actions, while Dave, Bob, and Charlie seem to be working together to push a fabricated story about a body report - isn't anyone else concerned about their coordinated behavior?",
     "annotation": [
       "accusation",
-      "appeal to emotion"
+      "ad hominem"
     ]
   },
   {
     "text": "[Dave]: I'd like to reiterate that Erin's claim that Dave, Bob, and Charlie are coordinating their stories about a non-existent body report seems like an attempt to deflect attention from their own suspicious behavior, and it's time for us to seriously consider the possibility that Erin is the impostor.",
     "annotation": [
       "repetition",
-      "deflection",
-      "accusation"
+      "accusation",
+      "deflection"
     ]
   },
   {

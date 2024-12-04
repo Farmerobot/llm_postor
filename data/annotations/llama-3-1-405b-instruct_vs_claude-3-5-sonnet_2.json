@@ -48,9 +48,9 @@
   {
     "text": "[Charlie]: I think we need to shift our focus to Dave's last known location and who was nearby, since Alice, Erin, and I have all corroborated each other's movements between Cafeteria and Weapons.",
     "annotation": [
-      "call to action",
+      "appeal to importance",
       "appeal to agreement",
-      "confirmation"
+      "deflection"
     ]
   },
   {
@@ -64,8 +64,8 @@
     "annotation": [
       "appeal to doubt",
       "demand for evidence",
-      "call to action",
-      "questioning"
+      "questioning",
+      "call to action"
     ]
   },
   {
@@ -97,7 +97,7 @@
     "annotation": [
       "appeal to doubt",
       "suggestion",
-      "call to action"
+      "deflection"
     ]
   },
   {
@@ -121,8 +121,8 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "deflection",
-      "call to action"
+      "call to action",
+      "deflection"
     ]
   },
   {
@@ -139,15 +139,14 @@
     "annotation": [
       "appeal to importance",
       "appeal to evidence",
-      "accusation",
-      "deflection"
+      "ad hominem"
     ]
   },
   {
     "text": "[Charlie]: Bob's desperate attempts to question Alice's discovery of the body are just another smokescreen - the fact remains that he was the only one near Dave without an alibi, and he keeps avoiding explaining what he was actually doing in Cafeteria during the kill.",
     "annotation": [
       "deflection",
-      "accusation",
+      "appeal to evidence",
       "demand for evidence"
     ]
   },

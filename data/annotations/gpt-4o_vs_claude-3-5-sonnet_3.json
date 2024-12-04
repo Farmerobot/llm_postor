@@ -61,7 +61,7 @@
     "text": "[Charlie]: Alice, your observation about Erin's path discrepancy is crucial, and I think we should focus on that to clarify the situation.",
     "annotation": [
       "appeal to importance",
-      "suggestion"
+      "appeal to agreement"
     ]
   },
   {
@@ -88,16 +88,16 @@
   {
     "text": "[Charlie]: Alice's point about Erin's movement inconsistency is vital, and Dave's sudden change in stance only adds to the suspicion that they might be collaborating to frame me.",
     "annotation": [
-      "appeal to importance",
-      "accusation"
+      "appeal to agreement",
+      "appeal to importance"
     ]
   },
   {
     "text": "[Erin]: The surveillance logs will definitively prove my path through the ship and expose both Charlie and Alice's lies, so I suggest we check them immediately before voting Charlie out for Bob's murder.",
     "annotation": [
       "appeal to evidence",
-      "suggestion",
-      "call to action"
+      "call to action",
+      "suggestion"
     ]
   },
   {
@@ -116,7 +116,7 @@
   {
     "text": "[Charlie]: Alice's observation about Erin's path inconsistency and Dave's multiple, conflicting accounts suggest we should be cautious and not rush to judgment without verifying the surveillance logs first.",
     "annotation": [
-      "appeal to importance",
+      "appeal to agreement",
       "appeal to logic"
     ]
   },
@@ -125,7 +125,7 @@
     "annotation": [
       "appeal to evidence",
       "shifting blame",
-      "accusation"
+      "ad hominem"
     ]
   },
   {

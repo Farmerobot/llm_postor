@@ -19,7 +19,7 @@
     "text": "[Dave]: I can confirm Bob's account that Charlie was present when Erin was eliminated, and I was in the Cafeteria during that time, so we should prioritize understanding why Charlie would have targeted Erin.",
     "annotation": [
       "confirmation",
-      "accusation",
+      "appeal to evidence",
       "call to action"
     ]
   },
@@ -43,7 +43,7 @@
     "text": "[Bob]: I stand by my testimony that Charlie eliminated Erin in the Cafeteria, and Dave's confirmation supports my claim, so we should vote to eject Charlie to protect the remaining crewmates.",
     "annotation": [
       "repetition",
-      "confirmation",
+      "appeal to evidence",
       "appeal to fear",
       "call to action"
     ]
@@ -53,8 +53,8 @@
     "annotation": [
       "accusation",
       "appeal to evidence",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -62,8 +62,8 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -80,8 +80,8 @@
       "appeal to consistency",
       "appeal to evidence",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -89,17 +89,17 @@
     "annotation": [
       "repetition",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
     "text": "[Alice]: Charlie's repeated attempts to deflect suspicion and question multiple witnesses' credibility only serve to highlight his own guilt in eliminating Erin, and we must vote to eject him to protect the remaining crewmates.",
     "annotation": [
       "accusation",
-      "deflection",
-      "call to action",
-      "appeal to fear"
+      "appeal to evidence",
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -116,8 +116,8 @@
       "appeal to consistency",
       "appeal to evidence",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -135,17 +135,16 @@
       "appeal to consistency",
       "appeal to evidence",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
     "text": "[Charlie]: It's concerning that Bob, Dave, and Alice are so quick to dismiss my questions about Alice's movements and instead focus solely on me; could this be a tactic to distract us from their own potential collusion?",
     "annotation": [
       "appeal to doubt",
-      "questioning",
-      "accusation",
-      "deflection"
+      "information gathering",
+      "accusation"
     ]
   },
   {
@@ -154,8 +153,8 @@
       "appeal to consistency",
       "appeal to evidence",
       "accusation",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   },
   {
@@ -172,9 +171,8 @@
     "annotation": [
       "repetition",
       "accusation",
-      "deflection",
-      "call to action",
-      "appeal to fear"
+      "appeal to fear",
+      "call to action"
     ]
   }
 ]

@@ -116,7 +116,7 @@
   {
     "text": "[Alice]: I'd like to point out that Bob's latest attempt to deflect suspicion by saying his excuse is too convenient to be fabricated actually raises more red flags, as it seems like a desperate attempt to shift the focus away from his inconsistencies.",
     "annotation": [
-      "appeal to importance",
+      "appeal to doubt",
       "accusation",
       "deflection"
     ]
@@ -131,8 +131,8 @@
   {
     "text": "[Erin]: I think it's time to put Bob's claims to rest, as his constant attempts to deflect suspicion and downplay his involvement in Charlie's elimination have only raised more red flags, and I firmly believe we should vote him out of the game to ensure our own safety and progress.",
     "annotation": [
-      "call to action",
       "accusation",
+      "call to action",
       "appeal to fear"
     ]
   },

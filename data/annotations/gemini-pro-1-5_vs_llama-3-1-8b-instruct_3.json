@@ -59,7 +59,7 @@
   {
     "text": "[Dave]: Bob, are you seriously questioning my alibi when we were *together* just a few minutes ago?",
     "annotation": [
-      "providing an alibi"
+      "contradiction"
     ]
   },
   {
@@ -147,6 +147,7 @@
     "annotation": [
       "appeal to importance",
       "call to action",
+      "suggestion",
       "information gathering",
       "demand for evidence",
       "questioning"

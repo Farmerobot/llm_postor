@@ -117,8 +117,8 @@
   {
     "text": "[Dave]: It seems like everyone is focused on Electrical, but shouldn't we be asking where Green was when Charlie died in Navigation?",
     "annotation": [
-      "deflection",
-      "questioning"
+      "shifting blame",
+      "information gathering"
     ]
   },
   {
@@ -126,22 +126,22 @@
     "annotation": [
       "shifting blame",
       "contradiction",
-      "appeal to consistency"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Alice]: I'd like to thank Bob for pointing out Dave's attempt to shift the focus to Green's whereabouts during Charlie's death, and I agree that we need to resolve the inconsistencies in Dave's own story before moving forward.",
     "annotation": [
       "appeal to agreement",
-      "appeal to consistency"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Erin]: I'd like to ask the group to consider the potential motives behind Dave's attempt to shift the focus to Green's whereabouts during Charlie's death, and whether this could be an attempt to deflect attention from his own inconsistencies and potential involvement in Charlie's death.",
     "annotation": [
       "information gathering",
-      "shifting blame",
-      "accusation"
+      "accusation",
+      "deflection"
     ]
   }
 ]

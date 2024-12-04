@@ -25,7 +25,6 @@
     "text": "[Bob]: I agree with Erin, Charlie, and Alice; sticking together and corroborating task completions, like Alice and I doing the floor cleaning in Admin, will help us identify impostors.",
     "annotation": [
       "appeal to agreement",
-      "appeal to logic",
       "confirmation"
     ]
   },
@@ -100,7 +99,7 @@
     "text": "[Charlie]: Erin's repeated insistence on her lack of specific details, coupled with her suggestion that Alice and I are deflecting, warrants further scrutiny of her actions before discovering Dave's body.",
     "annotation": [
       "accusation",
-      "appeal to logic"
+      "appeal to evidence"
     ]
   },
   {
@@ -136,18 +135,17 @@
   {
     "text": "[Alice]: Given Erin's inconsistent statements and lack of detail regarding the discovery of Dave's body, let's focus on corroborating Bob's alibi about cleaning in Admin before further discussion.",
     "annotation": [
-      "accusation",
-      "appeal to logic",
-      "confirmation",
-      "call to action"
+      "appeal to evidence",
+      "call to action",
+      "confirmation"
     ]
   },
   {
     "text": "[Bob]: Let's verify Alice's statement about seeing me in Admin by asking Charlie and Erin if they saw me there around the same time;  this will help establish a reliable timeline and determine if Erin's account of finding Dave's body is credible.",
     "annotation": [
-      "demand for evidence",
       "call to action",
-      "appeal to logic"
+      "demand for evidence",
+      "appeal to importance"
     ]
   }
 ]

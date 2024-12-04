@@ -40,8 +40,8 @@
     "text": "[Erin]: I'd like to point out that just because Dave claims we were together in Medbay, it doesn't necessarily mean he was with us the entire time, and I'd like to ask him to clarify whether he was alone in Medbay for any part of the task, as his alibi doesn't seem to account for the discrepancy between his statement and Erin's observation of Alice working in Medbay.",
     "annotation": [
       "appeal to logic",
-      "questioning",
-      "demand for evidence"
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
@@ -105,37 +105,37 @@
     "annotation": [
       "deflection",
       "accusation",
-      "appeal to evidence"
+      "appeal to importance"
     ]
   },
   {
-    "text": "Furthermore, I'd like to propose that we take a closer look at Charlie's alibi for the time Alice was eliminated, and ask him to provide more information about his whereabouts during that time. I also think it's essential to examine his behavior and body language, as he has been acting suspiciously nervous and evasive throughout the game.",
+    "text": "[Erin]: Furthermore, I'd like to propose that we take a closer look at Charlie's alibi for the time Alice was eliminated, and ask him to provide more information about his whereabouts during that time. I also think it's essential to examine his behavior and body language, as he has been acting suspiciously nervous and evasive throughout the game.",
     "annotation": [
       "suggestion",
-      "demand for evidence",
+      "information gathering",
       "appeal to evidence"
     ]
   },
   {
-    "text": "I'd also like to remind everyone that Dave's claim that Charlie is trying to frame him is an attempt to discredit and deflect attention from himself, and we should remain objective and focus on gathering more information before making any decisions.",
+    "text": "[Erin]: I'd also like to remind everyone that Dave's claim that Charlie is trying to frame him is an attempt to discredit and deflect attention from himself, and we should remain objective and focus on gathering more information before making any decisions.",
     "annotation": [
       "deflection",
       "ad hominem",
-      "call to action"
+      "appeal to logic"
     ]
   },
   {
-    "text": "I'd also like to ask Charlie if he has any evidence or witnesses that can corroborate his statement about seeing Alice vent in Electrical, or if he has any idea what happened to Alice between the time she was alive and the time she was eliminated.",
+    "text": "[Erin]: I'd also like to ask Charlie if he has any evidence or witnesses that can corroborate his statement about seeing Alice vent in Electrical, or if he has any idea what happened to Alice between the time she was alive and the time she was eliminated.",
     "annotation": [
       "demand for evidence",
       "information gathering"
     ]
   },
   {
-    "text": "Let's all keep a level head, stay vigilant, and let's work together to figure out what's going on in this game.",
+    "text": "[Erin]: Let's all keep a level head, stay vigilant, and let's work together to figure out what's going on in this game.",
     "annotation": [
       "appeal to agreement",
-      "call to action"
+      "appeal to importance"
     ]
   },
   {
@@ -144,7 +144,7 @@
       "appeal to evidence",
       "accusation",
       "call to action",
-      "deflection"
+      "information gathering"
     ]
   },
   {
@@ -169,8 +169,7 @@
       "deflection",
       "ad hominem",
       "appeal to importance",
-      "demand for evidence",
-      "contradiction"
+      "demand for evidence"
     ]
   },
   {
@@ -178,64 +177,63 @@
     "annotation": [
       "deflection",
       "appeal to evidence",
-      "accusation",
-      "call to action"
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: I'd like to emphasize that, despite the distractions and deflections, we should remain focused on the facts and evidence. Here are my discussion points:",
     "annotation": [
-      "appeal to logic",
-      "appeal to importance"
+      "appeal to logic"
     ]
   },
   {
-    "text": "* I'd like to remind everyone that we have a limited amount of time left to discuss and vote, and I think it's essential that we prioritize gathering more information and evidence before making any decisions.",
+    "text": "[Charlie]: * I'd like to remind everyone that we have a limited amount of time left to discuss and vote, and I think it's essential that we prioritize gathering more information and evidence before making any decisions.",
     "annotation": [
       "appeal to importance",
       "call to action"
     ]
   },
   {
-    "text": "* I'd like to point out that Charlie's question to Dave about seeing someone else near Electrical around the time Alice died seems like an attempt to deflect attention from his own suspicious behavior and shift the focus back onto Dave.",
+    "text": "[Charlie]: * I'd like to point out that Charlie's question to Dave about seeing someone else near Electrical around the time Alice died seems like an attempt to deflect attention from his own suspicious behavior and shift the focus back onto Dave.",
     "annotation": [
       "deflection"
     ]
   },
   {
-    "text": "* I'd like to ask Charlie if he has any evidence or witnesses that can corroborate his statement about seeing Alice vent in Electrical, or if he has any idea what happened to Alice between the time she was alive and the time she was eliminated.",
+    "text": "[Charlie]: * I'd like to ask Charlie if he has any evidence or witnesses that can corroborate his statement about seeing Alice vent in Electrical, or if he has any idea what happened to Alice between the time she was alive and the time she was eliminated.",
     "annotation": [
       "demand for evidence",
       "information gathering"
     ]
   },
   {
-    "text": "* I'd like to remind everyone that Dave's claim that Charlie is trying to frame him is an attempt to discredit and deflect attention from himself, and we should remain objective and focus on gathering more information before making any decisions.",
+    "text": "[Charlie]: * I'd like to remind everyone that Dave's claim that Charlie is trying to frame him is an attempt to discredit and deflect attention from himself, and we should remain objective and focus on gathering more information before making any decisions.",
     "annotation": [
       "deflection",
       "ad hominem",
-      "call to action"
+      "appeal to logic"
     ]
   },
   {
-    "text": "* I'd like to propose that we take a closer look at Charlie's alibi for the time Alice was eliminated, and ask him to provide more information about his whereabouts during that time.",
+    "text": "[Charlie]: * I'd like to propose that we take a closer look at Charlie's alibi for the time Alice was eliminated, and ask him to provide more information about his whereabouts during that time.",
     "annotation": [
       "suggestion",
-      "demand for evidence"
+      "information gathering"
     ]
   },
   {
-    "text": "* I'd like to suggest that we examine Charlie's behavior and body language, as he has been acting suspiciously nervous and evasive throughout the game, and see if there are any inconsistencies in his statements that could indicate his potential involvement in Alice's elimination.",
+    "text": "[Charlie]: * I'd like to suggest that we examine Charlie's behavior and body language, as he has been acting suspiciously nervous and evasive throughout the game, and see if there are any inconsistencies in his statements that could indicate his potential involvement in Alice's elimination.",
     "annotation": [
       "suggestion",
       "appeal to evidence"
     ]
   },
   {
-    "text": "Let's all keep a level head, stay vigilant, and let's work together to figure out what's going on in this game.",
+    "text": "[Charlie]: Let's all keep a level head, stay vigilant, and let's work together to figure out what's going on in this game.",
     "annotation": [
       "appeal to agreement",
-      "call to action"
+      "appeal to importance"
     ]
   }
 ]

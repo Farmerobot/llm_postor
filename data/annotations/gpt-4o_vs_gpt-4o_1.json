@@ -25,16 +25,16 @@
     "text": "[Charlie]: I started in the cafeteria with Dave and Alice, then moved to Weapons to do the clear asteroids task, and I noticed Bob moving from Shields to O2 without doing any tasks, so can you clarify that, Bob?",
     "annotation": [
       "providing an alibi",
-      "demand for evidence",
-      "questioning"
+      "questioning",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: It's interesting that Dave reported the body but didn't mention seeing anyone else around, so Dave, can you clarify if you saw anyone near the body?",
     "annotation": [
       "appeal to doubt",
-      "demand for evidence",
-      "questioning"
+      "questioning",
+      "demand for evidence"
     ]
   },
   {
@@ -49,7 +49,7 @@
     "annotation": [
       "providing an alibi",
       "information gathering",
-      "questioning"
+      "demand for evidence"
     ]
   },
   {
@@ -85,36 +85,34 @@
     "text": "[Charlie]: Alice, could you share what tasks you were working on and if you noticed anything unusual during your rounds, as your input might help us piece together the timeline better?",
     "annotation": [
       "information gathering",
-      "appeal to importance",
-      "questioning"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Erin]: Alice, since you were in Medbay with me and Bob, can you confirm if you noticed anything unusual during your scan task?",
     "annotation": [
-      "questioning",
+      "information gathering",
       "demand for evidence"
     ]
   },
   {
     "text": "[Bob]: Alice, since you were in Medbay with us, did you notice anything unusual during your scan task that could help us narrow down suspects?",
     "annotation": [
-      "questioning",
-      "information gathering"
+      "information gathering",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Dave]: Alice, it would be helpful if you could confirm whether you noticed anything odd or anyone else in Medbay during your scan task, as your observations might help us piece together the timeline.",
     "annotation": [
       "information gathering",
-      "appeal to importance",
-      "questioning"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Charlie]: Alice, since both Erin and Bob mentioned you being in Medbay, can you confirm their presence and any other details you noticed while you were there?",
     "annotation": [
-      "questioning",
+      "information gathering",
       "demand for evidence"
     ]
   },
@@ -129,15 +127,14 @@
     "text": "[Bob]: If Erin and Alice were both in Medbay, then the suspect might have moved quickly, so we need to gather more information on everyone's movements to pinpoint who could have been near Medbay.",
     "annotation": [
       "appeal to logic",
-      "information gathering",
-      "call to action"
+      "information gathering"
     ]
   },
   {
     "text": "[Dave]: Alice, since you were in Medbay with Erin and Bob, can you confirm if you noticed anything unusual or anyone else entering or leaving during your scan task that might help us identify the suspect?",
     "annotation": [
-      "questioning",
-      "information gathering"
+      "information gathering",
+      "demand for evidence"
     ]
   },
   {
@@ -145,7 +142,7 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "questioning"
+      "demand for evidence"
     ]
   }
 ]

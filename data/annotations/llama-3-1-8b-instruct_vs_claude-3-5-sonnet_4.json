@@ -78,9 +78,9 @@
   {
     "text": "[Erin]: Given that Bob first claimed to \"just arrive\" in Medbay and see Alice doing wiring, then suddenly revealed finding Charlie's body there, this deliberate withholding of critical information about Charlie's death is extremely suspicious and suggests he's the impostor trying to manipulate us.",
     "annotation": [
+      "contradiction",
       "accusation",
-      "appeal to evidence",
-      "deflection"
+      "appeal to evidence"
     ]
   },
   {
@@ -112,7 +112,7 @@
     "annotation": [
       "appeal to evidence",
       "accusation",
-      "appeal to doubt"
+      "contradiction"
     ]
   },
   {

@@ -76,7 +76,8 @@
     "text": "[Erin]: Charlie, since you went to Weapons, can you confirm if you saw anyone else in the hallway, especially since Alice was found nearby?",
     "annotation": [
       "questioning",
-      "demand for evidence"
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {
@@ -89,7 +90,8 @@
   {
     "text": "[Dave]: So, if nobody saw anyone in the hallway, could the impostor still be among us in this very room?",
     "annotation": [
-      "appeal to logic"
+      "appeal to logic",
+      "appeal to fear"
     ]
   },
   {
@@ -131,7 +133,8 @@
     "text": "[Erin]: Based on Bob's report, we need to establish who left the Cafeteria first and in which direction to narrow down suspects, especially since Charlie didn't see anyone in the hallway.",
     "annotation": [
       "appeal to evidence",
-      "call to action"
+      "call to action",
+      "appeal to importance"
     ]
   },
   {

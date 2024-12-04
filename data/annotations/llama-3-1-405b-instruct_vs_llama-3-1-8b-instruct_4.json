@@ -11,7 +11,7 @@
     "text": "[Bob]: I'd like to clarify that I've been trying to access the Admin room to complete the wiring task, but I've been unable to do so yet, and I'd appreciate it if we could discuss my movements and actions in more detail to clear up any misconceptions about my role in the game.",
     "annotation": [
       "providing an alibi",
-      "call to action"
+      "appeal to importance"
     ]
   },
   {
@@ -19,8 +19,7 @@
     "annotation": [
       "appeal to importance",
       "accusation",
-      "appeal to evidence",
-      "call to action"
+      "appeal to evidence"
     ]
   },
   {
@@ -66,8 +65,8 @@
     "text": "[Dave]: I'd like to propose that we establish a clear plan for how we'll access and review the security footage, and that we do so in a way that's transparent and fair to all players, with a specific focus on verifying the timeline of events surrounding Charlie's death and my role in reporting it, in order to ensure that we're not missing any crucial information that could help us identify the impostor and complete the tasks.",
     "annotation": [
       "suggestion",
-      "appeal to logic",
-      "appeal to importance"
+      "appeal to importance",
+      "appeal to logic"
     ]
   },
   {
@@ -83,8 +82,8 @@
     "annotation": [
       "suggestion",
       "appeal to importance",
-      "appeal to evidence",
-      "call to action"
+      "accusation",
+      "appeal to evidence"
     ]
   },
   {
@@ -115,8 +114,8 @@
     "text": "[Dave]: I'd like to emphasize that Bob's continued attempts to deflect attention from his own suspicious behavior and shift the focus to my actions are a clear indication of his desperation to avoid being identified as the impostor, and I think we should prioritize verifying the timeline of events surrounding Charlie's death and my role in reporting it to ensure that we're making an informed decision that aligns with the truth.",
     "annotation": [
       "repetition",
-      "deflection",
       "shifting blame",
+      "accusation",
       "appeal to logic"
     ]
   }

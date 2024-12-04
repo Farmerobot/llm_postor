@@ -16,7 +16,7 @@
     "text": "[Alice]: Charlie is right, I saw Bob doing diagnostics and Erin fixing wiring in Medbay, and Dave wasn't there when I first arrived.",
     "annotation": [
       "confirmation",
-      "providing an alibi"
+      "contradiction"
     ]
   },
   {
@@ -36,14 +36,14 @@
     "text": "[Charlie]: Dave, your shifting explanations about Medbay are suspicious, especially since both Alice and I confirm seeing each other there, but not you.",
     "annotation": [
       "accusation",
-      "confirmation"
+      "contradiction"
     ]
   },
   {
     "text": "[Alice]: Dave, your inconsistent story about Medbay, combined with the fact that both Charlie and I place you elsewhere, makes you the prime suspect in Bob's death.",
     "annotation": [
       "accusation",
-      "confirmation"
+      "contradiction"
     ]
   },
   {
@@ -70,7 +70,8 @@
   {
     "text": "[Alice]: Dave, your inability to name a specific task you completed in Medbay further reinforces your deceptive alibi and strengthens the case for your ejection.",
     "annotation": [
-      "accusation"
+      "accusation",
+      "contradiction"
     ]
   },
   {
@@ -125,8 +126,8 @@
     "text": "[Alice]: Dave, you're clearly lying about your whereabouts and \"observing and ensuring tasks were completed\" isn't a real task, so we need to vote you out now before another crewmate dies.",
     "annotation": [
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {

@@ -27,7 +27,7 @@
       "repetition",
       "appeal to evidence",
       "appeal to importance",
-      "call to action"
+      "accusation"
     ]
   },
   {
@@ -56,8 +56,8 @@
     "text": "[Alice]: I'd like to emphasize that Bob's continued lack of clarity and specificity regarding his actions while \"emptying the trash\" raises significant suspicions, and I believe it's essential that we consider voting him out unless he can provide a clear and convincing explanation that addresses the discrepancies in his claim.",
     "annotation": [
       "appeal to importance",
-      "call to action",
-      "accusation"
+      "accusation",
+      "call to action"
     ]
   },
   {
@@ -101,7 +101,7 @@
     "annotation": [
       "repetition",
       "accusation",
-      "call to action"
+      "appeal to importance"
     ]
   },
   {

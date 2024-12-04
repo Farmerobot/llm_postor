@@ -44,7 +44,9 @@
   },
   {
     "text": "[Alice]: Charlie, I was in Cafeteria *before* Dave made coffee, then went straight to Weapons and have been struggling with the wiring task ever since, so I wouldn't have seen anything in Medbay.",
-    "annotation": "providing an alibi"
+    "annotation": [
+      "providing an alibi"
+    ]
   },
   {
     "text": "[Erin]: Dave, you said you were in Medbay with Bob and me, so it's impossible you didn't see *anything* when Bob died right next to us.",
@@ -115,14 +117,17 @@
   {
     "text": "[Dave]: I think Alice's aggressive questioning and shifting narrative are more suspicious than my momentary distraction, especially since Erin confirmed she didn't see Alice in Cafeteria as claimed, which raises serious doubts about her credibility.",
     "annotation": [
+      "shifting blame",
       "ad hominem",
-      "appeal to doubt",
-      "shifting blame"
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Charlie]: Dave, your \"momentary distraction\" excuse is unbelievable: Medbay is tiny, and you couldn't have missed Bob dying beside us unless you were the one doing it.",
-    "annotation": "accusation"
+    "annotation": [
+      "contradiction",
+      "accusation"
+    ]
   },
   {
     "text": "[Alice]: Dave, can anyone corroborate that they saw you performing a task in Medbay when Bob died, or were you simply standing near us?",

@@ -10,23 +10,21 @@
     "text": "[Charlie]: I actually saw you in Cafeteria doing the trash task early in the game Bob, so I'm a bit confused about your claim of being in Medbay and Upper Engine the whole time.",
     "annotation": [
       "contradiction",
-      "appeal to evidence"
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Alice]: I need to point out that Bob is being dishonest - I was also in Cafeteria and saw him doing trash there, so his story about being in Medbay and Upper Engine doesn't add up at all.",
     "annotation": [
       "accusation",
-      "contradiction",
-      "appeal to evidence"
+      "contradiction"
     ]
   },
   {
     "text": "[Dave]: I can confirm what Charlie and Alice are saying - I personally saw Bob doing the trash task in Cafeteria, so his claim about being in Medbay and Upper Engine is definitely a lie.",
     "annotation": [
       "confirmation",
-      "accusation",
-      "appeal to evidence"
+      "accusation"
     ]
   },
   {
@@ -47,16 +45,15 @@
     "annotation": [
       "accusation",
       "appeal to evidence",
-      "providing an alibi",
-      "confirmation"
+      "providing an alibi"
     ]
   },
   {
     "text": "[Dave]: Given that Bob's story keeps changing and multiple of us can confirm seeing him in Cafeteria when he initially claimed to be elsewhere, plus his unaccounted time during Erin's murder, I think we have enough evidence to vote him out.",
     "annotation": [
-      "accusation",
       "appeal to evidence",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {
@@ -69,8 +66,8 @@
     "text": "[Charlie]: Given that three of us independently confirmed seeing Bob in Cafeteria early on, and his story has changed multiple times about his location, I think we have more than enough evidence to vote him out as the impostor responsible for Erin's death.",
     "annotation": [
       "appeal to evidence",
-      "accusation",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {
@@ -83,9 +80,9 @@
   {
     "text": "[Dave]: The fact that Bob first denied being in Cafeteria, then changed his story only after three of us confirmed seeing him there, combined with his unaccounted time during Erin's murder, makes him the clear impostor we need to vote out.",
     "annotation": [
-      "accusation",
       "appeal to evidence",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {
@@ -99,24 +96,22 @@
     "text": "[Charlie]: Bob's attempt to delay voting after being caught in multiple lies about the Cafeteria, combined with his unaccounted time during Erin's murder, only strengthens my conviction that we must vote him out now.",
     "annotation": [
       "accusation",
-      "appeal to evidence",
       "call to action"
     ]
   },
   {
     "text": "[Alice]: Given that three of us independently witnessed Bob in Cafeteria and his story has changed multiple times when confronted, plus his suspicious attempt to delay voting now that we've caught him in these lies, we need to vote him out immediately before he can eliminate anyone else.",
     "annotation": [
-      "accusation",
       "appeal to evidence",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "accusation",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Dave]: His request to delay voting after being caught in multiple lies about the Cafeteria and having unaccounted time during Erin's murder only confirms my suspicion that Bob is the impostor trying to buy more time to eliminate more crewmates.",
     "annotation": [
       "accusation",
-      "appeal to evidence",
       "appeal to fear"
     ]
   },
@@ -131,15 +126,15 @@
     "text": "[Charlie]: The fact that Bob is now desperately trying to delay the vote and claiming we're 'missing crucial information' after being caught in multiple lies about his location is exactly what an impostor does when they've been cornered - we need to vote him out now before he can eliminate another crewmate.",
     "annotation": [
       "accusation",
-      "appeal to fear",
-      "call to action"
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Alice]: We have overwhelming evidence against Bob - three eyewitnesses saw him in Cafeteria contradicting his initial story, he has no alibi during Erin's murder, and now he's trying to delay the vote with vague claims about 'missing information' which is classic impostor behavior when cornered.",
     "annotation": [
-      "accusation",
-      "appeal to evidence"
+      "appeal to evidence",
+      "accusation"
     ]
   },
   {

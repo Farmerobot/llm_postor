@@ -10,8 +10,8 @@
     "text": "[Dave]: I'd like to respond to Erin's suggestion by sharing my own task completion progress, and I think it's interesting that Erin was about to start the coffee maker in the cafeteria when I already completed that task in Round 1, so I'd like to ask Erin if she saw anyone else around the cafeteria when she arrived.",
     "annotation": [
       "appeal to agreement",
-      "questioning",
-      "contradiction"
+      "providing an alibi",
+      "questioning"
     ]
   },
   {
@@ -27,15 +27,14 @@
     "annotation": [
       "appeal to agreement",
       "demand for evidence",
-      "questioning",
-      "contradiction"
+      "questioning"
     ]
   },
   {
     "text": "[Erin]: It's interesting that you all focus on my actions, but let's remember that we should also be looking at who was with Bob before he was eliminated\u2014can anyone provide an alibi for their movements around that time?",
     "annotation": [
       "deflection",
-      "information gathering"
+      "demand for evidence"
     ]
   },
   {
@@ -49,16 +48,14 @@
     "text": "[Alice]: I'd like to reiterate that Erin still hasn't provided a clear explanation for her discrepancy regarding the coffee maker task, and I think it's essential that she addresses this issue before we consider discussing other topics or potential suspects.",
     "annotation": [
       "repetition",
-      "appeal to importance",
-      "accusation"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Charlie]: I'd like to reiterate Alice's point that Erin's discrepancy about the coffee maker task remains unaddressed, and I think it's crucial that Erin provides a clear explanation for her actions before we entertain her request to discuss our alibis around the time of Bob's elimination.",
     "annotation": [
       "repetition",
-      "appeal to importance",
-      "accusation"
+      "appeal to importance"
     ]
   },
   {
@@ -73,7 +70,6 @@
     "annotation": [
       "repetition",
       "shifting blame",
-      "accusation",
       "appeal to importance"
     ]
   },
@@ -82,7 +78,6 @@
     "annotation": [
       "repetition",
       "deflection",
-      "accusation",
       "appeal to importance"
     ]
   },
@@ -91,7 +86,6 @@
     "annotation": [
       "repetition",
       "deflection",
-      "accusation",
       "appeal to importance"
     ]
   },
@@ -121,7 +115,6 @@
     "text": "[Charlie]: I'd like to respond to Erin's latest attempt to deflect attention from herself by pointing out that she's still avoiding a direct explanation for her discrepancy regarding the coffee maker task, and I firmly believe that we must insist on a clear and direct explanation from her regarding this discrepancy before considering any further discussions or potential suspects.",
     "annotation": [
       "deflection",
-      "accusation",
       "appeal to importance"
     ]
   },
@@ -129,7 +122,7 @@
     "text": "[Erin]: It's interesting that while I'm under scrutiny for my actions, no one has questioned Dave's whereabouts after he completed his task in Round 1, which seems like a crucial piece of information we should consider.",
     "annotation": [
       "deflection",
-      "information gathering"
+      "appeal to doubt"
     ]
   },
   {

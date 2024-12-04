@@ -109,8 +109,8 @@
     "text": "[Dave]: Charlie, your timeline is indeed crucial, and if you were only in the cafeteria for a minute or two, it raises significant questions about who could have been around during that time; we need to dig deeper into your account and see if anyone can corroborate your story.",
     "annotation": [
       "appeal to importance",
-      "demand for evidence",
-      "call to action"
+      "questioning",
+      "demand for evidence"
     ]
   },
   {
@@ -138,8 +138,8 @@
     "text": "[Dave]: I believe we should focus on establishing a clearer timeline for Charlie's actions in the cafeteria, as his quick exit raises valid concerns, and Bob, could you share if you noticed anyone else in the area during that time?",
     "annotation": [
       "appeal to importance",
-      "information gathering",
-      "questioning"
+      "suggestion",
+      "information gathering"
     ]
   }
 ]

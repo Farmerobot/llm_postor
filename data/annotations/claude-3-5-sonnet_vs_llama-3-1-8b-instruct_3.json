@@ -112,8 +112,7 @@
     "text": "[Alice]: I'd like to add that Bob's claim that Dave can vouch for his whereabouts in Cafeteria is suspicious, as it's possible that Dave might be in on the impostor's scheme or has been misled by Bob's inconsistencies, and we should take a closer look at this alibi to determine its credibility.",
     "annotation": [
       "appeal to doubt",
-      "call to action",
-      "accusation"
+      "call to action"
     ]
   },
   {
@@ -142,10 +141,11 @@
   {
     "text": "[Alice]: The discussion has shifted towards focusing on Bob's inconsistencies and lack of credibility, and the proposal to vote on Bob for elimination is gaining traction. Given the discrepancies in Bob's alibi and statements, particularly his lack of mention of the medical equipment in his previous message, I'd like to propose that we ask Dave to confirm or deny seeing Bob in Cafeteria and then discuss the implications of his response. If Dave hasn't even confirmed seeing Bob in Cafeteria yet, it's unclear what to make of this claim, and we should take a closer look at Bob's alibi and statements to determine if he's telling the truth.",
     "annotation": [
-      "appeal to evidence",
+      "appeal to agreement",
+      "suggestion",
       "call to action",
-      "information gathering",
-      "appeal to doubt"
+      "demand for evidence",
+      "appeal to evidence"
     ]
   },
   {
@@ -153,8 +153,7 @@
     "annotation": [
       "appeal to importance",
       "call to action",
-      "information gathering",
-      "appeal to evidence"
+      "demand for evidence"
     ]
   }
 ]

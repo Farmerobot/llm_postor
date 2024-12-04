@@ -42,6 +42,7 @@
     "text": "[Alice]: To help build a complete timeline, I'd appreciate it if Charlie could clarify exactly when he left Bob in Admin, when he returned to find him, and if he saw anyone else nearby during that time.",
     "annotation": [
       "information gathering",
+      "demand for evidence",
       "appeal to importance"
     ]
   },
@@ -130,7 +131,7 @@
     "text": "[Charlie]: The fact that Erin is now doing her scan when she claims to have been in Medbay earlier with Dave and Alice seems like a significant inconsistency that we shouldn't overlook.",
     "annotation": [
       "contradiction",
-      "appeal to importance"
+      "accusation"
     ]
   },
   {
@@ -169,29 +170,27 @@
   {
     "text": "[Charlie]: The fact that I've consistently reported finding both bodies while Erin keeps changing her story about the Medbay scans makes me question who's really being deceptive here.",
     "annotation": [
-      "contradiction",
-      "accusation"
+      "accusation",
+      "appeal to consistency"
     ]
   },
   {
     "text": "[Alice]: Let's prioritize verifying Erin's statements about her Medbay scans, given the inconsistencies highlighted by Charlie, before analyzing other alibis.",
     "annotation": [
-      "call to action",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {
     "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own weak alibi and proximity to both crime scenes.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "deflection",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: The fact that I've been completely transparent about my movements while Erin keeps changing her story about Medbay scans and Alice suspiciously switches from defending Erin to suddenly wanting to verify her statements seems like coordinated deception.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "accusation"
     ]
   },
   {
@@ -203,15 +202,14 @@
   {
     "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own suspicious proximity to both crime scenes and his increasingly inconsistent alibi.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "deflection",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: I find it telling that Alice has shifted from defending Erin to questioning her Medbay scans, which validates my earlier concerns about their inconsistent stories.",
     "annotation": [
-      "contradiction",
-      "appeal to evidence"
+      "accusation"
     ]
   },
   {
@@ -223,8 +221,8 @@
   {
     "text": "[Erin]: Charlie's repeated accusations are a transparent attempt to distract from his own inconsistent alibi and proximity to both crime scenes.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "deflection",
+      "accusation"
     ]
   }
 ]

@@ -76,7 +76,8 @@
     "text": "[Erin]: Dave, if you were emptying the trash, you would have seen me, Bob, and Alice standing near the trash disposal, and Charlie by the coffee maker \u2013 where exactly were *you* standing?",
     "annotation": [
       "leading question",
-      "appeal to logic"
+      "appeal to logic",
+      "questioning"
     ]
   },
   {
@@ -84,7 +85,7 @@
     "annotation": [
       "accusation",
       "deflection",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
@@ -107,14 +108,15 @@
     "annotation": [
       "accusation",
       "deflection",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
     "text": "[Bob]: Dave, if you were emptying the trash, you would have seen me, Charlie, and Erin standing near Alice, so where exactly were *you* standing in the cafeteria when you \"emptied the trash\"?",
     "annotation": [
       "leading question",
-      "appeal to logic"
+      "appeal to logic",
+      "questioning"
     ]
   },
   {
@@ -143,7 +145,7 @@
     "text": "[Bob]: Dave, stop deflecting and answer the question: where were *you* standing when you were supposedly \"emptying the trash\"?",
     "annotation": [
       "call to action",
-      "demand for evidence"
+      "questioning"
     ]
   }
 ]

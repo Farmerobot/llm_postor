@@ -9,8 +9,8 @@
   {
     "text": "[Bob]: Alice, can you confirm seeing me in the Cafeteria and other rooms where I've reported completing tasks, as Charlie suggested we verify my movements?",
     "annotation": [
-      "demand for evidence",
-      "appeal to agreement"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -103,7 +103,7 @@
     "text": "[Alice]: Let's focus on establishing a concrete timeline of events in Medbay, then we can address task verification and alibis based on the evidence we find there.",
     "annotation": [
       "suggestion",
-      "call to action"
+      "appeal to logic"
     ]
   }
 ]

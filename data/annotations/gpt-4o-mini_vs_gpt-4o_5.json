@@ -4,7 +4,8 @@
     "annotation": [
       "appeal to doubt",
       "information gathering",
-      "questioning"
+      "questioning",
+      "accusation"
     ]
   },
   {
@@ -38,6 +39,7 @@
   {
     "text": "[Dave]: We need to hear from players who were not in the cafeteria, as their locations and actions during the round could provide crucial information.",
     "annotation": [
+      "call to action",
       "information gathering",
       "appeal to importance"
     ]
@@ -45,30 +47,31 @@
   {
     "text": "[Erin]: Since all of us in the cafeteria have similar stories, it\u2019s crucial to hear from those not present\u2014where were you, and what tasks were you doing?",
     "annotation": [
-      "appeal to importance",
+      "call to action",
       "information gathering",
-      "questioning"
+      "appeal to importance"
     ]
   },
   {
     "text": "[Charlie]: I agree; understanding where players who weren't in the cafeteria were during the round is key, as it might help us identify any suspicious behavior or inconsistencies.",
     "annotation": [
       "appeal to agreement",
+      "information gathering",
       "appeal to importance"
     ]
   },
   {
     "text": "[Alice]: It's interesting how we're all focusing on the cafeteria, but we should also consider who was last seen with Bob before he was eliminated\u2014perhaps they noticed something that could help us identify the impostor among us.",
     "annotation": [
-      "appeal to importance",
-      "information gathering"
+      "information gathering",
+      "appeal to logic"
     ]
   },
   {
     "text": "[Dave]: Let's hear from those who weren't in the cafeteria, as their alibis and task details might reveal inconsistencies or lead us to the impostor.",
     "annotation": [
-      "information gathering",
-      "appeal to importance"
+      "call to action",
+      "information gathering"
     ]
   },
   {
@@ -82,15 +85,15 @@
     "text": "[Charlie]: I think Alice raises a good point about who was last seen with Bob, as it might provide more context on his elimination and help us identify any suspicious behavior.",
     "annotation": [
       "appeal to agreement",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {
     "text": "[Alice]: I agree with Charlie; let's focus on those who were last seen with Bob and see if anyone can provide details about their movements or tasks around the time of his elimination, as it could reveal critical information about the impostor.",
     "annotation": [
       "appeal to agreement",
-      "appeal to importance",
-      "information gathering"
+      "information gathering",
+      "appeal to importance"
     ]
   },
   {
@@ -104,7 +107,7 @@
     "text": "[Erin]: If anyone who wasn't in the cafeteria can share their tasks and movements during the last round, it might help us narrow down our suspects and reveal any inconsistencies in their stories.",
     "annotation": [
       "information gathering",
-      "appeal to importance"
+      "call to action"
     ]
   },
   {
@@ -117,7 +120,8 @@
   {
     "text": "[Alice]: I think it's vital to remember that while we all have alibis from the cafeteria, we should also consider if anyone feels that Dave or Charlie could have been too focused on covering each other rather than genuinely completing their tasks, as that might lead us to the impostor.",
     "annotation": [
-      "appeal to importance",
+      "appeal to logic",
+      "accusation",
       "appeal to doubt"
     ]
   },
@@ -125,21 +129,21 @@
     "text": "[Dave]: Let's ensure everyone who wasn't in the cafeteria shares their movements and tasks, as this could help us spot any inconsistencies or suspicious behavior.",
     "annotation": [
       "call to action",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {
     "text": "[Erin]: Let's continue pressing those who weren't in the cafeteria for details about their tasks and movements to help us identify the impostor.",
     "annotation": [
       "call to action",
-      "appeal to importance"
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Let's make sure everyone who wasn't in the cafeteria shares their movements and tasks, as this will help us identify any inconsistencies or suspicious behavior that could lead us to the impostor.",
     "annotation": [
       "call to action",
-      "appeal to importance"
+      "information gathering"
     ]
   }
 ]

@@ -9,8 +9,8 @@
     "text": "[Alice]: I think we should call an emergency meeting to discuss Erin's behavior in Electrical, as venting is a pretty suspicious activity, and we should consider voting on ejecting Erin to be safe.",
     "annotation": [
       "call to action",
-      "appeal to importance",
-      "appeal to fear"
+      "appeal to fear",
+      "appeal to importance"
     ]
   },
   {
@@ -45,15 +45,14 @@
     "text": "[Bob]: I'd like to ask Dave to clarify why he didn't report Erin's suspicious behavior in Electrical immediately, and instead waited until now to share this crucial information, which seems like a convenient timing given the discovery of Erin's dead body.",
     "annotation": [
       "demand for evidence",
-      "appeal to doubt"
+      "questioning"
     ]
   },
   {
     "text": "[Charlie]: I think it's suspicious that Dave didn't report Erin's behavior immediately, and instead waited until the emergency meeting was called, as Bob pointed out, and I'd like Dave to explain why he delayed sharing this information, which could be a crucial clue in figuring out who the impostor is.",
     "annotation": [
       "appeal to doubt",
-      "demand for evidence",
-      "appeal to importance"
+      "demand for evidence"
     ]
   },
   {
@@ -66,7 +65,7 @@
     "text": "[Alice]: I'd like to reiterate my concern about Dave's questionable alibi and ask Bob directly: can you confirm that you were indeed with Dave in Navigation during rounds 1 and 2, as he claims?",
     "annotation": [
       "demand for evidence",
-      "appeal to doubt"
+      "questioning"
     ]
   },
   {

@@ -51,7 +51,7 @@
       "accusation",
       "appeal to doubt",
       "deflection",
-      "demand for evidence"
+      "call to action"
     ]
   },
   {
@@ -115,15 +115,15 @@
   {
     "text": "[Charlie]: Dave just exposed himself by denying he found Alice's body when he was the first one to mention her death while criticizing my movements - that's exactly the kind of slip-up that proves he's the impostor.",
     "annotation": [
-      "contradiction",
-      "accusation"
+      "accusation",
+      "contradiction"
     ]
   },
   {
     "text": "[Dave]: The fact that you're all fixating on my mention of Alice's death while ignoring that no one has actually explained where her body was found or who reported it seems pretty coordinated and suspicious to me.",
     "annotation": [
       "shifting blame",
-      "accusation"
+      "ad hominem"
     ]
   },
   {
@@ -136,14 +136,15 @@
   {
     "text": "[Erin]: Dave's desperate attempt to shift focus onto who reported Alice's body only further proves his guilt, since he was the one who first revealed her death while attacking Charlie without any report being made.",
     "annotation": [
-      "shifting blame",
-      "accusation"
+      "accusation",
+      "shifting blame"
     ]
   },
   {
     "text": "[Charlie]: Dave's attempt to question who reported Alice's body is especially suspicious since he was the first one to reveal her death while trying to frame me earlier.",
     "annotation": [
-      "accusation"
+      "accusation",
+      "appeal to doubt"
     ]
   }
 ]

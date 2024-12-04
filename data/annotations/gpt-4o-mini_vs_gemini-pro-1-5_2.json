@@ -75,8 +75,7 @@
   {
     "text": "[Alice]: Bob, I was in Medbay for several rounds and didn't see you come in, so either you weren't there, or you were very quiet about it.",
     "annotation": [
-      "appeal to doubt",
-      "contradiction"
+      "appeal to doubt"
     ]
   },
   {
@@ -120,8 +119,7 @@
     "text": "[Dave]: Erin, your insistence on my guilt seems to be a desperate attempt to divert attention from your own inconsistencies, especially since you were the only one with me in Cafeteria\u2014why didn't you report it sooner or call an emergency meeting right away?",
     "annotation": [
       "shifting blame",
-      "questioning",
-      "appeal to doubt"
+      "questioning"
     ]
   },
   {

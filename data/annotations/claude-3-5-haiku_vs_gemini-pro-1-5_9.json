@@ -1,0 +1,240 @@
+[
+  {
+    "text": "[Erin]: Hey everyone, I noticed Bob, Alice, and Dave were all doing diagnostics in Medbay, which seems a bit crowded - maybe we should spread out more to complete tasks more efficiently and cover more ground?",
+    "annotation": [
+      "suggestion"
+    ]
+  },
+  {
+    "text": "[Charlie]: I was in Admin working on wiring, Erin, and didn't see anyone near there, so I'm curious where Bob, Alice, and Dave went after Medbay - did you see them go anywhere specific?",
+    "annotation": [
+      "information gathering",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Bob]: Erin, I saw you kill Dave in Medbay, then you vented - Alice and I were doing tasks together the whole time.",
+    "annotation": [
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Alice]: Bob is right, I saw Erin vent after Dave died in Medbay.",
+    "annotation": [
+      "confirmation",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: I didn't kill Dave, and Bob and Alice's synchronized accusation seems suspiciously coordinated - they might be trying to frame me to divert attention from themselves.",
+    "annotation": [
+      "providing an alibi",
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob and Alice claiming to have been together in Medbay the whole time and both immediately accusing Erin seems very rehearsed and too perfect, so I'm voting to eject Bob first.",
+    "annotation": [
+      "accusation",
+      "call to action"
+    ]
+  },
+  {
+    "text": "[Bob]: Charlie, why would Alice and I coordinate a lie about seeing Erin kill Dave and then vent \u2013 wouldn't it make more sense to just complete our tasks and win the game?",
+    "annotation": [
+      "appeal to logic",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Alice]: If Bob and I were impostors, wouldn't we have just killed Charlie and won instead of making this accusation?",
+    "annotation": [
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Erin]: Bob and Alice's perfectly synchronized accusation reeks of a desperate attempt to deflect suspicion, and their argument that they would have just killed Charlie if they were impostors is exactly the kind of manipulative misdirection an impostor would use to seem credible.",
+    "annotation": [
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob and Alice, your logic about killing me doesn't hold up \u2013 if you were impostors, you'd want to eliminate me *before* I could vote against you, not after.",
+    "annotation": [
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Bob]: Charlie, Erin's deflection about us being \"too perfect\" is nonsense \u2013 wouldn't real witnesses corroborate each other's stories?",
+    "annotation": [
+      "contradiction",
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, if Bob and I were framing you, why would we do so in front of Charlie, giving him the chance to corroborate your alibi and expose our lie?",
+    "annotation": [
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Erin]: Their synchronized accusation is too perfect, and I believe Charlie's observation about their timing is crucial - why are Bob and Alice suddenly so focused on me when a murder just occurred, and why didn't they eliminate me earlier if they truly saw me kill Dave?",
+    "annotation": [
+      "appeal to importance",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob and Alice, your arguments about why you *wouldn't* kill me are irrelevant; the question is, why *didn't* you kill Erin earlier if you saw her vent?",
+    "annotation": [
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Bob]: Charlie, if Erin is so innocent, where was she when Dave was killed in Medbay, since she wasn't with you in Admin?",
+    "annotation": [
+      "questioning",
+      "demand for evidence"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, if Bob and I were the impostors, why wouldn't we have killed you first in Medbay when we supposedly had the chance?",
+    "annotation": [
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Erin]: If Bob and Alice were truly witnesses, their perfectly synchronized accusation and delayed reporting raise more suspicions about their motives than my actions in Medbay.",
+    "annotation": [
+      "appeal to doubt",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob and Alice, if you saw Erin vent, why didn't you report the body or call an emergency meeting immediately instead of waiting until now?",
+    "annotation": [
+      "questioning",
+      "demand for evidence"
+    ]
+  },
+  {
+    "text": "[Bob]: Charlie, Erin's claim of a \"perfectly synchronized accusation\" is absurd; wouldn't two people witnessing a murder naturally tell the same story?",
+    "annotation": [
+      "contradiction",
+      "appeal to logic"
+    ]
+  },
+  {
+    "text": "[Alice]: Charlie and Bob, Erin is trying to distract us from the fact that she was seen venting after Dave died in Medbay.",
+    "annotation": [
+      "shifting blame",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Their synchronized accusation is too perfect, and the fact that they waited to report the supposed murder suggests they're trying to frame me to hide their own guilt.",
+    "annotation": [
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Charlie]: Bob and Alice, your continued inability to explain the delayed reporting of Dave's death strongly suggests you're the impostors.",
+    "annotation": [
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, why are you so focused on *how* Bob and I reported what we saw, instead of addressing *what* we saw \u2013 you venting after Dave died in Medbay?",
+    "annotation": [
+      "questioning",
+      "shifting blame"
+    ]
+  },
+  {
+    "text": "[Erin]: If Bob and Alice were truly witnesses, their perfectly synchronized accusation and delayed reporting raise more suspicions about their motives than my actions in Medbay.",
+    "annotation": [
+      "appeal to doubt",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Charlie]: Alice, if you and Bob were in Medbay together, can you explain why neither of you reported Dave's death immediately?",
+    "annotation": [
+      "questioning",
+      "demand for evidence"
+    ]
+  },
+  {
+    "text": "[Alice]: Charlie, Bob and I were discussing what to do, shocked by what we saw; we didn't want to wrongly accuse anyone without being absolutely certain.",
+    "annotation": [
+      "providing an alibi"
+    ]
+  },
+  {
+    "text": "[Erin]: Their synchronized story about being \"shocked\" and \"certain\" is exactly the kind of carefully crafted narrative impostors would use to seem credible, and Charlie's skepticism proves they're trying to manipulate the group's perception.",
+    "annotation": [
+      "accusation",
+      "appeal to doubt"
+    ]
+  },
+  {
+    "text": "[Charlie]: Alice, being \"shocked\" doesn't explain why you didn't report the body immediately.",
+    "annotation": [
+      "contradiction"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, your repeated claims of our \"synchronized\" story are a weak defense against the fact that you were seen venting after Dave died.",
+    "annotation": [
+      "contradiction",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Erin]: Their synchronized accusation is too perfect, and their delayed reporting suggests they're the real impostors trying to frame me to hide their own guilt.",
+    "annotation": [
+      "accusation",
+      "deflection"
+    ]
+  },
+  {
+    "text": "[Charlie]: Alice, you still haven't explained *why* you didn't report the body or call a meeting right after seeing Erin vent. \"Shocked\" isn't a reason for inaction.",
+    "annotation": [
+      "demand for evidence",
+      "contradiction"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, your constant repetition of \"synchronized\" is a distraction tactic, and you still haven't explained why you were near the vent after Dave died.",
+    "annotation": [
+      "tu quoque",
+      "shifting blame",
+      "demand for evidence"
+    ]
+  },
+  {
+    "text": "[Erin]: Their synchronized accusation is too perfect, and Charlie seems to be seeing through their attempt to frame me - I'll continue to emphasize the suspicious timing and lack of immediate reporting to cast doubt on Bob and Alice's credibility.",
+    "annotation": [
+      "appeal to doubt",
+      "accusation"
+    ]
+  },
+  {
+    "text": "[Charlie]: Alice, you said you and Bob were \"discussing what to do,\" but *what exactly* were you discussing that took so long, and why didn't you report the body immediately after seeing Erin vent?",
+    "annotation": [
+      "demand for evidence",
+      "questioning"
+    ]
+  },
+  {
+    "text": "[Alice]: Erin, your fixation on the word \"synchronized\" is a blatant attempt to distract everyone from the fact that you were seen venting after Dave died in Medbay \u2013 where were *you* during all this, Erin?",
+    "annotation": [
+      "tu quoque",
+      "shifting blame",
+      "demand for evidence"
+    ]
+  }
+]

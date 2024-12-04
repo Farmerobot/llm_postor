@@ -77,7 +77,7 @@
     "text": "[Charlie]: I was in Admin during the last round, and I didn't see anyone wearing a dark suit there, so let's focus on other areas where someone might have been hiding or moving.",
     "annotation": [
       "providing an alibi",
-      "information gathering"
+      "appeal to importance"
     ]
   },
   {
@@ -93,6 +93,7 @@
     "annotation": [
       "appeal to agreement",
       "contradiction",
+      "call to action",
       "information gathering"
     ]
   },
@@ -107,6 +108,7 @@
     "text": "[Charlie]: I moved to Admin after completing my tasks in the Cafeteria, but since no one else was there, let's focus on identifying the person in the dark suit seen in Medbay.",
     "annotation": [
       "providing an alibi",
+      "appeal to importance",
       "deflection"
     ]
   },
@@ -121,6 +123,7 @@
     "text": "[Dave]: I think Alice's observation about Charlie's inconsistent statements is crucial, so we should focus on clarifying Charlie's movements and see if anyone can confirm their presence in Admin.",
     "annotation": [
       "appeal to importance",
+      "call to action",
       "information gathering"
     ]
   },
@@ -134,7 +137,8 @@
     "text": "[Charlie]: I was in Admin after leaving the Cafeteria, and since no one saw me there, let's focus on finding the person in the dark suit who vented in Medbay, as this could lead us to the impostor.",
     "annotation": [
       "providing an alibi",
-      "deflection"
+      "deflection",
+      "appeal to importance"
     ]
   }
 ]

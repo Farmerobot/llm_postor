@@ -26,9 +26,8 @@
     "text": "[Alice]: I find it interesting that both Erin and Bob are so quick to defend each other while deflecting the focus away from their own movements in Medbay; we should really scrutinize their actions more closely.",
     "annotation": [
       "appeal to doubt",
-      "accusation",
-      "call to action",
-      "deflection"
+      "deflection",
+      "call to action"
     ]
   },
   {
@@ -83,15 +82,16 @@
     "text": "[Erin]: I can provide specific details about my Medbay task: I completed the wiring task, which involved connecting three colored wires in the correct sequence, and I'm willing to have Bob corroborate my actions, unlike Alice who has provided no concrete evidence about her own task completion or movements.",
     "annotation": [
       "providing an alibi",
-      "demand for evidence",
-      "appeal to evidence"
+      "confirmation",
+      "appeal to evidence",
+      "ad hominem"
     ]
   },
   {
     "text": "[Bob]: I'll continue to highlight Alice's suspicious behavior by directly challenging her lack of transparency and drawing attention to her elimination of Dave, which seems like a calculated move to disrupt the crew's trust and investigation.",
     "annotation": [
       "accusation",
-      "appeal to fear"
+      "appeal to importance"
     ]
   },
   {
@@ -99,13 +99,14 @@
     "annotation": [
       "appeal to doubt",
       "questioning",
-      "deflection"
+      "accusation"
     ]
   },
   {
     "text": "[Erin]: Bob can confirm I completed the wiring task in Medbay with three colored wires, which shows my transparency, and I challenge Alice to provide her own task completion evidence or explain her elimination of Dave, as her repeated attempts to cast doubt without concrete information suggest she may be trying to deflect attention from her own suspicious behavior.",
     "annotation": [
       "confirmation",
+      "appeal to evidence",
       "demand for evidence",
       "accusation",
       "deflection"
@@ -115,8 +116,9 @@
     "text": "[Bob]: I can definitively confirm Erin's wiring task in Medbay and emphasize that Alice's repeated attempts to create doubt without providing any evidence of her own actions strongly suggest she is trying to hide something about Dave's elimination.",
     "annotation": [
       "confirmation",
-      "appeal to doubt",
-      "accusation"
+      "appeal to evidence",
+      "accusation",
+      "appeal to doubt"
     ]
   }
 ]

@@ -220,7 +220,8 @@
   {
     "text": "[Erin]: Charlie, your continued insistence on Dave being in Medbay despite evidence to the contrary is quite concerning, especially since I can confirm that I saw Dave doing the wiring task in Weapons.",
     "annotation": [
-      "accusation",
+      "contradiction",
+      "appeal to evidence",
       "confirmation"
     ]
   },

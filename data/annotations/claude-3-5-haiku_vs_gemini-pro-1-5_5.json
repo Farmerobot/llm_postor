@@ -33,7 +33,7 @@
     "text": "[Alice]: We need to stop pointing fingers and focus on finding Bob's killer before they strike again!",
     "annotation": [
       "appeal to importance",
-      "call to action"
+      "deflection"
     ]
   },
   {
@@ -48,6 +48,7 @@
   {
     "text": "[Dave]: Alice, you're deflecting by focusing on others \u2013 exactly where were you standing when I found Bob's body, and what were you doing at that moment?",
     "annotation": [
+      "accusation",
       "deflection",
       "demand for evidence",
       "questioning"
@@ -56,7 +57,6 @@
   {
     "text": "[Erin]: Alice, your continued deflection makes you highly suspicious; please answer Charlie and Dave's direct questions about your location and actions when Bob died.",
     "annotation": [
-      "deflection",
       "accusation",
       "call to action"
     ]
@@ -65,7 +65,7 @@
     "text": "[Alice]: I was doing wiring tasks near the coffee maker when Bob was killed, which Erin can confirm, and I'm focused on finding the real killer rather than getting caught up in baseless accusations that only distract us from solving Bob's murder.",
     "annotation": [
       "providing an alibi",
-      "appeal to importance",
+      "appeal to agreement",
       "deflection"
     ]
   },
@@ -73,7 +73,6 @@
     "text": "[Charlie]: Alice, your repeated claim of \"finding the killer\" rings hollow when you consistently evade direct questions about your own location and actions surrounding Bob's death \u2013 answer the questions!",
     "annotation": [
       "contradiction",
-      "accusation",
       "call to action"
     ]
   },
@@ -81,8 +80,7 @@
     "text": "[Dave]: Alice, if you were by the coffee maker, you would have been standing directly over Bob's body, yet you claimed to be doing wiring tasks \u2013 were you repairing the coffee maker, or was it a wiring task, and *which* wiring task were you doing?",
     "annotation": [
       "contradiction",
-      "questioning",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
@@ -110,14 +108,14 @@
   {
     "text": "[Dave]: Alice, you said you were making \"final connections\" near the coffee maker, but *how long* does it take to make \"final connections,\" and *why* were you still there after supposedly finishing the wiring task earlier?",
     "annotation": [
-      "demand for evidence",
-      "questioning"
+      "questioning",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: Alice, you haven't answered *any* of our questions about your location and actions when Bob was killed\u2014were you standing over his body by the coffee maker or not?",
     "annotation": [
-      "accusation",
+      "demand for evidence",
       "questioning"
     ]
   },
@@ -131,7 +129,7 @@
   {
     "text": "[Charlie]: Alice, claiming \"aggressive questioning\" hinders your recall is a classic evasion tactic; just answer the simple questions: *where* were you standing, and *what* wires were you connecting?",
     "annotation": [
-      "ad hominem",
+      "accusation",
       "call to action",
       "questioning"
     ]

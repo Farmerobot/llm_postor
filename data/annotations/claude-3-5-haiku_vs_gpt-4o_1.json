@@ -59,8 +59,8 @@
   {
     "text": "[Dave]: I'll subtly cast doubt on Erin's credibility while protecting myself: Erin's accusation seems like a desperate attempt to shift blame, especially since she was conveniently with Bob right before his elimination and now claims to have witnessed something, which sounds like she's trying to control the narrative and deflect suspicion from herself.",
     "annotation": [
-      "deflection",
       "shifting blame",
+      "deflection",
       "appeal to doubt"
     ]
   },
@@ -75,7 +75,8 @@
   {
     "text": "[Charlie]: Let's focus on gathering more information about Dave's movements after the Cafeteria, as that could help clarify whether Erin's accusation holds any weight.",
     "annotation": [
-      "information gathering"
+      "information gathering",
+      "appeal to logic"
     ]
   },
   {
@@ -91,7 +92,7 @@
       "demand for evidence",
       "appeal to doubt",
       "deflection",
-      "shifting blame"
+      "accusation"
     ]
   },
   {
@@ -119,7 +120,7 @@
     "annotation": [
       "appeal to doubt",
       "ad hominem",
-      "shifting blame"
+      "appeal to logic"
     ]
   },
   {

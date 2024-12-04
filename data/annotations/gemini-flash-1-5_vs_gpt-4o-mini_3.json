@@ -83,7 +83,7 @@
     "annotation": [
       "questioning",
       "information gathering",
-      "appeal to logic"
+      "appeal to importance"
     ]
   },
   {
@@ -105,8 +105,8 @@
     "text": "[Alice]: Let's not rush to conclusions; instead of focusing solely on me, let's analyze Charlie and Dave's movements during the time of Bob's death, as they were together and could provide crucial insights into what really happened.",
     "annotation": [
       "appeal to logic",
-      "shifting blame",
-      "information gathering"
+      "information gathering",
+      "shifting blame"
     ]
   },
   {

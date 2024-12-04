@@ -40,15 +40,14 @@
   {
     "text": "[Charlie]: Dave, two people confirming your lie makes your \"mix-up\" excuse highly improbable, so let's vote him out.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: Dave, two people saw you in Medbay, you lied about your location, and now you're deflecting; it's time to vote you out.",
     "annotation": [
       "accusation",
-      "contradiction",
       "deflection",
       "call to action"
     ]
@@ -71,6 +70,7 @@
     "text": "[Charlie]: Three of us saw Dave in Medbay, he lied, offered a weak excuse, and is now deflecting; vote Dave.",
     "annotation": [
       "accusation",
+      "deflection",
       "call to action"
     ]
   },
@@ -78,7 +78,6 @@
     "text": "[Alice]: Dave, two people saw you in Medbay, you lied about your location, and now you're deflecting; it's time to vote you out.",
     "annotation": [
       "accusation",
-      "contradiction",
       "deflection",
       "call to action"
     ]
@@ -140,7 +139,6 @@
     "annotation": [
       "accusation",
       "contradiction",
-      "deflection",
       "call to action"
     ]
   }

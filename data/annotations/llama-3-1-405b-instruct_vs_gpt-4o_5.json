@@ -3,7 +3,7 @@
     "text": "[Charlie]: I'd like to hear from Dave about where he went after leaving the cafeteria, and also if anyone has seen or worked with Ben, since we haven't heard from him yet.",
     "annotation": [
       "information gathering",
-      "demand for evidence"
+      "questioning"
     ]
   },
   {
@@ -44,9 +44,9 @@
   {
     "text": "[Charlie]: It's interesting that Alice is pushing so hard for confirmation of her accusation against me, but she's yet to address the inconsistencies in her own alibi, such as why she didn't mention fixing wiring in the Weapons room earlier.",
     "annotation": [
-      "appeal to doubt",
       "contradiction",
-      "accusation"
+      "accusation",
+      "demand for evidence"
     ]
   },
   {

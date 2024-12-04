@@ -25,9 +25,9 @@
   {
     "text": "[Charlie]: I'd like to point out that Dave is deflecting attention from his own actions by asking others to provide more information, and I'd like to reiterate my request for him to provide a clear explanation for his repeated movement between Electrical and Lower Engine, as well as his recent presence in Admin and Medbay.",
     "annotation": [
-      "accusation",
       "deflection",
-      "demand for evidence"
+      "demand for evidence",
+      "accusation"
     ]
   },
   {
@@ -56,9 +56,9 @@
   {
     "text": "[Charlie]: I'd like to call out Dave's latest attempt to deflect attention by bringing up my own movements, which I've already explained, and instead, I'd like to put his ejection to a vote, as his continued evasiveness and lack of clear explanations have only strengthened my conviction that he's an impostor.",
     "annotation": [
-      "accusation",
       "deflection",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {
@@ -75,7 +75,7 @@
     "annotation": [
       "appeal to agreement",
       "call to action",
-      "appeal to importance"
+      "accusation"
     ]
   },
   {
@@ -89,6 +89,7 @@
     "text": "[Charlie]: I'd like to address Dave's claim that we're ganging up on him without evidence, but the fact remains that he's had multiple opportunities to provide clear explanations for his actions and has consistently failed to do so, which is why I believe his ejection is necessary.",
     "annotation": [
       "appeal to consistency",
+      "accusation",
       "call to action"
     ]
   },
@@ -96,8 +97,9 @@
     "text": "[Alice]: I firmly believe that Dave's continued evasiveness and lack of clear explanations have only strengthened our suspicions that he's an impostor, and I think it's essential to put his name to a vote to ensure the safety and integrity of our crew, given his suspicious behavior and the fact that he's consistently failed to provide a clear explanation for his actions, which is a clear indication of his guilt.",
     "annotation": [
       "appeal to consistency",
-      "appeal to importance",
-      "accusation"
+      "accusation",
+      "call to action",
+      "appeal to importance"
     ]
   },
   {
@@ -120,8 +122,8 @@
   {
     "text": "[Charlie]: I'd like to emphasize that Dave's latest attempt to divert attention from his own suspicious behavior by suggesting we review the evidence and focus on our objectives is just another desperate attempt to avoid accountability for his actions, and I firmly believe that we should proceed with the vote to eject him from the game.",
     "annotation": [
-      "accusation",
       "deflection",
+      "accusation",
       "call to action"
     ]
   },
@@ -137,7 +139,8 @@
     "text": "[Bob]: I agree with Alice that it's time to bring the vote to a close and decide on Dave's fate, as his persistent evasiveness and lack of transparency have only reinforced our suspicions that he's an impostor.",
     "annotation": [
       "appeal to agreement",
-      "call to action"
+      "call to action",
+      "accusation"
     ]
   },
   {

@@ -35,16 +35,14 @@
     "annotation": [
       "appeal to agreement",
       "call to action",
-      "appeal to evidence",
-      "demand for evidence"
+      "appeal to evidence"
     ]
   },
   {
     "text": "[Charlie]: Dave, your defensiveness only strengthens my claim; I witnessed you eliminate Alice, and with Erin corroborating my presence in Medbay, it\u2019s crucial we focus on you as the main suspect while we all share our movements.",
     "annotation": [
       "accusation",
-      "appeal to consistency",
-      "appeal to importance",
+      "appeal to evidence",
       "call to action"
     ]
   },
@@ -61,24 +59,22 @@
     "annotation": [
       "accusation",
       "deflection",
-      "call to action",
-      "appeal to doubt"
+      "call to action"
     ]
   },
   {
     "text": "[Charlie]: Dave's attempts to deflect attention from his suspicious behavior only reinforce the need for us to scrutinize his movements closely, especially since I reported the body immediately after witnessing his actions in Medbay.",
     "annotation": [
-      "deflection",
-      "call to action",
-      "appeal to importance"
+      "accusation",
+      "deflection"
     ]
   },
   {
     "text": "[Dave]: Charlie's accusation seems incredibly convenient and lacks the specific details needed to credibly prove my involvement, so I believe we should focus on a comprehensive investigation that examines everyone's movements and potential motives, not just target me without substantial evidence.",
     "annotation": [
       "appeal to doubt",
-      "demand for evidence",
-      "call to action"
+      "appeal to logic",
+      "demand for evidence"
     ]
   },
   {
@@ -92,8 +88,8 @@
   {
     "text": "[Charlie]: Dave, your continued deflection and failure to provide a clear timeline of your actions after leaving Medbay only heightens my suspicions, and I urge everyone to focus on your movements as we prepare to vote.",
     "annotation": [
-      "deflection",
       "accusation",
+      "deflection",
       "call to action"
     ]
   },
@@ -102,23 +98,21 @@
     "annotation": [
       "providing an alibi",
       "appeal to doubt",
-      "suggestion",
-      "call to action"
+      "suggestion"
     ]
   },
   {
     "text": "[Erin]: We need to press Dave for a detailed timeline of his tasks and movements after leaving Medbay, as his inability to provide clarity only deepens the suspicions surrounding his actions.",
     "annotation": [
       "demand for evidence",
-      "appeal to doubt",
-      "appeal to importance"
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Charlie]: Dave, your ongoing deflection and vague explanations about your movements only reinforce the need for us to scrutinize your actions closely, especially since I directly witnessed you eliminate Alice and reported it immediately, which shows my commitment to the game's integrity.",
     "annotation": [
+      "accusation",
       "deflection",
-      "call to action",
       "appeal to importance"
     ]
   }

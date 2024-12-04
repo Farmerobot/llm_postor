@@ -104,7 +104,6 @@
   {
     "text": "[Erin]: Dave, please clarify what you saw after Cafeteria, as your input could help us unravel Bob's questionable alibi and confirm whether he's trying to mislead us.",
     "annotation": [
-      "demand for evidence",
       "information gathering",
       "call to action"
     ]
@@ -113,8 +112,7 @@
     "text": "[Alice]: Dave, your observations are crucial for piecing together the timeline after Cafeteria, so please share what you saw to help us determine Bob's true movements and intentions.",
     "annotation": [
       "appeal to importance",
-      "information gathering",
-      "call to action"
+      "information gathering"
     ]
   }
 ]

@@ -60,7 +60,7 @@
     "annotation": [
       "call to action",
       "appeal to importance",
-      "information gathering",
+      "demand for evidence",
       "questioning"
     ]
   },
@@ -76,7 +76,8 @@
     "text": "[Dave]: I'd like to emphasize that Alice's continued silence is becoming increasingly suspicious, and I think it's essential that she provides a thorough account of her movements and interactions immediately, as her lack of transparency is starting to raise more questions than answers.",
     "annotation": [
       "appeal to importance",
-      "accusation"
+      "accusation",
+      "appeal to doubt"
     ]
   },
   {

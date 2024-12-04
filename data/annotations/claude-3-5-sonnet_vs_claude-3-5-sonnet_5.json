@@ -51,8 +51,7 @@
     "text": "[Bob]: Charlie's \"typo\" defense is completely unbelievable - who accidentally types out a full strategy about \"establishing credibility while subtly casting suspicion\" as an impostor?",
     "annotation": [
       "contradiction",
-      "accusation",
-      "appeal to logic"
+      "accusation"
     ]
   },
   {
@@ -83,8 +82,8 @@
     "annotation": [
       "confirmation",
       "contradiction",
-      "appeal to evidence",
-      "accusation"
+      "accusation",
+      "appeal to evidence"
     ]
   },
   {
@@ -99,8 +98,7 @@
     "text": "[Charlie]: Everyone seems very focused on discrediting me, but isn't it suspicious that Dave, Bob, and Erin's stories align so perfectly - almost as if they coordinated their responses?",
     "annotation": [
       "deflection",
-      "appeal to doubt",
-      "accusation"
+      "appeal to doubt"
     ]
   },
   {
@@ -113,8 +111,8 @@
   {
     "text": "[Bob]: Charlie's desperate attempts to create conspiracy theories about coordination won't change the facts: I saw Dave complete the coffee maker and leave towards Weapons, Charlie confessed to being an impostor, and they were caught with Alice's body in Medbay after following her there.",
     "annotation": [
-      "appeal to evidence",
       "repetition",
+      "appeal to evidence",
       "accusation"
     ]
   },
@@ -129,8 +127,7 @@
   {
     "text": "[Charlie]: I know I look guilty, but think about it - if I really killed Alice, why would I still be in Medbay when Erin found the body instead of running away?",
     "annotation": [
-      "appeal to doubt",
-      "appeal to logic"
+      "appeal to doubt"
     ]
   },
   {
@@ -145,8 +142,7 @@
     "text": "[Bob]: Their latest defense about staying at the murder scene actually makes them even more suspicious - as an experienced player, I know impostors often stay with bodies they've killed to \"discover\" them and appear innocent, which is exactly what Charlie did with Alice in Medbay.",
     "annotation": [
       "appeal to logic",
-      "accusation",
-      "appeal to experience"
+      "accusation"
     ]
   },
   {

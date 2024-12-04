@@ -106,6 +106,7 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
+      "appeal to doubt",
       "deflection"
     ]
   },
@@ -153,7 +154,8 @@
     "annotation": [
       "appeal to agreement",
       "appeal to importance",
-      "appeal to doubt"
+      "appeal to doubt",
+      "deflection"
     ]
   }
 ]

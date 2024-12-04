@@ -62,7 +62,6 @@
     "text": "[Dave]: Alice's repeated attempts to create doubt and her confirmed elimination of Charlie make her the most suspicious player, and we should focus on investigating her actions and potential involvement in the recent deaths.",
     "annotation": [
       "accusation",
-      "appeal to evidence",
       "call to action"
     ]
   },
@@ -74,16 +73,9 @@
     ]
   },
   {
-    "text": "[Alice]: real witnesses offer details, not declarations \u2013 what *exactly* did she see?",
-    "annotation": [
-      "demand for evidence",
-      "questioning"
-    ]
-  },
-  {
     "text": "[Erin]: I saw Alice directly eliminate Charlie near the trash area in the Cafeteria, and her repeated attempts to challenge my testimony only confirm her guilt by trying to create confusion instead of providing a clear explanation of her actions.",
     "annotation": [
-      "providing an alibi",
+      "appeal to evidence",
       "accusation"
     ]
   },
@@ -98,14 +90,14 @@
     "text": "[Alice]: So, Dave, you're also claiming to have seen me eliminate Charlie near the trash in the Cafeteria \u2013 were *you* standing right next to Erin, or is this another conveniently matching story?",
     "annotation": [
       "questioning",
-      "accusation",
-      "appeal to doubt"
+      "appeal to doubt",
+      "accusation"
     ]
   },
   {
     "text": "[Erin]: I directly witnessed Alice eliminating Charlie near the trash area in the Cafeteria, and her continued attempts to create doubt and challenge our consistent testimonies only further confirm her suspicious behavior and potential guilt as an impostor.",
     "annotation": [
-      "providing an alibi",
+      "appeal to evidence",
       "accusation"
     ]
   },

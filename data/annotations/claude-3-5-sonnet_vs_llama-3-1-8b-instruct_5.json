@@ -86,8 +86,8 @@
       "appeal to importance",
       "information gathering",
       "call to action",
-      "suggestion",
-      "accusation"
+      "accusation",
+      "suggestion"
     ]
   },
   {
@@ -97,8 +97,8 @@
       "appeal to importance",
       "information gathering",
       "call to action",
-      "suggestion",
-      "accusation"
+      "accusation",
+      "suggestion"
     ]
   },
   {
@@ -115,8 +115,8 @@
       "appeal to importance",
       "information gathering",
       "call to action",
-      "suggestion",
-      "accusation"
+      "accusation",
+      "suggestion"
     ]
   },
   {
@@ -134,15 +134,15 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "suggestion",
-      "call to action"
+      "call to action",
+      "suggestion"
     ]
   },
   {
     "text": "[Dave]: You're all so focused on my exact wording about tasks, but isn't it strange that the three of you were together in Medbay this whole time and still can't give a clear explanation of what you were actually doing there?",
     "annotation": [
       "deflection",
-      "demand for evidence"
+      "appeal to doubt"
     ]
   },
   {
@@ -151,9 +151,9 @@
       "appeal to agreement",
       "appeal to importance",
       "information gathering",
+      "accusation",
       "call to action",
-      "suggestion",
-      "accusation"
+      "suggestion"
     ]
   },
   {
@@ -161,8 +161,8 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "suggestion",
-      "call to action"
+      "call to action",
+      "suggestion"
     ]
   },
   {
@@ -170,8 +170,8 @@
     "annotation": [
       "appeal to importance",
       "information gathering",
-      "suggestion",
-      "call to action"
+      "call to action",
+      "suggestion"
     ]
   }
 ]

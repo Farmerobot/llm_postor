@@ -17,9 +17,9 @@
   {
     "text": "[Charlie]: I just submitted my scan in Medbay, and I can confirm I was alone here before Dave and Bob arrived; however, I think we need to focus on Dave's whereabouts since he was last with Alice before her elimination.",
     "annotation": [
-      "confirmation",
       "providing an alibi",
-      "accusation"
+      "accusation",
+      "appeal to importance"
     ]
   },
   {
@@ -34,8 +34,7 @@
     "annotation": [
       "deflection",
       "accusation",
-      "demand for evidence",
-      "questioning"
+      "demand for evidence"
     ]
   },
   {
