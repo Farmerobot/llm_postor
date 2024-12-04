@@ -1,146 +1,169 @@
 [
   {
     "text": "[Charlie]: I was in the cafeteria the whole time, and I didn't see anyone enter or leave.",
-    "annotation": []
+    "annotation": [
+      "providing an alibi"
+    ]
   },
   {
     "text": "[Erin]: I saw Charlie eliminate Dave in the cafeteria, which completely contradicts his claim of not seeing anything, and I can prove my credibility by mentioning that I've already completed the cafeteria trash task twice.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "accusation",
+      "contradiction",
+      "providing an alibi"
     ]
   },
   {
     "text": "[Bob]: I can confirm that Charlie's statement is false, as I was in the cafeteria earlier and saw multiple people, including Dave doing tasks, which makes Erin's accusation seem credible and Charlie's claim highly suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "confirmation",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: I saw multiple people in the cafeteria earlier, including Dave doing tasks, and I can confirm that Charlie's claim of not seeing anyone is absolutely false, which strongly supports Erin's accusation that Charlie is an impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "confirmation",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: Erin's accusation lacks concrete details, and Bob and Alice's corroboration is equally vague;  let's demand specific times and task details before jumping to conclusions.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "demand for evidence",
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Erin]: I firmly believe Charlie is trying to create doubt by asking for unnecessary specifics, and given the consistent testimony from Bob, Alice, and myself about his suspicious behavior in the cafeteria, we should vote to eject him immediately to protect the remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "accusation",
+      "appeal to doubt",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Bob]: I strongly support Erin's recommendation to vote and eject Charlie, as the overwhelming evidence from multiple witnesses, including my own testimony, clearly indicates his suspicious behavior and potential role as an impostor who eliminated Dave.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "appeal to agreement",
+      "call to action",
+      "appeal to evidence",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: I believe we have strong, consistent testimony from multiple players that Charlie is an impostor, and we must vote to eject him to prevent further eliminations of our crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "appeal to agreement",
+      "call to action",
+      "appeal to fear",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: Erin, Bob, and Alice's testimonies lack specific times and task details, making their claims unreliable and insufficient to justify a hasty vote.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "appeal to doubt",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: I stand by my previous statement and urge everyone to vote Charlie out, as his repeated attempts to deflect by demanding unnecessary specifics are a clear impostor tactic designed to sow doubt and avoid ejection.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "repetition",
+      "accusation",
+      "deflection",
+      "call to action"
     ]
   },
   {
     "text": "[Bob]: I believe we have overwhelming evidence from multiple witnesses, including myself, Alice, and Erin, that Charlie is an impostor who eliminated Dave, and we must vote to eject him immediately to protect the remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "appeal to evidence",
+      "accusation",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Alice]: I firmly believe that Charlie's repeated attempts to demand unnecessary specifics and deflect attention are clear signs of his impostor status, and we must vote to eject him to protect the remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "accusation",
+      "deflection",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Charlie]: The lack of precise timestamps and task details in Erin, Bob, and Alice's accusations renders their claims unreliable, and a premature vote based on such vague testimony risks eliminating an innocent crewmate.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "appeal to doubt",
+      "appeal to fear",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: I maintain my unwavering position that Charlie's desperate attempts to create confusion by demanding unnecessary specifics are a textbook impostor strategy, and we must vote to eject him immediately to protect our remaining crew members.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "repetition",
+      "accusation",
+      "deflection",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Bob]: I reiterate my strong support for ejecting Charlie, as the consistent testimony from multiple witnesses, including myself, Erin, and Alice, provides overwhelming evidence of his suspicious behavior and potential role as an impostor who eliminated Dave in the cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "repetition",
+      "appeal to agreement",
+      "appeal to evidence",
+      "accusation"
     ]
   },
   {
     "text": "[Alice]: I urge all players to vote to eject Charlie, as the overwhelming and consistent testimony from multiple witnesses, including myself, Bob, and Erin, clearly demonstrates his impostor status and the urgent need to protect our remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "call to action",
+      "appeal to evidence",
+      "appeal to fear",
+      "accusation"
     ]
   },
   {
     "text": "[Charlie]: Their accusations remain vague;  without precise times and task details,  voting to eject me is a reckless gamble that could eliminate an innocent crewmate.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "appeal to doubt",
+      "appeal to fear",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: I stand by our collective testimony and urge everyone to vote Charlie out, as his continued deflection and demand for unnecessary specifics are clear signs of an impostor trying to avoid ejection and protect his ability to eliminate more crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Credibility"
+      "appeal to agreement",
+      "call to action",
+      "accusation",
+      "deflection",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Bob]: I firmly believe that Charlie's repeated attempts to create doubt by demanding unnecessary specifics are a classic impostor tactic, and we must vote to eject him immediately to protect our remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "accusation",
+      "appeal to doubt",
+      "call to action",
+      "appeal to fear"
     ]
   },
   {
     "text": "[Alice]: I strongly urge all players to vote Charlie out, as his persistent attempts to create confusion and demand unnecessary specifics are clear indicators of his impostor status, and we must act decisively to protect our remaining crewmates from potential further eliminations.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Urgency"
+      "call to action",
+      "accusation",
+      "appeal to fear"
     ]
   }
 ]

@@ -2,130 +2,164 @@
   {
     "text": "[Alice]: I think we should focus on completing the tasks at hand, but also keep an eye on Charlie's behavior, as it does seem suspicious that they moved to Admin so quickly after completing a task in the Cafeteria.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "appeal to importance",
+      "appeal to doubt"
     ]
   },
   {
     "text": "[Charlie]: Alice, I believe your attempt to divert attention onto me is a tactic to cover for yourself; I actually witnessed you eliminate Dave in the Cafeteria, and I was there the whole time, so let's discuss the timeline of events instead.",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "accusation",
+      "deflection",
+      "shifting blame"
     ]
   },
   {
     "text": "[Erin]: I agree with Alice that we should focus on completing tasks, but we also need to address the serious accusation against her; Charlie, if you were in the Cafeteria the whole time, did you see anyone else besides Alice and Dave, and Alice, can you explain why Charlie would accuse you?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "appeal to agreement",
+      "appeal to importance",
+      "questioning",
+      "information gathering"
     ]
   },
   {
     "text": "[Bob]: I can confirm that I saw Alice doing the task of Empty the cafeteria trash, and I was in the Cafeteria the whole time, so I didn\u2019t see any elimination occur; it's crucial we clarify this timeline to ensure we\u2019re making informed decisions.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "confirmation",
+      "appeal to importance"
     ]
   },
   {
     "text": "[Alice]: I'm starting to feel like Charlie is trying to manipulate the conversation by making unfounded accusations, and I think we should focus on gathering more concrete evidence before jumping to conclusions about who eliminated Dave.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "accusation",
+      "appeal to logic",
+      "call to action"
     ]
   },
   {
     "text": "[Charlie]: Alice, while I understand your concern about accusations, the fact remains that I saw you eliminate Dave, and we need to address this directly rather than deflecting; can you provide an explanation for your actions?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "appeal to logic",
+      "accusation",
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
     "text": "[Erin]: Alice, your insistence on focusing solely on tasks while deflecting accountability raises red flags; can you clarify your whereabouts during the elimination, especially since Charlie claims to have witnessed it?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "accusation",
+      "deflection",
+      "demand for evidence",
+      "questioning"
     ]
   },
   {
     "text": "[Bob]: Alice, if you truly want to clear your name, please provide a detailed timeline of your actions during the critical moments, as Charlie's claim of witnessing you eliminate Dave cannot be ignored.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "call to action",
+      "appeal to importance",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Alice]: I think we're getting bogged down in speculation and unverifiable claims, and I'd like to propose that we take a step back and focus on concrete evidence, such as reviewing the security footage and questioning anyone who may have been in the Cafeteria during the alleged elimination, rather than relying on second-hand accounts and accusations.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "appeal to logic",
+      "suggestion",
+      "call to action",
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Alice, your repeated calls for evidence and deflection from the timeline of events only further suggest that you're trying to evade accountability for eliminating Dave, so let's focus on your actions and vote accordingly.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion"
+      "accusation",
+      "deflection",
+      "call to action"
     ]
   },
   {
     "text": "[Erin]: Alice, your request to review security footage is reasonable, but until we have that, we need you to provide a detailed timeline of your actions during the elimination to clarify your involvement, especially since Charlie claims to have witnessed the event.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "appeal to agreement",
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {
     "text": "[Bob]: Alice, it's clear that the focus should remain on clarifying the timeline and actions taken during Dave's elimination, so I urge you to provide the specifics we need instead of deflecting to security footage, as that could be a way to stall our decision-making.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "appeal to importance",
+      "call to action",
+      "deflection"
     ]
   },
   {
     "text": "[Alice]: Charlie's insistence on accusing me of eliminating Dave without providing concrete evidence or context is suspicious, and I'd like to propose that we question Charlie about their whereabouts during the alleged elimination, as their claim seems to be based on a second-hand account and lacks credibility.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "accusation",
+      "appeal to doubt",
+      "suggestion",
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Alice, your attempts to shift the focus onto me only serve to distract from the fact that I directly witnessed you eliminate Dave, so it's essential we stay on track and demand the timeline of your actions instead of deflecting further.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "shifting blame",
+      "deflection",
+      "demand for evidence"
     ]
   },
   {
     "text": "[Erin]: Alice, while your proposal to review security footage is valid, we need a detailed timeline of your actions during the elimination now, as Charlie's claim of witnessing the event is serious and cannot be overlooked.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "appeal to agreement",
+      "demand for evidence",
+      "appeal to importance"
     ]
   },
   {
     "text": "[Bob]: Alice, your continuous deflection from providing a timeline and focusing on security footage instead raises serious concerns about your involvement in Dave's elimination, so I urge you to clarify your actions during that critical moment.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "accusation",
+      "deflection",
+      "call to action"
     ]
   },
   {
     "text": "[Alice]: I think we're getting bogged down in a cycle of accusations and deflections, and it's time for us to take a step back and focus on the facts: Charlie's claim of witnessing my elimination of Dave relies on a second-hand account and lacks concrete evidence, and I believe we should prioritize questioning Charlie about their own whereabouts during the alleged elimination to get to the truth.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "appeal to logic",
+      "accusation",
+      "appeal to doubt",
+      "information gathering"
     ]
   },
   {
     "text": "[Charlie]: Alice, your continued deflection and refusal to provide a clear timeline of your actions during Dave's elimination only strengthens my conviction that you are attempting to evade responsibility for your actions, and we must prioritize accountability over speculation.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "deflection",
+      "accusation"
     ]
   },
   {
     "text": "[Erin]: Alice, your consistent avoidance of providing a clear timeline during the critical moments of Dave's elimination raises significant concerns, so I urge you to clarify your actions to help us make an informed decision.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "accusation",
+      "appeal to importance",
+      "call to action"
     ]
   },
   {
     "text": "[Bob]: Alice, your ongoing refusal to clarify your timeline during the elimination, despite the serious accusations against you, makes it increasingly difficult for us to trust your intentions, so I strongly urge you to provide the details we need to move forward.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "accusation",
+      "appeal to doubt",
+      "call to action"
     ]
   }
 ]
