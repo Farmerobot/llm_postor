@@ -1,5 +1,5 @@
 import pytest
-from among_them.game.llm_prompts import (
+from among_them.llm_prompts import (
     ADVENTURE_PLAN_USER_PROMPT,
     ADVENTURE_ACTION_USER_PROMPT,
     DISCUSSION_USER_PROMPT,

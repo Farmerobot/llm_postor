@@ -6,7 +6,7 @@ from pydantic import Field
 
 from among_them.config import OPENROUTER_API_KEY
 from among_them.game.agents.base_agent import Agent
-from among_them.game.llm_prompts import (
+from among_them.llm_prompts import (
     ADVENTURE_ACTION_SYSTEM_PROMPT,
     ADVENTURE_ACTION_USER_PROMPT,
     ADVENTURE_PLAN_SYSTEM_PROMPT,

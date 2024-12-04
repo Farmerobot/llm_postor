@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from pydantic import Field
 
 from among_them.config import OPENROUTER_API_KEY
-from among_them.game.llm_prompts import (
+from among_them.llm_prompts import (
     DISCUSSION_RESPONSE_SYSTEM_PROMPT,
     DISCUSSION_RESPONSE_USER_PROMPT,
     DISCUSSION_SYSTEM_PROMPT,

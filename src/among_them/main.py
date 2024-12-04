@@ -1,7 +1,7 @@
 import streamlit as st
 
 from among_them.game.game_engine import GameEngine
-from among_them.game.gui_handler import GUIHandler
+from among_them.gui_handler import GUIHandler
 
 # To run this script, you need to
 # `poetry install`

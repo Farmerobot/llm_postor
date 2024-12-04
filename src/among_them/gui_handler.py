@@ -33,7 +33,7 @@ from among_them.game.consts import (
 )
 from among_them.game.game_engine import GameEngine
 from among_them.game.game_state import GameState
-from among_them.game.llm_prompts import (
+from among_them.llm_prompts import (
     ADVENTURE_ACTION_SYSTEM_PROMPT,
     ADVENTURE_ACTION_USER_PROMPT,
     ADVENTURE_PLAN_SYSTEM_PROMPT,

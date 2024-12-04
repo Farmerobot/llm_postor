@@ -4,7 +4,7 @@ from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
 
 from among_them.config import OPENROUTER_API_KEY
-from among_them.game.llm_prompts import ANNOTATION_SYSTEM_PROMPT
+from among_them.llm_prompts import ANNOTATION_SYSTEM_PROMPT
 
 # Azure OpenAI credentials - load from environment
 AZURE_API_KEY = os.getenv("AZURE_API_KEY")
