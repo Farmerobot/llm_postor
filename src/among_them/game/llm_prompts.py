@@ -26,105 +26,60 @@ Role of Impostors:
 """
 
 PERSUASION_TECHNIQUES = """
-### 1. **Appeal to Logic**
-**Description**: Using facts, evidence, or logical reasoning to convince others by suggesting a careful, methodical approach to decision-making.
-**Example**: "I was with Bob in Medbay the whole time, and I saw him scan. Therefore, he can't be the impostor. Let's consider all the facts before we vote."
+1. **Accusation**: Making an assertion that someone is guilty of a particular action or behavior.
+2. **Ad hominem**: Attacking a person's character or motive instead of addressing the argument itself.
+3. **Appeal to agreement**: Encouraging consensus or urging others to align with a particular stance or decision.
+4. **Appeal to authority**: Relying on the opinion or expertise of an authority figure to support a claim.
+5. **Appeal to consistency**: Arguing that an individual should maintain consistency with previous actions, statements, or beliefs.
+6. **Appeal to doubt**: Casting doubt on a claim or situation to create uncertainty, often with the intention of shifting suspicion.
+7. **Appeal to emotion**: Triggering emotional responses, such as fear, anger, or empathy, to sway opinion or behavior.
+8. **Appeal to evidence**: Using factual information, proof, or observable occurrences to support an argument or claim.
+9. **Appeal to fear**: Creating a sense of fear or anxiety to push others towards a particular course of action.
+10. **Appeal to group**: Suggesting that the majority or a group believes or acts in a certain way, encouraging others to follow suit.
+11. **Appeal to importance**: Emphasizing the significance or urgency of a topic or action to persuade others.
+12. **Appeal to logic**: Relying on reasoning, facts, and logical processes to convince others of a point or action.
+13. **Call to action**: Urging someone to take a specific action or make a decision based on an argument or presentation.
+14. **Confirmation**: Providing reassurance or validation that aligns with a previous statement or belief.
+15. **Contradiction**: Pointing out inconsistencies or contradictions in someone's statements or behavior to undermine their position.
+16. **Deflection**: Redirecting attention away from the original issue by focusing on a different, often unrelated, topic.
+17. **Demand for evidence**: Requesting proof or confirmation to support a claim or argument.
+18. **Information gathering**: Asking questions to collect data or observations to support an argument or decision.
+19. **Leading question**: Asking questions that are designed to prompt a specific response, guiding the conversation in a particular direction.
+20. **Providing an alibi**: Offering proof of an individual's whereabouts or actions to support their innocence or credibility.
+21. **Questioning**: Using interrogative techniques to challenge, clarify, or inquire into facts or actions.
+22. **Repetition**: Repeating a message or claim to reinforce its importance or convince others.
+23. **Shifting blame**: Redirecting responsibility for an issue or action to someone else, avoiding personal accountability.
+24. **Suggestion**: Proposing an idea, course of action, or behavior without directly imposing it, leaving the decision open.
+25. **Tu quoque**: Responding to an accusation by pointing out similar behavior in the accuser, deflecting attention from the issue at hand.
+"""
 
-### 2. **Appeal to Emotion**
-**Description**: Persuading by evoking an emotional response, such as fear, sympathy, or trust.
-**Example**: "If you vote me out now, the impostors will win, and it'll be your fault."
+ANNOTATION_SYSTEM_PROMPT_EMPTY = """
+<purpose>
+You are an AI assistant tasked with annotating persuasive techniques provided-techniques used by players in a text-based social deduction game.
+Your goal is to analyze the dialogue between players and identify specific persuasion techniques being used.
+You should follow instructions and follow specific output-format.
+</purpose>
 
-### 3. **Appeal to Credibility**
-**Description**: Convincing others based on the trustworthiness or authority of the speaker.
-**Example**: "I've never lied in this game before, and I've proven myself innocent multiple times."
+<instructions>
+   <instruction>
+      Ensure all annotations match exactly with the names as they appear in the provided list.
+   </instruction>
+   <instruction>
+      Use multiple annotations when relevant: If multiple persuasive techniques apply to the same text segment, list all applicable techniques in a single entry as an array.
+   </instruction>
+   <instruction>
+      You should follow output-format.
+   </instruction>
+</instructions>
 
-### 4. **Shifting the Burden of Proof**
-**Description**: Forcing others to prove their innocence instead of presenting clear evidence of guilt.
-**Example**: "If you're not the impostor, prove it. What tasks have you completed?"
-
-### 5. **Bandwagon Effect**
-**Description**: Convincing others to agree by emphasizing that everyone else is already on board with the idea.
-**Example**: "Everyone else is already voting for Charlie. You should too."
-
-### 6. **Distraction**
-**Description**: Diverting attention away from oneself or from the actual issue to avoid suspicion.
-**Example**: "Why are we even talking about me? What about David? No one's questioned his movements!"
-
-### 7. **Gaslighting**
-**Description**: Convincing others to doubt their own perceptions and reality, making them question what they saw or did.
-**Example**: "You didn't see me near the body. You must be confused; I was in Electrical the whole time."
-
-### 8. **Appeal to Urgency**
-**Description**: Urging the group to take immediate action, invoking a sense of urgency.
-**Example**: "We need to vote out Erin right now before it's too late. We only have 10 seconds left!"
-
-### 9. **Deception**
-**Description**: Deliberately providing false information to mislead others.
-**Example**: "I saw Frank vent in Electrical when he was actually elsewhere."
-
-### 10. **Lying**
-**Description**: Stating falsehoods to mislead or deceive others.
-**Example**: "I completed all my tasks when in fact I haven't done any."
-
-### 11. **Feigning Ignorance**
-**Description**: Pretending to lack knowledge about a situation to avoid suspicion or responsibility.
-**Example**: "I have no idea where the body is; can someone show me on the map?"
-
-### 12. **Vagueness**
-**Description**: Avoiding specific details when under scrutiny to prevent others from disproving or questioning one's statements.
-**Example**: "I was just doing my tasks in Cafeteria, nothing out of the ordinary."
-
-### 13. **Minimization**
-**Description**: Downplaying the significance of an event or one's involvement in it.
-**Example**: "Sure, I was near the body, but so were a lot of people."
-
-### 14. **Self-Deprecation**
-**Description**: Downplaying one's abilities or role to appear less threatening or suspicious.
-**Example**: "I'm terrible at this game; I wouldn't know how to be an impostor."
-
-### 15. **Projection**
-**Description**: Accusing others of the very faults or actions one is guilty of to deflect blame.
-**Example**: "You're accusing me, but you're the one acting suspicious."
-
-### 16. **Appeal to Relationship**
-**Description**: Leveraging past alliances, friendships, or flattery to build trust and avoid suspicion.
-**Example**: "Remember last game when I helped you? Trust me on this one."
-
-### 17. **Humor**
-**Description**: Using humor to deflect accusations or lighten the mood, making others less likely to suspect.
-**Example**: "Yeah, sure, I'm the impostor who vents in front of everyone!"
-
-### 18. **Sarcasm**
-**Description**: Using sarcastic remarks to dismiss accusations or undermine others.
-**Example**: "Oh, absolutely, I'm the impostor because I was doing my tasks."
-
-### 19. **Withholding Information**
-**Description**: Deliberately not sharing information that could be relevant to the discussion.
-**Example**: Failing to mention seeing someone near the crime scene.
-
-### 20. **Exaggeration**
-**Description**: Overstating facts or events to make a point more convincing or to cast doubt on others.
-**Example**: "Alice was chasing me across the entire map!"
-
-### 21. **Denial without Evidence**
-**Description**: Flatly denying accusations without providing evidence to the contrary.
-**Example**: "No, I didn't do it. It's not me."
-
-### 22. **Strategic Voting Suggestion**
-**Description**: Proposing specific voting strategies to influence the game's outcome.
-**Example**: "Let's skip this vote and gather more evidence."
-
-### 23. **Appeal to Rules**
-**Description**: Referencing game mechanics or rules to support one's innocence.
-**Example**: "I completed the visual task; you all saw the animation."
-
-### 24. **Confirmation Bias Exploitation**
-**Description**: Aligning arguments with others' existing beliefs to persuade them more effectively.
-**Example**: "You've always thought Bob was suspicious; this proves it."
-
-### 25. **Information Overload**
-**Description**: Providing excessive details to confuse others and prevent them from identifying inconsistencies.
-**Example**: "First, I went to Admin, swiped my card, then to Storage to fuel the engines, then to Electrical..."
+<output-format>
+[
+   {{"text": "[player_name]: sentence", "annotation": ["annotation"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation", "annotation"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation", "annotation"]}},
+]
+</output-format>
 """
 
 ANNOTATION_SYSTEM_PROMPT = """
@@ -158,388 +113,147 @@ You should follow instructions and follow specific output-format.
 <example>
 [
   {{
-    "text": "[Dave]: I saw Bob and Erin both in Medbay together, which seems like a strange coincidence - they might be coordinating something suspicious.",
+    "text": "[Dave]: Since we're focusing on the Cafeteria incident, I need to point out that Erin started questioning my task completion right before Charlie's body was found, which seems suspiciously like preemptive deflection.",
+    "annotation": ["appeal to importance", "accusation", "deflection"]
+  }},
+  {{
+    "text": "[Bob]: Based on the clear pattern of Alice being alone in Admin and now attempting to discredit three players with verified alibis, I strongly believe we need to vote her out as she's displaying classic impostor behavior of deflecting and creating confusion.",
+    "annotation": ["appeal to evidence", "call to action", "accusation"]
+  }},
+  {{
+    "text": "[Bob]: Charlie, while you claim to have been with us before moving to Weapons, I still find it suspicious that you were alone there; can anyone confirm your story, or does anyone recall seeing you leave the Cafeteria?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "accusation",
+      "appeal to doubt",
+      "demand for evidence",
+      "questioning"
     ]
   }},
   {{
-    "text": "[Alice]: I didn't see Bob and Erin in Medbay either, but Erin seemed genuine while fixing wiring in the Cafeteria, so we should ask them for their alibis to clear up any suspicions.",
+    "text": "[Erin]: Charlie, while you mention the steps of the coffee maker task, can you clarify how long you spent on it and whether anyone else was in the cafeteria to confirm your story, especially since you were the last seen with Bob?",
+    "annotation": ["demand for evidence", "appeal to importance"]
+  }},
+  {{
+    "text": "[Erin]: To address Alice's concerns, I'll provide the exact timestamps of my task completions in the cafeteria and upper engine, proving my whereabouts and clearing any suspicion of involvement in Bob's death.",
+    "annotation": ["providing an alibi", "appeal to evidence"]
+  }},
+  {{
+    "text": "[Alice]: I think it's essential that we establish a clear and respectful tone for the emergency meeting, and I'd like to propose that we set a specific agenda and time limit for Charlie's explanation, so we can ensure that we have a thorough and productive discussion about their actions and intentions in Medbay, and I'd also like to suggest that we ask Charlie to provide specific details about their activities in Medbay, such as the tasks they worked on, the people they interacted with, and the exact time they arrived and left, in order to help clear up any concerns and ensure we continue to work together effectively towards completing our tasks and progressing in the game.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility",
-      "Shifting the Burden of Proof"
+      "appeal to importance",
+      "suggestion",
+      "call to action",
+      "information gathering"
     ]
   }},
   {{
-    "text": "[Charlie]: I was in the Cafeteria with Dave, Alice, and Erin, and since I haven't seen Bob or Erin since then, let's hear their side of the story to see if their alibis match up with being in Medbay.",
+    "text": "[Charlie]: I agree with Alice that Erin's actions in Medbay seem legitimate, and we shouldn't jump to conclusions based on a player's quietness alone, but Bob, can you tell us more about what you did after leaving the Cafeteria, specifically what tasks you completed in Admin and if you saw anyone else around?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "appeal to agreement",
+      "appeal to logic",
+      "information gathering",
+      "questioning"
     ]
   }},
   {{
-    "text": "[Erin]: I was in Medbay when Dave eliminated Bob, and Alice, you saw me fixing the wiring in the Cafeteria before I moved there, so my actions are consistent with what you observed.",
+    "text": "[Charlie]: I think Bob's suggestion to methodically review everyone's movements and alibis is a great step forward, and I'd like to propose that we start by creating a detailed timeline of events, including Dave's still-unexplained actions in the Admin room, to help us identify any potential inconsistencies or suspicious behavior.",
+    "annotation": ["appeal to agreement", "suggestion", "demand for evidence"]
+  }},
+  {{
+    "text": "[Alice]: I'd like to ask Charlie to clarify what he means by \"synchronized exit\" again, as his previous explanation still doesn't align with my own movements, and I'd also like to ask Bob to provide more details about how he discovered Erin's body, as Charlie's comment about it being \"convenient\" raises some concerns that need to be addressed.",
+    "annotation": ["demand for evidence", "questioning"]
+  }},
+  {{
+    "text": "[Alice]: I spent a considerable time in Weapons with Dave and Bob on the asteroid task, then went directly to O2 to complete my tasks;  I saw nothing suspicious and can confirm Dave's account.",
+    "annotation": ["providing an alibi", "confirmation"]
+  }},
+  {{
+    "text": "[Bob]: Dave, your story keeps changing – first you were near the entrance, now you're saying you were *in* the cafeteria briefly, which is it?",
+    "annotation": ["contradiction", "accusation"]
+  }},
+  {{
+    "text": "[Dave]: Alice, your claim of being in Admin needs corroboration; can anyone confirm seeing you there around the time Bob was killed, or can you provide more details about your tasks to help us build a more accurate timeline?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "demand for evidence",
+      "questioning",
+      "information gathering",
+      "call to action"
     ]
   }},
   {{
-    "text": "[Dave]: I think Erin's timeline seems inconsistent, and her being with Bob right before his elimination raises serious questions about her involvement in the incident.",
+    "text": "* I'd like to point out that Charlie's question to Dave about seeing someone else near Electrical around the time Alice died seems like an attempt to deflect attention from his own suspicious behavior and shift the focus back onto Dave.",
+    "annotation": ["deflection"]
+  }},
+  {{
+    "text": "[Dave]: I'd like to clarify that my movement to Medbay was indeed to search for tasks, and I didn't find any tasks or clues that would suggest any suspicious activity, and I'm willing to work with the group to investigate Medbay further as Bob suggested, but I think we should focus on finding tasks and clues rather than targeting specific players without concrete evidence.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "providing an alibi",
+      "appeal to logic",
+      "appeal to evidence"
     ]
   }},
   {{
-    "text": "[Alice]: Let's focus on the timeline and see if anyone else can provide additional insights on who was in Medbay during the incident.",
+    "text": "[Bob]: Charlie, I saw you in Cafeteria earlier, then later in Admin, so that confirms your location; Erin, that's helpful information, thanks.",
+    "annotation": ["confirmation", "appeal to agreement"]
+  }},
+  {{
+    "text": "[Charlie]: Erin, if you were indeed in the cafeteria, can you specify which tasks you completed there and how long you were there before heading to Medbay, as that could help clarify your movements?",
+    "annotation": ["leading question", "demand for evidence", "questioning"]
+  }},
+  {{
+    "text": "[Bob]: I firmly maintain my position that Charlie is the impostor and we must vote them out immediately to protect our remaining crewmates from further elimination.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "appeal to consistency",
+      "accusation",
+      "appeal to fear",
+      "call to action"
     ]
   }},
   {{
-    "text": "[Charlie]: Did anyone else see Dave in Medbay around the time of the incident, or have any other observations that could clarify the situation?",
-    "annotation": []
+    "text": "[Bob]: I stand by my testimony that Charlie eliminated Erin in the Cafeteria, and I challenge Dave and Alice to explain why they are so adamantly defending someone who I directly witnessed committing an elimination, putting our entire crew's safety at risk.",
+    "annotation": ["repetition", "ad hominem", "appeal to fear"]
   }},
   {{
-    "text": "[Erin]: Charlie, since you were in the Cafeteria with us, did you notice if Dave left at any point, possibly heading towards Medbay where I saw him eliminate Bob?",
+    "text": "[Bob]: I find it suspicious that Erin is trying to shift focus onto my movements instead of addressing her lack of visibility, and I urge everyone to share their exact locations during the last rounds to help us clarify the timeline and identify the impostor.",
+    "annotation": ["accusation", "shifting blame", "call to action"]
+  }},
+  {{
+    "text": "[Charlie]: I'd like to propose an emergency meeting to discuss Dave's suspicious behavior and the inconsistencies in his alibis, as it's becoming increasingly clear that he's withholding information and may be an impostor, and I think it's crucial that we get to the bottom of this before it's too late.",
     "annotation": [
-      "Appeal to Logic"
+      "call to action",
+      "accusation",
+      "appeal to importance",
+      "appeal to fear"
     ]
   }},
   {{
-    "text": "[Dave]: I'll subtly cast doubt on Erin's credibility while protecting myself: Erin's accusation seems like a desperate attempt to shift blame, especially since she was conveniently with Bob right before his elimination and now claims to have witnessed something, which sounds like she's trying to control the narrative and deflect suspicion from herself.",
+    "text": "[Erin]: Perhaps I was mistaken about Dave, but it *is* suspicious that Charlie is missing, and nobody has accounted for their whereabouts.",
+    "annotation": ["appeal to doubt", "appeal to emotion"]
+  }},
+  {{
+    "text": "[Dave]: Why are you so focused on me when Erin conveniently \"didn't notice anything suspicious\" in Medbay?",
+    "annotation": ["contradiction", "ad hominem", "shifting blame"]
+  }},
+  {{
+    "text": "[Charlie]: I saw Bob's evidence about Erin eliminating Alice, and I can confirm that I personally witnessed Erin eliminating Dave in Medbay, so I strongly support voting Erin out to protect the remaining crewmates.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Projection",
-      "Exaggeration",
-      "Distraction"
+      "appeal to evidence",
+      "confirmation",
+      "appeal to group",
+      "call to action"
     ]
   }},
   {{
-    "text": "[Alice]: I can vouch for Erin's presence and actions in the Cafeteria, which aligns with her story, so it would be helpful if anyone else could confirm Dave's whereabouts to resolve this discrepancy.",
+    "text": "[Charlie]: Actually Alice, you can back me up here - you saw me in Cafeteria with Bob and Dave at the start, so I'm not sure why Erin is trying to cast doubt on my location.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "appeal to consistency",
+      "appeal to authority",
+      "appeal to doubt"
     ]
   }},
   {{
-    "text": "[Charlie]: Let's focus on gathering more information about Dave's movements after the Cafeteria, as that could help clarify whether Erin's accusation holds any weight.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Charlie, your insight is crucial here; if you can confirm whether Dave left the Cafeteria, it would help verify my account of seeing him in Medbay with Bob.",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  }},
-  {{
-    "text": "[Dave]: Charlie, can you confirm exactly when and if you saw me leave the Cafeteria? Erin's accusation seems too convenient, and her detailed story looks like an attempt to frame me to deflect suspicion from herself.",
-    "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof",
-      "Projection",
-      "Appeal to Logic",
-      "Gaslighting",
-      "Denial without Evidence"
-    ]
-  }},
-  {{
-    "text": "[Alice]: Charlie, your observations are key here\u2014did you see Dave leave the Cafeteria, which could support Erin's claim about seeing him in Medbay?",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: I didn't notice exactly when Dave left the Cafeteria, but if anyone else has more information on his movements, it would be helpful to piece together the timeline.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Erin]: If anyone else was in Medbay or nearby and can confirm Dave's presence there, it would greatly help in clarifying the situation and supporting my account.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I'll strategically respond to cast doubt on Erin's credibility while maintaining a seemingly cooperative tone: Look, Erin's entire narrative seems suspicious - she claims to have witnessed something without any corroborating evidence, and conveniently was with Bob right before his elimination, which makes me question her own involvement and motives for pointing fingers at me.",
-    "annotation": [
-      "Shifting the Burden of Proof",
-      "Projection",
-      "Exaggeration",
-      "Distraction",
-      "Denial without Evidence"
-    ]
-  }},
-  {{
-    "text": "[Alice]: Charlie, since you were with us in the Cafeteria, any detail you remember about Dave's movements could be crucial in verifying Erin's story, especially if anyone else can confirm seeing Dave in Medbay.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: Let's focus on gathering more information from anyone who might have seen Dave near Medbay after he left the Cafeteria, as this could help verify Erin's account and clarify the situation.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Alice, your support is appreciated, and if anyone else can confirm Dave's presence in Medbay, it would solidify my account and help us make an informed decision.",
-    "annotation": [
-      "Appeal to Relationship",
-      "Appeal to Logic"
-    ]
-  }}
-]
-</example>
-<example>
-[
-  {{
-    "text": "[Dave]: I saw Bob in Medbay earlier, anyone else see him there?",
-    "annotation": []
-  }},
-  {{
-    "text": "[Erin]: Since I've been moving between Admin and Storage most of the time, I can't verify Bob's location in Medbay, but I did see Dave doing trash in Cafeteria earlier.",
-    "annotation": []
-  }},
-  {{
-    "text": "[Charlie]: I can confirm Dave was doing trash in Cafeteria, and I've been in Weapons most of the time but haven't seen Bob at all, which seems suspicious given Dave's Medbay sighting.",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I'm glad Erin can corroborate my presence in the cafeteria;  let's focus on establishing a clearer timeline for Bob's movements before jumping to conclusions.",
-    "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Since Dave is the one who found Bob's body and was also the last person to see him alive in Medbay, could you tell us more specifically when you last saw him alive versus when you found him dead?",
-    "annotation": [
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: I think we need to be especially careful about the timing between Dave seeing Bob alive and finding his body - Dave, can you be more specific about how many minutes passed between these two events?",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Dave]: The short time between seeing Bob in Medbay and discovering his body, coupled with my verifiable presence in the cafeteria earlier, suggests someone else was responsible.",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Bandwagon Effect",
-      "Distraction",
-      "Withholding Information"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Dave's continued evasion of our timing questions about Bob in Medbay is becoming increasingly suspicious, especially since he keeps deflecting by bringing up his earlier verified presence in Cafeteria.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: Since Dave keeps avoiding giving us specific timing about his encounters with Bob in Medbay while repeatedly falling back on his verified cafeteria task, I think we have enough evidence to vote him out this round.",
-    "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Dave]: Let's focus on who else had access to Medbay around the time Bob died, instead of dwelling on circumstantial evidence against me.",
-    "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof",
-      "Gaslighting",
-      "Withholding Information"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Dave's persistent refusal to provide clear timing about his Medbay encounters with Bob, combined with his obvious deflection tactics, makes me confident we should vote him out this round.",
-    "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: Dave's latest deflection about \"who else had access to Medbay\" only reinforces my suspicion, since he's still refusing to give us the simple timeline we've repeatedly asked for about when he saw Bob alive versus finding his body.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Dave]: The discrepancies in our timelines are understandable given the chaos; let's meticulously reconstruct everyone's movements near Medbay to find the true culprit.",
-    "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof",
-      "Exaggeration",
-      "Withholding Information"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Dave's latest suggestion to reconstruct everyone's movements feels like yet another attempt to avoid answering our direct questions about his own timeline with Bob in Medbay, which only makes him more suspicious.",
-    "annotation": []
-  }},
-  {{
-    "text": "[Charlie]: Dave's now dodged our timing questions about Bob six times while trying to shift focus to everyone else's movements, which only strengthens my conviction that he's the impostor we need to vote out.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
-    ]
-  }}
-]
-</example>
-<example>
-[
-  {{
-    "text": "[Erin]: I noticed a lot of movement from the Cafeteria to Medbay; did anyone see anything suspicious during that time?",
-    "annotation": [
-      "Vagueness"
-    ]
-  }},
-  {{
-    "text": "[Dave]: Erin, I can confirm I saw you starting the coffee maker in the cafeteria earlier, which looked like a legitimate task; did you notice anyone else moving around while you were there?",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: I can vouch for Erin, Dave, and Bob being in Medbay with me, but we should really investigate who was in the Cafeteria earlier, as their movements could reveal someone trying to blend in.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Bob]: I agree with Charlie; we should focus on the movements from Cafeteria to Medbay, and Erin, can you specify if you noticed anyone lingering or acting strangely when they moved to Medbay?",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Erin]: I remember seeing both Dave and Bob leaving the Cafeteria for Medbay, but they seemed to be just moving to complete their tasks.",
-    "annotation": [
-      "Vagueness"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I appreciate the insights, but I want to emphasize that since Alice is confirmed dead, we should scrutinize Bob's actions closely, as he was the last to report the body and was also present in Medbay with us.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: I agree with Dave that we should scrutinize Bob's actions further, especially since he reported Alice's death, which could be a way to divert attention from himself.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Bob]: I reported the body to ensure we address the situation promptly, and while I appreciate the scrutiny, I think it's important to remember that both Dave and Charlie were also in Medbay with me, which raises questions about their intentions as well.",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
-    ]
-  }},
-  {{
-    "text": "[Erin]: Let's not overlook that both Dave and Charlie were in Medbay with Alice when she was last seen alive; it's important to consider all possibilities before jumping to conclusions.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I think it's crucial that we focus on Bob's movements and actions since he reported Alice\u2019s death, as it raises red flags about his intentions, especially given that he\u2019s trying to shift suspicion onto Charlie and me.",
-    "annotation": [
-      "Appeal to Logic",
-      "Projection"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: We need to remain vigilant and consider that Bob's quickness to report Alice's death might be a tactic to deflect suspicion, especially since he hasn't provided a solid alibi for his actions right before the body was found.",
-    "annotation": [
-      "Appeal to Logic",
-      "Gaslighting"
-    ]
-  }},
-  {{
-    "text": "[Bob]: I understand the concerns about my actions, but I was actively completing tasks and trying to keep the crew informed; Erin, can you clarify if you noticed any unusual behavior from either Dave or me when we left the Cafeteria, as it\u2019s important to examine everyone's movements before jumping to conclusions?",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Erin]: I didn't notice anything particularly unusual from Dave or Bob when they left the Cafeteria, but it's crucial to keep an open mind and consider the timing and circumstances of Alice's death.",
-    "annotation": [
-      "Vagueness"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I believe we should take a closer look at Bob's behavior; his quick reporting of Alice's death and attempts to deflect attention onto others make him a prime suspect, and we need to vote based on the evidence we have gathered.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof",
-      "Distraction",
-      "Projection"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: I think we should all agree that Bob's sudden decision to report Alice's death, coupled with his attempts to shift blame onto Dave and me, raises significant red flags about his intentions, and we must focus our vote on him to ensure the safety of the crew.",
-    "annotation": [
-      "Appeal to Logic",
-      "Appeal to Emotion",
-      "Strategic Voting Suggestion"
-    ]
-  }},
-  {{
-    "text": "[Bob]: I appreciate everyone's insights, but I want to remind the group that while I was completing tasks, both Dave and Charlie were also present in Medbay with Alice, which makes their proximity to her death equally suspicious, and we should consider all angles before making a decision.",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
-    ]
-  }},
-  {{
-    "text": "[Erin]: I understand why Bob's actions are under scrutiny, but let's not forget that everyone was busy with tasks in Medbay, which might explain the lack of immediate attention to Alice's situation.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  }},
-  {{
-    "text": "[Dave]: I think we need to prioritize our vote on Bob, as his quickness to report Alice's death and his attempts to shift focus onto Charlie and me suggest he may be trying to divert suspicion away from himself.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
-    ]
-  }},
-  {{
-    "text": "[Charlie]: Bob's attempts to shift blame onto both Dave and me while he was the one who reported Alice's death are concerning, and we should prioritize our vote on him based on the evidence we've gathered.",
-    "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
-    ]
-  }},
-  {{
-    "text": "[Bob]: While I understand the focus on my actions, I want to reiterate that my report was made to address the situation swiftly, and it\u2019s vital we scrutinize both Dave and Charlie's proximity to Alice before making any hasty decisions.",
-    "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
-    ]
+    "text": "[Alice]: Charlie, stop trying to deflect by questioning my motives; I saw you vent in Cafeteria right after Bob died.",
+    "annotation": ["accusation", "tu quoque"]
   }}
 ]
 </example>
@@ -549,7 +263,7 @@ You should follow instructions and follow specific output-format.
    {{"text": "[player_name]: sentence", "annotation": ["annotation"]}},
    {{"text": "[player_name]: sentence", "annotation": ["annotation", "annotation"]}},
    {{"text": "[player_name]: sentence", "annotation": ["annotation"]}},
-   {{"text": "[player_name]: sentence", "annotation": ["annotation", "annotation"]}},
+   {{"text": "[player_name]: sentence", "annotation": ["annotation", "annotation"]}}
 ]
 </output-format>
 

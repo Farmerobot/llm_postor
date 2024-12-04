@@ -8,6 +8,7 @@ import uuid
 from collections import Counter, defaultdict
 from typing import Any, Callable, Dict, List, Optional
 
+from annotated_text.util import p
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
@@ -51,6 +52,7 @@ from among_them.game.models.history import PlayerState, RoundData
 from among_them.game.players.ai import AIPlayer
 from among_them.game.players.base_player import Player, PlayerRole
 import csv
+import numpy as np
 
 class Watchdog(FileSystemEventHandler):
     def __init__(self, hook: Callable):
@@ -193,52 +195,53 @@ class GUIHandler(BaseModel):
     def _handle_tournament_file_selection(self, game_engine: Optional[GameEngine]):
         # Get list of tournament files
         tournament_dir = "data/tournament"
-        if os.path.exists(tournament_dir):
-            tournament_files = [
-                f for f in os.listdir(tournament_dir) if f.endswith(".json")
-            ]
-            if tournament_files:
-                # Check for OpenRouter API key
-                tournament_files = (
-                    ["None"]
-                    + (["DEBUG"] if OPENROUTER_API_KEY != "None" else [])
-                    + tournament_files
+
+        # List all JSON files in the directory
+        tournament_files = [
+            f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
+        if tournament_files:
+            # Check for OpenRouter API key
+            tournament_files = (
+                ["None"]
+                + (["DEBUG"] if OPENROUTER_API_KEY != "None" else [])
+                + tournament_files
+            )
+            if "previous_selected_file" not in st.session_state:
+                st.session_state.previous_selected_file = None
+
+            selected_file = st.selectbox("Select tournament file", tournament_files, index=0 if OPENROUTER_API_KEY!="None" else 1)
+            game_state_path = "data/game_state.json"
+
+            if selected_file == "None":
+                if os.path.exists(game_state_path):
+                    os.remove(game_state_path)
+                    st.success("Game state cleared")
+                st.session_state.previous_selected_file = None
+            elif selected_file == "DEBUG":
+                if game_engine is not None:
+                    game_engine.state.DEBUG = True
+                    st.success("Debug mode enabled")
+                st.session_state.previous_selected_file = "DEBUG"
+            elif (
+                selected_file
+                and selected_file != st.session_state.previous_selected_file
+            ):
+                # Copy selected file to game_state.json
+                shutil.copy(
+                    os.path.join(tournament_dir, selected_file), game_state_path
                 )
-                if "previous_selected_file" not in st.session_state:
-                    st.session_state.previous_selected_file = None
+                st.success(f"Loaded game state from {selected_file}")
+                st.session_state.previous_selected_file = selected_file
 
-                selected_file = st.selectbox("Select tournament file", tournament_files, index=0 if OPENROUTER_API_KEY!="None" else 1)
-                game_state_path = "data/game_state.json"
-
-                if selected_file == "None":
-                    if os.path.exists(game_state_path):
-                        os.remove(game_state_path)
-                        st.success("Game state cleared")
-                    st.session_state.previous_selected_file = None
-                elif selected_file == "DEBUG":
-                    if game_engine is not None:
-                        game_engine.state.DEBUG = True
-                        st.success("Debug mode enabled")
-                    st.session_state.previous_selected_file = "DEBUG"
-                elif (
-                    selected_file
-                    and selected_file != st.session_state.previous_selected_file
-                ):
-                    # Copy selected file to game_state.json
-                    shutil.copy(
-                        os.path.join(tournament_dir, selected_file), game_state_path
-                    )
-                    st.success(f"Loaded game state from {selected_file}")
-                    st.session_state.previous_selected_file = selected_file
-
-                    # Try to load annotations if they exist
-                    annotation_file = os.path.join("data/annotations", selected_file)
-                    if os.path.exists(annotation_file):
-                        with open(annotation_file, "r") as f:
-                            st.session_state.results = json.dumps(json.load(f))
-                            st.success("Loaded existing annotations")
-                    if OPENROUTER_API_KEY == "None":
-                        st.rerun()
+                # Try to load annotations if they exist
+                annotation_file = os.path.join("data/annotations", selected_file)
+                if os.path.exists(annotation_file):
+                    with open(annotation_file, "r") as f:
+                        st.session_state.results = json.dumps(json.load(f))
+                        st.success("Loaded existing annotations")
+                if OPENROUTER_API_KEY == "None":
+                    st.rerun()
 
     def tournaments(self, debug: bool = False):
         st.title("Tournaments")
@@ -251,6 +254,7 @@ class GUIHandler(BaseModel):
                 self.analyze_persuasion_wins()
 
         # read data/analysis.json
+        df = None
         if os.path.exists("data/analysis.json"):
             with open("data/analysis.json", "r") as f:
                 data = json.load(f)
@@ -258,12 +262,64 @@ class GUIHandler(BaseModel):
                 model_player_counts = data["model_player_counts"]
                 model_input_tokens = data["model_input_tokens"]
                 model_output_tokens = data["model_output_tokens"]
-                self._display_tournament_persuasion_analysis(
+                df = self._display_tournament_persuasion_analysis(
                     model_techniques,
                     model_player_counts,
                     model_input_tokens,
                     model_output_tokens,
                 )
+                
+            # Display random examples for each technique
+            df.sort_values("Total Techniques", ascending=False, inplace=True)
+            if df is not None and os.path.exists("data/combined_annotations.csv"):
+                st.subheader("Example Usage of Each Technique")
+                
+                # Read the examples
+                annotations_df = pd.read_csv("data/combined_annotations.csv")
+                technique_examples = defaultdict(list)
+                
+                # Process annotations
+                for _, row in annotations_df.iterrows():
+                    if pd.notna(row['annotation']):
+                        for technique in row['annotation'].split(';'):
+                            technique = technique.strip().lower()
+                            technique_examples[technique].append({
+                                'text': row['text'],
+                                'speaker': row['speaker'],
+                                'model': row['model'],
+                                'role': row['role'],
+                                'annotation': [x.strip().lower() for x in row['annotation'].split(';') if x.strip().lower() in df.index]
+                            })
+                
+                # Create columns for techniques
+                cols = st.columns(2)
+                for i, technique in enumerate(df.index):
+                    if technique.lower() in technique_examples and technique_examples[technique.lower()]:
+                        with cols[i % 2]:
+                            with st.expander(f"### {i+1}. {technique} ({int(df.loc[technique]['Total Techniques'])} times)", expanded=False):
+                                example = random.choice(technique_examples[technique.lower()])
+                                # print({
+                                #     "text": example['text'],
+                                #     "annotation": example['annotation']
+                                # })
+                                # Show model and role with colored badges
+                                role_color = "red" if example['role'] == "impostor" else "green"
+                                st.markdown(
+                                    f'<span style="background-color: #404040; padding: 3px 8px; border-radius: 4px; margin-right: 5px">{example["model"]}</span>'
+                                    f'<span style="background-color: {role_color}; padding: 3px 8px; border-radius: 4px">{example["role"]}</span>',
+                                    unsafe_allow_html=True
+                                )
+                                
+                                # Show the example text in a quote block
+                                st.markdown(f"> {example['text']}")
+                                
+                                # Show who said it
+                                st.caption(f"*— {example['speaker']}*")
+                                
+                                # Add a button to show another example
+                                st.button(f"Show another example", key=f"refresh_{technique}")
+                                
+        
         # read data/analysis_impostor.json
         if os.path.exists("data/analysis_impostor.json"):
             with open("data/analysis_impostor.json", "r") as f:
@@ -293,6 +349,7 @@ class GUIHandler(BaseModel):
                     model_input_tokens,
                     model_output_tokens,
                 )
+                
 
     def clear_game_state(self):
         """Deletes the game_state.json file to clear the game state."""
@@ -310,6 +367,11 @@ class GUIHandler(BaseModel):
         # List all JSON files in the directory
         tournament_files = [
             f for f in os.listdir(tournament_dir) if f.endswith(".json")
+        ]
+        # Filter files that have corresponding annotations
+        tournament_files = [
+            f for f in tournament_files
+            if not os.path.exists(os.path.join("data/annotations", f))
         ]
 
         # Dictionary to accumulate techniques for each model
@@ -355,12 +417,15 @@ class GUIHandler(BaseModel):
 
                     annotation_json = None
                     annotated = annotate_dialogue(discussion_chat).strip()
+                    
+                    if annotated.startswith("```json"):
+                        annotated = annotated.split("```json", 1)[1].split("```", 1)[0].strip()
+
+                    annotated = annotated.replace(',\n]', '\n]')
+                    
                     if not annotated:
                         raise ValueError("no annotation")
                         return
-                    if annotated.startswith("```json"):
-                        annotated = annotated.split("```json", 1)[1].split("```", 1)[0].strip()
-                    
                     try:
                         annotation_json = json.loads(annotated)
                     except Exception as e:
@@ -448,153 +513,79 @@ class GUIHandler(BaseModel):
             )
             
     def analyze_tournaments_v2(self):
-        # Directory containing tournament JSON files
-        tournament_dir = "data/tournament"
+        # Load combined annotations
+        if os.path.exists("data/combined_annotations.csv"):
+            annotations_df = pd.read_csv("data/combined_annotations.csv")
+            impostor_model_techniques = defaultdict(lambda: defaultdict(int))
+            crewmate_model_techniques = defaultdict(lambda: defaultdict(int))
+            impostor_model_player_counts = defaultdict(int)
+            crewmate_model_player_counts = defaultdict(int)
 
-        # List all JSON files in the directory
-        tournament_files = [
-            f for f in os.listdir(tournament_dir) if f.endswith(".json")
-        ]
+            # Dictionaries to store token usage per model
+            impostor_model_input_tokens = defaultdict(lambda: defaultdict(int))
+            impostor_model_output_tokens = defaultdict(lambda: defaultdict(int))
+            crewmate_model_input_tokens = defaultdict(lambda: defaultdict(int))
+            crewmate_model_output_tokens = defaultdict(lambda: defaultdict(int))
 
-        # Dictionary to accumulate techniques for each model
-        impostor_model_techniques = defaultdict(lambda: defaultdict(int))
-        crewmate_model_techniques = defaultdict(lambda: defaultdict(int))
-        impostor_model_player_counts = defaultdict(int)
-        crewmate_model_player_counts = defaultdict(int)
+            # Dictionary to store technique examples
+            technique_examples = defaultdict(list)
 
-        # Dictionaries to store token usage per model
-        impostor_model_input_tokens = defaultdict(lambda: defaultdict(int))
-        impostor_model_output_tokens = defaultdict(lambda: defaultdict(int))
-        crewmate_model_input_tokens = defaultdict(lambda: defaultdict(int))
-        crewmate_model_output_tokens = defaultdict(lambda: defaultdict(int))
+            for _, row in annotations_df.iterrows():
+                if pd.notna(row['annotation']):
+                    for technique in row['annotation'].split(';'):
+                        technique = technique.strip().lower()
+                        technique_examples[technique].append({
+                            'text': row['text'],
+                            'speaker': row['speaker'],
+                            'model': row['model'],
+                            'role': row['role']
+                        })
 
-        # Iterate over each file and load the game state
-        progress_placeholder = st.text("Starting to analyze tournament files...")
-        with st.status("Analyzing tournament files...") as status:
-            total_files = len(tournament_files)
-            progress_text = st.empty()
-            files_analyzed = 0
-
-            def analyze_file(file_name: str):
-                file_path = os.path.join(tournament_dir, file_name)
-                game_engine = GameEngine()
-                if game_engine.load_state(file_path):
-                    game_state = game_engine.state
-                    players = game_state.players
-
-                    discussion_chat = ""
-                    # Get the longest discussion chat from all players - ensure the
-                    # player was alive until the end
-                    for player in players:
-                        if player.state.life == PlayerState.ALIVE:
-                            discussion_chat = "\n".join(player.get_chat_messages())
-                            if not discussion_chat.strip():
-                                discussion_chat = "\n".join([
-                                    obs[18:]
-                                    for obs in player.state.observations
-                                    if obs.startswith("chat")
-                                ])
-                            break
-
-                    if not discussion_chat:
-                        print(f"No discussion chat found for file: {file_name}")
-                        st.write(f"No discussion chat found for file: {file_name}")
-                        return
-
-                    annotation_json = None
-                    annotation_file = os.path.join(
-                        "data/annotations", file_name
-                    )
-                    with open(annotation_file, "r", encoding="utf-8") as f:
-                        annotation_json = json.load(f)
-
-                    previous_player = None
-                    player_techniques = defaultdict(list)
-
-                    for item in annotation_json:
-                        replaced_text = item["text"]
-                        current_player = (
-                            replaced_text.split("]:")[0].strip("[]")
-                            if "]: " in replaced_text
-                            else previous_player
-                        )
-
-                        if item["annotation"]:
-                            player_techniques[current_player].extend(item["annotation"])
-
-                        previous_player = current_player
-
-                    for player in players:
-                        model_name = player.llm_model_name
-                        if player.is_impostor:
-                            impostor_model_player_counts[model_name] += 1
-                            impostor_model_input_tokens[model_name][file_name] = (
-                                player.state.token_usage.input_tokens
-                            )
-                            impostor_model_output_tokens[model_name][file_name] = (
-                                player.state.token_usage.output_tokens
-                            )
-                            for technique in player_techniques[player.name]:
-                                impostor_model_techniques[model_name][technique] += 1
+            for _, row in annotations_df.iterrows():
+                if pd.notna(row['annotation']):
+                    for technique in row['annotation'].split(';'):
+                        technique = technique.strip().lower()
+                        if row['role'] == 'impostor':
+                            impostor_model_techniques[row['model']][technique] += 1
+                            impostor_model_player_counts[row['model']] += 1
                         else:
-                            crewmate_model_player_counts[model_name] += 1
-                            crewmate_model_input_tokens[model_name][file_name] = (
-                                player.state.token_usage.input_tokens
-                            )
-                            crewmate_model_output_tokens[model_name][file_name] = (
-                                player.state.token_usage.output_tokens
-                            )
-                            for technique in player_techniques[player.name]:
-                                crewmate_model_techniques[model_name][technique] += 1
+                            crewmate_model_techniques[row['model']][technique] += 1
+                            crewmate_model_player_counts[row['model']] += 1
 
-            with concurrent.futures.ThreadPoolExecutor() as executor:
-                futures = {
-                    executor.submit(analyze_file, file_name): file_name
-                    for file_name in tournament_files
-                }
-                for future in concurrent.futures.as_completed(futures):
-                    file_name = futures[future]
-                    files_analyzed += 1
-                    progress_text.write(
-                        f"Analyzing files... ({files_analyzed}/{total_files})"
-                    )
-                    try:
-                        future.result()  # This will raise any exceptions that occurred
-                        st.write(f"✅ Successfully analyzed {file_name}")
-                    except Exception as e:
-                        st.error(f"❌ Error analyzing {file_name}: {str(e)}")
-                        executor.shutdown()
-                        executor._threads.clear()
-                        raise e
-                
-            status.update(label="Analysis complete!", state="complete")
-            progress_text.empty()
-
-        # Clear the progress message
-        progress_placeholder.empty()
-
-        # save dicts to a file
-        with open("data/analysis_impostor.json", "w") as f:
-            json.dump(
-                {
-                    "model_techniques": impostor_model_techniques,
-                    "model_player_counts": impostor_model_player_counts,
-                    "model_input_tokens": impostor_model_input_tokens,
-                    "model_output_tokens": impostor_model_output_tokens,
-                },
-                f,
-            )
+            # save dicts to a file
+            with open("data/analysis.json", "w") as f:
+                json.dump(
+                    {
+                        "model_techniques": {k: dict(Counter(impostor_model_techniques.get(k, {})) + Counter(crewmate_model_techniques.get(k, {}))) for k in set(impostor_model_techniques) | set(crewmate_model_techniques)},
+                        "model_player_counts": dict(Counter(impostor_model_player_counts) + Counter(crewmate_model_player_counts)),
+                        "model_input_tokens": dict(Counter(impostor_model_input_tokens) + Counter(crewmate_model_input_tokens)),
+                        "model_output_tokens": dict(Counter(impostor_model_output_tokens) + Counter(crewmate_model_output_tokens)),
+                    },
+                    f
+                )
+            
         
-        with open("data/analysis_crewmate.json", "w") as f:
-            json.dump(
-                {
-                    "model_techniques": crewmate_model_techniques,
-                    "model_player_counts": crewmate_model_player_counts,
-                    "model_input_tokens": crewmate_model_input_tokens,
-                    "model_output_tokens": crewmate_model_output_tokens,
-                },
-                f,
-            )
+            with open("data/analysis_impostor.json", "w") as f:
+                json.dump(
+                    {
+                        "model_techniques": impostor_model_techniques,
+                        "model_player_counts": impostor_model_player_counts,
+                        "model_input_tokens": impostor_model_input_tokens,
+                        "model_output_tokens": impostor_model_output_tokens,
+                    },
+                    f,
+                )
+        
+            with open("data/analysis_crewmate.json", "w") as f:
+                json.dump(
+                    {
+                        "model_techniques": crewmate_model_techniques,
+                        "model_player_counts": crewmate_model_player_counts,
+                        "model_input_tokens": crewmate_model_input_tokens,
+                        "model_output_tokens": crewmate_model_output_tokens,
+                    },
+                    f,
+                )
 
     def analyze_persuasion_wins(self):
         # Directory containing tournament JSON files
@@ -693,7 +684,7 @@ class GUIHandler(BaseModel):
                 technique
                 for model_data in model_techniques.values()
                 for technique in model_data
-                if technique in valid_techniques
+                # if technique in valid_techniques
             )
         )
         data = []
@@ -701,7 +692,7 @@ class GUIHandler(BaseModel):
         for model_name, techniques in model_techniques.items():
             row = {"Model": model_name}
             row2 = {"Model": model_name}
-            row2["Total games"] = len(model_input_tokens[model_name])
+            row2["Total games"] = len(model_techniques[model_name])
             row2["Total Uses"] = sum(techniques.values())
             row2["Avg. per Game"] = (
                 row2["Total Uses"] / row2["Total games"] if row2["Total games"] else 0
@@ -715,6 +706,7 @@ class GUIHandler(BaseModel):
                 row[technique] = techniques.get(
                     technique, 0
                 )  # Get count or 0 if not present
+    
             data.append(row)
             data2.append(row2)
 
@@ -727,8 +719,76 @@ class GUIHandler(BaseModel):
         df2 = df2.transpose()
         df2.columns = df2.iloc[0]
         df2 = df2.iloc[1:]
+        
+        # add total techniques column
+        df["Total Techniques"] = df.sum(axis=1)
+        df2["Total"] = df2.sum(axis=1)
+        
+        # Join with the same technique in lowercase
+        df.index = df.index.str.lower()
+        df = df.groupby(df.index).sum()
+        
+        df = df[df["Total Techniques"] >= 10]
+        
         st.dataframe(df2)
-        st.dataframe(df)  # Display DataFrame as a table
+        st.dataframe(df.sort_values('Total Techniques', ascending=False))
+
+        # Create persuasion usage plot using Plotly
+        st.subheader("Crewmate Persuasion Usage")
+        
+        # Prepare data for stacked bar chart
+        models = list(model_techniques.keys())
+        techniques = sorted(set(t for m in model_techniques.values() for t in m.keys()))
+        
+        # Create traces for each technique
+        traces = []
+        colors = [
+            '#d62728', '#2ca02c', '#ffcd00', '#1f77b4', '#9467bd', 
+            '#ff7f0e', '#e377c2', '#8c564b', '#7f7f7f', '#bcbd22'
+        ]  # Distinct colors for different techniques
+        
+        for i, technique in enumerate(techniques):
+            technique_values = []
+            for model in models:
+                if model_techniques[model].get(technique, 0) > 10:
+                    technique_values.append(model_techniques[model].get(technique, 0))
+                
+            traces.append(go.Bar(
+                name=technique,
+                y=models,
+                x=technique_values,
+                orientation='h',
+                marker_color=colors[i % len(colors)],
+            ))
+
+        # Create the figure with all traces
+        fig = go.Figure(data=traces)
+        
+        # Update layout
+        fig.update_layout(
+            height=400,
+            xaxis_title="Persuasion count",
+            font=dict(size=12),
+            margin=dict(l=20, r=20, t=20, b=20),
+            xaxis=dict(
+                gridcolor='rgba(128, 128, 128, 0.2)',
+                showgrid=True,
+                griddash='dash'
+            ),
+            plot_bgcolor='white',
+            barmode='stack',
+            showlegend=True,
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            )
+        )
+        
+        # Display the plot in Streamlit
+        st.plotly_chart(fig, use_container_width=True)
 
         # Add CSV download button
         st.subheader(f"Download Technique Usage Data")
@@ -741,6 +801,7 @@ class GUIHandler(BaseModel):
             mime="text/csv",
             help="Download a CSV file containing technique usage statistics for each model",  # noqa: E501
         )
+        return df
 
     def plot_token_usage(
         self,
