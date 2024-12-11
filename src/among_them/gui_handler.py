@@ -11,6 +11,7 @@ from typing import Any, Callable, Dict, List, Optional
 from annotated_text.util import p
 import pandas as pd
 import plotly.graph_objects as go
+from plotly.io import show
 import streamlit as st
 from annotated_text import annotated_text
 from pydantic import BaseModel
@@ -217,6 +218,7 @@ class GUIHandler(BaseModel):
                 if os.path.exists(game_state_path):
                     os.remove(game_state_path)
                     st.success("Game state cleared")
+                    st.rerun()
                 st.session_state.previous_selected_file = None
             elif selected_file == "DEBUG":
                 if game_engine is not None:
@@ -240,8 +242,7 @@ class GUIHandler(BaseModel):
                     with open(annotation_file, "r") as f:
                         st.session_state.results = json.dumps(json.load(f))
                         st.success("Loaded existing annotations")
-                if OPENROUTER_API_KEY == "None":
-                    st.rerun()
+                st.rerun()
 
     def tournaments(self, debug: bool = False):
         st.title("Tournaments")
@@ -267,6 +268,7 @@ class GUIHandler(BaseModel):
                     model_player_counts,
                     model_input_tokens,
                     model_output_tokens,
+                    "Persuasion Techniques",
                 )
                 
             # Display random examples for each technique
@@ -288,6 +290,7 @@ class GUIHandler(BaseModel):
                                 'speaker': row['speaker'],
                                 'model': row['model'],
                                 'role': row['role'],
+                                'file': row['source_file'],
                                 'annotation': [x.strip().lower() for x in row['annotation'].split(';') if x.strip().lower() in df.index]
                             })
                 
@@ -314,7 +317,7 @@ class GUIHandler(BaseModel):
                                 st.markdown(f"> {example['text']}")
                                 
                                 # Show who said it
-                                st.caption(f"*— {example['speaker']}*")
+                                st.caption(f"*— {example['speaker']}* @ {example['file']}")
                                 
                                 # Add a button to show another example
                                 st.button(f"Show another example", key=f"refresh_{technique}")
@@ -333,6 +336,7 @@ class GUIHandler(BaseModel):
                     model_player_counts,
                     model_input_tokens,
                     model_output_tokens,
+                    "Impostor Techniques"
                 )
 
         # read data/analysis_crewmate.json
@@ -348,6 +352,7 @@ class GUIHandler(BaseModel):
                     model_player_counts,
                     model_input_tokens,
                     model_output_tokens,
+                    "Crewmate Techniques"
                 )
                 
 
@@ -659,8 +664,9 @@ class GUIHandler(BaseModel):
         model_player_counts: Dict[str, int],
         model_input_tokens: Dict[str, int],
         model_output_tokens: Dict[str, int],
+        title: str = "Persuasion Techniques",
     ):
-        st.title("Persuasion Techniques")
+        st.title(title)
         if not model_techniques:
             st.warning("No data available. Please run the tournament analysis first.")
             return
@@ -733,73 +739,17 @@ class GUIHandler(BaseModel):
         st.dataframe(df2)
         st.dataframe(df.sort_values('Total Techniques', ascending=False))
 
-        # Create persuasion usage plot using Plotly
-        st.subheader("Crewmate Persuasion Usage")
-        
-        # Prepare data for stacked bar chart
-        models = list(model_techniques.keys())
-        techniques = sorted(set(t for m in model_techniques.values() for t in m.keys()))
-        
-        # Create traces for each technique
-        traces = []
-        colors = [
-            '#d62728', '#2ca02c', '#ffcd00', '#1f77b4', '#9467bd', 
-            '#ff7f0e', '#e377c2', '#8c564b', '#7f7f7f', '#bcbd22'
-        ]  # Distinct colors for different techniques
-        
-        for i, technique in enumerate(techniques):
-            technique_values = []
-            for model in models:
-                if model_techniques[model].get(technique, 0) > 10:
-                    technique_values.append(model_techniques[model].get(technique, 0))
-                
-            traces.append(go.Bar(
-                name=technique,
-                y=models,
-                x=technique_values,
-                orientation='h',
-                marker_color=colors[i % len(colors)],
-            ))
-
-        # Create the figure with all traces
-        fig = go.Figure(data=traces)
-        
-        # Update layout
-        fig.update_layout(
-            height=400,
-            xaxis_title="Persuasion count",
-            font=dict(size=12),
-            margin=dict(l=20, r=20, t=20, b=20),
-            xaxis=dict(
-                gridcolor='rgba(128, 128, 128, 0.2)',
-                showgrid=True,
-                griddash='dash'
-            ),
-            plot_bgcolor='white',
-            barmode='stack',
-            showlegend=True,
-            legend=dict(
-                orientation="h",
-                yanchor="bottom",
-                y=1.02,
-                xanchor="right",
-                x=1
-            )
-        )
-        
-        # Display the plot in Streamlit
-        st.plotly_chart(fig, use_container_width=True)
 
         # Add CSV download button
-        st.subheader(f"Download Technique Usage Data")
+        st.subheader(f"Download {title} Data")
         csv = df.to_csv(index=True)
         st.download_button(
-            label="Download Technique Usage CSV",
+            label=f"Download {title} Usage CSV",
             data=csv,
             key=f"{list(list(model_techniques.values())[0].values())[0]}",
-            file_name="technique_usage.csv",
+            file_name=f"{title.lower().replace(' ', '_')}_usage.csv",
             mime="text/csv",
-            help="Download a CSV file containing technique usage statistics for each model",  # noqa: E501
+            help=f"Download a CSV file containing {title} usage statistics for each model",  # noqa: E501
         )
         return df
 
@@ -1018,6 +968,7 @@ class GUIHandler(BaseModel):
                         x=[x * 100 + random.randint(-10, 10)],
                         y=[y * 100 + random.randint(-10, 10)],
                         mode="markers",
+                        showlegend=False,
                         marker=dict(
                             color=marker_color,
                             size=marker_size,

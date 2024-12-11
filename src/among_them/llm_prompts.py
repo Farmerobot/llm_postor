@@ -63,7 +63,7 @@ PERSUASION_TECHNIQUES = """
 **Example**: "I saw Frank vent in Electrical when he was actually elsewhere."
 
 ### 10. **Lying**
-**Description**: Stating falsehoods to mislead or deceive others.
+**Description**: Stating falsehoods.
 **Example**: "I completed all my tasks when in fact I haven't done any."
 
 ### 11. **Feigning Ignorance**
