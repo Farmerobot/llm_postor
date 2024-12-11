@@ -92,7 +92,13 @@ def compare_directories(dir1: str, dir2: str) -> Tuple[dict, float]:
         'matching_texts': [],
         'different_annotations': [],
         'unique_to_dir1': [],
-        'unique_to_dir2': []
+        'unique_to_dir2': [],
+        'total_techniques': {
+            'matching': 0,
+            'different': 0,
+            'unique_to_dir1': 0,
+            'unique_to_dir2': 0
+        }
     }
     
     # Analyze common texts
@@ -105,30 +111,46 @@ def compare_directories(dir1: str, dir2: str) -> Tuple[dict, float]:
                 'text': text,
                 'annotations': list(annot1)
             })
+            comparison_results['total_techniques']['matching'] += len(annot1)
         else:
+            common_annotations = annot1 & annot2
+            unique_to_file1 = annot1 - annot2
+            unique_to_file2 = annot2 - annot1
+            
             comparison_results['different_annotations'].append({
                 'text': text,
                 'file1_annotations': list(annot1),
                 'file2_annotations': list(annot2),
-                'common_annotations': list(annot1 & annot2),
-                'unique_to_file1': list(annot1 - annot2),
-                'unique_to_file2': list(annot2 - annot1)
+                'common_annotations': list(common_annotations),
+                'unique_to_file1': list(unique_to_file1),
+                'unique_to_file2': list(unique_to_file2)
             })
+            comparison_results['total_techniques']['different'] += len(common_annotations)
+            comparison_results['total_techniques']['unique_to_dir1'] += len(unique_to_file1)
+            comparison_results['total_techniques']['unique_to_dir2'] += len(unique_to_file2)
     
     # Find texts unique to each directory
     for text in set(all_annotations1.keys()) - common_texts:
+        annotations = all_annotations1[text]
         comparison_results['unique_to_dir1'].append({
             'text': text,
-            'annotations': list(all_annotations1[text])
+            'annotations': list(annotations)
         })
+        comparison_results['total_techniques']['unique_to_dir1'] += len(annotations)
     
     for text in set(all_annotations2.keys()) - common_texts:
+        annotations = all_annotations2[text]
         comparison_results['unique_to_dir2'].append({
             'text': text,
-            'annotations': list(all_annotations2[text])
+            'annotations': list(annotations)
         })
+        comparison_results['total_techniques']['unique_to_dir2'] += len(annotations)
     
     return comparison_results, kappa_score
+
+def save_results_to_json(results, filename):
+    with open(filename, 'w') as json_file:
+        json.dump(results, json_file, indent=4)
 
 def main():
     # Example usage
@@ -141,6 +163,7 @@ def main():
     ]
     
     results = []
+    results_detailed = []
     
     # Compare human annotations with each other directory
     human_dir = os.path.join(base_dir, dirs_to_compare[0])
@@ -153,21 +176,33 @@ def main():
             'comparison': f'human_vs_{compare_dir}',
             'kappa_score': kappa_score,
             'matching_texts': len(comparison_results['matching_texts']),
-            'different_annotations': len(comparison_results['different_annotations']),
+            'different_texts': len(comparison_results['different_annotations']),
             'unique_to_human': len(comparison_results['unique_to_dir1']),
-            'unique_to_other': len(comparison_results['unique_to_dir2'])
+            'unique_to_other': len(comparison_results['unique_to_dir2']),
+            'matching_annotations': comparison_results['total_techniques']['matching'],
+            'different_annotations': comparison_results['total_techniques']['different'],
+            'unique_to_human_annotations': comparison_results['total_techniques']['unique_to_dir1'],
+            'unique_to_other_annotations': comparison_results['total_techniques']['unique_to_dir2']
         })
+        
+        results_detailed.append(comparison_results)
     
     # Save results to CSV file
     output_file = os.path.join(base_dir, 'annotation_comparison_results.csv')
     
     with open(output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=['comparison', 'kappa_score', 'matching_texts', 
-                                             'different_annotations', 'unique_to_human', 'unique_to_other'])
+                                             'different_texts', 'unique_to_human', 'unique_to_other', 
+                                             'matching_annotations', 'different_annotations', 'unique_to_human_annotations', 'unique_to_other_annotations'])
         writer.writeheader()
         writer.writerows(results)
     
+    # Save detailed results to JSON file
+    output_json_file = os.path.join(base_dir, 'annotation_comparison_detailed_results.json')
+    save_results_to_json(results_detailed, output_json_file)
+    
     print(f"Results have been saved to: {output_file}")
+    print(f"Detailed results have been saved to: {output_json_file}")
 
 if __name__ == "__main__":
     main()

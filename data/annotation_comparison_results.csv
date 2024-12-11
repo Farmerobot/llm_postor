@@ -1,2 +1,2 @@
-comparison,kappa_score,matching_texts,different_annotations,unique_to_human,unique_to_other
-human_vs_annotations,0.666553710606574,45,78,1,1
+comparison,kappa_score,matching_texts,different_texts,unique_to_human,unique_to_other,matching_annotations,different_annotations,unique_to_human_annotations,unique_to_other_annotations
+human_vs_annotations,0.666553710606574,45,78,1,1,83,84,93,56
