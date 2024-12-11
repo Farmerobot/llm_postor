@@ -1,4 +1,2 @@
 comparison,kappa_score,matching_texts,different_annotations,unique_to_human,unique_to_other
-human_vs_annotations_4o_mini_ev,0.43965740981053725,14,63,13,13
-human_vs_annotations_gemini_ev,0.5549714684619411,24,66,0,0
-human_vs_annotations_gemini_2_ev,0.930859771544589,72,18,0,0
+human_vs_annotations,0.666553710606574,45,78,1,1

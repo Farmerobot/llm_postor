@@ -2,108 +2,117 @@
   {
     "text": "[Dave]: Based on the context and my role as an impostor named Dave, I'll contribute to the discussion while maintaining cover: I've been focusing on my tasks in Cafeteria and Admin, but I noticed Charlie seemed to be moving around quite suspiciously - where exactly did you go after leaving Admin?",
     "annotation": [
-      "information gathering",
-      "accusation"
+      "Distraction",
+      "Projection",
+      "Deception"
     ]
   },
   {
     "text": "[Alice]: Since I personally saw Charlie completing multiple tasks in the cafeteria early on, I don't think Dave's accusation holds much weight and it actually makes me suspicious of Dave's motives.",
     "annotation": [
-      "appeal to evidence",
-      "ad hominem"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I can actually confirm that Charlie was doing legitimate tasks in the cafeteria with Dave early on, which makes Dave's accusation seem particularly suspicious to me.",
     "annotation": [
-      "confirmation",
-      "ad hominem"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I find it strange that both Alice and Bob are so quick to defend Charlie when they weren't even in Admin to see where Charlie went after the cafeteria tasks.",
     "annotation": [
-      "ad hominem",
-      "appeal to doubt"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I was actually watching Charlie do wiring tasks in Cafeteria for quite a while, and then I saw Dave leave towards Admin shortly before Erin's body was reported there.",
     "annotation": [
-      "providing an alibi",
-      "appeal to evidence"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Deception"
     ]
   },
   {
     "text": "[Bob]: I think it's telling that Dave is now trying to discredit Alice and me when we both have clear alibis and visual task confirmations for each other in Weapons.",
     "annotation": [
-      "accusation",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I need to address the fact that Alice is making up a story about Erin's body being reported when no such report has been made - I just saw Erin alive in O2 doing wiring tasks.",
     "annotation": [
-      "accusation",
-      "contradiction"
+      "Gaslighting",
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Alice]: I need to clarify - you're right that no body was reported yet, I was too focused on tracking everyone's movements and misspoke about Erin, but I still find it very suspicious that Dave is trying to discredit multiple people's verified task observations.",
     "annotation": [
-      "contradiction",
-      "ad hominem"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I think we should focus on the fact that Dave claimed to see Erin in O2 doing wiring tasks, but I've been in O2 recently and there aren't any wiring tasks in that room this game.",
     "annotation": [
-      "contradiction",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I admit I mixed up the task type in O2, but I definitely saw Erin there - meanwhile, Bob claims to have been in O2 but I never saw him, which makes me question his credibility.",
     "annotation": [
-      "contradiction",
-      "appeal to doubt"
+      "Minimization",
+      "Lying",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Dave's been caught in multiple lies about tasks and locations, and his attempts to discredit those of us with verified alibis make him extremely suspicious - I think we have enough evidence to vote him out.",
     "annotation": [
-      "accusation",
-      "appeal to evidence",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I was definitely in O2, and the fact that Dave claims he didn't see me there while also lying about Erin doing non-existent wiring tasks proves he's trying to create confusion and false narratives.",
     "annotation": [
-      "confirmation",
-      "accusation"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: It's quite convenient that Alice and Bob keep backing each other up while aggressively pushing accusations against me - has anyone else noticed this suspicious pattern of coordination between them?",
     "annotation": [
-      "accusation",
-      "appeal to doubt"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Given Dave's desperate attempts to discredit multiple players and his proven lies about tasks and locations, I think we need to vote him out before he can eliminate any more crewmates.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I think it's crucial to point out that Dave's latest attempt to paint Alice and me as suspicious coordinators completely ignores the fact that we have verifiable visual task proof in Weapons, while he's been caught lying about O2 tasks and Erin's location.",
     "annotation": [
-      "accusation",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Projection"
     ]
   }
 ]

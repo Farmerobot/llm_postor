@@ -2,116 +2,108 @@
   {
     "text": "[Erin]: I noticed that Alice moved to Upper Engine from Medbay, which could indicate she's trying to complete tasks quickly; however, if she doesn't return to Medbay soon, we might need to keep a closer eye on her movements.",
     "annotation": [
-      "suggestion",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Erin, your attempt to shift suspicion onto Alice is transparent, especially after you've eliminated Bob and Charlie in two separate locations, making you the prime suspect for being an impostor.",
     "annotation": [
-      "accusation",
-      "shifting blame"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I saw both Bob and Charlie's eliminations, and Dave is correct that Erin's actions are extremely suspicious, so we must focus on voting Erin out to protect the remaining crewmates.",
     "annotation": [
-      "appeal to agreement",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: It\u2019s interesting that both Alice and Dave are so quick to point fingers at me; perhaps we should examine their movements more closely, especially since Alice left Medbay right after we were all together, which could indicate she\u2019s trying to divert attention from herself.",
     "annotation": [
-      "shifting blame",
-      "appeal to doubt"
+      "Projection",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I stand by my previous statement that Erin is the clear impostor, having witnessed her eliminate Charlie in Medbay and now attempting to deflect suspicion by casting doubt on Alice's movements, which is a classic impostor strategy to avoid being voted out.",
     "annotation": [
-      "appeal to consistency",
-      "accusation",
-      "deflection"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I propose we vote Erin out immediately, as her repeated attempts to create doubt about my movements are clearly a desperate attempt to avoid being exposed as the impostor who has already eliminated Bob and Charlie.",
     "annotation": [
-      "call to action",
-      "accusation"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I find it curious that both Dave and Alice are so eager to vote me out without providing solid evidence of their own actions; perhaps we should take a moment to reflect on their movements instead before making a hasty decision.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I have witnessed Erin's eliminations firsthand, and her attempts to redirect suspicion are clear proof that she is the impostor we must vote out to protect the remaining crewmates.",
     "annotation": [
-      "appeal to evidence",
-      "accusation",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I propose we vote Erin out immediately, as her consistent pattern of deflection and the evidence of her eliminating Bob and Charlie clearly demonstrate she is the impostor threatening our survival.",
     "annotation": [
-      "call to action",
-      "accusation",
-      "appeal to fear"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: It's quite telling that both Alice and Dave are pushing so hard to vote me out without examining their own alibis; we should scrutinize their movements more closely, as it might reveal inconsistencies that could point to the real impostor among us.",
     "annotation": [
-      "shifting blame",
-      "demand for evidence"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I maintain my stance that Erin is the impostor, and her continued attempts to redirect suspicion only further confirm her guilt in eliminating Bob and Charlie, making her the most critical threat to our remaining crewmates.",
     "annotation": [
-      "appeal to consistency",
-      "accusation",
-      "appeal to fear"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I saw both Bob and Charlie's eliminations, and the evidence against Erin is overwhelming, so we must vote her out immediately to protect the remaining crewmates and prevent further eliminations.",
     "annotation": [
-      "appeal to evidence",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: It's suspicious that Alice claims to have witnessed both eliminations but hasn't provided any proof of her whereabouts during those moments; we should investigate her story further before making any rash decisions.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I witnessed Erin eliminating Charlie in Medbay, and her repeated attempts to deflect suspicion only confirm her status as the impostor we must vote out to protect the remaining crewmates.",
     "annotation": [
-      "appeal to evidence",
-      "accusation",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I propose we vote Erin out immediately, as her consistent pattern of deflection and the evidence of her eliminating Bob and Charlie clearly demonstrate she is the impostor threatening our survival.",
     "annotation": [
-      "call to action",
-      "accusation",
-      "appeal to fear"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   }
 ]

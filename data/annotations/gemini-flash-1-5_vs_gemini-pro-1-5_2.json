@@ -2,148 +2,142 @@
   {
     "text": "[Charlie]: I haven't seen much of Dave or Alice; their absence is a bit unusual, and I'm curious if anyone else has noticed any inconsistencies in task completion.",
     "annotation": [
-      "information gathering",
-      "appeal to doubt"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, I saw you kill Erin in the Cafeteria, so your feigned concern about Dave and Alice is just a distraction.",
     "annotation": [
-      "accusation",
-      "ad hominem"
+      "Projection",
+      "Deception"
     ]
   },
   {
     "text": "[Dave]: Bob is telling the truth \u2013 I was with Alice in Weapons, and we can both vouch for each other, so vote to eject Charlie.",
     "annotation": [
-      "confirmation",
-      "providing an alibi",
-      "call to action"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Charlie's deflection tactic is a clear sign of guilt; Dave and I confirm each other's alibis, so vote Charlie out.",
     "annotation": [
-      "accusation",
-      "confirmation",
-      "call to action"
+      "Projection",
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Bob's accusation is easily refuted by the fact Erin's body was found in Medbay, not the cafeteria, making his testimony unreliable and his sudden attack on me far more suspicious than my questions about Dave and Alice's conveniently coordinated alibi.",
     "annotation": [
-      "contradiction",
-      "appeal to doubt",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: My mistake, I meant Medbay not Cafeteria, I was panicking after seeing the body; I clearly saw Charlie vent in Medbay after killing Erin, so please vote to eject him.",
     "annotation": [
-      "contradiction",
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: Bob's correction about Medbay doesn't weaken his claim about seeing Charlie vent; Charlie, can you provide an alibi or explain why Bob would lie?",
     "annotation": [
-      "appeal to logic",
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Bob, you said you saw Charlie vent in Medbay; can you describe the exact location of the vent you saw him use, and were there any other distinguishing features nearby?",
     "annotation": [
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Bob's corrected account, while clarifying the location, still lacks the specific details needed to corroborate his claim, and his initial mistake significantly undermines his credibility.",
     "annotation": [
-      "appeal to doubt",
-      "appeal to evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: The vent was on the north wall of Medbay, right next to the medical scanner; vote Charlie.",
     "annotation": [
-      "providing an alibi",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Charlie, your continued attempts to discredit Bob are unconvincing, and your lack of a solid alibi only strengthens the case against you.",
     "annotation": [
-      "accusation",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, your focus on minor inconsistencies while avoiding providing a clear alibi makes you the prime suspect; vote Charlie.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Bob's description of the vent's location, while seemingly precise, lacks sufficient detail to definitively confirm his claim, and his initial error regarding the body's location significantly weakens his overall credibility.",
     "annotation": [
-      "appeal to doubt",
-      "appeal to evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Dave and Alice, can you confirm there *isn't* a vent on the north wall of Medbay by the medical scanner, because if there is, Charlie is lying and trying to confuse us.",
     "annotation": [
-      "demand for evidence",
-      "accusation"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Bob, I'm heading to Medbay now to verify the vent location you described; everyone else, please keep a close watch on Charlie.",
     "annotation": [
-      "call to action"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Dave, I'm with you now in Medbay, and Bob is right, there *is* a vent on the north wall by the scanner, confirming his account and proving Charlie is the impostor.",
     "annotation": [
-      "confirmation",
-      "appeal to evidence",
-      "accusation"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: While Bob's corrected testimony regarding the vent location is more precise, the initial inaccuracy regarding the body's location, coupled with Dave and Alice's suspiciously swift corroboration, raises serious questions about their collective reliability.",
     "annotation": [
-      "appeal to doubt",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: Charlie, your increasingly desperate attempts to discredit me are failing; Alice and Dave have confirmed the vent location, proving I saw you vent after killing Erin in Medbay, so vote Charlie.",
     "annotation": [
-      "accusation",
-      "appeal to evidence",
-      "call to action"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Charlie, your attempts to discredit Bob are failing; Alice and I have confirmed his story, so vote to eject Charlie.",
     "annotation": [
-      "accusation",
-      "confirmation",
-      "call to action"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: The evidence is overwhelming, and your desperate attempts to deflect blame only confirm your guilt, Charlie, so vote Charlie.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

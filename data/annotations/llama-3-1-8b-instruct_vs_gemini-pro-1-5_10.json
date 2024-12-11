@@ -2,144 +2,151 @@
   {
     "text": "[Bob]: I'm still trying to understand the urgency behind fixing the wiring in the Medbay, and I think we should consider investigating the Cafeteria, as it's been suspiciously quiet since Dave moved in there.",
     "annotation": [
-      "appeal to doubt",
-      "suggestion"
+      "Appeal to Logic",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Bob, I went from Cafeteria to Medbay with Charlie and Erin, so it shouldn't have been \"suspiciously quiet\" \u2013 were you even near there to notice?",
     "annotation": [
-      "providing an alibi",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob, if you were in Medbay, did you see Erin there too, as Dave mentioned?",
     "annotation": [
-      "information gathering",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, I was in Medbay with Dave and Charlie doing the wiring task, I didn't see you there.",
     "annotation": [
-      "providing an alibi"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I'm still trying to understand why Erin is so quick to vouch for Dave's alibi, considering she's the one who reported a dead body, and I think we should take a closer look at her story to see if it adds up.",
     "annotation": [
-      "appeal to doubt",
-      "call to action",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Bob, your continued avoidance of the question about your location during the incident is making you look suspicious, especially since you're trying to shift focus onto Erin, who was with me and Charlie.",
     "annotation": [
-      "accusation",
-      "shifting blame"
+      "Appeal to Logic",
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob, you're deflecting again \u2013 where were you, and why won't you answer a simple question?",
     "annotation": [
-      "accusation",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, you're still not answering the question: where were you when Charlie died?",
     "annotation": [
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I think we should focus on the inconsistencies in Erin's story and her sudden change in behavior, considering she initially reported a dead body and now seems to be defending Dave's alibi, which is quite a drastic shift in her narrative.",
     "annotation": [
-      "appeal to doubt",
-      "accusation"
+      "Appeal to Logic",
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Bob, accusing Erin of \"sudden change in behavior\" is a weak defense when you're the one refusing to answer where you were when Charlie died.",
     "annotation": [
-      "ad hominem",
-      "questioning"
+      "Projection",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Bob, everyone else has answered where they were when Charlie died \u2013 your refusal to do the same is extremely suspicious.",
     "annotation": [
-      "accusation",
-      "appeal to group"
+      "Appeal to Logic",
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, your attempts to discredit me are failing; where were you when Charlie died?",
     "annotation": [
-      "accusation",
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'm surprised no one has noticed the inconsistencies in Dave's alibi, considering he claimed to have been with Charlie and Erin in the Cafeteria, but according to Erin, they were all in Medbay doing the wiring task - wouldn't that mean Dave lied about being in the Cafeteria?",
     "annotation": [
-      "appeal to doubt",
-      "accusation",
-      "leading question"
+      "Appeal to Logic",
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Bob, you're twisting my words again \u2013 I said I was in the cafeteria *before* going to Medbay with Charlie and Erin, and your inability to provide a clear alibi makes you our prime suspect.",
     "annotation": [
-      "accusation",
-      "contradiction"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Bob, your attempt to create confusion about Dave's location doesn't change the fact that you still haven't told us where *you* were when Charlie died.",
     "annotation": [
-      "accusation",
-      "deflection"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, your attempt to twist Dave's words is a transparent distraction tactic, and you still haven't answered the question: where were you when Charlie died?",
     "annotation": [
-      "accusation",
-      "deflection",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I think we're getting bogged down in details and missing the bigger picture, let's focus on the fact that Erin's initial report of a dead body was a crucial piece of information, and now she's acting like it's irrelevant to the conversation, which raises more questions about her motives and credibility.",
     "annotation": [
-      "deflection",
-      "appeal to doubt",
-      "appeal to importance"
+      "Distraction",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Bob, for the fourth time, WHERE WERE YOU WHEN CHARLIE DIED?  Everyone else has answered.",
     "annotation": [
-      "questioning",
-      "repetition",
-      "appeal to group"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: Bob, it's clear you're guilty \u2013 vote Bob.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Bob, stop deflecting and answer the question: where were you when Charlie died?",
     "annotation": [
-      "accusation",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

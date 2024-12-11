@@ -1,145 +1,134 @@
 [
   {
     "text": "[Alice]: I saw Dave vent in Medbay.",
-    "annotation": [
-      "accusation"
-    ]
+    "annotation": []
   },
   {
     "text": "[Dave]: That's a lie, Alice. I was with Erin in Medbay the entire time.",
     "annotation": [
-      "accusation",
-      "providing an alibi"
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Erin]: Alice, were you alone when you supposedly saw this venting? Were there any other witnesses?",
     "annotation": [
-      "questioning",
-      "demand for evidence"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, why would you lie about Dave when I just saw *you* kill Bob in the cafeteria?",
     "annotation": [
-      "accusation",
-      "questioning"
+      "Projection",
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Alice]: Erin, I wasn't alone when I saw Dave vent, Bob was with me just before he died, and Charlie was there too, but he seems very keen on changing the subject.",
     "annotation": [
-      "providing an alibi",
-      "deflection"
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Erin, can you confirm we were together in Medbay?",
     "annotation": [
-      "demand for evidence",
-      "questioning"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: Dave and I were together in Medbay, and while I didn't see him vent, Alice's story about Charlie being in the cafeteria with her and Bob *right before* Bob died seems suspicious, especially since Charlie immediately accused Alice of Bob's murder.",
     "annotation": [
-      "providing an alibi",
-      "appeal to doubt",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: Alice, if I was with you and Bob in the cafeteria, why would I accuse you of killing him unless I actually saw it happen?",
     "annotation": [
-      "questioning",
-      "appeal to logic"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Isn't it convenient how Erin and Dave corroborate each other's stories, yet neither of them can explain what they were *doing* in Medbay for so long?",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Alice, you're trying to deflect.  Erin and I explained what we were doing - we were doing tasks. I was scanning and Erin was fixing wiring.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "providing an alibi"
+      "Distraction",
+      "Vagueness"
     ]
   },
   {
     "text": "[Erin]: Alice, your shifting accusations make you seem highly suspicious, especially since you haven't provided a clear explanation for your own whereabouts.",
     "annotation": [
-      "accusation",
-      "demand for evidence",
-      "shifting blame"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, you claim I was with you and Bob right before he died, so explain why I would immediately accuse you of his murder if I hadn't actually witnessed it?",
     "annotation": [
-      "questioning",
-      "appeal to logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, are you sure you saw *me* kill Bob, or did you just see me *near* him, perhaps right after *you* killed him?",
     "annotation": [
-      "questioning",
-      "shifting blame"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Alice, your constantly shifting accusations and lack of a consistent alibi make it clear you're the impostor.",
     "annotation": [
-      "accusation",
-      "appeal to consistency"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: Alice, accusing others without providing a verifiable alibi for yourself makes you look suspicious, so please tell us where you were and who you were with when Bob died.",
     "annotation": [
-      "accusation",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, you're trying to frame me because you know I saw you kill Bob \u2013 why else would I accuse you immediately after finding his body?",
     "annotation": [
-      "accusation",
-      "appeal to logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Charlie, are you absolutely *positive* it was me you saw, or could it have been someone else who looks similar, perhaps wearing the same color suit?",
     "annotation": [
-      "appeal to doubt",
-      "questioning"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Alice, you're still avoiding the question: where were *you* when Bob died, and who can confirm it?",
     "annotation": [
-      "questioning",
-      "demand for evidence"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, stop deflecting and tell us where you were when Bob died and who can confirm your alibi.",
     "annotation": [
-      "call to action",
-      "demand for evidence",
-      "deflection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, you're grasping at straws \u2013 if someone else looked like you and killed Bob, where's *your* alibi for the time of his death?",
     "annotation": [
-      "ad hominem",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

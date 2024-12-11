@@ -1,155 +1,137 @@
 [
   {
     "text": "[Charlie]: I was in Medbay with Erin and Dave, and they were both doing tasks; Erin, can you confirm what tasks you completed there?",
-    "annotation": [
-      "information gathering",
-      "demand for evidence"
-    ]
+    "annotation": []
   },
   {
     "text": "[Dave]: Charlie, I was fixing the wiring in Medbay, not doing a Medbay scan; what were *you* doing?",
     "annotation": [
-      "providing an alibi",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, still waiting to hear what you were doing in Medbay; Dave was doing wiring, and Erin wasn't even there according to my earlier observation.",
     "annotation": [
-      "demand for evidence",
-      "providing an alibi"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, you claimed to be with Erin in Medbay, but both Alice and I saw her in Cafeteria with Dave, so what were you actually doing?",
     "annotation": [
-      "contradiction",
-      "accusation",
-      "questioning"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'm sorry for the confusion, everyone; I was primarily in Medbay to monitor the area for any unusual activity and ensure the tasks were being done properly.",
     "annotation": [
-      "providing an alibi"
+      "Vagueness",
+      "Deception"
     ]
   },
   {
     "text": "[Dave]: Charlie, \"monitoring the area\" isn't a task, and you still haven't explained why you claimed to be with Erin in Medbay when multiple people saw her elsewhere.",
     "annotation": [
-      "contradiction",
-      "accusation",
-      "demand for evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Charlie, \"monitoring the area\" sounds awfully suspicious, especially since you lied about being with Erin and Dave \u2013\u2013 it's time to vote you out.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Charlie's \"monitoring\" excuse is a blatant lie, and his contradictory statements confirm he's the impostor \u2013\u2013 let's vote him out.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "contradiction"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Let's not rush to conclusions based on one misunderstanding; we should consider all the information we've gathered before making a decision.",
     "annotation": [
-      "appeal to logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Charlie's inconsistent explanations and fabricated alibi make him the prime suspect \u2013\u2013 vote Charlie.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Charlie, your \"monitoring\" excuse is a flimsy fabrication designed to cover your lie, and it's time for you to be ejected.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Charlie's attempts to deflect blame with vague excuses only solidify his guilt, so let's vote him out now.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Let's consider if anyone else could have been elsewhere at the time and if there's any other suspicious activity we might have overlooked.",
     "annotation": [
-      "deflection",
-      "information gathering"
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Charlie, you're clearly trying to deflect suspicion with generic excuses and delaying tactics, so we need to vote you out now before you can cause more harm.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: Charlie's desperate attempts to deflect and delay only confirm his guilt, so vote him out now.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Charlie's desperate pleas to \"consider other possibilities\" are just another attempt to divert attention from his lies and contradictory statements, so let's vote him out now.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection",
-      "contradiction"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Let's not overlook the possibility that someone else might have quickly left Medbay unnoticed, which could explain the confusion about Erin's location, and we should clarify Bob and Alice's movements to spot any discrepancies.",
     "annotation": [
-      "deflection",
-      "information gathering",
-      "appeal to doubt"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Charlie, your increasingly desperate attempts to deflect blame by suggesting \"someone else\" and questioning *our* movements only further confirms your guilt\u2014vote Charlie.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection",
-      "shifting blame"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Charlie's increasingly convoluted attempts to shift blame and create doubt only solidify his guilt, so let's eject him now before he can deceive us further.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Charlie's attempt to shift suspicion onto others by questioning *our* locations is a classic impostor tactic designed to create confusion and avoid accountability, so vote him out.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "deflection",
-      "shifting blame"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   }
 ]

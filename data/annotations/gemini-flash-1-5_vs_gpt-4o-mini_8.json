@@ -2,155 +2,161 @@
   {
     "text": "[Alice]: I saw Dave head to Admin a short while ago; anyone else see him around, or perhaps confirm he completed a task there?",
     "annotation": [
-      "information gathering",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, your claim about Dave doesn't distract from the fact that you just eliminated Bob in front of me, and we need to focus on your actions before we consider anything else.",
     "annotation": [
-      "accusation",
-      "appeal to importance"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: We need to trust Erin's account, as she witnessed Alice eliminate Bob, and I can vouch for my own task completion in the cafeteria, which makes Alice's attempt to shift blame onto me even more suspicious.",
     "annotation": [
-      "appeal to authority",
-      "providing an alibi",
-      "accusation"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: We can't let Alice shift the focus away from her actions; Erin clearly saw her eliminate Bob, and we should vote for Alice to ensure our safety.",
     "annotation": [
-      "call to action",
-      "appeal to fear",
-      "accusation"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: While I understand Erin's concern, focusing solely on her testimony without considering other possibilities could lead to a wrongful accusation.",
     "annotation": [
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Alice, your attempts to deflect blame only highlight your guilt, and we must prioritize our safety by voting you out to prevent further eliminations.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: Alice, your attempts to deflect blame only serve to confirm Erin's account of what you did, and if we don't vote you out now, we risk losing another crewmate.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: We can't let Alice's deflection distract us from the fact that both Erin and I witnessed her commit the crime, and voting her out now is our best chance to protect the remaining crewmates and complete our tasks.",
     "annotation": [
-      "accusation",
-      "appeal to importance",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: While I appreciate Erin's testimony,  jumping to conclusions without fully investigating Dave's alibi and the overall task progress could lead to a costly mistake.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, your insistence on investigating Dave instead of addressing the overwhelming evidence against you only strengthens our resolve to vote you out for the safety of the remaining crewmates.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: Alice, your continued attempts to redirect the conversation towards my alibi instead of addressing the clear evidence against you only solidify our decision to vote you out for the safety of the crew.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Charlie]: Alice, your ongoing deflection and failure to address the clear evidence against you only reinforces our need to vote you out immediately to protect the crew and complete our tasks.",
+    "text": "[Charlie]: We can't let Alice's deflection distract us from the fact that both Erin and I witnessed her commit the crime, and voting her out now is our best chance to protect the remaining crewmates and complete our tasks.",
     "annotation": [
-      "accusation",
-      "appeal to importance",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Alice]: While I understand Erin's account,  dismissing my observation about Dave's presence in Admin without investigating further risks a misjudgment that could benefit the actual impostor.",
+    "text": "[Alice]: While I appreciate Erin's testimony,  dismissing my observation about Dave's presence in Admin without investigating further risks a misjudgment that could benefit the actual impostor.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, your insistence on investigating Dave instead of facing the clear evidence against you only serves to confirm our decision; we must act now to protect the remaining crewmates before it's too late.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: Alice, your continued attempts to shift the blame onto me only distract from the undeniable evidence against you, and we must act decisively to vote you out for the safety of the crew.",
     "annotation": [
-      "accusation",
-      "call to action",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: Alice, your repeated attempts to deflect blame and ignore the overwhelming evidence against you only put us at greater risk, and it's crucial we vote you out now to ensure the safety of the remaining crewmates.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: While I appreciate Erin's testimony, prematurely dismissing my observation about Dave without further investigation risks a misjudgment that could inadvertently protect the real impostor.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, your persistent deflection and refusal to acknowledge the overwhelming evidence against you only heightens our urgency to vote you out, as each moment we delay increases the risk to the remaining crewmates.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: We need to act now and vote Alice out, as her repeated deflections only confirm her guilt and put the remaining crewmates at risk of further eliminations.",
     "annotation": [
-      "call to action",
-      "appeal to fear",
-      "accusation"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: Alice, your continuous attempts to deflect and shift blame only serve to highlight your guilt, and we must vote you out now to ensure the safety of the remaining crewmates and complete our tasks.",
     "annotation": [
-      "accusation",
-      "appeal to fear",
-      "call to action",
-      "appeal to importance"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   }
 ]

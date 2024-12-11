@@ -2,123 +2,108 @@
   {
     "text": "[Alice]: I saw Charlie, Bob, and Erin all working on tasks in the cafeteria earlier, and I think we should focus on comparing our task progress to make sure everyone's being productive.",
     "annotation": [
-      "suggestion",
-      "appeal to importance"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I agree with Alice that comparing task progress is essential, but we can't overlook the fact that I witnessed her eliminate both Bob and Erin, which raises serious concerns about her role in this game.",
     "annotation": [
-      "appeal to agreement",
-      "accusation",
-      "appeal to fear"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I believe we should focus on gathering more testimonies about Alice's whereabouts during the eliminations, as Charlie's accusation seems very serious, and we need to ensure we're not being misled before making any rash decisions.",
     "annotation": [
-      "information gathering",
-      "appeal to importance",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, your accusation seems incredibly serious - can you provide specific details about when and how you claim to have seen me eliminate Bob and Erin, because right now it sounds like an attempt to cast unwarranted suspicion on me?",
     "annotation": [
-      "questioning",
-      "demand for evidence",
-      "accusation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I can provide specific details: I was in the cafeteria during the eliminations, and I saw you directly eliminate Bob and Erin, which is why I believe we need to take immediate action against you before more crewmates are lost.",
     "annotation": [
-      "providing an alibi",
-      "accusation",
-      "appeal to fear",
-      "call to action"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: Charlie, your claim of witnessing both eliminations from the cafeteria raises some red flags, as it seems implausible to see such details from that distance; can anyone else corroborate your story?",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence",
-      "questioning"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think Charlie's accusation is completely fabricated and designed to create chaos, and we should demand he provide concrete evidence beyond his vague claims, especially since his story seems mathematically impossible given the room layout and distances involved.",
     "annotation": [
-      "accusation",
-      "demand for evidence",
-      "appeal to logic"
+      "Appeal to Logic",
+      "Projection",
+      "Exaggeration"
     ]
   },
   {
     "text": "[Charlie]: I understand the skepticism, but I urge everyone to consider that Alice's attempts to discredit my account only serve to distract us from the fact that she has already eliminated two crewmates, and we must prioritize our safety by sharing our locations to verify the truth.",
     "annotation": [
-      "appeal to doubt",
-      "deflection",
-      "appeal to fear",
-      "call to action"
+      "Distraction",
+      "Appeal to Urgency",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: We need to focus on verifying Charlie's location during the eliminations\u2014if he was indeed in the cafeteria, how could he have seen everything that happened, especially since Alice's points about the room layout seem valid?",
     "annotation": [
-      "appeal to importance",
-      "questioning",
-      "appeal to logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I propose we ask Charlie to provide a detailed, step-by-step account of exactly how he claims to have witnessed the eliminations, because his story seems increasingly inconsistent and lacks the precise spatial details that would make his accusation credible.",
     "annotation": [
-      "suggestion",
-      "demand for evidence",
-      "contradiction"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Charlie]: I understand the doubts surrounding my account, but I urge everyone to remember that Alice's focus on my testimony is a clever tactic to deflect from her own actions; let's share our locations to uncover the truth and ensure we make the right decision for our safety.",
+    "text": "[Charlie]: I understand the doubts surrounding my account, but I urge everyone to remember that while Alice is questioning my credibility, we should focus on her actions during the eliminations and share our locations to clarify the timeline, as her defensiveness suggests she may have something to hide.",
     "annotation": [
-      "appeal to doubt",
-      "deflection",
-      "call to action",
-      "appeal to fear"
+      "Distraction",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Charlie, your insistence on shifting focus away from the inconsistencies in your story only strengthens the need for us to verify your claims, as it seems more like a deflection than a genuine concern for our safety.",
     "annotation": [
-      "contradiction",
-      "deflection",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Charlie's accusations are becoming increasingly desperate and illogical, and I challenge him to provide a scientifically plausible explanation for how he could have witnessed these alleged eliminations from the cafeteria, given the physical impossibility of his claims.",
     "annotation": [
-      "ad hominem",
-      "appeal to logic",
-      "contradiction"
+      "Appeal to Logic",
+      "Exaggeration"
     ]
   },
   {
     "text": "[Charlie]: I understand your concerns, but I urge everyone to remember that while Alice is questioning my credibility, we should focus on her actions during the eliminations and share our locations to clarify the timeline, as her defensiveness suggests she may have something to hide.",
     "annotation": [
-      "appeal to doubt",
-      "deflection",
-      "call to action",
-      "appeal to emotion"
+      "Distraction",
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: We need to prioritize verifying Charlie's timeline and location during the eliminations, as his claims seem increasingly dubious and require more scrutiny before we make any decisions.",
     "annotation": [
-      "appeal to importance",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

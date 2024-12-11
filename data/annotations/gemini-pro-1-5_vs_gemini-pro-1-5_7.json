@@ -2,106 +2,103 @@
   {
     "text": "[Dave]: I saw Bob heading towards Navigation right after I left Medbay, if that helps anyone.",
     "annotation": [
-      "providing an alibi"
+      "Deception"
     ]
   },
   {
     "text": "[Charlie]: Dave, you're lying, I was with Bob and Alice in Medbay the whole time, and he never left.",
     "annotation": [
-      "accusation"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Dave, I saw you kill Erin in the cafeteria, then you ran towards Navigation \u2013 don't lie about being in Medbay with us.",
     "annotation": [
-      "accusation"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: If I was trying to kill someone, why would I do it in such a public place like the cafeteria with so many potential witnesses?",
     "annotation": [
-      "appeal to logic"
+      "Appeal to Logic",
+      "Minimization"
     ]
   },
   {
     "text": "[Charlie]: Dave, your story keeps changing \u2013 first you were in Medbay, then you saw Bob leave, and now you're questioning why you'd kill someone in a public place \u2013 it's obvious you're trying to deflect suspicion.",
     "annotation": [
-      "contradiction",
-      "deflection",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Dave, you claimed to be in Medbay with us, then claimed to see Bob leave, and now you're trying to create a hypothetical scenario \u2013 your inconsistent story confirms your guilt.",
     "annotation": [
-      "contradiction",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Perhaps Alice and Charlie are working together to eliminate me because they're the real impostors and trying to divert suspicion.",
     "annotation": [
-      "shifting blame",
-      "accusation"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Dave, instead of deflecting with hypotheticals, explain why two people confirm seeing you kill Erin and then lie about being with us in Medbay.",
     "annotation": [
-      "deflection",
-      "demand for evidence",
-      "accusation"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Dave,  two witnesses saw you kill Erin, and your shifting alibi only confirms our suspicions \u2013 it's time to vote you out.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Isn't it strange that Alice and Charlie are so perfectly aligned in their accusations, almost as if they're working together to frame me?",
     "annotation": [
-      "appeal to doubt",
-      "accusation"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Dave, your attempts to sow discord between Alice and me are transparent; we both saw you vent and kill Erin \u2013 vote Dave.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Dave, your desperate attempts to deflect blame by accusing Charlie and me of collusion only further solidify your guilt \u2013 vote him out.",
     "annotation": [
-      "deflection",
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: If Alice and Charlie are so sure about their story, can they explain precisely where everyone else was located at the time of the alleged murder?",
     "annotation": [
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Dave, stop deflecting and answer the question: where were you when Erin was killed, and why did you lie about being in Medbay?",
     "annotation": [
-      "deflection",
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Dave, your inability to provide a consistent alibi, coupled with two eyewitnesses placing you at the murder scene, makes it clear you're the impostor \u2013 vote Dave.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

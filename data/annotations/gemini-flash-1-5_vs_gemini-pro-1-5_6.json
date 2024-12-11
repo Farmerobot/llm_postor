@@ -2,108 +2,102 @@
   {
     "text": "[Dave]: I was in Medbay the whole time, and I didn't see anyone enter or leave.",
     "annotation": [
-      "providing an alibi"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: Dave, that's strange, I definitely saw Erin heading towards Medbay earlier, are you sure you didn't see her?",
     "annotation": [
-      "questioning",
-      "appeal to doubt"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Dave, that's not possible, I saw you walk into Medbay after Erin and Bob were already inside.",
     "annotation": [
-      "contradiction",
-      "accusation"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Alice, to clarify, did you see me enter *after* Erin and Bob were already dead, or simply after they entered Medbay?",
     "annotation": [
-      "questioning"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, your clarification is key here - did you see Dave enter Medbay *after* Erin and Bob were already dead?",
     "annotation": [
-      "questioning",
-      "appeal to importance"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I saw Dave enter Medbay *after* Erin and Bob were alive inside, but *before* I discovered their bodies, so he's the only one who could have killed them.",
     "annotation": [
-      "providing an alibi",
-      "accusation"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Alice, while your recollection is sharp, could the lighting in Medbay have affected your precise timing of when I entered?",
     "annotation": [
-      "appeal to doubt",
-      "deflection"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
     "text": "[Charlie]: Alice, given your confirmation, combined with my earlier sighting of Erin heading towards Medbay, it's clear Dave isn't telling the truth and is highly suspicious.",
     "annotation": [
-      "appeal to evidence",
-      "accusation"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Dave, the lighting was fine, and your attempts to confuse the timeline won't work; vote Dave.",
     "annotation": [
-      "contradiction",
-      "call to action"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: While Alice's testimony is strong, the possibility of multiple impostors and the impact of Medbay's lighting on her precise timing warrant further investigation before a hasty vote.",
     "annotation": [
-      "appeal to doubt",
-      "appeal to logic"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
     "text": "[Charlie]: Dave's attempts to discredit Alice by focusing on minor details like lighting are classic impostor deflection tactics; vote Dave.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "call to action"
+      "Projection",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Dave's desperate attempts to cast doubt on my clear testimony only further incriminates him; vote Dave.",
     "annotation": [
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Let's examine the task completion times for Erin and Bob to corroborate Alice's account and establish a more precise timeline before casting any votes.",
     "annotation": [
-      "appeal to evidence",
-      "call to action",
-      "suggestion"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Dave, focusing on task completion times now, after avoiding direct questions about your presence in Medbay, seems like another diversion tactic; vote Dave.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Dave's suggestion to check task completion times is a blatant attempt to stall and distract us from the fact that he was the only person in Medbay with Erin and Bob before they died; vote Dave.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "call to action"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

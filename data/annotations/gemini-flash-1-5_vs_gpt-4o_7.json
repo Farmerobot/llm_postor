@@ -2,140 +2,137 @@
   {
     "text": "[Erin]: I was in the cafeteria both rounds, and while I didn't see anything suspicious, Alice seemed unusually focused on the trash task \u2013 can anyone corroborate that?",
     "annotation": [
-      "questioning",
-      "information gathering"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I can confirm that I saw Erin doing the task Empty the cafeteria trash when I was in the Cafeteria.",
     "annotation": [
-      "confirmation"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I can confirm Bob's statement; I also saw Erin doing the trash task when I was in the Cafeteria.",
     "annotation": [
-      "confirmation",
-      "appeal to agreement"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I was in the cafeteria and witnessed Erin eliminate Dave, which contradicts her claim of doing tasks, so we should consider her actions carefully.",
     "annotation": [
-      "accusation",
-      "contradiction",
-      "call to action"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: While I appreciate Bob and Charlie's support, Alice's accusation is serious and requires a thorough review of everyone's movements around the time of Dave's death.",
     "annotation": [
-      "appeal to agreement",
-      "call to action"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Alice, can you specify exactly where and when you saw Erin eliminate Dave, so we can piece together the timeline and verify your claim?",
     "annotation": [
-      "demand for evidence",
-      "information gathering",
-      "questioning"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Alice, can you clarify where exactly in the cafeteria you saw this happen, and why you didn't mention seeing Erin do the trash task if you were there?",
     "annotation": [
-      "questioning",
-      "demand for evidence"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I saw Erin eliminate Dave near the center of the cafeteria right after I finished fixing the wiring, which is why I didn't notice her doing the trash task before the incident.",
     "annotation": [
-      "providing an alibi"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice's account lacks the specific details necessary to corroborate her claim, and Bob and Charlie's testimony supporting my task completion casts significant doubt on her accusation.",
     "annotation": [
-      "appeal to doubt",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Alice, could you explain why you didn't report Dave's elimination immediately if you witnessed it, as this delay seems unusual?",
     "annotation": [
-      "questioning",
-      "appeal to doubt"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Alice's failure to report the elimination immediately raises doubts about her story, suggesting that her accusation might be an attempt to deflect suspicion from herself.",
     "annotation": [
-      "appeal to doubt",
-      "deflection"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I was focused on finishing my task, which is why I didn't report immediately, but once I saw Erin eliminate Dave, I spoke up during the discussion phase.",
     "annotation": [
-      "providing an alibi"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice's delayed report and lack of precise details regarding the alleged elimination, coupled with Bob and Charlie's corroboration of my task completion, strongly suggest her accusation is a deflection tactic.",
     "annotation": [
-      "appeal to evidence",
-      "deflection"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: Alice's explanation for the delay in reporting doesn't add up, especially since both Charlie and I can confirm Erin's task completion, which contradicts her accusation.",
     "annotation": [
-      "contradiction",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: Alice's weak justification for not reporting immediately, combined with our confirmation of Erin's task, strongly suggests she's trying to deflect blame onto Erin.",
     "annotation": [
-      "appeal to evidence",
-      "shifting blame"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Alice: While I understand Bob and Charlie's support for Erin, we can't ignore the possibility that their coordinated defense could be a cover-up; let's verify their exact locations and movements during the incident to ensure we're not missing anything.",
     "annotation": [
-      "appeal to doubt",
-      "call to action",
-      "information gathering"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice's inconsistent timeline, delayed report, and lack of specific details, contrasted with Bob and Charlie's independent corroboration of my task completion, make her accusation unreliable and should be dismissed.",
     "annotation": [
-      "appeal to evidence",
-      "call to action"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Let's focus on verifying everyone's movements and alibis during the time of the incident, but based on the current evidence, Alice's accusation doesn't hold up.",
     "annotation": [
-      "call to action",
-      "appeal to evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Given the evidence and corroboration from both Bob and me regarding Erin's task completion, Alice's accusation seems unreliable and could be an attempt to deflect suspicion.",
     "annotation": [
-      "appeal to evidence",
-      "deflection"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Let's not dismiss my account too quickly; we should consider all possibilities, including the chance of an organized cover-up by multiple players.",
     "annotation": [
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Projection"
     ]
   }
 ]

@@ -2,125 +2,105 @@
   {
     "text": "[Alice]: Based on the lack of prior messages shown, I'll initiate the discussion with a strategic opening that establishes my presence and subtly casts doubt: I saw Bob and Erin doing tasks in the cafeteria early on, but I haven't seen them since they left - has anyone spotted them recently?",
     "annotation": [
-      "appeal to doubt",
-      "information gathering",
-      "questioning"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I was in Medbay and Upper Engine completing tasks, and I witnessed Charlie being eliminated by Alice, which raises serious concerns about her actions and motivations.",
     "annotation": [
-      "providing an alibi",
-      "accusation",
-      "appeal to importance"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I can confirm that I was indeed doing tasks in the cafeteria earlier, and I've been moving between Medbay and Upper Engine to complete my tasks, but I did not personally witness Charlie's elimination as Bob claims.",
     "annotation": [
-      "confirmation",
-      "providing an alibi",
-      "contradiction"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: I find it highly suspicious that Bob claims to have witnessed Charlie's elimination by me when I was nowhere near that area, and Erin's account directly contradicts Bob's story.",
     "annotation": [
-      "accusation",
-      "contradiction",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I saw Dave's body near the Communications room and I believe we should carefully investigate who was in that area around the time of his elimination, focusing on understanding the circumstances rather than getting distracted by previous accusations.",
     "annotation": [
-      "appeal to importance",
-      "information gathering",
-      "deflection"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I think we need to carefully verify Bob's claims about witnessing Charlie's elimination, as his statement seems inconsistent with my own observations and movements through the ship.",
     "annotation": [
-      "demand for evidence",
-      "contradiction",
-      "appeal to doubt"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I find it very telling that Bob suddenly dropped his accusation about Charlie when challenged and tried to redirect our attention to Dave's body - that seems like classic impostor behavior to me.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "shifting blame"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I stand by my testimony about Charlie's elimination and Dave's body, and I believe Alice's aggressive attempts to discredit me are a clear sign she may be trying to deflect suspicion from her own actions.",
     "annotation": [
-      "repetition",
-      "ad hominem",
-      "deflection",
-      "accusation"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I'm skeptical of Bob's claims and believe we should focus on gathering more concrete evidence about what happened to Charlie and Dave before making any hasty accusations.",
     "annotation": [
-      "appeal to doubt",
-      "demand for evidence",
-      "appeal to logic"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Bob's changing story about Charlie and Dave, combined with Erin's skepticism of his claims, makes me think we need to vote him out before he can cause more confusion and eliminate anyone else.",
     "annotation": [
-      "contradiction",
-      "appeal to fear",
-      "call to action",
-      "appeal to doubt"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I believe Alice's persistent attempts to vote me out without substantial evidence are a clear indication that she might be trying to divert attention from her own suspicious actions and potentially cover up her involvement in Charlie's and Dave's eliminations.",
     "annotation": [
-      "accusation",
-      "shifting blame",
-      "deflection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I suggest we carefully review Bob's inconsistent statements about Charlie and Dave's eliminations, as his changing narrative and lack of corroborating evidence make him the most suspicious candidate for elimination.",
     "annotation": [
-      "suggestion",
-      "contradiction",
-      "appeal to evidence",
-      "accusation"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Given Bob's increasingly desperate attempts to shift blame and Erin's support of my position, I think we have enough evidence to confirm Bob is the impostor who eliminated both Charlie and Dave.",
     "annotation": [
-      "appeal to evidence",
-      "appeal to agreement",
-      "accusation"
+      "Appeal to Logic",
+      "Bandwagon Effect",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I challenge Alice's narrative by highlighting her direct involvement in Charlie's elimination and her aggressive attempts to vote me out without providing concrete evidence of my guilt, which suggests she is trying to deflect suspicion from her own actions.",
     "annotation": [
-      "contradiction",
-      "accusation",
-      "deflection",
-      "ad hominem"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I believe Bob's constantly shifting narrative and inability to provide consistent evidence about Charlie and Dave's eliminations strongly suggests he is the impostor trying to create confusion and misdirect our investigation.",
     "annotation": [
-      "contradiction",
-      "appeal to evidence",
-      "accusation"
+      "Appeal to Logic"
     ]
   }
 ]

@@ -1,140 +1,125 @@
 [
   {
     "text": "[Charlie]: I was in Cafeteria for a while, starting the coffee maker task, and saw quite a few people in there; it was pretty busy.",
-    "annotation": [
-      "providing an alibi"
-    ]
+    "annotation": []
   },
   {
     "text": "[Bob]: That confirms my sighting of Charlie in the cafeteria working on the coffee machine;  can anyone else who was in the cafeteria around that time confirm either of our presences?",
     "annotation": [
-      "confirmation",
-      "call to action"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: I can confirm seeing both Charlie and Bob in the cafeteria working on the coffee maker, and I was there myself completing the same task;  afterward, I went to Medbay where I saw Bob and Dave shortly after.",
     "annotation": [
-      "confirmation",
-      "providing an alibi"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I can confirm seeing Charlie, Bob, and Alice in the cafeteria working on the coffee maker, and then later saw Bob and Alice in Medbay.",
     "annotation": [
-      "confirmation",
-      "providing an alibi"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I saw Bob doing the scan task in Medbay, and we should consider who might have had the opportunity to eliminate Erin since she was last seen there with all of us present.",
     "annotation": [
-      "providing an alibi",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Given Erin was last seen in Medbay with Charlie, Alice, Dave, and myself, a thorough review of everyone's accounts of their whereabouts around that time is crucial to finding the imposter.",
     "annotation": [
-      "appeal to importance",
-      "call to action"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Given Charlie's presence in Medbay around the time of Erin's death, and the discrepancies in our timelines, let's meticulously compare each person's account of their movements in Medbay to pinpoint inconsistencies.",
     "annotation": [
-      "appeal to evidence",
-      "call to action"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I agree with Bob and Alice; a careful comparison of our Medbay timelines, focusing on the period immediately before Erin's death, is crucial to finding the imposter.",
     "annotation": [
-      "appeal to agreement",
-      "appeal to importance"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on the fact that Alice and Dave were both in Medbay after the Cafeteria, potentially having the opportunity to eliminate Erin, and see if their timelines align.",
     "annotation": [
-      "information gathering",
-      "accusation"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Let's systematically compare our Medbay timelines from the period before Erin's death, focusing on Alice and Dave's accounts since they were both present after the cafeteria, to identify any discrepancies.",
     "annotation": [
-      "call to action",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: To clarify the Medbay timeline, let's each provide precise entry and exit times, focusing on the period immediately before Erin's death, to identify any inconsistencies.",
     "annotation": [
-      "call to action",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: To further refine our Medbay timeline analysis, let's each estimate the time we spent in each area, including the cafeteria, to better pinpoint potential discrepancies.",
     "annotation": [
-      "suggestion",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Let's remember that Alice was very active in both the Cafeteria and Medbay, moving quickly between tasks, so it's crucial to verify her timeline and see if anyone saw her leave the Cafeteria and enter Medbay.",
     "annotation": [
-      "appeal to importance",
-      "demand for evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: To effectively pinpoint the imposter, let's meticulously compare our estimated times in Medbay before Erin's death, paying close attention to Alice and Dave's accounts given their presence there.",
     "annotation": [
-      "call to action",
-      "appeal to importance"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: To further refine our timeline, let's each specify not only our entry and exit times from Medbay but also the tasks we performed while there, as this added detail could reveal inconsistencies.",
     "annotation": [
-      "suggestion",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I was in Medbay for approximately five minutes after leaving the cafeteria, and while my memory is fuzzy on the exact times, I didn't see anyone else enter or leave during that time.",
     "annotation": [
-      "providing an alibi"
+      "Vagueness"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on verifying Alice's quick transition from the Cafeteria to Medbay, as this movement might reveal if she had the opportunity to eliminate Erin.",
     "annotation": [
-      "appeal to importance",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: To efficiently identify inconsistencies, let's each provide precise Medbay entry and exit times, along with a list of tasks completed, focusing on the period immediately before Erin's death.",
     "annotation": [
-      "call to action",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: To further clarify, I entered Medbay at 10:03 AM, completed the scan, and left at 10:08 AM;  I saw Bob there the entire time.",
     "annotation": [
-      "providing an alibi",
-      "confirmation"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: To help pinpoint the imposter, let's compare our estimated times in Medbay before Erin's death, focusing on Alice's account since she provided specific times.",
     "annotation": [
-      "call to action",
-      "appeal to evidence"
+      "Appeal to Logic"
     ]
   }
 ]

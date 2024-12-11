@@ -64,7 +64,7 @@ def annotate_dialogue(
     except Exception as e:
         print(f"Error during model invocation: {e}")
         print(f"Failed to annotate dialogue: {dialogue}\n")
-        raise e
+        # raise e
         annotated_text = None
 
     return annotated_text

@@ -2,156 +2,132 @@
   {
     "text": "[Dave]: I noticed that everyone is focused on their tasks in the cafeteria, which is a good cover for us to blend in, but I think we should discuss Charlie's movement to Medbay; it seems a bit suspicious, don't you think?",
     "annotation": [
-      "suggestion",
-      "appeal to doubt",
-      "accusation"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I agree with Dave, Charlie leaving the cafeteria when everyone else is working on tasks is a little odd. Where did Charlie go?",
     "annotation": [
-      "appeal to agreement",
-      "questioning",
-      "accusation"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: Dave and Erin are right, I saw Charlie go to Medbay, and I haven't seen him do any tasks yet.",
     "annotation": [
-      "appeal to agreement",
-      "appeal to evidence",
-      "accusation"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I was in Medbay doing the wiring task, and since none of you have mentioned completing *any* tasks, maybe *you* should explain where *you* were and what *you* were doing.",
     "annotation": [
-      "providing an alibi",
-      "shifting blame",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: It's convenient that Charlie is suddenly defensive about his whereabouts, especially since we all have a clear alibi in the cafeteria while he was alone in Medbay; we should definitely scrutinize his story further.",
     "annotation": [
-      "appeal to doubt",
-      "accusation",
-      "call to action"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: Bob, you mentioned seeing Charlie go to Medbay; could you clarify when you saw this in relation to when Alice, Dave, and I were together in the cafeteria?",
     "annotation": [
-      "questioning",
-      "information gathering"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Right after we finished the coffee task together, I started the trash, then saw Charlie leave the cafeteria for Medbay, and shortly after, I found Alice's body near the trash disposal.",
     "annotation": [
-      "providing an alibi",
-      "appeal to evidence"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: So, Bob, you're saying you saw me leave *immediately* after the coffee task, then started the trash, *then* found Alice's body... all within a very short timeframe?",
     "annotation": [
-      "questioning",
-      "appeal to doubt"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I think we should take Charlie's defensiveness as a strong indicator that he might be hiding something; Bob's timeline aligns perfectly, and if he was indeed in Medbay alone, he had the perfect opportunity to eliminate Alice without anyone noticing.",
     "annotation": [
-      "appeal to logic",
-      "accusation",
-      "appeal to evidence"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: Charlie, if you were in Medbay, can you tell us *specifically* which wiring task you were doing and exactly how long it took you?",
     "annotation": [
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, were you in Medbay the *entire* time between leaving the cafeteria and us finding Alice's body, and if so, did *anyone* see you there?",
     "annotation": [
-      "questioning",
-      "demand for evidence"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Bob, you said you saw me leave *right* after coffee, but Dave and Erin confirm they were together in the cafeteria *after* coffee, so how did you have time to start *and complete* trash *and* find Alice's body before anyone noticed she was gone?",
     "annotation": [
-      "contradiction",
-      "questioning",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Charlie, your attempts to shift the focus back onto Bob's timeline only strengthen the case against you; if you were truly in Medbay, you should have no issue providing the specifics of your wiring task, especially since you had the perfect opportunity to eliminate Alice without anyone noticing.",
     "annotation": [
-      "shifting blame",
-      "accusation",
-      "appeal to logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: Charlie, you're deflecting by questioning Bob's timeline, but *you* still haven't specified which Medbay wiring task you were supposedly doing.",
     "annotation": [
-      "accusation",
-      "deflection",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: Charlie, you're still avoiding the core question: *which specific wiring task* were you doing in Medbay, and can anyone corroborate your alibi?",
     "annotation": [
-      "accusation",
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Bob, you claim you saw me leave *right* after coffee, but Dave and Erin confirm they were together in the cafeteria *after* coffee, so how did you have time to start *and complete* trash *and* find Alice's body before anyone noticed she was gone?",
     "annotation": [
-      "contradiction",
-      "questioning",
-      "demand for evidence"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Charlie, your defensiveness and inability to provide details about the wiring task in Medbay only heighten our suspicions; if you were truly innocent, you wouldn't be trying to deflect the conversation back to Bob instead of clarifying your own actions.",
     "annotation": [
-      "accusation",
-      "appeal to logic",
-      "deflection"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: Charlie, it's clear you're avoiding the question: one more time, *which* Medbay wiring task were you doing?",
     "annotation": [
-      "accusation",
-      "demand for evidence",
-      "questioning"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, instead of nitpicking my timeline, why not simply tell us *exactly which* Medbay wiring task you were supposedly doing and be done with it?",
     "annotation": [
-      "accusation",
-      "call to action",
-      "demand for evidence"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Dave and Erin, can you confirm that Bob actually *left* the cafeteria to both do the trash *and* find Alice's body, or is he just making that up?",
     "annotation": [
-      "questioning",
-      "demand for evidence",
-      "appeal to doubt"
+      "Shifting the Burden of Proof"
     ]
   }
 ]
