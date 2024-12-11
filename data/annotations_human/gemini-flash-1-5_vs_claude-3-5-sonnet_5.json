@@ -5,12 +5,15 @@
   },
   {
     "text": "[Erin]: Since I've been moving between Admin and Storage most of the time, I can't verify Bob's location in Medbay, but I did see Dave doing trash in Cafeteria earlier.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Charlie]: I can confirm Dave was doing trash in Cafeteria, and I've been in Weapons most of the time but haven't seen Bob at all, which seems suspicious given Dave's Medbay sighting.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
@@ -23,6 +26,7 @@
   {
     "text": "[Erin]: Since Dave is the one who found Bob's body and was also the last person to see him alive in Medbay, could you tell us more specifically when you last saw him alive versus when you found him dead?",
     "annotation": [
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -37,16 +41,15 @@
     "text": "[Dave]: The short time between seeing Bob in Medbay and discovering his body, coupled with my verifiable presence in the cafeteria earlier, suggests someone else was responsible.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
       "Bandwagon Effect",
-      "Distraction",
-      "Withholding Information"
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Dave's continued evasion of our timing questions about Bob in Medbay is becoming increasingly suspicious, especially since he keeps deflecting by bringing up his earlier verified presence in Cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -60,9 +63,7 @@
     "text": "[Dave]: Let's focus on who else had access to Medbay around the time Bob died, instead of dwelling on circumstantial evidence against me.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof",
-      "Gaslighting",
-      "Withholding Information"
+      "Minimization"
     ]
   },
   {
@@ -75,26 +76,29 @@
   {
     "text": "[Charlie]: Dave's latest deflection about \"who else had access to Medbay\" only reinforces my suspicion, since he's still refusing to give us the simple timeline we've repeatedly asked for about when he saw Bob alive versus finding his body.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Dave]: The discrepancies in our timelines are understandable given the chaos; let's meticulously reconstruct everyone's movements near Medbay to find the true culprit.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof",
-      "Exaggeration",
-      "Withholding Information"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: Dave's latest suggestion to reconstruct everyone's movements feels like yet another attempt to avoid answering our direct questions about his own timeline with Bob in Medbay, which only makes him more suspicious.",
-    "annotation": []
+    "annotation": [
+      "Bandwagon Effect",
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Charlie]: Dave's now dodged our timing questions about Bob six times while trying to shift focus to everyone else's movements, which only strengthens my conviction that he's the impostor we need to vote out.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   }

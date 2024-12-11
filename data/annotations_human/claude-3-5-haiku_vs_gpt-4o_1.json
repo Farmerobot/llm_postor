@@ -3,14 +3,14 @@
     "text": "[Dave]: I saw Bob and Erin both in Medbay together, which seems like a strange coincidence - they might be coordinating something suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection",
+      "Deception"
     ]
   },
   {
     "text": "[Alice]: I didn't see Bob and Erin in Medbay either, but Erin seemed genuine while fixing wiring in the Cafeteria, so we should ask them for their alibis to clear up any suspicions.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility",
+      "Vagueness",
       "Shifting the Burden of Proof"
     ]
   },
@@ -31,15 +31,13 @@
   {
     "text": "[Dave]: I think Erin's timeline seems inconsistent, and her being with Bob right before his elimination raises serious questions about her involvement in the incident.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Let's focus on the timeline and see if anyone else can provide additional insights on who was in Medbay during the incident.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -55,8 +53,9 @@
   {
     "text": "[Dave]: I'll subtly cast doubt on Erin's credibility while protecting myself: Erin's accusation seems like a desperate attempt to shift blame, especially since she was conveniently with Bob right before his elimination and now claims to have witnessed something, which sounds like she's trying to control the narrative and deflect suspicion from herself.",
     "annotation": [
-      "Shifting the Burden of Proof",
+      "Appeal to Emotion",
       "Projection",
+      "Minimization",
       "Exaggeration",
       "Distraction"
     ]
@@ -71,14 +70,14 @@
   {
     "text": "[Charlie]: Let's focus on gathering more information about Dave's movements after the Cafeteria, as that could help clarify whether Erin's accusation holds any weight.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Charlie, your insight is crucial here; if you can confirm whether Dave left the Cafeteria, it would help verify my account of seeing him in Medbay with Bob.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -87,20 +86,20 @@
       "Distraction",
       "Shifting the Burden of Proof",
       "Projection",
-      "Appeal to Logic",
-      "Gaslighting",
-      "Denial without Evidence"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Alice]: Charlie, your observations are key here\u2014did you see Dave leave the Cafeteria, which could support Erin's claim about seeing him in Medbay?",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I didn't notice exactly when Dave left the Cafeteria, but if anyone else has more information on his movements, it would be helpful to piece together the timeline.",
     "annotation": [
+      "Feigning Ignorance",
       "Appeal to Logic"
     ]
   },
@@ -117,7 +116,8 @@
       "Projection",
       "Exaggeration",
       "Distraction",
-      "Denial without Evidence"
+      "Gaslighting",
+      "Appeal to Logic"
     ]
   },
   {
@@ -129,15 +129,15 @@
   {
     "text": "[Charlie]: Let's focus on gathering more information from anyone who might have seen Dave near Medbay after he left the Cafeteria, as this could help verify Erin's account and clarify the situation.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice, your support is appreciated, and if anyone else can confirm Dave's presence in Medbay, it would solidify my account and help us make an informed decision.",
     "annotation": [
       "Appeal to Relationship",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

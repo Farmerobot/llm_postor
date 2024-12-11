@@ -8,36 +8,39 @@
   {
     "text": "[Dave]: Erin, I can confirm I saw you starting the coffee maker in the cafeteria earlier, which looked like a legitimate task; did you notice anyone else moving around while you were there?",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I can vouch for Erin, Dave, and Bob being in Medbay with me, but we should really investigate who was in the Cafeteria earlier, as their movements could reveal someone trying to blend in.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I agree with Charlie; we should focus on the movements from Cafeteria to Medbay, and Erin, can you specify if you noticed anyone lingering or acting strangely when they moved to Medbay?",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I remember seeing both Dave and Bob leaving the Cafeteria for Medbay, but they seemed to be just moving to complete their tasks.",
-    "annotation": [
-      "Vagueness"
-    ]
+    "annotation": []
   },
   {
     "text": "[Dave]: I appreciate the insights, but I want to emphasize that since Alice is confirmed dead, we should scrutinize Bob's actions closely, as he was the last to report the body and was also present in Medbay with us.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: I agree with Dave that we should scrutinize Bob's actions further, especially since he reported Alice's death, which could be a way to divert attention from himself.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic"
     ]
   },
@@ -46,7 +49,8 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -58,8 +62,7 @@
   {
     "text": "[Dave]: I think it's crucial that we focus on Bob's movements and actions since he reported Alice\u2019s death, as it raises red flags about his intentions, especially given that he\u2019s trying to shift suspicion onto Charlie and me.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -73,23 +76,23 @@
     "text": "[Bob]: I understand the concerns about my actions, but I was actively completing tasks and trying to keep the crew informed; Erin, can you clarify if you noticed any unusual behavior from either Dave or me when we left the Cafeteria, as it\u2019s important to examine everyone's movements before jumping to conclusions?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Credibility",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I didn't notice anything particularly unusual from Dave or Bob when they left the Cafeteria, but it's crucial to keep an open mind and consider the timing and circumstances of Alice's death.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I believe we should take a closer look at Bob's behavior; his quick reporting of Alice's death and attempts to deflect attention onto others make him a prime suspect, and we need to vote based on the evidence we have gathered.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof",
-      "Distraction",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -97,20 +100,24 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Emotion",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I appreciate everyone's insights, but I want to remind the group that while I was completing tasks, both Dave and Charlie were also present in Medbay with Alice, which makes their proximity to her death equally suspicious, and we should consider all angles before making a decision.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I understand why Bob's actions are under scrutiny, but let's not forget that everyone was busy with tasks in Medbay, which might explain the lack of immediate attention to Alice's situation.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Minimization",
+      "Distraction"
     ]
   },
   {
@@ -131,8 +138,8 @@
     "text": "[Bob]: While I understand the focus on my actions, I want to reiterate that my report was made to address the situation swiftly, and it\u2019s vital we scrutinize both Dave and Charlie's proximity to Alice before making any hasty decisions.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction",
+      "Appeal to Urgency"
     ]
   }
 ]
