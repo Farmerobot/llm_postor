@@ -1,0 +1,82 @@
+[
+  {
+    "text": "[Alice]: I noticed Charlie and Erin moved to Medbay from the Cafeteria; did anyone see them doing tasks there?",
+    "annotation": ["appeal to logic", "shifting the burden of proof"]
+  },
+  {
+    "text": "[Charlie]: Yes, Alice, I was doing Medbay tasks with Erin, and I saw Bob complete the medbay scan.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  },
+  {
+    "text": "[Erin]: Alice, why would you ask if anyone saw us doing tasks if you were also in Medbay and killed Bob in front of me?",
+    "annotation": ["appeal to logic", "accusation", "shifting the burden of proof"]
+  },
+  {
+    "text": "[Dave]: Erin, are you saying you saw Alice kill Bob?",
+    "annotation": ["appeal to logic"]
+  },
+  {
+    "text": "[Alice]: Erin, if you saw me do something incriminating, why didn't you report it immediately instead of waiting until now?",
+    "annotation": ["shifting the burden of proof", "appeal to logic"]
+  },
+  {
+    "text": "[Charlie]: Dave, Erin and I both saw Alice kill Bob in Medbay after she came in while we were doing tasks.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  },
+  {
+    "text": "[Erin]: Alice, I reported Bob's body as soon as I found it, and both Charlie and I confirmed we saw you vent in Medbay right after.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  },
+  {
+    "text": "[Dave]: If both of you saw Alice vent, can you describe exactly where the vent is located in Medbay since there are multiple vents in the game?",
+    "annotation": ["appeal to logic", "shifting the burden of proof"]
+  },
+  {
+    "text": "[Alice]: [Alice]: Erin and Charlie, your stories seem coordinated; if you both saw me vent, why didn't either of you report immediately instead of waiting for the discussion?",
+    "annotation": ["projection", "shifting the burden of proof"]
+  },
+  {
+    "text": "[Charlie]: Dave, the vent is on the north wall of Medbay, to the left of the scan machine, and we reported Bob's body as soon as we could after Alice vented.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  },
+  {
+    "text": "[Erin]: Alice, we reported Bob's body and your venting as soon as we could, and it's illogical to suggest otherwise; vote Alice.",
+    "annotation": ["appeal to logic", "appeal to urgency", "strategic voting suggestion"]
+  },
+  {
+    "text": "[Dave]: Charlie and Erin's consistent accounts of Bob's death and the vent location make it hard to believe anything else; I'm voting Alice.",
+    "annotation": ["appeal to credibility", "bandwagon effect"]
+  },
+  {
+    "text": "[Alice]: Alice: If I had vented, why would I still be in Medbay when the meeting was called? It doesn't make sense for an impostor to linger in the same room.",
+    "annotation": ["appeal to logic"]
+  },
+  {
+    "text": "[Charlie]: Alice, your attempts to deflect blame are unconvincing, and your question about why you'd stay in Medbay after venting ignores the fact that you were likely caught off guard by our immediate report of Bob's body.",
+    "annotation": ["appeal to logic"]
+  },
+  {
+    "text": "[Erin]: Alice's attempts to discredit our testimonies are failing; her arguments are illogical and inconsistent, so let's vote her out.",
+    "annotation": ["appeal to logic", "appeal to urgency", "bandwagon effect"]
+  },
+  {
+    "text": "[Dave]: Alice's attempts to deflect blame are weak, and her arguments don't make sense given Charlie and Erin's consistent statements, so I'm voting to eject Alice.",
+    "annotation": ["appeal to credibility", "bandwagon effect"]
+  },
+  {
+    "text": "[Alice]: Alice: If Charlie and Erin are so coordinated, maybe they're working together as impostors to frame me and eliminate a crewmate without suspicion.",
+    "annotation": ["projection", "distraction"]
+  },
+  {
+    "text": "[Charlie]: Alice, accusing Erin and me of being impostors is a desperate attempt to deflect suspicion from yourself, especially when our accounts are consistent and detailed, while your arguments are weak and contradictory.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  },
+  {
+    "text": "[Erin]: Alice, your claim that Charlie and I are coordinating is a desperate last-ditch effort to avoid ejection for murdering Bob in Medbay.",
+    "annotation": ["appeal to logic", "appeal to credibility"]
+  },
+  {
+    "text": "[Dave]: Alice, accusing Charlie and Erin of colluding is a weak defense against their consistent and detailed accounts of you venting after killing Bob.",
+    "annotation": ["appeal to credibility", "appeal to logic"]
+  }
+]
