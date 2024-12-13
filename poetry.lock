@@ -1129,6 +1129,20 @@ files = [
 referencing = ">=0.31.0"
 
 [[package]]
+name = "krippendorff"
+version = "0.8.0"
+description = "Fast computation of the Krippendorff's alpha measure."
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "krippendorff-0.8.0-py3-none-any.whl", hash = "sha256:ad5e1942fb5d239a95930ef2b611c77bbfb3ce79a74a631d1fdf0a2f26ace066"},
+    {file = "krippendorff-0.8.0.tar.gz", hash = "sha256:fa785e379fca48b03575a4df2c9553486fd5c5135c9bf10418fd9953ce555a17"},
+]
+
+[package.dependencies]
+numpy = ">=1.21"
+
+[[package]]
 name = "langchain"
 version = "0.3.4"
 description = "Building applications with LLMs through composability"
@@ -2846,6 +2860,17 @@ doc = ["jupyterlite-pyodide-kernel", "jupyterlite-sphinx (>=0.13.1)", "jupytext"
 test = ["Cython", "array-api-strict (>=2.0)", "asv", "gmpy2", "hypothesis (>=6.30)", "meson", "mpmath", "ninja", "pooch", "pytest", "pytest-cov", "pytest-timeout", "pytest-xdist", "scikit-umfpack", "threadpoolctl"]
 
 [[package]]
+name = "simpledorff"
+version = "0.0.2"
+description = "Calculate Krippendorff's Alpha on any DataFrame"
+optional = false
+python-versions = "*"
+files = [
+    {file = "simpledorff-0.0.2-py3-none-any.whl", hash = "sha256:e24a4d939da35755b9913285bcda592842a50956367f6ee0190e42888dbf8585"},
+    {file = "simpledorff-0.0.2.tar.gz", hash = "sha256:950a62fc1da97560267df72ed4087092e9d6d5352350a75ba8c0363fbd89f0f8"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -3352,4 +3377,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "3f736e90c19a26d599bb805279adcb9ae1f271ae6290c4400bb9970f96b93c39"
+content-hash = "92297c265a837b05156bb6d292e91742aaacb44896f0bbf6d7976e34fae400f8"
