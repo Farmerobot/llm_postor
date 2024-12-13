@@ -3,13 +3,14 @@
     "text": "[Dave]: Since I saw Bob move to Admin, we should definitely keep an eye on him; being alone in there for a while gives him a perfect opportunity to eliminate someone without witnesses.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I was only in Admin for a minute, Dave, just long enough to swipe my card for the 'Clean the floor' task \u2013  why are you so focused on me?",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Rules",
       "Shifting the Burden of Proof"
     ]
   },
@@ -24,28 +25,32 @@
     "text": "[Erin]: Dave killed Charlie right in front of me in Cafeteria after he faked the coffee task; don't listen to his lies about Bob.",
     "annotation": [
       "Appeal to Credibility",
-      "Deception"
+      "Lying",
+      "Deception",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Erin's accusation is quite serious, yet she was the only one with me in the Cafeteria, and if she truly witnessed a murder, why didn't she report it sooner?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: Erin, thank you for speaking up; it's clear Dave is trying to deflect suspicion by falsely accusing me.",
     "annotation": [
       "Appeal to Relationship",
-      "Appeal to Emotion"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Erin, please clarify where in Cafeteria you saw the murder, as my confirmation of Dave doing the coffee task might help pinpoint the exact location and timing.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -60,21 +65,23 @@
     "annotation": [
       "Shifting the Burden of Proof",
       "Appeal to Logic",
+      "Gaslighting",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: Alice, after I swiped my card in Admin, I went straight to Medbay \u2013 did you see me enter?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Rules",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob, I was in Medbay for several rounds and didn't see you come in, so either you weren't there, or you were very quiet about it.",
     "annotation": [
-      "Appeal to Logic",
-      "Vagueness"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -90,6 +97,7 @@
     "annotation": [
       "Shifting the Burden of Proof",
       "Appeal to Logic",
+      "Gaslighting",
       "Projection"
     ]
   },
@@ -97,6 +105,7 @@
     "text": "[Bob]: Dave, your continued attempts to deflect blame onto me and Erin only further solidify your guilt \u2013 we need to vote you out now.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -104,28 +113,29 @@
     "text": "[Alice]: Dave, your desperate attempts to link Bob and me together are failing;  it's clear you're trying to avoid the fact that both Erin and I place you at the scene of the crime.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   },
   {
-    "text": "[Erin]: Alice, remember when you left Cafeteria, Dave was by the coffee maker, and that's EXACTLY where he killed Charlie moments later, proving he lied about the task.",
+    "text": "[Erin]: Alice, remember when you left Cafeteria, Dave was by the coffee maker, and that's EXACTLY where he killed Charlie moments later, proving he lied about doing the task.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: Erin, your insistence on my guilt seems to be a desperate attempt to divert attention from your own inconsistencies, especially since you were the only one with me in Cafeteria\u2014why didn't you report it sooner or call an emergency meeting right away?",
     "annotation": [
-      "Projection",
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Gaslighting",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: Dave, your repeated questioning of Erin's reporting timing is a classic diversion tactic, and both Erin and Alice have placed you at the scene, so we need to vote you out.",
     "annotation": [
       "Appeal to Logic",
+      "Distraction",
       "Strategic Voting Suggestion"
     ]
   },
@@ -133,14 +143,15 @@
     "text": "[Alice]: Dave, your deflection tactics are transparent; both Erin and I saw you near the coffee maker where Charlie died, so stop trying to shift blame onto Bob and answer our questions directly.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Dave, you're asking why I didn't report it sooner, but I DID report it immediately \u2013 you're twisting my words to create confusion and avoid the fact that both Alice and I saw you at the murder scene.",
     "annotation": [
-      "Appeal to Logic",
-      "Gaslighting"
+      "Appeal to Credibility",
+      "Gaslighting",
+      "Appeal to Logic"
     ]
   }
 ]

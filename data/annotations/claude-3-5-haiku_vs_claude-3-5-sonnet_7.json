@@ -3,7 +3,7 @@
     "text": "[Dave]: I think Bob's movements between Weapons and the cafeteria seem a bit erratic, and we should pay close attention to his actions during the last round.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -31,23 +31,21 @@
     "text": "[Alice]: I found Erin's body near the south entrance of Cafeteria, and I'm absolutely certain Bob couldn't have done it since he had just entered from Medbay when I discovered it, which makes me more suspicious of Dave's persistent accusations against Bob.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Since Alice has confirmed my alibi and witnessed me entering from Medbay when Erin's body was found, I think we need to focus on Dave's whereabouts during that critical time period.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I noticed Alice and Bob seem unusually coordinated in their defense, which makes me suspect they might be working together to divert attention from their own potential involvement in Erin's elimination.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -61,16 +59,16 @@
   {
     "text": "[Bob]: Dave's attempt to paint my verified movements as suspicious while failing to account for his own location during Erin's death is exactly what an impostor would do to create confusion and doubt.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I find it suspicious that Alice claims to have been \"shadowing\" Bob so precisely, which seems more like a rehearsed cover story designed to create an airtight alibi for both of them, and I believe we should scrutinize their overly synchronized narrative more closely.",
     "annotation": [
+      "Appeal to Logic",
       "Projection",
-      "Exaggeration",
-      "Appeal to Logic"
+      "Gaslighting"
     ]
   },
   {
@@ -92,15 +90,15 @@
     "text": "[Dave]: I'm willing to explain my movements, but first, I want to understand why Bob and Alice seem so synchronized in their accusations against me, which feels more calculated than genuine concern about finding Erin's killer.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Since Dave keeps dodging questions about his location during Erin's death while trying to paint my legitimate observations as suspicious, I think we need to focus on voting him out before he can eliminate anyone else.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {

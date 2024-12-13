@@ -2,66 +2,66 @@
   {
     "text": "[Bob]: I'm starting to get a little suspicious of Erin and Charlie, they've been in the Weapons room for a while now, and I haven't seen them come out, has anyone else seen them recently?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I can vouch that I'm here in Weapons legitimately doing the asteroids task - it's a visual task if anyone wants to come verify, and Bob, you actually saw me in Cafeteria earlier doing tasks before I came here.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Charlie]: I can explain my movements clearly - I moved to Weapons to work on wiring and calibration, and Bob actually saw me doing tasks in Cafeteria earlier, so I'm not sure why he's suspicious now.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Alice]: I can actually confirm Bob's earlier observation about seeing Erin and Charlie in Cafeteria, as I watched them both move to Weapons later, which matches exactly what they're saying.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I'd like to ask Alice, since you reported the dead body, did you see anyone suspicious around Dave before he died?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I appreciate Alice backing up my movements, and I think it's important we focus on Dave's death - I'm still here in Weapons doing asteroids if anyone wants visual confirmation of my task.",
     "annotation": [
       "Appeal to Relationship",
-      "Distraction",
-      "Appeal to Credibility"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Charlie]: I think we need to shift our focus to Dave's last known location and who was nearby, since Alice, Erin, and I have all corroborated each other's movements between Cafeteria and Weapons.",
     "annotation": [
-      "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Alice]: I found Dave's body near the coffee maker in Cafeteria while doing wiring, and while Bob was nearby the entire time, I was so focused on my task that I didn't see the actual moment Dave was killed.",
     "annotation": [
-      "Feigning Ignorance",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I think it's crucial we examine Alice's story more closely, especially since she was so focused on her task that she didn't notice Dave's death, despite being right next to the coffee maker, and I'd like to ask her to provide more details about her exact movements leading up to the discovery of the body.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -75,21 +75,22 @@
     "text": "[Charlie]: Given that Alice saw Bob near Dave's body in Cafeteria, and Bob keeps trying to deflect suspicion onto players with confirmed alibis, I think we need to seriously consider that Bob is the impostor who killed Dave.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I was completely focused on the wiring task when Dave was killed, but Bob is the only one who hasn't explained what he was actually doing in Cafeteria during that time, and he keeps trying to deflect suspicion onto players with verified alibis.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I think it's interesting that Erin, Charlie, and Alice are all suddenly so convinced of my guilt, despite the fact that none of them actually saw me harm Dave, and I'd like to propose that we investigate the Medbay for any clues before jumping to conclusions.",
     "annotation": [
-      "Appeal to Emotion",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -103,7 +104,7 @@
     "text": "[Charlie]: The evidence is overwhelming - Bob was alone with Dave in Cafeteria when the kill happened, and now he's desperately trying to send us on a wild goose chase to Medbay instead of explaining his own actions.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Projection"
     ]
   },
   {
@@ -116,8 +117,8 @@
   {
     "text": "[Bob]: I think it's telling that Alice, Erin, and Charlie are all so quick to conclude that I'm the impostor without considering the fact that Alice didn't notice Dave's body earlier despite being right next to the coffee maker, and I'd like to ask Alice to explain why she didn't see or hear anything suspicious before discovering the body.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
+      "Appeal to Logic",
       "Projection"
     ]
   },
@@ -125,22 +126,22 @@
     "text": "[Erin]: I think we need to stay focused on the key facts: Bob was alone with Dave in Cafeteria during the kill, three of us can verify each other's movements and tasks, and Bob's continued attempts to question Alice's discovery of the body instead of explaining his own actions are extremely suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: Bob's desperate attempts to question Alice's discovery of the body are just another smokescreen - the fact remains that he was the only one near Dave without an alibi, and he keeps avoiding explaining what he was actually doing in Cafeteria during the kill.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: With only 2 rounds left before voting, I think it's crucial to note that Bob is the only person who can't account for their actions in Cafeteria during Dave's death, while three of us have verified each other's locations and movements.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   }
 ]

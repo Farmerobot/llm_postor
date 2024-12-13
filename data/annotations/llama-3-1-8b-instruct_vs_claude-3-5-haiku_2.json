@@ -2,29 +2,35 @@
   {
     "text": "[Alice]: I'm concerned that Erin has been stuck in Medbay for a while, and it's not clear what she's working on; perhaps we should ask her to join the discussion or clarify her task so we can better understand the situation.",
     "annotation": [
-      "Appeal to Logic",
-      "Vagueness"
+      "Feigning Ignorance",
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I saw Alice eliminate Erin in Medbay just moments ago, so her statement about being concerned is completely suspicious and contradictory to what actually happened.",
     "annotation": [
+      "Deception",
+      "Lying",
       "Appeal to Logic",
-      "Projection",
-      "Deception"
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: I completely agree with Bob - Alice's claim of being \"concerned\" about Erin directly contradicts what I witnessed in Medbay, where Alice was the one who eliminated Erin, and her current statement seems like a transparent attempt to deflect suspicion.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
+      "Deception",
+      "Lying",
+      "Appeal to Logic",
       "Projection"
     ]
   },
   {
     "text": "[Dave]: I saw Alice eliminate Erin in Medbay, and her current statement is clearly an attempt to cover up her actions, so I strongly recommend we vote to eject her immediately to protect the remaining crewmates.",
     "annotation": [
+      "Deception",
+      "Lying",
       "Appeal to Logic",
       "Appeal to Urgency",
       "Strategic Voting Suggestion",
@@ -35,16 +41,17 @@
     "text": "[Alice]: I'm shocked by the accusations and the rush to judgment, but I think we should focus on verifying the facts and not jump to conclusions based on incomplete information, as we don't know the full context of what happened in Medbay.",
     "annotation": [
       "Appeal to Emotion",
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Minimization",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: We must vote Alice out immediately, as Charlie, Dave, and I have all witnessed her eliminating Erin in Medbay, and her attempts to deflect suspicion are a clear sign of her being an impostor who wants to avoid ejection.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
       "Strategic Voting Suggestion",
+      "Appeal to Logic",
       "Bandwagon Effect"
     ]
   },
@@ -52,7 +59,8 @@
     "text": "[Charlie]: Alice's attempts to appear innocent are clearly a desperate ploy to avoid ejection, and we have multiple consistent eyewitness accounts confirming her elimination of Erin in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Projection"
     ]
   },
   {
@@ -67,10 +75,9 @@
   {
     "text": "[Alice]: I'm just trying to clarify the situation and understand why everyone is so quick to assume the worst about me, when in fact, I was just trying to help Erin with her task in Medbay and we must have gotten our wires crossed.",
     "annotation": [
+      "Feigning Ignorance",
       "Appeal to Emotion",
-      "Appeal to Logic",
-      "Minimization",
-      "Vagueness"
+      "Minimization"
     ]
   },
   {
@@ -86,7 +93,8 @@
     "text": "[Charlie]: Alice's attempts to appear innocent are clearly a desperate ploy to avoid ejection, and we have multiple consistent eyewitness accounts confirming her elimination of Erin in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Projection"
     ]
   },
   {
@@ -103,7 +111,7 @@
     "annotation": [
       "Appeal to Emotion",
       "Appeal to Logic",
-      "Distraction"
+      "Minimization"
     ]
   },
   {
@@ -138,7 +146,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Emotion",
-      "Distraction"
+      "Minimization"
     ]
   },
   {

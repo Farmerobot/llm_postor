@@ -2,7 +2,8 @@
   {
     "text": "[Erin]: I've been focusing on my tasks in electrical and weapons, but has anyone seen where Dave went after the cafeteria?",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Feigning Ignorance"
     ]
   },
   {
@@ -15,7 +16,8 @@
   {
     "text": "[Alice]: Erin, can you provide more details about the tasks you completed in Electrical and Weapons, since it seems like no one can confirm your presence there?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -28,7 +30,8 @@
   {
     "text": "[Erin]: I understand the suspicion, but I was specifically doing the calibrate distributor task in Electrical and clearing asteroids in Weapons - both tasks have visual confirmations if anyone had been there to see them.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
@@ -41,8 +44,8 @@
   {
     "text": "[Alice]: Erin, it\u2019s crucial that we hear exactly who you were with while completing those tasks, as the lack of witnesses raises serious concerns about your alibi, especially with Bob's recent elimination.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -56,7 +59,7 @@
     "text": "[Erin]: I find it interesting that everyone's so focused on my movements when Dave has been wandering between three different locations, and I actually saw Bob in Electrical doing tasks before all this started - why isn't anyone questioning that?",
     "annotation": [
       "Distraction",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -76,15 +79,15 @@
   {
     "text": "[Dave]: Erin, instead of deflecting attention back to my movements, it\u2019s crucial you provide specific details about who was with you in Electrical and Weapons, as your lack of corroboration for your tasks raises serious doubts about your alibi.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I find it highly suspicious that everyone's ignoring the fact that I saw Bob in Electrical right before his elimination, while Dave's movements between three different rooms remain largely unquestioned.",
     "annotation": [
       "Distraction",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -113,7 +116,7 @@
     "annotation": [
       "Appeal to Logic",
       "Distraction",
-      "Projection"
+      "Deception"
     ]
   },
   {

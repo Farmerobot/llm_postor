@@ -2,8 +2,7 @@
   {
     "text": "[Dave]: I'd like to know what Erin found out while fixing the wiring in the cafeteria, did you notice anything unusual or see anyone suspicious lurking around?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -29,15 +28,14 @@
     "text": "[Dave]: I'd like to point out that Alice's sudden accusation against me seems conveniently timed, and I think it's essential to consider the possibility that she might be trying to frame me to divert attention from her own actions, especially since she didn't report the alleged incident immediately.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Gaslighting"
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: I maintain my stance that Dave is the impostor and eliminated Charlie, and I urge the group to vote Dave out to prevent further potential eliminations of innocent crewmates.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -51,7 +49,7 @@
     "text": "[Bob]: I fully support Erin's eyewitness testimony and Alice's observation, and I believe Dave's attempts to deflect suspicion by questioning Alice's timing are clear indicators that he is the impostor we need to vote out to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },
@@ -68,6 +66,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },
@@ -82,14 +81,13 @@
     "text": "[Bob]: I stand firmly with Erin and Alice's consistent testimony, and Dave's desperate attempts to create doubt only further confirm his guilt as the impostor who eliminated Charlie.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: I'd like to remind everyone that we're running out of time for discussion, and I think it's crucial that we don't rush to judgment without considering all possibilities, especially since the testimonies, although consistent, still rely on the assumption that I was the only one with the opportunity to eliminate Charlie.",
     "annotation": [
       "Appeal to Urgency",
-      "Appeal to Logic",
       "Distraction"
     ]
   },
@@ -104,6 +102,7 @@
     "text": "[Erin]: I want to reiterate that Dave's pattern of deflection and attempts to create doubt only further confirm his guilt, and we must vote him out to protect the remaining crew members from potential further eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -120,13 +119,14 @@
     "annotation": [
       "Appeal to Emotion",
       "Distraction",
-      "Gaslighting"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I firmly believe that Dave's repeated attempts to cast doubt and suggest a conspiracy are clear signs of his guilt, and we must vote him out immediately to protect the remaining crew members from potential further eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -134,6 +134,7 @@
     "text": "[Erin]: I want to emphasize that Dave's increasingly desperate attempts to deflect and create doubt only serve to confirm his guilt, and we must vote him out decisively to protect our remaining crew members and prevent any further potential eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -141,6 +142,7 @@
     "text": "[Bob]: I want to emphasize that Dave's increasingly desperate attempts to deflect and create doubt only serve to confirm his guilt, and we must vote him out decisively to protect our remaining crew members and prevent any further potential eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

@@ -3,7 +3,7 @@
     "text": "[Dave]: I think Bob and Charlie's synchronized movements in Medbay seem really suspicious, and we should definitely investigate their actions more closely.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -16,22 +16,25 @@
   {
     "text": "[Alice]: I'd like to add to Dave's concerns by suggesting that we also review the security footage from Medbay to see if it shows any unusual patterns or behaviors that might support his suspicions, and I think it's essential to hear more from Bob about his intentions and actions in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'm deeply troubled by how conveniently Bob is trying to deflect attention from himself by asking me to explain my observations, when he was the one who reported Charlie's body in such a high-risk location like Medbay.",
     "annotation": [
+      "Appeal to Logic",
       "Projection",
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I'd like to reiterate that my report of Charlie's body was based on my genuine concern for the safety of our crew, and I'm happy to cooperate with any investigation into my actions and movements in Medbay, but I think it's essential to focus on concrete evidence and not let speculation and accusations cloud our judgment.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Emotion",
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
@@ -44,7 +47,8 @@
   {
     "text": "[Dave]: I support Alice's suggestion of reviewing security footage, as it will help us uncover the truth and validate my observations about Bob and Charlie's suspicious behavior in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -57,14 +61,15 @@
   {
     "text": "[Alice]: I'd like to suggest that we take a closer look at Bob's alibi for the time period when Charlie was killed, as his reported actions in Medbay seem suspiciously convenient and I think it's essential to verify his story with concrete evidence.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I believe Bob's repeated emphasis on transparency is actually a calculated attempt to control the narrative and divert suspicion from his own potentially sinister actions in Medbay, especially given his convenient positioning when Charlie was eliminated.",
     "annotation": [
       "Projection",
+      "Distraction",
       "Appeal to Logic"
     ]
   },
@@ -86,6 +91,7 @@
     "text": "[Dave]: Bob's constant insistence on transparency is a classic deflection tactic, and his repeated claims about cooperation only serve to mask the suspicion surrounding his convenient positioning when Charlie was eliminated in Medbay.",
     "annotation": [
       "Projection",
+      "Distraction",
       "Appeal to Logic"
     ]
   },

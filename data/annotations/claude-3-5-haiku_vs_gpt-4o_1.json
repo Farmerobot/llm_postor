@@ -3,8 +3,8 @@
     "text": "[Dave]: I saw Bob and Erin both in Medbay together, which seems like a strange coincidence - they might be coordinating something suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
-      "Deception"
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -25,29 +25,38 @@
     "text": "[Erin]: I was in Medbay when Dave eliminated Bob, and Alice, you saw me fixing the wiring in the Cafeteria before I moved there, so my actions are consistent with what you observed.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Dave]: I think Erin's timeline seems inconsistent, and her being with Bob right before his elimination raises serious questions about her involvement in the incident.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Let's focus on the timeline and see if anyone else can provide additional insights on who was in Medbay during the incident.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Did anyone else see Dave in Medbay around the time of the incident, or have any other observations that could clarify the situation?",
-    "annotation": []
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
   },
   {
     "text": "[Erin]: Charlie, since you were in the Cafeteria with us, did you notice if Dave left at any point, possibly heading towards Medbay where I saw him eliminate Bob?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof",
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -57,33 +66,36 @@
       "Projection",
       "Minimization",
       "Exaggeration",
-      "Distraction"
+      "Distraction",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Alice]: I can vouch for Erin's presence and actions in the Cafeteria, which aligns with her story, so it would be helpful if anyone else could confirm Dave's whereabouts to resolve this discrepancy.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on gathering more information about Dave's movements after the Cafeteria, as that could help clarify whether Erin's accusation holds any weight.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Charlie, your insight is crucial here; if you can confirm whether Dave left the Cafeteria, it would help verify my account of seeing him in Medbay with Bob.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Dave]: Charlie, can you confirm exactly when and if you saw me leave the Cafeteria? Erin's accusation seems too convenient, and her detailed story looks like an attempt to frame me to deflect suspicion from herself.",
     "annotation": [
-      "Distraction",
       "Shifting the Burden of Proof",
       "Projection",
       "Gaslighting"
@@ -93,7 +105,7 @@
     "text": "[Alice]: Charlie, your observations are key here\u2014did you see Dave leave the Cafeteria, which could support Erin's claim about seeing him in Medbay?",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -106,7 +118,10 @@
   {
     "text": "[Erin]: If anyone else was in Medbay or nearby and can confirm Dave's presence there, it would greatly help in clarifying the situation and supporting my account.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic",
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -123,13 +138,15 @@
   {
     "text": "[Alice]: Charlie, since you were with us in the Cafeteria, any detail you remember about Dave's movements could be crucial in verifying Erin's story, especially if anyone else can confirm seeing Dave in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on gathering more information from anyone who might have seen Dave near Medbay after he left the Cafeteria, as this could help verify Erin's account and clarify the situation.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {

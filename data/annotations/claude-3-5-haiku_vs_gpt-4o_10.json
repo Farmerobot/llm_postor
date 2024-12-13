@@ -2,8 +2,8 @@
   {
     "text": "[Dave]: I was in the cafeteria the whole time, and I saw Bob, Alice, Charlie, and Erin all doing tasks, so I'm confident they were working on completing their objectives.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -17,14 +17,15 @@
     "text": "[Alice]: I can back up Dave and Bob's statements as I saw Dave starting the coffee maker task and Bob calibrating the targeting system in Weapons, so let's verify others' locations and tasks to spot any inconsistencies.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Let's hear from Erin about their movements after the Cafeteria, as their input could help us piece together the timeline and identify any suspicious behavior.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -32,43 +33,41 @@
     "annotation": [
       "Appeal to Emotion",
       "Appeal to Logic",
-      "Distraction",
-      "Projection"
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I reported Erin's dead body in the Cafeteria, so we should focus on Charlie's movements after leaving there, as they haven't clarified their tasks or whereabouts yet.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Let's hear from Charlie about their movements and tasks after leaving the Cafeteria to help us narrow down any suspicious activity.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I was in the Cafeteria completing the wiring task with Dave, Bob, Alice, and Erin, then moved to Admin for wiring, and I didn't see anyone in Admin during my task.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think we should press Bob for more details about why he was in the area where Erin was eliminated and ask him to provide a precise account of his movements after leaving the Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Let's focus on verifying Charlie's presence in Admin since that's crucial to confirming their story about their movements after the Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -95,22 +94,22 @@
   {
     "text": "[Bob]: Let's ensure we have a clear understanding of everyone's movements after the Cafeteria, especially focusing on Charlie's timeline in Admin, to identify any discrepancies that might point to the impostor.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
   {
     "text": "[Alice]: I think it's important to clarify Bob's timeline after leaving the Cafeteria since he was the one who reported Erin's body; Bob, can you walk us through your movements in detail?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Alice, can you confirm if you saw Bob leave the Cafeteria after you went to Weapons, as that might help us verify his timeline and clear any doubts about his actions?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -123,7 +122,7 @@
   {
     "text": "[Bob]: Let's focus on confirming Charlie's timeline in Admin, as it seems crucial to understanding everyone's movements and identifying any inconsistencies.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -131,7 +130,8 @@
     "text": "[Alice]: I did see Bob leave the Cafeteria after I went to Weapons, where he worked on calibrating the targeting system, which matches his claim, but we should still verify everyone's timeline, especially Bob's, to ensure consistency in his movements.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {

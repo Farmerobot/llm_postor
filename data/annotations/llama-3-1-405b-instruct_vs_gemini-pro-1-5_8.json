@@ -1,31 +1,48 @@
 [
   {
     "text": "[Charlie]: I'm glad to see everyone is working hard on the tasks, we should keep up the good work and make sure to communicate with each other, has anyone seen Erin or Alice recently?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Emotion",
+      "Distraction",
+      "Feigning Ignorance"
+    ]
   },
   {
     "text": "[Bob]: Charlie, I saw you kill Erin in the cafeteria just now, and Alice and Dave were also there right before she died.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying"
+    ]
   },
   {
     "text": "[Alice]: Bob is right, I saw Charlie kill Erin in the cafeteria, we were all working on wiring together.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying",
+      "Bandwagon Effect"
+    ]
   },
   {
     "text": "[Dave]: Bob and Alice are telling the truth, I also saw Charlie vent in electrical.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying",
+      "Bandwagon Effect"
+    ]
   },
   {
     "text": "[Charlie]: I think there's been a misunderstanding, I was in the cafeteria with all of you, and I didn't kill Erin. I think someone is trying to frame me.",
     "annotation": [
       "Denial without Evidence",
+      "Gaslighting",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: Charlie, why would Alice and Dave lie and corroborate my story if I was framing you?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -45,7 +62,8 @@
   {
     "text": "[Charlie]: If I was really the one who killed Erin, why would I call a meeting and ask where she is, and wouldn't I have come up with a better alibi than being in the same room as all of you?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -59,7 +77,9 @@
     "text": "[Alice]: Charlie, asking where Erin was right after killing her is a classic impostor tactic called a \"self-report,\" meant to create confusion, and your contradictory statements about being with us in the cafeteria while Dave saw you vent in electrical prove you're the impostor, so Bob, Dave, and I agree it's time to vote.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Gaslighting",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -74,7 +94,7 @@
     "annotation": [
       "Appeal to Emotion",
       "Distraction",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -102,6 +122,7 @@
     "text": "[Charlie]: I urge everyone to take a step back and re-examine the evidence, considering the possibility that the real impostor is manipulating Bob, Alice, and Dave to get rid of me, and that their hasty accusations and voting may be playing right into the impostor's hands.",
     "annotation": [
       "Appeal to Logic",
+      "Gaslighting",
       "Distraction",
       "Projection"
     ]
@@ -124,7 +145,7 @@
     "text": "[Dave]: Charlie's claims of a \"witch hunt\" and manipulation are classic impostor tactics to avoid the undeniable fact that three of us witnessed the murder.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   }
 ]

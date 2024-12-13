@@ -2,14 +2,15 @@
   {
     "text": "[Bob]: I've been in Admin and Storage, and while I haven't seen anything too suspicious, we should focus on those who move around a lot without doing tasks\u2014any thoughts on Charlie's movements?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I agree with Bob's observation about Charlie - I saw them head to Weapons early on but haven't seen them complete any tasks since then.",
     "annotation": [
-      "Confirmation Bias Exploitation"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -23,7 +24,7 @@
     "text": "[Bob]: I noticed that Erin was often seen with Charlie before they were found dead, which seems suspicious given Charlie's lack of task completion.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -43,7 +44,8 @@
   {
     "text": "[Bob]: Let's review everyone's movements and see if there's a pattern or any inconsistencies that could point us in the right direction.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -63,7 +65,7 @@
   {
     "text": "[Bob]: Let's not overlook the fact that Alice found the bodies, which could be an attempt to divert suspicion from herself\u2014were there any signs or clues at the scene, Alice?",
     "annotation": [
-      "Projection",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -71,14 +73,14 @@
     "text": "[Alice]: I find it highly suspicious that Bob is now trying to cast doubt on me for finding the bodies when he was the one unaccounted for during both murders and was quick to falsely accuse Charlie who turned out to be a victim.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: The evidence is stacking up against Bob - he was unaccounted for during both murders, falsely accused Charlie who turned out to be dead, and is now desperately trying to shift blame onto Alice who has been consistently completing tasks in my presence.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -100,8 +102,7 @@
     "text": "[Dave]: Based on my consistent observations throughout the game, I can definitively state that Alice has been completing verifiable tasks in my presence while Bob was suspiciously absent during both murders and continues to change his story.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic"
     ]
   }
 ]

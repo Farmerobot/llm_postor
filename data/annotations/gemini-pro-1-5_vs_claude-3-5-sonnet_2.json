@@ -2,7 +2,7 @@
   {
     "text": "[Dave]: I saw Purple heading towards Electrical earlier, maybe they can corroborate my story about working on the wiring.",
     "annotation": [
-      "Appeal to Logic",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -16,6 +16,7 @@
   {
     "text": "[Alice]: I agree with Charlie's observation - I was fixing the wiring in cafeteria and can confirm seeing Dave, Charlie, Erin, and Bob all doing legitimate tasks there, so we should focus on investigating where Purple and the others were during this time.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Credibility",
       "Appeal to Logic",
       "Distraction"
@@ -24,6 +25,7 @@
   {
     "text": "[Erin]: I can definitely back up Charlie and Alice since I was in the cafeteria with them and personally saw everyone completing their assigned tasks, which makes me particularly concerned about Purple being alone in Electrical.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Credibility",
       "Appeal to Logic"
     ]
@@ -31,7 +33,7 @@
   {
     "text": "[Dave]: Purple being alone in Electrical seems suspicious, especially with the recent sabotage \u2013 did anyone check the security cameras to see who was near the cafeteria when Bob was... found?",
     "annotation": [
-      "Appeal to Logic",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -39,7 +41,8 @@
     "text": "[Charlie]: Given that I was the one who discovered Bob's body, I find it crucial to point out that the murder must have happened in a split second because I had just seen him completing the trash task moments before finding him dead.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Minimization"
     ]
   },
   {
@@ -66,8 +69,8 @@
   {
     "text": "[Charlie]: Wait a minute Dave, how could you have seen Purple heading to Electrical when you were supposedly in the cafeteria with us the whole time doing the trash task?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -87,15 +90,15 @@
   {
     "text": "[Dave]: I was with everyone in the cafeteria, but I stepped out briefly to check on a flickering light near Electrical and saw Purple there \u2013 it must have been right before the sabotage.",
     "annotation": [
-      "Deception",
-      "Appeal to Logic"
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Charlie]: Since Dave keeps changing his story about stepping out when I know for certain he was continuously at the trash task, and given that I found Bob's body immediately after seeing him alive, Dave must be the impostor trying to frame Purple.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -115,6 +118,7 @@
     "text": "[Dave]: My tasks took me near Electrical; I saw Purple go in, then returned to the cafeteria \u2013 it was quick, you wouldn't have noticed.",
     "annotation": [
       "Minimization",
+      "Lying",
       "Deception"
     ]
   },

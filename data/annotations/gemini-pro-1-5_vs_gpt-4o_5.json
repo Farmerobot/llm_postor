@@ -2,7 +2,8 @@
   {
     "text": "[Dave]: I saw Charles vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -22,7 +23,8 @@
   {
     "text": "[Charlie]: I was in the Cafeteria with Dave, Alice, Bob, and Erin, then moved directly to Weapons to fix the wiring and haven't been in Electrical at all this round, so Dave's accusation doesn't match my movements.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -35,7 +37,6 @@
   {
     "text": "[Bob]: Since Dave retracted his accusation, we need to explore other possibilities\u2014Erin, did you notice anything unusual while completing tasks in the Cafeteria?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -49,14 +50,13 @@
   {
     "text": "[Charlie]: Bob, since you reported Alice's body, where exactly did you find it, and did you see anyone else nearby when you discovered her?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Bob, where *exactly* did you find Alice's body? This could help narrow down who was nearby.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -68,7 +68,6 @@
   {
     "text": "[Erin]: Charlie, since you went to Weapons, can you confirm if you saw anyone else in the hallway, especially since Alice was found nearby?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },

@@ -1,7 +1,9 @@
 [
   {
     "text": "[Charlie]: I saw Bob scan in Medbay after leaving Cafeteria, but I didn't see Erin, did anyone else?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Dave]: I'd like to confirm with Charlie, did you see Bob actually doing a task in Medbay or just scanning in, and did you notice which direction he went after leaving the Cafeteria?",
@@ -27,7 +29,8 @@
   {
     "text": "[Charlie]: Dave, I saw him start the scan, but I didn't wait around to see him finish, and he went towards Navigation after leaving Cafeteria.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Deception"
     ]
   },
   {
@@ -41,6 +44,7 @@
     "text": "[Alice]: I'd like to reiterate that Charlie's inconsistencies and suspicious behavior, especially the contradictions with Erin's testimony, make me strongly believe that we should vote to eject Charlie from the game to ensure our safety.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -48,6 +52,7 @@
     "text": "[Erin]: I'd like to emphasize that Charlie's failure to provide a clear and consistent explanation for their actions, combined with the contradictions in their story and the testimonies from Alice and me, makes a strong case for voting Charlie out of the game to protect ourselves and continue making progress on the tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -69,20 +74,22 @@
     "text": "[Alice]: I think it's clear that Charlie's attempts to shift the focus and create confusion have failed, and with the overwhelming evidence and testimonies against them, I believe it's time for us to make a decision and vote Charlie out of the game to ensure our safety and continue making progress on the tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I'd like to address Charlie's attempt to deflect attention by questioning my whereabouts, but I've already stated that I was in the Cafeteria with Bob, and Alice has confirmed that she saw me there as well.",
     "annotation": [
-      "Appeal to Credibility",
-      "Distraction"
+      "Distraction",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: Erin and Alice are clearly coordinating their stories against me, making them highly suspicious.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
@@ -103,6 +110,7 @@
     "text": "[Erin]: Considering Charlie's repeated attempts to deflect attention and create confusion, combined with the overwhelming evidence and testimonies against them, I strongly believe it's time for us to make a decision and vote Charlie out of the game to ensure our safety and continue making progress on the tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -123,13 +131,15 @@
   {
     "text": "[Alice]: I'd like to point out that Charlie's latest message is a clear attempt to create a false narrative and manipulate the other players into doubting Erin and me, but it's too late for that, as the evidence and testimonies against them are overwhelming.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: It's clear that Charlie's desperate attempts to manipulate the vote and create a false narrative have failed, and with the overwhelming evidence and testimonies against them, I strongly believe it's time for us to make a decision and vote Charlie out of the game to ensure our safety and continue making progress on the tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   }

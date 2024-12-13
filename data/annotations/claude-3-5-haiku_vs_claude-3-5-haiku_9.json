@@ -2,15 +2,16 @@
   {
     "text": "[Bob]: I saw Erin moving alone to Upper Engine, and I think we should discuss her suspicious behavior carefully.",
     "annotation": [
-      "Projection"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I was in Medbay completing my scan task when Charlie was eliminated, and Bob's claim about my location is completely false - Dave and Alice can confirm I was with them, so Bob is clearly trying to deflect suspicion after eliminating Charlie.",
     "annotation": [
       "Appeal to Credibility",
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -40,20 +41,24 @@
     "text": "[Erin]: I suggest we vote to eject Bob immediately, as multiple witnesses have confirmed he eliminated Charlie and is now attempting to create confusion to avoid being identified as an impostor.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: I strongly believe Bob is the impostor, and we have multiple consistent witness accounts confirming his elimination of Charlie in Medbay, so voting him out is our best strategy to protect the remaining crewmates.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: I firmly stand by my previous statement and the evidence provided by Dave and Erin, and I urge everyone to vote Bob out as he is clearly the impostor who eliminated Charlie and is now desperately trying to create doubt and confusion.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -67,20 +72,24 @@
   {
     "text": "[Erin]: I strongly urge everyone to vote Bob out, as his repeated attempts to cast doubt on multiple consistent witness testimonies are clear signs of an impostor trying to avoid detection after being caught eliminating Charlie in Medbay.",
     "annotation": [
+      "Appeal to Logic",
       "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: I reaffirm my earlier statement that Bob eliminated Charlie in Medbay, and his current attempts to create doubt and claim a conspiracy are classic impostor deflection tactics that should not distract us from the clear evidence of his guilt.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
-    "text": "[Alice]: I firmly stand by my previous statement and the evidence provided by Dave and Erin, and I urge everyone to vote Bob out as he is clearly the impostor who eliminated Charlie and is now desperately trying to create doubt and confusion.",
+    "text": "[Alice]: Bob's consistent attempts to create doubt and deflect suspicion only further confirm his guilt, and we have multiple eyewitness accounts, including my own and Dave's, that clearly show he eliminated Charlie in Medbay, so I strongly urge everyone to vote him out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -88,6 +97,7 @@
     "text": "[Bob]: I find it suspicious that Dave, Alice, and Erin have such perfectly synchronized accusations without providing any concrete visual evidence of my alleged actions, which suggests they might be collaborating to falsely frame me as an impostor.",
     "annotation": [
       "Projection",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
@@ -95,12 +105,14 @@
     "text": "[Erin]: I maintain my previous stance that Bob's attempts to create doubt are transparent impostor tactics, and we have multiple consistent eyewitness accounts confirming his elimination of Charlie in Medbay, so voting him out is crucial to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: I stand by my original testimony that Bob eliminated Charlie in Medbay, and his repeated attempts to create doubt only further confirm his guilt as an impostor who is desperately trying to avoid being voted out.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -108,6 +120,8 @@
     "text": "[Alice]: I have overwhelming evidence from multiple witnesses, including my own direct observation, that Bob eliminated Charlie in Medbay, and his continuous attempts to create doubt only further prove his guilt as an impostor, so I strongly urge everyone to vote him out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -115,25 +129,29 @@
     "text": "[Bob]: I demand a thorough investigation into the suspicious coordination between Dave, Alice, and Erin, as their perfectly synchronized accusations without concrete visual proof suggest a potential conspiracy to manipulate the group and falsely eliminate me.",
     "annotation": [
       "Projection",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I continue to emphasize that Bob's repeated attempts to cast doubt on multiple consistent witness testimonies, including mine, Dave's, and Alice's, are clear signs of an impostor desperately trying to avoid being voted out after being caught eliminating Charlie in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: I reaffirm my direct eyewitness account of Bob eliminating Charlie in Medbay, and his continued attempts to create doubt only strengthen the evidence of his guilt as an impostor who is desperately trying to avoid being voted out.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I firmly maintain my position that Bob is the impostor, as multiple consistent eyewitness accounts, including my own direct observation, prove he eliminated Charlie in Medbay, and his desperate attempts to create doubt only further confirm his guilt.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   }
 ]

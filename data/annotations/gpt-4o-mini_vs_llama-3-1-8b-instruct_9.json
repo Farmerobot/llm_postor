@@ -9,20 +9,22 @@
   {
     "text": "[Dave]: I agree with Alice that Bob's alibi is suspicious, and I'd like to propose that we ask Bob to provide more details about his time in the Cafeteria, as his claim of being there the whole time seems convenient, and it's essential to verify his story to ensure we're not missing any crucial information.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to add that we should also consider the fact that Bob's suspicious alibi might be a red herring, and we shouldn't jump to conclusions without gathering more information, but at the same time, it's crucial that we remain vigilant and keep a close eye on his movements to ensure the integrity of our investigation.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I agree with Charlie that we should be cautious about jumping to conclusions, but we also need to remember that the timeline is key; if Bob was truly alone in the Cafeteria, we should ask him if he noticed anyone else around or if he saw any suspicious behavior while he was there.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -31,6 +33,7 @@
     "text": "[Dave]: I think it's essential that we also investigate the Medbay task that Erin was working on at the time of her elimination, as it's possible that her task was compromised or that she stumbled upon something that put her in danger, and I propose that we ask Charlie and Alice if they noticed anything unusual in Medbay around the time of Erin's death.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -57,8 +60,8 @@
   {
     "text": "[Charlie]: I'd like to clarify my alibi for the time of Erin's elimination by stating that I was indeed in the Engine Room, working on a task, and I can provide more details about my time there, including the task I was working on and the people I interacted with, to help ensure the integrity of our investigation and alleviate any concerns about my involvement.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -71,8 +74,8 @@
     "text": "[Dave]: I'd like to reiterate the importance of verifying Charlie's alibi and ask her to provide more details about her time in the Engine Room, as her claim of working on a task there seems crucial to ensuring the integrity of our investigation, and I'd also like to propose that we ask the game moderator to provide us with the task logs for further investigation to see if there were any discrepancies or anomalies in Erin's task completion.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Rules",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Rules"
     ]
   },
   {
@@ -86,7 +89,7 @@
     "text": "[Alice]: I think it\u2019s crucial that we not only focus on verifying Charlie\u2019s alibi but also consider the possibility that Bob is using his time alone in the Cafeteria to deflect suspicion away from himself, so we should definitely press him for more details about his observations during that time.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {

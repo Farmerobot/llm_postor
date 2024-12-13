@@ -2,7 +2,8 @@
   {
     "text": "[Dave]: I noticed Bob and Erin working on wiring tasks in Medbay, and everything seems normal from my perspective.",
     "annotation": [
-      "Vagueness"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -16,8 +17,8 @@
     "text": "[Charlie]: I'd like to corroborate Erin's account, as I also witnessed Dave eliminating Alice in the cafeteria, and I think it's crucial that he explains his actions and provides a solid alibi to clear his name.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Appeal to Credibility"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -25,20 +26,22 @@
     "annotation": [
       "Projection",
       "Distraction",
-      "Appeal to Logic"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: I'd like to point out that Dave's latest accusation against Charlie and me is not only unfounded but also conveniently ignores the fact that two separate players have now testified to witnessing him eliminate Alice, which I believe strongly suggests that he's trying to divert attention from his own culpability.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: I'd like to emphasize that Dave's continued attempts to deflect attention and create unfounded accusations against Erin and me, despite the mounting evidence against him, only serve to further solidify my suspicion that he is indeed the impostor who eliminated Alice and potentially Bob, and I strongly believe we should vote him out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion",
       "Bandwagon Effect"
     ]
@@ -46,31 +49,34 @@
   {
     "text": "[Dave]: Their synchronized accusations are too perfect, and they're clearly trying to manipulate the group by presenting a united front without providing any concrete evidence of my actions.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic",
+      "Gaslighting",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I think it's time to put the evidence to a vote, and I strongly believe we should eject Dave from the game, as his lack of alibi, combined with the eyewitness accounts from Charlie and me, overwhelmingly points to his guilt as the impostor who eliminated Alice.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I'd like to reiterate that Dave's failure to provide a credible alibi or concrete evidence to counter the eyewitness accounts of Erin and me, combined with his continued attempts to deflect attention and create unfounded accusations, only serves to further solidify the case against him, and I firmly believe that voting him out is the best course of action to protect the remaining crewmates and increase our chances of winning the game.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: Their accusations are becoming increasingly suspicious, and I challenge Erin and Charlie to explain why their statements are so perfectly synchronized, which suggests they might be working together to manipulate the group's perception of me.",
     "annotation": [
+      "Gaslighting",
       "Projection",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -83,13 +89,15 @@
     "text": "[Charlie]: I'd like to echo Erin's response to Dave's challenge, and reiterate that the synchronization of our statements is merely a result of us having witnessed the same event, and I firmly believe that Dave's continued attempts to deflect attention and create unfounded accusations only serve to further solidify the case against him, making it imperative that we vote him out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: I challenge Erin and Charlie's perfectly synchronized accusations as a coordinated attempt to manipulate the group, and I demand they provide concrete, verifiable evidence beyond their conveniently matching statements about my alleged actions.",
     "annotation": [
-      "Projection",
+      "Gaslighting",
       "Shifting the Burden of Proof"
     ]
   },
@@ -97,8 +105,8 @@
     "text": "[Erin]: I'd like to reiterate that Dave's continued refusal to provide a credible alibi or concrete evidence to counter the eyewitness accounts of Charlie and me, combined with his persistent attempts to deflect attention and create unfounded accusations, only serves to further solidify the case against him, and I firmly believe that voting him out is the best course of action to protect the remaining crewmates and increase our chances of winning the game.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {

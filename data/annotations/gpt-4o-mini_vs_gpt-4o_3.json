@@ -24,7 +24,8 @@
   {
     "text": "[Alice]: I moved to Admin to complete my tasks and was alone there, so I didn't see anyone else or any suspicious activity.",
     "annotation": [
-      "Vagueness"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -44,6 +45,7 @@
   {
     "text": "[Charlie]: I was in the Cafeteria with Dave and Erin, and Erin was working on tasks right before I found her; I didn't see anyone else enter the room before I reported the body.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -64,20 +66,21 @@
   {
     "text": "[Bob]: Alice, can you clarify which specific tasks you were doing in Admin, as it might help us verify your story against task progress or anyone else's observations?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I agree with Dave that we should scrutinize Alice's account in Admin and verify Bob's asteroid task in Weapons to ensure their stories align with our task progress and observations.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I completed the wiring task in Admin and was about to clean the floor when the meeting was called, so I couldn't see anyone else there, but Bob, can you confirm if you saw anyone else in Weapons while you were clearing asteroids to help narrow down suspects?",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -92,27 +95,29 @@
   {
     "text": "[Bob]: I was alone in Weapons the entire time I was there, so I didn't see anyone else who could have been involved in Erin's elimination.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Alice, since you were alone in Admin, can you explain why no one else was seen moving through there, and Bob, did you really not hear anything unusual while you were in Weapons?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: We should consider the possibility that the impostor moved quickly through Admin when I was focused on my tasks, so let's verify everyone's movements and task completions to narrow down the suspect list.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Minimization"
     ]
   },
   {
     "text": "[Dave]: Alice, your insistence on the impostor moving quickly through Admin raises further suspicion; if you were truly focused on tasks, how could you be so certain no one else passed through?",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -125,13 +130,15 @@
   {
     "text": "[Charlie]: Let's focus on verifying Alice's and Bob's task timelines and movements to ensure their stories align with the overall task progress and observed movements, as this might help us identify inconsistencies.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Let's focus on confirming each other's task completions and movements, as aligning these with the task progress might reveal discrepancies that help us identify the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

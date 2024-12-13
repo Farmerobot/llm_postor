@@ -3,21 +3,22 @@
     "text": "[Charlie]: I was busy \"emptying the trash\" (pretend task) both rounds in the cafeteria; it's a never-ending job, and I haven't seen Alice since the first round.",
     "annotation": [
       "Deception",
-      "Vagueness",
-      "Distraction"
+      "Lying",
+      "Vagueness"
     ]
   },
   {
     "text": "[Dave]: I saw Bob in the cafeteria during the first round, and then he was eliminated; Charlie, since you were \"emptying the trash\" nearby, did you see anyone suspicious approach or leave the cafeteria around that time?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I can confirm I was in Medbay both rounds working on diagnostics, and it seems odd that Bob was eliminated so quickly, especially since Dave saw him in the cafeteria with Charlie.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -37,21 +38,22 @@
   {
     "text": "[Dave]: I agree with Erin and Charlie; focusing on who wasn't in the cafeteria when Bob was eliminated, and establishing a timeline of events, is key to finding the impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Given Charlie's statement about the never-ending trash duty and Dave's sighting of Bob, let's systematically ask everyone to account for their whereabouts during the first round in the cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: To clarify Charlie's statement,  could you please specify the exact location within the cafeteria where you were \"emptying the trash\" during the first round, and what you saw in the immediate vicinity around the time Bob was eliminated?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -64,21 +66,22 @@
   {
     "text": "[Dave]: Let's systematically review everyone's location in and around the cafeteria during round one, focusing on the timeframe immediately preceding Bob's elimination, to pinpoint any discrepancies.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Given Charlie's repeated avoidance of direct answers regarding his location and observations in the cafeteria during round one, let's focus on verifying everyone else's accounts before further analyzing who *wasn't* present.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Given Charlie's continued evasiveness regarding his location and observations in the cafeteria during Bob's elimination, let's prioritize verifying everyone else's accounts before considering those who weren't present.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -91,7 +94,8 @@
   {
     "text": "[Dave]: Let's establish a precise timeline of everyone's location in the cafeteria one minute before and after Bob's death, starting with Alice and Erin, to expose any inconsistencies before further discussion.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -104,7 +108,8 @@
   {
     "text": "[Erin]: To build a reliable timeline, let's start with Alice and Erin's locations one minute before and after Bob's death, then move on to others, focusing on precise locations within the cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -116,20 +121,22 @@
   {
     "text": "[Dave]: Let's prioritize verifying everyone's location in the cafeteria one minute before and after Bob's death, starting with Alice and Erin, then moving to others, to establish a concrete timeline and identify inconsistencies before further discussion.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin, since you suggested a timeline, let's hear your account of your whereabouts during round one, then proceed systematically to verify everyone's statements before voting.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I was in the cafeteria's south-east corner near the vending machines from [time] to [time], and I saw Bob, Dave, and Charlie there;  Charlie's continued evasiveness regarding his precise location during that time remains concerning.",
     "annotation": [
-      "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   }
 ]

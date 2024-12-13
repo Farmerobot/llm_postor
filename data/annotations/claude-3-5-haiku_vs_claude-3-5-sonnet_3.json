@@ -25,13 +25,15 @@
   },
   {
     "text": "[Charlie]: This is terrible! Dave was just here in the Cafeteria doing trash duty with me. Who could have eliminated him?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Emotion"
+    ]
   },
   {
     "text": "[Bob]: Since multiple people can confirm Charlie's location and Dave was last seen in Cafeteria, we should focus on who had access to that area and wasn't being watched by others.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -51,13 +53,14 @@
   {
     "text": "[Charlie]: I think Bob's lack of verification for his asteroids task and his proximity to Dave before the elimination makes him our prime suspect right now.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I understand everyone's concerns, but I specifically went to Weapons because the asteroids task was about to expire, and I can prove my innocence by completing it right now in front of anyone who wants to watch.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
       "Appeal to Urgency"
     ]
   },
@@ -65,7 +68,7 @@
     "text": "[Erin]: The fact that Bob is only now offering to do asteroids in front of everyone feels like a desperate attempt to divert attention from the fact that he was unaccounted for during Dave's elimination in Cafeteria.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -78,20 +81,24 @@
   {
     "text": "[Charlie]: I think we should carefully consider all the evidence and not rush to judgment, as an incorrect vote could potentially help the real impostor hide among us.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I understand everyone's suspicion, but the asteroids task timer is still visible in Weapons showing only 1 turn left, which proves I wasn't lying about the urgency - anyone can come verify this right now.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Rules"
+      "Appeal to Credibility",
+      "Appeal to Rules",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: The timing of Bob's movements, his unverified tasks, and the fact that three of us can corroborate each other's stories while he was alone during Dave's elimination makes me confident we should vote for Bob now before he has another chance to eliminate someone.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -99,27 +106,30 @@
     "text": "[Alice]: Given that I saw Bob leave Cafeteria right before Dave was killed, and his story about the asteroids task urgency seems like a convenient excuse, I strongly believe we need to vote for Bob now before he has another chance to eliminate someone else.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: While I understand the mounting evidence against Bob, we must be absolutely certain before casting a vote, as a hasty decision could potentially play directly into the real impostor's strategy of creating confusion and mistrust.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I need everyone to focus on a critical inconsistency - Alice claims she was doing trash duty with Dave in Cafeteria, yet somehow also saw me leave, which would be impossible if she was focused on her task with Dave, so her story simply doesn't add up.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I was actually monitoring both the entrance and the trash area in Cafeteria while doing my own tasks, and I clearly saw Bob leave shortly before Dave's body was discovered, which directly contradicts his attempt to discredit Alice's testimony.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {

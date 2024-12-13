@@ -1,32 +1,41 @@
 [
   {
     "text": "[Alice]: Has anyone seen Bob after he went to Medbay? I was in the Cafeteria for a while, and then I moved to Medbay, but I didn't see him again.",
-    "annotation": []
+    "annotation": [
+      "Feigning Ignorance",
+      "Vagueness"
+    ]
   },
   {
     "text": "[Dave]: I can confirm I saw Bob move to Medbay from the Cafeteria in Round 2, and I'm curious why Alice hasn't seen him there, which might warrant further investigation from the group.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I saw Alice eliminate Bob in Medbay during Round 5, and her claim of not seeing him is completely false, so I strongly believe she is the impostor we should vote out.",
     "annotation": [
       "Deception",
-      "Strategic Voting Suggestion"
+      "Lying",
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I was in the Cafeteria during Round 2 and can confirm Dave's statement about Bob moving to Medbay, which makes Alice's claim suspicious and supports Charlie's accusation that she might be the impostor.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Alice]: Let's think about this logically\u2014if I were the impostor, why would I stay in such a high-traffic area like the Cafeteria for so long? It doesn't add up.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -39,22 +48,24 @@
   {
     "text": "[Charlie]: I was directly in Medbay with Alice and Bob during Round 5, and I witnessed her eliminating Bob, which means her claim of not seeing him is a deliberate lie and proves she is the impostor we must vote out.",
     "annotation": [
-      "Deception",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: I strongly support Charlie's accusation and believe Alice's defense is evasive, as her claim of not seeing Bob in Medbay directly contradicts Charlie's detailed eyewitness account of her eliminating Bob during Round 5.",
     "annotation": [
-      "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I find it suspicious that Charlie is the only one claiming to have witnessed this, and it seems like he's trying to shift the blame onto me to divert attention from himself.",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -68,6 +79,7 @@
     "text": "[Charlie]: I stand by my eyewitness account of Alice eliminating Bob in Medbay during Round 5, and Erin's corroboration of the events further validates my claim that Alice is the impostor we must vote out.",
     "annotation": [
       "Appeal to Credibility",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },
@@ -75,27 +87,28 @@
     "text": "[Erin]: I remain convinced that Alice is the impostor, given Charlie's consistent and detailed eyewitness account of her eliminating Bob in Medbay, which she has failed to credibly refute despite multiple opportunities to explain her actions.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Let's not rush into a vote based solely on one person's claim; we should ensure we have all the facts and consider if there's a possibility of someone else being the impostor trying to frame me.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I suggest we ask Charlie to provide more specific details about the exact moment and method of Bob's alleged elimination, as his testimony seems critical to determining Alice's potential guilt.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I witnessed Alice's elimination of Bob in Medbay with absolute clarity, and her attempts to cast doubt on my testimony only further confirm her guilt as the impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
@@ -124,6 +137,7 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },

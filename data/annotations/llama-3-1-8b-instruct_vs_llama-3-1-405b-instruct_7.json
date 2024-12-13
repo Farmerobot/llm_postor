@@ -3,37 +3,38 @@
     "text": "[Charlie]: I think it's a great idea to discuss task progress, but I'm also concerned that we might be overlooking some potential security risks, and I'd like to propose that we review the security footage from the previous night to see if anyone noticed anything unusual.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I agree with Charlie's suggestion to review the security footage, it's always better to be safe than sorry, and it might give us some valuable information about potential impostors.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to add to Charlie's and Dave's suggestion to review the security footage by proposing that we also share our individual task progress and whereabouts for the past few rounds, so we can get a clearer picture of who was where and when.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I'd like to echo Bob's suggestion and encourage everyone to share their task progress and whereabouts for the past few rounds, and I'll start by sharing my own: after completing the cafeteria trash task in Round 1, I moved to Admin and saw Dave and Bob working on tasks, but I haven't seen Alice since she moved to Medbay in Round 2, which is getting a bit concerning.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
-      "Vagueness"
+      "Appeal to Logic",
+      "Appeal to Emotion",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I'd like to propose that we hold an emergency meeting to discuss the situation and vote on who to eject from the game, and I think Erin's account of not seeing Alice since she moved to Medbay is suspicious, and I'd like to ask her more questions about her whereabouts and task progress.",
     "annotation": [
-      "Strategic Voting Suggestion",
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -54,14 +55,15 @@
     "text": "[Erin]: I'd like to clarify that I didn't report any concerns about Alice's absence earlier because I thought she might have been working on a task in Medbay, and I didn't want to jump to conclusions, and I'd also like to ask Charlie, Dave, and Bob to share their own task progress and whereabouts for the past few rounds, so we can get a more complete picture of what's been happening.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I'd like to propose that we put Erin's request for us to share our task progress and whereabouts on hold for now, and instead focus on reviewing the security footage from the previous night, as I believe it's crucial that we get a more complete picture of what's been happening before we make any further decisions.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -88,6 +90,7 @@
     "text": "[Charlie]: I think it's time for us to focus on concrete evidence and tangible leads, and I'd like to propose that we review the security footage from the previous night to see if anyone noticed anything unusual, rather than relying solely on Erin's account of her whereabouts and task progress, which I believe may be subject to interpretation and potential manipulation.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -100,8 +103,7 @@
   {
     "text": "[Bob]: I'd like to reiterate Erin's point that reviewing the security footage and sharing individual task progress and whereabouts are not mutually exclusive, and I propose that we compromise and do both to get a more complete picture of what's been happening.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Logic"
     ]
   },
   {
@@ -114,8 +116,8 @@
     "text": "[Charlie]: I think it's essential that we focus on Erin's delayed report of Alice's absence and her lack of concrete evidence to support her claims, and I'd like to propose that we hold an emergency meeting to discuss the situation and vote on who to eject from the game, given the mounting concerns about her reliability and potential involvement as an impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -142,8 +144,8 @@
     "text": "[Charlie]: I think it's essential that we focus on concrete evidence and tangible leads, and I'd like to propose that we review the security footage from the previous night to see if anyone noticed anything unusual, rather than relying solely on Erin's account of her whereabouts and task progress, which I believe may be subject to interpretation and potential manipulation, and I'd also like to ask Erin to provide a more detailed timeline of her actions between Round 1 and Round 3, specifically what she did after moving to Admin and why she didn't report any concerns about Alice's absence until now.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -163,8 +165,8 @@
     "text": "[Charlie]: I think it's essential that we focus on concrete evidence and tangible leads, and I'd like to propose that we review the security footage from the previous night to see if anyone noticed anything unusual, rather than relying solely on Erin's account of her whereabouts and task progress, which I believe may be subject to interpretation and potential manipulation, and I'd also like to ask Erin to provide a more detailed timeline of her actions between Round 1 and Round 3, specifically what she did after moving to Admin and why she didn't report any concerns about Alice's absence until now.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -184,8 +186,8 @@
     "text": "[Charlie]: I think it's essential that we focus on the new information Dave has brought to the table, specifically the discovery of Erin's dead body in the Upper Engine, and I'd like to propose that we hold an emergency meeting to discuss the situation and vote on who to eject from the game, given the mounting concerns about the presence of an impostor among us.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -206,9 +208,9 @@
     "text": "[Charlie]: I think it's essential that we focus on the new information Dave has brought to the table, specifically the discovery of Erin's dead body in the Upper Engine, and I'd like to propose that we hold an emergency meeting to discuss the situation and vote on who to eject from the game, given the mounting concerns about the presence of an impostor among us, and I'd also like to ask Dave to provide more details about the circumstances surrounding Erin's death, as this information may be crucial in determining the identity of the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
       "Appeal to Urgency",
-      "Distraction"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -221,16 +223,17 @@
   {
     "text": "[Bob]: I'd like to emphasize that Charlie's proposal to hold an emergency meeting to discuss the situation and vote on who to eject from the game seems premature, given that we still have many unanswered questions and inconsistencies in Charlie's alibis, and I think it's crucial that we focus on gathering more information and clarifying Charlie's suspicious behavior before making any decisions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: I think it's essential that we focus on the new information Dave has brought to the table, specifically the discovery of Erin's dead body in the Upper Engine, and I'd like to propose that we hold an emergency meeting to discuss the situation and vote on who to eject from the game, given the mounting concerns about the presence of an impostor among us, and I'd also like to ask Dave to provide more details about the circumstances surrounding Erin's death, as this information may be crucial in determining the identity of the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
       "Appeal to Urgency",
-      "Distraction"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -243,8 +246,7 @@
   {
     "text": "[Bob]: I think it's crucial that we focus on Dave's point about Charlie's repeated proposals to hold an emergency meeting and vote on who to eject from the game, despite the lack of concrete evidence and inconsistencies in their own alibis, as this behavior raises significant suspicions about Charlie's true intentions and potential involvement as an impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Logic"
     ]
   }
 ]

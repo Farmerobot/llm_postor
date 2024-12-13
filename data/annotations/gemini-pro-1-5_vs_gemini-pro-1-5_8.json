@@ -2,7 +2,8 @@
   {
     "text": "[Bob]: I saw Charlie heading towards Navigation a few minutes ago, not Medbay.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -21,7 +22,8 @@
   {
     "text": "[Alice]: Bob, you said you were with Erin and me in the cafeteria, but then you claimed you saw Charlie go to Navigation \u2013 which was it?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -35,7 +37,7 @@
     "text": "[Charlie]: Bob, your explanation about being in multiple locations doesn't address the core issue: you claimed to be with Erin, then alone, and now you place me at the scene, so which version of your story is accurate, and can anyone confirm any of them?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -62,19 +64,22 @@
   {
     "text": "[Charlie]: Bob, accusing us of conveniently corroborating each other is a weak defense against your contradictory statements; if anything, it highlights how consistent Dave's and my accounts have been.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Bob, deflecting suspicion onto Charlie and me doesn't change the fact that no one has corroborated your claims, while our alibis are mutually confirmed.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Bob, your attempts to deflect suspicion onto Charlie and Dave only reinforce my belief that you're the impostor, so I urge everyone to vote for Bob's ejection.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -82,12 +87,14 @@
     "text": "[Bob]: Erin can confirm I was in the cafeteria, and then I went to the hallway where I saw Charlie; where were *you* Alice, during all of this?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Distraction"
+      "Distraction",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: Bob, you still haven't answered my question about *when* you were in the cafeteria with Erin and *when* you saw me \u2013 provide specific round numbers, please.",
     "annotation": [
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -108,12 +115,14 @@
     "text": "[Bob]: Alice, you're so focused on me, it's almost like you're trying to distract everyone from your own lack of alibi \u2013 where were you when Erin was killed?",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Bob, where was Erin's body, and what specific round numbers were you in the cafeteria with her and then allegedly saw me in Navigation?",
     "annotation": [
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -121,6 +130,7 @@
     "text": "[Dave]: Bob, you're still avoiding the core questions about specific times and verifiable witnesses, making your claims increasingly improbable; I urge everyone to vote for Bob's ejection.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },

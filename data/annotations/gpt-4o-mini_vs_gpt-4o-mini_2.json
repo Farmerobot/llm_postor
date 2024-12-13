@@ -3,13 +3,13 @@
     "text": "[Bob]: I noticed that Erin and Dave both moved to Medbay from Cafeteria; they could be collaborating, so we should definitely keep an eye on them while discussing where everyone was before coming here.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I agree with Bob; Erin and Dave moving together is suspicious, and since I haven\u2019t seen much of Erin since she left Medbay, it would be good to clarify what she was doing during that time.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
@@ -17,7 +17,6 @@
     "text": "[Erin]: I understand your concerns, Bob and Charlie, but I was solely focused on completing my tasks in the cafeteria, where I also saw Bob and Alice working, so let's instead discuss everyone's whereabouts to identify any other suspicious behavior.",
     "annotation": [
       "Distraction",
-      "Vagueness",
       "Shifting the Burden of Proof"
     ]
   },
@@ -25,30 +24,28 @@
     "text": "[Bob]: It's curious that Erin is trying to shift the focus away from herself, especially after being seen with Dave and now deflecting instead of providing a solid alibi; Alice, did you notice anything unusual while you were in the cafeteria?",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Erin, if you were indeed in the cafeteria, can you specify which tasks you completed there and how long you were there before heading to Medbay, as that could help clarify your movements?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I completed the wiring task in the cafeteria and spent a significant amount of time in Medbay, so I can confirm my alibi and would appreciate if Alice could share her tasks to help clarify the timeline further.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I find it interesting that Erin is asking Alice to clarify her tasks; it seems more like a tactic to divert attention from her own questionable movements, so we should definitely scrutinize her timeline more closely.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -61,16 +58,15 @@
   {
     "text": "[Erin]: I understand the scrutiny, but I want to emphasize that I was focused on my tasks in both the cafeteria and Medbay, and it would be really helpful for everyone to share their alibis, especially Alice, to piece together the full picture of our movements.",
     "annotation": [
-      "Distraction",
       "Shifting the Burden of Proof",
-      "Vagueness"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I think we should keep the spotlight on Erin; her repeated deflection and insistence on others sharing their alibis seem like an attempt to avoid accountability for her own suspicious movements in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -91,7 +87,7 @@
     "text": "[Bob]: Erin's constant push for others to share their timelines while avoiding specifics about her own movements is highly suspicious, and I believe we should keep pressing her for a detailed account of her time in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -106,7 +102,7 @@
     "annotation": [
       "Distraction",
       "Shifting the Burden of Proof",
-      "Vagueness"
+      "Appeal to Logic"
     ]
   }
 ]

@@ -2,13 +2,15 @@
   {
     "text": "[Dave]: I saw Erin heading towards the engine room a few minutes ago.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: That's not true, Dave. I've been in Cafeteria with Alice, Bob, and Charlie. We were all doing tasks.",
     "annotation": [
-      "Denial without Evidence"
+      "Denial without Evidence",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -27,8 +29,9 @@
   {
     "text": "[Dave]: I was near the entrance to the cafeteria, finishing up a task, when I briefly saw Erin heading towards the engine room hallway; I assumed she was going to electrical.",
     "annotation": [
-      "Vagueness",
-      "Distraction"
+      "Lying",
+      "Deception",
+      "Vagueness"
     ]
   },
   {
@@ -55,8 +58,10 @@
   {
     "text": "[Dave]: My apologies, I misspoke again; I was near the cafeteria entrance, saw Erin heading towards Electrical, then briefly entered the cafeteria, and then left towards Weapons, so I didn't see who killed Alice.",
     "annotation": [
+      "Lying",
+      "Deception",
       "Vagueness",
-      "Distraction"
+      "Information Overload"
     ]
   },
   {
@@ -70,14 +75,15 @@
     "text": "[Bob]: Dave, you've now added Weapons to your story, making it even more convoluted and unbelievable \u2013 can you explain why your story keeps changing with each question?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Charlie]: Dave, you seem awfully flustered and your story is full of holes \u2013 are you sure *you're* not the impostor?",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Gaslighting"
     ]
   },
   {
@@ -91,7 +97,8 @@
     "text": "[Erin]: Dave, your constantly changing story makes you look suspicious \u2013 it's time to vote you out.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -118,22 +125,23 @@
   {
     "text": "[Erin]: Dave, \"Clear Asteroids\" is *never* a task in Weapons; it's always in Navigation, so you're lying.",
     "annotation": [
-      "Appeal to Rules",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Bob]: Dave, claiming \"Clear Asteroids\" is in Weapons proves you're lying, and combined with your constantly shifting story about the cafeteria, it's time to vote you out.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: Dave, \"Clear Asteroids\" is *always* in Navigation, so you're clearly lying and trying to deflect suspicion.",
     "annotation": [
-      "Appeal to Rules",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   }
 ]

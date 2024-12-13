@@ -2,34 +2,33 @@
   {
     "text": "[Erin]: I was just in the cafeteria, and I noticed Charlie heading towards Weapons earlier; did anyone see what he was doing there?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
     "text": "[Charlie]: Yes, Erin, I went straight to Weapons to do the asteroid task, like I said earlier, and I didn't see anyone else there.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I was with Dave in Medbay after leaving Cafeteria, so neither of us could have been in Weapons with Charlie.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: Erin, I saw you, Charlie, Bob, and Alice all in the cafeteria earlier, so your statement about just being there seems a bit off, where were you before that?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I understand the confusion, Dave, but I was indeed in the cafeteria the whole time after seeing you all there, and since Bob and you were in Medbay, it\u2019s important we clarify Charlie's movements to see if he could be the impostor.",
     "annotation": [
-      "Appeal to Logic",
       "Distraction",
       "Shifting the Burden of Proof"
     ]
@@ -44,15 +43,15 @@
   {
     "text": "[Bob]: Erin, you haven't answered my question about where exactly you found Alice's body \u2013 was it near Weapons, as Charlie's defensiveness might suggest?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Erin, your continued avoidance of the question about Alice's body's location makes you look increasingly suspicious, especially given your vague movements before entering the cafeteria.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -65,22 +64,22 @@
   {
     "text": "[Charlie]: Erin, repeatedly deflecting the question about where you found Alice's body only makes you seem more suspicious, so please answer the question directly.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Erin, your refusal to disclose where you found Alice's body continues to be the most suspicious element here, so please answer the question directly.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Erin, if you truly want us to focus on Charlie, then providing a clear answer about where you found Alice's body will help eliminate suspicions about your own involvement and allow us to do just that.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -106,9 +105,8 @@
   {
     "text": "[Dave]: Erin, your attempts to shift the focus onto Charlie are failing; tell us where you found Alice's body, or we have no choice but to vote you out.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -128,14 +126,14 @@
     "text": "[Bob]: Erin, you claimed you were in the cafeteria the *whole time*, yet you found Alice's body, so clearly, you're lying about your location and are therefore the most suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Erin, you claimed to be in the cafeteria the *whole time*, yet you found Alice's body elsewhere, proving you're lying and making you the prime suspect.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   }
 ]

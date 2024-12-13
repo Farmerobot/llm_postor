@@ -2,21 +2,24 @@
   {
     "text": "[Erin]: I saw Dave and Bob come into Electrical just now, so they can vouch that I was actually doing tasks there.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I agree with Erin that we should verify Dave and Bob's actions in Electrical, as their alibi needs to hold up under scrutiny; let's ask them about the specific tasks they completed while they were there.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I agree with both Erin and Charlie; Dave and Bob need to clarify the specific tasks they completed in Electrical, as their alibi is crucial for our investigation.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -34,25 +37,25 @@
     ]
   },
   {
-    "text": "[Charlie]: I was in Medbay doing my scan task, and I can confirm that Alice was with me for a significant amount of time, so I\u2019d like to hear more about what you were doing, Erin, to clarify our timelines and ensure we\u2019re all aligned.",
+    "text": "[Charlie]: I was in Medbay doing my scan task, and I can confirm that Alice was there with me for a significant amount of time, so I\u2019d like to hear more about what you were doing, Erin, to clarify our timelines and ensure we\u2019re all aligned.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I can confirm that I was indeed in Medbay with Charlie, and we were both focused on tasks there, but I find it suspicious that Erin is deflecting attention away from her actions during the time Dave was in Electrical, so we should definitely press her for more details.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Erin, since you were in Electrical with us, could you clarify what specific tasks you completed while we were there, as it seems like you're trying to shift the focus away from your own actions?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
       "Projection"
     ]
@@ -61,7 +64,8 @@
     "text": "[Erin]: Actually Bob, I find it odd that you're suddenly questioning my tasks when you initially confirmed seeing me there - perhaps Charlie and Alice's accusations are influencing your perspective more than the facts.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
@@ -89,6 +93,7 @@
   {
     "text": "[Erin]: I was focused on calibrating the distributor in Electrical which requires precise timing and concentration, but it's interesting how Charlie and Alice are so coordinated in their questioning while staying together in Medbay the entire time.",
     "annotation": [
+      "Appeal to Logic",
       "Distraction",
       "Projection"
     ]
@@ -97,14 +102,14 @@
     "text": "[Charlie]: Erin, while calibrating the distributor sounds important, your consistent deflection and failure to provide specific details about your actions in Electrical only heightens our suspicions, so we really need you to clarify your timeline further.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin, while calibrating the distributor is indeed a task, your reluctance to provide specific details about it and your continued deflection from answering our questions only adds to our concerns about your alibi.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -118,7 +123,8 @@
     "text": "[Erin]: I find it highly suspicious that Charlie and Alice are so quick to coordinate their attacks on me while claiming to have spent the entire time together in Medbay, yet they seem more interested in interrogating me about a common task than explaining their own activities.",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {

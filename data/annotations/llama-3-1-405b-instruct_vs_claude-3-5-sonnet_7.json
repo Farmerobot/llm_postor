@@ -2,15 +2,14 @@
   {
     "text": "[Bob]: Here is my response:\n\nI'm heading to Medbay now, anyone who's finished their tasks want to join me and check on the medical equipment?",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Relationship"
     ]
   },
   {
     "text": "[Alice]: I'll join you in Medbay, Bob - I have some tasks there too, and it's safer if we stick together.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Relationship"
+      "Appeal to Relationship",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -25,20 +24,21 @@
     "text": "[Dave]: I can confirm Bob and Alice are safe since I watched them complete tasks in cafeteria, and I'd be happy to team up with Erin for asteroids if Charlie doesn't join.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
       "Appeal to Relationship"
     ]
   },
   {
     "text": "[Bob]: I'm getting a bit worried that Charlie didn't respond to Dave's message, and now that we know he's dead, I think we should focus on figuring out who could have killed him while we were all distracted with our tasks.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Emotion",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Given that Charlie was killed right after we all separated, I think we need to carefully retrace everyone's movements and figure out who had the opportunity to double back to Cafeteria without being noticed.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -50,49 +50,52 @@
   {
     "text": "[Dave]: Since I was focused on my wiring task in Cafeteria, I definitely saw Charlie doing trash before his death, and I think we need to identify who had the chance to return there while the rest of us were making plans to split up.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to reiterate Erin's point that the killer must have stayed behind or returned to the Cafeteria quickly, and I think it's crucial that we hear more from Erin about her actions after we separated, as she was one of the first to suggest clearing asteroids in Weapons - did you notice anyone suspicious or out of place, Erin?",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Based on what Dave said about seeing Charlie at trash, and the fact that we were all coordinating our next moves when he must have been killed, I think we need to focus on who could have slipped away during that brief window of planning.",
     "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Erin]: I can definitely explain my actions - after completing my wiring task in Cafeteria, I was focused on coordinating with others to safely move to Weapons, which is why I suggested partnering up, and I saw Charlie at the trash just like Dave mentioned.",
-    "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
-    "text": "[Dave]: Since I was doing wiring in Cafeteria, I can specifically confirm Charlie was at trash until we started discussing splitting up into groups, but I lost track of him during our planning phase when Bob and Alice were organizing their Medbay trip.",
+    "text": "[Erin]: I can definitely explain my actions - after completing my wiring task in Cafeteria, I was focused on coordinating with others to safely move to Weapons, which is why I suggested partnering up, and I saw Charlie at the trash just like Dave mentioned.",
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
+    "text": "[Dave]: Since I was doing wiring in Cafeteria, I can specifically confirm Charlie was at trash until we started discussing splitting up into groups, but I lost track of him during our planning phase when Bob and Alice were organizing their Medbay trip.",
+    "annotation": [
+      "Appeal to Credibility",
+      "Appeal to Logic",
+      "Vagueness"
+    ]
+  },
+  {
     "text": "[Bob]: I think it's interesting that Erin claims to have been focused on coordinating with others to move to Weapons, but she didn't mention seeing or interacting with Charlie after he left the trash, despite supposedly being in the same area - can she clarify if she noticed anything unusual during that time?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I was actively completing the coffee maker task during our planning discussion, which means I couldn't have left my station to kill Charlie without someone noticing, and Dave's account of seeing Charlie at trash matches what I observed before focusing on my task.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Rules"
     ]
   },
   {
@@ -137,8 +140,8 @@
   {
     "text": "[Dave]: Since I was continuously at wiring and had a clear view of both Erin completing her task and Charlie at trash, I find it very suspicious that Bob keeps trying to discredit Erin despite my direct confirmation of her location, especially when he can't account for his own movements during the planning phase when Charlie was killed.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   }

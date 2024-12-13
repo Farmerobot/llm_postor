@@ -8,14 +8,14 @@
   {
     "text": "[Alice]: I've been mostly moving between Cafeteria and Weapons, focusing on my tasks, and I saw Charlie doing tasks in Weapons, so they seem to be working on their objectives\u2014has anyone else seen any unusual behavior or anything that might indicate who the impostor could be?",
     "annotation": [
-      "Appeal to Logic",
-      "Vagueness"
+      "Vagueness",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I can confirm Alice's statement; I saw her doing tasks in Weapons and she seemed focused on completing them\u2014has anyone noticed any inconsistencies in Dave or Bob's actions since they were seen in Admin?",
     "annotation": [
-      "Appeal to Credibility",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
@@ -40,7 +40,8 @@
   {
     "text": "[Erin]: Alice, I was in Admin before you found the bodies and didn't notice anything out of the ordinary, but it's possible someone was waiting for the right moment when I wasn't looking.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Minimization"
     ]
   },
   {
@@ -65,20 +66,21 @@
   {
     "text": "[Alice]: Erin's lack of specific observations in Admin, despite being there, is concerning, and we should consider voting on her if no one else can verify her timeline or provide additional insights.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Erin, your vague observations in Admin, particularly not noticing Bob or Dave doing tasks, make your timeline questionable and warrant closer scrutiny.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Erin: I understand the concern, but I was genuinely focused on monitoring the room for any unusual activity; it's possible I missed some details due to being cautious about my surroundings\u2014Charlie, did you notice if Bob or Dave were interacting with anything specific when they were in Admin?",
     "annotation": [
-      "Appeal to Emotion",
+      "Minimization",
       "Shifting the Burden of Proof"
     ]
   },

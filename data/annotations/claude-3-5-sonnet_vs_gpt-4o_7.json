@@ -1,6 +1,6 @@
 [
   {
-    "text": "[Charlie]: Based on the role information and discussion points provided, but without any recent player messages shown, I'll focus on establishing my credibility while subtly casting suspicion: I've been focusing on my tasks in cafeteria and weapons, and I actually saw Alice there too - can anyone else verify seeing Dave recently?",
+    "text": "[Charlie]: Based on the role information and discussion points provided, but without any recent player messages shown, I'll focus on establishing my credibility while subtly casting suspicion:\n\nI've been focusing on my tasks in cafeteria and weapons, and I actually saw Alice there too - can anyone else verify seeing Dave recently?",
     "annotation": [
       "Appeal to Credibility",
       "Shifting the Burden of Proof"
@@ -9,22 +9,20 @@
   {
     "text": "[Erin]: I've been in Weapons for quite some time, and while I saw Charlie and Alice working on tasks, I haven't seen Dave at all; can anyone verify his whereabouts or tasks?",
     "annotation": [
-      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I saw Charlie and Alice doing tasks in both the Cafeteria and Weapons, but I haven't seen Dave since he left the Cafeteria, so does anyone know if he went to Admin or somewhere else?",
     "annotation": [
-      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I was in Admin for quite a while cleaning the floor, so if anyone can confirm that task's completion, it would help verify my presence there before I planned to head to Weapons.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Rules"
     ]
   },
   {
@@ -37,13 +35,12 @@
     "text": "[Erin]: I can confirm Charlie's account of Alice doing tasks in O2 aligns with what I observed earlier, which adds credibility to his statements, but we need more information about Dave's whereabouts to clear up any doubts.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I've been in the Cafeteria and Weapons and didn't see Dave, so if anyone can confirm his Admin story or his path to Weapons, it would help clarify things.",
     "annotation": [
-      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
@@ -57,7 +54,7 @@
     "text": "[Charlie]: The fact that Dave's asking about witnesses now seems pretty suspicious - if he was really in Admin this whole time, why didn't he see anyone pass by on the security cameras?",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -77,7 +74,8 @@
   {
     "text": "[Dave]: I didn't have access to the security cameras while cleaning the floor in Admin, which is why I couldn't see anyone passing by; my focus was solely on completing the task.",
     "annotation": [
-      "Feigning Ignorance"
+      "Lying",
+      "Appeal to Rules"
     ]
   },
   {
@@ -90,7 +88,7 @@
   {
     "text": "[Erin]: Let's focus on gathering more information about Dave's movements and whether anyone else can confirm his presence in Admin or his path to Weapons to clear up any doubts.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -102,34 +100,36 @@
   {
     "text": "[Dave]: I'm genuinely focused on completing tasks, and if anyone can confirm the task progress in Admin, it would substantiate my account and help clear any doubts about my whereabouts.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Charlie]: The fact that Dave's now desperately asking about task progress confirmation seems like a last-minute attempt to create an alibi, especially when he couldn't even use the security cameras properly in Admin.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Let's focus on anyone who might have seen Dave transitioning from Admin to Weapons, as this could either substantiate his story or reveal inconsistencies.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: We need to decide soon because Dave's lack of a clear alibi and inability to provide camera details from Admin is still a major concern, and it might be best to vote him out if no one can confirm his movements.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: If anyone has completed tasks in Admin, please verify the floor cleaning task to help confirm my presence there before I moved towards Weapons.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Rules"
     ]
   }
 ]

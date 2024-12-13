@@ -2,21 +2,19 @@
   {
     "text": "[Bob]: I've been in Medbay for a while now, and I haven't seen anyone else around, which makes me wonder if someone is indeed hiding something, and I think we should investigate further to clear my own name.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Bob, you mentioned being in Medbay, but I saw you in the Cafeteria earlier; can you clarify your movements?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I've seen Bob in the cafeteria doing tasks, so his presence there makes sense, but I'm curious about his transition to Medbay\u2014can anyone confirm seeing him there?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -37,7 +35,6 @@
   {
     "text": "[Alice]: Alice: Erin, since you moved from the Cafeteria to Medbay earlier, did you see Bob or notice anything unusual in Medbay?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -50,36 +47,35 @@
   {
     "text": "[Charlie]: Alice, since you and I have been in some of the same rooms, did you notice anything suspicious, and Erin, can you confirm if you saw Bob in Medbay or if anything seemed off there?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin, we're still waiting for your confirmation about seeing Bob in Medbay, as this could help us clear up the timeline and focus on finding Dave.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I think we should prioritize gathering more information from Erin about her time in Medbay, as her confirmation or denial of seeing me there could greatly impact our understanding of the situation and help us refocus on finding Dave.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Erin, your input is crucial right now; did you see Bob in Medbay, or was there anything unusual that could help us piece together the timeline and locate Dave?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: Erin, your confirmation about seeing Bob in Medbay is essential for us to clear up any confusion and shift our focus to locating Dave.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -91,8 +87,8 @@
   {
     "text": "[Charlie]: Erin, we really need your observations from Medbay to help us clarify Bob's movements and shift our focus to locating Dave.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {

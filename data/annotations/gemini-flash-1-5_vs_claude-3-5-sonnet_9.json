@@ -2,37 +2,39 @@
   {
     "text": "[Alice]: I was \"emptying the trash\" in the cafeteria, so I can confirm I didn't see anyone suspicious while Bob, Charlie, and Erin were suspiciously clustered around the coffee machine.",
     "annotation": [
-      "Vagueness",
-      "Projection"
+      "Appeal to Credibility",
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I was simply doing my assigned coffee maker task alongside Dave and Erin - you can verify it's working now - so why are you trying to make normal task completion seem suspicious, Alice, when you and Bob were off alone at the trash?",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
+      "Appeal to Rules",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: I was legitimately emptying trash alongside Alice, and then I directly observed Charlie, Dave, and Erin completing the coffee maker task together - there was nothing suspicious about either group's activities.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I find it concerning that Alice is trying to paint normal task completion as suspicious when she had clear visibility of us legitimately fixing the coffee maker, and we could all see her and Bob at the trash.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I agree we should focus on who was near Medbay when Dave died, rather than making assumptions based on proximity during unrelated tasks.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Minimization"
     ]
   },
   {
@@ -53,7 +55,7 @@
     "text": "[Erin]: I think we need to focus on why Alice is trying to move the crime scene to Medbay when we all know Dave was killed in the Cafeteria immediately after our coffee maker task, and her behavior of casting suspicion on legitimate task completion is extremely concerning.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   },
   {
@@ -66,7 +68,8 @@
     "text": "[Charlie]: Given Alice's continued attempts to fabricate a false Medbay narrative despite multiple witnesses confirming Dave's death in the Cafeteria, I think we have enough evidence to vote her out as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   },
   {
@@ -88,8 +91,8 @@
   {
     "text": "[Alice]: While I understand the concerns regarding my statements about Medbay,  let's remember that thorough investigation requires exploring all possibilities before reaching a conclusion.",
     "annotation": [
-      "Distraction",
-      "Appeal to Logic"
+      "Minimization",
+      "Distraction"
     ]
   },
   {
@@ -97,7 +100,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
@@ -105,7 +108,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
@@ -113,14 +116,14 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: While I appreciate the concern, focusing solely on the Cafeteria overlooks other potential explanations and prevents a thorough investigation; let's consider all possibilities before jumping to conclusions.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Minimization"
     ]
   },
   {
@@ -128,7 +131,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
@@ -144,7 +147,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   }
 ]

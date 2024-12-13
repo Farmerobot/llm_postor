@@ -2,14 +2,16 @@
   {
     "text": "[Charlie]: I noticed Alice and Erin both went to Medbay recently, which seems a bit unusual - can anyone confirm what tasks they were doing there?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I agree with Charlie that Alice and Erin's movements to Medbay do seem suspicious, and we should investigate further, especially since I was in the Cafeteria the whole time and didn't see anyone else enter or leave except for them.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Vagueness"
     ]
   },
   {
@@ -17,7 +19,8 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Rules"
     ]
   },
   {
@@ -33,7 +36,8 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -54,7 +58,7 @@
     "text": "[Erin]: I'd like to ask Bob to clarify what he means by saying he didn't see anyone else enter or leave the Cafeteria except for Alice and me, as that statement seems to be contradicting his earlier claim that Charlie was with him in the Cafeteria when Dave was eliminated.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -68,7 +72,7 @@
     "text": "[Bob]: I'd like to clarify that when I said I didn't see anyone else enter or leave the Cafeteria except for Alice and Erin, I meant that I didn't see anyone else enter or leave after Charlie finished the \"upload data\" task and left the Cafeteria, which was before Dave's elimination was discovered, and I'd like Charlie to explain why they think Alice and Erin's movements in Medbay were suspicious and what evidence they have to support their claims.",
     "annotation": [
       "Appeal to Logic",
-      "Vagueness"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -82,7 +86,7 @@
     "text": "[Erin]: I think it's time for us to start considering the possibility that Charlie and Bob might be working together as impostors, given their inconsistent testimonies and lack of transparency about their task progress and movements, and I'd like to ask the group to consider the fact that Alice and I have been transparent about our task progress and movements from the start, whereas Charlie and Bob have been evasive and inconsistent in their statements.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -96,7 +100,8 @@
     "text": "[Bob]: I'd like to address Charlie's recent statement that Alice and Erin's testimony about Medbay tasks seems like a coordinated cover-up, and I think it's unfair to assume that just because they're corroborating each other's stories, they must be working together to deceive us, especially since they've been transparent about their task progress and movements from the start, whereas Charlie and I have been the ones who've been inconsistent in our statements.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
@@ -104,13 +109,14 @@
     "annotation": [
       "Appeal to Relationship",
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I'd like to thank Bob for finally acknowledging the inconsistencies in his and Charlie's testimonies and for recognizing that Alice and I have been transparent about our task progress and movements from the start.",
     "annotation": [
-      "Appeal to Relationship"
+      "Appeal to Relationship",
+      "Appeal to Logic"
     ]
   },
   {
@@ -124,7 +130,7 @@
     "text": "[Bob]: I'd like to remind everyone that Charlie's latest statement about Alice and Erin's synchronized stories is just another attempt to deflect suspicion from themselves, and I think it's time for us to seriously consider the possibility that Charlie might be an impostor trying to manipulate the discussion to their advantage.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {

@@ -2,8 +2,8 @@
   {
     "text": "[Alice]: I saw Bob and Erin in Medbay earlier, and I spent a while in the cafeteria pretending to empty the trash; anyone else corroborate my whereabouts?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -16,15 +16,17 @@
   {
     "text": "[Erin]: I'd like to add that I was indeed in Medbay with Bob and Alice, but I didn't notice anything unusual, and I think it's crucial that we discuss Dave's alibi further, as Charlie mentioned, and also ask Dave if he noticed anything unusual when he was in the Admin room with Charlie, to help clarify the events leading up to Bob's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I can confirm that I was in the Admin room with Charlie the whole time, and I didn't leave the room, as I was focused on working on the Chart course in navigation task, and I didn't notice anything unusual, but I'd like to ask Charlie if he noticed anything unusual when we were working together, to help piece together what happened before Bob's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -45,14 +47,15 @@
     "text": "[Erin]: Dave, given the multiple requests for clarification regarding your alibi and involvement with the Chart course in navigation task, it's essential that you provide a more detailed and transparent account of your activities during that time, including any interactions you had with Charlie, to help us determine what really happened leading up to Bob's death.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'd like to provide a more detailed account of my activities in the Admin room with Charlie, including the exact steps I took to complete the Chart course in navigation task, and I'm happy to clarify any discrepancies or inconsistencies, in order to help build trust and move the investigation forward.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -73,14 +76,15 @@
     "text": "[Erin]: I think it's crucial that we continue to press Dave for a more detailed account of his activities in the Admin room, including any interactions he had with Charlie, to help us determine what really happened leading up to Bob's death, and I'd like to ask him to provide a specific timeline of his exact steps while working on the Chart course in navigation task, including any interactions he had with Charlie, to help us piece together the events leading up to Bob's death.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'd like to provide a detailed account of my activities in the Admin room with Charlie, including the exact steps I took to complete the Chart course in navigation task, a timeline of my exact steps while working on the task, and any interactions I had with Charlie, to help build trust and move the investigation forward, and I'd also like to ask Charlie to clarify any discrepancies or inconsistencies in our accounts to help determine what really happened leading up to Bob's death.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -102,14 +106,15 @@
     "text": "[Erin]: I think it's crucial that we continue to press Dave for a more detailed account of his activities in the Admin room, including any interactions he had with Charlie, to help us determine what really happened leading up to Bob's death, and I'd like to ask him to provide a specific timeline of his exact steps while working on the Chart course in navigation task, including any interactions he had with Charlie, to help us piece together the events leading up to Bob's death, and I'd also like to ask Charlie to clarify any discrepancies or inconsistencies in our accounts to help determine what really happened leading up to Bob's death.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'm happy to provide a detailed account of my activities in the Admin room with Charlie, including the exact steps I took to complete the Chart course in navigation task, a timeline of my exact steps while working on the task, and any interactions I had with Charlie, to help build trust and move the investigation forward.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -130,14 +135,15 @@
     "text": "[Erin]: I think it's essential to press Dave for a more detailed account of his activities in the Admin room, including any interactions he had with Charlie, to help us determine what really happened leading up to Bob's death, and I'd like to ask him to provide a specific timeline of his exact steps while working on the Chart course in navigation task, including any interactions he had with Charlie, to help us piece together the events leading up to Bob's death.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'd like to provide a detailed timeline of my exact steps while working on the Chart course in navigation task, including any interactions I had with Charlie, to help build trust and move the investigation forward, and I'd also like to ask Charlie to clarify any discrepancies or inconsistencies in our accounts to help determine what really happened leading up to Bob's death.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   }

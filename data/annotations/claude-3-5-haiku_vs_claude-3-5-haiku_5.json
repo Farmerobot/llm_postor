@@ -3,15 +3,16 @@
     "text": "[Dave]: I noticed Bob and Alice have been moving together suspiciously, and we should carefully review everyone's movements and task progress to figure out who might be the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I saw Dave eliminate Alice in the Reactor, and now he's trying to deflect suspicion by claiming I was moving suspiciously, when I was actually completing tasks in Medbay and Upper Engine.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Deception"
+      "Deception",
+      "Lying",
+      "Distraction",
+      "Projection"
     ]
   },
   {
@@ -40,7 +41,8 @@
     "text": "[Bob]: I saw Dave eliminate Alice in the Reactor, and my transparent task-completing movements in Medbay and Upper Engine prove my credibility as a crewmate who is trying to help the team identify the real impostor.",
     "annotation": [
       "Appeal to Credibility",
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -60,16 +62,17 @@
   {
     "text": "[Dave]: I think Bob is fabricating this entire story to create chaos, and we should demand he provide a precise, moment-by-moment account of what he claims to have witnessed in the Reactor, including his exact location and the specific details of the alleged elimination.",
     "annotation": [
-      "Projection",
+      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: I was in the Upper Engine when I saw Dave move to the Reactor and eliminate Alice, and my consistent task-completing movements in Medbay and Upper Engine prove my credibility as a crewmate who is trying to help the team identify the real impostor.",
     "annotation": [
       "Appeal to Credibility",
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -90,14 +93,15 @@
     "text": "[Dave]: I challenge Bob to provide a precise, moment-by-moment account of the alleged elimination, highlighting the inconsistencies in his story and emphasizing that Erin and Charlie can confirm I was legitimately doing tasks with Alice in the Cafeteria.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I stand by my original statement that I witnessed Dave eliminate Alice in the Reactor while I was in the Upper Engine, and I challenge Dave and the others to explain why they are deflecting attention from this critical observation instead of addressing the core issue of Alice's elimination.",
     "annotation": [
       "Deception",
+      "Lying",
       "Distraction"
     ]
   },
@@ -106,7 +110,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -120,14 +124,15 @@
     "text": "[Dave]: I challenge Bob to explain the precise details of the alleged elimination, highlighting how Erin and Charlie can confirm I was legitimately doing tasks with Alice in the Cafeteria, which directly contradicts his ever-changing story about the Reactor.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I was in the Upper Engine when I saw Dave eliminate Alice in the Reactor, and I challenge Dave, Erin, and Charlie to explain why they are avoiding addressing the core issue of Alice's elimination by focusing on discrediting my consistent account.",
     "annotation": [
       "Deception",
+      "Lying",
       "Distraction"
     ]
   },
@@ -136,15 +141,15 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Charlie]: I believe Bob's repeated inconsistent claims and inability to provide concrete evidence make him the most suspicious player, and we should vote to eject him to maintain team unity and prevent further potential disruption.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

@@ -2,15 +2,17 @@
   {
     "text": "[Bob]: Given my role as an impostor and the need to establish credibility while subtly casting suspicion, I'll respond: I can confirm I saw Charlie and Dave doing tasks in Admin after we all left Cafeteria, but I'm a bit concerned that no one seems to know where Alice and Erin went.",
     "annotation": [
-      "Deception",
+      "Appeal to Credibility",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Feigning Ignorance",
+      "Withholding Information"
     ]
   },
   {
     "text": "[Alice]: I saw Bob, Charlie, and Dave in the cafeteria earlier, then went to Medbay and saw Erin; Bob's account of our movements seems inconsistent, so let's clarify everyone's timelines to identify any discrepancies.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -30,23 +32,23 @@
   {
     "text": "[Bob]: I need to defend myself while maintaining suspicion on Alice and Erin, so I'll say: \"While I appreciate Erin trying to back up Alice's story, it's strange that they both claim to have been in Medbay when the kill happened in Admin, which is quite far from where they say they were.\"",
     "annotation": [
-      "Deception",
-      "Distraction",
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Let's systematically compare everyone's accounts of their post-cafeteria movements, focusing on precise times and locations to pinpoint inconsistencies and resolve this discrepancy.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Bob's shifting statements about our locations and Alice and Erin's whereabouts raise serious concerns, and a thorough timeline comparison is crucial to identify any inconsistencies.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -60,56 +62,65 @@
     "text": "[Bob]: Dave's sudden change in story is very suspicious - he first confirmed seeing me in Admin with Charlie, but now he's trying to paint me as inconsistent when I've been clear about my movements the whole time.",
     "annotation": [
       "Projection",
-      "Gaslighting"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Given Bob's shifting statements and the significant distance between Medbay and Admin, a detailed timeline of everyone's post-cafeteria movements is crucial to resolving this.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: A detailed timeline, focusing on precise times and locations after leaving the cafeteria, will expose Bob's inconsistent statements and inconsistencies in his narrative, clearing up any confusion surrounding Charlie's death.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Given Bob's shifting statements and the physical impossibility of me being in Admin, a precise timeline of everyone's movements after the cafeteria is crucial to finding the imposter.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Dave seems awfully eager to push for a timeline now, but he's conveniently forgotten that he initially confirmed seeing me with Charlie in Admin - that kind of suspicious behavior needs to be addressed.",
     "annotation": [
       "Projection",
-      "Gaslighting"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Let's focus on establishing a precise timeline of everyone's movements after the cafeteria, noting any discrepancies between Bob's initial and current statements.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: To resolve the discrepancies, let's create a shared timeline detailing everyone's movements after the cafeteria, noting the exact times and locations to expose Bob's inconsistent statements.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob's inconsistent statements regarding his and Dave's location, coupled with the physical impossibility of my presence in Admin, necessitates a detailed timeline to expose the imposter.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: It's quite telling that Dave keeps pushing for a timeline while completely avoiding my question about why he initially confirmed seeing me in Admin with Charlie, only to change his story later.",
     "annotation": [
-      "Projection",
+      "Gaslighting",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -123,13 +134,15 @@
   {
     "text": "[Dave]: Let's create that timeline, focusing on the time elapsed between leaving the cafeteria and the discovery of Charlie's body, to pinpoint inconsistencies and definitively clear my name.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Given Bob's demonstrably false statements and the impossibility of my presence in Admin, I propose we immediately vote him out to prevent further deception.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

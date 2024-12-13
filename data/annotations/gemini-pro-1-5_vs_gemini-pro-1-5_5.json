@@ -2,7 +2,8 @@
   {
     "text": "[Charlie]: I saw Alice vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -30,15 +31,15 @@
   {
     "text": "[Charlie]: If Bob and Alice were together the whole time, wouldn't they have seen *me* in the Cafeteria too, proving my innocence?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Exactly, Charlie \u2013 you *were* in the Cafeteria with us at the start, which is why your claim about Alice is impossible, *and* why I saw you kill Dave there immediately afterward.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -60,7 +61,7 @@
     "text": "[Charlie]: So, Bob, you conveniently saw me kill Dave *right after* we were all together, yet no one else witnessed this supposed murder?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
@@ -73,22 +74,23 @@
   {
     "text": "[Alice]: Charlie's asking why no one else saw the murder is suspicious in itself \u2013 is he trying to imply *he* was looking for witnesses, because *he* was the murderer?",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: Charlie's increasingly desperate attempts to deflect blame only solidify his guilt; let's eject him now.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Isn't it strange how Bob's story conveniently places him as the *sole* witness to Dave's death, despite the Cafeteria being a busy area?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -100,7 +102,8 @@
   {
     "text": "[Alice]: Charlie's trying to discredit Bob's testimony because it directly implicates him in Dave's murder, remember, Charlie's initial lie about me venting proves he's the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Confirmation Bias Exploitation"
     ]
   },
   {

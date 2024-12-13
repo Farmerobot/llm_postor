@@ -2,14 +2,15 @@
   {
     "text": "[Erin]: I saw Bob vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I can directly contradict Erin's accusation since I was with Bob in Electrical and saw him legitimately doing tasks - he definitely didn't vent.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -17,14 +18,15 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
   {
     "text": "[Charlie]: Given that I've personally witnessed Bob doing multiple visual tasks in Cafeteria and Shields, and Dave also confirms his innocence, I think Erin's accusation is highly suspicious and seems like a desperate attempt to frame an innocent crewmate.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Projection"
     ]
   },
@@ -33,7 +35,8 @@
     "annotation": [
       "Feigning Ignorance",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -47,6 +50,7 @@
     "text": "[Bob]: Given that Erin first falsely accused me of venting and then conveniently \"found\" Alice's body in Medbay, I think we need to focus on why Erin was alone in Medbay when most of us have been moving in groups for safety.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -60,15 +64,16 @@
   {
     "text": "[Erin]: I was with Alice in Shields earlier, and she mentioned she was going to Medbay to scan, so it's possible someone followed her there.",
     "annotation": [
-      "Vagueness",
-      "Distraction"
+      "Distraction",
+      "Vagueness"
     ]
   },
   {
     "text": "[Dave]: I can confirm without any doubt that Alice was alive and moving from Upper Engine to Medbay when I last saw her, which means Erin must have been the only other person in that area when Alice was killed.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -89,21 +94,25 @@
     "text": "[Erin]: Dave and Bob are clearly working together, trying to shift the blame onto me after I saw Dave vent.",
     "annotation": [
       "Projection",
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I find it absurd that Erin would suddenly claim I vented when multiple people can verify my movements, and the fact remains that she was the only one near Medbay when Alice died shortly after I saw her alive.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I think it's telling that Erin has now accused both me and Dave of venting, while multiple witnesses can verify our movements and tasks, so her rapidly changing stories combined with being the only one near Alice when she died make her guilt obvious.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
@@ -116,7 +125,8 @@
   {
     "text": "[Erin]: Isn't it strange how Dave and Bob are so quick to defend each other, almost as if they're coordinating their alibis?",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
@@ -130,14 +140,16 @@
     "text": "[Bob]: Since Erin has now accused both Dave and me of venting despite multiple witnesses verifying our movements and tasks, while she was alone in Medbay when Alice died, I think her increasingly desperate attempts to create conspiracy theories only further confirm her guilt.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: The fact that I've personally witnessed both Dave and Bob completing multiple visual tasks throughout the game completely disproves Erin's conspiracy theory about them working together, and her pattern of making and retracting vent accusations while being the only one near Alice's murder scene is textbook impostor behavior.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   }
 ]

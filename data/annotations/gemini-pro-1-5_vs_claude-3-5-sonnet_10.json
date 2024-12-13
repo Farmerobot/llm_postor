@@ -1,13 +1,16 @@
 [
   {
     "text": "[Erin]: I saw Alice go into Navigation, then a few seconds later the lights flickered, and when I went to check, she was gone.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying"
+    ]
   },
   {
     "text": "[Dave]: I was actually with Alice in the Cafeteria the whole time along with Charlie and Bob, so I'm not sure how you could have seen her in Navigation, Erin.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -21,15 +24,14 @@
     "text": "[Bob]: I can definitely confirm that Alice was with us in Cafeteria doing tasks the whole time, so Erin must be lying about seeing her in Navigation.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: It's possible the flickering lights played tricks on my eyes, and with everyone vouching for Alice, I must have been mistaken.",
     "annotation": [
-      "Appeal to Emotion",
-      "Minimization"
+      "Minimization",
+      "Feigning Ignorance"
     ]
   },
   {
@@ -64,7 +66,7 @@
     "text": "[Dave]: The fact that I was specifically at the wiring panel and could clearly see Alice at the trash, while Erin was by the coffee maker in the Cafeteria - not anywhere near Navigation as she initially claimed - only further proves she was lying about Alice's location.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -77,16 +79,15 @@
   {
     "text": "[Bob]: Since I personally witnessed Erin at the coffee maker in Cafeteria, her initial story about being in Navigation and then changing it twice proves she's deliberately lying to us about her whereabouts during Alice's murder.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: If I was trying to frame someone, wouldn't I have a more consistent story than what you're presenting, Dave, Charlie, and Bob?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Self-Deprecation"
     ]
   },
   {
@@ -107,8 +108,7 @@
     "text": "[Bob]: With only 3 rounds of discussion remaining and four witnesses who can verify everyone's exact positions, Erin's constantly changing story from Navigation to light tricks to coffee maker clearly shows she's fabricating alibis to cover up Alice's murder.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -128,15 +128,14 @@
     "text": "[Charlie]: The fact that our stories match perfectly isn't suspicious at all - it's because we were all genuinely in the Cafeteria and witnessed the same events, unlike you, Erin, who has changed your story three times from being in Navigation to blaming flickering lights to suddenly claiming you were at the coffee maker.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Given that three of us can corroborate each other's exact positions in the Cafeteria, and Erin has changed her story three times now, it's clear she's trying to create confusion to hide her role as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Projection"
+      "Appeal to Credibility"
     ]
   }
 ]

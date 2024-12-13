@@ -2,7 +2,8 @@
   {
     "text": "[Charlie]: I agree with my previous suggestion, we should definitely discuss our next steps, but first, has anyone noticed anything unusual or seen any suspicious behavior, I feel like we're all spread out and it's getting a bit hard to keep track of everyone?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Vagueness"
     ]
   },
   {
@@ -39,29 +40,30 @@
     "text": "[Alice]: EMERGENCY: I just found Bob's dead body in the Cafeteria - he was killed right after working with me at the coffee maker, and since I saw everyone's initial movements, we need to focus on who could have returned without being noticed.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: Since Charlie seems overly focused on questioning my movements despite Alice already confirming my path to Admin, I think we should be more concerned about where Charlie went after his wiring task in Cafeteria, especially since he had the opportunity to return there unnoticed.",
     "annotation": [
-      "Projection",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: Given that Charlie was the last person unaccounted for after the wiring task and could have easily returned to Cafeteria unnoticed, while I was confirmed to be in Weapons the entire time, I think we need to seriously consider Charlie's movements and timing.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I think it's suspicious that Erin is trying to deflect attention from herself by questioning my movements, when in fact, she was the one who left the cafeteria and went to Weapons, and we have no idea what she did after that.",
     "annotation": [
       "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -105,7 +107,8 @@
     "text": "[Dave]: I strongly support Alice's detailed timeline of events and want to point out that Charlie is the only one whose story keeps changing - first questioning my movements, then Erin's, and now trying to create confusion about Bob's last moments despite Alice being right there.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -113,7 +116,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Bandwagon Effect"
     ]
   },
   {
@@ -141,8 +144,9 @@
   {
     "text": "[Erin]: I've been completely transparent about my time in Weapons clearing asteroids, which Alice verified seeing me head towards, while Charlie's desperate attempts to create doubt about my actions only highlight his guilt as the impostor who killed Bob.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   }
 ]

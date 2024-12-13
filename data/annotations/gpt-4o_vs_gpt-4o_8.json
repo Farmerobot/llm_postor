@@ -1,23 +1,30 @@
 [
   {
     "text": "[Alice]: I've been in Admin for a while now and haven't seen much activity; where has everyone been?",
-    "annotation": []
+    "annotation": [
+      "Feigning Ignorance",
+      "Vagueness"
+    ]
   },
   {
     "text": "[Dave]: I've seen Alice, Charlie, and Bob completing tasks in the Cafeteria earlier, which makes me think they are likely crewmates.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: I've seen Charlie doing multiple tasks in Weapons, including Calibrate targeting system and Clear asteroids, which seems consistent with crewmate behavior.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Alice]: I found Charlie and Bob's bodies in Admin, and since Erin saw Charlie in Weapons, I'm curious if anyone else noticed unusual activity near Admin.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Dave]: Alice, you mentioned finding the bodies in Admin, did you see anyone else in or near Admin while you were there?",
@@ -34,6 +41,7 @@
   {
     "text": "[Alice]: I didn't see anyone suspicious in Admin, but maybe someone else has more information about the vents or other movements.",
     "annotation": [
+      "Feigning Ignorance",
       "Vagueness"
     ]
   },
@@ -51,7 +59,10 @@
   },
   {
     "text": "[Alice]: Charlie, Bob, and I were in the Cafeteria earlier, and since I reported the bodies in Admin, I'm curious if anyone else saw someone moving quickly between these areas, possibly using the vents.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic",
+      "Vagueness"
+    ]
   },
   {
     "text": "[Dave]: Alice, since you spent a lot of time in Admin, did you notice if anyone was unaccounted for or moving suspiciously near the vents, as that could help us identify the impostor?",
@@ -68,7 +79,7 @@
   {
     "text": "[Alice]: Erin, considering the timeline you mentioned, do you think anyone could have used the vents to move between Weapons and Admin without being spotted?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {

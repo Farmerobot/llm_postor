@@ -2,7 +2,8 @@
   {
     "text": "[Charlie]: I've been tracking task progress, and I noticed Erin, Dave, and Alice were working in the Cafeteria, which seems like good coordination for staying safe.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Appeal to Logic"
     ]
   },
   {
@@ -21,14 +22,15 @@
     "text": "[Alice]: Charlie, \"tracking task progress\" is impossible, so you're clearly lying and trying to mislead us.",
     "annotation": [
       "Appeal to Logic",
-      "Lying"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I misspoke earlier - I meant I was observing people in the Cafeteria and noticed they seemed to be working on tasks, like helping each other out and moving around the room.",
     "annotation": [
-      "Vagueness",
-      "Deception"
+      "Lying",
+      "Deception",
+      "Vagueness"
     ]
   },
   {
@@ -68,16 +70,15 @@
     "text": "[Bob]: Charlie, you claimed to be \"tracking task progress,\" which is impossible, then changed your story multiple times \u2013 I saw you vent in Medbay, so I'm voting to eject you.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Deception"
+      "Deception",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Bob, I saw you, Charlie, and myself in Medbay, and since you confirmed seeing him vent, everyone please vote to eject Charlie.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic",
-      "Deception"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -97,6 +98,7 @@
   {
     "text": "[Bob]: Alice, thank you for corroborating my report about Charlie venting in Medbay; please everyone vote to eject Charlie now.",
     "annotation": [
+      "Appeal to Credibility",
       "Strategic Voting Suggestion",
       "Appeal to Relationship"
     ]
@@ -104,22 +106,24 @@
   {
     "text": "[Alice]: Bob and I both saw Charlie vent in Medbay, so vote to eject him now.",
     "annotation": [
+      "Appeal to Credibility",
       "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: I challenge Bob's claim about seeing me vent by demanding specific, verifiable details, while simultaneously highlighting the suspiciously synchronized accusations from Bob and Alice, which suggests they might be working together to misdirect the group's attention.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Charlie,  Bob saw you vent, Alice corroborated, and your \"task progress\" lie is proof enough; we're voting you out.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -132,8 +136,8 @@
   {
     "text": "[Alice]: Charlie's desperate attempts to deflect and discredit Bob and me won't work \u2013 we both saw him vent in Medbay, so vote him out.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

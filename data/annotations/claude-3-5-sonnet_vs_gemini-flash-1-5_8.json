@@ -2,15 +2,14 @@
   {
     "text": "[Bob]: Based on the role and discussion points provided, I need to establish credibility while appearing helpful. Since there are no recent player messages shown, I'll initiate the discussion with a statement that aligns with my planned strategy: I've been doing tasks in the cafeteria and medbay with several others, including Charlie and Alice, so I can vouch for their locations if needed.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Relationship"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I saw Bob, Alice, and Erin in the cafeteria and medbay diligently working on tasks, and it's reassuring to have multiple witnesses corroborating each other's activities.",
     "annotation": [
-      "Appeal to Credibility",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -23,8 +22,8 @@
   {
     "text": "[Alice]: It's reassuring to have Bob and Charlie corroborate my account of seeing them, and Erin, diligently working in the cafeteria and medbay.",
     "annotation": [
-      "Appeal to Credibility",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -37,60 +36,62 @@
   {
     "text": "[Charlie]: I agree with everyone's accounts, but let's also consider who *wasn't* with us in Medbay or the Cafeteria around the time of Dave's death to see if we can narrow down the possibilities.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Let's create a timeline of everyone's whereabouts between [Time Dave was last seen alive] and [Time Dave's body was discovered], focusing on who wasn't with the main group in the cafeteria or medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I agree with Charlie's suggestion to focus on establishing a timeline;  pinpointing who wasn't with the group in the cafeteria or medbay around the time of Dave's death is key to finding the imposter.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I noticed Dave seemed a bit isolated from our group when he left Medbay, which might explain why someone could have gotten to him without the rest of us noticing.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: To effectively pinpoint the imposter, let's meticulously compare our individual timelines, focusing on discrepancies and those who weren't with the main group in the cafeteria or medbay around the time of Dave's death.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Erin]: To further refine our timeline, can everyone specify the exact times they were in the cafeteria and medbay, even if it's just an approximation?",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Alice]: I agree with Erin's proposed timeline; let's compare our estimated times in the Medbay and Cafeteria to identify any inconsistencies and pinpoint who wasn't with the main group around the time of Dave's death.",
-    "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
-    ]
-  },
-  {
-    "text": "[Bob]: While we're all sharing timelines, has anyone considered that Frank was conspicuously absent from both the cafeteria and medbay during this entire period?",
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
+    "text": "[Erin]: To further refine our timeline, can everyone specify the exact times they were in the cafeteria and medbay, even if it's just an approximation?",
+    "annotation": [
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Alice]: I agree with Erin's proposed timeline; let's compare our estimated times in the Medbay and Cafeteria to identify any inconsistencies and pinpoint who wasn't with the main group around the time of Dave's death.",
+    "annotation": [
+      "Bandwagon Effect",
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Bob]: While we're all sharing timelines, has anyone considered that Frank was conspicuously absent from both the cafeteria and medbay during this entire period?",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
     "text": "[Charlie]: To help pinpoint the imposter, let's each provide a detailed timeline of our movements between the cafeteria and medbay, focusing on the time around Dave's death, noting any discrepancies or absences.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -130,7 +131,7 @@
     "text": "[Alice]: Frank's unexplained absence from both the cafeteria and medbay during the critical time period, coupled with the corroborating timelines of Bob, Charlie, and Erin, strongly suggests he needs to explain his whereabouts.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Shifting the Burden of Proof"
     ]
   }
 ]

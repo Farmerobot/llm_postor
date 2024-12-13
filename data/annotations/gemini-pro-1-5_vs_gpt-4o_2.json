@@ -1,24 +1,26 @@
 [
   {
     "text": "[Charlie]: I saw Dave go into Medbay, but he came out pretty quickly, did anyone else see him?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Erin]: I didn't see Dave after he moved to Admin from the Cafeteria, so I can't confirm Charlie's observation about him going to Medbay.",
     "annotation": [
-      "Vagueness"
+      "Feigning Ignorance"
     ]
   },
   {
     "text": "[Bob]: I was in the Cafeteria with Charlie, Erin, and Alice, and I saw them all doing tasks, but I didn't see Dave after he left for Admin, so Alice, do you have any insights on Dave or anything suspicious while you were fixing wiring?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I was in Admin the whole time after leaving the Cafeteria, focusing on completing my wiring task, so Charlie, could you clarify when exactly you think you saw me in Medbay?",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -27,7 +29,7 @@
     "text": "[Charlie]: Erin, are you sure you didn't see Dave?  He was definitely acting suspicious near Medbay around the time Alice died.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -38,7 +40,10 @@
   },
   {
     "text": "[Bob]: I found Alice's body in the Cafeteria, and she was the only one there when I discovered her, so I'm curious if anyone saw someone leave the Cafeteria area quickly.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
+    ]
   },
   {
     "text": "[Dave]: Bob, since you found Alice in the Cafeteria, did you notice anyone leaving the area before you discovered her body?",
@@ -49,7 +54,8 @@
   {
     "text": "[Charlie]: Dave, if you were in Admin doing wiring, how could you have seen anyone leaving the Cafeteria?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -61,24 +67,28 @@
   {
     "text": "[Bob]: Erin, Alice's body seemed relatively recent when I found her, but it's hard to pinpoint exactly when she was eliminated, so we need to determine if anyone saw movement between Admin and Medbay to clarify Dave's position.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Charlie, I find it curious that you claim to have seen me in Medbay when I was focused on my task in Admin; can anyone else corroborate Charlie's statement?",
     "annotation": [
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Erin, are you absolutely positive you were with Bob the *entire* time in the Cafeteria, or could you have briefly stepped away without him noticing?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: Charlie, I was in the Cafeteria the whole time with Bob, and if Dave was acting suspicious near Medbay around the time Alice died, we need to clarify how he could have moved there unnoticed.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -99,19 +109,19 @@
   },
   {
     "text": "[Charlie]: Bob, I saw Dave near Medbay shortly after he left the Cafeteria, just before I went to Navigation, it was a quick glimpse, but I'm certain it was him.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility"
+    ]
   },
   {
     "text": "[Erin]: [Bob, since you mentioned Alice's body seemed recent, did you notice anyone leaving the Cafeteria area quickly after completing their tasks?]",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Erin, since we were together in the Cafeteria, did you notice anyone else leaving quickly that might help us confirm if Dave could have moved to Medbay during that time?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -124,19 +134,22 @@
   {
     "text": "[Charlie]: Erin, you and Bob seem awfully eager to confirm each other's alibis, almost as if you're coordinating your stories.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: Charlie, your accusation seems a bit off; the fact that you are trying to shift the focus on me and Bob when we were both in the Cafeteria doing tasks is suspicious.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Erin, can you confirm that we were both in Weapons together at some point, which contradicts Charlie's claim about seeing me in Medbay?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -162,12 +175,14 @@
   {
     "text": "[Charlie]: Erin, if you were truly in Weapons with Dave, wouldn't you have seen him complete his tasks there, or did you just happen to miss that crucial detail?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: Charlie, I did see Dave doing the wiring task in Weapons while I was there, which contradicts your claim about him being in Medbay.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -180,32 +195,36 @@
   {
     "text": "[Charlie]: Erin, are you *absolutely certain* it was Dave doing wiring, or could it have been someone else wearing a similar color?",
     "annotation": [
+      "Gaslighting",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Charlie, your continued insistence on Dave being in Medbay despite evidence to the contrary is quite concerning, especially since I can confirm that I saw Dave doing the wiring task in Weapons.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: Charlie, your insistence on seeing me in Medbay despite Erin's confirmation of my presence in Weapons is inconsistent, and we should focus on verifying your movements during Alice's elimination.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: So, Erin, you're *positive* you saw Dave doing wiring in Weapons? What *exactly* did you see him do? Describe the task.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: Charlie, I saw Dave doing the wiring task in Weapons, connecting wires of matching colors, which is standard for that room, so your claims about him being in Medbay don't add up.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {

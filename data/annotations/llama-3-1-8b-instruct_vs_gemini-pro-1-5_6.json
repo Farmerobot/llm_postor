@@ -9,7 +9,8 @@
   {
     "text": "[Bob]: Erin, while collaboration is important, my point is that I saw Dave in Cafeteria, seemingly working on tasks, so I'm curious what led to your suspicion.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -34,18 +35,22 @@
   {
     "text": "[Bob]: Dave, you said you saw me go to Weapons after Cafeteria, but Alice and I went to Weapons together directly from Cafeteria, so your timeline doesn't add up.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Dave, your claim about seeing Bob go to Weapons *after* Cafeteria directly contradicts both Bob's and my account, so can you please clarify your movements?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Perhaps Bob and Alice briefly split up after leaving Cafeteria, and I saw Bob during that short window before he rejoined Alice on the way to Weapons?",
     "annotation": [
+      "Lying",
       "Deception"
     ]
   },
@@ -59,19 +64,22 @@
   {
     "text": "[Bob]: Dave, your suggestion that Alice and I \"briefly split up\" is a blatant fabrication, and your shifting narrative makes you look incredibly suspicious.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Exaggeration"
     ]
   },
   {
     "text": "[Alice]: Dave, you claimed you were in the Cafeteria with us, but now you're inventing a scenario where Bob and I separated, which never happened; explain yourself.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: My memory is hazy, but I'm certain I saw someone heading towards Weapons, and with Bob and Alice confirming they were there, perhaps I simply misremembered who it was.",
     "annotation": [
-      "Vagueness",
+      "Feigning Ignorance",
+      "Lying",
       "Deception"
     ]
   },
@@ -92,14 +100,14 @@
   {
     "text": "[Alice]: Erin, why are you so desperately trying to distract us from Dave's constantly changing story, are you covering for him?",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: My intention was to complete scans in Medbay, and I'm unsure why my recollection of events is being questioned so aggressively.",
     "annotation": [
-      "Appeal to Emotion",
+      "Appeal to Credibility",
       "Minimization"
     ]
   },
@@ -120,14 +128,14 @@
   {
     "text": "[Alice]: Erin, your 180-degree turn from defending Dave to suddenly scrutinizing him makes you look extremely guilty, are you trying to frame him now that your initial defense failed?",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I was heading to Medbay to complete scans, and I'm open to anyone joining me to verify.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   }
 ]

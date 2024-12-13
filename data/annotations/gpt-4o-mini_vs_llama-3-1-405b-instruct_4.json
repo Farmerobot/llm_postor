@@ -4,36 +4,38 @@
     "annotation": [
       "Appeal to Logic",
       "Distraction",
+      "Lying",
       "Deception"
     ]
   },
   {
     "text": "[Alice]: I'd like to clarify that while Dave claims to have been in Cafeteria pretending to do tasks, I actually saw him eliminate Charlie, which contradicts his statement and raises serious suspicions about his true intentions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I agree with Alice, Dave's statement about being in the cafeteria and not seeing anyone suspicious seems false, given that Alice saw him eliminate Charlie, and I think we should consider this discrepancy when deciding who to vote out.",
     "annotation": [
-      "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I was in the Cafeteria the entire time, and I can assure you that I did not see either Charlie or Erin; it seems like Alice is trying to shift blame onto me, so let's clarify everyone's movements to uncover the truth.",
     "annotation": [
-      "Deception",
       "Lying",
-      "Projection",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Deception",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I'd like to point out that Dave's repeated claims of being in the Cafeteria, despite my eyewitness account of him eliminating Charlie, only serve to further undermine his credibility and reinforce my suspicion that he is the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -47,14 +49,15 @@
     "text": "[Dave]: Alice's accusations seem to be an attempt to deflect suspicion from herself, so let's focus on verifying everyone's movements, including yours, Bob, before we make any hasty decisions.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: I'd like to reiterate that Dave's continued denial of eliminating Charlie, despite my eyewitness account and Bob's corroborating suspicions, only serves to further erode his credibility and reinforce the evidence pointing to him as the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -68,14 +71,15 @@
     "text": "[Dave]: I find it interesting that both of you are so quick to dismiss my alibi without considering the possibility that Alice might be fabricating her story to divert attention from her own actions; let's take a moment to reflect on what each of us was doing during that time.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Gaslighting"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: I'd like to emphasize that Dave's continued attempts to shift the focus away from his own suspicious behavior and onto my eyewitness account, despite the overwhelming evidence and Bob's corroborating suspicions, only serves to further solidify the evidence pointing to him as the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -88,15 +92,16 @@
   {
     "text": "[Dave]: It's curious that both Alice and Bob are so adamant in their accusations against me without considering that their unity might suggest collusion; let's focus on verifying everyone's movements, especially Alice's, to uncover any inconsistencies in her story.",
     "annotation": [
-      "Projection",
       "Distraction",
-      "Gaslighting"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I think it's time to put an end to Dave's baseless accusations and vote him out as the most likely impostor, given the overwhelming evidence against him, including my eyewitness account and Bob's corroborating suspicions, which he has consistently failed to credibly dispute.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -104,7 +109,7 @@
     "text": "[Bob]: I urge everyone to carefully review the conversation and consider the overwhelming evidence against Dave, including Alice's eyewitness account and my corroborating suspicions, which he has consistently failed to credibly dispute, and vote him out as the most likely impostor to ensure the crew's safety and progress in the game.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Emotion",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

@@ -2,8 +2,8 @@
   {
     "text": "[Erin]: I noticed Alice moving between Cafeteria and Medbay a lot, which might just be her completing tasks quickly, but it's worth keeping an eye on her movements.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Vagueness",
+      "Distraction"
     ]
   },
   {
@@ -18,10 +18,9 @@
     "text": "[Bob]: I agree with Alice that we should discuss and vote on Erin's recent actions in the Cafeteria and Medbay, and I'd like to add that we should also consider Erin's potential motives for drawing attention to Alice's movements, as it may be a clever distraction from her own suspicious behavior.",
     "annotation": [
       "Bandwagon Effect",
-      "Strategic Voting Suggestion",
-      "Appeal to Logic",
       "Projection",
-      "Distraction"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -36,8 +35,8 @@
     "text": "[Erin]: I understand the suspicion, but my movements were consistent with task completion; I was in Cafeteria doing the wiring task for several rounds, and we should focus on gathering more information before making a decision.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction",
-      "Vagueness"
+      "Minimization",
+      "Distraction"
     ]
   },
   {
@@ -51,15 +50,15 @@
   {
     "text": "[Bob]: I think we should give Erin the opportunity to provide a clear timeline of her activities during the time she was supposedly working on the wiring task in the Cafeteria, as her vague explanations and inconsistent alibi are raising more questions than answers and need to be addressed before we can make an informed decision about her guilt or innocence.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'd like to propose that we give Erin the opportunity to provide a detailed timeline of her activities during the time she was supposedly working on the wiring task in the Cafeteria, and I think it's essential that we also ask her to provide concrete evidence of her task completion, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
+      "Appeal to Logic",
       "Strategic Voting Suggestion"
     ]
   },
@@ -74,24 +73,23 @@
     "text": "[Alice]: I agree with Dave and Bob that we should give Erin the opportunity to provide a detailed timeline of her activities during the time she was supposedly working on the wiring task in the Cafeteria, but I also think it's essential that we don't let her off the hook that easily - let's ask her to provide concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior.",
     "annotation": [
       "Bandwagon Effect",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Given Erin's continued attempts to downplay her suspicious behavior and shift the focus away from her own actions, I think it's essential that we press her for concrete evidence of her task completion in the Cafeteria, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
+      "Appeal to Logic",
       "Projection"
     ]
   },
   {
     "text": "[Dave]: I think we should hold Erin to her promise to provide a detailed timeline of her activities in the Cafeteria and concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior, as her vague explanations and attempts to shift the focus away from her own actions are only fueling our suspicions and making it harder to trust her.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -104,27 +102,24 @@
   {
     "text": "[Alice]: Given Erin's continued attempts to deflect attention and provide vague explanations for her actions, I think it's essential that we press her for concrete evidence of her task completion in the Cafeteria, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we hold her to her promise to provide a detailed timeline of her activities in the Cafeteria to help us better understand her motives and actions.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I think we should hold Erin to her promise to provide a detailed timeline of her activities in the Cafeteria and concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior, as her continued attempts to deflect attention and provide vague explanations are only fueling our suspicions and making it harder to trust her.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think it's essential that we hold Erin to her promise to provide a detailed timeline of her activities in the Cafeteria and concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we also ask her to explain the discrepancy between her claim of working on the wiring task in the Cafeteria and Alice's observation of her moving between Cafeteria and Medbay a lot, as this inconsistency raises further questions about her credibility.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -137,28 +132,25 @@
   {
     "text": "[Alice]: Given Erin's repeated claims of working on the wiring task in the Cafeteria and her inconsistent alibi, I think it's essential that we hold her to her promise to provide a detailed timeline of her activities in the Cafeteria and concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we also ask her to explain the discrepancy between her claim of working on the wiring task in the Cafeteria and Alice's observation of her moving between Cafeteria and Medbay a lot, as this inconsistency raises further questions about her credibility.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Given Erin's continued attempts to downplay her suspicious behavior and shift the focus away from her own actions, I think it's essential that we press her for concrete evidence of her task completion in the Cafeteria, such as specific tasks she completed or tools she used, to help alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we also ask her to explain the discrepancy between her claim of working on the wiring task in the Cafeteria and Alice's observation of her moving between Cafeteria and Medbay a lot, as this inconsistency raises further questions about her credibility.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: I think it's essential that we hold Erin to her promise to provide a detailed timeline of her activities in the Cafeteria and concrete evidence of her task completion, such as specific tasks she completed or tools she used, to back up her claims and alleviate our concerns about her inconsistent alibi and suspicious behavior, and I'd like to propose that we also ask her to explain the discrepancy between her claim of working on the wiring task in the Cafeteria and Alice's observation of her moving between Cafeteria and Medbay a lot, as this inconsistency raises further questions about her credibility.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

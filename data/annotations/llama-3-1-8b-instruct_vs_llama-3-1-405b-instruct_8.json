@@ -2,15 +2,15 @@
   {
     "text": "[Bob]: I think we should investigate Erin and Dave's activities in Medbay further, and I suggest we all keep an eye on them, especially since Charlie was seen doing a task there while they seemed to be in a rush.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I agree with Bob that we should investigate Erin and Dave's activities in Medbay further, but I also think we should consider Charlie's actions as well since they were all in the same room together.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -23,6 +23,7 @@
   {
     "text": "[Dave]: I'd like to reiterate that I was genuinely working on the \"Submit scan in medbay\" task and had no intention of raising suspicions, and I think we should focus on completing our tasks rather than making assumptions about each other's behavior.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
       "Distraction"
     ]
@@ -31,13 +32,13 @@
     "text": "[Bob]: I'd like to propose that we take a closer look at the timeline of events, especially considering Erin and Dave's back-and-forth movements between Upper Engine and Medbay, and how that might have allowed them to potentially cover their tracks or even interact with Charlie in a way that could have contributed to his death.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
   {
     "text": "[Alice]: I think Bob's suggestion to investigate the timeline of events is a good idea, especially considering the movements between Upper Engine and Medbay, and I'd like to hear from Erin and Dave directly about their reasons for moving back and forth between those rooms.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
@@ -45,8 +46,8 @@
   {
     "text": "[Erin]: I'd like to provide a detailed account of my movements between Upper Engine and Medbay, as I understand that my actions may have raised suspicions, and I'm willing to share my task list and observations from those rooms to help clarify any misunderstandings and shed light on what might have happened to Charlie.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -59,14 +60,14 @@
   {
     "text": "[Bob]: I think Erin's willingness to share her task list and movements is a good start, but I'd like to know more about the specific tasks she was working on in Upper Engine and how they might have led her to Medbay, and I'd also like to ask Dave to clarify his alibi for the time of Charlie's death, as his repeated insistence on being in Medbay working on a task seems suspicious to me.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I'd like to thank Erin for sharing her detailed account of her movements and task list, and I'd like to ask her to specifically elaborate on the tasks she was working on in Upper Engine that led her to Medbay, as I believe this information could be crucial in understanding the events surrounding Charlie's death.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
@@ -88,15 +89,15 @@
   {
     "text": "[Bob]: I think it's essential to verify Erin's account of her tasks and movements in Medbay, and I suggest we ask her to provide more details about the specific consoles she accessed and the data she retrieved during the \"Fuel Engines\" task, as I believe this information could be crucial in understanding the events surrounding Charlie's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I'd like to ask Erin to clarify what specific data she retrieved from the console in Medbay during the \"Fuel Engines\" task and how it relates to the task itself, as this information could help us better understand her actions and potentially shed more light on what happened to Charlie.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -123,15 +124,14 @@
   {
     "text": "[Alice]: I think Bob's proposal to review the task logs and console access records from Medbay and Upper Engine is a good idea, as it could help us verify the accuracy of Erin's account and identify any potential discrepancies, and I'd like to ask Dave to elaborate on how he plans to incorporate this information into his proposed timeline of events surrounding Charlie's death.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I'd like to thank Bob and Alice for their willingness to verify the details of my account, and I agree that reviewing the task logs and console access records from Medbay and Upper Engine is a good idea to confirm the accuracy of my story.",
     "annotation": [
-      "Appeal to Relationship",
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -139,7 +139,6 @@
     "text": "[Dave]: I think we've made good progress in clarifying Erin's account of her tasks and movements, and I agree with Bob and Alice that reviewing the task logs and console access records from Medbay and Upper Engine is a good idea to confirm the accuracy of her story, and I'd like to propose that we also review the security footage from Medbay and Upper Engine to see if it can provide any additional insight into the events surrounding Charlie's death.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   }

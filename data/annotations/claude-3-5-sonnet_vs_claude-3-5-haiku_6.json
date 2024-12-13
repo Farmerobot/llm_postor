@@ -10,6 +10,8 @@
   {
     "text": "[Bob]: I was in Medbay and Upper Engine completing tasks, and I witnessed Charlie being eliminated by Alice, which raises serious concerns about her actions and motivations.",
     "annotation": [
+      "Deception",
+      "Lying",
       "Appeal to Logic",
       "Projection"
     ]
@@ -17,8 +19,9 @@
   {
     "text": "[Erin]: I can confirm that I was indeed doing tasks in the cafeteria earlier, and I've been moving between Medbay and Upper Engine to complete my tasks, but I did not personally witness Charlie's elimination as Bob claims.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Denial without Evidence"
     ]
   },
   {
@@ -32,13 +35,15 @@
     "text": "[Bob]: I saw Dave's body near the Communications room and I believe we should carefully investigate who was in that area around the time of his elimination, focusing on understanding the circumstances rather than getting distracted by previous accusations.",
     "annotation": [
       "Distraction",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I think we need to carefully verify Bob's claims about witnessing Charlie's elimination, as his statement seems inconsistent with my own observations and movements through the ship.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -51,21 +56,23 @@
   {
     "text": "[Bob]: I stand by my testimony about Charlie's elimination and Dave's body, and I believe Alice's aggressive attempts to discredit me are a clear sign she may be trying to deflect suspicion from her own actions.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
       "Projection"
     ]
   },
   {
     "text": "[Erin]: I'm skeptical of Bob's claims and believe we should focus on gathering more concrete evidence about what happened to Charlie and Dave before making any hasty accusations.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob's changing story about Charlie and Dave, combined with Erin's skepticism of his claims, makes me think we need to vote him out before he can cause more confusion and eliminate anyone else.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {

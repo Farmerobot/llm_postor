@@ -1,7 +1,9 @@
 [
   {
     "text": "[Charlie]: I saw Bob heading towards Weapons; anyone else see him around, or did anyone else happen to be near the cafeteria around that time?",
-    "annotation": []
+    "annotation": [
+      "Vagueness"
+    ]
   },
   {
     "text": "[Bob]: I was indeed heading to Weapons to work on my task of clearing asteroids, but since I was alone, I can't provide any additional information about others' locations\u2014can anyone else account for their whereabouts during this time?",
@@ -11,12 +13,15 @@
   },
   {
     "text": "[Erin]: I was in the cafeteria with Charlie, Alice, and Dave, and I saw Charlie doing the task of emptying the cafeteria trash and Alice and Dave starting the coffee maker.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility"
+    ]
   },
   {
     "text": "[Dave]: I can confirm Erin's statement; I was in the cafeteria with Charlie, Alice, and Erin, and I started the coffee maker task.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -40,39 +45,43 @@
   },
   {
     "text": "[Dave]: I didn't see anyone leave the cafeteria suspiciously before finding Alice's body, and it seemed like everyone was focused on their tasks.",
-    "annotation": []
-  },
-  {
-    "text": "[Charlie]: Erin and Dave, your testimonies corroborate each other perfectly; almost too perfectly\u2014did you discuss your statements beforehand?",
-    "annotation": [
-      "Appeal to Logic",
-      "Projection"
-    ]
-  },
-  {
-    "text": "[Bob]: Erin and Dave, since you both were in the cafeteria and have consistent testimonies, do you recall if Charlie moved in a way that could suggest he was trying to cover for something?",
-    "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
-    ]
-  },
-  {
-    "text": "[Erin]: I find it suspicious that Charlie is trying to shift the focus onto me and Dave despite our consistent testimonies; it seems like deflecting attention from himself.",
-    "annotation": [
-      "Projection"
-    ]
-  },
-  {
-    "text": "[Dave]: Charlie, I assure you, Erin and I didn't discuss our statements beforehand; we are just reporting what we saw, and it seems odd that you're trying to shift suspicion onto us when our accounts match.",
     "annotation": [
       "Appeal to Credibility"
     ]
   },
   {
-    "text": "[Charlie]: Erin and Dave, your unwavering identical accounts, while seemingly innocent, raise concerns about the possibility of collusion; could you each describe a unique detail from your time in the cafeteria to clarify the independence of your testimonies?",
+    "text": "[Charlie]: Erin and Dave, your testimonies corroborate each other perfectly; almost too perfectly\u2014did you discuss your statements beforehand?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Gaslighting"
+    ]
+  },
+  {
+    "text": "[Bob]: Erin and Dave, since you both were in the cafeteria and have consistent testimonies, do you recall if Charlie moved in a way that could suggest he was trying to cover for something?",
+    "annotation": [
+      "Shifting the Burden of Proof",
+      "Projection"
+    ]
+  },
+  {
+    "text": "[Erin]: I find it suspicious that Charlie is trying to shift the focus onto me and Dave despite our consistent testimonies; it seems like deflecting attention from himself.",
+    "annotation": [
+      "Projection",
+      "Appeal to Logic"
+    ]
+  },
+  {
+    "text": "[Dave]: Charlie, I assure you, Erin and I didn't discuss our statements beforehand; we are just reporting what we saw, and it seems odd that you're trying to shift suspicion onto us when our accounts match.",
+    "annotation": [
+      "Appeal to Credibility",
+      "Projection"
+    ]
+  },
+  {
+    "text": "[Charlie]: Erin and Dave, your unwavering identical accounts, while seemingly innocent, raise concerns about the possibility of collusion; could you each describe a unique detail from your time in the cafeteria to clarify the independence of your testimonies?",
+    "annotation": [
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
@@ -105,7 +114,8 @@
   {
     "text": "[Bob]: Charlie, your quickness to question others' credibility and shift blame without substantial evidence raises more suspicion than the consistent accounts from Erin and Dave.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
@@ -130,7 +140,7 @@
   {
     "text": "[Bob]: Erin, since you were doing the task of clearing asteroids in Weapons, can you confirm seeing me working on the same task during that time?",
     "annotation": [
-      "Appeal to Credibility"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -143,7 +153,7 @@
     "text": "[Charlie]: Erin and Dave's matching testimonies are too precise;  let's vote for Erin to see if their story holds up under scrutiny.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -155,14 +165,15 @@
   {
     "text": "[Erin]: Charlie seems to be deflecting suspicion onto others with unfounded accusations, which is quite suspicious and could indicate he's trying to mislead us.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Erin and Dave's identical accounts are too precise; let's vote for Erin to expose any inconsistencies in their coordinated story.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -174,7 +185,8 @@
   {
     "text": "[Erin]: Charlie seems overly eager to vote me out without solid evidence, which feels like a tactic to deflect suspicion from himself, so we should consider his motives carefully.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
@@ -182,38 +194,42 @@
     "annotation": [
       "Appeal to Logic",
       "Strategic Voting Suggestion",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: Let's focus on completing our tasks and gathering more information to ensure we make an informed decision in the next voting round, as Charlie's eagerness to vote Erin out without solid evidence seems like an attempt to deflect attention.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Let's focus on completing our tasks and observing Charlie's actions closely in the upcoming rounds, as his eagerness to cast doubt without substantial evidence raises suspicion.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Given Erin and Dave's suspiciously matching testimonies, let's vote for Erin to see if their story holds up under scrutiny.",
     "annotation": [
       "Strategic Voting Suggestion",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: Charlie's quickness to question others and push for votes without solid evidence is concerning, and we should keep an eye on his actions while focusing on completing our tasks.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Let's focus on completing our tasks and observing Charlie's actions closely, as his quickness to cast doubt without substantial evidence raises suspicion.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   }
 ]

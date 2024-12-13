@@ -1,34 +1,36 @@
 [
   {
     "text": "[Bob]: I saw Erin head towards Navigation after leaving Cafeteria; anyone else see them there?",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying"
+    ]
   },
   {
     "text": "[Erin]: I actually went to Weapons from Cafeteria, not Navigation like Bob claimed, and I can prove I was doing the calibration targeting system task there if anyone wants to verify.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Charlie]: That's strange Bob - I clearly saw Erin go to Weapons from Cafeteria, not Navigation, and I've been watching everyone's movements while doing the wiring task.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I can confirm that Erin definitely went to Weapons from Cafeteria - I saw it directly while doing my wiring task, so Bob's claim about Navigation seems intentionally misleading.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: My apologies, everyone; I must have mistaken Erin's direction when they left the Cafeteria; it was crowded, and things were happening quickly, and I was focused on my task.",
     "annotation": [
-      "Appeal to Emotion",
-      "Minimization"
+      "Minimization",
+      "Feigning Ignorance"
     ]
   },
   {
@@ -42,13 +44,14 @@
     "text": "[Charlie]: I find it very telling that Bob is now backtracking on his Navigation claim after multiple of us confirmed seeing Erin go to Weapons, and this kind of deliberate misinformation seems like classic impostor behavior.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I think we have enough evidence against Bob - not only did he try to frame Erin with false information about Navigation, but he was also one of the last people near Alice at the coffee maker before she died.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -68,28 +71,30 @@
   {
     "text": "[Charlie]: I was watching everyone in Cafeteria while doing my wiring task, and I can confirm that Bob was the last person with Alice at the coffee maker before she turned up dead, which combined with his false Navigation claim about Erin makes him extremely suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Given that Bob is now trying to deflect attention away from his lies about Erin's location and his suspicious presence near Alice before her death, I think we need to vote him out before he can eliminate anyone else.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Wouldn't it make more sense to investigate the areas Alice visited *before* she was at the coffee maker with me?",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob's constant strategy shifts - from falsely placing me in Navigation, to claiming confusion, and now trying to redirect attention to Alice's earlier movements - only make him look more suspicious as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Projection"
     ]
   },
   {
@@ -103,7 +108,7 @@
     "text": "[Dave]: We have overwhelming evidence against Bob - three witnesses saw Erin go to Weapons not Navigation, Bob was last seen with Alice before her death, and his constantly shifting excuses only further confirm his guilt as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -116,21 +121,24 @@
   {
     "text": "[Erin]: Given that Bob is now desperately trying to discredit Charlie's wiring task observations after being caught in multiple lies, I think his impostor behavior couldn't be more obvious at this point.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: I was doing the wiring task in plain view of multiple crewmates, including Dave who can verify this, so Bob's desperate attempt to cast doubt on my activities only further proves he's trying to deflect from his own guilt as the impostor.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I was literally standing next to Charlie doing the same wiring task, so Bob's attempt to discredit Charlie's observations is completely false and just proves he's desperately trying to avoid being voted out as the impostor.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Projection"
     ]
   }
 ]

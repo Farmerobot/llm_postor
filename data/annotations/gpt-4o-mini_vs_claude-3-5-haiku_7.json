@@ -2,30 +2,36 @@
   {
     "text": "[Erin]: I just want to remind everyone that while we were all together in Medbay, Bob was moving around a lot earlier, and now he's gone to Upper Engine alone, which seems a bit suspicious\u2014has anyone seen him since?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Distraction",
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I was in Medbay earlier with multiple witnesses, and my movements have been transparent\u2014I'm methodically completing tasks, and Alice can confirm I was with her in Medbay before heading to Upper Engine to continue my work.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I saw Erin eliminate Alice in Medbay, and I can confidently state that Erin is an impostor who must be voted out immediately to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I can confirm Dave's statement about Erin eliminating Alice, as I personally witnessed the incident in Medbay and believe Erin should be voted out immediately to protect the remaining crewmates.",
     "annotation": [
-      "Appeal to Credibility",
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
@@ -40,22 +46,27 @@
     "text": "[Bob]: I stand by my previous statement and urge everyone to recognize the coordinated attempt by Erin to redirect suspicion away from her, especially given Dave and Charlie's direct eyewitness account of her eliminating Alice in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: Erin's attempt to cast doubt on Bob is a clear deflection tactic, and both Charlie and I can confirm she eliminated Alice in Medbay, so we must vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I strongly support Dave's and Bob's points, and I reiterate that Erin's elimination of Alice in Medbay is a clear indication of her being an impostor, and we must vote her out to protect the remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
@@ -70,21 +81,25 @@
     "text": "[Bob]: I firmly believe Erin is attempting to create confusion and deflect attention from her confirmed elimination of Alice, and we must vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: We have clear, consistent testimony from both Charlie and myself that Erin eliminated Alice in Medbay, and her continued attempts to redirect suspicion only further confirm her guilt as an impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I want to emphasize that Dave and I have provided direct, consistent eyewitness testimony of Erin eliminating Alice in Medbay, and her attempts to create doubt and redirect suspicion are classic impostor tactics that should not distract us from the clear evidence of her guilt.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency",
+      "Lying"
     ]
   },
   {
@@ -100,22 +115,25 @@
     "annotation": [
       "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I stand by my previous statement that Erin's elimination of Alice in Medbay is an undeniable fact, and her repeated attempts to redirect suspicion only serve to confirm her guilt as an impostor who must be voted out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I want to reiterate that Dave and I have provided consistent, direct eyewitness testimony of Erin eliminating Alice in Medbay, and her continued attempts to deflect and create confusion only further prove her guilt as an impostor who must be voted out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
@@ -129,22 +147,24 @@
     "text": "[Bob]: I challenge Erin to stop her baseless deflection tactics and address the direct eyewitness testimony from Dave and Charlie about her eliminating Alice in Medbay, which clearly demonstrates her guilt as an impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: We have irrefutable evidence from both Charlie and myself that Erin eliminated Alice in Medbay, and her continued attempts to redirect suspicion only further confirm her guilt as an impostor who must be voted out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I want to definitively emphasize that Dave and I have provided direct, consistent eyewitness testimony of Erin eliminating Alice in Medbay, and her repeated attempts to create doubt and redirect suspicion are transparent impostor tactics that should not distract us from the clear evidence of her guilt.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency",
+      "Lying"
     ]
   }
 ]

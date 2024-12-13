@@ -3,7 +3,8 @@
     "text": "[Erin]: I was in the Cafeteria for a while, busy with the coffee maker task, and I didn't see anyone enter or leave, but I think we should ask Dave what he was doing in Admin last; it might help clear up some confusion.",
     "annotation": [
       "Vagueness",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -21,8 +22,8 @@
   {
     "text": "[Erin]: Bob, since you were with Dave in Admin, can you clarify what you both were doing there, as it might help us understand the timeline and any potential opportunities for someone to slip away unnoticed?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -34,9 +35,9 @@
   {
     "text": "[Bob]: Alice, you claimed to see me in Weapons/Shields together, then alone, but I was only in Shields *after* being in Admin with Dave, and you weren't in Shields when I was there; please explain this discrepancy, and tell us where you were when Dave died.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic",
+      "Gaslighting"
     ]
   },
   {
@@ -55,7 +56,8 @@
   {
     "text": "[Bob]: Erin, I was with Dave in Admin while he was doing the Fix Wiring task, and I was waiting to do Clean the floor, then I went to Storage and Shields, where I found Alice.",
     "annotation": [
-      "Appeal to Logic"
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -68,15 +70,15 @@
   {
     "text": "[Alice]: Bob, you said you were with Dave in Admin while he did the \"Fix Wiring\" task, but was the task complete when you left, and can anyone confirm seeing it fixed?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Alice, if you saw me in Shields after Weapons, why did you previously say I *joined* you there, implying you were already present?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
@@ -88,16 +90,15 @@
   {
     "text": "[Alice]: Bob, you still haven't clarified whether you saw Dave *complete* the wiring task, or just *start* it \u2013 this is a crucial detail.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Alice, you first said I *joined* you in Shields, implying you were already there, then said you were *alone* there *before* I arrived\u2014which is it, and where were you when Dave died?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Gaslighting"
     ]
   }
 ]

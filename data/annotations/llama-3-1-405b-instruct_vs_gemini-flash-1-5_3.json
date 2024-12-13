@@ -1,12 +1,19 @@
 [
   {
     "text": "[Erin]: I was just in the cafeteria and saw Dave and Bob working on tasks, but when I went to grab a cup of coffee, they were gone - does anyone know where they are now?",
-    "annotation": []
+    "annotation": [
+      "Feigning Ignorance",
+      "Deception",
+      "Lying",
+      "Gaslighting",
+      "Appeal to Emotion"
+    ]
   },
   {
     "text": "[Alice]: I can confirm seeing Dave and Bob in the cafeteria earlier, working on tasks, and then went to Admin to fix the wiring, so it's strange they disappeared so quickly.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -18,27 +25,29 @@
   {
     "text": "[Bob]: I agree with checking the Admin room, but Dave's disappearance from the cafeteria, after Erin and Alice left, warrants a broader search as well.",
     "annotation": [
-      "Appeal to Logic"
+      "Bandwagon Effect",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I think we're getting sidetracked by focusing solely on the Admin room, and we should also investigate the Medbay, especially since Bob was headed there last time I saw him, and it's possible that's where Dave was going too.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Given Dave's body was found, and Bob was heading to Medbay, let's prioritize checking Medbay before Admin, then systematically search the remaining rooms to establish a complete timeline.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: Let's prioritize searching Medbay as Erin and Alice suggest, then Admin, to establish a timeline and see if we can find any clues related to Dave's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -63,21 +72,21 @@
   {
     "text": "[Charlie]: Okay, let's hear Bob's account of his time in Medbay, then systematically check Admin and the other rooms to build a complete timeline of everyone's movements;  this collaborative approach will help us identify inconsistencies and find the impostor.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I arrived at Medbay alone, completed my task, and left immediately without seeing anyone else;  I can confirm I didn't see Dave there.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Credibility",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: I find it quite convenient that Bob claims to have completed his task in Medbay without seeing anyone else, despite Dave's body being found shortly after, and I think we should press him for more details about his task and if he noticed anything unusual, such as any signs of a struggle or evidence of someone else being present.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -96,7 +105,11 @@
   },
   {
     "text": "[Bob]: I completed the \"Submit Scan\" task in Medbay, which took approximately 15 seconds, and I saw no one else there.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility",
+      "Lying",
+      "Appeal to Rules"
+    ]
   },
   {
     "text": "[Erin]: I'd like to point out that Bob's story seems suspiciously convenient, and I think we should consider the possibility that he might be the impostor, especially given the inconsistencies in his alibi and the fact that Dave's body was found shortly after he claims to have left Medbay.",
@@ -115,15 +128,15 @@
   {
     "text": "[Charlie]: Bob, given the short timeframe and proximity to Dave's discovery, a more detailed account of your 15-second Medbay task, including the precise time you entered and left, is crucial for establishing a reliable timeline.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: My 15-second scan in Medbay concluded before Dave's death, and a detailed timeline of everyone's movements will help us find the real culprit.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Lying"
     ]
   }
 ]

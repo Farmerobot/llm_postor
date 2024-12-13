@@ -2,8 +2,8 @@
   {
     "text": "[Bob]: I saw Charlie head towards Medbay a few minutes ago; anyone else see him around?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -16,15 +16,17 @@
   {
     "text": "[Charlie]: Erin and I saw you kill Dave in the cafeteria, Bob, so vote him out!",
     "annotation": [
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Alice]: Bob, stop lying \u2013 Erin and I both saw you kill Dave in the cafeteria, so everyone vote for Bob.",
     "annotation": [
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -32,14 +34,16 @@
     "annotation": [
       "Distraction",
       "Projection",
-      "Appeal to Logic"
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Erin]: Bob, your deflection attempt is weak \u2013 Alice and I *both* saw you kill Dave, so vote Bob!",
     "annotation": [
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -59,13 +63,14 @@
   {
     "text": "[Bob]: The coordinated accusations against me from Erin, Alice, and Charlie are suspiciously consistent, suggesting a possible alliance and a coordinated attempt to frame me.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Bob, trying to paint Alice, Charlie, and me as some kind of \"coordinated alliance\" is absurd \u2013 we're all just telling the truth: you killed Dave.",
     "annotation": [
+      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
@@ -84,8 +89,8 @@
   {
     "text": "[Bob]: The suspiciously identical accounts from Alice, Erin, and Charlie lack specific details and seem rehearsed, suggesting a potential coordinated effort to frame me rather than an independent observation of a murder.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
@@ -111,8 +116,8 @@
   {
     "text": "[Bob]: Their identical accounts lack specific details, suggesting a coordinated effort to frame me rather than an independent observation of a murder.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {

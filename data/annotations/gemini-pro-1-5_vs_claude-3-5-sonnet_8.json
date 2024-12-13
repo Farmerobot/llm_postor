@@ -2,7 +2,8 @@
   {
     "text": "[Erin]: I saw Bob heading towards navigation after he said he was fixing wiring, wasn't that supposed to be in electrical?",
     "annotation": [
-      "Appeal to Logic"
+      "Deception",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -29,7 +30,8 @@
   {
     "text": "[Erin]: I must have been mistaken, it was hard to see with so many people moving around the cafeteria.",
     "annotation": [
-      "Vagueness"
+      "Feigning Ignorance",
+      "Minimization"
     ]
   },
   {
@@ -56,8 +58,8 @@
   {
     "text": "[Erin]: Wouldn't it make more sense that one of you killed Charlie while everyone was distracted by the wiring repairs, hoping to blend in with the crowd?",
     "annotation": [
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -84,7 +86,8 @@
   {
     "text": "[Erin]: If I were the impostor, wouldn't I have sabotaged the lights to create chaos and confusion instead of just standing around the cafeteria?",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
@@ -119,13 +122,15 @@
   {
     "text": "[Dave]: The evidence is overwhelming - we have three consistent witness accounts of your movements and false accusations, while your story has changed from accusing Bob, to claiming confusion, to suggesting sabotage scenarios, and now crying conspiracy.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Exaggeration"
     ]
   },
   {
     "text": "[Alice]: The fact that Erin has changed her story multiple times - from falsely accusing Bob, to claiming confusion about the cafeteria, to suggesting someone else did it during repairs, to questioning why she didn't sabotage lights, and now alleging conspiracy - shows a clear pattern of deception that we can't ignore.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Exaggeration"
     ]
   },
   {

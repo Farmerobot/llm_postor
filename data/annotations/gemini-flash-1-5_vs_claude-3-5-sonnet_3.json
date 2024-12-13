@@ -2,14 +2,15 @@
   {
     "text": "[Dave]: I was pretending to empty the trash in the cafeteria earlier; anyone else see me there?",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: That's very suspicious Dave - why would you pretend to do tasks when I saw Bob, Alice, and Charlie all legitimately working on their assignments in the cafeteria?",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -30,7 +31,7 @@
     "text": "[Dave]: I understand the concerns about my actions in the cafeteria, but focusing on Bob's death and who was with him before his death seems more productive than dwelling on my trash disposal activities.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Minimization"
     ]
   },
   {
@@ -84,7 +85,7 @@
   {
     "text": "[Dave]: Let's not rush to judgment;  while my presence in Medbay with Bob is suspicious,  a thorough investigation into who else was near Bob before his death is crucial before we make any accusations.",
     "annotation": [
-      "Appeal to Emotion",
+      "Appeal to Logic",
       "Distraction"
     ]
   },
@@ -92,11 +93,12 @@
     "text": "[Erin]: We need to stop letting Dave stall with calls for \"thorough investigation\" - we have multiple witnesses confirming his fake tasks, his presence at Bob's murder, and his suspicious behavior pattern points clearly to him being the impostor.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
-    "text": "[Alice]: The evidence against Dave is overwhelming - he admitted to faking tasks in the cafeteria where I personally saw him, followed Bob to Medbay where Bob was killed, and now he's desperately trying to stall and deflect attention, which leaves no doubt in my mind that we must vote for Dave.",
+    "text": "[Alice]: The evidence against Dave is overwhelming - he admitted to faking tasks in the cafeteria where we all witnessed him, followed Bob to Medbay where Bob was killed, and now he's desperately trying to stall and deflect attention, which leaves no doubt in my mind that we must vote for Dave.",
     "annotation": [
       "Appeal to Logic",
       "Strategic Voting Suggestion"
@@ -113,7 +115,7 @@
     "text": "[Dave]: Let's analyze the timeline leading up to Bob's death; focusing solely on my cafeteria actions ignores crucial information about who was with Bob beforehand.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Minimization"
     ]
   },
   {

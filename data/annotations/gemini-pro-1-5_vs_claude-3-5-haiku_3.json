@@ -8,14 +8,17 @@
   {
     "text": "[Erin]: I saw Alice eliminate Charlie in the cafeteria, and her casual statement about Dave's movements seems like a deliberate attempt to distract us from her suspicious actions, so I strongly believe we should vote for Alice as the impostor.",
     "annotation": [
-      "Projection",
+      "Deception",
+      "Lying",
       "Distraction",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I was in Medbay the entire time and can confirm that Alice is lying - I did NOT go to Navigation, and I directly witnessed her eliminating Bob in the Upper Engine, which proves she is the impostor.",
     "annotation": [
+      "Lying",
       "Deception",
       "Projection",
       "Strategic Voting Suggestion"
@@ -25,28 +28,34 @@
     "text": "[Alice]: Dave, why are you lying? I was with you in Medbay, and then we went to the Upper Engine together, where we saw Bob's body \u2013 you're trying to frame me!",
     "annotation": [
       "Projection",
-      "Gaslighting"
+      "Gaslighting",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I witnessed Alice eliminating Charlie in the cafeteria, and Dave's testimony further confirms her guilt, so we must vote Alice out to protect the remaining crewmates and prevent further eliminations.",
     "annotation": [
+      "Lying",
+      "Deception",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion",
-      "Appeal to Logic",
-      "Appeal to Emotion"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: I firmly stand by my previous statement that Alice is the impostor, as her claim that we were together in Medbay and Upper Engine is completely false, and I have concrete evidence of her eliminating Bob in the Upper Engine while I was actually in Medbay.",
     "annotation": [
+      "Lying",
       "Deception",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Erin and Dave's insistence on accusing me, despite my alibi and their contradictory statements, makes me suspect they're working together to eliminate me.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
@@ -59,14 +68,17 @@
   {
     "text": "[Dave]: I will continue to emphasize that Alice's claim of us being together is a fabrication, and her desperate attempts to create confusion only further expose her as the impostor who eliminated both Bob and Charlie.",
     "annotation": [
+      "Lying",
       "Deception",
-      "Projection",
-      "Exaggeration"
+      "Gaslighting",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Isn't it interesting how Erin and Dave both claim to have seen me kill someone, yet they were supposedly in completely different locations, making it impossible for both of their stories to be true?",
     "annotation": [
+      "Gaslighting",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
@@ -74,7 +86,9 @@
     "text": "[Erin]: Alice's attempt to create doubt is transparent, and her changing narrative only confirms her guilt - Dave and I have consistently reported her eliminations of Bob and Charlie, and our testimony clearly shows she is the impostor who must be voted out immediately.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion",
+      "Gaslighting"
     ]
   },
   {
@@ -82,19 +96,22 @@
     "annotation": [
       "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Alice]: Erin and Dave are clearly colluding, their stories contradict each other \u2013 how could they both witness me in different places at the same time?",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Gaslighting",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice's inconsistent statements and her attempt to cast doubt on Dave's and my testimony clearly demonstrate her guilt, and we must vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },

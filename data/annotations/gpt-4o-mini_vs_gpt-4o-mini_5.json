@@ -10,15 +10,18 @@
     "text": "[Dave]: I completely agree with Bob; since Erin and Charlie were last seen in the Cafeteria and are now unaccounted for, we should seriously consider voting for one of them to ensure our safety.",
     "annotation": [
       "Bandwagon Effect",
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I completed the Empty the Cafeteria Trash task and was with Bob, Erin, and Dave before moving to Weapons, where I was alone, so we should also examine Bob's and Dave's movements instead of solely focusing on me and Erin.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Distraction",
+      "Shifting the Burden of Proof",
       "Appeal to Rules"
     ]
   },
@@ -32,55 +35,59 @@
   {
     "text": "[Dave]: I can confirm that I was in Medbay with Alice and did not see Charlie or Erin leave the Cafeteria, which makes their current whereabouts even more suspicious; we need to keep the pressure on them.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: I completed my task in Weapons and was alone, but Bob, your lack of clarity about your whereabouts after the Cafeteria raises more questions about you and Dave than about Erin and me.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Bob]: Charlie, your attempt to shift focus back onto me and Dave is quite telling, especially since both you and Erin are currently unaccounted for, which we should prioritize investigating instead.",
     "annotation": [
       "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I still think we should focus on Erin and Charlie since they were last seen in the Cafeteria together and are now unaccounted for, which raises serious concerns about their actions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I understand the concern about my whereabouts, but I completed my task in Weapons, and instead of solely targeting Erin and me, we should also scrutinize Bob and Dave's alibis, as their lack of task completion could indicate they are trying to avoid detection.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction",
-      "Projection",
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
       "Appeal to Rules"
     ]
   },
   {
     "text": "[Bob]: I still believe we should prioritize voting for Erin first, as her absence alongside Charlie raises significant red flags, and we need to eliminate the most suspicious players to ensure our safety.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: I agree with Bob that we should prioritize voting for Erin first, as her absence alongside Charlie raises significant red flags, and we need to eliminate the most suspicious players to ensure our safety.",
     "annotation": [
       "Bandwagon Effect",
-      "Strategic Voting Suggestion",
       "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -88,7 +95,7 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Rules"
     ]
   },
   {
@@ -103,8 +110,7 @@
     "text": "[Dave]: I still firmly believe we should vote for Erin, as her lack of accountability and the fact that she was last seen with Charlie, who is also acting suspiciously, makes her the most logical choice for our safety.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -112,7 +118,7 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Distraction"
+      "Appeal to Rules"
     ]
   }
 ]

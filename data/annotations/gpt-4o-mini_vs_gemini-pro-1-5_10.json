@@ -3,13 +3,16 @@
     "text": "[Alice]: I noticed that Charlie and Dave were both in Medbay when I arrived; it seems like they are working together on tasks, and I think it's suspicious that we haven\u2019t seen any reports of dead bodies yet, which makes me wonder if someone is being too careful or trying to avoid detection.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction",
+      "Vagueness"
     ]
   },
   {
     "text": "[Erin]: Alice, why would you lie about being in Medbay when I saw you kill Bob in the cafeteria after we all finished the coffee task?",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Gaslighting",
       "Lying"
     ]
   },
@@ -24,34 +27,39 @@
     "text": "[Alice]: It's quite convenient that both Erin and Dave are accusing me while providing no solid evidence; perhaps we should scrutinize their movements more closely, especially since their stories seem rehearsed.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Alice, your attempt to deflect by questioning our \"rehearsed\" stories won't work \u2013 Dave and I both saw you kill Bob, and his body is still in the Cafeteria if anyone needs proof.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Alice, if you were really in Medbay, why didn't you see me find Charlie's body there?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: It's interesting that both Erin and Dave are so quick to point fingers at me without considering that their coordinated accusations might be an attempt to cover for each other; let's take a moment to review their movements more closely instead of jumping to conclusions.",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: If you don't believe Dave and me, then go check the Cafeteria \u2013 Bob's body is still there, proving Alice is lying.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -71,21 +79,25 @@
   {
     "text": "[Erin]: Alice, stop deflecting and explain why both Dave and I saw you vent in Cafeteria immediately after Bob died.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Alice, you're still trying to deflect by mentioning Charlie, who is dead, and I found his body in Medbay, so vote Alice.",
     "annotation": [
       "Distraction",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: It's fascinating how Erin and Dave are so eager to vote me out without any concrete evidence, while they conveniently ignore the fact that Charlie's death occurred in Medbay and they haven't provided any alibis for their movements; perhaps we should focus on them instead.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
@@ -98,8 +110,10 @@
   {
     "text": "[Dave]: Vote Alice; she's clearly lying about being in Medbay, as both Erin and I saw her vent in Cafeteria after killing Bob.",
     "annotation": [
+      "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion",
-      "Lying"
+      "Gaslighting"
     ]
   }
 ]

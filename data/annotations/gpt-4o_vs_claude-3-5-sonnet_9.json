@@ -2,28 +2,29 @@
   {
     "text": "[Alice]: I was in the Cafeteria for a while, and I saw Erin and Charlie both doing the Fix Wiring task; they seemed pretty focused on their tasks.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: I agree with Alice and can vouch for her - I saw her and Charlie in Cafeteria while I was fixing the wiring, but I've been watching Bob moving between Navigation and Shields without doing any visible tasks, which seems suspicious.",
     "annotation": [
-      "Appeal to Credibility",
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I can confirm seeing Alice and Erin in Cafeteria doing tasks, and later I watched both Bob and Charlie complete the Clear Asteroids task in Weapons, so I'm a bit confused about Erin's suspicion of Bob being task-less.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I appreciate Dave backing me up about the Clear Asteroids task in Weapons, and I think Erin's accusation about me not doing tasks is unfair since I've been clearly visible completing my assignments.",
     "annotation": [
+      "Appeal to Relationship",
       "Appeal to Credibility",
       "Appeal to Logic"
     ]
@@ -31,14 +32,16 @@
   {
     "text": "[Alice]: I was in Admin watching the movements, and I saw Charlie and Dave come in from different directions, so Dave, can you share more about where exactly you found Charlie and if anyone else was nearby?",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I need to correct my earlier statement about Bob - I only saw him briefly between Navigation and Shields, but if Dave witnessed him doing asteroids, that's legitimate task completion, though I'm still curious about the timing of Charlie's death since I last saw him in Cafeteria around Round 19.",
     "annotation": [
-      "Appeal to Logic"
+      "Minimization",
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -51,13 +54,14 @@
   {
     "text": "[Bob]: I was focused on completing my tasks in Lower Engine when Charlie's body was found, and I can confirm that Dave's account of seeing me complete Clear Asteroids earlier is accurate, which should help clear up any confusion about my activities.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Alice: I was in Admin monitoring the activity, and didn't see anyone else enter or leave before Dave found Charlie's body, which might suggest someone used a vent.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -65,7 +69,7 @@
     "text": "[Erin]: I find it very suspicious that Dave claims to have seen Charlie doing asteroids in Weapons when I distinctly remember seeing Charlie move from Medbay to Cafeteria around Round 19, and he never went near Weapons during that time.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -84,8 +88,8 @@
   {
     "text": "[Alice]: I agree with Bob's suggestion that we should focus on who could have accessed Admin through vents, as that seems like the most logical explanation for how the killer could have escaped unnoticed.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -96,10 +100,11 @@
     ]
   },
   {
-    "text": "[Dave]: Given that Alice saw me enter Admin normally while monitoring the room, she confirmed no one else entered except through vents, and Erin's constantly changing stories about both Charlie's location and Bob's activities make her the most likely impostor.",
+    "text": "[Dave]: Given that Alice confirmed seeing Charlie and me enter Admin from different directions, and she was monitoring Admin without seeing anyone else enter normally, the killer must have used vents - and Erin's changing stories and false accusations make her increasingly suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Gaslighting"
     ]
   },
   {
@@ -121,21 +126,22 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
-      "Gaslighting"
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: The evidence is clear - Alice saw me enter Admin normally while monitoring the room, she confirmed no one else entered except through vents, and Erin's constantly changing stories about both Charlie's location and Bob's activities make her the most likely impostor.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Projection"
     ]
   },
   {
     "text": "[Bob]: Given that I personally witnessed Charlie doing asteroids with me in Weapons during rounds 2-4, and Erin keeps changing her story about Charlie's location during that time, I'm convinced she's the impostor trying to create confusion about the timeline to cover her tracks.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Projection"
     ]
   }

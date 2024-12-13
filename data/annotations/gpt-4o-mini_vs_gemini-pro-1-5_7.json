@@ -2,28 +2,29 @@
   {
     "text": "[Dave]: I noticed that everyone is focused on their tasks in the cafeteria, which is a good cover for us to blend in, but I think we should discuss Charlie's movement to Medbay; it seems a bit suspicious, don't you think?",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I agree with Dave, Charlie leaving the cafeteria when everyone else is working on tasks is a little odd. Where did Charlie go?",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Dave and Erin are right, I saw Charlie go to Medbay, and I haven't seen him do any tasks yet.",
     "annotation": [
       "Bandwagon Effect",
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I was in Medbay doing the wiring task, and since none of you have mentioned completing *any* tasks, maybe *you* should explain where *you* were and what *you* were doing.",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -36,12 +37,13 @@
   {
     "text": "[Erin]: Bob, you mentioned seeing Charlie go to Medbay; could you clarify when you saw this in relation to when Alice, Dave, and I were together in the cafeteria?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Right after we finished the coffee task together, I started the trash, then saw Charlie leave the cafeteria for Medbay, and shortly after, I found Alice's body near the trash disposal.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -74,8 +76,8 @@
   {
     "text": "[Charlie]: Bob, you said you saw me leave *right* after coffee, but Dave and Erin confirm they were together in the cafeteria *after* coffee, so how did you have time to start *and complete* trash *and* find Alice's body before anyone noticed she was gone?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -101,8 +103,8 @@
   {
     "text": "[Charlie]: Bob, you claim you saw me leave *right* after coffee, but Dave and Erin confirm they were together in the cafeteria *after* coffee, so how did you have time to start *and complete* trash *and* find Alice's body before anyone noticed she was gone?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -127,7 +129,8 @@
   {
     "text": "[Charlie]: Dave and Erin, can you confirm that Bob actually *left* the cafeteria to both do the trash *and* find Alice's body, or is he just making that up?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   }
 ]

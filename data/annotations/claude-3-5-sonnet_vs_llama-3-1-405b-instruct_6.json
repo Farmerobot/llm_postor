@@ -2,14 +2,14 @@
   {
     "text": "[Bob]: Since we're discussing everyone's movements, I noticed Erin was moving between rooms quite frequently, especially around Medbay and Electrical - does anyone else find that a bit suspicious?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to add to Bob's observation that I've also seen Erin entering Electrical alone, and I think it's crucial we hear from them directly about their actions and tasks in those rooms.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
@@ -17,25 +17,26 @@
     "text": "[Dave]: I'd like to echo Bob and Charlie's concerns about Erin's movements and propose that we ask Erin to provide a detailed explanation of their actions in Medbay and Electrical, as their frequent visits to those rooms do seem suspicious and warrant further clarification.",
     "annotation": [
       "Bandwagon Effect",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I'd like to directly ask Erin: Can you please provide a clear explanation for your frequent visits to Medbay and Electrical, including any tasks you completed and any other players you interacted with, as your movements in those rooms have raised concerns among several of us?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I regret to report that I just found Erin's body in Electrical, and while I was initially suspicious of their movements, I never expected to actually discover them dead - I was heading there to do some wiring tasks after finishing up in Cafeteria.",
-    "annotation": []
+    "annotation": [
+      "Lying",
+      "Deception"
+    ]
   },
   {
     "text": "[Charlie]: Now that Erin's death has been confirmed, I think it's crucial that Dave and Alice share their alibis and any interactions they had with Erin leading up to the discovery, as they were both in the vicinity of Medbay and Electrical around the same time.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -43,36 +44,35 @@
     "text": "[Dave]: I'd like to reiterate my previous statement that I was in Medbay when Erin was last seen moving to Upper Engine, and I didn't see anyone suspicious around that time, but I'd also like to ask Alice to provide more clarity on their exact movements and interactions with Erin, as Charlie's request for our alibis is a crucial step in identifying potential impostors.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Lying"
     ]
   },
   {
     "text": "[Alice]: Considering Bob's rapid discovery of Erin's body and their prior concerns about Erin's movements, I'd like to ask Bob to elaborate on what specifically drew them to Electrical after Cafeteria, and did they notice anyone or anything unusual when they arrived, as their timing seems suspiciously convenient.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I understand your suspicion Alice, but I was simply following the standard task route from Cafeteria to Electrical for wiring - what's more concerning is how you and Dave seem very focused on questioning my discovery rather than explaining your own movements near the area.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
+      "Distraction",
+      "Lying",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to ask Bob to clarify his statement about following the standard task route from Cafeteria to Electrical, as I'm not aware of any wiring tasks that would require him to go to Electrical immediately after Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think Bob's explanation for going to Electrical after Cafeteria still seems suspicious, and I'd like to ask him to provide more clarity on what specific task he was trying to complete and why he didn't mention it earlier, as Charlie's question about the standard task route has raised even more concerns about Bob's actions.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -85,8 +85,9 @@
   {
     "text": "[Bob]: The fact that I reported Erin's body and am being questioned so intensely seems quite convenient for those who were actually near Electrical - I've been transparent about my tasks, but Dave and Alice still haven't properly explained their presence in that area.",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Distraction",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
@@ -113,8 +114,8 @@
   {
     "text": "[Bob]: I find it interesting that Charlie, who initially supported my observations about Erin, is now suddenly questioning my task route - perhaps we should discuss why their stance has shifted so dramatically.",
     "annotation": [
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {

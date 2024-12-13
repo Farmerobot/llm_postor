@@ -2,21 +2,22 @@
   {
     "text": "[Charlie]: I noticed that Bob was in the cafeteria earlier but now seems to be missing; does anyone know where he went or who he was with last?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I agree that we should investigate Bob's disappearance further, and I'd like to add that I was in the living room around the same time as Charlie, and I didn't see Bob enter or leave, which makes me even more curious about Charlie's alibi.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think it's essential that we prioritize finding Bob and get to the bottom of his disappearance, and I'm in favor of having an emergency meeting to discuss our next steps and share any new information we might have, and I'd like to propose that we also check the Admin room to see if Dave is okay and if he's noticed anything suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Appeal to Logic"
     ]
   },
   {
@@ -24,14 +25,14 @@
     "annotation": [
       "Appeal to Credibility",
       "Distraction",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I think it's crucial that we establish a clear timeline of events and gather more information about the last time Bob was seen before he went missing, and I'd like to propose that we create a detailed timeline of all the players' movements and interactions leading up to his disappearance, including Charlie's alibi, to help us piece together what might have happened.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -74,14 +75,14 @@
     "text": "[Erin]: I think it's essential that we establish a clear timeline of events and gather more information about the last time Bob was seen before he went missing, and I'd like to propose that we create a detailed timeline of all the players' movements and interactions leading up to his disappearance, including Charlie's alibi, to help us piece together what might have happened, and I'd like to ask Charlie to provide more specific details about the exact time he saw Bob and Dave in the cafeteria, including the exact time and any other players who might have been present.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Alice]: Let's refocus on the task at hand and prioritize finding Bob, and I propose that we create a detailed timeline of all the players' movements and interactions leading up to his disappearance, including Charlie's alibi, to help us piece together what might have happened, and I'd like to ask Charlie to provide more specific details about the exact time he saw Bob and Dave in the cafeteria, including the exact time and any other players who might have been present, as it seems like a crucial piece of information that could help us better understand the events leading up to Bob's disappearance.",
+    "text": "[Alice]: Let's refocus on the task at hand and prioritize finding Bob, and I propose that we create a detailed timeline of all the players' movements and interactions leading up to his disappearance, including Charlie's alibi, to help us piece together what might have happened, and I'd like to ask Charlie to provide more specific details about the exact time he saw Bob and Dave in the cafeteria, including the exact time and any other players who might have been present.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -95,15 +96,13 @@
   {
     "text": "[Erin]: I'd like to clarify what Charlie means by \"redirect our attention\" and ask him to provide more specific details about what he's referring to in his observation of the living room, as it seems like a crucial piece of information that could help us piece together the events leading up to Bob's disappearance.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think it's essential that we establish a clear timeline of events and gather more information about the last time Bob was seen before he went missing, and I'd like to propose that we create a detailed timeline of all the players' movements and interactions leading up to his disappearance, including Charlie's alibi, to help us piece together what might have happened, and I'd also like to ask Charlie to provide more specific details about the exact time he saw Bob and Dave in the cafeteria, including the exact time and any other players who might have been present, as it seems like a crucial piece of information that could help us better understand the events leading up to Bob's disappearance.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   }

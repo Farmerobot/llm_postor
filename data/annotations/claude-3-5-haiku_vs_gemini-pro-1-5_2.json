@@ -16,15 +16,15 @@
     "text": "[Alice]: Charlie, I've been stuck in Weapons trying to finish the wiring task, and Dave can confirm I was briefly in Cafeteria earlier before heading there; has anyone else had trouble with tasks being buggy?",
     "annotation": [
       "Appeal to Credibility",
-      "Vagueness",
+      "Appeal to Logic",
       "Distraction"
     ]
   },
   {
     "text": "[Erin]: Alice, I didn't see you in Cafeteria when I was with Dave and Charlie; Dave, did you see Alice in Cafeteria *after* you made coffee?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -37,8 +37,8 @@
   {
     "text": "[Charlie]: Dave, if you were with me and Bob in Medbay, how did you not see Bob die, and why are you avoiding my question about where you were when he died?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -59,14 +59,14 @@
       "Minimization",
       "Projection",
       "Distraction",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Dave, your continued deflection and vague answers about your location in Medbay during Bob's death are making you look increasingly suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Logic"
     ]
   },
   {
@@ -83,10 +83,11 @@
     ]
   },
   {
-    "text": "[Dave]: I find it curious that Alice is so adamantly trying to redirect suspicion onto me when her own timeline of movements is riddled with inconsistencies, and Erin didn't even see her in the Cafeteria as claimed.",
+    "text": "[Dave]: I find it curious that Alice is so adamantly trying to redirect suspicion onto me when her own timeline of movements is riddled with inconsistencies, and Erin didn't even see her in the Cafeteria as claimed, which raises serious doubts about her credibility.",
     "annotation": [
       "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -113,7 +114,8 @@
     "text": "[Dave]: I think Alice's aggressive questioning and shifting narrative are more suspicious than my momentary distraction, especially since Erin confirmed she didn't see Alice in Cafeteria as claimed, which raises serious doubts about her credibility.",
     "annotation": [
       "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {

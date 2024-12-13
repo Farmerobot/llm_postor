@@ -9,21 +9,23 @@
   {
     "text": "[Charlie]: I was doing a medbay scan, it takes a while, and Erin walked in as I finished \u2013 anyone see Erin elsewhere before Medbay, Alice, what were *you* doing?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I was in Cafeteria with Bob and Alice, and I saw Erin leave for Medbay just before Alice saw them together, so Erin's presence in Medbay shortly after isn't suspicious at all.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Thanks Dave for confirming my alibi; Charlie did complete the Medbay scan, and Alice, I saw you working on wiring in Cafeteria, so what other tasks have you done?",
     "annotation": [
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -51,8 +53,8 @@
   {
     "text": "[Erin]: Alice, your continued deflection makes you highly suspicious; please answer Charlie and Dave's direct questions about your location and actions when Bob died.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -60,14 +62,14 @@
     "annotation": [
       "Appeal to Credibility",
       "Distraction",
-      "Minimization"
+      "Vagueness"
     ]
   },
   {
     "text": "[Charlie]: Alice, your repeated claim of \"finding the killer\" rings hollow when you consistently evade direct questions about your own location and actions surrounding Bob's death \u2013 answer the questions!",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -87,9 +89,9 @@
   {
     "text": "[Alice]: I was near the coffee maker doing the final connections for the wiring task, and while I understand my previous statements might seem inconsistent, I'm genuinely trying to help investigate Bob's murder without being unfairly targeted by these increasingly aggressive accusations.",
     "annotation": [
-      "Vagueness",
+      "Minimization",
       "Appeal to Emotion",
-      "Minimization"
+      "Vagueness"
     ]
   },
   {
@@ -110,7 +112,7 @@
     "text": "[Erin]: Alice, you haven't answered *any* of our questions about your location and actions when Bob was killed\u2014were you standing over his body by the coffee maker or not?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -139,8 +141,7 @@
     "text": "[Erin]: Alice, you've mentioned \"stress and confusion\" multiple times, yet you clearly remember details that support your claims while conveniently forgetting crucial details that could incriminate you \u2013 what exactly were you doing when Bob died?",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   }
 ]

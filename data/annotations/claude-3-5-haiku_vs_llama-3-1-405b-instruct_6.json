@@ -2,20 +2,22 @@
   {
     "text": "[Erin]: I noticed some suspicious movement between rooms, and Bob and Alice's coordinated travel to Medbay seems a bit odd - what tasks were you both working on?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Vagueness",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to clarify that I didn't actually coordinate travel with Alice to Medbay, I moved there separately and saw her leave for Upper Engine, and I was working on the task to start the coffee maker in the cafeteria earlier, which I completed successfully.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Alice]: I'd like to thank Bob for clarifying that we didn't coordinate travel to Medbay, and I'd still like to ask Erin what tasks she's been working on and what her plan is, as I find it suspicious that she's trying to create tension and suspicion around my actions without sharing her own contributions to our mission.",
     "annotation": [
+      "Appeal to Relationship",
       "Shifting the Burden of Proof",
       "Projection"
     ]
@@ -23,6 +25,7 @@
   {
     "text": "[Erin]: I was fixing wiring in the cafeteria earlier, which is a standard task, and I'm genuinely concerned about Dave's elimination - I think we should carefully examine everyone's movements and focus on understanding how and why this happened.",
     "annotation": [
+      "Appeal to Rules",
       "Appeal to Logic",
       "Distraction"
     ]
@@ -30,14 +33,14 @@
   {
     "text": "[Bob]: I'd like to reiterate that Erin's concern about Dave's elimination is valid, but I still haven't seen any concrete evidence or alibi from her regarding her interactions with Dave before his elimination, and I think it's crucial that she provides more information about her whereabouts during that time.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I appreciate Bob's reiteration of the need for Erin to provide more information about her interactions with Dave before his elimination, and I'd like to rephrase my previous question to Erin: Can you please provide a detailed account of your actions and movements from the time you finished fixing the wiring in the cafeteria to the moment you learned about Dave's elimination?",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Relationship",
       "Shifting the Burden of Proof"
     ]
   },
@@ -99,6 +102,7 @@
   {
     "text": "[Alice]: I think it's time for us to make a decision about Erin's suspicious behavior, and I propose that we vote on whether to give her one last chance to provide a clear and detailed explanation of her interactions with Dave in Medbay or to consider ejecting her from the game due to her continued evasiveness and potential threat to our mission.",
     "annotation": [
+      "Appeal to Urgency",
       "Strategic Voting Suggestion",
       "Appeal to Logic"
     ]

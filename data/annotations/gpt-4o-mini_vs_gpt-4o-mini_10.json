@@ -2,13 +2,14 @@
   {
     "text": "[Bob]: I noticed Erin has been taking quite a while with her task in the cafeteria, which seems a bit suspicious, and I think we should keep an eye on her while we discuss who else might be lurking around Medbay.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I was in Weapons just now, and since I didn't see anyone else around, it makes me wonder about everyone's whereabouts\u2014let's make sure to share our alibis to figure out who might be acting suspiciously.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
@@ -16,7 +17,7 @@
     "text": "[Alice]: I can confirm that Erin was indeed doing her task in the cafeteria alongside me and Dave, so I think we should focus our attention on Charlie, who was alone in Weapons and could have had the chance to act without witnesses.",
     "annotation": [
       "Appeal to Credibility",
-      "Projection",
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
@@ -31,22 +32,25 @@
   {
     "text": "[Bob]: I appreciate the confirmations about Erin, but we can\u2019t overlook the fact that Charlie was alone in Weapons, which gives him a strong opportunity to have taken out Erin without anyone noticing, so we should definitely keep him in our sights.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I understand the concerns about my location, but let's focus on the fact that both Alice and Dave were with Erin in the cafeteria, which makes Bob's sudden shift in suspicion towards me seem more like a deflection; we need to clarify everyone's movements during that time.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I agree with Charlie that Bob's sudden shift in suspicion towards him seems like a deflection, and it\u2019s crucial we all clarify our movements to piece together the timeline accurately.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -68,6 +72,7 @@
     "text": "[Charlie]: I appreciate the confirmations from Alice and Dave about Erin, and Bob's deflection raises serious concerns; I propose we vote on Bob to eliminate this growing threat to our team.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -102,7 +107,7 @@
   {
     "text": "[Alice]: I strongly believe we should proceed with voting Bob out, as his ongoing deflection and attempts to redirect suspicion onto others only confirm our collective concerns about his guilt.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },
@@ -117,8 +122,7 @@
     "text": "[Bob]: I understand the pressure is on me, but before we rush to a decision, let's take a moment to reevaluate everyone's movements, especially considering that Charlie had the perfect opportunity to act unnoticed while alone in Weapons.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {

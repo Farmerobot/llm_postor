@@ -9,9 +9,8 @@
   {
     "text": "[Charlie]: I agree with Alice's suggestion to stick together for safety, as I was in Weapons with Erin and can vouch for her completing a task there.",
     "annotation": [
-      "Appeal to Relationship",
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Bandwagon Effect",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -19,7 +18,7 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Relationship"
+      "Bandwagon Effect"
     ]
   },
   {
@@ -32,14 +31,14 @@
   {
     "text": "[Alice]: I reported Bob's body in the cafeteria, and while I was pretending to do tasks there, I didn\u2019t see anyone else enter or leave, so it\u2019s crucial we discuss who was nearby before the body was found.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: [Dave, since you were in Admin and Storage, did you notice anyone moving suspiciously or any unusual activity that might help us narrow down the suspects?]",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -52,28 +51,27 @@
   {
     "text": "[Dave]: I was mostly alone in Admin and Storage, so I didn't see anyone moving suspiciously or any unusual activity that could help us identify the impostor.",
     "annotation": [
-      "Denial without Evidence"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: It's curious that Charlie and Erin can vouch for each other, but we should remain cautious\u2014it's entirely possible they could be working together as impostors, especially since I was alone in the cafeteria for a while and didn't see anyone else around.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: Alice, when you reported Bob's body, did you notice any signs of struggle or anything out of place that might give us more insight into how long the body had been there?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, your point about being alone in the cafeteria is noted, but since Charlie and I were together in Weapons, we should focus on understanding everyone's movements to pinpoint the impostor.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -93,8 +91,7 @@
   {
     "text": "[Charlie]: Alice, since you were alone in the cafeteria, can you think of anyone who might have had the opportunity to enter and leave unnoticed before you found Bob's body?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -114,23 +111,21 @@
   {
     "text": "[Alice]: It's interesting how quickly Charlie and Erin are defending each other; perhaps we should consider that they might be trying to create a solid alibi while deflecting suspicion from themselves, especially since I was alone and saw no one else in the cafeteria.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: Let's focus on understanding everyone's movements, especially around the cafeteria, to identify who might have had the opportunity to commit the act.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
-    "text": "[Erin]: Alice, while your caution about Charlie and me is understandable, since Charlie and I were together in Weapons, we should focus on understanding everyone's movements to pinpoint the impostor.",
+    "text": "[Erin]: Alice, while your caution about Charlie and me is understandable, let's focus on gathering more information about movements around the cafeteria to narrow down potential suspects.",
     "annotation": [
-      "Appeal to Logic",
       "Distraction",
-      "Appeal to Relationship"
+      "Appeal to Logic"
     ]
   },
   {
@@ -141,17 +136,10 @@
     ]
   },
   {
-    "text": "[Alice]: I find it suspicious that Charlie and Erin are so eager to defend each other; perhaps we should consider that they might be trying to create a false sense of security while I was isolated in the cafeteria, so let\u2019s dig deeper into their movements after leaving Weapons.",
-    "annotation": [
-      "Projection",
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Charlie]: Let's focus on understanding everyone's movements, especially around the cafeteria, to identify who might have had the opportunity to commit the act.",
+    "text": "[Alice]: I find it suspicious that Charlie and Erin are so quick to defend each other, which could indicate they\u2019re working together to create a false sense of security while I was isolated in the cafeteria, so let\u2019s dig deeper into their movements after leaving Weapons.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Projection"
     ]
   },
   {
@@ -198,8 +186,8 @@
   {
     "text": "[Erin]: Alice, while I understand your concerns, let's focus on gathering more details about the movements around the cafeteria to better pinpoint who might have had the opportunity to commit the act.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {

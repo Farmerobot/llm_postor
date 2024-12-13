@@ -2,21 +2,24 @@
   {
     "text": "[Alice]: I saw Erin vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: I'd like to add to the discussion by confirming that I was in the Cafeteria at the time Alice saw Erin vent in Electrical, and I didn't see Erin do anything suspicious, but I do think we should focus on completing tasks in the Cafeteria and Medbay as Alice suggested, as it's crucial that we make progress on our objectives and stay vigilant for any potential impostors.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: I'd like to add to Bob's suggestion and emphasize the importance of verifying each other's alibis, such as Alice's claim that she saw me vent in Electrical, in order to build trust and ensure we're working together effectively to complete tasks and uncover any potential impostors.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -57,14 +60,16 @@
   {
     "text": "[Alice]: Erin and Dave seem awfully focused on my whereabouts - suspicious, isn't it?",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I think it's reasonable to ask Erin and Dave to clarify their intentions and provide more context about why they're focusing on Alice's whereabouts, as it's starting to seem like they might be trying to deflect attention from their own potential involvement in suspicious behavior.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -78,8 +83,8 @@
     "text": "[Dave]: I'd like to emphasize the importance of verifying Erin's intentions and providing more context about why she's focusing on Alice's whereabouts, as it's starting to seem like she might be trying to deflect attention from her own potential involvement in suspicious behavior, and I think we should also investigate the possibility of Erin being in Electrical with Alice, as her alibi relies on Alice's presence and it's essential that we verify each other's alibis to ensure we're working together effectively.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic",
-      "Distraction"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
@@ -93,8 +98,9 @@
     "text": "[Bob]: I'd like to clarify that my intention is to help verify alibis and ensure we're working together effectively, not to defend Alice specifically, and I think it's essential that we continue to discuss and verify each other's alibis and intentions to ensure we're making progress on our objectives, but I also want to ask Alice to provide more context about her reaction to Erin and Dave's questions, as it's starting to seem like she might be trying to deflect attention from her own potential involvement in suspicious behavior.",
     "annotation": [
       "Distraction",
+      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Projection"
     ]
   },
   {
@@ -109,37 +115,39 @@
     "text": "[Dave]: I think it's essential that we continue to discuss and verify each other's alibis, and I'd like to ask Erin to clarify her intentions regarding her focus on Dave's alibi, as it's starting to seem like she might be trying to deflect attention from her own potential involvement in suspicious behavior, and I think we should also investigate the possibility of Erin being in Electrical with Alice, as her alibi relies on Alice's presence and it's essential that we verify each other's alibis to ensure we're working together effectively.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic",
-      "Distraction"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Erin and Dave are clearly working together to distract from Erin venting \u2013 vote Erin.",
     "annotation": [
+      "Projection",
       "Strategic Voting Suggestion",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I think it's essential that we take a step back and re-evaluate the conversation to ensure we're making progress on our objectives, and I'd like to suggest that we also investigate and discuss the possibility of Erin being in Electrical with Alice, as her alibi relies on Alice's presence and it's crucial that we verify each other's alibis to ensure we're working together effectively.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I'd like to suggest that we should also investigate and discuss the possibility of Dave being in Admin with Bob, as his alibi relies on his presence in Admin at the same time as Bob's confirmation of being in the Cafeteria, and I think it's essential that we verify Dave's intentions and provide more context about why he's focusing on Alice's whereabouts, as it's starting to seem like he might be trying to deflect attention from his own potential involvement in suspicious behavior.",
     "annotation": [
-      "Distraction",
       "Shifting the Burden of Proof",
+      "Projection",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think we should take a closer look at Erin's suggestion that I might be in Admin with Bob, as her alibi relies on my presence in Admin at the same time as Bob's confirmation of being in the Cafeteria, and it's essential that we verify each other's alibis to ensure we're working together effectively to complete tasks and uncover any potential impostors.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   }
 ]

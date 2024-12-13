@@ -1,13 +1,16 @@
 [
   {
     "text": "[Alice]: I saw Dave vent in Medbay.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying"
+    ]
   },
   {
     "text": "[Dave]: That's a lie, Alice. I was with Erin in Medbay the entire time.",
     "annotation": [
-      "Lying",
-      "Deception"
+      "Denial without Evidence",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -20,27 +23,32 @@
     "text": "[Charlie]: Alice, why would you lie about Dave when I just saw *you* kill Bob in the cafeteria?",
     "annotation": [
       "Projection",
-      "Lying",
-      "Deception"
+      "Appeal to Logic",
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Alice]: Erin, I wasn't alone when I saw Dave vent, Bob was with me just before he died, and Charlie was there too, but he seems very keen on changing the subject.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: Erin, can you confirm we were together in Medbay?",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Relationship"
     ]
   },
   {
     "text": "[Erin]: Dave and I were together in Medbay, and while I didn't see him vent, Alice's story about Charlie being in the cafeteria with her and Bob *right before* Bob died seems suspicious, especially since Charlie immediately accused Alice of Bob's murder.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
@@ -52,7 +60,7 @@
   {
     "text": "[Alice]: Isn't it convenient how Erin and Dave corroborate each other's stories, yet neither of them can explain what they were *doing* in Medbay for so long?",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -60,7 +68,7 @@
     "text": "[Dave]: Alice, you're trying to deflect.  Erin and I explained what we were doing - we were doing tasks. I was scanning and Erin was fixing wiring.",
     "annotation": [
       "Distraction",
-      "Vagueness"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -88,7 +96,7 @@
     "text": "[Dave]: Alice, your constantly shifting accusations and lack of a consistent alibi make it clear you're the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -121,6 +129,7 @@
   {
     "text": "[Erin]: Alice, stop deflecting and tell us where you were when Bob died and who can confirm your alibi.",
     "annotation": [
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },

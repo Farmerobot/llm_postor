@@ -2,12 +2,14 @@
   {
     "text": "[Alice]: I think we're getting a bit too focused on individual player movements and not enough on the bigger picture, let's prioritize the tasks and see if we can't make some progress on the oxygen generator in Medbay.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I saw Bob and Dave complete Medbay tasks, so let's focus on Electrical and where Charlie went after Admin.",
     "annotation": [
+      "Distraction",
       "Appeal to Logic"
     ]
   },
@@ -41,13 +43,15 @@
   {
     "text": "[Alice]: I think we should take a step back and re-evaluate our approach, as we're getting bogged down in individual player movements and accusations, and I'd like to propose that we refocus on the tasks and gather more information before making any conclusions, perhaps by discussing the events surrounding Dave's death in Upper Engine and how it relates to the overall game state.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice, your suggestion to \"re-evaluate our approach\" is just another attempt to distract us from your lack of an alibi \u2013 where were you when Bob, Dave, and I were in Medbay, and where were you after that while I was alone in Electrical?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
@@ -59,14 +63,15 @@
   {
     "text": "[Alice]: I think it's time for a change of subject and a refocusing on the tasks at hand, let's discuss the recent events in Medbay and how they relate to the oxygen generator, perhaps we can uncover some new information that will help us make progress on our objectives.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice, you still haven't told us where you were while Bob, Dave, and I were in Medbay, and then when I was alone in Electrical \u2013 continuing to avoid this core question only increases suspicion.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -79,19 +84,22 @@
   {
     "text": "[Alice]: I think we're getting bogged down in a cycle of accusations and deflections, and it's time to refocus on the facts: let's discuss the events surrounding Dave's death in Upper Engine and how it relates to the overall game state, rather than dwelling on individual player movements and alibis.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Alice, your constant attempts to change the subject and your refusal to provide a clear alibi for your location when Bob, Dave, and I were in Medbay, and then when I was alone in Electrical, makes you look incredibly suspicious \u2013 vote Alice.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Alice, we're voting you out because you refuse to answer a simple question about your whereabouts while Dave was alive and when Erin was alone in Electrical.",
     "annotation": [
+      "Appeal to Logic",
       "Strategic Voting Suggestion",
       "Shifting the Burden of Proof"
     ]

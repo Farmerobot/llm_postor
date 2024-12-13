@@ -9,19 +9,22 @@
   {
     "text": "[Alice]: Dave, I was in Medbay with Bob and Charlie doing Submit Scan, so Erin must have been alone in the cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Dave, after emptying the cafeteria trash, I went straight to Medbay and saw Alice and Charlie already working on their scans, so I joined them.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: Dave, Alice, Bob, and I were all together in Medbay, and I saw both Alice and Bob doing their scans while I was fixing wiring.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -29,7 +32,7 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -42,104 +45,95 @@
   {
     "text": "[Bob]: Dave, your suspicion of Alice is deflecting from the fact you were the last person with Erin and haven't adequately explained what you were doing or where you went after seeing her.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Dave, your continued focus on Alice seems like misdirection given you were the last person with Erin and still haven't clarified where you went after leaving the cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: It's curious how Alice, Bob, and Charlie are all so united in their story about Medbay, yet they failed to notice Erin's absence; perhaps we should consider that one of them might be trying to mislead us.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Gaslighting",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Dave, your attempt to sow discord among us by suggesting we're \"united\" is a classic deflection tactic to avoid scrutiny of your own whereabouts after you were last seen with Erin.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: Dave, your repeated attempts to cast suspicion on us without providing a clear timeline of your own movements after being with Erin makes you look increasingly suspicious.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Dave, your insistence on our unity being suspicious is a blatant attempt to distract from your lack of a verifiable alibi and your changing story about your location.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: It's interesting how you all seem to have a perfectly aligned story about Medbay, yet none of you noticed Erin's absence; could it be that one of you is trying to cover for the other?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Gaslighting",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Dave, your repeated questions about our \"perfectly aligned story\" only highlight your own lack of an alibi and the fact that you were the last person seen with Erin before she disappeared.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Dave, you've yet to explain where you went after leaving the cafeteria with Erin, and your attempts to deflect suspicion onto others only strengthen our concerns about your involvement in her disappearance.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: Dave, your fixation on our \"aligned\" stories is a transparent attempt to divert attention from your own unexplained absence after being the last person seen with Erin.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: It's telling that you all have such a strong narrative about Medbay while completely overlooking Erin's absence; perhaps we should reconsider if one of you is trying to protect the real culprit among you.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Gaslighting",
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Dave, your continued evasion of our questions about your whereabouts after leaving the cafeteria with Erin strongly suggests your involvement in her disappearance.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Dave, your persistent focus on our Medbay \"alignment\" is a desperate attempt to distract from your lack of an alibi and the fact that you were last seen with Erin.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {

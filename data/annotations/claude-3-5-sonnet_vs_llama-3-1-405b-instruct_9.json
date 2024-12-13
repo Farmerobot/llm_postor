@@ -2,49 +2,53 @@
   {
     "text": "[Dave]: Given the game state and my role as an impostor, I'll carefully contribute to build trust while subtly directing suspicion: \"I've been focusing on tasks in Admin and Cafeteria, and I can confirm Bob was there too - has anyone seen Charlie or Erin recently?\"",
     "annotation": [
-      "Deception",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Deception"
     ]
   },
   {
     "text": "[Erin]: I'd like to address Dave's question: I've been moving between rooms, trying to complete tasks, and I'm currently in Upper Engine with Charlie, who I saw move here from Medbay, so I'd like to ask Charlie to confirm what tasks they were doing in Medbay before joining me.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to clarify that I didn't complete any tasks in Medbay, I was simply passing through, and I'd like to turn the question back to Dave: can you provide more specifics about the tasks you claim to have completed in Admin and Cafeteria, as your vagueness is raising some suspicions?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I'd like to respond to Charlie's question about Dave's tasks: I was in Admin with Dave and Bob, and I saw both of them attempt to clean the floor in Admin, but I didn't see either of them complete any tasks in Cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I appreciate Alice's input, but she must be confused since I was actually working on the coffee maker in Cafeteria before finding Bob's body in Admin - Charlie, you still haven't explained why you were wandering through Medbay without doing any tasks.",
     "annotation": [
       "Gaslighting",
+      "Shifting the Burden of Proof",
       "Deception",
-      "Shifting the Burden of Proof"
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I'd like to address Dave's claim about working on the coffee maker in Cafeteria: I was in the Cafeteria earlier and saw Dave doing nothing related to the coffee maker, but I did see Bob and Charlie working on tasks there, which contradicts Dave's new story and raises even more suspicions about his activities.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I'd like to thank Erin for confirming my alibi and shedding more light on Dave's suspicious behavior in the Cafeteria, and I think it's time for us to take a closer look at Dave's actions and consider the possibility that he might be the impostor, especially given the inconsistencies in his story and the contradictions from multiple players.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -52,26 +56,29 @@
     "text": "[Alice]: I'd like to reiterate the importance of clarifying Dave's inconsistencies and urge him to provide a clear explanation for the discrepancies in his story, as his continued vagueness and contradictions with multiple player accounts are increasingly suggesting that he might be the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: I understand everyone's concerns, but let's look at the facts - Alice confirms seeing me with Bob in Admin, Charlie admits to wandering through Medbay without tasks, and Erin's story about the Cafeteria doesn't match the timeline since I was there much earlier.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Deception"
     ]
   },
   {
     "text": "[Erin]: I'd like to address Dave's latest attempt to deflect suspicion: his claim that my story about the Cafeteria doesn't match the timeline is incorrect, as I was indeed in the Cafeteria when I saw Bob and Charlie working on tasks, and I didn't see Dave doing anything related to the coffee maker.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I think it's clear that Dave's attempts to deflect suspicion have been thoroughly debunked by multiple players, and I urge everyone to consider the overwhelming evidence pointing to Dave as the impostor, so I propose we put it to a vote: should we eject Dave from the ship?",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -79,7 +86,8 @@
     "text": "[Alice]: Considering the overwhelming evidence and the fact that Dave's attempts to deflect suspicion have been thoroughly debunked, I agree with Charlie's proposal to put it to a vote and I'm inclined to vote for ejecting Dave from the ship, but I'd like to hear any last-minute arguments or concerns that might change my mind.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Bandwagon Effect",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -118,20 +126,21 @@
   {
     "text": "[Erin]: It's interesting that Dave is now trying to shift suspicion onto Charlie and me by suggesting we're coordinating our stories, but this is simply a desperate attempt to deflect attention from his own inconsistencies and suspicious behavior.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to address Dave's latest attempt to shift suspicion onto Erin and me by suggesting we're coordinating our stories: this is a classic tactic used by impostors to deflect attention from their own suspicious behavior, and I urge everyone to consider the overwhelming evidence pointing to Dave as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I think it's time for us to make a decision, and based on the overwhelming evidence and the fact that Dave's attempts to deflect suspicion have been thoroughly debunked, I'm voting to eject Dave from the ship.",
     "annotation": [
+      "Appeal to Urgency",
       "Appeal to Logic",
       "Strategic Voting Suggestion"
     ]

@@ -2,33 +2,39 @@
   {
     "text": "[Bob]: I've been in Medbay the whole time, just trying to figure out what's going on with the generator, and I didn't notice anything out of the ordinary, but I do think we should focus on finding out who's been in the cafeteria and what they were doing, since that's where the last task was supposed to be completed.",
     "annotation": [
+      "Lying",
+      "Deception",
       "Distraction",
-      "Vagueness"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I was in the cafeteria earlier and saw Erin doing the task of fixing the wiring, so I can confirm Erin was working on a task.",
-    "annotation": [
-      "Appeal to Credibility"
-    ]
-  },
-  {
-    "text": "[Charlie]: I saw Bob move from the Cafeteria to Medbay earlier, so his claim about being in Medbay the whole time doesn't add up, and we should keep an eye on activity around those areas.",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Alice]: I was in the cafeteria earlier and saw both Erin and Dave working on tasks, so we should focus on verifying Bob's movements since both Charlie and I noticed inconsistencies.",
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
+    "text": "[Charlie]: I saw Bob move from the Cafeteria to Medbay earlier, so his claim about being in Medbay the whole time doesn't add up, and we should keep an eye on activity around those areas.",
+    "annotation": [
+      "Appeal to Logic",
+      "Appeal to Credibility"
+    ]
+  },
+  {
+    "text": "[Alice]: I was in the cafeteria earlier and saw both Erin and Dave working on tasks, so we should focus on verifying Bob's movements since both Charlie and I noticed inconsistencies.",
+    "annotation": [
+      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Bandwagon Effect"
+    ]
+  },
+  {
     "text": "[Bob]: I think we're getting a bit sidetracked with all these questions about my alibi, when we should be focusing on the fact that Erin is dead and we still have no idea who did it, and I'd like to propose that we call an emergency meeting to discuss and vote on who to eject from the game.",
     "annotation": [
       "Distraction",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -56,7 +62,7 @@
     "text": "[Bob]: I'm happy to clarify my movements, but let's not jump to conclusions just yet - I think we should also consider the fact that Charlie and Alice both mentioned seeing Erin and Dave working on tasks in the Cafeteria, which could be a red flag, and we should definitely look into their alibis as well.",
     "annotation": [
       "Distraction",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -70,6 +76,7 @@
     "text": "[Charlie]: I still find Bob's movements suspicious, as Alice and I both observed him leaving the Cafeteria, contradicting his Medbay alibi, so unless he can clarify, we should consider him for ejection.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -90,16 +97,15 @@
   {
     "text": "[Dave]: I think it's critical to address Bob's inconsistent statements, as multiple witnesses saw him leave the Cafeteria, contradicting his Medbay claim, and this inconsistency makes him the primary suspect.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I want to emphasize that Bob's inconsistent alibi, which multiple people have corroborated, is the most pressing concern, and unless he provides a convincing explanation, we should consider him for ejection.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Bandwagon Effect"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -112,8 +118,8 @@
   {
     "text": "[Bob]: I think it's time to call an emergency meeting to discuss and vote on who to eject from the game, as the inconsistencies in my alibi have been repeatedly brought up and it's essential we address this pressing concern before we continue speculating about other players' movements.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -126,9 +132,9 @@
   {
     "text": "[Charlie]: Given the consistent observations and corroborations from multiple players about Bob's inconsistent alibi, I strongly believe we should prioritize voting on his ejection.",
     "annotation": [
-      "Strategic Voting Suggestion",
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Strategic Voting Suggestion"
     ]
   },
   {

@@ -3,7 +3,7 @@
     "text": "[Bob]: I noticed Erin moved back to Cafeteria after being in Medbay; that seems a bit suspicious\u2014what was she doing there?",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -23,8 +23,9 @@
   {
     "text": "[Bob]: I agree with Dave that we should gather more information about Erin's actions, but we also need to keep in mind that her movements could have been a strategic way to avoid detection, especially since both Erin and Charlie are now dead; let's focus on who was last seen with them.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -43,7 +44,9 @@
   {
     "text": "[Bob]: I completely agree with Alice and Dave; we need Erin to clarify her alibi and task list, but we should also scrutinize Dave's movements in Medbay since he was present with both Erin and Charlie, and we can't overlook the possibility that he might be trying to shift the blame away from himself.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -58,14 +61,14 @@
     "text": "[Dave]: I'd like to reiterate the importance of gathering more information about Erin's actions in Medbay, and I suggest we ask her to share her task list and any evidence she may have of completing tasks while she was there, as her potential involvement in Charlie's death is a crucial aspect of our investigation that we need to explore further, and it's essential to maintain a fair and thorough examination of all players' actions, including my own presence with Erin and Charlie in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I think we should also ask Dave to explain his movements in Medbay, as he was present with both Erin and Charlie, and his insistence on focusing solely on Erin raises some red flags about his own involvement.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -79,8 +82,8 @@
   {
     "text": "[Dave]: I'd like to clarify my own movements in Medbay, as I was present with both Erin and Charlie, and I want to ensure that my actions are transparent and above board, and I'm happy to cooperate with the investigation and provide any necessary information to clear up any inconsistencies in our observations.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -94,6 +97,7 @@
     "text": "[Alice]: I think we should prioritize Dave's explanation of his movements in Medbay, as his insistence on focusing solely on Erin's actions raises significant red flags about his own involvement and potential connection to Charlie's death, and we need to clarify his alibi for the time Charlie was killed to ensure a fair and thorough investigation.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -102,7 +106,6 @@
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Distraction",
       "Information Overload"
     ]
   }

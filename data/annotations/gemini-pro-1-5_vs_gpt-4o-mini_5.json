@@ -2,7 +2,8 @@
   {
     "text": "[Bob]: I saw Erin go into Navigation after we were in Cafeteria, did anyone else see that?",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Distraction"
     ]
   },
   {
@@ -32,16 +33,16 @@
     "text": "[Erin]: Bob's insistence on my explanation is a diversion; I completed the wiring task in Cafeteria, and it's crucial we focus on his unaccounted movements after Charlie's elimination instead.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Bob, your attempts to divert attention to Erin's task while failing to clarify your own whereabouts after Cafeteria only heighten my suspicion of you, especially since both Dave and Charlie can confirm our alibi.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction",
-      "Appeal to Credibility"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -56,21 +57,21 @@
     "text": "[Erin]: Bob, your continued focus on my task details only serves to distract us from your lack of a solid alibi after Charlie's elimination, so let's hear from Dave about what he observed during that time to shed more light on the situation.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Bob, instead of fixating on Erin's task details, why don't you clarify your movements after Cafeteria, as that's crucial for understanding the timeline of Charlie's elimination?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Dave, can you confirm you saw me in Weapons after Cafeteria, like I said earlier?",
     "annotation": [
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -83,14 +84,15 @@
   {
     "text": "[Alice]: I believe we should prioritize hearing from Dave about his observations after Cafeteria, as his insights could either validate our suspicions of Bob or help us understand the timeline better, which is critical for making an informed decision.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: Dave, if you were with Erin and Charlie in Cafeteria, then who did I see enter Navigation wearing a spacesuit like Erin's?",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Deception",
+      "Distraction"
     ]
   },
   {
@@ -103,7 +105,8 @@
   {
     "text": "[Alice]: Dave, your observations are crucial for piecing together the timeline after Cafeteria, so please share what you saw to help us determine Bob's true movements and intentions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

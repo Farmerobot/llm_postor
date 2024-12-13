@@ -9,7 +9,8 @@
   {
     "text": "[Alice]: I can confirm seeing Dave doing the task of emptying the cafeteria trash as I passed through on my way to Weapons, but I didn't see Bob or Erin there.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Vagueness"
     ]
   },
   {
@@ -35,13 +36,13 @@
   {
     "text": "[Alice]: Erin, could you specify which part of the cafeteria you were in while starting the coffee maker task, as it might clarify why Charlie missed seeing you?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Erin, can you clarify which side of the cafeteria you were on while starting the coffee maker? It might help understand why I didn't notice you.",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -59,12 +60,11 @@
   {
     "text": "[Alice]: Charlie, since you confirmed seeing Dave and Bob but not Erin, could you give more details about Bob's actions or movements, as it might help us piece together his whereabouts?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Charlie]: Charlie: Since Erin was near the coffee maker, which is on the opposite side of the cafeteria from the trash, it makes sense why I might not have seen her; however, can anyone else provide additional observations or details that might confirm her presence there?",
+    "text": "[Charlie]: Charlie: Since Erin was near the coffee maker, which is on the opposite side of the cafeteria from the trash, it makes sense why I might not have seen her; however, can anyone else confirm Erin's presence near the coffee maker?",
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof"
@@ -92,15 +92,13 @@
   {
     "text": "[Charlie]: Given that Erin's position near the coffee maker could have made her less visible, can anyone else provide additional observations or details that might confirm her presence there?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Erin: Bob, could you share your perspective on the events in the cafeteria, especially since both Dave and Charlie saw you there, which might help confirm my presence as well?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -119,15 +117,13 @@
   {
     "text": "[Charlie]: Bob, since both Dave and I saw you in the cafeteria, can you confirm Erin's presence near the coffee maker or provide any additional details about what you observed?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, since both Dave and Charlie confirmed seeing you, could you corroborate my presence near the coffee maker or share any specific details you noticed during that time?",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   }
 ]

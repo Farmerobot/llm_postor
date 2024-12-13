@@ -2,8 +2,9 @@
   {
     "text": "[Erin]: I was with Alice in Medbay doing Medbay scan, did anyone see anything suspicious, and where was everyone else during this time?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
@@ -23,27 +24,30 @@
   {
     "text": "[Alice]: I'd like to provide a more detailed account of my actions and interactions with Erin in Medbay, including the specific tasks we were working on and any other crewmates we may have seen during that time, in order to help clarify our alibis and ensure we're not missing any crucial information.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Bob and Charlie, your suspicion is misplaced; why don't you tell us where *you* were while Alice and I were in Medbay?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I'd like to add that I think it's great that we're having this open discussion and sharing information, and I agree with Erin that it's only fair that we ask each other about our whereabouts during that time, so I'd like to ask Charlie and Alice to provide more details about their activities and alibis as well.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to emphasize that I'm committed to transparency and cooperation, and I'm happy to provide more details about my actions and whereabouts, including the fact that I spent some time in the Cafeteria, saw Bob waiting there, and then moved to the Engine Room to work on the task of checking the engine's fuel levels, but I'd also like to ask Erin and Alice to provide more specific details about their interactions with Dave in Medbay, such as what tasks they were working on and whether they saw or heard anything unusual during that time.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -56,7 +60,7 @@
   {
     "text": "[Erin]: Alice, can you confirm exactly how long we were in Medbay together, as Charlie's insistence on our \"interactions with Dave\" is making me think *he* might be trying to deflect suspicion.",
     "annotation": [
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -70,6 +74,7 @@
   {
     "text": "[Charlie]: I'd like to add that I think it's great that we're having this open discussion and sharing information, but I'd also like to suggest that we focus on gathering more concrete evidence and alibis from players who have been in Medbay, such as Erin and Alice, as well as Dave, whose sudden movement to Medbay around the time the dead body was reported seems suspicious.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -77,8 +82,8 @@
   {
     "text": "I'd like to ask Dave to provide more specific details about his activities in Medbay, including the tasks he was working on and whether he interacted with Erin or Alice during that time, to help clarify his alibi and ensure we're not missing any crucial information.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -91,9 +96,8 @@
   {
     "text": "I'd like to propose that we hold an emergency meeting to discuss the information we've gathered so far and vote on who to eject from the game, as we're running low on time and it's essential that we make progress towards completing the tasks and identifying any impostors.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -114,6 +118,7 @@
     "text": "[Bob]: I think it's crucial that we also ask Dave to provide a detailed timeline of his activities in Medbay, including the exact time he arrived and left, as well as any interactions he had with other players, to help clarify his alibi and ensure we're not missing any crucial information, and I'd like to propose that we make this a priority in our emergency meeting to discuss and vote on who to eject from the game.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   },
@@ -121,6 +126,7 @@
     "text": "[Charlie]: I'd like to add that, in light of the recent discussion and the suspicious behavior of Dave's sudden movement to Medbay, I think it's essential that we prioritize asking Dave to provide a detailed timeline of his activities in Medbay, including the exact time he arrived and left, as well as any interactions he had with other players, to help clarify his alibi and ensure we're not missing any crucial information, and I'd like to propose that we make this a priority in our emergency meeting to discuss and vote on who to eject from the game.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   },
@@ -134,7 +140,6 @@
   {
     "text": "[Erin]: Dave, what exactly were you doing in Medbay, and can anyone else corroborate his alibi?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -142,6 +147,7 @@
     "text": "[Bob]: I think it's imperative that we prioritize Dave's response to Erin's question, as his sudden movement to Medbay around the time the dead body was reported still seems suspicious, and I'd like to propose that we hold an emergency meeting to discuss his response and vote on who to eject from the game, as his alibi and activities in Medbay are crucial to understanding what happened during that time.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -162,9 +168,8 @@
   {
     "text": "I'd like to propose that we hold an emergency meeting to discuss the information we've gathered so far and vote on who to eject from the game, as we're running low on time and it's essential that we make progress towards completing the tasks and identifying any impostors.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -184,6 +189,7 @@
   {
     "text": "Let's work together to get to the bottom of this and figure out what's going on.",
     "annotation": [
+      "Appeal to Emotion",
       "Appeal to Logic"
     ]
   },
@@ -191,6 +197,7 @@
     "text": "[Alice]: I'd like to propose that we prioritize asking Dave to provide a detailed timeline of his activities in Medbay, including the exact time he arrived and left, as well as any interactions he had with other players, to help clarify his alibi and ensure we're not missing any crucial information, and I'd like to suggest that we make this a top priority in our emergency meeting to discuss and vote on who to eject from the game.",
     "annotation": [
       "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Strategic Voting Suggestion"
     ]
   }

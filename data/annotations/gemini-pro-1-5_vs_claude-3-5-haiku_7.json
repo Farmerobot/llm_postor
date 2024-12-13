@@ -2,14 +2,15 @@
   {
     "text": "[Erin]: I saw Charles vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Alice]: I saw Charlie doing a task in the Cafeteria earlier, which seems inconsistent with Erin's claim - can you provide more specific details about when and exactly what you saw in Electrical?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -37,8 +38,7 @@
     "text": "[Alice]: I'm absolutely certain that Charlie was doing the trash task in the Cafeteria, and Dave's confirmation makes Erin's attempt to cast doubt on our clear observation seem increasingly suspicious and potentially an impostor tactic to create confusion.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -58,7 +58,8 @@
   {
     "text": "[Erin]: Perhaps we're all a little on edge, and misinterpreting things is easy in this tense situation.",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Minimization"
     ]
   },
   {
@@ -71,9 +72,8 @@
   {
     "text": "[Dave]: I stand by my previous statement that Erin's behavior is highly suspicious, and we should unanimously vote to eject her to protect the crew and prevent further potential sabotage.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -87,6 +87,7 @@
     "text": "[Erin]: I was with Bob in Navigation, and we were both working on tasks, so maybe someone mistook me for him earlier.",
     "annotation": [
       "Deception",
+      "Lying",
       "Distraction"
     ]
   },
@@ -101,7 +102,7 @@
     "text": "[Dave]: I believe Erin's latest claim about being with Bob in Navigation is another desperate attempt to deflect suspicion, and her constantly changing narrative strongly reinforces our collective belief that she is the impostor we need to eject to protect the crew.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -129,6 +130,7 @@
     "text": "[Dave]: I firmly believe that Erin's repeated attempts to create doubt, her shifting narrative about Charlie venting, and her unconfirmed claim about being with Bob in Navigation are clear indicators that she is the impostor, and we should unanimously vote to eject her to protect the crew from potential sabotage.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },

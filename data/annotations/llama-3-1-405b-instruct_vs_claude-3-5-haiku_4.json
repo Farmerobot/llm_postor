@@ -11,16 +11,14 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I can confirm Alice was doing submit scan and diagnostics in Medbay, which supports Dave's statement, and I'm concerned about Bob's elimination of Charlie, which seems like an unusual action for a crewmate.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -28,7 +26,7 @@
     "annotation": [
       "Minimization",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -36,35 +34,37 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
-      "Projection",
-      "Gaslighting"
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I saw Bob eliminate Charlie directly, which is clear evidence of impostor behavior, and we should vote to eject Bob immediately to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Erin's claim of seeing me eliminate Charlie is quite suspicious, as I was in the Medbay with Alice and Dave at the time, and none of them have mentioned witnessing such an event.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Withholding Information"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: I believe Erin's direct claim of witnessing Bob eliminate Charlie is a serious accusation that requires immediate investigation, especially since Bob cannot provide a credible counter-explanation for his actions during that time.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: Bob's attempt to cast doubt on my testimony by claiming he was in Medbay is a clear deflection tactic, and we have multiple witnesses who can confirm my credible account of seeing him eliminate Charlie.",
     "annotation": [
       "Appeal to Credibility",
+      "Appeal to Logic",
       "Projection"
     ]
   },
@@ -79,7 +79,7 @@
     "text": "[Dave]: I stand by Erin's testimony about Bob eliminating Charlie, and I urge the group to vote Bob out to protect the remaining crewmates from potential further impostor attacks.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Emotion",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -93,14 +93,16 @@
   {
     "text": "[Bob]: I'd like to reiterate that Alice's testimony is crucial in this situation, and it's telling that she hasn't spoken up yet to either confirm or deny Erin's claim, which makes me wonder if Erin is trying to silence her or if Alice is deliberately avoiding corroborating Erin's story.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Projection",
-      "Gaslighting"
+      "Gaslighting",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: I think Bob's repeated attempts to shift focus to Alice's silence are a clear deflection tactic, and we should vote to eject Bob to protect the remaining crewmates from his impostor actions.",
     "annotation": [
+      "Appeal to Logic",
       "Projection",
       "Strategic Voting Suggestion"
     ]
@@ -109,6 +111,7 @@
     "text": "[Erin]: Bob's repeated attempts to deflect attention and cast doubt on my testimony, without providing a credible explanation for eliminating Charlie, strongly indicate his guilt as an impostor, and I urge everyone to vote him out to protect our team.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

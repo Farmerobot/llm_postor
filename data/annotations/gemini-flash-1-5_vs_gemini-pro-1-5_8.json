@@ -3,28 +3,29 @@
     "text": "[Erin]: I was in the cafeteria the whole time, and I didn't see anyone enter or leave, but I did notice Alice was gone for a surprisingly long time.",
     "annotation": [
       "Vagueness",
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: Erin, you said you didn't see anyone enter or leave the cafeteria, but you noticed Alice was gone; were you watching the door or not?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Erin, if you were in the cafeteria the whole time as you claim, how could you possibly have noticed Alice was gone?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Erin, your story is falling apart; how did you notice I was gone if you never saw me leave the cafeteria?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -37,15 +38,16 @@
   {
     "text": "[Charlie]: Erin, you're deflecting; if you were in the cafeteria as you claim, how could you know Alice was gone for a \"surprisingly long time\" without seeing her leave?",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: Erin, your illogical statements about the cafeteria make me even more certain you're the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Gaslighting"
     ]
   },
   {
@@ -66,22 +68,24 @@
   {
     "text": "[Charlie]: Erin, you're still avoiding the question about how you knew Alice was gone for a long time if you didn't see her leave the cafeteria, which makes you look suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Erin, your attempts to deflect by focusing on Dave's death are failing because you still haven't explained how you knew Alice was gone for a long time without seeing her leave the cafeteria.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Erin, your continued refusal to explain the impossible contradiction in your story makes you look extremely suspicious, so I'm voting to eject you.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -94,15 +98,17 @@
   {
     "text": "[Charlie]: Erin, you're still deflecting and avoiding the core question about your contradictory statements regarding Alice's absence and your presence in the cafeteria, which makes you look suspicious.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: Erin, you're desperately trying to shift the focus away from your contradictory statements about the cafeteria, which strongly suggests you're the impostor.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Gaslighting"
     ]
   },
   {
@@ -131,7 +137,10 @@
     "text": "[Bob]: Erin, Charlie and I were near Dave when he died, and I saw you kill him, so I urge everyone to vote to eject you now.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Urgency",
+      "Strategic Voting Suggestion",
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -139,6 +148,7 @@
     "annotation": [
       "Appeal to Logic",
       "Bandwagon Effect",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

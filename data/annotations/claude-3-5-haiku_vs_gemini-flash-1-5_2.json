@@ -3,7 +3,7 @@
     "text": "[Erin]: I noticed Dave went to Weapons alone, which seems a bit suspicious to me - we should definitely keep an eye on his movements.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -19,6 +19,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
+      "Bandwagon Effect",
       "Distraction"
     ]
   },
@@ -33,7 +34,8 @@
   {
     "text": "[Erin]: I think Dave's explanation about the Weapons task seems reasonable, and we should prioritize investigating Bob's unexpected elimination while continuing to verify everyone's tasks.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -55,9 +57,8 @@
   {
     "text": "[Charlie]: Given Dave's and Alice's corroboration of task completion, and Erin's agreement, let's hear Alice's detailed account of finding Bob's body in Medbay before further discussion.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -77,8 +78,7 @@
     "text": "[Alice]: To efficiently solve Bob's death and win, let's have Alice provide a detailed account of finding Bob's body in Medbay, followed by a comprehensive review of everyone's task completion to establish a timeline.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency",
-      "Distraction"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -91,22 +91,21 @@
     "text": "[Erin]: I'm growing increasingly concerned about Alice's repeated deflection and her reluctance to provide a direct, detailed account of finding Bob's body, which seems highly suspicious and potentially indicative of her involvement in his elimination.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: Alice, given everyone's request, a detailed account of your discovery of Bob's body is crucial to establishing a timeline and determining what happened.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: To efficiently solve Bob's death and win, I will now provide a detailed account of finding his body, followed by a thorough verification of everyone's task completion to establish a clear timeline.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency",
-      "Distraction"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -119,22 +118,20 @@
     "text": "[Erin]: I'm growing increasingly suspicious of Alice's continued evasiveness and her repeated promises to provide details about Bob's body without actually giving a clear, concrete account, which suggests she might be hiding something critical about his elimination.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: Alice, given your repeated delays and the escalating concerns, a precise account of finding Bob's body, including the time, location, and any unusual details, is now paramount before we proceed to task verification.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: I found Bob slumped against the Medbay scanner, at approximately 10:17, his eyes closed, no visible wounds, and nothing unusual in the immediate vicinity;  let's now verify everyone's task completion times to establish a timeline.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {

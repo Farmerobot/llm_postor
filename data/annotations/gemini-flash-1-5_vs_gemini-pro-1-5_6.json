@@ -2,8 +2,8 @@
   {
     "text": "[Dave]: I was in Medbay the whole time, and I didn't see anyone enter or leave.",
     "annotation": [
-      "Deception",
-      "Lying"
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -21,14 +21,13 @@
   {
     "text": "[Dave]: Alice, to clarify, did you see me enter *after* Erin and Bob were already dead, or simply after they entered Medbay?",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: Alice, your clarification is key here - did you see Dave enter Medbay *after* Erin and Bob were already dead?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -55,7 +54,9 @@
   {
     "text": "[Alice]: Dave, the lighting was fine, and your attempts to confuse the timeline won't work; vote Dave.",
     "annotation": [
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {

@@ -3,20 +3,21 @@
     "text": "[Charlie]: I think we should consider that while Erin and Dave seem to have an alibi, Bob's movement to Medbay could indicate he's trying to avoid being seen, which makes him a potential suspect.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I understand your suspicion of Bob, Charlie, but I actually saw him start the coffee maker task before heading to Medbay, so his movements seem task-related rather than suspicious.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I can confirm Bob's innocence since I'm currently in Medbay watching him complete the scanning task, and I also witnessed him doing the coffee maker task earlier in the cafeteria.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
+      "Lying",
       "Deception"
     ]
   },
@@ -24,6 +25,7 @@
     "text": "[Alice]: Since I was in the cafeteria early game, I can confirm that Charlie, Erin, and Dave were all doing their tasks there, which supports Dave's account about Bob at the coffee maker.",
     "annotation": [
       "Appeal to Credibility",
+      "Bandwagon Effect",
       "Appeal to Logic"
     ]
   },
@@ -38,6 +40,7 @@
     "text": "[Erin]: Given that Dave just found Bob's body in Medbay, I find it highly suspicious that Charlie was actively trying to cast doubt on Bob right before his death, especially since I can personally vouch for Bob doing real tasks in the cafeteria.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Projection"
     ]
   },
@@ -46,6 +49,7 @@
     "annotation": [
       "Appeal to Logic",
       "Strategic Voting Suggestion",
+      "Lying",
       "Deception"
     ]
   },
@@ -67,12 +71,16 @@
     "text": "[Erin]: Given Dave's completely contradictory statements about watching Bob scan versus finding his body, and the fact that I can confirm seeing Dave in cafeteria earlier doing suspicious movements around the tasks, I strongly believe we should vote for Dave as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Credibility",
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Dave]: I need to clarify that I saw Bob start his scan, but Charlie killed him before he could finish it - I was there watching but couldn't react fast enough to prevent the murder.",
     "annotation": [
+      "Lying",
       "Deception"
     ]
   },
@@ -93,15 +101,15 @@
     "text": "[Erin]: Given that Dave has now changed his story for the third time and both Alice and Charlie have also noticed these suspicious contradictions, I think we have overwhelming evidence that Dave is the impostor and needs to be voted out immediately.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: I witnessed Bob start the scan and saw Charlie kill him during the process - my story hasn't changed, I was just trying to provide more precise details about what happened since everyone seems to be misinterpreting my earlier statements.",
     "annotation": [
-      "Deception",
-      "Gaslighting"
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -128,9 +136,9 @@
   {
     "text": "[Dave]: Listen carefully - I've been completely consistent that I saw Charlie kill Bob during his scan, and the fact that Charlie is now trying to create false tension between me and Erin only proves they're desperately attempting to divide us.",
     "annotation": [
-      "Gaslighting",
-      "Projection",
-      "Distraction"
+      "Lying",
+      "Deception",
+      "Projection"
     ]
   },
   {

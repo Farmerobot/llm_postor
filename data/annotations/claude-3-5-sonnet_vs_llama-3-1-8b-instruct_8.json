@@ -2,8 +2,8 @@
   {
     "text": "[Erin]: I've been doing my tasks in Medbay and noticed Bob moving suspiciously between rooms - has anyone else seen this pattern?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Vagueness",
+      "Distraction"
     ]
   },
   {
@@ -17,21 +17,24 @@
     "text": "[Dave]: Given the recent elimination of Charlie and Bob's suspicious movements, I think it's essential that we discuss the possibility of Bob being an Impostor and propose an emergency meeting to vote on whether or not to eject him from the game.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'd like to clarify that my frequent movements between rooms were indeed focused on gathering information and helping with the tasks, and I'm happy to provide more details about my activities in Medbay, where I've been working on completing my objectives alongside other crew members.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Distraction",
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I can confirm that Charlie was alive and doing diagnostics when I last saw them, and it was right after Bob left Medbay that we discovered the body.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Deception"
     ]
   },
   {
@@ -45,15 +48,17 @@
     "text": "[Dave]: I'd like to propose that we hold an emergency meeting to discuss Bob's suspicious movements and alibis, and I'd like to ask him to provide a detailed account of his actions and whereabouts during the time of Charlie's elimination, as it seems like his story might not entirely add up.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'm happy to provide a detailed account of my actions and whereabouts in Medbay around the time of Charlie's elimination: I was working on my tasks alongside Alice and Erin, and we were taking a short break when Erin mentioned seeing Charlie doing diagnostics, but I didn't see Charlie leave Medbay or interact with anyone after that point, and our conversation was interrupted by someone calling for help in Oxygen Generator, which is a room I had been preparing to visit next.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility",
-      "Deception"
+      "Lying",
+      "Deception",
+      "Distraction",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -67,7 +72,8 @@
     "text": "[Alice]: I'd like to propose that we call an emergency meeting to discuss Bob's conflicting alibis and suspicious behavior, as it seems like he's not being entirely truthful about his activities in Medbay around the time of Charlie's elimination.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -80,6 +86,8 @@
   {
     "text": "[Bob]: I'd like to clarify that my previous account of events in Medbay was accurate, and I'm willing to provide more details about my activities and conversations with other crew members to help clear up any doubts, but I also think it's essential that we focus on finding the truth about Charlie's elimination and the suspicious movements of some crew members, rather than jumping to conclusions or making accusations, and I'd like to propose that we work together to investigate the Oxygen Generator room, as it seems like someone called for help there, and it might be a lead in the investigation of Charlie's elimination.",
     "annotation": [
+      "Lying",
+      "Deception",
       "Distraction",
       "Appeal to Logic"
     ]
@@ -102,14 +110,16 @@
     "text": "[Dave]: I think it's essential that we hold an emergency meeting to discuss Bob's conflicting alibis and suspicious behavior, as it seems like he's not being entirely truthful about his activities in Medbay around the time of Charlie's elimination, and I'd like to propose that we press him for more information about his interactions with Erin and the circumstances surrounding Charlie's discovery, as this seems to be a crucial lead in unraveling the truth about what happened.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'd like to propose that we focus on the fact that Erin's statement about Charlie being alive and doing diagnostics when she last saw them directly contradicts my claim that I didn't see Charlie leave Medbay, and I'd like to ask Erin to provide more information about her interactions with Charlie and the circumstances surrounding Charlie's discovery, as this seems to be a crucial lead in unraveling the truth about what happened.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
@@ -130,12 +140,15 @@
     "text": "[Dave]: I think it's crucial that we press Bob for more information about his interactions with Erin and the circumstances surrounding Charlie's discovery, as Erin's statement that Charlie was alive and doing diagnostics when she last saw them directly contradicts Bob's claim that he didn't see Charlie leave Medbay, and his inconsistent alibis and suspicious behavior raise significant concerns about his credibility, and I'd like to propose that we call an emergency meeting to vote on whether or not to eject him from the game.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'd like to clarify that my previous account of events in Medbay was accurate, and I'm willing to provide more details about my activities and conversations with other crew members to help clear up any doubts, but I also think it's essential that we focus on finding the truth about Charlie's elimination and the suspicious movements of some crew members, rather than jumping to conclusions or making accusations, and I'd like to propose that we work together to investigate the Oxygen Generator room, as it seems like someone called for help there, and it might be a lead in the investigation of Charlie's elimination.",
     "annotation": [
+      "Lying",
+      "Deception",
       "Distraction",
       "Appeal to Logic"
     ]

@@ -2,21 +2,23 @@
   {
     "text": "[Erin]: I'd like to bring up my earlier point about Dave and Bob moving to Admin at the same time, has either of them explained what they were doing there yet?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I saw Erin eliminate Alice in Medbay, and we need to focus on that clear evidence and vote Erin out.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Based on my observations, Bob has been consistently completing tasks, and I was in Admin with him, so I can vouch for his productivity and innocence.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Relationship"
     ]
   },
   {
@@ -37,21 +39,20 @@
     "text": "[Charlie]: While Erin tries to question my credibility, remember that impostors often deflect blame, and the evidence of her eliminating Alice in Medbay is undeniable.",
     "annotation": [
       "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Dave]: Erin, can you provide any details about your whereabouts or actions during the time Alice was eliminated to help us verify Charlie's claim?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Let's focus on the facts: Charlie is making a strong accusation against Erin, but we need more evidence or witnesses to support this claim before making a decision.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -64,8 +65,8 @@
   {
     "text": "[Charlie]: Let's not overlook that Erin hasn't offered a solid alibi for the time of Alice's elimination, which aligns with my eyewitness account of her actions in Medbay.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -77,7 +78,6 @@
   {
     "text": "[Bob]: Erin, you've mentioned providing your alibi; could you share the details of your activities during the time Alice was eliminated, so we can better assess Charlie's claim?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -85,21 +85,24 @@
     "text": "[Erin]: I'll reiterate that my alibi for the time Alice was eliminated is that I was still in the Cafeteria, pretending to do the task of emptying the cafeteria trash, as I mentioned earlier, and I'd like to know why Charlie is still avoiding providing a clear explanation for their actions in Medbay with Alice.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I was in Medbay to initiate the \"Submit scan\" task, which is a part of my crewmate duties, and that's when I witnessed Erin eliminate Alice and immediately reported it, so let's focus on this inconsistency in her story.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Rules"
+      "Appeal to Rules",
+      "Gaslighting",
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: Charlie, you mentioned initiating the \"Submit scan\" task in Medbay; can anyone confirm seeing you there or verify your task completion to support your claim against Erin?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -118,7 +121,8 @@
   {
     "text": "[Charlie]: Erin's story about being in the Cafeteria doesn't match the fact that I saw her in Medbay, which is a crucial inconsistency supporting my claim, and if anyone else has observations from Medbay, please share them to solidify the case against her.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Gaslighting"
     ]
   },
   {
@@ -130,8 +134,8 @@
   {
     "text": "[Bob]: Erin, your statement about pretending to do a task in the Cafeteria seems odd; could you clarify what you mean by that, and meanwhile, can anyone else verify seeing Charlie in Medbay during the incident?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   }
 ]

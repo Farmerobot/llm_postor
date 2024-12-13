@@ -2,34 +2,37 @@
   {
     "text": "[Erin]: I saw Alice working on the wiring in the cafeteria, and I didn't see Dave leave; did anyone else see him go anywhere after that?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I can confirm I went to Weapons to work on the asteroid task, and yes, I also saw Alice at the wiring panel in cafeteria before I left.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I was in the cafeteria the whole time and can confirm seeing Alice at the wiring panel, plus I saw Dave heading towards Weapons just like he said.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I was doing the trash task in cafeteria and can confirm everyone's stories - I saw Alice on wiring, Dave heading to Weapons, and Charlie at the coffee maker.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Erin]: I'm glad we can corroborate each other's stories about Alice and Dave's whereabouts, but we need to focus on who might have had the opportunity to eliminate her while everyone else was occupied with tasks.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -42,8 +45,8 @@
   {
     "text": "[Charlie]: Since I was the one who found Alice's body, I should mention that she collapsed almost immediately after Dave left, and while Bob, Erin, and I were all occupied with visible tasks, I didn't notice anyone else enter the cafeteria during that brief window.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -55,15 +58,15 @@
   {
     "text": "[Erin]: It's concerning that Alice's death coincided with Dave's departure from the cafeteria, but focusing solely on him might distract us from other possibilities; let's thoroughly investigate who else could have been present unnoticed.",
     "annotation": [
-      "Distraction",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I understand the timing looks suspicious, but if I were the impostor, eliminating Alice when three people just witnessed me leave would be an incredibly risky move - someone could have easily slipped in while everyone was focused on their tasks.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Emotion"
+      "Minimization"
     ]
   },
   {
@@ -83,7 +86,8 @@
   {
     "text": "[Erin]: While Dave's alibi is strong, the lack of confirmed witnesses to the cafeteria during the crucial timeframe before Alice's death leaves room for doubt, and we should explore alternative explanations before jumping to conclusions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -96,8 +100,8 @@
   {
     "text": "[Charlie]: I want to be crystal clear - from my position at the coffee maker, which directly faces the main entrance, I had an unobstructed view of everyone's movements while making coffee, and I'm absolutely certain no one else entered or left between Dave's departure and finding Alice's body.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -110,14 +114,15 @@
   {
     "text": "[Erin]: While Dave's timing is suspicious,  let's carefully examine Charlie and Bob's claims of uninterrupted visibility, considering the potential for blind spots or misinterpretations of their positions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: The fact that Charlie first claimed to \"find\" Alice's body but now says he had perfect visibility of the cafeteria the whole time is a major contradiction that we can't ignore.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {

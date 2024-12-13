@@ -2,9 +2,8 @@
   {
     "text": "[Dave]: I noticed that Alice was doing tasks in the cafeteria, but I wonder why she moved to start the coffee maker instead of completing her wiring task; that seems a bit suspicious to me, and we should also confirm everyone's tasks since we have a few players here.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -31,8 +30,8 @@
   {
     "text": "[Dave]: I find it interesting that both Erin and Charlie are so quick to defend Alice, which makes me wonder if they're all in cahoots; perhaps we should keep a closer eye on their movements and see if any of them slip up.",
     "annotation": [
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Gaslighting"
     ]
   },
   {
@@ -60,15 +59,15 @@
     "text": "[Dave]: It's curious how quickly Erin and Charlie have rallied to defend Alice without providing any substantial evidence of their own actions; perhaps they're working together to protect her after she eliminated Bob.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Based on the clear timeline of events and multiple witness accounts, I think we have enough evidence to conclude that Dave killed Bob after being left alone with him, and his attempts to create confusion by accusing me and others only further confirm his guilt.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -88,7 +87,7 @@
   {
     "text": "[Dave]: I find it alarming that Erin and Charlie are so eager to dismiss any doubts about Alice, as their quick defense could indicate a coordinated effort to mislead us; we should carefully analyze everyone's actions instead of jumping to conclusions.",
     "annotation": [
-      "Projection",
+      "Gaslighting",
       "Distraction"
     ]
   },
@@ -108,13 +107,14 @@
   {
     "text": "[Charlie]: Dave's pattern of deception is clear - he started with a false accusation about Alice at the coffee maker, then tried to create conspiracy theories when multiple witnesses proved him wrong, and most importantly, he was the only one left with Bob before Bob's death.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: It's interesting how Alice claims to have been at the wiring task the whole time, yet she was the first to find Bob's body; perhaps she was just waiting for the right moment to report it, and we should really consider if this is a cover-up rather than a straightforward accusation against me.",
     "annotation": [
-      "Projection",
+      "Gaslighting",
       "Distraction",
       "Shifting the Burden of Proof"
     ]
@@ -136,7 +136,7 @@
     "text": "[Charlie]: Dave's increasingly desperate attempts to question basic facts that multiple witnesses observed firsthand - like Alice being at wiring and Bob at the coffee maker - only reinforces that he's trying to cover up killing Bob after being left alone with him.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Appeal to Credibility"
     ]
   }
 ]

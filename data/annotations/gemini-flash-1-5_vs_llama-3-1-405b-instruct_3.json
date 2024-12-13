@@ -8,15 +8,15 @@
   {
     "text": "[Bob]: I've made some progress on the scan in Medbay, and everything looks normal so far; has anyone else made any progress on their tasks or seen anything suspicious, and Alice, did you finish emptying the cafeteria trash without noticing anything unusual?",
     "annotation": [
-      "Vagueness",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
     "text": "[Dave]: I'd like to confirm that Alice did finish emptying the cafeteria trash, as I saw her completing the task, and I also noticed that Erin was doing the same task, which still seems a bit suspicious to me, Bob, can you elaborate on what kind of scan you're doing in Medbay that's taking so long?",
     "annotation": [
       "Appeal to Credibility",
-      "Projection",
       "Shifting the Burden of Proof"
     ]
   },
@@ -30,27 +30,27 @@
   {
     "text": "[Alice]: Dave, your account of finding Charlie's body is crucial; can you describe his exact position and any unusual details to help us understand what happened?",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I'd like to thank Dave for reporting the dead body and Alice for asking follow-up questions; Dave, can you please provide more details about Charlie's body position and any other observations you made, as this information will be crucial in helping us figure out who is responsible?",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Relationship",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I'd like to provide more details about finding Charlie's body, as requested by Alice and Bob; Charlie's body was in the same room where we were all completing tasks, and I didn't notice anything unusual until I finished my task and looked around, and what struck me as odd was that his body was positioned in a way that suggested he was trying to access the vent system, which might imply that the impostor was trying to make it look like a task-related accident.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Vagueness",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: I'd like to ask Dave to clarify if he remembers the exact timing of when he finished his task and found Charlie's body, as this could help us narrow down the timeframe for when the impostor struck and potentially identify any suspicious activity or inconsistencies in our alibis.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -58,14 +58,16 @@
     "text": "[Alice]: Bob, your vague Medbay alibi and defensive response to my earlier question are concerning, especially given Dave's report about Charlie's body being near the vents.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Bob]: I'd like to address Alice's concerns about my Medbay alibi; I was indeed in Medbay working on the scan, and I didn't see anyone else around, which is why I didn't think to mention it earlier, and I'd appreciate it if Alice could clarify if she remembers seeing anyone else around the cafeteria or Medbay areas around the time I was working on my task.",
     "annotation": [
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
       "Vagueness",
-      "Shifting the Burden of Proof"
+      "Lying"
     ]
   },
   {
@@ -78,14 +80,15 @@
   {
     "text": "[Erin]: I'd like to follow up on Dave's proposal and my own earlier suggestion by sharing my current task and location: after completing the cafeteria trash task, I moved to the Life Support room to start working on the oxygen generator task, and I'd like to ask everyone else to share their current task and location as well, so we can get a clearer picture of everyone's whereabouts.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: Bob, your continued vague responses regarding your Medbay activities are raising suspicions, especially given the proximity of the vents to where Charlie was found.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -93,34 +96,35 @@
     "annotation": [
       "Appeal to Emotion",
       "Shifting the Burden of Proof",
-      "Vagueness"
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I'd like to point out that Bob's defensiveness and vagueness about his Medbay activities are indeed suspicious, and I think we should consider the possibility that he might be the impostor, especially given the concerning coincidence of his proximity to the vents where Charlie's body was found.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Erin]: I think it's time for us to take a closer look at Bob's alibi and consider the evidence against him, as his continued vagueness and defensiveness, combined with his proximity to the vents where Charlie's body was found, make a strong case for him being the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Alice]: Bob, your repeated insistence on being in Medbay near the vents, coupled with your vague explanations, makes you a prime suspect in Charlie's death; let's vote him out.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'd like to remind everyone that we're rushing to judgment based on circumstantial evidence and vague suspicions, and I propose that we take a step back to re-examine the task assignments and locations of all players, including Dave's unclear report of finding Charlie's body, before making any hasty decisions about who to eject from the game.",
     "annotation": [
-      "Appeal to Emotion",
+      "Appeal to Logic",
       "Distraction",
       "Shifting the Burden of Proof"
     ]
@@ -128,16 +132,17 @@
   {
     "text": "[Dave]: I think it's clear that Bob is trying to deflect suspicion by pointing fingers at others and creating confusion, but his alibi is still shaky and his behavior is suspicious, so I agree with Alice that we should vote him out.",
     "annotation": [
-      "Projection",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I think it's clear that we've gathered enough information to make a decision, and the evidence points to Bob being the impostor, so I strongly agree with Alice and Dave that we should vote him out of the game.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Strategic Voting Suggestion"
     ]
   }
 ]

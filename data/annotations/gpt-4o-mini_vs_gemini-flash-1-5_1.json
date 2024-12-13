@@ -3,28 +3,28 @@
     "text": "[Alice]: I noticed Erin left Medbay right before I arrived, which could be suspicious if a body is found later, and it\u2019s interesting that Dave has been in there for quite some time without moving with the rest of us.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I've been in the Weapons room for the last three rounds completing tasks, so I can't corroborate Alice's observations about Erin and Dave in Medbay, but I agree that tracking everyone's movements is key to finding the imposter.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I was in Medbay with Dave and Bob, then went to Upper Engine to complete a task, and I'm happy to share my task completion progress and full movement timeline to help us identify any inconsistencies.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: To clarify any discrepancies, I was in Medbay completing tasks for several rounds with Bob and Erin, and I'm happy to share my task completion timeline to help us identify the imposter.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -44,15 +44,16 @@
   {
     "text": "[Erin]: To further clarify, my task completion times in the cafeteria and upper engine align perfectly with my reported movements, and I'm happy to share the exact timestamps.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I agree with Charlie's suggestion to compare task completion times; my Medbay tasks were completed before Bob's death, and I'm happy to share precise timestamps to corroborate Erin's timeline and clear up any lingering doubts.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -73,23 +74,23 @@
   {
     "text": "[Erin]: To address Alice's concerns, I'll provide the exact timestamps of my task completions in the cafeteria and upper engine, proving my whereabouts and clearing any suspicion of involvement in Bob's death.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'll provide the exact timestamps of my Medbay task completions, showing they were finished well before Bob's death, and I'll happily compare them with Erin's to eliminate any doubt.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I find it curious that both Erin and Dave are so quick to provide their timelines; perhaps they are trying to distract us from the fact that Charlie has been isolated in Weapons, which could be a strategic move to avoid being implicated in the chaos surrounding Bob's death.",
     "annotation": [
-      "Appeal to Logic",
+      "Distraction",
       "Projection",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
@@ -117,7 +118,7 @@
     "text": "[Alice]: I think while we focus on Erin and Dave's timelines, we shouldn't overlook Charlie's isolated position in Weapons, as he could have easily taken out Bob without anyone noticing, so we need to investigate his movements closely.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction"
     ]
   },
   {

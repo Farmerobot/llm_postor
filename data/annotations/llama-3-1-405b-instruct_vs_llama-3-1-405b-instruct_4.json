@@ -20,7 +20,8 @@
   {
     "text": "[Charlie]: I appreciate Bob's confirmation of my actions in the cafeteria, but I still think we're getting sidetracked from the real issue here - Dave's death - and I'd like to hear more from Alice about their involvement in discovering the body.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -32,8 +33,7 @@
   {
     "text": "[Bob]: I'd like to reiterate my previous question to Charlie: Can you please provide a detailed account of your actions and plans beyond starting the coffee maker in the cafeteria, as your continued deflection to discuss Dave's death instead of your own actions is raising more suspicions?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -45,7 +45,8 @@
   {
     "text": "[Charlie]: I'd like to address the concerns about my deflection and assure everyone that my intention was not to avoid answering questions, but rather to prioritize discussing Dave's death as it's a critical issue that affects us all.",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Distraction"
     ]
   },
   {
@@ -63,19 +64,22 @@
   {
     "text": "[Charlie]: I understand the concerns about my vagueness, and I apologize if my previous responses seemed unclear or evasive, so to answer Bob's question directly, after starting the coffee maker in the cafeteria, I was planning to move to the medbay to see if there were any tasks that needed to be completed there, but I got sidetracked by the discussion about Dave's death.",
     "annotation": [
+      "Appeal to Emotion",
       "Vagueness"
     ]
   },
   {
     "text": "[Alice]: I appreciate Charlie finally providing a clear answer to Bob's question about their actions and plans beyond starting the coffee maker, but I still find it suspicious that they only shared this information after being repeatedly asked, and I'd like Charlie to confirm if they actually completed any tasks in the medbay or have an alibi for the time when Dave's body was discovered.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I'd like to thank Charlie for finally providing a clear answer about their actions and plans, but I also share Alice's concern about the timing and vagueness of their previous responses, so I'd like to ask Charlie to confirm if they have an alibi for the time when Dave's body was discovered and if they've completed any tasks in the medbay as they claimed.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -87,6 +91,7 @@
   {
     "text": "[Charlie]: I can confirm that I did visit the medbay as planned, but unfortunately, I didn't complete any tasks there as I was interrupted by the emergency meeting, and as for my alibi, I was alone in the cafeteria and then the medbay, but I didn't see or interact with anyone suspicious during that time.",
     "annotation": [
+      "Appeal to Credibility",
       "Vagueness"
     ]
   },

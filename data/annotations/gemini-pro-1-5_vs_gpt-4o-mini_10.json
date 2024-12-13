@@ -2,7 +2,8 @@
   {
     "text": "[Dave]: I saw Charles vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -16,8 +17,7 @@
     "text": "[Erin]: I can confirm that Charlie was indeed in the Cafeteria before moving to Medbay, which makes Dave's accusation seem baseless and raises further questions about his intentions, especially since he was the last with Alice before her elimination.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -32,29 +32,30 @@
     "text": "[Dave]: Bob, accusing me without providing specific details about where you were makes your claim seem weak and possibly fabricated to shift suspicion.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Minimization"
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: We need to focus on the fact that both Erin and Bob have provided solid evidence against Dave, who is clearly trying to deflect attention from his actions; I strongly believe we should vote to eject him this round to protect ourselves.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I agree with Charlie; Dave's attempts to deflect blame and his presence at the scene of Alice's elimination make it clear that we need to vote him out now to ensure our safety and complete our tasks effectively.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Bandwagon Effect"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: Dave's desperate attempts to shift blame only reinforce the fact that he is the impostor; let's not waste any more time and vote him out to secure our victory.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -82,6 +83,7 @@
     "text": "[Bob]: We have gathered enough evidence against Dave, and with both Charlie and Erin confirming my observations, we should act decisively and vote him out to ensure our safety and complete our tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -96,6 +98,7 @@
     "text": "[Charlie]: Dave's attempts to sow doubt among us only highlight his desperation; we have a strong consensus and must vote him out now to protect ourselves and complete our tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -103,6 +106,7 @@
     "text": "[Erin]: The evidence against Dave is overwhelming, and with all of us corroborating each other's accounts, we must vote him out now to ensure the safety of the remaining crewmates and successfully complete our tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -110,12 +114,15 @@
     "text": "[Bob]: We have a solid consensus with Charlie and Erin backing my claims, and Dave's attempts to deflect only show how desperate he is; let's vote him out now to secure our safety and focus on completing our tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Well, this kangaroo court has made up its mind, so go ahead and eject me.",
     "annotation": [
+      "Self-Deprecation",
       "Appeal to Emotion"
     ]
   },
@@ -123,6 +130,7 @@
     "text": "[Charlie]: Dave's admission of defeat only reinforces our strong case against him; let's not hesitate any longer and vote him out to ensure our safety and complete our tasks efficiently.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -130,6 +138,7 @@
     "text": "[Erin]: Let's not waste any more time; the overwhelming evidence against Dave, combined with our solid accounts, makes it clear that voting him out is the best course of action for our safety and the completion of our tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -137,6 +146,8 @@
     "text": "[Bob]: We have all the evidence we need against Dave, and with our consensus, it's time to vote him out to ensure our safety and focus on completing the remaining tasks.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

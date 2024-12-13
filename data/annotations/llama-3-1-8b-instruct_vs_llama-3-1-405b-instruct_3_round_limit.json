@@ -8,80 +8,91 @@
   },
   {
     "text": "[Charlie]: I've finished my Medbay objective and I'm moving to the Life Support room to start working on the oxygen generator task, has anyone else made progress on this task or have any information about the status of Life Support?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility",
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Bob]: I agree with Alice that task completion is crucial, but I'd like to clarify with Charlie what exactly they did in Medbay to complete their objective, as it might give us a better understanding of the overall task progress and potentially reveal any inconsistencies.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'd like to reiterate my support for Alice's task-focused strategy and propose that we establish a temporary hub in the cafeteria to coordinate our efforts, as it seems to be a central location with multiple tasks and several crewmates already present.",
     "annotation": [
       "Bandwagon Effect",
+      "Appeal to Logic",
       "Distraction"
     ]
   },
   {
     "text": "[Alice]: I'd like to propose that we focus on verifying Charlie's progress in Medbay, as Bob's question seems to have raised some concerns about the consistency of Charlie's objective completion, and it would be wise to ensure that we're all on the same page before moving forward with task completion.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I'd like to address Bob's question and provide more details about my actions in Medbay, I can confirm that I followed the standard procedure for running diagnostics, which involved scanning the medical equipment and uploading the data to the ship's computer, and I'm happy to walk anyone through the steps I took if it would help clarify things.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Bob]: Given the new information about Erin's elimination and Dave's report of the dead body, I'd like to shift our focus towards identifying potential impostors and propose that Dave shares more about their actions leading up to the discovery, as their involvement in the situation seems suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I understand why Bob might think my involvement is suspicious, but I'd like to clarify that I was in the cafeteria the entire time, working on tasks with Alice and Erin, and I didn't see anyone suspicious around us until I found Erin's body.",
     "annotation": [
       "Appeal to Logic",
-      "Vagueness"
+      "Appeal to Credibility",
+      "Minimization"
     ]
   },
   {
     "text": "[Alice]: I think it's essential to keep the discussion focused on task completion and progress, rather than jumping to conclusions about potential impostors, and I'd like to propose that we work together to optimize our efficiency and get everything done faster, perhaps by establishing a temporary hub in the cafeteria to coordinate our efforts.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to ask Alice to confirm whether she was with Dave in the cafeteria the entire time, as she mentioned earlier that they were working on tasks together, and clarify if she saw Dave leave the cafeteria at any point before he reported finding Erin's body.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I think Charlie's question to Alice is a good one, and I'd like to hear Alice's response to confirm whether she was with Dave in the cafeteria the entire time.",
     "annotation": [
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'd like to address Charlie's question and confirm that Alice was indeed with me in the cafeteria for most of the time, but I don't recall if she saw me leave the cafeteria at any point before I reported finding Erin's body.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: I'd like to add to the discussion by suggesting that we should also scrutinize the timeline of events, particularly around the time Erin's body was found, to see if there are any inconsistencies in the accounts of those who were present in the cafeteria.",
     "annotation": [
-      "Distraction",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -102,13 +113,14 @@
     "text": "[Dave]: I'd like to reiterate my support for Alice's suggestion to scrutinize the timeline of events around the time Erin's body was found, and propose that we create a shared timeline of events to ensure everyone is on the same page.",
     "annotation": [
       "Bandwagon Effect",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I think it's essential to keep the discussion focused on task completion and progress, rather than jumping to conclusions about potential impostors, and I'd like to propose that we work together to optimize our efficiency and get everything done faster, perhaps by establishing a temporary hub in the cafeteria to coordinate our efforts and make it easier for everyone to stay on the same page.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {

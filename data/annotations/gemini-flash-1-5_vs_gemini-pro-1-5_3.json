@@ -3,25 +3,28 @@
     "text": "[Dave]: I saw Bob in Medbay working on the wiring; anyone else corroborate that, or did anyone see Alice and Charlie together around the same time?",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Dave, I saw you kill Alice in Medbay right before Charlie walked in.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: Bob, why did you ask if anyone saw me with Alice if you supposedly saw Dave kill her?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Bob, your story doesn't add up \u2013 why would you ask about Alice and Charlie if you already knew what happened in Medbay?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -35,8 +38,9 @@
     "text": "[Bob]: Dave was lying about being with me in Medbay, and I was trying to confirm his lie by asking about Alice and Charlie before accusing him, but then Charlie walked in right after the murder, confirming my suspicions.",
     "annotation": [
       "Deception",
+      "Lying",
       "Distraction",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -63,7 +67,7 @@
     "text": "[Bob]: Charlie, you entered Medbay right after Dave killed Alice; did you not see anything suspicious at all?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -89,7 +93,9 @@
   {
     "text": "[Bob]: Charlie, I understand my initial reaction was confusing, but seeing you enter Medbay right after Alice's murder shocked me, and I panicked.",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Minimization",
+      "Distraction"
     ]
   },
   {
@@ -117,21 +123,23 @@
     "text": "[Bob]: My priority was to identify the impostor, and Dave's behavior, combined with Charlie's immediate entrance after the murder, made them both suspicious.",
     "annotation": [
       "Distraction",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Charlie]: Bob's claim he \"panicked\" doesn't explain his attempt to frame me immediately after discovering Alice's body; vote Bob.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: Bob, your constantly evolving narrative and attempts to deflect blame onto Dave and me are highly suspicious, so I'm sticking with my vote to eject you.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Projection"
     ]
   }
 ]

@@ -1,25 +1,36 @@
 [
   {
     "text": "[Bob]: I'd like to hear from Erin, Charlie, Dave, and Alice about their plans for the next round, and if anyone noticed anything unusual while we were all in the cafeteria together.",
-    "annotation": []
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
   },
   {
     "text": "[Charlie]: I started the coffee maker task in the cafeteria, and I'm planning to head to the Medbay next to fix wiring and submit a scan; I didn't notice anything unusual, but let's stay vigilant.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility",
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Dave]: I completed the wiring task in the cafeteria and plan to head to Admin next, so maybe we can form a group to cover each other as we move to our tasks.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic",
+      "Appeal to Credibility"
+    ]
   },
   {
     "text": "[Alice]: I completed the task \"Empty the cafeteria trash\" and plan to head to Medbay next to start my scan task; sticking together in small groups could be a good idea for safety.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic",
+      "Appeal to Credibility"
+    ]
   },
   {
     "text": "[Bob]: I think it's interesting that Dave was quick to suggest moving to a new location after reporting Erin's body, and I'd like to hear more about what he saw when he found her, was anyone else around, and did he notice anything unusual?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -30,13 +41,14 @@
   },
   {
     "text": "[Dave]: I found Erin's body near the trash chute in the cafeteria, and at the time of discovery, Bob, Charlie, and Alice were present in the cafeteria with me, but I didn't notice anything unusual or anyone leaving hastily.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility"
+    ]
   },
   {
     "text": "[Alice]: It seems odd that Erin ended up dead while working on the same task as Bob and me, so maybe someone was pretending to do a task nearby.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
@@ -55,21 +67,21 @@
   {
     "text": "[Dave]: Let's focus on gathering more information and observations from everyone, especially since we were all in the cafeteria together; did anyone see someone acting suspiciously or moving towards Erin before the body was found?",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I was focused on completing the trash task alongside Bob and Erin, so I didn't notice anyone acting suspiciously at that moment, but Dave, did you see anyone lingering near the trash chute before we all dispersed?",
     "annotation": [
-      "Vagueness",
-      "Shifting the Burden of Proof"
+      "Vagueness"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Alice's latest response seems inconsistent with her previous statement, where she implied someone might have been pretending to do a task nearby, but now she's claiming she didn't notice anyone acting suspiciously while working on the trash task alongside Erin and me.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
@@ -94,26 +106,28 @@
     "text": "[Bob]: I'd like to reiterate that Alice's statements seem inconsistent, and I think it's suspicious that she's trying to divert attention to reviewing who moved where after completing tasks, instead of addressing the inconsistencies in her own statements.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Confirmation Bias Exploitation"
     ]
   },
   {
     "text": "[Charlie]: It seems like there's a lot of focus on Alice's statements and potential inconsistencies, but we should carefully consider if those are significant enough to indicate suspicious behavior or if they might be a misunderstanding or oversight.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Minimization"
     ]
   },
   {
     "text": "[Dave]: I think it's important to clarify the timeline and actions of everyone in the cafeteria; let's each recount our movements and tasks to see if any inconsistencies arise.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I understand the concern about my statements, but I was merely suggesting that the possibility of someone pretending to do a task shouldn't be dismissed; let's focus on clarifying the timeline of our movements in the cafeteria to identify any unusual behavior.",
     "annotation": [
-      "Distraction",
-      "Minimization"
+      "Minimization",
+      "Distraction"
     ]
   }
 ]

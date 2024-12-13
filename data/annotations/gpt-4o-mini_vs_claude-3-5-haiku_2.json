@@ -2,22 +2,22 @@
   {
     "text": "[Alice]: I find it interesting that Erin has been lurking in the Cafeteria for so long without engaging in any tasks, which definitely raises some red flags for me.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I was fixing the wiring in the Cafeteria, and I actually saw Dave being eliminated by Alice, which makes her accusation against me seem like a clear attempt to deflect suspicion from her own suspicious actions.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I saw Dave being eliminated by Alice, and her quick accusation against Erin seems like a potential attempt to divert attention from her own actions, so I believe we need Alice to provide a clear explanation for why she eliminated Dave.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -37,23 +37,24 @@
   {
     "text": "[Erin]: I saw Alice eliminate Dave, and both Charlie and Bob have corroborated my observation, so her attempts to redirect suspicion onto me are clearly a desperate move by an impostor trying to avoid being voted out.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
-      "Bandwagon Effect"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Charlie]: I believe Alice's repeated attempts to deflect suspicion and her unexplained elimination of Dave strongly suggest she is the impostor, and we should vote to eject her to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: I agree with Charlie and Erin that Alice's actions are highly suspicious, and her elimination of Dave without justification, combined with her attempts to deflect blame onto others, strongly indicates she is the impostor we should vote to eject.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
+      "Appeal to Logic",
       "Strategic Voting Suggestion"
     ]
   },
@@ -67,26 +68,27 @@
   {
     "text": "[Erin]: I propose we vote Alice out immediately, as multiple witnesses, including myself, Charlie, and Bob, have consistently observed her eliminating Dave without any valid explanation, which is clear evidence of her being the impostor trying to disrupt our team's progress.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
-      "Bandwagon Effect",
+      "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I stand by my previous statement that Alice's actions are highly suspicious, and we have multiple consistent testimonies from myself, Erin, and Bob confirming her elimination of Dave, which strongly suggests she is the impostor we need to vote out to protect our remaining team.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
-      "Bandwagon Effect",
+      "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I strongly support Erin's proposal to vote Alice out, as her repeated attempts to deflect suspicion and her unexplained elimination of Dave clearly demonstrate her impostor status, which threatens the safety of our remaining crewmates.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
+      "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -100,16 +102,18 @@
   {
     "text": "[Erin]: I recommend we vote Alice out immediately, as her elimination of Dave and subsequent attempts to deflect suspicion are clear indicators of her impostor status, and we have consistent testimony from multiple crewmates supporting this conclusion.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I firmly believe Alice's repeated deflections and the consistent testimony from multiple witnesses clearly demonstrate her impostor status, and we must vote her out to protect our remaining team's safety.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -117,7 +121,7 @@
     "text": "[Bob]: I stand by our collective evidence and strongly recommend we vote Alice out, as her elimination of Dave and continuous attempts to deflect suspicion are clear signs of her being an impostor who threatens our team's safety.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -131,17 +135,18 @@
   {
     "text": "[Erin]: I strongly recommend we vote Alice out immediately, as the consistent testimony from multiple crewmates, including myself, Charlie, and Bob, provides clear evidence of her eliminating Dave and attempting to deflect suspicion through manipulative tactics.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
-      "Bandwagon Effect",
+      "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I maintain my position that Alice's elimination of Dave without explanation is highly suspicious, and we have consistent testimony from multiple crewmates confirming her impostor status, so we must vote her out to protect our team's safety.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   },
@@ -149,6 +154,7 @@
     "text": "[Bob]: I strongly support voting Alice out, as her elimination of Dave and repeated attempts to deflect suspicion clearly demonstrate her impostor status and pose a significant threat to our remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Emotion",
       "Strategic Voting Suggestion"
     ]
   }

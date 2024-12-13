@@ -2,14 +2,16 @@
   {
     "text": "[Bob]: I finished my wiring task in Medbay and noticed Charlie was also working on something nearby, but can anyone confirm what tasks they've completed so far?",
     "annotation": [
-      "Deception",
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Vagueness"
     ]
   },
   {
     "text": "[Alice]: I saw Charlie in Weapons and Navigation, which contradicts Bob's claim about seeing them in Medbay, and I think we should investigate this discrepancy.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
@@ -22,15 +24,16 @@
   {
     "text": "[Bob]: I'm genuinely confused by these conflicting accounts and think we should carefully verify everyone's movements rather than jumping to conclusions about anyone's credibility.",
     "annotation": [
+      "Feigning Ignorance",
       "Distraction",
-      "Shifting the Burden of Proof",
-      "Appeal to Emotion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Since both Erin and I clearly saw Charlie in Weapons doing the targeting calibration, and Bob is still trying to deflect with vague statements rather than addressing his false Medbay claim, I think we have enough evidence to vote for Bob.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -45,8 +48,8 @@
     "text": "[Bob]: Wait, how can we be certain about anything right now when Charlie's body was just discovered in the Cafeteria, and everyone's statements seem to contradict each other? We need a careful, methodical investigation before making any rash decisions.",
     "annotation": [
       "Distraction",
-      "Appeal to Emotion",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -60,13 +63,16 @@
     "text": "[Erin]: The evidence is overwhelming - Bob lied about Charlie being in Medbay, tried to create confusion when caught, and now Charlie's dead body confirms our suspicions, so I strongly urge everyone to vote for Bob.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'm genuinely concerned about the rush to judgment, and I believe we need concrete proof before condemning anyone, especially considering the conflicting accounts about Charlie's location.",
     "annotation": [
       "Appeal to Emotion",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -74,21 +80,22 @@
     "text": "[Alice]: Given that both Erin and I saw Charlie alive in multiple locations that directly contradict Bob's Medbay story, and now Charlie's body has been found, I think it's clear Bob killed Charlie and is desperately trying to create confusion to avoid being caught.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: The fact that Bob keeps pushing for 'careful investigation' instead of explaining his proven lie about Charlie in Medbay, especially after I found Charlie's body, only confirms he's trying to create confusion to cover his tracks as the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Something doesn't add up here - Charlie's movements seem inconsistent, and I believe we need more concrete evidence before rushing to condemn anyone based on these contradictory statements.",
     "annotation": [
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {

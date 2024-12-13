@@ -3,7 +3,6 @@
     "text": "[Bob]: I was doing wiring tasks in the Cafeteria and then moved to Medbay to run diagnostics, which Alice can confirm - has anyone else completed their Medbay tasks yet?",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -11,16 +10,15 @@
     "text": "[Dave]: I can vouch for Bob doing wiring in Cafeteria at the start, and I've been mostly focused on tasks in Navigation and O2, but has anyone seen Charlie recently since they were at the coffee maker?",
     "annotation": [
       "Appeal to Credibility",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I think Charlie's behavior is suspicious since none of us have seen them since the coffee maker incident in Cafeteria, and I can confirm seeing Bob and Dave consistently doing their claimed tasks.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -40,7 +38,8 @@
   {
     "text": "[Erin]: I need to report that I just discovered Charlie's body in the Cafeteria, and given that Alice has been unaccounted for since leaving there early on, this seems extremely suspicious.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -69,8 +68,8 @@
   {
     "text": "[Bob]: I agree with Dave and Erin that Alice's absence is deeply troubling, and while we should be methodical, the evidence seems to point strongly towards her involvement in Charlie's mysterious death.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -102,6 +101,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -110,6 +110,7 @@
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

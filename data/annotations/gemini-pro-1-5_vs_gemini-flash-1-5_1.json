@@ -1,60 +1,68 @@
 [
   {
     "text": "[Erin]: I saw Dave head towards Navigation after leaving Cafeteria, not Weapons.",
-    "annotation": []
+    "annotation": [
+      "Deception",
+      "Lying"
+    ]
   },
   {
     "text": "[Dave]: I was in the Cafeteria with Bob, Erin, and Charlie at the start, then went directly to Weapons after completing my task, so Erin's account of my movements is inaccurate.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: I agree with Dave; my observation of him in Cafeteria and then Weapons directly contradicts Erin's statement, and we should carefully consider Charlie's disappearance before making accusations.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Distraction"
     ]
   },
   {
     "text": "[Alice]: Given the conflicting accounts from Erin and Dave, and Bob's corroboration of Dave's alibi, I think we need Charlie to clarify their whereabouts during that time to resolve this discrepancy before making any accusations.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Perhaps I was mistaken about Dave, but it *is* suspicious that Charlie is missing, and nobody has accounted for their whereabouts.",
     "annotation": [
-      "Distraction",
-      "Minimization"
+      "Minimization",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: Erin, since your account of my movements is inaccurate, and Charlie's death is the priority, can you describe the circumstances surrounding the discovery of their body?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: Erin, to clarify the timeline and ensure we're focusing on the most important information, can you describe exactly where you found Charlie's body and what you saw or heard immediately beforehand?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: Erin, given the discrepancies regarding Dave's movements,  a precise account of where you found Charlie's body and the events leading up to its discovery is critical to resolving this situation.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: I found Charlie's body in the southeast corner of Medbay, near the scanner, shortly after leaving the cafeteria, and I didn't see anyone else nearby.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Lying",
+      "Deception"
     ]
   },
   {
@@ -67,20 +75,21 @@
   {
     "text": "[Bob]: Erin, the lack of detail in your account of finding Charlie's body, coupled with your demonstrably false statement about Dave's location, makes your testimony unreliable, and we should proceed cautiously before making any accusations.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: Erin, to help us verify your account, can you describe anything specific you saw or heard in Medbay before discovering Charlie's body?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I was rushing to Medbay to complete a scan, and I honestly didn't notice anything unusual until I stumbled upon Charlie's body; isn't it possible someone else was in Medbay but left before I arrived?",
     "annotation": [
-      "Vagueness",
+      "Feigning Ignorance",
+      "Minimization",
       "Distraction"
     ]
   },
@@ -109,7 +118,8 @@
     "text": "[Erin]: Has anyone considered that Alice hasn't offered a clear alibi and brought up Charlie's location herself, perhaps to deflect suspicion?",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {

@@ -2,32 +2,30 @@
   {
     "text": "[Erin]: I started in cafeteria with several others doing tasks, then moved to Admin - where has everyone been working on their tasks?",
     "annotation": [
-      "Vagueness",
       "Distraction",
-      "Shifting the Burden of Proof"
+      "Feigning Ignorance",
+      "Vagueness"
     ]
   },
   {
     "text": "[Dave]: I find it suspicious that Erin is asking about everyone's tasks but didn't mention what they did in Admin, can you tell us more about what you did in Admin, Erin, and why you're so interested in knowing where everyone else has been?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I agree with Dave that Erin's question seems suspicious, and it would be helpful to know more about what Erin did in Admin - can you provide more details about your activities there, Erin?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I agree with Dave and Bob that Erin's question seems suspicious, and it's unclear what they did in Admin, Erin, can you provide more information about your activities in Admin and why you're asking about everyone else's tasks?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -48,15 +46,15 @@
   {
     "text": "[Bob]: I'd like to point out that Erin's explanation about uploading data files in Admin seems vague, and it's unclear who can verify this information - can Erin provide more specific details about their activities in Admin?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I'd like to reiterate my previous question to Erin, can you provide a clear timeline of your movements and actions leading up to the discovery of the dead body, including any interactions you had with Alice or other players, and also clarify what kind of data you were uploading in Admin and who specifically can verify this information?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -64,7 +62,7 @@
     "annotation": [
       "Gaslighting",
       "Projection",
-      "Deception"
+      "Lying"
     ]
   },
   {
@@ -77,7 +75,7 @@
     "text": "[Bob]: I'd like to address Erin's recent claim that Dave is trying to frame them by mentioning a dead body that Erin never reported, but I recall that earlier in the conversation, Erin didn't deny reporting a dead body, but instead, they focused on justifying their actions in Admin, which raises more suspicions about Erin's intentions.",
     "annotation": [
       "Appeal to Logic",
-      "Confirmation Bias Exploitation"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -92,54 +90,55 @@
     "annotation": [
       "Gaslighting",
       "Distraction",
-      "Projection"
+      "Lying"
     ]
   },
   {
     "text": "[Dave]: I think it's suspicious that Erin is trying to shift the focus to Alice's whereabouts, especially since Erin has been evasive about their own actions and hasn't provided clear answers to our questions.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Erin's latest attempt to shift the focus to Alice's whereabouts seems like a desperate attempt to divert attention from their own suspicious behavior.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I think it's clear that Erin is trying to deflect attention from their own suspicious actions by bringing up Alice's whereabouts, but we shouldn't fall for this tactic and instead focus on getting clear answers from Erin about their actions and movements.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I've been completely honest about my movements and actions, while Dave, Bob, and Charlie seem to be working together to push a fabricated story about a body report - isn't anyone else concerned about their coordinated behavior?",
     "annotation": [
-      "Gaslighting",
-      "Projection"
+      "Lying",
+      "Projection",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: I'd like to reiterate that Erin's claim that Dave, Bob, and Charlie are coordinating their stories about a non-existent body report seems like an attempt to deflect attention from their own suspicious behavior, and it's time for us to seriously consider the possibility that Erin is the impostor.",
     "annotation": [
-      "Appeal to Logic",
+      "Projection",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I think it's time to summarize the key points that have been discussed so far, and it's clear that Erin has been evasive and inconsistent in their explanations, which raises strong suspicions about their intentions.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I agree with Bob's summary, and considering all the discussions and evidence, I believe it's time for us to seriously consider voting out Erin as the potential impostor, and I would like to ask Dave if he agrees with me on this decision.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]

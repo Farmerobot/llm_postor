@@ -10,22 +10,24 @@
     "text": "[Dave]: I think we should methodically track our task progress and focus on completing our objectives, rather than causing unnecessary alarm by calling an emergency meeting prematurely.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Minimization"
     ]
   },
   {
     "text": "[Alice]: I agree with Dave that we should stay focused on task completion, and I can confirm I saw Charlie, Dave, and Erin doing tasks in the Cafeteria, which shows we're making steady progress towards our team's goals.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Bandwagon Effect",
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I saw Charlie eliminate Erin in the Cafeteria, and we must call an emergency meeting immediately to investigate this serious threat to our crew's safety.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -38,9 +40,8 @@
   {
     "text": "[Dave]: I'm deeply concerned about Bob's serious accusation that Charlie eliminated Erin, and I want to hear a clear explanation from Charlie about what exactly happened in the Cafeteria, especially since I was previously working alongside both of them during tasks.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Appeal to Credibility"
+      "Appeal to Emotion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -54,9 +55,10 @@
     "text": "[Bob]: I saw Charlie eliminate Erin right in front of me in the Cafeteria, and I'm absolutely certain about what happened, so I urge everyone to take my testimony seriously and consider voting Charlie out to protect our remaining crew members.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Appeal to Emotion"
+      "Appeal to Urgency",
+      "Appeal to Emotion",
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -69,8 +71,9 @@
   {
     "text": "[Dave]: I saw Charlie and Erin doing tasks together in the Cafeteria earlier, and Alice can confirm this, so Bob's accusation seems highly suspicious and requires more specific evidence before we consider voting anyone out.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -84,10 +87,11 @@
   {
     "text": "[Bob]: I saw Charlie eliminate Erin in the Cafeteria, and I challenge Dave and Alice to explain why they are defending Charlie so vigorously when I have clear, direct eyewitness testimony of the elimination, which puts our entire crew's safety at risk.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic",
       "Appeal to Emotion",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -101,11 +105,12 @@
     "text": "[Dave]: I want to emphasize that Bob's accusation remains unsubstantiated, and Alice and I can definitively confirm that Charlie and Erin were collaboratively working on tasks in the Cafeteria, which directly contradicts Bob's claim of an elimination and suggests we need far more concrete evidence before considering any drastic actions.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Alice]: I think Bob's accusation lacks credibility, and we should demand more specific details about the alleged elimination, especially since Dave and I can confirm Charlie and Erin were working together on tasks in the Cafeteria, which directly contradicts Bob's claim.",
+    "text": "[Alice]: Bob's repeated accusations lack credibility, and Dave and I can confidently confirm that Charlie and Erin were working together on tasks in the Cafeteria, so we should demand specific, verifiable evidence before considering any elimination.",
     "annotation": [
       "Appeal to Logic",
       "Appeal to Credibility",
@@ -113,12 +118,13 @@
     ]
   },
   {
-    "text": "[Bob]: I saw Charlie eliminate Erin in the Cafeteria, and I challenge Dave and Alice to explain why they are so adamantly defending someone who I directly witnessed committing an elimination, putting our entire crew's safety at risk.",
+    "text": "[Bob]: I stand by my testimony that Charlie eliminated Erin in the Cafeteria, and I challenge Dave and Alice to explain why they are so adamantly defending someone who I directly witnessed committing an elimination, putting our entire crew's safety at risk.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
       "Appeal to Emotion",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -132,23 +138,26 @@
     "text": "[Dave]: I maintain that Bob's accusation lacks concrete evidence, and Alice and I can definitively confirm Charlie and Erin were working together on tasks in the Cafeteria, so we need specific, verifiable proof before considering any elimination that could compromise our mission's safety.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I want to reiterate that Dave and I were directly in the Cafeteria with Charlie and Erin, and we can confidently confirm they were working on tasks together, which completely undermines Bob's unsubstantiated elimination claim and calls into question his credibility as a witness.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I saw Charlie eliminate Erin, and I demand that Dave and Alice explain why they are so consistently defending Charlie despite my clear, direct eyewitness testimony of the elimination, which poses a serious threat to our crew's safety.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic",
       "Appeal to Emotion",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Deception",
+      "Lying"
     ]
   }
 ]

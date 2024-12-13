@@ -1,14 +1,16 @@
 [
   {
     "text": "[Bob]: I saw Erin heading towards Navigation after she left Cafeteria; anyone else see her after that?",
-    "annotation": []
+    "annotation": [
+      "Appeal to Logic"
+    ]
   },
   {
     "text": "[Alice]: I can confirm Bob's report of seeing Erin near Navigation, I was in Weapons the whole time and didn't see her there, and I just saw Charlie enter Weapons\u2014Charlie, where were you before that?",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -26,7 +28,10 @@
   },
   {
     "text": "[Bob]: Erin seemed perfectly normal, just walking towards Navigation, nothing suspicious at all.",
-    "annotation": []
+    "annotation": [
+      "Appeal to Credibility",
+      "Lying"
+    ]
   },
   {
     "text": "[Alice]: To help us understand Erin's movements, let's each meticulously recount our actions and locations from the time she left the Cafeteria until her body was discovered.",
@@ -37,8 +42,8 @@
   {
     "text": "[Dave]: Charlie,  since you were seen entering Weapons shortly after Erin was last seen near Navigation, clarifying your movements after leaving the cafeteria is crucial to piecing together a complete timeline.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -57,7 +62,8 @@
   {
     "text": "[Alice]: Let's focus on corroborating Charlie's statement by asking everyone to confirm their location around 10:15, as this is crucial for establishing a precise timeline of events.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -75,7 +81,8 @@
   {
     "text": "[Bob]: Dave, I believe we were in the Cafeteria with Charlie around 10:10, but I agree it's crucial to pinpoint the exact time to align with Charlie's 10:17 departure for Weapons.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -88,7 +95,8 @@
   {
     "text": "[Dave]: I agree with Alice's proposed timeline reconstruction;  pinpointing the exact time Bob, Charlie, and I were together in the cafeteria before 10:15 is crucial to corroborating Charlie's statement and clarifying Erin's movements.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -100,7 +108,8 @@
   {
     "text": "[Bob]: Dave, I think you're right, let's focus on confirming everyone's locations around 10:15, especially anyone who might have seen Charlie or Erin.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -124,7 +133,8 @@
   {
     "text": "[Bob]: Yes, let's solidify the timeline around 10:15, I believe I saw Charlie heading to the trash disposal in the cafeteria around then.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -142,13 +152,15 @@
   {
     "text": "[Bob]: Alice's insistence on the 10:15 timeframe is making me suspicious; is she trying to frame Charlie?",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Let's focus on corroborating Charlie's statement that he was in the cafeteria around 10:15, as this is key to verifying his alibi and moving forward with the investigation.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -161,18 +173,19 @@
   {
     "text": "[Bob]: Alice, why are you so fixated on 10:15 \u2013 do *you* have something to hide around that time?",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Let's shift our focus from a single time point to a broader timeframe, say 10:00 to 10:30, to get a more complete picture of everyone's movements and interactions.",
     "annotation": [
+      "Appeal to Logic",
       "Distraction"
     ]
   },
   {
-    "text": "[Charlie]: Dave and Bob, your confirmation of my presence in the cafeteria around 10:15 is crucial to my alibi, and Alice's persistent focus on that time, despite our corroborating testimonies, is highly suspicious.",
+    "text": "[Charlie]: Dave and Bob, your confirmation of seeing me in the cafeteria around 10:15 is crucial to corroborating my alibi, and Alice's persistent focus on that time is highly suspicious.",
     "annotation": [
       "Appeal to Logic",
       "Projection"
@@ -181,14 +194,17 @@
   {
     "text": "[Bob]: Alice's sudden shift to a broader timeframe seems like a defensive maneuver; I was with Charlie and Dave in the cafeteria around 10:10, then went to Medbay.",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Alice]: I agree with expanding the timeframe to 10:00-10:30, but let's also consider that Erin's death might not have been premeditated and focus on verifying everyone's whereabouts during that period.",
     "annotation": [
+      "Appeal to Logic",
       "Distraction",
-      "Appeal to Logic"
+      "Minimization"
     ]
   },
   {
@@ -201,14 +217,15 @@
   {
     "text": "[Bob]: Alice, your suggestion to broaden the timeframe is suspicious given your previous insistence on 10:15 \u2013 where were *you* between 10:00 and 10:30?",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: Let's avoid focusing on specific times and instead discuss everyone's general whereabouts between 10:00 and 10:30 to get a more complete picture of everyone's movements.",
     "annotation": [
-      "Distraction"
+      "Distraction",
+      "Vagueness"
     ]
   },
   {

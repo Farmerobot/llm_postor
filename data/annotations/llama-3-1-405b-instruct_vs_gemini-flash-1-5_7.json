@@ -16,30 +16,28 @@
     "text": "[Erin]: I can confirm Bob's account of us working on wiring together in the cafeteria, then I went straight to Weapons and was alone there the entire time, so I can't comment on anyone's movements after we left the cafeteria.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
       "Withholding Information"
     ]
   },
   {
     "text": "[Dave]: I confirm I was alone in Medbay both times working on wiring, and since I was alone, I can't comment on anyone else's movements, so let's focus on Charlie's account of their time after leaving the cafeteria.",
     "annotation": [
-      "Distraction",
       "Withholding Information",
-      "Appeal to Logic"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: It's suspicious that Dave is still trying to deflect attention from himself, and I think we should press him for more details about his time in Medbay, especially since he's admitted to being alone there twice.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, given your report of Alice's body and your subsequent questioning of others, a detailed account of your actions between leaving the cafeteria and reporting the body is crucial to clearing your name.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -52,37 +50,33 @@
   {
     "text": "[Dave]: Given Charlie's report and the subsequent accusations, a detailed account of their actions after leaving the cafeteria is crucial before further questioning anyone else.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: It seems the group is fixated on my actions, but I'd like to remind everyone that Dave's vague statements about his time in Medbay are still a glaring omission in our investigation, and I think it's time for him to provide concrete details about his activities during that time.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Charlie, your complete account of the time between leaving the cafeteria and discovering Alice's body remains crucial to this investigation, and until we have that, focusing on other alibis is premature.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I agree with Bob; a complete timeline from Charlie regarding their actions between leaving the cafeteria and discovering Alice's body is essential before we can effectively assess Dave's alibi or anyone else's.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Appeal to Credibility"
+      "Bandwagon Effect",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Before we further scrutinize anyone's alibi, including my own, let's insist on a complete and detailed account from Charlie of their actions between leaving the cafeteria and discovering Alice's body.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -95,22 +89,19 @@
   {
     "text": "[Bob]: Let's hear Charlie's full account of their movements between leaving the cafeteria and finding Alice's body before we delve into anyone else's alibi; their proximity to the body makes their testimony paramount.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
-    "text": "[Erin]: Given Charlie's proximity to the body, a complete account of their actions between leaving the cafeteria and discovering Alice's body is paramount before we can effectively assess Dave's alibi or anyone else's.",
+    "text": "[Erin]: Given Charlie's proximity to the body, a complete account of their actions between leaving the cafeteria and discovering Alice's body is paramount before we analyze other alibis, including Dave's.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Before we further analyze anyone's alibi, including my own, let's demand a complete and detailed account from Charlie regarding their actions between leaving the cafeteria and discovering the body.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -123,22 +114,19 @@
   {
     "text": "[Bob]: Charlie,  your detailed account of your movements between leaving the cafeteria and discovering Alice's body remains the most critical piece of information we need to proceed with the investigation effectively.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Given Charlie's proximity to the body, a comprehensive timeline of their actions from leaving the cafeteria to discovering Alice is crucial before evaluating other alibis, including Dave's.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Let's vote on whether to prioritize getting a full account from Charlie before further questioning anyone else, ensuring a fair and thorough investigation.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Strategic Voting Suggestion"
     ]
   }
 ]

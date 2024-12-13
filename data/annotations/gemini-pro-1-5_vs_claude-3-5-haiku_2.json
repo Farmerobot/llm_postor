@@ -2,7 +2,8 @@
   {
     "text": "[Alice]: I saw Bob vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -25,8 +26,9 @@
   {
     "text": "[Charlie]: I can confirm Bob was in Medbay with me doing a medical scan, which directly contradicts Alice's claim about him venting in Electrical, and I'm deeply concerned about her potential involvement in Dave's elimination.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Emotion"
     ]
   },
   {
@@ -34,6 +36,7 @@
     "annotation": [
       "Gaslighting",
       "Projection",
+      "Lying",
       "Deception"
     ]
   },
@@ -41,22 +44,25 @@
     "text": "[Bob]: I believe Alice's changing story and her attempt to cast doubt on Erin's testimony strongly suggest she is the impostor, and we should carefully consider voting her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: I firmly believe Alice's inconsistent statements and her attempt to falsely accuse Bob of venting clearly demonstrate she is the impostor, and we should vote to eject her to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: I stand by my earlier statement and strongly support Bob and Erin's assessment that Alice's constantly shifting narrative and her false accusation against Bob make her the most likely impostor, and we should vote to eject her to protect our team.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -70,8 +76,9 @@
   {
     "text": "[Bob]: I propose we vote Alice out immediately, as her desperate attempts to shift blame and her contradictory statements clearly indicate she is the impostor who eliminated Dave, and we have multiple consistent witness testimonies confirming her suspicious behavior.",
     "annotation": [
-      "Strategic Voting Suggestion",
+      "Appeal to Urgency",
       "Appeal to Logic",
+      "Strategic Voting Suggestion",
       "Appeal to Credibility"
     ]
   },
@@ -79,16 +86,18 @@
     "text": "[Erin]: We have overwhelming evidence from multiple players that Alice is the impostor, and her constantly changing story and false accusations against Bob only further confirm her guilt, so I strongly recommend we vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion",
-      "Bandwagon Effect"
+      "Appeal to Emotion"
     ]
   },
   {
-    "text": "[Charlie]: I agree with Bob and Erin that Alice's constantly changing narrative, false accusations, and suspicious behavior strongly indicate she is the impostor, and we should vote to eject her to protect our remaining crewmates.",
+    "text": "[Charlie]: I agree with Bob and Erin that Alice's constantly changing narrative, false accusations, and suspicious behavior strongly indicate she is the impostor, and we should vote to eject her to protect the remaining crewmates.",
     "annotation": [
       "Bandwagon Effect",
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -102,7 +111,8 @@
     "text": "[Bob]: I firmly believe Alice's repeated attempts to cast doubt on our consistent testimonies are a clear sign of her desperation to avoid being exposed as the impostor who eliminated Dave, and we should vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -117,35 +127,40 @@
     "text": "[Charlie]: I remain firmly convinced that Alice's constantly shifting narrative, false accusations, and suspicious behavior make her the clear impostor, and we should vote to eject her to protect our remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: If Bob, Erin, and Charlie were truly together, wouldn't one of them have claimed to see me kill Dave to make their story more convincing?",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
     "text": "[Bob]: I firmly believe Alice's latest attempt to question our consistent testimonies is another desperate ploy to avoid being voted out, and her suggestion that we are conspiring only further proves her guilt as the impostor who eliminated Dave.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: I firmly believe Alice's repeated attempts to cast doubt on our consistent testimonies and her constantly changing narrative are clear indicators that she is the impostor who eliminated Dave, and we should unanimously vote her out to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Charlie]: I firmly believe Alice's persistent attempts to create doubt and her inconsistent statements provide overwhelming evidence that she is the impostor, and we must vote her out to protect our team's survival.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Emotion"
     ]
   }
 ]

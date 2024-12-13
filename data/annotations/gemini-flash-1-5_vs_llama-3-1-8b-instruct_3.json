@@ -9,46 +9,47 @@
   {
     "text": "[Charlie]: I agree with Bob that an emergency meeting is a great idea, and I'd like to add that we should also discuss the fact that I saw Sarah enter the Medbay earlier, but she hasn't reported any progress on the tasks, which seems unusual.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think an emergency meeting is a great idea, and I'd like to add that we should also discuss the fact that I've seen Bob moving around a lot, which is understandable, but also a bit suspicious, and we should ask him about his alibi and see if he has a good explanation for his movements.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I agree an emergency meeting is warranted, and while I was assisting with tasks in the cafeteria and Medbay, I'd appreciate it if others could share their alibis to help establish a timeline of events surrounding Dave's death.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to propose that we focus on gathering more information about Sarah's activities and whereabouts, as her absence from reporting any progress on tasks and her unexplained entry into the Medbay raise significant concerns that warrant further investigation and discussion.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think it's essential that we establish a clear timeline of events surrounding Dave's death, and I'd like to ask Charlie to share more details about his observations of Sarah entering the Medbay earlier, as this could provide crucial information about her potential involvement and help us identify any potential impostors among us.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I agree with Charlie's focus on Sarah, but let's also establish a precise timeline of events surrounding Dave's death to ensure a thorough investigation.",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -62,7 +63,8 @@
     "text": "[Alice]: I'd like to propose that we prioritize gathering more information about Sarah's activities and whereabouts, and I'd like to add that we should also investigate any potential connections between her unexplained absence and the tasks that are still pending completion, as it's possible that her activities may be related to the tasks and could provide a crucial lead in our investigation.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -76,7 +78,8 @@
     "text": "[Charlie]: I'd like to propose that we prioritize gathering more information about Sarah's activities and whereabouts, and I'd like to add that we should also investigate any potential connections between her unexplained absence and the tasks that are still pending completion, as it's possible that her activities may be related to the tasks and could provide a crucial lead in our investigation.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {

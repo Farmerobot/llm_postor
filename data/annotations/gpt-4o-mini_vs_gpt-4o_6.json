@@ -2,13 +2,14 @@
   {
     "text": "[Dave]: I noticed that Alice was focused on starting the coffee maker, which is a common task; it might be worth discussing how long each of us has been in the cafeteria to establish our alibis.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I was in the cafeteria the whole time and saw both Dave and Alice starting the coffee maker, so can anyone confirm if they saw Charlie doing anything suspicious in Admin?",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
       "Shifting the Burden of Proof"
     ]
   },
@@ -22,13 +23,16 @@
   {
     "text": "[Charlie]: I was in Admin cleaning the floor, which is my assigned task, and I didn't see anyone else there, so I can't provide any alibis for others.",
     "annotation": [
-      "Appeal to Rules"
+      "Appeal to Rules",
+      "Appeal to Credibility",
+      "Withholding Information"
     ]
   },
   {
     "text": "[Dave]: It's interesting that Charlie didn't see anyone else in Admin; perhaps we should consider if someone could have slipped in and out unnoticed while we were all busy in the cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -46,7 +50,8 @@
   {
     "text": "[Charlie]: It's crucial for us to verify each other's positions and movements during the time Alice was targeted to narrow down the suspects.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -59,7 +64,8 @@
   {
     "text": "[Bob]: I think we should consider the possibility that someone slipped into Admin while Charlie was there and left unnoticed, so we need more information about who was moving around during that time.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -78,7 +84,7 @@
     "text": "[Dave]: I think we should focus on Charlie's alibi; he claims to have been alone in Admin, which raises suspicion, especially since he could have easily eliminated Alice without being seen while we were all busy in the cafeteria.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -91,7 +97,7 @@
     "text": "[Erin]: Charlie, since you were in Admin alone, did you hear any footsteps or noises that could indicate someone was moving around, and has anyone else completed tasks in Admin recently to confirm your cleaning task was legitimate?",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Appeal to Rules"
     ]
   },
   {
@@ -104,7 +110,7 @@
     "text": "[Dave]: I find it quite suspicious that Charlie is so focused on defending his solo task in Admin; perhaps he should clarify how long he was there and if he noticed anyone entering or leaving, as this could help us determine if he had the opportunity to eliminate Alice unnoticed.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -116,13 +122,14 @@
   {
     "text": "[Erin]: I did not see anyone else near the coffee maker when I found Alice, which makes it difficult to pinpoint who might have moved between Admin and the Cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Vagueness"
     ]
   },
   {
     "text": "[Charlie]: Since I was in Admin for the entire action phase, it's important to verify if anyone saw or heard any movements between Admin and the Cafeteria that could indicate an unnoticed presence.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]

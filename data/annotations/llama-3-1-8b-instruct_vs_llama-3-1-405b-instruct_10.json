@@ -3,14 +3,13 @@
     "text": "[Alice]: I've been in the Engine Room for a bit, and I haven't seen anything suspicious, but I do think we should focus on the Medbay, it's possible Charlie is just really interested in the medical equipment, but it's also possible they're up to something.",
     "annotation": [
       "Vagueness",
-      "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I agree with Alice that we should focus on the Medbay, and I think it's time for Charlie to explain their actions in there, as I've seen them doing the same task for two rounds now, which seems suspicious to me.",
     "annotation": [
-      "Appeal to Logic",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
@@ -32,7 +31,7 @@
     "text": "[Alice]: I think we're focusing too much on Charlie's actions and not enough on the fact that we have a dead body in the Medbay, and I'd like to propose that we call an emergency meeting to discuss and vote on who to eject from the game, as I'm starting to get a feeling that we might have more impostors among us than we initially thought.",
     "annotation": [
       "Distraction",
-      "Appeal to Emotion",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -40,6 +39,7 @@
     "text": "[Dave]: I'd like to reiterate my support for Alice's proposal to call an emergency meeting and vote on who to eject, and I think it's crucial that we consider not only Charlie's actions but also the overall behavior and alibis of all players, including those who have been relatively quiet or absent from the discussion so far.",
     "annotation": [
       "Bandwagon Effect",
+      "Distraction",
       "Strategic Voting Suggestion"
     ]
   },
@@ -81,8 +81,8 @@
   {
     "text": "[Erin]: I think it's time for Alice and Dave to stop deflecting and provide concrete answers about their own actions and alibis during the time frame when Bob's body was discovered, as their continued evasion is starting to raise more suspicions than Charlie's actions in the Medbay.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -125,15 +125,15 @@
     "text": "[Dave]: I'd like to clarify that after moving to the Medbay in Round 2, I observed Charlie doing the \"Run diagnostics in medbay\" task, and I also saw Alice and Bob doing tasks in the Medbay, but I didn't see anything suspicious at that time, and as for my own actions, I was working on the \"Check medical supplies\" task in the Medbay, which I completed successfully.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Rules"
+      "Appeal to Rules",
+      "Lying"
     ]
   },
   {
     "text": "[Charlie]: I think it's interesting that Dave mentions seeing Alice and Bob doing tasks in the Medbay, but Alice previously stated that she was in the Engine Room, not the Medbay, which raises some questions about her alibi, and I'd like to ask Alice to clarify her previous statement and explain why Dave's account of seeing her in the Medbay contradicts her own story.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {

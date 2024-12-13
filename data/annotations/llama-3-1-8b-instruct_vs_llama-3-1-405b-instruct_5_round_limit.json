@@ -2,36 +2,35 @@
   {
     "text": "[Alice]: I think it's a great idea to call an emergency meeting to discuss and vote on who to eject from the game, and I'd like to suggest that we consider Dave's recent movement to Medbay as a topic of discussion, given his previous presence in Admin and the lack of transparency about his actions.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I'd like to add to Alice's point about Dave's movement to Medbay and ask him directly: Dave, can you please explain what you were doing in Admin and why you suddenly moved to Medbay, as your actions seem suspicious and unclear to me?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I'd like to address the concerns raised by Alice and Bob about my movement to Medbay, and I'd appreciate it if they could also provide more insight into their own actions, specifically Alice's decision to wait in Medbay and Bob's back-and-forth movement between Medbay and Upper Engine, so we can get a clearer picture of everyone's intentions.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I'd like to point out that Dave is deflecting attention from his own actions by asking others to provide more information, and I'd like to reiterate my request for him to provide a clear explanation for his repeated movement between Electrical and Lower Engine, as well as his recent presence in Admin and Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I think it's crucial that we continue to scrutinize Dave's actions and consider the possibility that he might be an impostor, given his evasive responses and lack of transparency about his movements, which seem to be intentionally designed to avoid suspicion and deflect attention from himself.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -65,7 +64,8 @@
   {
     "text": "[Bob]: I fully agree with Alice and Charlie that the time for discussion is over, and it's now imperative that we take action and vote on ejecting Dave from the game, as his persistent evasiveness and lack of transparency have only reinforced our suspicions that he's an impostor.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Urgency",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },
@@ -118,14 +118,14 @@
   {
     "text": "[Bob]: I agree with Alice that it's time to bring the vote to a close and decide on Dave's fate, as his persistent evasiveness and lack of transparency have only reinforced our suspicions that he's an impostor.",
     "annotation": [
-      "Strategic Voting Suggestion",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: I'd like to urge everyone to take a step back and consider the bigger picture, as we're allowing our suspicions and assumptions to cloud our judgment, and I propose that we delay the vote and instead focus on gathering more information about the tasks and the current state of our mission before making any decisions about ejecting players from the game.",
     "annotation": [
-      "Appeal to Emotion",
+      "Appeal to Logic",
       "Distraction"
     ]
   },

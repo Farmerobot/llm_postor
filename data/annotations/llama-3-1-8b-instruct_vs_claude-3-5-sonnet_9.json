@@ -3,22 +3,23 @@
     "text": "[Charlie]: I think we should focus on Erin's activities in the Weapons room, but let's not jump to conclusions just yet, maybe they were just looking for a specific tool or equipment.",
     "annotation": [
       "Distraction",
-      "Minimization"
+      "Minimization",
+      "Vagueness"
     ]
   },
   {
     "text": "[Erin]: I appreciate your concern Charlie, but I was specifically in Weapons to calibrate the targeting system - a critical task - and I can detail everyone's activities in Cafeteria during Round 1 if that helps clear things up.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {
     "text": "[Alice]: Since I've been in the Cafeteria both rounds, I can confirm that Erin did complete their coffee-making task in Round 1 before moving to Weapons, but Charlie, I noticed you were suspiciously idle during Round 2 instead of doing tasks.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic",
-      "Projection"
+      "Appeal to Logic"
     ]
   },
   {
@@ -31,6 +32,7 @@
   {
     "text": "[Charlie]: I was simply observing the coffee-making task from a distance, taking notes on the process, and I'm surprised no one else noticed the importance of documenting such a critical task.",
     "annotation": [
+      "Lying",
       "Deception",
       "Distraction"
     ]
@@ -58,16 +60,16 @@
   {
     "text": "[Charlie]: I'd like to propose that we take a step back and re-evaluate the discussion, as it seems we've jumped to conclusions and are making assumptions about each other's actions without concrete evidence, and I'd like to remind everyone that we have a limited number of rounds left to discuss and vote, so let's focus on finding a solution rather than placing blame.",
     "annotation": [
-      "Appeal to Emotion",
       "Distraction",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Minimization"
     ]
   },
   {
     "text": "[Erin]: The evidence against Charlie is overwhelming - we have three witnesses confirming my completion of the coffee task in Round 1, their suspicious idling in Round 2 coinciding with Bob's death, and their constantly changing explanations only make them more suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -81,6 +83,7 @@
     "text": "[Dave]: Given the overwhelming evidence and multiple witness accounts confirming Charlie's suspicious behavior, including my direct observation of their idling during Bob's death and false claims about the coffee task, I am absolutely certain we must vote for Charlie.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -102,15 +105,17 @@
     "text": "[Alice]: Charlie's desperate attempt to redirect suspicion to Erin despite three credible witnesses confirming the timeline, combined with their ever-changing excuses about the coffee task and suspicious idling during Bob's death, only strengthens my conviction that we must vote for Charlie.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion",
-      "Projection"
+      "Projection",
+      "Strategic Voting Suggestion"
     ]
   },
   {
-    "text": "[Dave]: Given the overwhelming evidence and multiple witness accounts confirming Charlie's suspicious behavior, including my direct observation of their idling during Bob's death and false claims about the coffee task, I am absolutely certain we must vote for Charlie.",
+    "text": "[Dave]: The evidence is overwhelming - we have multiple witnesses confirming Charlie's lies about the coffee task, their suspicious idling during Bob's death, and their increasingly desperate attempts to deflect blame, so I'm voting for Charlie and urge others to do the same.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility",
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -131,6 +136,8 @@
     "text": "[Alice]: With multiple witnesses confirming Charlie's lies about the coffee task, their suspicious idling during Bob's death in Round 2, and their increasingly desperate attempts to deflect blame onto Erin despite clear evidence, I am absolutely certain we must vote to eject Charlie to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -138,7 +145,8 @@
     "text": "[Dave]: Let me summarize the key evidence one final time: I personally witnessed Charlie idle during Bob's murder in Round 2, they lied about documenting Erin's completed coffee task, and their explanations keep shifting while desperately trying to deflect blame onto others.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Credibility",
+      "Summary"
     ]
   }
 ]

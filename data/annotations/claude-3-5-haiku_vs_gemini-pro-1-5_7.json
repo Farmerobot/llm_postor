@@ -8,26 +8,28 @@
   {
     "text": "[Bob]: Thanks for confirming Erin! I saw Charlie and Alice on tasks in Medbay too.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Dave]: I saw Bob leave Cafeteria *towards* Medbay, but I didn't actually see him go *inside*, so could Bob tell us what task he was doing there?",
     "annotation": [
-      "Vagueness",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Vagueness"
     ]
   },
   {
     "text": "[Alice]: Dave, I was in Medbay with Bob, Charlie, and Erin, and we were all working on tasks, so maybe you just missed him entering.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Minimization"
     ]
   },
   {
     "text": "[Erin]: I'm deeply troubled by Charlie's death in Medbay, and Dave's point about Bob's movements seems suspicious - Bob, can you provide specific details about which task you were completing when you were supposedly in Medbay?",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Emotion",
       "Shifting the Burden of Proof"
     ]
   },
@@ -54,22 +56,23 @@
   {
     "text": "[Erin]: I'm curious about the inconsistencies in our stories, and while I want to believe Bob, Dave's skepticism about the visibility of tasks in Medbay is raising some valid questions that we need to carefully investigate.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: Dave, your continued focus on me is suspicious \u2013 where were you when Charlie was killed, and can anyone corroborate your location?",
     "annotation": [
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
     "text": "[Dave]: Bob, asking about my location is a classic deflection tactic; I've been upfront about my movements: Cafeteria, then Weapons, while your Medbay alibi relies solely on Alice's confirmation of a task with distinct visual stages she has yet to describe.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
@@ -82,14 +85,14 @@
     "text": "[Erin]: Dave's persistent questioning seems designed to create confusion and cast doubt on Bob and Alice, which makes me increasingly suspicious of his motives and potential involvement in Charlie's elimination.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: Dave, your vague movements between Cafeteria and Weapons, coupled with your inability to provide a witness, strongly suggests you were near Medbay when Charlie died, making you the prime suspect.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -101,8 +104,9 @@
   {
     "text": "[Alice]: Dave, your relentless focus on discrediting my confirmation of Bob's task, while refusing to provide a verifiable alibi for your own location near Medbay when Charlie died, makes you our primary suspect.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
@@ -116,7 +120,7 @@
     "text": "[Bob]: Dave, your refusal to answer a simple question about your location during Charlie's death, while relentlessly grilling Alice and me, makes you look incredibly guilty.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {

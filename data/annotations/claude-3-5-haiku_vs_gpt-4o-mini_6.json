@@ -2,14 +2,17 @@
   {
     "text": "[Alice]: I saw Charlie, Bob, and Erin all working on tasks in the cafeteria earlier, and I think we should focus on comparing our task progress to make sure everyone's being productive.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
     "text": "[Charlie]: I agree with Alice that comparing task progress is essential, but we can't overlook the fact that I witnessed her eliminate both Bob and Erin, which raises serious concerns about her role in this game.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Projection"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -22,14 +25,17 @@
   {
     "text": "[Alice]: Charlie, your accusation seems incredibly serious - can you provide specific details about when and how you claim to have seen me eliminate Bob and Erin, because right now it sounds like an attempt to cast unwarranted suspicion on me?",
     "annotation": [
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I can provide specific details: I was in the cafeteria during the eliminations, and I saw you directly eliminate Bob and Erin, which is why I believe we need to take immediate action against you before more crewmates are lost.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Lying",
+      "Deception",
+      "Appeal to Urgency",
+      "Appeal to Logic"
     ]
   },
   {
@@ -43,8 +49,8 @@
     "text": "[Alice]: I think Charlie's accusation is completely fabricated and designed to create chaos, and we should demand he provide concrete evidence beyond his vague claims, especially since his story seems mathematically impossible given the room layout and distances involved.",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
-      "Exaggeration"
+      "Shifting the Burden of Proof",
+      "Projection"
     ]
   },
   {
@@ -52,7 +58,8 @@
     "annotation": [
       "Distraction",
       "Appeal to Urgency",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
@@ -73,7 +80,7 @@
     "text": "[Charlie]: I understand the doubts surrounding my account, but I urge everyone to remember that while Alice is questioning my credibility, we should focus on her actions during the eliminations and share our locations to clarify the timeline, as her defensiveness suggests she may have something to hide.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },
@@ -81,21 +88,22 @@
     "text": "[Dave]: Charlie, your insistence on shifting focus away from the inconsistencies in your story only strengthens the need for us to verify your claims, as it seems more like a deflection than a genuine concern for our safety.",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie's accusations are becoming increasingly desperate and illogical, and I challenge him to provide a scientifically plausible explanation for how he could have witnessed these alleged eliminations from the cafeteria, given the physical impossibility of his claims.",
     "annotation": [
       "Appeal to Logic",
-      "Exaggeration"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Charlie]: I understand your concerns, but I urge everyone to remember that while Alice is questioning my credibility, we should focus on her actions during the eliminations and share our locations to clarify the timeline, as her defensiveness suggests she may have something to hide.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic",
+      "Shifting the Burden of Proof",
       "Projection"
     ]
   },

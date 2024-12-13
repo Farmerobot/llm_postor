@@ -8,7 +8,6 @@
   {
     "text": "[Charlie]: I was in Admin working on wiring, Erin, and didn't see anyone near there, so I'm curious where Bob, Alice, and Dave went after Medbay - did you see them go anywhere specific?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -16,21 +15,24 @@
     "text": "[Bob]: Erin, I saw you kill Dave in Medbay, then you vented - Alice and I were doing tasks together the whole time.",
     "annotation": [
       "Deception",
-      "Lying"
+      "Lying",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Alice]: Bob is right, I saw Erin vent after Dave died in Medbay.",
     "annotation": [
       "Deception",
-      "Lying"
+      "Lying",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Erin]: I didn't kill Dave, and Bob and Alice's synchronized accusation seems suspiciously coordinated - they might be trying to frame me to divert attention from themselves.",
     "annotation": [
       "Denial without Evidence",
-      "Projection"
+      "Projection",
+      "Distraction"
     ]
   },
   {
@@ -44,14 +46,13 @@
     "text": "[Bob]: Charlie, why would Alice and I coordinate a lie about seeing Erin kill Dave and then vent \u2013 wouldn't it make more sense to just complete our tasks and win the game?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Alice]: If Bob and I were impostors, wouldn't we have just killed Charlie and won instead of making this accusation?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -70,14 +71,14 @@
   {
     "text": "[Bob]: Charlie, Erin's deflection about us being \"too perfect\" is nonsense \u2013 wouldn't real witnesses corroborate each other's stories?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin, if Bob and I were framing you, why would we do so in front of Charlie, giving him the chance to corroborate your alibi and expose our lie?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
@@ -103,14 +104,14 @@
   {
     "text": "[Alice]: Erin, if Bob and I were the impostors, why wouldn't we have killed you first in Medbay when we supposedly had the chance?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: If Bob and Alice were truly witnesses, their perfectly synchronized accusation and delayed reporting raise more suspicions about their motives than my actions in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -130,7 +131,7 @@
     "text": "[Alice]: Charlie and Bob, Erin is trying to distract us from the fact that she was seen venting after Dave died in Medbay.",
     "annotation": [
       "Distraction",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
@@ -156,21 +157,21 @@
   {
     "text": "[Erin]: If Bob and Alice were truly witnesses, their perfectly synchronized accusation and delayed reporting raise more suspicions about their motives than my actions in Medbay.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, if you and Bob were in Medbay together, can you explain why neither of you reported Dave's death immediately?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Charlie, Bob and I were discussing what to do, shocked by what we saw; we didn't want to wrongly accuse anyone without being absolutely certain.",
     "annotation": [
-      "Appeal to Emotion",
-      "Vagueness"
+      "Vagueness",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -189,8 +190,8 @@
   {
     "text": "[Alice]: Erin, your repeated claims of our \"synchronized\" story are a weak defense against the fact that you were seen venting after Dave died.",
     "annotation": [
-      "Distraction",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Gaslighting"
     ]
   },
   {
@@ -224,7 +225,6 @@
   {
     "text": "[Charlie]: Alice, you said you and Bob were \"discussing what to do,\" but *what exactly* were you discussing that took so long, and why didn't you report the body immediately after seeing Erin vent?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },

@@ -3,7 +3,8 @@
     "text": "[Bob]: I just finished my wiring task in the cafeteria, and I noticed Dave and Erin were also working on their tasks - can we quickly go over what tasks are still remaining for everyone?",
     "annotation": [
       "Appeal to Logic",
-      "Distraction"
+      "Distraction",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -16,6 +17,7 @@
   {
     "text": "[Alice]: I appreciate Dave's follow-up question, and I'd like to reiterate my earlier point that I stayed in the cafeteria after completing my task and didn't see anyone leave or move to a different room, but I'm still waiting to hear from Charlie, who was also in the cafeteria - can you please share your perspective, Charlie?",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -30,9 +32,10 @@
   {
     "text": "[Bob]: I was just discussing general task progress with Erin, and while we chatted briefly, I didn't notice anything unusual - I'm genuinely shocked about her death and think we should focus on finding out what happened rather than interrogating each other about minor interactions.",
     "annotation": [
-      "Vagueness",
       "Distraction",
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Vagueness",
+      "Minimization"
     ]
   },
   {
@@ -53,7 +56,8 @@
     "text": "[Bob]: I was discussing potential wiring tasks with Erin in the cafeteria, and we mentioned checking the Medbay next, but our conversation was brief and didn't reveal anything unusual about her movements or intentions.",
     "annotation": [
       "Vagueness",
-      "Distraction"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -66,6 +70,7 @@
   {
     "text": "[Alice]: I'd like to thank Bob for finally providing more details about his conversation with Erin, but I agree with Dave that the explanation still seems vague and doesn't fully address our concerns, and I'd like to ask Bob to specifically clarify what he meant by \"potential wiring tasks\" and what exactly he and Erin planned to do in the Medbay.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
@@ -88,8 +93,8 @@
     "text": "[Bob]: I think we need to stop getting stuck on minute details and focus on a systematic investigation of the rooms, because right now, by continuously interrogating me, we're letting the real killer potentially escape or cover their tracks.",
     "annotation": [
       "Distraction",
-      "Appeal to Emotion",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Gaslighting"
     ]
   },
   {
@@ -102,8 +107,8 @@
   {
     "text": "[Alice]: I agree with Dave that we're not getting stuck on minute details, but rather trying to clarify inconsistencies in Bob's alibi and conversation with Erin, which is crucial in determining what happened to her.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {

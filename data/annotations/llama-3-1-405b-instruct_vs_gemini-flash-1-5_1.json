@@ -3,41 +3,44 @@
     "text": "[Dave]: I think we should discuss Charlie's behavior, as they've been spending a lot of time in Medbay and were also seen in the Cafeteria earlier, it seems like they're trying to complete tasks quickly to gain our trust, but it's also possible they're trying to distract us from their true intentions.",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
-      "Distraction"
+      "Distraction",
+      "Projection"
     ]
   },
   {
     "text": "[Erin]: I've been in Weapons the entire game focusing on tasks, so I can't comment on Charlie's movements, but Dave's observation about their quick task completion warrants further investigation; can Charlie clarify their whereabouts?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I agree with Dave and Erin that Charlie's quick task completion is worth investigating, but let's hear their explanation before making accusations.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: Given my previous concerns about Charlie's behavior and their untimely death in Medbay, I think it's crucial that we shift our focus to figuring out who might have been responsible, and Erin, your alibi of being in Weapons the entire game seems solid, but can you confirm if you saw or interacted with anyone who might have been heading towards Medbay?",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I've focused solely on Weapons tasks, making my observations about other areas unreliable, but let's prioritize gathering complete movement accounts from everyone else to build a clearer picture of what happened.",
     "annotation": [
       "Appeal to Logic",
-      "Vagueness"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I was in Admin and Storage completing tasks and didn't see Charlie, but a detailed timeline of everyone's movements before the body was reported is essential to finding the imposter.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -52,7 +55,8 @@
     "text": "[Erin]: Alice, can you please share your complete movements since the beginning of the game, as a detailed timeline of everyone's whereabouts is crucial for determining what happened to Charlie?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -65,14 +69,15 @@
     "text": "[Dave]: I'd like to emphasize that Alice's continued silence is becoming increasingly suspicious, and I think it's essential that she provides a thorough account of her movements and interactions immediately, as her lack of transparency is starting to raise more questions than answers.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Erin]: I agree with Dave and Bob; a comprehensive timeline of everyone's movements is crucial, and Alice's silence only adds to the urgency of establishing one.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Urgency"
     ]
   },
   {
@@ -82,18 +87,18 @@
     ]
   },
   {
-    "text": "[Dave]: I'd like to take a closer look at Erin's alibi, as their claim of being in Weapons the entire game seems suspiciously convenient, and I'd like to ask them to provide more specific details about their tasks and interactions to verify their account.",
+    "text": "[Dave]: I think it's time to take a closer look at Erin's alibi, as their claim of being in Weapons the entire game seems suspiciously convenient, and I'd like to ask them to provide more specific details about their tasks and interactions to verify their account.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
+      "Appeal to Logic",
       "Projection"
     ]
   },
   {
     "text": "[Erin]: Alice, given the urgency and the multiple requests, providing a detailed account of your movements is crucial for solving Charlie's death;  a complete timeline is essential to identifying the imposter.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
+      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },

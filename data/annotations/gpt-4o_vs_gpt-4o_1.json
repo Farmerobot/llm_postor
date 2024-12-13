@@ -43,6 +43,7 @@
   {
     "text": "[Dave]: I reported the dead body in Medbay and didn't see anyone else around at the time, which makes it difficult to pinpoint a suspect, but Bob, can you clarify which tasks you saw Erin and Alice doing and if anyone else was around?",
     "annotation": [
+      "Feigning Ignorance",
       "Shifting the Burden of Proof"
     ]
   },
@@ -62,7 +63,8 @@
   {
     "text": "[Bob]: I was indeed moving between Shields and O2, but I was trying to find a safe place to complete my tasks since I felt uneasy about staying in one room for too long.",
     "annotation": [
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Vagueness"
     ]
   },
   {
@@ -74,42 +76,38 @@
   {
     "text": "[Charlie]: Alice, could you share what tasks you were working on and if you noticed anything unusual during your rounds, as your input might help us piece together the timeline better?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: Alice, since you were in Medbay with me and Bob, can you confirm if you noticed anything unusual during your scan task?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Alice, since you were in Medbay with us, did you notice anything unusual during your scan task that could help us narrow down suspects?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Alice, it would be helpful if you could confirm whether you noticed anything odd or anyone else in Medbay during your scan task, as your observations might help us piece together the timeline.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, since both Erin and Bob mentioned you being in Medbay, can you confirm their presence and any other details you noticed while you were there?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: It's important to hear from Alice about any unusual movements or behaviors she observed in Medbay, especially regarding Bob's actions, as it might help clarify the situation.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -121,14 +119,12 @@
   {
     "text": "[Dave]: Alice, since you were in Medbay with Erin and Bob, can you confirm if you noticed anything unusual or anyone else entering or leaving during your scan task that might help us identify the suspect?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Alice, it's crucial to hear your perspective on what you observed in Medbay, especially since both Erin and Bob have mentioned your presence there; did you notice anything unusual or anyone else around during your scan task?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   }

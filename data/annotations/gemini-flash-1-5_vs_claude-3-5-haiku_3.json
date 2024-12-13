@@ -3,21 +3,24 @@
     "text": "[Erin]: I was emptying the trash in the cafeteria, so I didn't see who went where, but Alice seemed distracted earlier \u2013 anyone else notice anything unusual about her behavior?",
     "annotation": [
       "Vagueness",
-      "Distraction",
-      "Projection"
+      "Feigning Ignorance",
+      "Distraction"
     ]
   },
   {
     "text": "[Dave]: I witnessed Erin eliminate Alice in the Cafeteria, and her current attempt to deflect suspicion by discussing Alice's past behavior is highly suspicious, especially since I can confirm I was present during the entire incident.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Lying",
+      "Deception",
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Charlie]: I saw Alice doing tasks in the Cafeteria before her elimination, which directly contradicts Erin's attempt to cast doubt on Alice, and I strongly support Dave's accusation that Erin is the impostor who eliminated her.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
       "Appeal to Credibility"
     ]
   },
@@ -25,6 +28,7 @@
     "text": "[Bob]: I was in the Cafeteria earlier and can confirm Charlie's account that Alice was genuinely working on tasks, which makes Erin's narrative seem increasingly suspicious and supports Dave's serious accusation of her being the impostor who eliminated Alice.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
       "Appeal to Credibility"
     ]
   },
@@ -32,7 +36,8 @@
     "text": "[Erin]: While I appreciate Dave and Charlie's testimony,  the lack of corroborating evidence regarding my presence in the cafeteria during Alice's elimination leaves room for doubt, and focusing solely on me risks overlooking other potential suspects.",
     "annotation": [
       "Shifting the Burden of Proof",
-      "Distraction"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
@@ -46,17 +51,16 @@
   {
     "text": "[Charlie]: I agree with Dave that we must vote to eject Erin, as the evidence from multiple witnesses, including my own observation of Alice's tasks, strongly indicates her involvement in Alice's elimination and her attempts to create confusion are classic impostor tactics.",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Bob]: I support Dave and Charlie's assessment that Erin should be voted out, as her attempts to deflect suspicion and create doubt are clear signs of impostor behavior, and multiple witnesses, including myself, have consistently observed her suspicious actions in the Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility",
-      "Strategic Voting Suggestion"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -69,8 +73,8 @@
   {
     "text": "[Dave]: I strongly urge everyone to vote for Erin, as her attempts to create doubt and deflect suspicion are clear indicators of her being the impostor who eliminated Alice, and our collective testimony from multiple witnesses provides overwhelming evidence of her guilt.",
     "annotation": [
-      "Appeal to Logic",
       "Appeal to Urgency",
+      "Appeal to Logic",
       "Strategic Voting Suggestion"
     ]
   },
@@ -78,6 +82,7 @@
     "text": "[Charlie]: I maintain my stance that Erin's attempts to cast doubt on our consistent testimony are a clear indication of her guilt, and we must vote her out to protect the remaining crewmates and prevent further eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -85,28 +90,27 @@
     "text": "[Bob]: I stand by our collective testimony that Erin is the impostor, and her continued attempts to create doubt only further confirm her suspicious behavior and the need to vote her out immediately.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: Their coordinated testimony lacks specific details; let's demand precise timings and descriptions of what they saw before jumping to conclusions.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I remain steadfast in my accusation that Erin is the impostor, and her repeated attempts to request precise details are nothing more than a transparent strategy to avoid being voted out, which only further confirms her guilt.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Gaslighting"
     ]
   },
   {
     "text": "[Charlie]: I firmly believe we must vote to eject Erin, as the consistent testimony from multiple witnesses, including my direct observation of Alice doing tasks, provides overwhelming evidence of her being the impostor who eliminated Alice.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
       "Strategic Voting Suggestion"
     ]
   },
@@ -114,20 +118,21 @@
     "text": "[Bob]: I firmly believe that Erin's repeated attempts to deflect suspicion and demand unnecessary details only serve to confirm her guilt, and we must vote her out immediately to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: Their coordinated statements lack specifics; let's demand precise details about their locations and Alice's actions before voting.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Distraction"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I firmly believe that Erin's continued attempts to request unnecessary details are a clear sign of her guilt, and we must vote her out immediately to protect the remaining crewmates and prevent further potential eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -135,6 +140,7 @@
     "text": "[Charlie]: I firmly believe that Erin's repeated attempts to demand precise details and create doubt are transparent impostor tactics, and we must vote her out immediately to protect the remaining crewmates and prevent further potential eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -142,6 +148,7 @@
     "text": "[Bob]: I firmly believe that Erin's repeated attempts to deflect suspicion and demand unnecessary details only serve to confirm her guilt, and we must vote her out immediately to protect the remaining crewmates.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   }

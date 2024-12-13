@@ -2,23 +2,23 @@
   {
     "text": "[Erin]: I was definitely working on the wiring task in the Cafeteria, and I'm curious what everyone else was doing during that time.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
       "Distraction",
-      "Withholding Information"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I can confirm I saw Erin working on wiring in the cafeteria, and I was right there starting the coffee maker task.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I can back up what Charlie and Erin are saying - I saw them both in the cafeteria while I was emptying the trash, and I noticed Alice and Dave there too doing tasks.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Bandwagon Effect",
+      "Appeal to Credibility"
     ]
   },
   {
@@ -39,29 +39,30 @@
   {
     "text": "[Charlie]: I need to report that I just found Alice's body by the trash in the cafeteria, and it's concerning that Dave was so quick to point out her silence when she was already dead.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Bob]: Dave's behavior is extremely suspicious - he tried to cast doubt on Alice's silence right before her body was found, and he was one of the last people near her in the cafeteria.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: I specifically remember seeing Alice at the wiring panel, not the trash - Erin's getting that detail wrong, and I left for Weapons well before the murder must have happened.",
     "annotation": [
+      "Lying",
       "Deception",
-      "Distraction",
-      "Appeal to Logic"
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: I saw Dave near Alice just before her body was discovered, and his changing story about her location makes me think he's trying to hide something.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Emotion"
     ]
   },
   {
@@ -75,22 +76,22 @@
     "text": "[Bob]: I need to emphasize that Dave's accusation about Alice's silence when she was already dead, combined with his inconsistent story about her location, makes him our prime suspect.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Dave]: The fact that Charlie, Bob, and Erin keep changing their story about Alice's location between trash and wiring is highly suspicious, and they seem to be working together to frame me when I was already in Weapons.",
     "annotation": [
       "Projection",
-      "Distraction",
-      "Gaslighting"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
     "text": "[Erin]: Dave's inconsistent statements about Alice's location and his attempt to cast suspicion on her before her body was found make him the most likely suspect in her murder.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Appeal to Emotion"
     ]
   },
   {
@@ -118,7 +119,8 @@
   {
     "text": "[Erin]: I saw Dave's behavior as increasingly suspicious, especially how he's trying to cast doubt on our consistent testimony about Alice's movements before her death.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -138,9 +140,9 @@
   {
     "text": "[Dave]: The fact that all three of you claim to have witnessed Alice move from wiring to trash, yet none of you reported her body immediately, makes your coordinated story highly suspicious.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Gaslighting",
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   }
 ]

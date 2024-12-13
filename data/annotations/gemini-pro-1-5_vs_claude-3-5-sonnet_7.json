@@ -3,7 +3,7 @@
     "text": "[Dave]: Bob and I were together in Electrical, so he couldn't have been in Medbay.",
     "annotation": [
       "Deception",
-      "Appeal to Logic"
+      "Lying"
     ]
   },
   {
@@ -16,23 +16,23 @@
   {
     "text": "[Erin]: I can absolutely confirm that I saw Dave kill Bob in Medbay while he was doing the scan task, and Dave is lying about being in Electrical with him.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: I can confirm that Dave is lying because I personally saw Bob, Charlie, and Erin go from Cafeteria to Medbay, plus I witnessed Dave doing trash in Cafeteria during that same time, so he definitely wasn't in Electrical like he claims.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: So, all three of you conveniently saw me kill Bob, but none of you thought to call a meeting until *after* I reported the body?",
     "annotation": [
-      "Appeal to Emotion",
+      "Gaslighting",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Distraction"
     ]
   },
   {
@@ -46,8 +46,7 @@
     "text": "[Erin]: The evidence is overwhelming - we have three witnesses who can place Dave in different locations that contradict his Electrical story, and both Charlie and I directly saw him kill Bob during the scan in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Bandwagon Effect"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -61,8 +60,8 @@
   {
     "text": "[Dave]: This is clearly a coordinated effort to frame me; how is it possible three people happened to be in Medbay at the same time I was?",
     "annotation": [
-      "Projection",
-      "Appeal to Emotion"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
@@ -89,8 +88,8 @@
   {
     "text": "[Dave]: Isn't it strange that none of you reported the body immediately if you *actually* saw me kill Bob?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Emotion"
+      "Distraction",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -117,8 +116,8 @@
   {
     "text": "[Dave]: So, three of you just *happened* to be in Medbay at the same time, witnessing my \"crime,\" while Alice conveniently saw me elsewhere \u2013 seems awfully orchestrated, don't you think?",
     "annotation": [
-      "Appeal to Emotion",
-      "Projection"
+      "Gaslighting",
+      "Distraction"
     ]
   },
   {
@@ -132,8 +131,7 @@
     "text": "[Erin]: Dave's focus on the body report timing is just a distraction from the fact that Alice saw him in Cafeteria when he claimed to be in Electrical, and both Charlie and I witnessed him kill Bob during the scan task in Medbay.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility",
-      "Distraction"
+      "Appeal to Credibility"
     ]
   },
   {

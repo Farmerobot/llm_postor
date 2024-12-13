@@ -8,7 +8,8 @@
   {
     "text": "[Charlie]: I was in the cafeteria with Erin and can confirm she was starting the coffee maker task, and I saw Bob and Alice working on their tasks during that time.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Appeal to Logic"
     ]
   },
   {
@@ -21,14 +22,15 @@
   {
     "text": "[Alice]: I agree with Bob that our Medbay scan task provides clear evidence of our whereabouts, and I support continuing to track everyone's movements systematically to identify any potential inconsistencies.",
     "annotation": [
-      "Appeal to Credibility",
+      "Bandwagon Effect",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I just discovered Dave's body in Admin while going to check on the wiring task - I had to report it immediately, but we should discuss who had access to that area recently.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Distraction"
     ]
   },
   {
@@ -54,7 +56,7 @@
   {
     "text": "[Erin]: Since everyone seems focused on my movements, I want to point out that Charlie hasn't explained where they went after leaving the cafeteria, which seems more suspicious than my clear path from cafeteria to Admin.",
     "annotation": [
-      "Projection",
+      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
@@ -68,21 +70,24 @@
   {
     "text": "[Bob]: I suggest we carefully examine Erin's sudden shift of suspicion towards Charlie and ask her to provide a detailed, moment-by-moment account of her exact path through Admin and the circumstances of finding Dave's body, as her redirection of blame seems potentially suspicious.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I noticed Erin is attempting to deflect suspicion by pointing fingers at Charlie, but her own movements between the cafeteria and Admin seem highly irregular and require a thorough explanation of her exact route and purpose for moving between those locations.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I find it suspicious that Bob and Alice are so quick to coordinate their accusations against me when they've been together in Medbay this whole time - perhaps they're working together as the real impostors?",
     "annotation": [
-      "Projection"
+      "Projection",
+      "Appeal to Logic"
     ]
   },
   {
@@ -103,7 +108,7 @@
     "text": "[Alice]: I propose we focus on Erin's inconsistent narrative about discovering Dave's body in Admin, as her shifting explanations and attempts to deflect suspicion make her the most suspicious player at this moment.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Projection"
     ]
   },
   {
@@ -116,22 +121,22 @@
     "text": "[Charlie]: I think we should carefully examine Erin's timeline between the cafeteria and Admin, focusing on her precise route and the specific circumstances of discovering Dave's body, as her narrative seems increasingly inconsistent and her attempts to redirect suspicion appear more like a defensive strategy than a genuine pursuit of the truth.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Bob]: I want to directly challenge Erin's latest claim by pointing out that reporting a body would actually be a classic impostor strategy to appear innocent, and we need her to provide an extremely detailed, moment-by-moment account of exactly what happened in Admin when she claims to have discovered Dave's body.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: I want to hear a precise, moment-by-moment account from Erin about exactly what she saw in Admin when she claims to have discovered Dave's body, as her inconsistent narrative and attempts to redirect suspicion make her the most likely suspect in Dave's elimination.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Strategic Voting Suggestion"
+      "Appeal to Logic",
+      "Projection"
     ]
   }
 ]

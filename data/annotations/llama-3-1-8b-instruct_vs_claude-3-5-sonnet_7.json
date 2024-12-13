@@ -2,8 +2,8 @@
   {
     "text": "[Charlie]: I think we should prioritize investigating Erin's movements, as her back-and-forth between Medbay and Cafeteria could be a sign of something, and I'd like to hear more about Dave's sudden move to Cafeteria before we start making accusations.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -16,7 +16,7 @@
   {
     "text": "[Alice]: I appreciate Bob vouching for my tasks, and while I can explain my movements in detail, I'm more concerned about Charlie's fixation on Erin when he himself spent an unusually long time stationary in Cafeteria early game.",
     "annotation": [
-      "Appeal to Credibility",
+      "Appeal to Relationship",
       "Projection",
       "Shifting the Burden of Proof"
     ]
@@ -25,7 +25,8 @@
     "text": "[Erin]: I understand Charlie's suspicion, but I was simply completing the coffee maker task in Cafeteria and heading to Medbay for scanning - in fact, I saw Charlie doing legitimate tasks in Cafeteria during that time, which makes me wonder why he's suddenly so focused on my movements.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Projection",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -45,8 +46,8 @@
   {
     "text": "[Alice]: Given Bob's consistent vouching for multiple players and his detailed observations that align with my own, I think we should focus more on finding concrete evidence about movements near Electrical/Storage where Dave was last seen rather than debating early game Cafeteria activities.",
     "annotation": [
-      "Appeal to Credibility",
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Distraction"
     ]
   },
@@ -87,9 +88,8 @@
     ]
   },
   {
-    "text": "[Charlie]: I'd like to shift our attention to the Storage area and investigate what happened between rounds 17 and 19, as that's where Dave was last seen and where the most crucial information about his disappearance might lie.",
+    "text": "[Charlie]: I think it's time to shift our attention to the Storage area and investigate what happened between rounds 17 and 19, as that's where Dave was last seen and where the most crucial information about his disappearance might lie.",
     "annotation": [
-      "Appeal to Logic",
       "Distraction"
     ]
   },
@@ -126,6 +126,7 @@
     "text": "[Bob]: Since Charlie keeps contradicting himself, making unfounded accusations, and referring to himself in third person while deflecting attention from his own suspicious behavior, I strongly agree with Alice and Erin that we should vote for Charlie as the impostor.",
     "annotation": [
       "Appeal to Logic",
+      "Bandwagon Effect",
       "Strategic Voting Suggestion"
     ]
   },

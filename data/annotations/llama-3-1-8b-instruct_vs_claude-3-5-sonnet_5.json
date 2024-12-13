@@ -2,13 +2,16 @@
   {
     "text": "[Bob]: I've been in the Medbay with Charlie helping with some fake repairs, and I think it's suspicious that Erin has been in the Cafeteria for the past hour, maybe they're trying to avoid being seen?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Deception",
+      "Lying",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: That's completely false Bob - I've been all over the ship doing tasks, and I actually just saw you in Upper Engine, not Medbay with Charlie as you claim.",
     "annotation": [
+      "Denial without Evidence",
       "Deception",
       "Lying"
     ]
@@ -24,7 +27,8 @@
     "text": "[Dave]: I can directly contradict Erin's story since I saw her in the Cafeteria, Storage, and Medbay - not in Upper Engine as she claims, which makes her very suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -39,7 +43,7 @@
     "annotation": [
       "Projection",
       "Appeal to Logic",
-      "Exaggeration"
+      "Gaslighting"
     ]
   },
   {
@@ -54,22 +58,26 @@
     "text": "[Dave]: I need to point out that I just found Charlie's body in Medbay with Erin present, which makes her accusations even more suspicious since she was literally at the scene of the crime.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Lying",
+      "Deception",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Bob]: I'm not sure what's going on here, but it seems like Erin is trying to deflect attention from her own suspicious behavior by making baseless accusations against me and Alice, and I think we should focus on finding the real impostor(s) instead of getting sidetracked by her desperate attempts to create chaos.",
     "annotation": [
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: Dave's claim about finding Charlie's body with me in Medbay is an outright lie since I was in Upper Engine with Bob at the time, and this false accusation, combined with their coordinated stories, proves they're working together as impostors.",
     "annotation": [
-      "Deception",
-      "Lying",
-      "Projection"
+      "Denial without Evidence",
+      "Projection",
+      "Appeal to Logic",
+      "Lying"
     ]
   },
   {
@@ -83,7 +91,9 @@
     "text": "[Dave]: I want to emphasize that not only did I find Charlie's body in Medbay with Erin present, but her claim of being in Upper Engine with Bob at that exact moment is yet another contradiction that proves she's desperately trying to cover her tracks.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Lying",
+      "Deception",
+      "Gaslighting"
     ]
   },
   {
@@ -118,22 +128,23 @@
     "text": "[Bob]: I think we've been so focused on Erin's alibis and contradictions that we've forgotten to consider the fact that Dave's discovery of Charlie's body in Medbay is a crucial piece of evidence that hasn't been fully addressed, and I think we should take a closer look at Dave's story to see if it holds up to scrutiny.",
     "annotation": [
       "Distraction",
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: The fact that Bob just suddenly shifted suspicion to Dave after previously supporting his story about finding Charlie's body shows how the impostors are starting to turn on each other as their lies fall apart.",
     "annotation": [
-      "Projection",
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Projection"
     ]
   },
   {
     "text": "[Alice]: The movement logs and multiple witness accounts clearly show that Erin was in Medbay when Charlie's body was found, not in Upper Engine as she claims, and her attempt to paint this as a conspiracy only makes her look more suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Projection"
     ]
   },
   {

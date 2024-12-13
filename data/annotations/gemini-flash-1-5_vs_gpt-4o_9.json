@@ -2,25 +2,26 @@
   {
     "text": "[Alice]: I was pretending to empty the trash in the cafeteria \u2013 anyone else see me?  Just trying to be helpful!",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Appeal to Emotion"
     ]
   },
   {
     "text": "[Erin]: I saw Alice doing the task in the cafeteria, and it seemed like she was genuinely working on emptying the trash.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I saw Alice actually doing the task of emptying the trash in the cafeteria, so I can confirm she was working on it.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Dave]: I can confirm Alice was working on emptying the trash in the cafeteria; I saw her doing it while I was there, and Bob was also starting the coffee maker task, which looked genuine.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Credibility"
     ]
   },
   {
@@ -33,40 +34,37 @@
   {
     "text": "[Erin]: Does anyone remember seeing anyone else near the coffee maker when Bob was doing the task, or if Bob mentioned anything unusual before he was found?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: Dave, since you reported the body, can you provide more details on where exactly you found Bob and if you noticed anything suspicious around that area?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I found Bob's body right next to the coffee maker, but I didn't see anyone suspicious around, so we need to figure out who else could have been nearby or moved quickly through the area.",
-    "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Alice]: Dave, can you describe the exact positioning of Bob's body relative to the coffee machine, focusing on potential entry and exit points from that area?",
-    "annotation": [
-      "Appeal to Logic"
-    ]
-  },
-  {
-    "text": "[Erin]: Dave, can you clarify if anyone else was in the room or nearby when you discovered Bob's body, or if you noticed any unusual movements?",
     "annotation": [
       "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
+    "text": "[Alice]: Dave, can you describe the exact positioning of Bob's body relative to the coffee machine, focusing on potential entry and exit points from that area?",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
+    "text": "[Erin]: Dave, can you clarify if anyone else was in the room or nearby when you discovered Bob's body, or if you noticed any unusual movements?",
+    "annotation": [
+      "Shifting the Burden of Proof"
+    ]
+  },
+  {
     "text": "[Charlie]: Dave, can you recall if there were any sounds or movements that might indicate someone leaving the Cafeteria quickly after Bob was killed?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -80,7 +78,8 @@
   {
     "text": "[Alice]: Dave,  the positioning of Bob's body relative to the coffee machine is crucial;  precise details about his location could reveal the killer's approach and escape route, especially considering Erin's absence from the cafeteria.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -92,21 +91,20 @@
   {
     "text": "[Charlie]: Charlie: Erin, did you notice anyone entering or leaving Medbay while you were there, or anything unusual in the connecting hallways that might help us identify who could have moved quickly from the Cafeteria?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: I agree with Erin that we should consider any unusual activity near Medbay or connecting rooms, as it might help us identify who moved quickly from the Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Distraction"
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Dave, your detailed account of Bob's positioning near the coffee machine, including potential entry and exit points, is critical to solving this; let's meticulously examine every detail you recall.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -119,8 +117,8 @@
   {
     "text": "[Charlie]: [We should list everyone who hasn't accounted for their whereabouts during Bob's task, as this will help us narrow down potential suspects.]",
     "annotation": [
-      "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Logic"
     ]
   },
   {

@@ -2,13 +2,15 @@
   {
     "text": "[Alice]: Since there are no recent player messages, I will start the discussion by introducing my previously planned points.\n\nI just finished emptying the cafeteria trash, it's all clean now, and I saw Bob and Erin working on tasks nearby, did you guys notice anyone suspicious around?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I can confirm Alice's observation - I was emptying trash in the cafeteria too and saw both her and Erin there working on tasks.",
     "annotation": [
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -22,6 +24,7 @@
     "text": "[Charlie]: I can vouch for Alice and Bob's story since I saw them both at the trash in Cafeteria, and I also noticed Dave heading towards Weapons, but has anyone actually seen Erin lately?",
     "annotation": [
       "Appeal to Credibility",
+      "Bandwagon Effect",
       "Shifting the Burden of Proof"
     ]
   },
@@ -29,12 +32,14 @@
     "text": "[Alice]: I think it's crucial that we clarify everyone's whereabouts, especially since Erin is now dead, so Dave, can you confirm if anyone saw you in Weapons, and Bob, can you tell us more about discovering Erin's body and if you noticed anything unusual?",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I discovered Erin's body right after finishing my trash task, and while I was focused on the task, I remember seeing Frank lurking around without actually doing anything.",
     "annotation": [
+      "Appeal to Credibility",
       "Appeal to Logic"
     ]
   },
@@ -43,7 +48,7 @@
     "annotation": [
       "Appeal to Credibility",
       "Appeal to Logic",
-      "Projection"
+      "Bandwagon Effect"
     ]
   },
   {
@@ -56,42 +61,46 @@
   {
     "text": "[Alice]: I agree with Charlie that Frank's behavior seems suspicious, and we should investigate further.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: Given Frank's suspicious behavior and multiple witnesses confirming his absence from tasks, I think we should vote to eject Frank since he's the only one who can't account for his activities during the time Erin was killed.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Dave]: The evidence is stacking up against Frank - we have multiple witnesses placing me in Weapons, while Frank has no alibi and was seen lurking near where Erin's body was found.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Charlie]: I want to emphasize that the evidence against Frank is overwhelming - we have multiple consistent accounts of his suspicious behavior, no alibi from him, and clear confirmation of everyone else's locations during the critical time period.",
     "annotation": [
       "Appeal to Logic",
-      "Bandwagon Effect"
+      "Appeal to Credibility",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: I think it's clear that the majority of us have come to the same conclusion, but before we proceed with the vote, can Frank please provide any last statement or explanation for his actions, or is he choosing to remain silent?",
     "annotation": [
+      "Bandwagon Effect",
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: Since Frank still hasn't provided any explanation for lurking near Erin's body without doing tasks, and we have clear alibis for everyone else, I think we need to proceed with voting him out for the safety of the remaining crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -99,21 +108,24 @@
     "text": "[Dave]: Given Frank's continued silence and the overwhelming evidence against him - including multiple witnesses confirming his suspicious behavior and lack of alibi - I strongly believe we should proceed with voting him out to protect the remaining crew.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Charlie]: I agree with Dave and Bob - Frank's silence combined with multiple witness accounts of his suspicious behavior near Erin's body makes him our most likely impostor, and we need to vote him out to protect the crew.",
     "annotation": [
-      "Appeal to Logic",
       "Bandwagon Effect",
+      "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: While I agree that the evidence against Frank is compelling, I still think it's crucial to consider the possibility that he might be innocent and being framed by the actual impostor, and I'd like to ask Dave and Bob to confirm their alibis one more time to ensure we're not making a mistake.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {

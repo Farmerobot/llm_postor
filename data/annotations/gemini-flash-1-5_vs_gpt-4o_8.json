@@ -2,21 +2,21 @@
   {
     "text": "[Erin]: I was in the cafeteria the whole time, and I didn't see anyone enter or leave.",
     "annotation": [
-      "Vagueness",
-      "Denial without Evidence"
+      "Lying",
+      "Deception"
     ]
   },
   {
     "text": "[Charlie]: I was in the cafeteria with Erin, Dave, and Bob, and I saw Erin eliminate Dave; this is a serious accusation, and we need to discuss it.",
     "annotation": [
+      "Appeal to Emotion",
       "Appeal to Logic"
     ]
   },
   {
     "text": "[Alice]: Erin, can you clarify your actions during the round in the cafeteria, and Bob, did you notice anything unusual or can you confirm Charlie's accusation?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -30,6 +30,7 @@
     "text": "[Charlie]: I saw Erin move to Medbay after eliminating Dave, which contradicts her claim of staying in the cafeteria, and we should vote to eject her to prevent further eliminations.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Urgency",
       "Strategic Voting Suggestion"
     ]
   },
@@ -50,14 +51,12 @@
   {
     "text": "[Charlie]: Bob, you were in the cafeteria with us\u2014did you see Erin eliminate Dave or notice anything unusual that could support my account?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob, since you were in the cafeteria with Erin, Dave, and Charlie, can you provide any insights or observations that could help clarify what happened?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
@@ -71,14 +70,13 @@
   {
     "text": "[Charlie]: Bob, please share what you observed in the cafeteria\u2014did you see Erin eliminate Dave or notice anything that could corroborate my account?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Bob, it's crucial for you to share your observations from the cafeteria to either confirm or refute Charlie's serious accusation against Erin.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Urgency",
       "Shifting the Burden of Proof"
     ]
   },
@@ -99,7 +97,6 @@
   {
     "text": "[Alice]: Bob, your observations are crucial for understanding what happened in the cafeteria, so please share any details you noticed about Erin and Dave during that time.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   }

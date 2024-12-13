@@ -3,14 +3,14 @@
     "text": "[Charlie]: I'm a little surprised that no one seems to be discussing the possibility of Dave being an impostor, considering he and Erin were together in the Upper Engine room for quite some time, and he didn't seem to report any suspicious activity from them.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: That's a blatant lie, Charlie \u2013 I was in Medbay with Bob and Erin, and Bob can confirm I was with him while he ran diagnostics.",
     "annotation": [
-      "Deception",
-      "Appeal to Credibility"
+      "Appeal to Credibility",
+      "Lying"
     ]
   },
   {
@@ -22,8 +22,8 @@
   {
     "text": "[Bob]: Alice, I went straight to Medbay after the Cafeteria; are you sure you didn't see me head that way immediately after we left?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Lying"
     ]
   },
   {
@@ -43,21 +43,21 @@
     "text": "[Alice]: Dave, I'm positive \u2013 I saw Bob enter Medbay *after* we were all together in the Cafeteria, and it seems like both you and Bob are changing your stories to fit the narrative, which is very suspicious.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Bob]: Alice, I left the Cafeteria and went straight to Medbay; are you sure you aren't mistaken about the timing, as Dave and I were together there immediately afterward?",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Lying",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I think it's essential to bring up the fact that Erin hasn't provided any concrete evidence to support Dave's alibi, and her silence is starting to raise more questions than answers, especially considering she was in the Upper Engine room with Dave for an extended period.",
     "annotation": [
       "Appeal to Logic",
-      "Withholding Information"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -76,21 +76,21 @@
   {
     "text": "[Bob]: Dave, as I asked before, do you remember when Erin joined us in Medbay, as that would corroborate our timelines and potentially clarify Alice's misunderstanding?",
     "annotation": [
-      "Appeal to Logic"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I think it's crucial to investigate Erin's alibi further, as her silence is starting to make her look suspicious, and we need to consider the possibility that she might be an impostor, especially given her close association with Dave, who's already raising some red flags with his inconsistent alibis.",
     "annotation": [
       "Appeal to Logic",
-      "Withholding Information"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Bob, I was with you in Medbay when Erin arrived shortly after you, and her confirming this would clarify Alice's possible mistiming of seeing you leave the Cafeteria.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Credibility"
+      "Lying",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -103,34 +103,32 @@
   {
     "text": "[Bob]: Erin, Alice claims she saw me enter Medbay after the Cafeteria; can you confirm when you joined Dave and me there to clarify this discrepancy?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I think we should focus on Erin's alibi first and try to get a clear answer from her about her whereabouts before jumping to conclusions about Dave and Bob's suspicious behavior.",
     "annotation": [
-      "Appeal to Logic"
+      "Strategic Voting Suggestion",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Erin, are you there? Please confirm you were with Bob and me in Medbay, this is crucial to clearing up this misunderstanding.",
     "annotation": [
-      "Appeal to Logic",
-      "Appeal to Urgency"
+      "Appeal to Urgency",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: Erin, if you were in Medbay with Dave and Bob, *when* did you arrive?",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Erin, if you were with Dave and me in Medbay, please tell us what time you arrived and what you saw us doing.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof"
     ]
   }

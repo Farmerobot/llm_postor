@@ -22,14 +22,15 @@
   {
     "text": "[Charlie]: I agree an emergency meeting is warranted, and while I was in the cafeteria, I understand Alice's concerns and am happy to clarify any discrepancies about my movements.",
     "annotation": [
-      "Appeal to Logic"
+      "Bandwagon Effect",
+      "Appeal to Credibility"
     ]
   },
   {
     "text": "[Erin]: I'd like to propose that we start by asking Charlie to explain why he didn't notice or report Bob's dead body in the Admin room, considering he claims to have been in the area and was supposed to empty the trash, which might have given him a clear view of the room and any potential issues.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -42,7 +43,8 @@
   {
     "text": "[Charlie]: I was focused on my task and didn't see Bob's body, but I'm happy to discuss my movements in more detail to address everyone's concerns; let's create a timeline of everyone's whereabouts to pinpoint inconsistencies and find the real impostor.",
     "annotation": [
-      "Appeal to Logic",
+      "Appeal to Credibility",
+      "Shifting the Burden of Proof",
       "Distraction"
     ]
   },
@@ -85,7 +87,7 @@
     "text": "[Charlie]: A comprehensive timeline of everyone's movements is crucial for a fair assessment, but let's not forget to consider the possibility that someone might be deliberately obscuring their actions.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Distraction"
     ]
   },
   {

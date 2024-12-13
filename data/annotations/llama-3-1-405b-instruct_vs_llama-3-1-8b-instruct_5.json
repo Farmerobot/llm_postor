@@ -22,23 +22,24 @@
   {
     "text": "[Dave]: I'd like to reiterate that I didn't eliminate Erin or Bob, and I think it's interesting that both Charlie and Alice seem to have information that I'm somehow involved in their eliminations, yet neither of them can provide any concrete evidence or witnesses to support their claims.",
     "annotation": [
-      "Shifting the Burden of Proof",
-      "Appeal to Logic"
+      "Denial without Evidence",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Charlie]: I'd like to propose an emergency meeting to discuss Dave's suspicious behavior and the inconsistencies in his alibis, as it's becoming increasingly clear that he's withholding information and may be an impostor, and I think it's crucial that we get to the bottom of this before it's too late.",
     "annotation": [
-      "Strategic Voting Suggestion",
+      "Appeal to Urgency",
       "Appeal to Logic",
-      "Appeal to Urgency"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Alice]: I'd like to add that Dave's repeated denials and lack of concrete evidence to support his claims, combined with the suspicious circumstances surrounding Bob's elimination, make me increasingly concerned that he may be hiding something, and I think it's essential that we investigate further to ensure the safety of the crew.",
     "annotation": [
       "Appeal to Logic",
-      "Appeal to Emotion"
+      "Appeal to Emotion",
+      "Appeal to Urgency"
     ]
   },
   {
@@ -51,7 +52,8 @@
   {
     "text": "[Charlie]: I think we should focus on the fact that Dave has consistently denied eliminating Erin and Bob, yet we still have a dead body to report, and I believe it's essential to investigate further into the circumstances surrounding their eliminations before we can even begin to consider Dave's claims as credible.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Appeal to Rules"
     ]
   },
   {

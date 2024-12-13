@@ -2,15 +2,15 @@
   {
     "text": "[Bob]: I think it's a bit suspicious that Alice hasn't checked in since heading to Admin, has anyone else tried to contact them or seen them complete a task?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I agree with Bob that it's unusual for Alice to be out of touch for this long, and I think it's crucial that we investigate her disappearance further, especially since we're in Medbay and might be able to find some clues about what happened to her.",
     "annotation": [
-      "Appeal to Logic",
-      "Bandwagon Effect"
+      "Bandwagon Effect",
+      "Appeal to Logic"
     ]
   },
   {
@@ -24,8 +24,8 @@
   {
     "text": "[Bob]: I appreciate Alice's response, but I still think it's odd that she didn't mention seeing or interacting with anyone else while working on the Oxygen Generator task, and I believe we should press her for more details about her alibi.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -38,9 +38,9 @@
   {
     "text": "[Alice]: I'd like to add to the discussion by saying that I think it's essential to consider the possibility that Bob's concerns about my disappearance might be a smokescreen to distract us from his own actions in Medbay, and I'd like to request that he provide more information about his decision to eliminate Charlie and whether he has any alibis for his time in Medbay.",
     "annotation": [
-      "Appeal to Logic",
       "Projection",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
@@ -61,29 +61,30 @@
     "text": "[Alice]: I'd like to propose that we focus on verifying Bob's alibi for the time he was in Medbay, as his inconsistent statements and suspicious behavior raise significant concerns about his trustworthiness, and I think it's essential that we work together to uncover the truth and eliminate any potential impostors before we can safely complete our objectives.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Bob]: I'd like to point out that Dave and Alice's sudden focus on investigating me, despite my repeated clarification that I didn't eliminate Charlie, seems like a coordinated effort to distract from their own actions and shift the attention away from the fact that Alice was unreachable for a suspiciously long time.",
     "annotation": [
-      "Appeal to Logic",
       "Projection",
-      "Distraction"
+      "Distraction",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think it's essential that we maintain a level of transparency and accountability, and I'd like to request that Bob provide a clear and concise explanation for his actions in Medbay, including his interactions with Charlie and any other players, as his inconsistent statements and suspicious behavior have raised significant concerns about his trustworthiness and I believe it's crucial that we get to the bottom of this before we can safely move forward with our objectives.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: I'd like to reiterate that Bob's persistent attempts to shift the focus away from his own actions in Medbay and towards my disappearance are highly suspicious, and I think it's essential that we press him for a clear explanation of his interactions with Charlie and any other players during that time, as his evasive behavior and inconsistent statements have raised significant concerns about his trustworthiness.",
     "annotation": [
       "Appeal to Logic",
-      "Projection",
       "Shifting the Burden of Proof"
     ]
   },
@@ -98,14 +99,16 @@
     "text": "[Dave]: I think it's essential that we focus on verifying Bob's alibi for the time he was in Medbay, as his inconsistent statements and suspicious behavior raise significant concerns about his trustworthiness, and I'd like to request that he provide a clear and concise explanation for his actions in Medbay, including his interactions with Charlie and any other players, as his evasive behavior and inconsistent statements have raised significant concerns about his trustworthiness and I believe it's crucial that we get to the bottom of this before we can safely move forward with our objectives.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Urgency"
     ]
   },
   {
     "text": "[Alice]: I'd like to propose that we call an emergency meeting to discuss and vote on whether Bob should be ejected from the game, as his persistent attempts to shift the focus away from his own actions in Medbay and towards my disappearance, combined with his inconsistent statements and suspicious behavior, have raised significant concerns about his trustworthiness and potential as an impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Strategic Voting Suggestion",
+      "Appeal to Urgency"
     ]
   }
 ]

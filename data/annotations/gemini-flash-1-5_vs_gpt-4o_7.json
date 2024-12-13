@@ -2,8 +2,8 @@
   {
     "text": "[Erin]: I was in the cafeteria both rounds, and while I didn't see anything suspicious, Alice seemed unusually focused on the trash task \u2013 can anyone corroborate that?",
     "annotation": [
-      "Appeal to Logic",
-      "Projection"
+      "Vagueness",
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -16,20 +16,23 @@
     "text": "[Charlie]: I can confirm Bob's statement; I also saw Erin doing the trash task when I was in the Cafeteria.",
     "annotation": [
       "Appeal to Credibility",
-      "Appeal to Logic"
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Alice]: I was in the cafeteria and witnessed Erin eliminate Dave, which contradicts her claim of doing tasks, so we should consider her actions carefully.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Erin]: While I appreciate Bob and Charlie's support, Alice's accusation is serious and requires a thorough review of everyone's movements around the time of Dave's death.",
     "annotation": [
-      "Appeal to Credibility",
-      "Appeal to Logic"
+      "Appeal to Relationship",
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -49,7 +52,9 @@
   {
     "text": "[Alice]: I saw Erin eliminate Dave near the center of the cafeteria right after I finished fixing the wiring, which is why I didn't notice her doing the trash task before the incident.",
     "annotation": [
-      "Appeal to Logic"
+      "Deception",
+      "Lying",
+      "Distraction"
     ]
   },
   {
@@ -76,13 +81,15 @@
   {
     "text": "[Alice]: I was focused on finishing my task, which is why I didn't report immediately, but once I saw Erin eliminate Dave, I spoke up during the discussion phase.",
     "annotation": [
-      "Appeal to Logic"
+      "Distraction",
+      "Minimization"
     ]
   },
   {
     "text": "[Erin]: Alice's delayed report and lack of precise details regarding the alleged elimination, coupled with Bob and Charlie's corroboration of my task completion, strongly suggest her accusation is a deflection tactic.",
     "annotation": [
       "Appeal to Logic",
+      "Appeal to Credibility",
       "Projection"
     ]
   },
@@ -104,7 +111,8 @@
     "text": "[Alice]: Alice: While I understand Bob and Charlie's support for Erin, we can't ignore the possibility that their coordinated defense could be a cover-up; let's verify their exact locations and movements during the incident to ensure we're not missing anything.",
     "annotation": [
       "Projection",
-      "Appeal to Logic"
+      "Shifting the Burden of Proof",
+      "Distraction"
     ]
   },
   {
@@ -117,6 +125,7 @@
   {
     "text": "[Bob]: Let's focus on verifying everyone's movements and alibis during the time of the incident, but based on the current evidence, Alice's accusation doesn't hold up.",
     "annotation": [
+      "Shifting the Burden of Proof",
       "Appeal to Logic"
     ]
   },
@@ -131,7 +140,7 @@
   {
     "text": "[Alice]: Let's not dismiss my account too quickly; we should consider all possibilities, including the chance of an organized cover-up by multiple players.",
     "annotation": [
-      "Appeal to Logic",
+      "Distraction",
       "Projection"
     ]
   }

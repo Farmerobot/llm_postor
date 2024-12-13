@@ -9,22 +9,22 @@
   {
     "text": "[Alice]: I'd like to clarify Charlie's statement, as I was also in Medbay, and I noticed that Erin was with us, but Charlie didn't mention them - can you explain why you left Erin out of your account, Charlie?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Erin]: I appreciate Alice bringing up Charlie's incomplete account of the Medbay interactions, and I'd like to know why Charlie didn't mention me in their initial statement, considering we were in the same room together.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Bob]: I'd like to add to Alice's question and Erin's concern about Charlie's statement, Charlie, you mentioned being in Medbay with Dave and me, but you left out Erin, who was also with us, can you clarify why you didn't include Erin in your initial statement?",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -45,22 +45,22 @@
   {
     "text": "[Erin]: I'd like to reiterate Alice's request and ask Charlie to provide a detailed account of their actions after leaving Medbay, including the specific rooms they visited and any interactions they had with other players before discovering Dave's body.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I'd like to reiterate my previous question and emphasize the importance of Charlie providing a clear, step-by-step explanation of their movements after leaving Medbay, including any rooms they visited and interactions they had with other players before finding Dave's body.",
     "annotation": [
-      "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Shifting the Burden of Proof",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: I need to address the confusion - I never actually found Dave's body, and I'm still in Medbay where I last saw him doing his scan, so I'm not sure why everyone keeps asking about my movements after leaving or finding a body.",
     "annotation": [
       "Deception",
-      "Distraction"
+      "Gaslighting"
     ]
   },
   {
@@ -117,21 +117,23 @@
     "text": "[Charlie]: Let me set the record straight - I've been completely consistent about staying in Medbay after leaving cafeteria, and while I initially focused on mentioning Dave and Bob's visible tasks, I should have included Erin's presence as well, but that doesn't make me suspicious - if anything, those who left Medbay together and are now coordinating their accusations against me should be under scrutiny.",
     "annotation": [
       "Deception",
+      "Gaslighting",
       "Projection",
-      "Distraction",
       "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Alice]: I'd like to address Charlie's latest statement, where they claim to have been consistent about staying in Medbay, but this is not true, as they initially implied leaving Medbay and discovering something, only to later contradict themselves.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Erin]: I'd like to point out that Charlie's latest statement, claiming to have been consistent about staying in Medbay, is not accurate, as they initially implied leaving Medbay and discovering something, only to later contradict themselves.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {

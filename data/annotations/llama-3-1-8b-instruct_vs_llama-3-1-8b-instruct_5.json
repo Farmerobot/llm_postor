@@ -2,7 +2,9 @@
   {
     "text": "[Erin]: I'm just grabbing a quick snack in the Cafeteria, I didn't see anyone suspicious around, but I did notice that Alex hasn't been seen for a while, wonder if they're okay.",
     "annotation": [
-      "Vagueness"
+      "Vagueness",
+      "Feigning Ignorance",
+      "Appeal to Emotion"
     ]
   },
   {
@@ -39,19 +41,22 @@
   {
     "text": "[Charlie]: I agree with Erin and Dave that we should investigate the suspicious task log entry and the missing task log entries further, and I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria, which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations, and I think we should also discuss the fact that I was alone in Admin for a long time, and I didn't see anyone else in the room, which might be a sign that someone was trying to avoid being seen.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I think we should also review the task log and look for any other suspicious entries or patterns that might indicate the presence of an impostor, and I'd like to propose that we create a timeline of all the task completions and eliminations to see if we can identify any inconsistencies or anomalies that might help us identify the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I agree that we should investigate the suspicious task log entry and the missing task log entries further, and I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria, which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations, and I think we should also discuss the fact that I was in the Cafeteria around the same time as Erin and didn't see anyone suspicious, but I did notice that the task log for the Cafeteria seems to be up to date, which might be a sign that the impostor is trying to cover their tracks in multiple locations.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
@@ -62,28 +67,32 @@
     ]
   },
   {
-    "text": "[Charlie]: I agree with Erin and Dave that we should investigate the suspicious task log entry and the missing task log entries further, and I'd like to add that I've been reviewing the task log and noticed that the fake task seems to be linked to a similar task that was completed in the Cafeteria, which makes me wonder if the impostor might be trying to create a false trail by making it seem like the task was completed in multiple locations, and I think we should also discuss the fact that I was alone in Admin for a long time, and I didn't see anyone else in the room, which might be a sign that someone was trying to avoid being seen.",
+    "text": "[Charlie]: I think we should create a timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and the missing entries, to see if we can identify any inconsistencies or anomalies that might help us identify the impostor, and I'd like to propose that we also investigate Erin's alibi further to see if she can provide any additional information that might help us identify the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: Given the recent discussion about the suspicious task log entry in the Engine Room and the missing entries, and considering Erin's alibi seems suspicious, I'd like to suggest that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry and Erin's whereabouts during that time, to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I think we should focus on creating a detailed timeline of all the task completions and eliminations, including the suspicious task log entry and Erin's whereabouts during that time, to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Dave]: Let's create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and Erin's whereabouts during that time, to help us identify any inconsistencies or anomalies that might help us identify the impostor, and I'd like to propose that we also investigate Charlie's alibi for the time they were alone in Admin, as it might be a crucial piece of evidence in our investigation.",
     "annotation": [
       "Appeal to Logic",
+      "Strategic Voting Suggestion",
       "Shifting the Burden of Proof"
     ]
   },
@@ -91,43 +100,46 @@
     "text": "[Charlie]: I'd like to propose that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room and Erin's whereabouts during that time, to help us identify any inconsistencies or anomalies that might help us identify the impostor, and I think we should also investigate Erin's alibi further to see if she can provide any additional information that might help us identify the impostor, considering her alibi seems suspicious and we need to gather more information to make an informed decision.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: Let's create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room, Erin's whereabouts during that time, Charlie's alibi for the time they were alone in Admin, and Dave's alibi for the time they were in the Library and the Engine Room, to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion"
     ]
   },
   {
     "text": "[Erin]: I think we've been focusing too much on Erin's alibi, and it's time for us to shift the spotlight to Charlie's suspicious activities in the Admin room during the time they were alone, and I'd like to propose that we discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked, and that they never mentioned it during the group's initial discussion, which raises some red flags for me.",
     "annotation": [
-      "Appeal to Logic",
-      "Projection",
-      "Shifting the Burden of Proof"
+      "Distraction",
+      "Shifting the Burden of Proof",
+      "Appeal to Logic"
     ]
   },
   {
     "text": "[Dave]: I think we should also investigate Charlie's alibi for the time they were alone in Admin, as it might be a crucial piece of evidence in our investigation, and considering Charlie's suspicious activities in the Admin room during the time they were alone, I'd like to add that we should discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked, and that they never mentioned it during the group's initial discussion, which raises some serious red flags for me.",
     "annotation": [
-      "Appeal to Logic",
       "Shifting the Burden of Proof",
-      "Projection"
+      "Appeal to Logic",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Charlie]: Given the recent discussion about the suspicious task log entry in the Engine Room and the missing entries, and considering the multiple alibis that seem suspicious, I'd like to propose that we create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry, Erin's whereabouts during that time, Charlie's alibi for the time they were alone in Admin, and Dave's alibi for the time they were in the Library and the Engine Room, to help us identify any inconsistencies or anomalies that might help us identify the impostor.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Strategic Voting Suggestion",
+      "Bandwagon Effect"
     ]
   },
   {
     "text": "[Bob]: I think we should create a detailed timeline of all the task completions and eliminations, including the suspicious task log entry in the Engine Room, Erin's whereabouts during that time, Charlie's alibi for the time they were alone in Admin, and Dave's alibi for the time they were in the Library and the Engine Room, to help us identify any inconsistencies or anomalies that might help us identify the impostor, and I'd like to propose that we also discuss the fact that Charlie seems to have had access to the Engine Room's task log despite it being locked, and that they never mentioned it during the group's initial discussion, which raises some serious red flags for me.",
     "annotation": [
       "Appeal to Logic",
-      "Shifting the Burden of Proof"
+      "Strategic Voting Suggestion"
     ]
   }
 ]

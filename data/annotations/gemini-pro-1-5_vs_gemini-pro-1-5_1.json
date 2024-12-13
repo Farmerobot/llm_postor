@@ -2,7 +2,8 @@
   {
     "text": "[Bob]: I saw Alice vent in Electrical.",
     "annotation": [
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
@@ -20,8 +21,10 @@
   {
     "text": "[Bob]: My mistake, it was Medbay, not Electrical, I saw Alice vent \u2013 I was panicking and got confused.",
     "annotation": [
-      "Appeal to Emotion",
-      "Deception"
+      "Deception",
+      "Lying",
+      "Feigning Ignorance",
+      "Distraction"
     ]
   },
   {
@@ -34,14 +37,17 @@
   {
     "text": "[Dave]: Bob, you claimed to see Alice vent in Medbay, but Charlie's body was found in Medbay \u2013 were you there when Charlie died?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: I was in Medbay with Charlie; he was doing a scan, I left briefly, and when I returned, he was dead \u2013 I panicked when I saw Alice vent and got the locations mixed up.",
     "annotation": [
-      "Appeal to Emotion",
-      "Deception"
+      "Deception",
+      "Lying",
+      "Distraction",
+      "Feigning Ignorance"
     ]
   },
   {
@@ -54,22 +60,24 @@
   {
     "text": "[Dave]: Bob, your explanation is full of inconsistencies; if you were with Charlie during his scan, how could you also see Alice vent *after* he was dead, unless you were present both times, placing you at the scene of the crime?",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Bob]: Look, I was stressed and made a mistake about the location \u2013 I saw Alice vent, and she's trying to confuse everyone with these details to avoid suspicion; she's the impostor.",
     "annotation": [
-      "Appeal to Emotion",
       "Projection",
-      "Deception"
+      "Distraction",
+      "Minimization",
+      "Gaslighting"
     ]
   },
   {
     "text": "[Alice]: Bob, your constantly shifting story about where and when you \"saw me vent\" only makes you look more suspicious, especially since you were present at the scene of Charlie's death.",
     "annotation": [
       "Appeal to Logic",
-      "Projection"
+      "Shifting the Burden of Proof"
     ]
   },
   {
@@ -82,21 +90,24 @@
   {
     "text": "[Bob]: Dave, I understand I've made mistakes in my recounting of events due to the shock of finding Charlie's body; I was in Medbay with Charlie, then went to Admin briefly, returned to find Charlie dead, and saw Alice venting, which made me mix up details initially.",
     "annotation": [
+      "Minimization",
       "Appeal to Emotion",
-      "Deception"
+      "Deception",
+      "Lying"
     ]
   },
   {
     "text": "[Alice]: Bob, claiming you \"saw me vent\" after finding Charlie's body directly contradicts your earlier placement of me at the scene *before* his death; this inconsistency, coupled with your shifting locations and refusal to provide a clear timeline, strongly suggests you're the impostor.",
     "annotation": [
       "Appeal to Logic",
-      "Strategic Voting Suggestion"
+      "Shifting the Burden of Proof"
     ]
   },
   {
     "text": "[Dave]: Bob, you initially placed Alice at the scene *before* Charlie's death, now you're saying it was *after*; this inconsistency makes you look suspicious.",
     "annotation": [
-      "Appeal to Logic"
+      "Appeal to Logic",
+      "Shifting the Burden of Proof"
     ]
   }
 ]
