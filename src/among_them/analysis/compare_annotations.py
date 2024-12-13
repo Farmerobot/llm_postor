@@ -11,9 +11,23 @@ def load_json_file(file_path: str) -> List[dict]:
         return json.load(f)
 
 def get_annotations_by_text(data: List[dict]) -> Dict[str, Set[str]]:
+    
+    # Get path to technique_examples.json
+    exclude_file = os.path.join('data', 'technique_examples.json')
     annotations = {}
+    
+    # Load texts to exclude if exclude_file is provided
+    exclude_texts = set()
+    if exclude_file and os.path.exists(exclude_file):
+        with open(exclude_file, 'r') as f:
+            exclude_data = json.load(f)
+            exclude_texts = {item['text'] for item in exclude_data}
+    
     for item in data:
         text = item.get('text', '')
+        # Skip texts that are in the exclude file
+        if text in exclude_texts:
+            continue
         annotation_list = item.get('annotation', [])
         annotations[text] = set(annotation_list)
     return annotations
