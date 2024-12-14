@@ -55,28 +55,26 @@ def calculate_label_agreement(annotations1: Dict[str, Set[str]], annotations2: D
 def calculate_krippendorff_alpha(annotations1: Dict[str, Set[str]], annotations2: Dict[str, Set[str]], 
                               common_texts: Set[str]) -> float:
     """
-    Calculate Krippendorff's alpha for multi-label annotations.
+    Calculate Krippendorff's alpha for multi-label annotations using matrix reshaping.
     Each text-label pair is treated as a separate coding decision.
     """
     # Get all unique annotation labels
-    all_annotations = get_all_unique_annotations(annotations1, annotations2)
+    all_annotations = list(get_all_unique_annotations(annotations1, annotations2))
+    common_texts = list(common_texts)
     
-    # Create reliability data matrix
-    # Each row represents one unit (text-annotation pair)
-    # Each column represents one coder
-    reliability_data = []
+    # Create a 3D matrix: (texts x labels x annotators)
+    num_texts = len(common_texts)
+    num_labels = len(all_annotations)
+    annotations_matrix = np.zeros((num_texts, num_labels, 2), dtype=int)
     
-    for text in common_texts:
-        for annotation in all_annotations:
-            # For each text-annotation pair, create a row with two coders' decisions
-            reliability_data.append([
-                1 if annotation in annotations1[text] else 0,
-                1 if annotation in annotations2[text] else 0
-            ])
+    # Fill the matrix
+    for i, text in enumerate(common_texts):
+        for j, label in enumerate(all_annotations):
+            annotations_matrix[i, j, 0] = 1 if label in annotations1[text] else 0
+            annotations_matrix[i, j, 1] = 1 if label in annotations2[text] else 0
     
-    # Convert to numpy array and transpose to get format expected by krippendorff.alpha
-    reliability_data = np.array(reliability_data).T
-    # print(reliability_data)
+    # Reshape to (labels x texts x annotators) format expected by krippendorff.alpha
+    reliability_data = annotations_matrix.transpose(1, 0, 2).reshape(num_labels * num_texts, 2).T
     
     try:
         # Calculate Krippendorff's alpha with nominal metric (since we have binary data)
